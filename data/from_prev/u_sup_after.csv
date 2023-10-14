@@ -1,0 +1,1274 @@
+loc_date,location,date,doy,water_name_slug,water,river_bassin,city,code,quantity,pcs/m,slug,Project
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G1,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G10,7,0.11,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G100,2,0.03,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G101,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G102,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G103,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G104,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G105,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G106,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G107,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G108,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G109,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G11,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G111,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G112,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G113,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G114,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G115,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G116,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G117,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G118,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G119,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G12,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G122,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G123,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G124,7,0.13,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G125,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G126,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G128,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G129,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G13,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G131,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G132,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G133,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G134,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G135,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G136,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G137,2,0.03,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G138,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G139,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G14,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G140,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G141,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G142,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G143,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G144,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G145,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G146,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G147,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G148,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G149,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G150,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G151,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G152,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G153,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G154,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G155,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G156,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G157,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G158,2,0.03,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G159,3,0.05,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G160,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G161,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G162,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G165,2,0.03,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G166,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G167,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G168,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G17,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G170,2,0.03,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G171,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G172,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G173,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G174,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G175,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G176,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G177,5,0.08,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G178,4,0.07,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G179,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G180,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G181,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G182,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G183,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G185,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G186,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G188,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G19,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G190,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G191,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G193,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G194,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G195,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G196,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G197,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G198,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G199,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G2,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G20,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G200,8,0.13,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G201,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G202,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G203,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G204,8,0.13,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G205,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G207,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G208,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G210,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G211,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G213,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G214,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G22,3,0.05,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G25,6,0.1,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G26,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G27,59,0.97,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G28,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G29,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G3,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G30,24,0.39,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G31,4,0.07,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G32,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G33,3,0.05,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G34,2,0.03,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G35,8,0.13,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G36,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G37,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G38,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G39,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G4,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G40,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G41,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G43,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G48,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G49,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G5,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G50,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G51,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G52,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G53,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G55,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G56,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G59,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G6,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G60,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G61,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G62,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G63,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G64,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G65,2,0.03,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G66,5,0.08,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G67,24,0.39,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G68,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G7,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G70,11,0.18,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G71,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G73,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G74,20,0.33,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G8,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G84,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G87,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G88,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G89,8,0.13,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G9,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G90,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G91,6,0.1,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G92,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G93,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G94,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G95,13,0.21,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G96,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G97,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G98,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G99,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G999,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,Gcaps,15,0.24,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,Gfoam,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,Gfrags,60,0.98,maladaire,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G1,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G10,2,0.07,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G100,9,0.3,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G101,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G102,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G103,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G104,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G105,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G106,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G107,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G108,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G109,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G11,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G111,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G112,42,1.4,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G113,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G114,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G115,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G116,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G117,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G118,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G119,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G12,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G122,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G123,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G124,5,0.17,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G125,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G126,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G128,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G129,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G13,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G131,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G132,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G133,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G134,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G135,1,0.03,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G136,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G137,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G138,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G139,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G14,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G140,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G141,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G142,1,0.03,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G143,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G144,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G145,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G146,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G147,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G148,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G149,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G150,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G151,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G152,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G153,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G154,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G155,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G156,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G157,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G158,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G159,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G160,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G161,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G162,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G165,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G166,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G167,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G168,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G17,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G170,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G171,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G172,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G173,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G174,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G175,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G176,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G177,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G178,3,0.1,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G179,1,0.03,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G180,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G181,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G182,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G183,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G185,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G186,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G188,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G19,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G190,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G191,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G193,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G194,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G195,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G196,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G197,2,0.07,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G198,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G199,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G2,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G20,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G200,27,0.9,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G201,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G202,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G203,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G204,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G205,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G207,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G208,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G210,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G211,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G213,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G214,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G22,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G25,2,0.07,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G26,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G27,44,1.47,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G28,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G29,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G3,3,0.1,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G30,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G31,3,0.1,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G32,2,0.07,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G33,1,0.03,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G34,1,0.03,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G35,3,0.1,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G36,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G37,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G38,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G39,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G4,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G40,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G41,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G43,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G48,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G49,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G5,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G50,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G51,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G52,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G53,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G55,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G56,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G59,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G6,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G60,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G61,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G62,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G63,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G64,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G65,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G66,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G67,7,0.23,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G68,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G7,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G70,2,0.07,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G702,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G703,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G704,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G705,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G706,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G707,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G708,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G709,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G71,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G710,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G711,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G712,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G713,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G73,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G74,27,0.8999999999999999,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G8,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G84,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G87,1,0.03,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G88,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G89,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G9,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G90,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G900,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G901,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G902,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G903,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G904,1,0.03,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G905,1,0.03,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G906,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G907,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G908,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G91,1,0.03,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G913,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G914,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G915,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G916,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G917,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G918,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G919,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G92,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G921,2,0.07,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G922,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G923,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G925,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G926,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G927,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G928,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G929,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G93,1,0.03,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G930,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G931,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G932,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G933,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G934,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G935,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G936,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G937,1,0.03,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G938,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G939,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G94,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G940,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G941,14,0.47,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G942,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G943,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G944,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G945,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G95,20,0.67,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G96,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G97,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G98,7,0.23,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G99,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G999,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),Gcaps,9,0.3,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),Gfoam,0,0.0,tiger-duck-beach,Testing
+"('tiger-duck-beach', '2021-10-07')",tiger-duck-beach,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),Gfrags,245,8.17,tiger-duck-beach,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G1,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G10,1,0.02,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G100,2,0.03,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G101,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G102,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G103,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G104,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G105,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G106,4,0.07,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G107,5,0.08,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G108,2,0.03,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G109,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G11,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G111,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G112,1,0.02,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G113,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G114,1,0.02,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G115,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G116,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G117,2,0.03,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G118,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G119,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G12,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G122,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G123,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G124,1,0.02,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G125,2,0.03,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G126,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G128,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G129,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G13,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G131,2,0.03,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G132,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G133,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G134,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G135,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G136,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G137,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G138,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G139,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G14,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G140,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G141,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G142,3,0.05,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G143,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G144,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G145,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G146,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G147,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G148,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G149,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G150,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G151,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G152,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G153,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G154,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G155,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G156,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G157,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G158,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G159,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G160,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G161,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G162,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G165,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G166,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G167,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G168,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G17,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G170,1,0.02,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G171,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G172,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G173,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G174,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G175,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G176,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G177,2,0.03,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G178,2,0.03,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G179,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G180,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G181,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G182,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G183,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G185,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G186,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G188,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G19,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G190,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G191,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G193,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G194,2,0.03,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G195,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G196,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G197,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G198,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G199,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G2,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G20,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G200,7,0.12,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G201,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G202,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G203,1,0.02,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G204,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G205,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G207,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G208,3,0.05,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G210,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G211,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G213,2,0.03,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G214,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G22,8,0.14,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G25,3,0.05,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G26,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G27,4,0.07,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G28,2,0.03,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G29,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G3,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G30,68,1.15,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G31,6,0.1,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G32,1,0.02,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G33,5,0.08,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G34,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G35,2,0.03,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G36,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G37,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G38,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G39,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G4,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G40,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G41,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G43,2,0.03,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G48,1,0.02,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G49,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G5,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G50,7,0.12,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G51,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G52,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G53,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G55,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G56,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G59,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G6,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G60,1,0.02,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G61,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G62,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G63,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G64,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G65,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G66,3,0.05,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G67,58,0.98,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G68,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G7,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G70,5,0.08,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G702,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G703,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G704,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G705,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G706,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G707,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G708,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G709,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G71,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G710,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G711,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G712,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G713,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G73,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G74,1,0.02,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G8,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G84,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G87,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G88,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G89,13,0.22,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G9,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G90,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G900,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G901,1,0.02,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G902,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G903,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G904,6,0.1,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G905,1,0.02,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G906,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G907,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G908,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G91,3,0.05,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G913,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G914,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G915,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G916,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G917,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G918,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G919,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G92,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G921,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G922,1,0.02,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G923,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G925,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G926,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G927,2,0.03,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G928,2,0.03,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G929,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G93,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G930,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G931,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G932,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G933,1,0.02,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G934,2,0.03,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G935,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G936,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G937,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G938,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G939,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G94,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G940,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G941,29,0.49,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G942,2,0.03,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G943,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G944,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G945,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G95,26,0.44,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G96,1,0.02,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G97,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G98,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G99,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,G999,0,0.0,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,Gcaps,30,0.51,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,Gfoam,11,0.19,villa-barton,Testing
+"('villa-barton', '2021-11-14')",villa-barton,2021-11-14,318,lac-leman,l,rhone,Genève,Gfrags,183,3.1,villa-barton,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G1,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G10,7,0.11,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G100,2,0.03,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G101,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G102,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G103,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G104,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G105,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G106,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G107,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G108,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G109,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G11,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G111,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G112,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G113,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G114,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G115,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G116,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G117,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G118,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G119,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G12,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G122,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G123,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G124,7,0.13,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G125,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G126,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G128,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G129,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G13,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G131,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G132,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G133,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G134,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G135,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G136,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G137,2,0.03,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G138,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G139,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G14,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G140,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G141,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G142,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G143,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G144,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G145,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G146,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G147,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G148,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G149,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G150,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G151,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G152,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G153,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G154,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G155,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G156,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G157,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G158,2,0.03,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G159,3,0.05,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G160,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G161,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G162,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G165,2,0.03,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G166,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G167,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G168,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G17,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G170,2,0.03,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G171,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G172,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G173,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G174,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G175,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G176,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G177,5,0.08,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G178,4,0.07,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G179,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G180,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G181,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G182,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G183,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G185,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G186,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G188,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G19,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G190,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G191,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G193,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G194,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G195,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G196,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G197,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G198,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G199,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G2,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G20,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G200,8,0.13,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G201,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G202,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G203,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G204,8,0.13,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G205,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G207,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G208,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G210,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G211,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G213,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G214,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G22,3,0.05,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G25,6,0.1,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G26,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G27,59,0.97,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G28,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G29,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G3,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G30,24,0.39,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G31,4,0.07,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G32,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G33,3,0.05,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G34,2,0.03,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G35,8,0.13,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G36,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G37,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G38,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G39,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G4,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G40,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G41,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G43,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G48,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G49,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G5,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G50,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G51,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G52,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G53,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G55,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G56,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G59,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G6,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G60,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G61,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G62,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G63,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G64,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G65,2,0.03,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G66,5,0.08,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G67,24,0.39,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G68,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G7,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G70,11,0.18,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G71,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G73,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G74,20,0.33,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G8,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G84,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G87,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G88,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G89,8,0.13,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G9,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G90,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G91,6,0.1,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G92,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G93,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G94,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G95,13,0.21,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G96,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G97,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G98,1,0.02,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G99,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,G999,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,Gfoam,0,0.0,maladaire,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,Gfrags,60,0.98,maladaire,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G200,148,0.036,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G177,5,0.001,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G178,11,0.003,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G10,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G100,5,0.001,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G112,8,0.002,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G117,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G25,5,0.001,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G27,16,0.004,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G30,30,0.0069999999999999,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G31,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G32,3,0.001,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G35,1,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G33,11,0.003,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G67,30,0.0069999999999999,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G70,1,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G74,18,0.004,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G89,7,0.002,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G95,18,0.004,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),Gfoam,9,0.002,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),Gfrags,115,2.8,plage-de-st-sulpice,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G1,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G10,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G100,1,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G101,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G102,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G103,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G104,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G105,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G106,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G107,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G108,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G109,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G11,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G111,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G112,10,0.2,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G113,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G114,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G115,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G116,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G117,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G118,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G119,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G12,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G122,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G123,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G124,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G125,3,0.1,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G126,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G128,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G129,2,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G13,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G131,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G132,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G133,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G134,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G135,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G136,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G137,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G138,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G139,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G14,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G140,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G141,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G142,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G143,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G144,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G145,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G146,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G147,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G148,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G149,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G150,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G151,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G152,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G153,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G154,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G155,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G156,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G157,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G158,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G159,2,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G160,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G161,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G162,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G165,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G166,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G167,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G168,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G17,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G170,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G171,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G172,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G173,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G174,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G175,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G176,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G177,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G178,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G179,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G180,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G181,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G182,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G183,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G185,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G186,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G188,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G19,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G190,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G191,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G193,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G194,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G195,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G196,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G197,1,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G198,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G199,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G2,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G20,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G200,3,0.1,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G201,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G202,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G203,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G204,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G205,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G207,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G208,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G210,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G211,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G213,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G214,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G22,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G25,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G26,1,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G27,2,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G28,2,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G29,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G3,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G30,90,2.2,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G31,7,0.2,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G32,5,0.1,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G33,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G34,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G35,7,0.2,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G36,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G37,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G38,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G39,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G4,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G40,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G41,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G43,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G48,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G49,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G5,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G50,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G51,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G52,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G53,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G55,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G56,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G59,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G6,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G60,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G61,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G62,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G63,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G64,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G65,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G66,2,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G67,10,0.2,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G68,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G7,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G70,2,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G702,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G703,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G704,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G705,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G706,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G707,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G708,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G709,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G71,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G710,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G711,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G712,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G713,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G73,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G74,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G8,2,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G84,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G87,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G88,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G89,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G9,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G90,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G900,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G901,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G902,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G903,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G904,1,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G905,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G906,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G907,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G908,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G91,4,0.1,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G913,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G914,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G915,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G916,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G917,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G918,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G919,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G92,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G921,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G922,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G923,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G925,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G926,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G927,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G928,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G929,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G93,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G930,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G931,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G932,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G933,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G934,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G935,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G936,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G937,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G938,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G939,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G94,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G940,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G941,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G942,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G943,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G944,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G945,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G95,36,0.9,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G96,1,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G97,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G98,1,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G99,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),G999,0,0.0,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),Gfoam,44,1.1,parc-des-pierrettes,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),Gfrags,135,3.3,parc-des-pierrettes,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),Gfrags,135,2.7,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G30,90,1.8,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),Gfoam,44,0.9,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G95,36,0.7,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G112,10,0.2,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G67,10,0.2,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G31,7,0.1,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G35,7,0.1,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G32,5,0.1,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G91,4,0.1,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G125,3,0.1,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G200,3,0.1,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G28,2,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G159,2,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G8,2,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G27,2,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G70,2,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G66,2,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G129,2,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G100,1,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G904,1,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G98,1,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G26,1,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G96,1,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G197,1,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G149,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G150,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G29,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G152,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G151,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G147,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G153,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G154,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G155,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G25,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G156,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G148,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G146,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G33,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G906,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G41,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G40,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G4,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G705,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G39,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G38,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G918,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G157,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G37,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G36,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G919,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G929,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G34,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G945,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G22,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G2,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G20,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G11,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G111,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G113,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G114,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G115,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G116,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G117,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G118,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G119,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G12,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G122,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G123,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G13,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G14,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G109,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G158,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G108,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G923,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G19,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G1,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G10,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G101,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G17,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G102,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G103,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G104,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G105,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G106,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G107,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G56,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G43,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G935,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G944,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G943,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G942,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G941,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G940,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G94,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G939,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G938,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G937,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G936,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G934,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G126,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G933,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G932,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G931,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G930,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G928,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G927,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G926,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G925,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G922,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G92,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G915,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G97,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G702,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G173,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G172,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G171,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G170,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G168,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G167,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G166,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G165,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G162,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G128,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G161,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G160,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G999,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G900,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G134,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G133,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G132,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G914,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G68,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G65,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G64,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G63,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G62,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G61,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G60,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G6,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G59,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G198,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G55,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G53,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G52,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G51,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G5,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G49,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G48,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G7,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G703,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G84,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G908,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G907,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G905,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G903,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G901,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G9,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G88,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G87,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G704,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G73,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G713,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G711,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G710,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G71,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G709,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G707,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G706,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G199,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G902,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G196,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G921,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G210,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G208,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G207,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G205,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G204,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G203,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G202,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G201,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G712,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G145,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G144,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G143,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G142,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G141,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G140,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G139,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G138,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G917,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G174,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G135,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G175,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G195,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G193,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G191,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G190,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G188,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G186,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G185,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G183,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G182,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G181,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G180,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G179,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G178,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G177,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G176,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G136,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G214,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G213,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G708,0,0.0,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),G916,0,0.0,plage-de-st-sulpice,Testing
+"('maladaire', '2021-06-02')",maladaire,2021-06-02,153,lac-leman,l,rhone,La Tour-de-Peilz,Gcaps,15,0.24,maladaire,Testing
+"('parc-des-pierrettes', '2022-10-06')",parc-des-pierrettes,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),Gcaps,16,0.4,parc-des-pierrettes,Testing
+"('plage-de-st-sulpice', '2021-10-07')",plage-de-st-sulpice,2021-10-07,280,lac-leman,l,rhone,Saint-Sulpice (VD),Gcaps,16,0.3,plage-de-st-sulpice,Testing
+"('plage-de-st-sulpice', '2022-10-06')",plage-de-st-sulpice,2022-10-06,279,lac-leman,l,rhone,Saint-Sulpice (VD),Gcaps,15,0.003,plage-de-st-sulpice,Testing
