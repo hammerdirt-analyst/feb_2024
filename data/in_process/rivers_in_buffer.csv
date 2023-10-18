@@ -1,0 +1,414 @@
+NAMN,NAMN_2,LAUFNR,BREITE,KLASSE,OBJVAL,slug
+Brienzersee,Lütschine,"0","6","6",Fluss,hafeli
+Brienzersee,Aare,"0","5","4",Fluss,hafeli
+Brienzersee,Lütschine,"0","6","6",Fluss,hafeli
+Brienzersee,Kanal Aarboden,"0","18","8",Fluss,oben-am-see
+Brienzersee,Kanal Aarboden,"0","18","8",Fluss,wycheley
+Brienzersee,Kanal Aarboden,"0","18","8",Fluss,oben-am-see
+Brienzersee,Kanal Aarboden,"0","18","8",Fluss,wycheley
+Brienzersee,Aare,"0","6","4",Fluss,oben-am-see
+Brienzersee,Aare,"0","6","4",Fluss,wycheley
+Brienzersee,Aare,"0","6","4",Fluss,oben-am-see
+Brienzersee,Aare,"0","6","4",Fluss,wycheley
+Brienzersee,Fulbach,"0","9","9",Fluss,oben-am-see
+Brienzersee,Fulbach,"0","9","9",Fluss,wycheley
+Brienzersee,Lammbach,"0","9","9",Fluss,oben-am-see
+Brienzersee,Lammbach,"0","9","9",Fluss,wycheley
+Brienzersee,Fulbach,"0","9","9",Fluss,oben-am-see
+Brienzersee,Fulbach,"0","9","9",Fluss,wycheley
+Brienzersee,Glyssibach,"0","10","10",Fluss,oben-am-see
+Brienzersee,Glyssibach,"0","10","10",Fluss,wycheley
+Brienzersee,Lammbach,"0","9","9",Fluss,oben-am-see
+Brienzersee,Lammbach,"0","9","9",Fluss,wycheley
+Brienzersee,Glyssibach,"0","10","10",Fluss,oben-am-see
+Brienzersee,Glyssibach,"0","10","10",Fluss,wycheley
+Brienzersee,Aare,"0","5","4",Fluss,hafeli
+Lago Maggiore,Riale Brima,"0","9","9",Fluss_U,route-13
+Lago Maggiore,Riale Brima,"0","9","9",Fluss_U,ascona-traghetto-spiaggia
+Lago Maggiore,Maggia,"0","4","5",Fluss,sentiero-giro-del-golf-spiaggia
+Lago Maggiore,Riale Brima,"0","9","9",Fluss_U,route-13
+Lago Maggiore,Riale Brima,"0","9","9",Fluss_U,ascona-traghetto-spiaggia
+Lago Maggiore,N_P,"0","10","10",Fluss,isole-di-brissago-porto
+Lago Maggiore,N_P,"0","10","10",Fluss,isole-di-brissago-porto
+Lago Maggiore,N_P,"0","10","10",Fluss,isole-di-brissago-porto
+Lago Maggiore,N_P,"0","10","10",Fluss,isole-di-brissago-porto
+Lago Maggiore,N_P,"0","10","10",Fluss,pacha-mama-gerra
+Lago Maggiore,N_P,"0","10","10",Fluss,gerra-gambarogno
+Lago Maggiore,N_P,"0","10","10",Fluss,san-nazzaro-gambarogno
+Lago Maggiore,N_P,"0","9","9",Fluss,pacha-mama-gerra
+Lago Maggiore,N_P,"0","9","9",Fluss,gerra-gambarogno
+Lago Maggiore,N_P,"0","9","9",Fluss,san-nazzaro-gambarogno
+Lago Maggiore,N_P,"0","10","10",Fluss,pacha-mama-gerra
+Lago Maggiore,N_P,"0","10","10",Fluss,gerra-gambarogno
+Lago Maggiore,N_P,"0","10","10",Fluss,san-nazzaro-gambarogno
+Lago Maggiore,N_P,"0","9","9",Fluss,pacha-mama-gerra
+Lago Maggiore,N_P,"0","9","9",Fluss,gerra-gambarogno
+Lago Maggiore,N_P,"0","9","9",Fluss,san-nazzaro-gambarogno
+Lago Maggiore,N_P,"0","9","9",Fluss,vira-gambarogno
+Lago Maggiore,N_P,"0","9","9",Fluss,vira-spiaggia-left-of-river
+Lago Maggiore,N_P,"0","9","9",Fluss,vira-gambarogno
+Lago Maggiore,N_P,"0","9","9",Fluss,vira-spiaggia-left-of-river
+Lago Maggiore,N_P,"0","9","9",Fluss,magadino-lido
+Lago Maggiore,N_P,"0","9","9",Fluss,magadino-lido
+Lago Maggiore,Ticino,"0","3","4",Fluss,magadino-lido
+Lago Maggiore,Isolone,"0","10","10",Fluss,magadino-lido
+Lago Maggiore,Ticino,"0","3","4",Fluss,magadino-lido
+Lago Maggiore,Isolone,"0","10","10",Fluss,magadino-lido
+Lago Maggiore,Navegna,"0","9","9",Fluss,rivapiana
+Lago Maggiore,Riale Ramnosa,"0","10","10",Fluss,rivapiana
+Lago Maggiore,Navegna,"0","9","9",Fluss,rivapiana
+Lago Maggiore,Riale Ramnosa,"0","10","10",Fluss,rivapiana
+Lago Maggiore,Riale Rabissale,"0","10","10",Fluss,rivapiana
+Lago Maggiore,Ramogna,"0","10","10",Fluss_U,rivapiana
+Lago Maggiore,Riale Rabissale,"0","10","10",Fluss,rivapiana
+Lago Maggiore,Ramogna,"0","10","10",Fluss_U,rivapiana
+Lago Maggiore,Maggia,"0","4","5",Fluss,sentiero-giro-del-golf-spiaggia
+Walensee,Helgenbach,"0","10","10",Fluss,walensee_walenstadt_wysse
+Walensee,Helgenbach,"0","10","10",Fluss,seemuhlestrasse-strand
+Walensee,Helgenbach,"0","10","10",Fluss,seez
+Walensee,Flybach,"0","9","9",Fluss,gasi-strand
+Walensee,Flybach,"0","9","9",Fluss,linthdammweg
+Walensee,Flybach,"0","9","9",Fluss,seeflechsen
+Walensee,Flybach,"0","9","9",Fluss,flibach-river-right-bank
+Walensee,Flybach,"0","9","9",Fluss,linth_route9brucke
+Walensee,Flybach,"0","9","9",Fluss,linth_mollis
+Walensee,Flybach,"0","9","9",Fluss,gasi-strand
+Walensee,Flybach,"0","9","9",Fluss,linthdammweg
+Walensee,Flybach,"0","9","9",Fluss,seeflechsen
+Walensee,Flybach,"0","9","9",Fluss,flibach-river-right-bank
+Walensee,Flybach,"0","9","9",Fluss,linth_route9brucke
+Walensee,Flybach,"0","9","9",Fluss,linth_mollis
+Walensee,Linthkanal,"0","15","5",Fluss,gasi-strand
+Walensee,Linthkanal,"0","15","5",Fluss,linthdammweg
+Walensee,Linthkanal,"0","15","5",Fluss,seeflechsen
+Walensee,Linthkanal,"0","15","5",Fluss,flibach-river-right-bank
+Walensee,Linthkanal,"0","15","5",Fluss,linth_mollis
+Walensee,Linth,"0","5","5",Fluss,gasi-strand
+Walensee,Linth,"0","5","5",Fluss,seeflechsen
+Walensee,Linth,"0","5","5",Fluss,flibach-river-right-bank
+Walensee,Linth,"0","5","5",Fluss,linth_route9brucke
+Walensee,Linthkanal,"0","15","5",Fluss,gasi-strand
+Walensee,Linthkanal,"0","15","5",Fluss,linthdammweg
+Walensee,Linthkanal,"0","15","5",Fluss,seeflechsen
+Walensee,Linthkanal,"0","15","5",Fluss,flibach-river-right-bank
+Walensee,Linthkanal,"0","15","5",Fluss,linth_mollis
+Walensee,Filzbach,"0","9","9",Fluss,linth_route9brucke
+Walensee,Linth,"0","5","5",Fluss,gasi-strand
+Walensee,Linth,"0","5","5",Fluss,seeflechsen
+Walensee,Linth,"0","5","5",Fluss,flibach-river-right-bank
+Walensee,Linth,"0","5","5",Fluss,linth_route9brucke
+Walensee,Filzbach,"0","9","9",Fluss,linth_route9brucke
+Walensee,Meerenbach,"0","9","9",Fluss,muhlehorn-dorf
+Walensee,Meerenbach,"0","9","9",Fluss,muhlehorn-dorf
+Walensee,Rötibach,"0","9","9",Fluss,muhlehorn-dorf
+Walensee,Rötibach,"0","9","9",Fluss,muhlehorn-dorf
+Walensee,Murgbach,"0","8","8",Fluss,murg-bad
+Walensee,Talbach,"0","9","9",Fluss,untertenzen
+Walensee,Murgbach,"0","8","8",Fluss,murg-bad
+Walensee,Talbach,"0","9","9",Fluss,untertenzen
+Walensee,Talbach (Mols),"0","9","9",Fluss,mols-rocks
+Walensee,Seez,"0","6","6",Fluss,walensee_walenstadt_wysse
+Walensee,Seez,"0","6","6",Fluss,mols-rocks
+Walensee,Seez,"0","6","6",Fluss,seemuhlestrasse-strand
+Walensee,Seez,"0","6","6",Fluss,seez_spennwiesenbrucke
+Walensee,Seez,"0","6","6",Fluss,seez
+Walensee,Talbach (Mols),"0","9","9",Fluss,mols-rocks
+Walensee,Kanal Platz,"0","18","8",Fluss,walensee_walenstadt_wysse
+Walensee,Kanal Platz,"0","18","8",Fluss,mols-rocks
+Walensee,Kanal Platz,"0","18","8",Fluss,seemuhlestrasse-strand
+Walensee,Kanal Platz,"0","18","8",Fluss,seez_spennwiesenbrucke
+Walensee,Kanal Platz,"0","18","8",Fluss,seez
+Walensee,Seez,"0","6","6",Fluss,walensee_walenstadt_wysse
+Walensee,Seez,"0","6","6",Fluss,mols-rocks
+Walensee,Seez,"0","6","6",Fluss,seemuhlestrasse-strand
+Walensee,Seez,"0","6","6",Fluss,seez_spennwiesenbrucke
+Walensee,Seez,"0","6","6",Fluss,seez
+Walensee,Kanal Platz,"0","18","8",Fluss,walensee_walenstadt_wysse
+Walensee,Kanal Platz,"0","18","8",Fluss,mols-rocks
+Walensee,Kanal Platz,"0","18","8",Fluss,seemuhlestrasse-strand
+Walensee,Kanal Platz,"0","18","8",Fluss,seez_spennwiesenbrucke
+Walensee,Kanal Platz,"0","18","8",Fluss,seez
+Walensee,Tscherlerbach,"0","8","8",Fluss,walensee_walenstadt_wysse
+Walensee,Tscherlerbach,"0","8","8",Fluss,seemuhlestrasse-strand
+Walensee,Tscherlerbach,"0","8","8",Fluss,seez_spennwiesenbrucke
+Walensee,Tscherlerbach,"0","8","8",Fluss,seez
+Walensee,Helgenbach,"0","10","10",Fluss,walensee_walenstadt_wysse
+Walensee,Helgenbach,"0","10","10",Fluss,seemuhlestrasse-strand
+Walensee,Helgenbach,"0","10","10",Fluss,seez
+Walensee,Tscherlerbach,"0","8","8",Fluss,walensee_walenstadt_wysse
+Walensee,Tscherlerbach,"0","8","8",Fluss,seemuhlestrasse-strand
+Walensee,Tscherlerbach,"0","8","8",Fluss,seez_spennwiesenbrucke
+Walensee,Tscherlerbach,"0","8","8",Fluss,seez
+Le Léman,L'Aubonne,"0","9","9",Fluss,la-pecherie
+Le Léman,L'Eau Noire,"0","10","10",Fluss,la-pecherie
+Le Léman,La Mèbre,"0","8","8",Fluss,tiger-duck-beach
+Le Léman,La Mèbre,"0","8","8",Fluss,parc-des-pierrettes
+Le Léman,La Mèbre,"0","8","8",Fluss,plage-de-st-sulpice
+Le Léman,La Mèbre,"0","8","8",Fluss,vidy-ruines
+Le Léman,La Mèbre,"0","8","8",Fluss,plage-de-dorigny
+Le Léman,La Mèbre,"0","8","8",Fluss,vidy
+Le Léman,La Mèbre,"0","8","8",Fluss,lacleman_vidy_santie
+Le Léman,Le Venoge,"0","8","7",Fluss,preverenges
+Le Léman,Le Venoge,"0","8","7",Fluss,preverenges-le-sout
+Le Léman,Le Venoge,"0","8","7",Fluss,saint-sulpice
+Le Léman,La Morges,"0","9","9",Fluss,tolochenaz
+Le Léman,La Morges,"0","9","9",Fluss,la-morges
+Le Léman,Le Boiron de Nyon,"0","9","9",Fluss,boiron
+Le Léman,Le Boiron de Nyon,"0","9","9",Fluss,tolochenaz
+Le Léman,Canal Stockalper,"0","18","8",Fluss,grand-clos
+Le Léman,Le Rhône,"0","2","4",Fluss,grand-clos
+Le Léman,Le Flon,"0","10","10",Fluss_U,vidy-ruines
+Le Léman,Le Flon,"0","10","10",Fluss_U,vidy
+Le Léman,Le Flon,"0","10","10",Fluss_U,lacleman_vidy_santie
+Le Léman,La Mèbre,"0","8","8",Fluss,tiger-duck-beach
+Le Léman,La Mèbre,"0","8","8",Fluss,parc-des-pierrettes
+Le Léman,La Mèbre,"0","8","8",Fluss,plage-de-st-sulpice
+Le Léman,La Mèbre,"0","8","8",Fluss,vidy-ruines
+Le Léman,La Mèbre,"0","8","8",Fluss,plage-de-dorigny
+Le Léman,La Mèbre,"0","8","8",Fluss,vidy
+Le Léman,La Mèbre,"0","8","8",Fluss,lacleman_vidy_santie
+Le Léman,Le Flon de Tartegnin,"0","10","10",Fluss,rolle-plage
+Le Léman,La Morges,"0","9","9",Fluss,tolochenaz
+Le Léman,La Morges,"0","9","9",Fluss,la-morges
+Le Léman,Le Venoge,"0","8","7",Fluss,preverenges
+Le Léman,Le Venoge,"0","8","7",Fluss,preverenges-le-sout
+Le Léman,Le Venoge,"0","8","7",Fluss,saint-sulpice
+Le Léman,Le Rhône,"0","1","4",Fluss,baby-plage-geneva
+Le Léman,Le Rhône,"0","1","4",Fluss,pont-sous-terre
+Le Léman,Le Rhône,"0","1","4",Fluss,baby-plage-ii-geneve
+Le Léman,Le Rhône,"0","1","4",Fluss,rocky-plage
+Le Léman,L'Eau Noire,"0","10","10",Fluss,la-pecherie
+Le Léman,Le Flon de Tartegnin,"0","10","10",Fluss,rolle-plage
+Le Léman,L'Aubonne,"0","9","9",Fluss,la-pecherie
+Le Léman,Le Boiron de Nyon,"0","9","9",Fluss,boiron
+Le Léman,Le Boiron de Nyon,"0","9","9",Fluss,tolochenaz
+Le Léman,La Veveyse,"0","8","8",Fluss,quai-maria-belgia
+Le Léman,La Veveyse,"0","8","8",Fluss,oyonne
+Le Léman,La Veveyse,"0","8","8",Fluss,arabie
+Le Léman,La Veveyse,"0","8","8",Fluss,veveyse
+Le Léman,L'Ognona,"0","10","10",Fluss,quai-maria-belgia
+Le Léman,L'Ognona,"0","10","10",Fluss,anarchy-beach
+Le Léman,L'Ognona,"0","10","10",Fluss,oyonne
+Le Léman,L'Ognona,"0","10","10",Fluss,bain-des-dames
+Le Léman,L'Ognona,"0","10","10",Fluss,arabie
+Le Léman,L'Ognona,"0","10","10",Fluss,veveyse
+Le Léman,L'Ognona,"0","10","10",Fluss,le-port
+Le Léman,L'Ognona,"0","10","10",Fluss,ognonnaz-1
+Le Léman,La Veveyse,"0","8","8",Fluss,quai-maria-belgia
+Le Léman,La Veveyse,"0","8","8",Fluss,oyonne
+Le Léman,La Veveyse,"0","8","8",Fluss,arabie
+Le Léman,La Veveyse,"0","8","8",Fluss,veveyse
+Le Léman,L'Ognona,"0","10","10",Fluss,quai-maria-belgia
+Le Léman,L'Ognona,"0","10","10",Fluss,anarchy-beach
+Le Léman,L'Ognona,"0","10","10",Fluss,oyonne
+Le Léman,L'Ognona,"0","10","10",Fluss,bain-des-dames
+Le Léman,L'Ognona,"0","10","10",Fluss,arabie
+Le Léman,L'Ognona,"0","10","10",Fluss,veveyse
+Le Léman,L'Ognona,"0","10","10",Fluss,le-port
+Le Léman,L'Ognona,"0","10","10",Fluss,ognonnaz-1
+Le Léman,Baye de Clarens,"0","9","9",Fluss,maladaire
+Le Léman,Baye de Clarens,"0","9","9",Fluss,le-pierrier
+Le Léman,Baye de Clarens,"0","9","9",Fluss,baye-de-clarens
+Le Léman,Baye de Clarens,"0","9","9",Fluss,pierrier-sud
+Le Léman,Baye de Clarens,"0","9","9",Fluss,maladaire
+Le Léman,Baye de Clarens,"0","9","9",Fluss,le-pierrier
+Le Léman,Baye de Clarens,"0","9","9",Fluss,baye-de-clarens
+Le Léman,Baye de Clarens,"0","9","9",Fluss,pierrier-sud
+Le Léman,Baye de Montreux,"0","9","9",Fluss,baye-de-montreux-g
+Le Léman,Baye de Montreux,"0","9","9",Fluss,baye-de-montreux-d
+Le Léman,Baye de Montreux,"0","9","9",Fluss,baye-de-montreux-g
+Le Léman,Baye de Montreux,"0","9","9",Fluss,baye-de-montreux-d
+Le Léman,Le Rhône,"0","2","4",Fluss,grand-clos
+Le Léman,Le Tové,"0","10","10",Fluss,grand-clos
+Le Léman,Le Flon,"0","10","10",Fluss_U,vidy-ruines
+Le Léman,Le Flon,"0","10","10",Fluss_U,vidy
+Le Léman,Le Flon,"0","10","10",Fluss_U,lacleman_vidy_santie
+Le Léman,Canal Stockalper,"0","18","8",Fluss,grand-clos
+Le Léman,Le Tové,"0","10","10",Fluss,grand-clos
+Le Léman,Le Rhône,"0","1","4",Fluss,baby-plage-geneva
+Le Léman,Le Rhône,"0","1","4",Fluss,pont-sous-terre
+Le Léman,Le Rhône,"0","1","4",Fluss,baby-plage-ii-geneve
+Le Léman,Le Rhône,"0","1","4",Fluss,rocky-plage
+Zürichsee,Tobelbach,"0","9","9",Fluss,zuerichsee_staefa_hennm
+Zürichsee,Tobelbach,"0","9","9",Fluss,zuerichsee_staefa_hennm
+Zürichsee,Dorfbach,"0","9","9",Fluss,zurichsee_kusnachterhorn_thirkell-whitej
+Zürichsee,Dorfbach,"0","9","9",Fluss,kusnachter-dorfbach-tobelweg-1-4
+Zürichsee,Dorfbach,"0","9","9",Fluss,zurichsee_kusnachterhorn_thirkell-whitej
+Zürichsee,Dorfbach,"0","9","9",Fluss,kusnachter-dorfbach-tobelweg-1-4
+Zürichsee,Wildbach,"0","9","9",Fluss,zurichsee_wollishofen_langendorfm
+Zürichsee,Wildbach,"0","9","9",Fluss,zuerichsee_zurich_kullg
+Zürichsee,Wildbach,"0","9","9",Fluss,zurichsee-feldeggstr-banningersand
+Zürichsee,Wildbach,"0","9","9",Fluss,zurichsee_wollishofen_langendorfm
+Zürichsee,Wildbach,"0","9","9",Fluss,zuerichsee_zurich_kullg
+Zürichsee,Wildbach,"0","9","9",Fluss,zurichsee-feldeggstr-banningersand
+Zürichsee,Limmat,"0","4","4",Fluss,zurcher-strand
+Zürichsee,Limmat,"0","4","4",Fluss,zuerichsee_zurich_kullg
+Zürichsee,Limmat,"0","4","4",Fluss,zurichsee-feldeggstr-banningersand
+Zürichsee,Limmat,"0","4","4",Fluss,sihl_zuerich_scherfs
+Zürichsee,Schanzengraben,"0","20","10",Fluss,zurcher-strand
+Zürichsee,Schanzengraben,"0","20","10",Fluss,zuerichsee_zurich_kullg
+Zürichsee,Schanzengraben,"0","20","10",Fluss,zurichsee-feldeggstr-banningersand
+Zürichsee,Schanzengraben,"0","20","10",Fluss,sihl_zuerich_scherfs
+Zürichsee,Limmat,"0","4","4",Fluss,zurcher-strand
+Zürichsee,Limmat,"0","4","4",Fluss,zuerichsee_zurich_kullg
+Zürichsee,Limmat,"0","4","4",Fluss,zurichsee-feldeggstr-banningersand
+Zürichsee,Limmat,"0","4","4",Fluss,sihl_zuerich_scherfs
+Zürichsee,Schanzengraben,"0","20","10",Fluss,zurcher-strand
+Zürichsee,Schanzengraben,"0","20","10",Fluss,zuerichsee_zurich_kullg
+Zürichsee,Schanzengraben,"0","20","10",Fluss,zurichsee-feldeggstr-banningersand
+Zürichsee,Schanzengraben,"0","20","10",Fluss,sihl_zuerich_scherfs
+Zürichsee,Reidbach,"0","10","10",Fluss_U,zuerichsee_richterswil_benkoem_2
+Zürichsee,Reidbach,"0","10","10",Fluss_U,zuerichsee_waedenswil_colomboc_1
+Zürichsee,Reidbach,"0","10","10",Fluss_U,zuerichsee_richterswil_benkoem_2
+Zürichsee,Reidbach,"0","10","10",Fluss_U,zuerichsee_waedenswil_colomboc_1
+Zürichsee,Sarenbach,"0","9","9",Fluss,pfafikon-bad
+Zürichsee,Staldenbach,"0","9","9",Fluss,pfafikon-bad
+Zürichsee,Sarenbach,"0","9","9",Fluss,pfafikon-bad
+Zürichsee,Staldenbach,"0","9","9",Fluss,pfafikon-bad
+Zürichsee,Alt Linth,"0","17","7",Fluss,schmerikon-bahnhof-strand
+Zürichsee,Alt Linth,"0","17","7",Fluss,aabach
+Zürichsee,Alt Linth,"0","17","7",Fluss,schmerikon-bahnhof-strand
+Zürichsee,Alt Linth,"0","17","7",Fluss,aabach
+Zürichsee,Linthkanal,"0","5","5",Fluss,schmerikon-bahnhof-strand
+Zürichsee,Linthkanal,"0","5","5",Fluss,aabach
+Zürichsee,Steinenbach,"0","17","7",Fluss,schmerikon-bahnhof-strand
+Zürichsee,Steinenbach,"0","17","7",Fluss,aabach
+Zürichsee,Linthkanal,"0","5","5",Fluss,schmerikon-bahnhof-strand
+Zürichsee,Linthkanal,"0","5","5",Fluss,aabach
+Zürichsee,Aabach,"0","7","8",Fluss,schmerikon-bahnhof-strand
+Zürichsee,Aabach,"0","7","8",Fluss,aabach
+Zürichsee,Steinenbach,"0","17","7",Fluss,schmerikon-bahnhof-strand
+Zürichsee,Steinenbach,"0","17","7",Fluss,aabach
+Zürichsee,Aabach,"0","7","8",Fluss,schmerikon-bahnhof-strand
+Zürichsee,Aabach,"0","7","8",Fluss,aabach
+Zürichsee,Wagnerbach,"0","9","9",Fluss,rastplatz-stampf
+Zürichsee,Wagnerbach,"0","9","9",Fluss,jona-river-rastplatz
+Zürichsee,Wagnerbach,"0","9","9",Fluss,strandbeiz
+Zürichsee,Jona,"0","7","7",Fluss,rastplatz-stampf
+Zürichsee,Jona,"0","7","7",Fluss,jona-river-rastplatz
+Zürichsee,Jona,"0","7","7",Fluss,strandbeiz
+Zürichsee,Wagnerbach,"0","9","9",Fluss,rastplatz-stampf
+Zürichsee,Wagnerbach,"0","9","9",Fluss,jona-river-rastplatz
+Zürichsee,Wagnerbach,"0","9","9",Fluss,strandbeiz
+Lago di Lugano,Cassarate,"0","7","7",Fluss,foce-del-cassarate
+Lago di Lugano,Cassarate,"0","7","7",Fluss,lido
+Lago di Lugano,Cassarate,"0","7","7",Fluss,lugano-centro
+Lago di Lugano,Cassarate,"0","7","7",Fluss,spiaggia-parco-ciani
+Lago di Lugano,Cassarate,"0","7","7",Fluss,foce-del-cassarate
+Lago di Lugano,Cassarate,"0","7","7",Fluss,lido
+Lago di Lugano,Cassarate,"0","7","7",Fluss,lugano-centro
+Lago di Lugano,Cassarate,"0","7","7",Fluss,spiaggia-parco-ciani
+Bielersee,La Thielle,"0","6","6",Fluss,mullermatte
+Bielersee,La Thielle,"0","6","6",Fluss,strandboden-biel
+Bielersee,La Thielle,"0","6","6",Fluss,nidau-strand
+Bielersee,La Suze,"0","7","7",Fluss,mullermatte
+Bielersee,La Suze,"0","7","7",Fluss,strandboden-biel
+Bielersee,La Suze,"0","7","7",Fluss,nidau-strand
+Bielersee,Aare,"0","14","4",Fluss,mullermatte
+Bielersee,Aare,"0","14","4",Fluss,strandboden-biel
+Bielersee,Aare,"0","14","4",Fluss,nidau-strand
+Bielersee,Aare,"0","14","4",Fluss,mullermatte
+Bielersee,Aare,"0","14","4",Fluss,strandboden-biel
+Bielersee,Aare,"0","14","4",Fluss,nidau-strand
+Bielersee,La Thielle,"0","6","6",Fluss,mullermatte
+Bielersee,La Thielle,"0","6","6",Fluss,strandboden-biel
+Bielersee,La Thielle,"0","6","6",Fluss,nidau-strand
+Zugersee,Lorze,"0","6","5",Fluss,zugerseecholler_cham_blarerm
+Zugersee,Lorze,"0","6","5",Fluss,zugerseecholler_cham_blarerm
+Zugersee,Lorze,"0","6","5",Fluss,zugerseecholler_cham_blarerm
+Zugersee,Lorze,"0","6","5",Fluss,zugerseecholler_cham_blarerm
+Lac de Neuchâtel,Le Seyon,"0","8","8",Fluss,evole-plage
+Lac de Neuchâtel,Le Seyon,"0","8","8",Fluss,plage-de-serriere
+Lac de Neuchâtel,Le Seyon,"0","8","8",Fluss,evole-plage
+Lac de Neuchâtel,Le Seyon,"0","8","8",Fluss,plage-de-serriere
+Lac de Neuchâtel,L'Areuse,"0","7","7",Fluss,pointe-dareuse
+Lac de Neuchâtel,Le Vivier,"0","9","7",Fluss,pointe-dareuse
+Lac de Neuchâtel,L'Areuse,"0","7","7",Fluss,pointe-dareuse
+Lac de Neuchâtel,Le Vivier,"0","9","7",Fluss,pointe-dareuse
+Lac de Neuchâtel,La Brine,"0","9","9",Fluss,signalpain
+Lac de Neuchâtel,La Brine,"0","9","9",Fluss,pecos-plage
+Lac de Neuchâtel,Le Bey,"0","9","9",Fluss,signalpain
+Lac de Neuchâtel,Le Bey,"0","9","9",Fluss,pecos-plage
+Lac de Neuchâtel,La Brine,"0","9","9",Fluss,signalpain
+Lac de Neuchâtel,La Brine,"0","9","9",Fluss,pecos-plage
+Lac de Neuchâtel,Le Bey,"0","9","9",Fluss,signalpain
+Lac de Neuchâtel,Le Bey,"0","9","9",Fluss,pecos-plage
+Lac de Neuchâtel,La Thielle,"0","6","6",Fluss,la-petite-plage
+Lac de Neuchâtel,La Thielle,"0","6","6",Fluss,signalpain
+Lac de Neuchâtel,Canal Oriental,"0","18","8",Fluss,la-petite-plage
+Lac de Neuchâtel,Canal Oriental,"0","18","8",Fluss,signalpain
+Lac de Neuchâtel,La Thielle,"0","6","6",Fluss,la-petite-plage
+Lac de Neuchâtel,La Thielle,"0","6","6",Fluss,signalpain
+Lac de Neuchâtel,Le Buron,"0","8","8",Fluss,la-petite-plage
+Lac de Neuchâtel,Le Buron,"0","8","8",Fluss,signalpain
+Lac de Neuchâtel,Canal Oriental,"0","18","8",Fluss,la-petite-plage
+Lac de Neuchâtel,Canal Oriental,"0","18","8",Fluss,signalpain
+Lac de Neuchâtel,Le Buron,"0","8","8",Fluss,la-petite-plage
+Lac de Neuchâtel,Le Buron,"0","8","8",Fluss,signalpain
+Lac de Neuchâtel,Ruisseau de Crêt Moron,"0","10","10",Fluss,nouvelle-plage
+Lac de Neuchâtel,Ruisseau de Crêt Moron,"0","10","10",Fluss,nouvelle-plage
+Lac de Neuchâtel,Ruisseau de la Molliette,"0","9","9",Fluss,impromptu_cudrefin
+Lac de Neuchâtel,Ruisseau de la Molliette,"0","9","9",Fluss,neuenburgersee_cudrefin_mattera
+Lac de Neuchâtel,Ruisseau de la Molliette,"0","9","9",Fluss,impromptu_cudrefin
+Lac de Neuchâtel,Ruisseau de la Molliette,"0","9","9",Fluss,neuenburgersee_cudrefin_mattera
+Thunersee,Schifffahrtskanal,"0","20","10",Fluss,weissenau-neuhaus
+Thunersee,Aare,"0","5","4",Fluss,weissenau-neuhaus
+Thunersee,Lombach,"0","7","7",Fluss,weissenau-neuhaus
+Thunersee,Lombach,"0","7","7",Fluss,sundbach-strand
+Thunersee,Aare,"0","5","4",Fluss,weissenau-neuhaus
+Thunersee,Lombach,"0","7","7",Fluss,weissenau-neuhaus
+Thunersee,Lombach,"0","7","7",Fluss,sundbach-strand
+Thunersee,N_P,"0","9","9",Fluss,sundbach-strand
+Thunersee,N_P,"0","9","9",Fluss,sundbach-strand
+Thunersee,N_P,"0","10","10",Fluss,sundbach-strand
+Thunersee,N_P,"0","10","10",Fluss,sundbach-strand
+Thunersee,Chrutbach,"0","10","10",Fluss,sundbach-strand
+Thunersee,Chrutbach,"0","10","10",Fluss,sundbach-strand
+Thunersee,Hünibach,"0","9","9",Fluss,thun-strandbad
+Thunersee,Aare,"0","5","4",Fluss,thun-strandbad
+Thunersee,Hünibach,"0","9","9",Fluss,thun-strandbad
+Thunersee,Kander,"0","5","5",Fluss,delta-park
+Thunersee,Kander,"0","5","5",Fluss,camping-gwatt-strand
+Thunersee,Aare,"0","5","4",Fluss,thun-strandbad
+Thunersee,Kander,"0","5","5",Fluss,delta-park
+Thunersee,Kander,"0","5","5",Fluss,camping-gwatt-strand
+Thunersee,Schifffahrtskanal,"0","20","10",Fluss,weissenau-neuhaus
+Bielersee,Mülibach,"0","10","10",Fluss,bielersee_vinelz_fankhausers
+Bielersee,Mülibach,"0","10","10",Fluss,erlach-camping-strand
+Bielersee,La Suze,"0","7","7",Fluss,mullermatte
+Bielersee,La Suze,"0","7","7",Fluss,strandboden-biel
+Bielersee,La Suze,"0","7","7",Fluss,nidau-strand
+Bielersee,Canal de la Thielle,"0","15","5",Fluss,camp-des-peches
+Bielersee,Canal de la Thielle,"0","15","5",Fluss,gals-reserve
+Bielersee,Ruisseau de Vaux,"0","9","9",Fluss,erlach-camping-strand
+Bielersee,Ruisseau de Vaux,"0","9","9",Fluss,camp-des-peches
+Bielersee,Ruisseau de Vaux,"0","9","9",Fluss,gals-reserve
+Zürichsee,Jona,"0","7","7",Fluss,rastplatz-stampf
+Zürichsee,Jona,"0","7","7",Fluss,jona-river-rastplatz
+Zürichsee,Jona,"0","7","7",Fluss,strandbeiz
+Bielersee,Ruisseau de Vaux,"0","9","9",Fluss,erlach-camping-strand
+Bielersee,Ruisseau de Vaux,"0","9","9",Fluss,camp-des-peches
+Bielersee,Ruisseau de Vaux,"0","9","9",Fluss,gals-reserve
+Bielersee,Mülibach,"0","10","10",Fluss,bielersee_vinelz_fankhausers
+Bielersee,Mülibach,"0","10","10",Fluss,erlach-camping-strand
+Bielersee,Canal de la Thielle,"0","15","5",Fluss,camp-des-peches
+Bielersee,Canal de la Thielle,"0","15","5",Fluss,gals-reserve
+,Anderbach,"0","8","8",Fluss,unterdsee_ermatingen_brunkem
+,Steinach,"0","9","9",Fluss,bodensee_steinach_dolder_a
+,Steinach,"0","9","9",Fluss,bodensee_horn_huberm
+,Aach (Arbon),"0","8","8",Fluss,bodensee_steinach_dolder_a
+,Glatt,"0","7","6",Fluss,greifensee_fallanden_meistery
+,Glatt,"0","7","6",Fluss,greifensee_fallanden_simmenc
+,Glatt,"0","7","6",Fluss,greifensee_fallanden_meistery
+,Glatt,"0","7","6",Fluss,greifensee_fallanden_simmenc
+,Glatt,"0","7","6",Fluss,greifensee_fallanden_meistery
+,Glatt,"0","7","6",Fluss,greifensee_fallanden_simmenc
+,Furtbach,"0","9","9",Fluss,katzensee_regensdorfzuerichaffoltern_stueberj
+,Dorfbach,"0","10","10",Fluss,greifensee_uster_fischerb_-2
+,Dorfbach,"0","10","10",Fluss,greifensee_uster_fischerb_1
+,Dorfbach,"0","9","9",Fluss,greifensee_maur_simmenc
+,Mönchaltorfer Aa,"0","8","8",Fluss,greifensee_maur_simmenc
+,Lipperütibach,"0","9","9",Fluss,sempachersee_sempach_tampec
+,Gross Aa,"0","8","8",Fluss,sempachersee_sempach_tampec
+,Chli Aa,"0","9","9",Fluss,sempachersee_sempach_tampec
+,Mönchaltorfer Aa,"0","8","8",Fluss,greifensee_maur_simmenc
