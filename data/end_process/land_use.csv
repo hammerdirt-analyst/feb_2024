@@ -1,0 +1,1206 @@
+slug,feature_ty,dry,feature,area,scale
+aabach,l,4967000,Baumschule,2525,0.0005083551439500704
+aabach,l,4967000,Friedhof,3678,0.0007404872156231125
+aabach,l,4967000,Schul- und Hochschulareal,25974,0.005229313468894705
+aabach,l,4967000,Wald nicht bestockt,2833,0.000570364405073485
+aare-limmatspitz,r,7065000,Abwasserreinigungsareal,10719,0.0015171974522292994
+aare-limmatspitz,r,7065000,Friedhof,17541,0.0024828025477707004
+aare-limmatspitz,r,7065000,Historisches Areal,1966,0.000278273177636235
+aare-limmatspitz,r,7065000,Kraftwerkareal,1528,0.00021627742392073601
+aare-limmatspitz,r,7065000,Schrebergartenareal,3161,0.00044741684359518753
+aare-limmatspitz,r,7065000,Schul- und Hochschulareal,32744,0.0046346779900920025
+aare-limmatspitz,r,7065000,Truppenuebungsplatz,74200,0.010502476999292286
+aare-limmatspitz,r,7065000,Unterwerkareal,3995,0.0005654635527246992
+aare-limmatspitz,r,7065000,Wald nicht bestockt,6573,0.0009303609341825902
+aare-port,r,7065000,Abwasserreinigungsareal,30395,0.004302193913658882
+aare-port,r,7065000,Baumschule,24115,0.003413305024769993
+aare-port,r,7065000,Friedhof,84593,0.011973531493276715
+aare-port,r,7065000,Historisches Areal,48192,0.006821231422505308
+aare-port,r,7065000,Kehrichtverbrennungsareal,21345,0.0030212314225053077
+aare-port,r,7065000,Kraftwerkareal,16259,0.0023013446567586695
+aare-port,r,7065000,Schrebergartenareal,93058,0.01317169143665959
+aare-port,r,7065000,Schul- und Hochschulareal,41710,0.005903750884642604
+aare-solothurn-lido-strand,r,7065000,Abwasserreinigungsareal,472,6.680820948336872e-05
+aare-solothurn-lido-strand,r,7065000,Historisches Areal,2838,0.00040169851380042465
+aare-solothurn-lido-strand,r,7065000,Schrebergartenareal,28770,0.004072186836518047
+aare-solothurn-lido-strand,r,7065000,Schul- und Hochschulareal,52816,0.007475725406935598
+aare-solothurn-lido-strand,r,7065000,Spitalareal,98764,0.0139793347487615
+aare_bern_caveltin,r,7065000,Baumschule,12592,0.0017823071479122436
+aare_bern_caveltin,r,7065000,Friedhof,21010,0.0029738145789101203
+aare_bern_caveltin,r,7065000,Historisches Areal,21386,0.003027034677990092
+aare_bern_caveltin,r,7065000,Oeffentliches Parkareal,137649,0.019483227176220808
+aare_bern_caveltin,r,7065000,Schrebergartenareal,21278,0.0030117480537862704
+aare_bern_caveltin,r,7065000,Schul- und Hochschulareal,56951,0.008061004953998585
+aare_bern_gerberm,r,7065000,Abwasserreinigungsareal,19049,0.0026962491153573955
+aare_bern_gerberm,r,7065000,Baumschule,4494,0.0006360934182590233
+aare_bern_gerberm,r,7065000,Friedhof,15313,0.002167445152158528
+aare_bern_gerberm,r,7065000,Historisches Areal,492892,0.069765322009908
+aare_bern_gerberm,r,7065000,Schrebergartenareal,22461,0.0031791932059447984
+aare_bern_gerberm,r,7065000,Schul- und Hochschulareal,240820,0.03408634111818825
+aare_bern_gerberm,r,7065000,Spitalareal,5071,0.0007177636234961076
+aare_bern_scheurerk,r,7065000,Abwasserreinigungsareal,21691,0.003070205237084218
+aare_bern_scheurerk,r,7065000,Friedhof,18163,0.0025708421797593774
+aare_bern_scheurerk,r,7065000,Historisches Areal,1075626,0.15224713375796178
+aare_bern_scheurerk,r,7065000,Kraftwerkareal,4928,0.0006975230007077141
+aare_bern_scheurerk,r,7065000,Messeareal,4820,0.0006822363765038924
+aare_bern_scheurerk,r,7065000,Oeffentliches Parkareal,58756,0.008316489738145789
+aare_bern_scheurerk,r,7065000,Schrebergartenareal,96387,0.013642887473460721
+aare_bern_scheurerk,r,7065000,Schul- und Hochschulareal,136021,0.019252795470629865
+aare_bern_scheurerk,r,7065000,Spitalareal,50361,0.00712823779193206
+aare_bern_scheurerk,r,7065000,Truppenuebungsplatz,30346,0.004295258315640481
+aare_bern_scheurerk,r,7065000,Unterwerkareal,21031,0.0029767869780608636
+aare_brugg_buchie,r,7065000,Abwasserreinigungsareal,10719,0.0015171974522292994
+aare_brugg_buchie,r,7065000,Friedhof,6730,0.0009525831564048125
+aare_brugg_buchie,r,7065000,Kraftwerkareal,1528,0.00021627742392073601
+aare_brugg_buchie,r,7065000,Schrebergartenareal,36723,0.005197876857749469
+aare_brugg_buchie,r,7065000,Schul- und Hochschulareal,72495,0.010261146496815287
+aare_brugg_buchie,r,7065000,Truppenuebungsplatz,74200,0.010502476999292286
+aare_brugg_buchie,r,7065000,Unterwerkareal,3995,0.0005654635527246992
+aare_brugg_buchie,r,7065000,Wald nicht bestockt,6438,0.0009112526539278131
+aare_elfenau_cataldiv,r,7062611,Baumschule,12592,0.0017829100314317183
+aare_elfenau_cataldiv,r,7062611,Friedhof,18160,0.0025712870211880563
+aare_elfenau_cataldiv,r,7062611,Oeffentliches Parkareal,151231,0.02141290239544554
+aare_elfenau_cataldiv,r,7062611,Schrebergartenareal,12614,0.001786025026721704
+aare_elfenau_cataldiv,r,7062611,Schul- und Hochschulareal,124619,0.01764489082012304
+aare_kehrsatz_stolten,r,7065000,Baumschule,5436,0.0007694267515923567
+aare_kehrsatz_stolten,r,7065000,Friedhof,27206,0.003850813871196037
+aare_kehrsatz_stolten,r,7065000,Historisches Areal,21386,0.003027034677990092
+aare_kehrsatz_stolten,r,7065000,Schrebergartenareal,25147,0.003559377211606511
+aare_kehrsatz_stolten,r,7065000,Schul- und Hochschulareal,63719,0.009018966737438076
+aare_koniz_hoppej,r,7053413,Baumschule,12592,0.001785235034443609
+aare_koniz_hoppej,r,7053413,Friedhof,18160,0.0025746401068532355
+aare_koniz_hoppej,r,7053413,Kraftwerkareal,368,5.2173323751210936e-05
+aare_koniz_hoppej,r,7053413,Oeffentliches Parkareal,204087,0.02893450305547116
+aare_koniz_hoppej,r,7053413,Schrebergartenareal,14062,0.001993644778775892
+aare_koniz_hoppej,r,7053413,Schul- und Hochschulareal,159398,0.02259870505243348
+aare_koniz_hoppej,r,7053413,Spitalareal,1330,0.0001885611972530178
+aare_post,r,7065000,Abwasserreinigungsareal,30395,0.004302193913658882
+aare_post,r,7065000,Baumschule,24115,0.003413305024769993
+aare_post,r,7065000,Friedhof,84593,0.011973531493276715
+aare_post,r,7065000,Historisches Areal,48794,0.006906440198159943
+aare_post,r,7065000,Kehrichtverbrennungsareal,21345,0.0030212314225053077
+aare_post,r,7065000,Kraftwerkareal,16259,0.0023013446567586695
+aare_post,r,7065000,Schrebergartenareal,117288,0.016601273885350317
+aare_post,r,7065000,Schul- und Hochschulareal,35097,0.004967728237791932
+aare_rupperswil_badert,r,7043473,Baumschule,13243,0.0018801804166779655
+aare_rupperswil_badert,r,7043473,Friedhof,3978,0.000564778199618285
+aare_rupperswil_badert,r,7043473,Kraftwerkareal,16753,0.0023785141222235112
+aare_rupperswil_badert,r,7043473,Schul- und Hochschulareal,4216,0.000598568348313396
+aare_rupperswil_badert,r,7043473,Unterwerkareal,31175,0.004426083552815493
+aare_solothurn_nguyena,r,7065000,Historisches Areal,14172,0.002005944798301486
+aare_solothurn_nguyena,r,7065000,Massnahmenvollzugsanstaltsareal,2723,0.0003854210898796886
+aare_solothurn_nguyena,r,7065000,Oeffentliches Parkareal,416,5.8881811748053786e-05
+aare_solothurn_nguyena,r,7065000,Schrebergartenareal,28770,0.004072186836518047
+aare_solothurn_nguyena,r,7065000,Schul- und Hochschulareal,69349,0.00981585279547063
+aare_solothurn_nguyena,r,7065000,Spitalareal,107144,0.0151654635527247
+aare_suhrespitz_badert,r,7065000,Abwasserreinigungsareal,28039,0.003968719037508847
+aare_suhrespitz_badert,r,7065000,Friedhof,7689,0.0010883227176220808
+aare_suhrespitz_badert,r,7065000,Historisches Areal,2536,0.0003589525831564048
+aare_suhrespitz_badert,r,7065000,Kraftwerkareal,8573,0.001213446567586695
+aare_suhrespitz_badert,r,7065000,Oeffentliches Parkareal,15818,0.002238924274593064
+aare_suhrespitz_badert,r,7065000,Schrebergartenareal,37926,0.005368152866242038
+aare_suhrespitz_badert,r,7065000,Schul- und Hochschulareal,80521,0.01139716914366596
+aare_suhrespitz_badert,r,7065000,Unterwerkareal,1428,0.0002021231422505308
+aarezufluss_bern_scheurerk,r,7065000,Abwasserreinigungsareal,20147,0.0028516631280962493
+aarezufluss_bern_scheurerk,r,7065000,Baumschule,158,2.2363765038924276e-05
+aarezufluss_bern_scheurerk,r,7065000,Friedhof,18815,0.0026631280962491153
+aarezufluss_bern_scheurerk,r,7065000,Historisches Areal,1076241,0.15233418259023354
+aarezufluss_bern_scheurerk,r,7065000,Kraftwerkareal,4928,0.0006975230007077141
+aarezufluss_bern_scheurerk,r,7065000,Messeareal,6547,0.0009266808209483369
+aarezufluss_bern_scheurerk,r,7065000,Oeffentliches Parkareal,61779,0.008744373673036094
+aarezufluss_bern_scheurerk,r,7065000,Schrebergartenareal,96340,0.013636234961075725
+aarezufluss_bern_scheurerk,r,7065000,Schul- und Hochschulareal,135006,0.019109129511677283
+aarezufluss_bern_scheurerk,r,7065000,Spitalareal,50361,0.00712823779193206
+aarezufluss_bern_scheurerk,r,7065000,Truppenuebungsplatz,30929,0.004377777777777778
+aarezufluss_bern_scheurerk,r,7065000,Unterwerkareal,21762,0.003080254777070064
+anarchy-beach,l,2548254,Friedhof,21369,0.008385741766715563
+anarchy-beach,l,2548254,Historisches Areal,11676,0.004581960824941313
+anarchy-beach,l,2548254,Oeffentliches Parkareal,22427,0.00880092800796153
+anarchy-beach,l,2548254,Schul- und Hochschulareal,101728,0.039920667249026195
+arabie,l,3435483,Abwasserreinigungsareal,6481,0.0018864887411755495
+arabie,l,3435483,Friedhof,39674,0.011548303397222457
+arabie,l,3435483,Historisches Areal,2340,0.0006811269332434479
+arabie,l,3435483,Oeffentliches Parkareal,47577,0.013848707736292102
+arabie,l,3435483,Schul- und Hochschulareal,52096,0.01516409774113276
+arve_carouge_battistellak,r,7065000,Friedhof,27052,0.003829016277423921
+arve_carouge_battistellak,r,7065000,Kraftwerkareal,12158,0.0017208775654635527
+arve_carouge_battistellak,r,7065000,Oeffentliches Parkareal,78743,0.01114550601556971
+arve_carouge_battistellak,r,7065000,Schrebergartenareal,33625,0.004759377211606511
+arve_carouge_battistellak,r,7065000,Schul- und Hochschulareal,186860,0.026448690728945505
+arve_carouge_battistellak,r,7065000,Spitalareal,60373,0.008545364472753008
+ascona-traghetto-spiaggia,l,4642599,Baumschule,3428,0.00073837951543952
+ascona-traghetto-spiaggia,l,4642599,Friedhof,4019,0.0008656789009776636
+ascona-traghetto-spiaggia,l,4642599,Historisches Areal,8043,0.0017324347849125028
+ascona-traghetto-spiaggia,l,4642599,Oeffentliches Parkareal,71800,0.015465475265040121
+ascona-traghetto-spiaggia,l,4642599,Schul- und Hochschulareal,38330,0.008256151349707351
+augustmutzenbergstrandweg,l,4117306,Friedhof,11100,0.0026959375863732254
+augustmutzenbergstrandweg,l,4117306,Historisches Areal,9949,0.0024163858600745242
+augustmutzenbergstrandweg,l,4117306,Schul- und Hochschulareal,47932,0.011641592827931662
+baby-plage-geneva,l,4674735,Historisches Areal,2044,0.00043724403629296634
+baby-plage-geneva,l,4674735,Oeffentliches Parkareal,525535,0.11242027622956167
+baby-plage-geneva,l,4674735,Schul- und Hochschulareal,224364,0.04799502003856903
+baby-plage-geneva,l,4674735,Spitalareal,1318,0.0002819411153787327
+baby-plage-ii-geneve,l,4573041,Historisches Areal,2044,0.0004469673462363447
+baby-plage-ii-geneve,l,4573041,Oeffentliches Parkareal,503915,0.1101925392752875
+baby-plage-ii-geneve,l,4573041,Schul- und Hochschulareal,222728,0.04870457098460303
+baby-plage-ii-geneve,l,4573041,Spitalareal,1318,0.0002882108426318504
+bain-des-dames,l,3306956,Friedhof,21369,0.006461833783092366
+bain-des-dames,l,3306956,Historisches Areal,11676,0.003530739447395127
+bain-des-dames,l,3306956,Oeffentliches Parkareal,29516,0.008925428702407895
+bain-des-dames,l,3306956,Schul- und Hochschulareal,88823,0.02685944415347528
+baye-de-clarens,l,3239859,Abwasserreinigungsareal,3065,0.0009460288240938881
+baye-de-clarens,l,3239859,Friedhof,29804,0.009199165766164516
+baye-de-clarens,l,3239859,Historisches Areal,24163,0.007458040612261212
+baye-de-clarens,l,3239859,Oeffentliches Parkareal,24797,0.007653728140638219
+baye-de-clarens,l,3239859,Schul- und Hochschulareal,130994,0.04043200645460188
+baye-de-clarens,l,3239859,Spitalareal,36407,0.011237217422116209
+baye-de-montreux-d,l,3077448,Friedhof,196,6.36891346336315e-05
+baye-de-montreux-d,l,3077448,Kraftwerkareal,3244,0.0010541201670994928
+baye-de-montreux-d,l,3077448,Oeffentliches Parkareal,15304,0.004972951614454574
+baye-de-montreux-d,l,3077448,Schrebergartenareal,4351,0.0014138337999537278
+baye-de-montreux-d,l,3077448,Schul- und Hochschulareal,17968,0.005838603934168831
+baye-de-montreux-d,l,3077448,Spitalareal,4329,0.0014066850195356673
+baye-de-montreux-g,l,3060034,Kraftwerkareal,3244,0.0010601189398549166
+baye-de-montreux-g,l,3060034,Oeffentliches Parkareal,15304,0.0050012516200800385
+baye-de-montreux-g,l,3060034,Schrebergartenareal,4351,0.0014218796261740883
+baye-de-montreux-g,l,3060034,Schul- und Hochschulareal,17968,0.005871830182279021
+baye-de-montreux-g,l,3060034,Spitalareal,4329,0.001414690163573346
+beich,r,7065000,Abwasserreinigungsareal,5105,0.0007225760792639774
+beich,r,7065000,Kiesabbauareal,8409,0.0011902335456475583
+bern-fahrstrasse,r,7065000,Abwasserreinigungsareal,86088,0.012185138004246284
+bern-fahrstrasse,r,7065000,Baumschule,5130,0.0007261146496815287
+bern-fahrstrasse,r,7065000,Friedhof,7163,0.0010138711960368011
+bern-fahrstrasse,r,7065000,Historisches Areal,1139641,0.16130799716914368
+bern-fahrstrasse,r,7065000,Kraftwerkareal,4928,0.0006975230007077141
+bern-fahrstrasse,r,7065000,Oeffentliches Parkareal,41960,0.005939136588818118
+bern-fahrstrasse,r,7065000,Schrebergartenareal,70986,0.01004755838641189
+bern-fahrstrasse,r,7065000,Schul- und Hochschulareal,77945,0.011032554847841472
+bern-fahrstrasse,r,7065000,Spitalareal,50361,0.00712823779193206
+bern-fahrstrasse,r,7065000,Unterwerkareal,1383,0.00019575371549893843
+bern-tiergarten,r,7065000,Baumschule,12592,0.0017823071479122436
+bern-tiergarten,r,7065000,Friedhof,18160,0.002570417551309271
+bern-tiergarten,r,7065000,Kraftwerkareal,35,4.953998584571833e-06
+bern-tiergarten,r,7065000,Oeffentliches Parkareal,172253,0.024381174805378627
+bern-tiergarten,r,7065000,Schrebergartenareal,15727,0.0022260438782731777
+bern-tiergarten,r,7065000,Schul- und Hochschulareal,207845,0.029418966737438074
+bielersee_vinelz_fankhausers,l,4762281,Abwasserreinigungsareal,2810,0.0005900533798824555
+bielersee_vinelz_fankhausers,l,4762281,Baumschule,42968,0.009022567126971298
+bielersee_vinelz_fankhausers,l,4762281,Friedhof,2862,0.0006009725171614191
+bielersee_vinelz_fankhausers,l,4762281,Historisches Areal,6612,0.0013884103017020625
+bielersee_vinelz_fankhausers,l,4762281,Schul- und Hochschulareal,18294,0.003841436488103075
+birs_basel_grunern,r,7065000,Abwasserreinigungsareal,26584,0.00376277423920736
+birs_basel_grunern,r,7065000,Friedhof,16341,0.0023129511677282377
+birs_basel_grunern,r,7065000,Kraftwerkareal,14098,0.0019954706298655344
+birs_basel_grunern,r,7065000,Oeffentliches Parkareal,107020,0.015147912243453644
+birs_basel_grunern,r,7065000,Schrebergartenareal,214802,0.030403680113234254
+birs_basel_grunern,r,7065000,Schul- und Hochschulareal,142852,0.020219674451521584
+birs_basel_grunern,r,7065000,Spitalareal,52092,0.007373248407643312
+birs_basel_laderachs,r,7065000,Abwasserreinigungsareal,26584,0.00376277423920736
+birs_basel_laderachs,r,7065000,Friedhof,69464,0.009832130219391366
+birs_basel_laderachs,r,7065000,Kraftwerkareal,434,6.142958244869073e-05
+birs_basel_laderachs,r,7065000,Oeffentliches Parkareal,166339,0.02354409058740269
+birs_basel_laderachs,r,7065000,Schrebergartenareal,207769,0.029408209483368718
+birs_basel_laderachs,r,7065000,Schul- und Hochschulareal,166806,0.02361019108280255
+birs_basel_laderachs,r,7065000,Spitalareal,55789,0.0078965322009908
+birs_basel_laderachs,r,7065000,Wald nicht bestockt,2251,0.0003186128803963199
+birs_reinach_dinuccin,r,7065000,Baumschule,48412,0.006852370842179759
+birs_reinach_dinuccin,r,7065000,Historisches Areal,1661,0.000235102618542109
+birs_reinach_dinuccin,r,7065000,Schrebergartenareal,26381,0.0037340410474168435
+birs_reinach_dinuccin,r,7065000,Schul- und Hochschulareal,143283,0.02028067940552017
+birs_reinach_dinuccin,r,7065000,Spitalareal,33326,0.004717055909412598
+birskopfli-rusco,r,7065000,Friedhof,15252,0.0021588110403397026
+birskopfli-rusco,r,7065000,Kraftwerkareal,14098,0.0019954706298655344
+birskopfli-rusco,r,7065000,Messeareal,82801,0.011719886765746639
+birskopfli-rusco,r,7065000,Oeffentliches Parkareal,119240,0.016877565463552725
+birskopfli-rusco,r,7065000,Schrebergartenareal,264442,0.03742986553432413
+birskopfli-rusco,r,7065000,Schul- und Hochschulareal,242896,0.034380184005661715
+birskopfli-rusco,r,7065000,Spitalareal,85954,0.01216617126680821
+bodensee_altenrhein_caluoria,l,4107846,Friedhof,3400,0.0008276843873894007
+bodensee_altenrhein_caluoria,l,4107846,Historisches Areal,20892,0.005085877123923341
+bodensee_altenrhein_caluoria,l,4107846,Oeffentliches Parkareal,99131,0.024132112060676083
+bodensee_altenrhein_caluoria,l,4107846,Schul- und Hochschulareal,16488,0.004013782405669541
+bodensee_altenrhein_caluoria,l,4107846,Steinbruchareal,1729,0.0004209018546459629
+bodensee_altenrhein_caluoria,l,4107846,Unterwerkareal,772,0.00018793304325429922
+bodensee_arbon_moslis,l,3031126,Friedhof,12723,0.004197450056513652
+bodensee_arbon_moslis,l,3031126,Historisches Areal,13329,0.0043973757606909115
+bodensee_arbon_moslis,l,3031126,Oeffentliches Parkareal,82298,0.02715096634056123
+bodensee_arbon_moslis,l,3031126,Schrebergartenareal,2946,0.0009719160470399449
+bodensee_arbon_moslis,l,3031126,Schul- und Hochschulareal,36255,0.011960901658327631
+bodensee_horn_huberm,l,3754251,Baumschule,17380,0.004629418757563093
+bodensee_horn_huberm,l,3754251,Friedhof,11247,0.002995803956634759
+bodensee_horn_huberm,l,3754251,Historisches Areal,3869,0.0010305650847532571
+bodensee_horn_huberm,l,3754251,Schrebergartenareal,32795,0.008735430848922995
+bodensee_horn_huberm,l,3754251,Schul- und Hochschulareal,19087,0.005084103327135026
+bodensee_steinach_dolder_a,l,4958241,Abwasserreinigungsareal,41011,0.008271280076946642
+bodensee_steinach_dolder_a,l,4958241,Baumschule,23894,0.004819047722771039
+bodensee_steinach_dolder_a,l,4958241,Friedhof,19509,0.003934661505965523
+bodensee_steinach_dolder_a,l,4958241,Historisches Areal,13329,0.0026882517408895615
+bodensee_steinach_dolder_a,l,4958241,Kraftwerkareal,1321,0.0002664251293956869
+bodensee_steinach_dolder_a,l,4958241,Oeffentliches Parkareal,48524,0.00978653518455436
+bodensee_steinach_dolder_a,l,4958241,Schrebergartenareal,28072,0.005661685262979351
+bodensee_steinach_dolder_a,l,4958241,Schul- und Hochschulareal,78290,0.01578987386857557
+bodensee_steinach_dolder_a,l,4958241,Unterwerkareal,2339,0.0004717398771056106
+bodensee_thal_schlachterj_1,l,4168874,Baumschule,210,5.03733142330519e-05
+bodensee_thal_schlachterj_1,l,4168874,Friedhof,3400,0.0008155679447256021
+bodensee_thal_schlachterj_1,l,4168874,Historisches Areal,21462,0.005148152714617904
+bodensee_thal_schlachterj_1,l,4168874,Oeffentliches Parkareal,104224,0.025000515726788578
+bodensee_thal_schlachterj_1,l,4168874,Schul- und Hochschulareal,16488,0.003955024786069332
+bodensee_thal_schlachterj_1,l,4168874,Steinbruchareal,1729,0.0004147402871854606
+bodensee_thal_schlachterj_1,l,4168874,Unterwerkareal,772,0.00018518189803769556
+boiron,l,2579071,Abwasserreinigungsareal,3738,0.0014493590909284777
+boiron,l,2579071,Friedhof,14303,0.0055457953658507265
+brugg-be-buren-bsg-standort,r,7065000,Baumschule,9095,0.0012873319179051662
+brugg-be-buren-bsg-standort,r,7065000,Friedhof,38754,0.005485350318471338
+brugg-be-buren-bsg-standort,r,7065000,Historisches Areal,21445,0.0030353857041755133
+brugg-be-buren-bsg-standort,r,7065000,Schrebergartenareal,114891,0.016261995753715498
+brugg-be-buren-bsg-standort,r,7065000,Schul- und Hochschulareal,33825,0.004787685774946922
+brugg-be-buren-bsg-standort,r,7065000,Wald nicht bestockt,31437,0.004449681528662421
+camp-des-peches,l,5417037,Abwasserreinigungsareal,4725,0.0008722480573789694
+camp-des-peches,l,5417037,Friedhof,7187,0.0013267400610333657
+camp-des-peches,l,5417037,Massnahmenvollzugsanstaltsareal,72781,0.01343557372785159
+camp-des-peches,l,5417037,Schrebergartenareal,9920,0.0018312594135871695
+camp-des-peches,l,5417037,Schul- und Hochschulareal,15033,0.002775133343191121
+camping-gwatt-strand,l,4058830,Friedhof,31179,0.007681770362395074
+camping-gwatt-strand,l,4058830,Oeffentliches Parkareal,64177,0.015811699430624097
+camping-gwatt-strand,l,4058830,Schrebergartenareal,3892,0.0009588970220482258
+camping-gwatt-strand,l,4058830,Schul- und Hochschulareal,49009,0.012074661909959273
+canale-saleggi,r,7065000,Friedhof,2748,0.00038895966029723993
+canale-saleggi,r,7065000,Historisches Areal,36676,0.005191224345364473
+canale-saleggi,r,7065000,Klosterareal,5578,0.0007895258315640481
+canale-saleggi,r,7065000,Messeareal,2352,0.0003329087048832272
+canale-saleggi,r,7065000,Oeffentliches Parkareal,3204,0.0004535031847133758
+canale-saleggi,r,7065000,Schul- und Hochschulareal,103548,0.014656475583864119
+canale-saleggi,r,7065000,Unterwerkareal,3828,0.0005418259023354565
+canale-saleggi,r,7065000,Wald nicht bestockt,11135,0.0015760792639773532
+caprino,l,3640479,Oeffentliches Parkareal,3824,0.0010504112233582449
+charmey,p,7065000,Steinbruchareal,23498,0.0033259731068648267
+charmey,p,7065000,Wald nicht bestockt,3865,0.0005470629865534324
+chriesbach_duebendorf_schneidera,r,7065000,Abwasserreinigungsareal,14790,0.0020934182590233545
+chriesbach_duebendorf_schneidera,r,7065000,Baumschule,7309,0.0010345364472753007
+chriesbach_duebendorf_schneidera,r,7065000,Schrebergartenareal,16208,0.0022941259731068648
+chriesbach_duebendorf_schneidera,r,7065000,Schul- und Hochschulareal,176197,0.024939419674451523
+chriesbach_duebendorf_schneidera,r,7065000,Truppenuebungsplatz,51127,0.007236659589525831
+chriesbach_duebendorf_schneidera,r,7065000,Unterwerkareal,4186,0.0005924982307147912
+cully-plage,l,4389945,Abwasserreinigungsareal,3333,0.0007592350245845905
+cully-plage,l,4389945,Friedhof,5792,0.0013193787165898434
+cully-plage,l,4389945,Historisches Areal,1269,0.00028906968082743635
+cully-plage,l,4389945,Schul- und Hochschulareal,8701,0.0019820293876119176
+cully-plage,l,4389945,Spitalareal,16007,0.003646287140271689
+cully-plage,l,4389945,Unterwerkareal,177,4.0319411746616414e-05
+delta-park,l,3693717,Historisches Areal,638,0.00017272573941100523
+delta-park,l,3693717,Oeffentliches Parkareal,64177,0.01737463915075248
+delta-park,l,3693717,Schul- und Hochschulareal,23238,0.006291223718546927
+emme_biberist_jennim,r,7065000,Baumschule,29641,0.0041954706298655345
+emme_biberist_jennim,r,7065000,Friedhof,12943,0.0018319886765746638
+emme_biberist_jennim,r,7065000,Historisches Areal,1956,0.00027685774946921443
+emme_biberist_jennim,r,7065000,Kraftwerkareal,610,8.634111818825194e-05
+emme_biberist_jennim,r,7065000,Schrebergartenareal,11165,0.0015803255484784146
+emme_biberist_jennim,r,7065000,Schul- und Hochschulareal,78379,0.011093984430290162
+emme_biberist_jennim,r,7065000,Unterwerkareal,3485,0.0004932767162066525
+emme_biberist_jennim,r,7065000,Wald nicht bestockt,479,6.779900920028309e-05
+emme_utzenstorf_gruttert,r,7065000,Friedhof,3770,0.0005336164189667375
+emme_utzenstorf_gruttert,r,7065000,Kraftwerkareal,1429,0.00020226468506723283
+emme_utzenstorf_gruttert,r,7065000,Schrebergartenareal,9227,0.0013060155697098372
+emme_utzenstorf_gruttert,r,7065000,Schul- und Hochschulareal,58923,0.008340127388535032
+emme_utzenstorf_gruttert,r,7065000,Unterwerkareal,3378,0.0004781316348195329
+erlach-camping-strand,l,2816693,Abwasserreinigungsareal,2810,0.0009976238091975234
+erlach-camping-strand,l,2816693,Baumschule,42968,0.01525476862405665
+erlach-camping-strand,l,2816693,Friedhof,1604,0.0005694621316558106
+erlach-camping-strand,l,2816693,Historisches Areal,3278,0.0011637761019749047
+erlach-camping-strand,l,2816693,Schul- und Hochschulareal,17327,0.006151540121695904
+evole-plage,l,4422729,Friedhof,15362,0.00347342104840699
+evole-plage,l,4422729,Historisches Areal,4464,0.0010093315688119258
+evole-plage,l,4422729,Oeffentliches Parkareal,105986,0.02396393719805125
+evole-plage,l,4422729,Schul- und Hochschulareal,124432,0.028134665271148197
+evole-plage,l,4422729,Spitalareal,13652,0.003086781939386293
+evole-plage,l,4422729,Unterwerkareal,3173,0.0007174303467384052
+flibach-river-right-bank,l,5252170,Deponieareal,55614,0.010588766167127112
+flibach-river-right-bank,l,5252170,Friedhof,1983,0.00037755822831324955
+flibach-river-right-bank,l,5252170,Historisches Areal,733,0.00013956136225598182
+flibach-river-right-bank,l,5252170,Klosterareal,4470,0.0008510767930207895
+flibach-river-right-bank,l,5252170,Schul- und Hochschulareal,10523,0.002003552817216503
+flibach-river-right-bank,l,5252170,Unterwerkareal,56,1.0662259599365595e-05
+foce-del-cassarate,r,4134215,Friedhof,3837,0.0009281084800863041
+foce-del-cassarate,r,4134215,Historisches Areal,7214,0.0017449503714731817
+foce-del-cassarate,r,4134215,Messeareal,27958,0.006762589754040368
+foce-del-cassarate,r,4134215,Oeffentliches Parkareal,111859,0.02705688988115035
+foce-del-cassarate,r,4134215,Schul- und Hochschulareal,153131,0.03703992172637369
+foce-del-cassarate,r,4134215,Spitalareal,12210,0.0029534022783043457
+foce-del-cassarate,r,4134215,Wald nicht bestockt,3340,0.000807892187513228
+gals-reserve,l,4566601,Abwasserreinigungsareal,7535,0.0016500237266185507
+gals-reserve,l,4566601,Friedhof,1604,0.000351245926675004
+gals-reserve,l,4566601,Historisches Areal,3278,0.0007178205409231067
+gals-reserve,l,4566601,Massnahmenvollzugsanstaltsareal,72781,0.015937674432252785
+gals-reserve,l,4566601,Schul- und Hochschulareal,17327,0.0037942881368440116
+gasi-strand,l,4817361,Deponieareal,49123,0.010197076781250149
+gasi-strand,l,4817361,Friedhof,1983,0.00041163616345131704
+gasi-strand,l,4817361,Historisches Areal,882,0.0001830877943338687
+gasi-strand,l,4817361,Klosterareal,4470,0.0009278939236648448
+gasi-strand,l,4817361,Schul- und Hochschulareal,4208,0.0008735072999511559
+gasi-strand,l,4817361,Unterwerkareal,56,1.1624621862467854e-05
+glatt_oerlikon_covosn,r,7065000,Friedhof,15158,0.0021455060155697097
+glatt_oerlikon_covosn,r,7065000,Kehrichtverbrennungsareal,65534,0.0092758669497523
+glatt_oerlikon_covosn,r,7065000,Messeareal,24324,0.003442887473460722
+glatt_oerlikon_covosn,r,7065000,Oeffentliches Parkareal,36823,0.005212031139419674
+glatt_oerlikon_covosn,r,7065000,Schrebergartenareal,151160,0.021395612172682238
+glatt_oerlikon_covosn,r,7065000,Schul- und Hochschulareal,240522,0.03404416135881104
+glatt_oerlikon_covosn,r,7065000,Unterwerkareal,42161,0.00596758669497523
+goldach_goldach_schlachterj,r,7017103,Baumschule,65091,0.009276050244666496
+goldach_goldach_schlachterj,r,7017103,Friedhof,5487,0.0007819466238417762
+goldach_goldach_schlachterj,r,7017103,Historisches Areal,45951,0.006548428888673859
+goldach_goldach_schlachterj,r,7017103,Kiesabbauareal,12098,0.001724073310595555
+goldach_goldach_schlachterj,r,7017103,Schrebergartenareal,5562,0.0007926347952994277
+goldach_goldach_schlachterj,r,7017103,Schul- und Hochschulareal,42634,0.00607572669234013
+goldach_goldach_schlachterj,r,7017103,Unterwerkareal,4009,0.0005713183916496594
+golene-gudo,r,6994464,Friedhof,1079,0.00015426485860817928
+golene-gudo,r,6994464,Schul- und Hochschulareal,5911,0.0008450969223660311
+grand-clos,l,3596235,Historisches Areal,196,5.45014438711597e-05
+grand-clos,l,3596235,Klosterareal,14764,0.004105404680172458
+grand-clos,l,3596235,Schul- und Hochschulareal,27912,0.007761450516999028
+greifensee_fallanden_meistery,l,4382892,Baumschule,10902,0.0024873987312486823
+greifensee_fallanden_meistery,l,4382892,Schrebergartenareal,3561,0.0008124772410545366
+greifensee_fallanden_meistery,l,4382892,Schul- und Hochschulareal,47111,0.01074883889450162
+greifensee_fallanden_simmenc,l,4229862,Baumschule,10902,0.00257738904957183
+greifensee_fallanden_simmenc,l,4229862,Historisches Areal,625,0.00014775895762083964
+greifensee_fallanden_simmenc,l,4229862,Schrebergartenareal,3561,0.0008418714369404959
+greifensee_fallanden_simmenc,l,4229862,Schul- und Hochschulareal,47123,0.011140552575946922
+greifensee_greifensee_simmenc,l,3356108,Baumschule,1574,0.00046899563422869587
+greifensee_greifensee_simmenc,l,3356108,Friedhof,9724,0.002897403778424294
+greifensee_greifensee_simmenc,l,3356108,Historisches Areal,1756,0.000523225116712573
+greifensee_greifensee_simmenc,l,3356108,Schrebergartenareal,25312,0.0075420695639115305
+greifensee_greifensee_simmenc,l,3356108,Schul- und Hochschulareal,59202,0.01764007594511261
+greifensee_greifensee_simmenc,l,3356108,Unterwerkareal,4171,0.0012428086342870968
+greifensee_maur_simmenc,l,4279180,Abwasserreinigungsareal,4339,0.0010139793137937643
+greifensee_maur_simmenc,l,4279180,Friedhof,10102,0.0023607326637346405
+greifensee_maur_simmenc,l,4279180,Historisches Areal,2455,0.0005737080468687926
+greifensee_uster_fischerb_-2,l,4010831,Abwasserreinigungsareal,19833,0.004944860553835352
+greifensee_uster_fischerb_-2,l,4010831,Baumschule,1574,0.0003924373776905584
+greifensee_uster_fischerb_-2,l,4010831,Schrebergartenareal,3344,0.0008337424339245408
+greifensee_uster_fischerb_-2,l,4010831,Schul- und Hochschulareal,58481,0.014580768922948885
+greifensee_uster_fischerb_1,l,4077830,Abwasserreinigungsareal,18865,0.0046262350318674395
+greifensee_uster_fischerb_1,l,4077830,Baumschule,1574,0.00038598960721756426
+greifensee_uster_fischerb_1,l,4077830,Schrebergartenareal,4371,0.0010718936297001102
+greifensee_uster_fischerb_1,l,4077830,Schul- und Hochschulareal,59358,0.014556271350203417
+grendelbach_effretikon_dambonec,r,7065000,Baumschule,18526,0.0026222222222222224
+grendelbach_effretikon_dambonec,r,7065000,Friedhof,11398,0.001613305024769993
+grendelbach_effretikon_dambonec,r,7065000,Historisches Areal,2887,0.0004086341118188252
+grendelbach_effretikon_dambonec,r,7065000,Schrebergartenareal,71375,0.010102618542108989
+grendelbach_effretikon_dambonec,r,7065000,Schul- und Hochschulareal,79532,0.011257183297947629
+gummligrabbe,r,6537160,Baumschule,72552,0.011098397469237405
+gummligrabbe,r,6537160,Friedhof,839,0.00012834319490420917
+gummligrabbe,r,6537160,Schul- und Hochschulareal,1853,0.0002834564245023833
+hafeli,l,4320370,Friedhof,6728,0.0015572740297705983
+hafeli,l,4320370,Historisches Areal,2214,0.0005124561090832498
+hafeli,l,4320370,Schrebergartenareal,4041,0.0009353365568226796
+hafeli,l,4320370,Schul- und Hochschulareal,30416,0.007040137765978377
+hafeli,l,4320370,Steinbruchareal,3240,0.0007499357693901217
+hauterive-petite-plage,l,4959171,Friedhof,12034,0.002426615254848038
+hauterive-petite-plage,l,4959171,Oeffentliches Parkareal,16802,0.003388066271560307
+hauterive-petite-plage,l,4959171,Schrebergartenareal,68004,0.013712775784501079
+hauterive-petite-plage,l,4959171,Schul- und Hochschulareal,49127,0.009906292805793549
+impromptu_cudrefin,l,3847617,Abwasserreinigungsareal,1273,0.0003308541364694043
+impromptu_cudrefin,l,3847617,Baumschule,5631,0.0014635032540920782
+impromptu_cudrefin,l,3847617,Schul- und Hochschulareal,8343,0.0021683551143474
+isole-di-brissago-porto,l,1072466,Kraftwerkareal,5704,0.00531858352619104
+isole-di-brissago-porto,l,1072466,Oeffentliches Parkareal,19918,0.018572150539038067
+isole-di-brissago-porto,l,1072466,Schul- und Hochschulareal,1051,0.000979984447059394
+jardin-botanique,l,4090886,Friedhof,953,0.00023295687046766885
+jardin-botanique,l,4090886,Historisches Areal,71788,0.01754827682805143
+jardin-botanique,l,4090886,Oeffentliches Parkareal,698332,0.1707043413089487
+jardin-botanique,l,4090886,Schul- und Hochschulareal,100575,0.024585138769449944
+jona-river-rastplatz,r,2597834,Abwasserreinigungsareal,14709,0.005662024594335127
+jona-river-rastplatz,r,2597834,Friedhof,7186,0.00276615057005182
+jona-river-rastplatz,r,2597834,Schrebergartenareal,7331,0.0028219662996172967
+jona-river-rastplatz,r,2597834,Schul- und Hochschulareal,67114,0.025834599131430262
+jona-river-rastplatz,r,2597834,Unterwerkareal,5961,0.0022946038892400363
+jona_tann_nusslin,r,7065000,Baumschule,14891,0.0021077140835102618
+jona_tann_nusslin,r,7065000,Kraftwerkareal,395,5.5909412597310683e-05
+jona_tann_nusslin,r,7065000,Schrebergartenareal,19409,0.0027472045293701346
+jona_tann_nusslin,r,7065000,Schul- und Hochschulareal,62538,0.008851804670912952
+jona_tann_nusslin,r,7065000,Unterwerkareal,3165,0.00044798301486199575
+katzensee_regensdorfzuerichaffoltern_stueberj,l,6735057,Baumschule,15036,0.0022324978095953755
+katzensee_regensdorfzuerichaffoltern_stueberj,l,6735057,Friedhof,9744,0.001446758357056221
+katzensee_regensdorfzuerichaffoltern_stueberj,l,6735057,Historisches Areal,1313,0.00019495009470595423
+katzensee_regensdorfzuerichaffoltern_stueberj,l,6735057,Massnahmenvollzugsanstaltsareal,84761,0.012585045679643097
+katzensee_regensdorfzuerichaffoltern_stueberj,l,6735057,Schul- und Hochschulareal,24807,0.003683265041409449
+kusnachter-dorfbach-tobelweg-1-4,r,5530113,Abwasserreinigungsareal,6985,0.00126308449755005
+kusnachter-dorfbach-tobelweg-1-4,r,5530113,Baumschule,5190,0.0009384980017587344
+kusnachter-dorfbach-tobelweg-1-4,r,5530113,Friedhof,13222,0.002390909552842772
+kusnachter-dorfbach-tobelweg-1-4,r,5530113,Historisches Areal,1399,0.00025297855577273014
+kusnachter-dorfbach-tobelweg-1-4,r,5530113,Schrebergartenareal,6578,0.0011894874480865038
+kusnachter-dorfbach-tobelweg-1-4,r,5530113,Schul- und Hochschulareal,61128,0.01105366201377802
+la-berra,p,7065000,Wald nicht bestockt,31910,0.004516631280962491
+la-morges,l,3446828,Friedhof,14907,0.004324845916303338
+la-morges,l,3446828,Historisches Areal,11872,0.003444326203686404
+la-morges,l,3446828,Oeffentliches Parkareal,31296,0.009079652364434778
+la-morges,l,3446828,Schrebergartenareal,1961,0.0005689288818589149
+la-morges,l,3446828,Schul- und Hochschulareal,65898,0.019118447453716866
+la-pecherie,l,4117068,Abwasserreinigungsareal,1683,0.00040878605842798805
+la-pecherie,l,4117068,Friedhof,3952,0.0009599064188398151
+la-pecherie,l,4117068,Historisches Areal,36859,0.008952730438263347
+la-pecherie,l,4117068,Schrebergartenareal,527,0.0001280037152653296
+la-petite-plage,l,4395012,Abwasserreinigungsareal,20087,0.004570408453947339
+la-petite-plage,l,4395012,Historisches Areal,2683,0.0006104647723373679
+la-petite-plage,l,4395012,Oeffentliches Parkareal,193917,0.04412206383054244
+la-petite-plage,l,4395012,Schul- und Hochschulareal,115754,0.026337584516265257
+la-petite-plage,l,4395012,Spitalareal,4363,0.0009927162883741842
+la-robella,p,7065000,Deponieareal,38031,0.005383014861995754
+la-robella,p,7065000,Schul- und Hochschulareal,648,9.171974522292994e-05
+la-thiele_le-mujon_confluence,r,7065000,Friedhof,22949,0.0032482661004954
+la-thiele_le-mujon_confluence,r,7065000,Historisches Areal,13712,0.001940835102618542
+la-thiele_le-mujon_confluence,r,7065000,Oeffentliches Parkareal,49882,0.007060438782731777
+la-thiele_le-mujon_confluence,r,7065000,Schrebergartenareal,119232,0.016876433121019108
+la-thiele_le-mujon_confluence,r,7065000,Schul- und Hochschulareal,119154,0.01686539278131635
+la-thiele_le-mujon_confluence,r,7065000,Spitalareal,29543,0.004181599433828734
+la-thiele_le-mujon_confluence,r,7065000,Unterwerkareal,6524,0.0009234253361641897
+la-tzoumaz,p,7065000,Wald nicht bestockt,140797,0.019928803963198866
+lacleman_gland_kubela,l,3728437,Baumschule,211,5.6592078664598594e-05
+lacleman_gland_kubela,l,3728437,Kraftwerkareal,1567,0.0004202833519783223
+lacleman_gland_lecoanets,l,3715489,Baumschule,42,1.130403023666602e-05
+lacleman_gland_lecoanets,l,3715489,Kraftwerkareal,1567,0.000421747985258468
+lacleman_vidy_santie,l,4511057,Abwasserreinigungsareal,54193,0.012013370702254483
+lacleman_vidy_santie,l,4511057,Baumschule,14793,0.003279275788357363
+lacleman_vidy_santie,l,4511057,Friedhof,236617,0.05245267350866992
+lacleman_vidy_santie,l,4511057,Historisches Areal,19402,0.0043009875512546175
+lacleman_vidy_santie,l,4511057,Oeffentliches Parkareal,272453,0.060396709684670355
+lacleman_vidy_santie,l,4511057,Schrebergartenareal,18558,0.004113891710967075
+lacleman_vidy_santie,l,4511057,Schul- und Hochschulareal,760479,0.16858111081283167
+langete_langenthal_geiserm,r,7065000,Baumschule,18121,0.002564897381457891
+langete_langenthal_geiserm,r,7065000,Friedhof,17790,0.0025180467091295115
+langete_langenthal_geiserm,r,7065000,Schrebergartenareal,14075,0.0019922151450813873
+langete_langenthal_geiserm,r,7065000,Schul- und Hochschulareal,171855,0.02432484076433121
+langete_langenthal_geiserm,r,7065000,Spitalareal,42239,0.00597862703467799
+lavey-la-source,r,7065000,Schrebergartenareal,4277,0.000605378627034678
+lavey-la-source,r,7065000,Truppenuebungsplatz,991593,0.14035286624203822
+lavey-la-source,r,7065000,Wald nicht bestockt,36254,0.005131493276716206
+lavey-les-bains,r,7065000,Abwasserreinigungsareal,5508,0.0007796178343949044
+lavey-les-bains,r,7065000,Friedhof,6039,0.0008547770700636942
+lavey-les-bains,r,7065000,Schrebergartenareal,15377,0.0021765038924274594
+lavey-les-bains,r,7065000,Schul- und Hochschulareal,33359,0.004721726822363765
+lavey-les-bains,r,7065000,Spitalareal,11947,0.0016910120311394196
+lavey-les-bains,r,7065000,Truppenuebungsplatz,945732,0.1338615711252654
+lavey-les-bains,r,7065000,Unterwerkareal,7815,0.0011061571125265393
+lavey-les-bains,r,7065000,Wald nicht bestockt,11405,0.0016142958244869073
+lavey-les-bains-2,r,7065000,Abwasserreinigungsareal,5508,0.0007796178343949044
+lavey-les-bains-2,r,7065000,Friedhof,6039,0.0008547770700636942
+lavey-les-bains-2,r,7065000,Klosterareal,17226,0.002438216560509554
+lavey-les-bains-2,r,7065000,Schrebergartenareal,21988,0.0031122434536447275
+lavey-les-bains-2,r,7065000,Schul- und Hochschulareal,45125,0.006387119603680113
+lavey-les-bains-2,r,7065000,Spitalareal,12295,0.001740268931351734
+lavey-les-bains-2,r,7065000,Truppenuebungsplatz,915049,0.12951861288039632
+lavey-les-bains-2,r,7065000,Unterwerkareal,7815,0.0011061571125265393
+lavey-les-bains-2,r,7065000,Wald nicht bestockt,16088,0.0022771408351026185
+le-pierrier,l,3228561,Abwasserreinigungsareal,3065,0.0009493393496359524
+le-pierrier,l,3228561,Friedhof,29804,0.009231357251729176
+le-pierrier,l,3228561,Historisches Areal,24163,0.007484139218679777
+le-pierrier,l,3228561,Oeffentliches Parkareal,24797,0.007680511534395664
+le-pierrier,l,3228561,Schul- und Hochschulareal,129744,0.04018632449564992
+le-pierrier,l,3228561,Spitalareal,36407,0.011276540849003628
+le-port,l,3511620,Friedhof,53091,0.015118663181095905
+le-port,l,3511620,Historisches Areal,11676,0.003324961129051549
+le-port,l,3511620,Oeffentliches Parkareal,43750,0.01245863732408404
+le-port,l,3511620,Schul- und Hochschulareal,54523,0.015526452178766496
+les-crosets,p,7065000,Wald nicht bestockt,20646,0.002922292993630573
+les-diablerets,p,7065000,Abwasserreinigungsareal,1181,0.00016716206652512384
+les-diablerets,p,7065000,Kraftwerkareal,1772,0.0002508138711960368
+les-diablerets,p,7065000,Oeffentliches Parkareal,946,0.00013389950460014155
+les-diablerets,p,7065000,Schul- und Hochschulareal,940,0.00013305024769992923
+les-glariers,r,7065000,Abwasserreinigungsareal,4683,0.0006628450106157112
+les-glariers,r,7065000,Friedhof,2512,0.00035555555555555557
+les-glariers,r,7065000,Kraftwerkareal,107,1.5145081387119603e-05
+les-glariers,r,7065000,Schrebergartenareal,3345,0.0004734607218683652
+les-glariers,r,7065000,Schul- und Hochschulareal,7598,0.0010754423213021939
+les-paccots,p,7065000,Wald nicht bestockt,6393,0.0009048832271762209
+les-vieux-ronquoz,r,7065000,Abwasserreinigungsareal,15367,0.0021750884642604386
+les-vieux-ronquoz,r,7065000,Friedhof,726,0.00010276008492569003
+les-vieux-ronquoz,r,7065000,Historisches Areal,11897,0.001683934890304317
+les-vieux-ronquoz,r,7065000,Schrebergartenareal,8997,0.0012734607218683651
+les-vieux-ronquoz,r,7065000,Schul- und Hochschulareal,177040,0.025058740268931352
+les-vieux-ronquoz,r,7065000,Spitalareal,1935,0.00027388535031847136
+les-vieux-ronquoz,r,7065000,Truppenuebungsplatz,172042,0.024351309271054493
+les-vieux-ronquoz,r,7065000,Unterwerkareal,14868,0.0021044585987261147
+les-vieux-ronquoz,r,7065000,Wald nicht bestockt,8890,0.0012583156404812456
+leuk-mattenstrasse,r,7065000,Friedhof,2669,0.00037777777777777777
+leuk-mattenstrasse,r,7065000,Historisches Areal,2871,0.00040636942675159235
+leuk-mattenstrasse,r,7065000,Kraftwerkareal,3048,0.0004314225053078556
+leuk-mattenstrasse,r,7065000,Schrebergartenareal,2144,0.0003034677990092003
+leuk-mattenstrasse,r,7065000,Schul- und Hochschulareal,24086,0.0034092002830856333
+leuk-mattenstrasse,r,7065000,Unterwerkareal,2266,0.00032073602264685066
+leuk-mattenstrasse,r,7065000,Wald nicht bestockt,131058,0.01855031847133758
+lido,l,3989994,Friedhof,3837,0.0009616555814369646
+lido,l,3989994,Historisches Areal,7214,0.0018080227689565448
+lido,l,3989994,Messeareal,27958,0.007007028080743981
+lido,l,3989994,Oeffentliches Parkareal,111293,0.027893024400537945
+lido,l,3989994,Schul- und Hochschulareal,145043,0.03635168373686778
+lido,l,3989994,Spitalareal,12210,0.003060154977676658
+lido,l,3989994,Wald nicht bestockt,3340,0.0008370939906175298
+ligerz-strand,l,4050404,Abwasserreinigungsareal,1580,0.0003900845446528297
+ligerz-strand,l,4050404,Friedhof,2189,0.0005404399166107875
+ligerz-strand,l,4050404,Historisches Areal,2742,0.0006769695072392778
+ligerz-strand,l,4050404,Schul- und Hochschulareal,211,5.2093568937814596e-05
+ligerz-strand,l,4050404,Wald nicht bestockt,4205,0.0010381680444716131
+limmat_dietikon_keiserp,r,7065000,Abwasserreinigungsareal,15039,0.0021286624203821656
+limmat_dietikon_keiserp,r,7065000,Baumschule,3737,0.0005289455060155697
+limmat_dietikon_keiserp,r,7065000,Friedhof,30521,0.004320028308563341
+limmat_dietikon_keiserp,r,7065000,Historisches Areal,15389,0.002178202406227884
+limmat_dietikon_keiserp,r,7065000,Kehrichtverbrennungsareal,17487,0.00247515923566879
+limmat_dietikon_keiserp,r,7065000,Kraftwerkareal,873,0.0001235668789808917
+limmat_dietikon_keiserp,r,7065000,Massnahmenvollzugsanstaltsareal,633,8.959660297239916e-05
+limmat_dietikon_keiserp,r,7065000,Schrebergartenareal,84582,0.011971974522292993
+limmat_dietikon_keiserp,r,7065000,Schul- und Hochschulareal,82646,0.01169794762915782
+limmat_dietikon_keiserp,r,7065000,Unterwerkareal,573,8.1104033970276e-05
+limmat_unterengstringen_oggierbuhrer,r,7065000,Baumschule,37179,0.005262420382165605
+limmat_unterengstringen_oggierbuhrer,r,7065000,Klosterareal,31701,0.004487048832271762
+limmat_unterengstringen_oggierbuhrer,r,7065000,Oeffentliches Parkareal,8950,0.0012668082094833687
+limmat_unterengstringen_oggierbuhrer,r,7065000,Schrebergartenareal,109241,0.015462278839348902
+limmat_unterengstringen_oggierbuhrer,r,7065000,Schul- und Hochschulareal,99557,0.014091578202406228
+limmat_unterengstringen_oggierbuhrer,r,7065000,Unterwerkareal,3911,0.0005535739561217268
+limmat_zuerich_jansena,r,7065000,Abwasserreinigungsareal,181743,0.025724416135881105
+limmat_zuerich_jansena,r,7065000,Baumschule,16507,0.0023364472753007784
+limmat_zuerich_jansena,r,7065000,Friedhof,50852,0.007197735314932767
+limmat_zuerich_jansena,r,7065000,Kraftwerkareal,720,0.00010191082802547771
+limmat_zuerich_jansena,r,7065000,Oeffentliches Parkareal,3001,0.00042476999292285914
+limmat_zuerich_jansena,r,7065000,Schrebergartenareal,340748,0.048230431705590944
+limmat_zuerich_jansena,r,7065000,Schul- und Hochschulareal,150354,0.021281528662420383
+limmat_zuerich_suterdglauserp,r,7065000,Antennenareal,952,0.00013474876150035387
+limmat_zuerich_suterdglauserp,r,7065000,Friedhof,5548,0.0007852795470629865
+limmat_zuerich_suterdglauserp,r,7065000,Historisches Areal,123,1.740976645435244e-05
+limmat_zuerich_suterdglauserp,r,7065000,Kehrichtverbrennungsareal,13823,0.00195654635527247
+limmat_zuerich_suterdglauserp,r,7065000,Oeffentliches Parkareal,56807,0.008040622788393488
+limmat_zuerich_suterdglauserp,r,7065000,Schrebergartenareal,143626,0.020329228591648974
+limmat_zuerich_suterdglauserp,r,7065000,Schul- und Hochschulareal,256954,0.03636999292285917
+limmat_zuerich_suterdglauserp,r,7065000,Spitalareal,65738,0.009304741684359519
+limmat_zuerich_wagnerc,r,7065000,Abwasserreinigungsareal,181743,0.025724416135881105
+limmat_zuerich_wagnerc,r,7065000,Baumschule,14473,0.002048549186128804
+limmat_zuerich_wagnerc,r,7065000,Friedhof,62210,0.008805378627034679
+limmat_zuerich_wagnerc,r,7065000,Kraftwerkareal,720,0.00010191082802547771
+limmat_zuerich_wagnerc,r,7065000,Oeffentliches Parkareal,1590,0.00022505307855626326
+limmat_zuerich_wagnerc,r,7065000,Schrebergartenareal,351480,0.04974946921443737
+limmat_zuerich_wagnerc,r,7065000,Schul- und Hochschulareal,132311,0.01872767162066525
+limmat_zuerich_wagnerc,r,7065000,Unterwerkareal,692,9.794762915782025e-05
+limmat_zurich_mortensena_meiera,r,7065000,Abwasserreinigungsareal,181743,0.025724416135881105
+limmat_zurich_mortensena_meiera,r,7065000,Baumschule,21379,0.0030260438782731777
+limmat_zurich_mortensena_meiera,r,7065000,Friedhof,50852,0.007197735314932767
+limmat_zurich_mortensena_meiera,r,7065000,Kraftwerkareal,720,0.00010191082802547771
+limmat_zurich_mortensena_meiera,r,7065000,Oeffentliches Parkareal,3001,0.00042476999292285914
+limmat_zurich_mortensena_meiera,r,7065000,Schrebergartenareal,324987,0.045999575371549896
+limmat_zurich_mortensena_meiera,r,7065000,Schul- und Hochschulareal,140845,0.019935598018400565
+linth_mollis,r,6336436,Deponieareal,9602,0.0015153628948513013
+linth_mollis,r,6336436,Friedhof,1983,0.00031295194964487923
+linth_mollis,r,6336436,Historisches Areal,733,0.00011568017099833408
+linth_mollis,r,6336436,Klosterareal,4470,0.0007054438804400455
+linth_mollis,r,6336436,Schul- und Hochschulareal,10523,0.0016607127413580758
+linth_mollis,r,6336436,Unterwerkareal,56,8.837775683365223e-06
+linth_route9brucke,r,4464151,Deponieareal,49109,0.011000747958570398
+linth_route9brucke,r,4464151,Historisches Areal,149,3.33770071845688e-05
+linth_route9brucke,r,4464151,Unterwerkareal,56,1.2544378539166798e-05
+linthdammweg,r,6544737,Friedhof,1983,0.00030299154878186854
+linthdammweg,r,6544737,Historisches Areal,733,0.00011199838893449806
+linthdammweg,r,6544737,Klosterareal,4470,0.0006829915396141968
+linthdammweg,r,6544737,Schul- und Hochschulareal,10523,0.0016078568168591038
+linthdammweg,r,6544737,Unterwerkareal,56,8.556493561162198e-06
+lorze_baar_blarere,r,7065000,Baumschule,25748,0.0036444444444444445
+lorze_baar_blarere,r,7065000,Historisches Areal,52838,0.007478839348903043
+lorze_baar_blarere,r,7065000,Kraftwerkareal,989,0.0001399858457183298
+lorze_baar_blarere,r,7065000,Oeffentliches Parkareal,817,0.00011564048124557679
+lorze_baar_blarere,r,7065000,Schrebergartenareal,37429,0.005297806086341118
+lorze_baar_blarere,r,7065000,Schul- und Hochschulareal,95772,0.01355583864118896
+lugano-centro,l,5213574,Friedhof,3001,0.0005756128137818702
+lugano-centro,l,5213574,Historisches Areal,14767,0.002832414002371502
+lugano-centro,l,5213574,Messeareal,27958,0.005362540169181448
+lugano-centro,l,5213574,Oeffentliches Parkareal,115913,0.022232925052948323
+lugano-centro,l,5213574,Schul- und Hochschulareal,225360,0.04322562602928433
+lugano-centro,l,5213574,Spitalareal,47535,0.009117545852422925
+luscherz-plage,l,3416622,Friedhof,1313,0.0003842977069163636
+luscherz-plage,l,3416622,Schul- und Hochschulareal,867,0.0002537594150011327
+luscherz-two,l,3710879,Friedhof,1313,0.0003538245251327246
+luscherz-two,l,3710879,Schul- und Hochschulareal,867,0.00023363736731917155
+magadino-lido,l,4429136,Friedhof,2270,0.0005125153077259312
+magadino-lido,l,4429136,Schul- und Hochschulareal,4028,0.0009094324491277757
+maladaire,l,4335870,Abwasserreinigungsareal,3065,0.0007068938875012397
+maladaire,l,4335870,Oeffentliches Parkareal,21330,0.004919427934878122
+maladaire,l,4335870,Schul- und Hochschulareal,137010,0.031599194625300114
+maladaire,l,4335870,Spitalareal,36407,0.008396700085565296
+mannewil,r,6574672,Baumschule,71567,0.010885257850125452
+mannewil,r,6574672,Friedhof,839,0.00012761092872769927
+mannewil,r,6574672,Kraftwerkareal,8024,0.0012204411109786161
+mannewil,r,6574672,Schul- und Hochschulareal,1853,0.00028183915486582447
+mannewil,r,6574672,Wald nicht bestockt,47869,0.007280819484226742
+mols-rocks,l,4317819,Abwasserreinigungsareal,4938,0.001143632931347979
+mols-rocks,l,4317819,Baumschule,1693,0.00039209610222197826
+mols-rocks,l,4317819,Deponieareal,43594,0.010096300933411058
+mols-rocks,l,4317819,Friedhof,1172,0.0002714333324300995
+mols-rocks,l,4317819,Historisches Areal,1540,0.00035666154602589874
+mols-rocks,l,4317819,Kraftwerkareal,103,2.3854635870563356e-05
+mols-rocks,l,4317819,Schul- und Hochschulareal,2463,0.0005704268752349277
+morgins,p,7060892,Wald nicht bestockt,220806,0.031271686353508875
+muhlehorn-dorf,l,3825716,Friedhof,607,0.0001586631103824748
+muhlehorn-dorf,l,3825716,Unterwerkareal,99,2.587750894211698e-05
+mullermatte,l,5691237,Friedhof,5903,0.0010372086068459283
+mullermatte,l,5691237,Historisches Areal,14547,0.0025560348303892456
+mullermatte,l,5691237,Massnahmenvollzugsanstaltsareal,3008,0.0005285318464158143
+mullermatte,l,5691237,Oeffentliches Parkareal,70566,0.012399061926256102
+mullermatte,l,5691237,Schul- und Hochschulareal,122752,0.021568597477138976
+murg-bad,l,3131226,Friedhof,1012,0.00032319608996603884
+murg-bad,l,3131226,Kraftwerkareal,2737,0.0008740985160445142
+murg-bad,l,3131226,Schrebergartenareal,3409,0.0010887109394211725
+murg-bad,l,3131226,Schul- und Hochschulareal,1737,0.0005547347907816299
+murg-bad,l,3131226,Unterwerkareal,640,0.00020439278416824593
+murg_waengi_strickerr,r,7065000,Baumschule,4037,0.0005714083510261855
+murg_waengi_strickerr,r,7065000,Friedhof,7549,0.0010685067232837934
+murg_waengi_strickerr,r,7065000,Historisches Areal,6159,0.0008717622080679406
+murg_waengi_strickerr,r,7065000,Schul- und Hochschulareal,42232,0.0059776362349610755
+murg_waengi_strickerr,r,7065000,Unterwerkareal,2378,0.0003365888181174805
+nendaz,p,7044328,Wald nicht bestockt,19929,0.0028290846195691056
+neuenburgersee_cudrefin_mattera,l,3939448,Abwasserreinigungsareal,1273,0.0003231417193474822
+neuenburgersee_cudrefin_mattera,l,3939448,Baumschule,5631,0.0014293880767051628
+neuenburgersee_cudrefin_mattera,l,3939448,Friedhof,2773,0.0007039057248629757
+neuenburgersee_cudrefin_mattera,l,3939448,Schul- und Hochschulareal,8343,0.002117809398677175
+nidau-strand,l,5439853,Friedhof,16839,0.0030954880582251027
+nidau-strand,l,5439853,Historisches Areal,14547,0.0026741531434764875
+nidau-strand,l,5439853,Massnahmenvollzugsanstaltsareal,3008,0.0005529561184833487
+nidau-strand,l,5439853,Oeffentliches Parkareal,70566,0.012972041707744675
+nidau-strand,l,5439853,Schrebergartenareal,35116,0.006455321494900689
+nidau-strand,l,5439853,Schul- und Hochschulareal,121303,0.022298948151723952
+nouvelle-plage,l,3456186,Historisches Areal,5692,0.0016469021053843746
+nouvelle-plage,l,3456186,Klosterareal,6772,0.0019593852877131035
+nouvelle-plage,l,3456186,Schrebergartenareal,2010,0.0005815659226673564
+nouvelle-plage,l,3456186,Schul- und Hochschulareal,52773,0.015269143500957413
+nouvelle-plage,l,3456186,Spitalareal,30290,0.008763995919201108
+oben-am-see,l,5308529,Abwasserreinigungsareal,6852,0.0012907530504213125
+oben-am-see,l,5308529,Kiesabbauareal,39695,0.007477589366093696
+oben-am-see,l,5308529,Schul- und Hochschulareal,12296,0.0023162725493258113
+oben-am-see,l,5308529,Unterwerkareal,2087,0.00039314092472698183
+oberi-chlihochstetten,r,6992408,Baumschule,7892,0.0011286526758736046
+oberi-chlihochstetten,r,6992408,Kiesabbauareal,160858,0.023004664487541345
+oberi-chlihochstetten,r,6992408,Schul- und Hochschulareal,24358,0.0034834923820234744
+ognonnaz-1,r,6053526,Friedhof,53421,0.008824774189455865
+ognonnaz-1,r,6053526,Historisches Areal,60929,0.010065043083981137
+ognonnaz-1,r,6053526,Oeffentliches Parkareal,40468,0.0066850295183336125
+ognonnaz-1,r,6053526,Schrebergartenareal,11996,0.001981654989174904
+ognonnaz-1,r,6053526,Schul- und Hochschulareal,65088,0.010752080688180739
+oyonne,l,4476280,Abwasserreinigungsareal,6481,0.0014478540216429714
+oyonne,l,4476280,Friedhof,53421,0.011934240038603484
+oyonne,l,4476280,Historisches Areal,11676,0.002608415916788047
+oyonne,l,4476280,Oeffentliches Parkareal,56885,0.012708096901891749
+oyonne,l,4476280,Schul- und Hochschulareal,74701,0.01668818751284549
+parc-des-pierrettes,l,3832559,Abwasserreinigungsareal,49488,0.012912521372795565
+parc-des-pierrettes,l,3832559,Friedhof,11325,0.002954944724921391
+parc-des-pierrettes,l,3832559,Oeffentliches Parkareal,175591,0.045815602577807674
+parc-des-pierrettes,l,3832559,Schrebergartenareal,17306,0.004515520830860008
+parc-des-pierrettes,l,3832559,Schul- und Hochschulareal,1189161,0.3102785893185206
+pecos-plage,l,4832639,Abwasserreinigungsareal,3595,0.0007438999685265131
+pecos-plage,l,4832639,Deponieareal,19281,0.003989745561379611
+pecos-plage,l,4832639,Friedhof,4936,0.0010213881069949565
+pecos-plage,l,4832639,Historisches Areal,6068,0.0012556286534127627
+pecos-plage,l,4832639,Schrebergartenareal,42647,0.008824784967385315
+pecos-plage,l,4832639,Schul- und Hochschulareal,23629,0.00488946101705507
+pfaffner_rothrist_ischik,r,7065000,Baumschule,4261,0.0006031139419674452
+pfaffner_rothrist_ischik,r,7065000,Friedhof,8281,0.0011721160651096956
+pfaffner_rothrist_ischik,r,7065000,Schul- und Hochschulareal,48149,0.00681514508138712
+pfaffner_rothrist_ischik,r,7065000,Spitalareal,6907,0.0009776362349610758
+pfafikon-bad,l,3800429,Abwasserreinigungsareal,14498,0.0038148324833854282
+pfafikon-bad,l,3800429,Friedhof,14182,0.0037316839756774828
+pfafikon-bad,l,3800429,Historisches Areal,3668,0.0009651541970656471
+pfafikon-bad,l,3800429,Schul- und Hochschulareal,107016,0.028158926268587046
+pierrier-sud,l,3394123,Abwasserreinigungsareal,3065,0.0009030315047510064
+pierrier-sud,l,3394123,Friedhof,29804,0.008781060674583684
+pierrier-sud,l,3394123,Historisches Areal,24163,0.00711907022815614
+pierrier-sud,l,3394123,Oeffentliches Parkareal,24797,0.007305863694391747
+pierrier-sud,l,3394123,Schul- und Hochschulareal,102152,0.030096728963564374
+pierrier-sud,l,3394123,Spitalareal,36407,0.010726482216466523
+plage-de-cheyres,l,3653175,Friedhof,964,0.0002638800495459429
+plage-de-cheyres,l,3653175,Historisches Areal,1946,0.00053268731993403
+plage-de-cheyres,l,3653175,Schul- und Hochschulareal,2430,0.0006651748136894619
+plage-de-dorigny,l,4436608,Abwasserreinigungsareal,54193,0.012214962421742016
+plage-de-dorigny,l,4436608,Baumschule,36837,0.008302964787513344
+plage-de-dorigny,l,4436608,Friedhof,195035,0.04396038595251147
+plage-de-dorigny,l,4436608,Historisches Areal,19402,0.004373160757046825
+plage-de-dorigny,l,4436608,Oeffentliches Parkareal,198079,0.04464649570122039
+plage-de-dorigny,l,4436608,Schrebergartenareal,21138,0.004764450679437985
+plage-de-dorigny,l,4436608,Schul- und Hochschulareal,1034965,0.23327844154813768
+plage-de-serriere,l,4275025,Friedhof,30320,0.00709235618505155
+plage-de-serriere,l,4275025,Historisches Areal,9868,0.002308290594791843
+plage-de-serriere,l,4275025,Kraftwerkareal,571,0.0001335664703715183
+plage-de-serriere,l,4275025,Oeffentliches Parkareal,40518,0.009477839310881224
+plage-de-serriere,l,4275025,Schrebergartenareal,1562,0.00036537798024572954
+plage-de-serriere,l,4275025,Schul- und Hochschulareal,48386,0.011318296384231671
+plage-de-serriere,l,4275025,Spitalareal,1098,0.0002568406032713259
+plage-de-serriere,l,4275025,Unterwerkareal,3173,0.0007422178817667733
+plage-de-st-sulpice,l,3640047,Friedhof,13837,0.0038013245433369406
+plage-de-st-sulpice,l,3640047,Oeffentliches Parkareal,87712,0.02409639216196934
+plage-de-st-sulpice,l,3640047,Schrebergartenareal,2580,0.0007087820569349791
+plage-de-st-sulpice,l,3640047,Schul- und Hochschulareal,1094658,0.30072633677532185
+pointe-dareuse,l,2619336,Schrebergartenareal,1619,0.0006180955784214014
+pont-sous-terre,r,7032838,Friedhof,228359,0.03247039104270566
+pont-sous-terre,r,7032838,Historisches Areal,2825,0.0004016870572022276
+pont-sous-terre,r,7032838,Kraftwerkareal,5224,0.0007428011280794468
+pont-sous-terre,r,7032838,Oeffentliches Parkareal,554845,0.07889347088614866
+pont-sous-terre,r,7032838,Schrebergartenareal,6187,0.0008797302028000645
+pont-sous-terre,r,7032838,Schul- und Hochschulareal,422703,0.06010418553647901
+pont-sous-terre,r,7032838,Truppenuebungsplatz,47343,0.006731706318274358
+preverenges,l,3889946,Abwasserreinigungsareal,14588,0.003750180593766597
+preverenges,l,3889946,Friedhof,2939,0.0007555374804688805
+preverenges,l,3889946,Massnahmenvollzugsanstaltsareal,7093,0.0018234186284334024
+preverenges,l,3889946,Oeffentliches Parkareal,30459,0.007830185817489498
+preverenges,l,3889946,Schrebergartenareal,16026,0.004119851535214113
+preverenges,l,3889946,Schul- und Hochschulareal,40350,0.010372894636583644
+preverenges-le-sout,l,3127595,Friedhof,5445,0.0017409543115396975
+preverenges-le-sout,l,3127595,Schrebergartenareal,11187,0.0035768697673451964
+preverenges-le-sout,l,3127595,Schul- und Hochschulareal,33852,0.010823652039346527
+quai-maria-belgia,l,3102130,Abwasserreinigungsareal,6481,0.0020892096720640336
+quai-maria-belgia,l,3102130,Friedhof,39674,0.012789277045127058
+quai-maria-belgia,l,3102130,Historisches Areal,2340,0.0007543204185511246
+quai-maria-belgia,l,3102130,Oeffentliches Parkareal,58311,0.018797084583818215
+quai-maria-belgia,l,3102130,Schul- und Hochschulareal,56901,0.018342558177768177
+rastplatz-stampf,l,2316821,Abwasserreinigungsareal,14709,0.006348785685212625
+rastplatz-stampf,l,2316821,Friedhof,1879,0.0008110251072482509
+rastplatz-stampf,l,2316821,Schrebergartenareal,7331,0.003164249633441686
+rastplatz-stampf,l,2316821,Schul- und Hochschulareal,59968,0.025883743284440187
+rastplatz-stampf,l,2316821,Unterwerkareal,5961,0.002572922120440034
+reuss,r,6601567,Baumschule,117169,0.01774866482457877
+reuss,r,6601567,Friedhof,927,0.0001404212060560773
+reuss,r,6601567,Historisches Areal,7090,0.001073987433589631
+reuss,r,6601567,Klosterareal,9743,0.0014758617158623097
+reuss,r,6601567,Schul- und Hochschulareal,33031,0.005003509015359535
+reuss,r,6601567,Wald nicht bestockt,18418,0.0027899436603460964
+reuss_hunenberg_eberhardy,r,7065000,Baumschule,3066,0.0004339702760084926
+reuss_hunenberg_eberhardy,r,7065000,Friedhof,2753,0.00038966737438075015
+reuss_hunenberg_eberhardy,r,7065000,Schul- und Hochschulareal,6616,0.0009364472753007785
+reuss_ottenbach_schoenenbergerl,r,7065000,Abwasserreinigungsareal,5075,0.0007183297947629158
+reuss_ottenbach_schoenenbergerl,r,7065000,Friedhof,5268,0.0007456475583864119
+reuss_ottenbach_schoenenbergerl,r,7065000,Schul- und Hochschulareal,20838,0.0029494692144373673
+reuss_stkarli_linigersimhofy,r,7009371,Friedhof,133791,0.01908744736153929
+reuss_stkarli_linigersimhofy,r,7009371,Kehrichtverbrennungsareal,8087,0.001153741184480034
+reuss_stkarli_linigersimhofy,r,7009371,Kraftwerkareal,273,3.894785994349564e-05
+reuss_stkarli_linigersimhofy,r,7009371,Oeffentliches Parkareal,30241,0.004314367152202387
+reuss_stkarli_linigersimhofy,r,7009371,Schrebergartenareal,110566,0.015774025943269376
+reuss_stkarli_linigersimhofy,r,7009371,Schul- und Hochschulareal,200872,0.028657635613809
+reuss_stkarli_linigersimhofy,r,7009371,Spitalareal,129690,0.01850237346546502
+reuss_stkarli_linigersimhofy,r,7009371,Unterwerkareal,7161,0.001021632326210155
+rhein-beach-tinguely,r,7065000,Friedhof,15252,0.0021588110403397026
+rhein-beach-tinguely,r,7065000,Historisches Areal,20487,0.002899787685774947
+rhein-beach-tinguely,r,7065000,Kraftwerkareal,14098,0.0019954706298655344
+rhein-beach-tinguely,r,7065000,Messeareal,130649,0.01849242745930644
+rhein-beach-tinguely,r,7065000,Oeffentliches Parkareal,138216,0.01956348195329087
+rhein-beach-tinguely,r,7065000,Schrebergartenareal,128927,0.018248690728945506
+rhein-beach-tinguely,r,7065000,Schul- und Hochschulareal,302410,0.04280396319886766
+rhein-beach-tinguely,r,7065000,Spitalareal,85954,0.01216617126680821
+rhein_basel,r,7065000,Historisches Areal,89868,0.012720169851380043
+rhein_basel,r,7065000,Massnahmenvollzugsanstaltsareal,5015,0.0007098372257607926
+rhein_basel,r,7065000,Messeareal,132133,0.018702476999292287
+rhein_basel,r,7065000,Oeffentliches Parkareal,149000,0.021089879688605803
+rhein_basel,r,7065000,Schrebergartenareal,44848,0.006347912243453645
+rhein_basel,r,7065000,Schul- und Hochschulareal,333520,0.04720736022646851
+rhein_basel,r,7065000,Spitalareal,89338,0.012645152158527954
+rhein_basel_hungerbuehlern,r,7065000,Friedhof,12696,0.001797027600849257
+rhein_basel_hungerbuehlern,r,7065000,Historisches Areal,51687,0.007315923566878981
+rhein_basel_hungerbuehlern,r,7065000,Kraftwerkareal,14098,0.0019954706298655344
+rhein_basel_hungerbuehlern,r,7065000,Messeareal,132133,0.018702476999292287
+rhein_basel_hungerbuehlern,r,7065000,Oeffentliches Parkareal,140404,0.01987317763623496
+rhein_basel_hungerbuehlern,r,7065000,Schrebergartenareal,102046,0.014443878273177637
+rhein_basel_hungerbuehlern,r,7065000,Schul- und Hochschulareal,291978,0.041327388535031845
+rhein_basel_hungerbuehlern,r,7065000,Spitalareal,86274,0.012211464968152867
+rhein_domatems_foppa_f,r,7065000,Baumschule,7397,0.0010469922151450813
+rhein_domatems_foppa_f,r,7065000,Friedhof,6480,0.0009171974522292994
+rhein_domatems_foppa_f,r,7065000,Historisches Areal,755,0.00010686482661004955
+rhein_domatems_foppa_f,r,7065000,Kraftwerkareal,4368,0.0006182590233545647
+rhein_domatems_foppa_f,r,7065000,Schrebergartenareal,31889,0.004513658881811748
+rhein_domatems_foppa_f,r,7065000,Schul- und Hochschulareal,30492,0.0043159235668789805
+rhein_eglisau_gomringerp,r,7065000,Baumschule,9500,0.0013446567586694975
+rhein_eglisau_gomringerp,r,7065000,Deponieareal,40368,0.00571380042462845
+rhein_eglisau_gomringerp,r,7065000,Friedhof,4902,0.0006938428874734607
+rhein_eglisau_gomringerp,r,7065000,Historisches Areal,625,8.846426043878273e-05
+rhein_eglisau_gomringerp,r,7065000,Lehmabbauareal,8631,0.001221656050955414
+rhein_eglisau_gomringerp,r,7065000,Schul- und Hochschulareal,23912,0.0033845718329794765
+rhein_eglisau_gomringerp,r,7065000,Wald nicht bestockt,22111,0.00312965322009908
+rhein_hemishofen_stolll,r,7065000,Historisches Areal,3574,0.0005058740268931352
+rhein_hemishofen_stolll,r,7065000,Schul- und Hochschulareal,1412,0.00019985845718329794
+rhein_hemishofen_stolll,r,7065000,Unterwerkareal,1656,0.00023439490445859872
+rhein_hemishofen_stolll,r,7065000,Wald nicht bestockt,79876,0.011305874026893136
+rivapiana,l,3951436,Friedhof,13675,0.0034607671742627236
+rivapiana,l,3951436,Historisches Areal,4491,0.0011365488394598825
+rivapiana,l,3951436,Klosterareal,20081,0.0050819499543963255
+rivapiana,l,3951436,Oeffentliches Parkareal,40514,0.01025298144775722
+rivapiana,l,3951436,Schul- und Hochschulareal,58868,0.014897875101608631
+rivapiana,l,3951436,Spitalareal,8664,0.002192620606787001
+rocky-plage,l,4400495,Historisches Areal,2044,0.00046449319906056026
+rocky-plage,l,4400495,Oeffentliches Parkareal,503904,0.11451075390382219
+rocky-plage,l,4400495,Schul- und Hochschulareal,205416,0.046680203022614504
+rocky-plage,l,4400495,Spitalareal,1318,0.0002995117594725139
+rolle-plage,l,4077320,Abwasserreinigungsareal,3105,0.0007615296322093924
+rolle-plage,l,4077320,Friedhof,5260,0.001290063080651016
+rolle-plage,l,4077320,Historisches Areal,16745,0.004106864312832939
+rolle-plage,l,4077320,Schul- und Hochschulareal,43570,0.010685940765012312
+rolle-plage,l,4077320,Spitalareal,12003,0.0029438454671205597
+route-13,r,7058161,Abwasserreinigungsareal,30958,0.004386128341362573
+route-13,r,7058161,Baumschule,3428,0.00048567891834714455
+route-13,r,7058161,Friedhof,16573,0.0023480620518574174
+route-13,r,7058161,Historisches Areal,17474,0.0024757156998827315
+route-13,r,7058161,Klosterareal,12001,0.001700301254108542
+route-13,r,7058161,Messeareal,8414,0.001192095221403989
+route-13,r,7058161,Oeffentliches Parkareal,41674,0.005904370841073192
+route-13,r,7058161,Schul- und Hochschulareal,176699,0.02503470804930633
+route-13,r,7058161,Spitalareal,13059,0.0018501986565622405
+route-13,r,7058161,Unterwerkareal,2035,0.0002883187277819251
+ruisseau-de-la-croix-plage,l,3520791,Friedhof,964,0.0002738021086738747
+ruisseau-de-la-croix-plage,l,3520791,Historisches Areal,1946,0.0005527167048541081
+ruisseau-de-la-croix-plage,l,3520791,Schul- und Hochschulareal,2430,0.0006901858133584187
+saint-sulpice,l,3334013,Friedhof,2714,0.0008140340184636353
+saint-sulpice,l,3334013,Schrebergartenareal,7589,0.0022762358755049846
+saint-sulpice,l,3334013,Schul- und Hochschulareal,16424,0.004926195548727614
+san-bernardino,p,6777889,Abwasserreinigungsareal,1844,0.00027206110929228847
+san-bernardino,p,6777889,Wald nicht bestockt,6280,0.0009265421726440194
+san-nazzaro-gambarogno,l,3804616,Friedhof,484,0.0001272138896540413
+san-nazzaro-gambarogno,l,3804616,Oeffentliches Parkareal,9798,0.0025752927496493733
+san-nazzaro-gambarogno,l,3804616,Schul- und Hochschulareal,3095,0.0008134855133868963
+schmerikon-bahnhof-strand,l,5632488,Baumschule,2647,0.00046995217743917077
+schmerikon-bahnhof-strand,l,5632488,Friedhof,3678,0.0006529973965324027
+schmerikon-bahnhof-strand,l,5632488,Schul- und Hochschulareal,25974,0.0046114612228201814
+schmerikon-bahnhof-strand,l,5632488,Steinbruchareal,2205,0.0003914788633371256
+schusspark-strand,r,7065000,Baumschule,3601,0.0005096956829440906
+schusspark-strand,r,7065000,Friedhof,22441,0.0031763623496107573
+schusspark-strand,r,7065000,Kraftwerkareal,286,4.0481245576786975e-05
+schusspark-strand,r,7065000,Oeffentliches Parkareal,51531,0.007293842887473461
+schusspark-strand,r,7065000,Schrebergartenareal,67284,0.009523566878980892
+schusspark-strand,r,7065000,Schul- und Hochschulareal,297787,0.04214961075725407
+schusspark-strand,r,7065000,Spitalareal,1451,0.000205378627034678
+schusspark-strand,r,7065000,Wald nicht bestockt,7125,0.0010084925690021231
+schutzenmatte,r,7065000,Historisches Areal,7606,0.0010765746638358104
+schutzenmatte,r,7065000,Messeareal,3799,0.0005377211606510969
+schutzenmatte,r,7065000,Oeffentliches Parkareal,17914,0.0025355980184005662
+schutzenmatte,r,7065000,Schrebergartenareal,16630,0.002353857041755131
+schutzenmatte,r,7065000,Schul- und Hochschulareal,129725,0.018361641896673744
+schutzenmatte,r,7065000,Spitalareal,28065,0.0039723991507431
+seeflechsen,l,5511029,Deponieareal,49109,0.00891104002537457
+seeflechsen,l,5511029,Friedhof,1983,0.00035982390947316735
+seeflechsen,l,5511029,Historisches Areal,882,0.00016004270708791407
+seeflechsen,l,5511029,Klosterareal,4470,0.0008111007944251428
+seeflechsen,l,5511029,Schul- und Hochschulareal,10523,0.0019094437717529704
+seeflechsen,l,5511029,Unterwerkareal,56,1.016144171986756e-05
+seemuhlestrasse-strand,l,4730030,Abwasserreinigungsareal,4938,0.0010439680086595645
+seemuhlestrasse-strand,l,4730030,Deponieareal,14299,0.0030230252239414972
+seemuhlestrasse-strand,l,4730030,Schul- und Hochschulareal,2013,0.00042557869611820645
+seemuhlestrasse-strand,l,4730030,Spitalareal,19923,0.004212024025217599
+seemuhlestrasse-strand,l,4730030,Truppenuebungsplatz,64217,0.013576446661014836
+seez,r,5011621,Abwasserreinigungsareal,4938,0.0009853099426313362
+seez,r,5011621,Deponieareal,43594,0.008698582753963239
+seez,r,5011621,Friedhof,3623,0.0007229197898244899
+seez,r,5011621,Historisches Areal,1540,0.0003072858063289303
+seez,r,5011621,Schul- und Hochschulareal,14312,0.0028557626364802925
+seez,r,5011621,Spitalareal,27111,0.005409626945054305
+seez,r,5011621,Truppenuebungsplatz,193344,0.03857913437588357
+seez_spennwiesenbrucke,r,6541117,Abwasserreinigungsareal,4938,0.0007549169354408428
+seez_spennwiesenbrucke,r,6541117,Deponieareal,43594,0.00666461095253303
+seez_spennwiesenbrucke,r,6541117,Friedhof,3623,0.0005538809350146161
+seez_spennwiesenbrucke,r,6541117,Historisches Areal,844,0.00012902995008344905
+seez_spennwiesenbrucke,r,6541117,Schul- und Hochschulareal,14312,0.0021880055042586763
+seez_spennwiesenbrucke,r,6541117,Spitalareal,27111,0.004144704948711359
+seez_spennwiesenbrucke,r,6541117,Truppenuebungsplatz,902822,0.13802260378464412
+sempachersee_sempach_tampec,l,4568035,Abwasserreinigungsareal,5816,0.0012731951484609904
+sempachersee_sempach_tampec,l,4568035,Friedhof,3539,0.0007747313669882127
+sempachersee_sempach_tampec,l,4568035,Schrebergartenareal,2717,0.000594785285139015
+sempachersee_sempach_tampec,l,4568035,Schul- und Hochschulareal,33490,0.0073313799040506476
+sense_torishaus_g-cubes,r,7065000,Baumschule,24291,0.003438216560509554
+sense_torishaus_g-cubes,r,7065000,Schul- und Hochschulareal,33148,0.004691861288039632
+sentiero-giro-del-golf-spiaggia,l,2643656,Abwasserreinigungsareal,23121,0.008745842878195954
+signalpain,l,4481126,Abwasserreinigungsareal,20087,0.004482578709011976
+signalpain,l,4481126,Friedhof,21230,0.004737648528517163
+signalpain,l,4481126,Historisches Areal,13712,0.003059945201273073
+signalpain,l,4481126,Oeffentliches Parkareal,137548,0.030694963721171867
+signalpain,l,4481126,Schul- und Hochschulareal,104161,0.023244380988171276
+signalpain,l,4481126,Spitalareal,4363,0.0009736392147866407
+sihl_adliswil_oggi_fort,r,7065000,Abwasserreinigungsareal,6007,0.0008502476999292286
+sihl_adliswil_oggi_fort,r,7065000,Friedhof,48835,0.006912243453644728
+sihl_adliswil_oggi_fort,r,7065000,Schrebergartenareal,52385,0.007414720452937013
+sihl_adliswil_oggi_fort,r,7065000,Schul- und Hochschulareal,129940,0.018392073602264684
+sihl_adliswil_oggi_fort,r,7065000,Spitalareal,22393,0.0031695682944090585
+sihl_adliswil_oggi_fort,r,7065000,Unterwerkareal,4933,0.0006982307147912244
+sihl_adliswil_oggi_fort,r,7065000,Wald nicht bestockt,12263,0.0017357395612172682
+sihl_leimbach_kruegerm,r,7065000,Abwasserreinigungsareal,9099,0.0012878980891719745
+sihl_leimbach_kruegerm,r,7065000,Baumschule,15194,0.002150601556970984
+sihl_leimbach_kruegerm,r,7065000,Friedhof,16237,0.0022982307147912245
+sihl_leimbach_kruegerm,r,7065000,Kraftwerkareal,1487,0.00021047416843595186
+sihl_leimbach_kruegerm,r,7065000,Schrebergartenareal,127599,0.01806072186836518
+sihl_leimbach_kruegerm,r,7065000,Schul- und Hochschulareal,116987,0.016558669497523
+sihl_leimbach_kruegerm,r,7065000,Spitalareal,21100,0.002986553432413305
+sihl_leimbach_kruegerm,r,7065000,Unterwerkareal,4595,0.0006503892427459307
+sihl_zuerich_eggerskoehlingera,r,7065000,Historisches Areal,18797,0.0026605803255484784
+sihl_zuerich_eggerskoehlingera,r,7065000,Kehrichtverbrennungsareal,13823,0.00195654635527247
+sihl_zuerich_eggerskoehlingera,r,7065000,Kraftwerkareal,8987,0.0012720452937013446
+sihl_zuerich_eggerskoehlingera,r,7065000,Massnahmenvollzugsanstaltsareal,5161,0.0007305024769992923
+sihl_zuerich_eggerskoehlingera,r,7065000,Oeffentliches Parkareal,184167,0.02606751592356688
+sihl_zuerich_eggerskoehlingera,r,7065000,Schrebergartenareal,11946,0.0016908704883227177
+sihl_zuerich_eggerskoehlingera,r,7065000,Schul- und Hochschulareal,600423,0.0849855626326964
+sihl_zuerich_eggerskoehlingera,r,7065000,Spitalareal,122207,0.017297523000707714
+sihl_zuerich_eichenbergerd,r,7065000,Baumschule,59006,0.008351875442321303
+sihl_zuerich_eichenbergerd,r,7065000,Friedhof,117929,0.016692002830856333
+sihl_zuerich_eichenbergerd,r,7065000,Kraftwerkareal,1487,0.00021047416843595186
+sihl_zuerich_eichenbergerd,r,7065000,Schrebergartenareal,59356,0.00840141542816702
+sihl_zuerich_eichenbergerd,r,7065000,Schul- und Hochschulareal,117640,0.01665109695682944
+sihl_zuerich_scherfs,r,6807587,Friedhof,3133,0.0004602218084028893
+sihl_zuerich_scherfs,r,6807587,Historisches Areal,18797,0.0027611839554896617
+sihl_zuerich_scherfs,r,6807587,Kraftwerkareal,361,5.30290688903425e-05
+sihl_zuerich_scherfs,r,6807587,Massnahmenvollzugsanstaltsareal,5161,0.0007581247217259214
+sihl_zuerich_scherfs,r,6807587,Oeffentliches Parkareal,251183,0.036897508617958166
+sihl_zuerich_scherfs,r,6807587,Schul- und Hochschulareal,564698,0.08295127186769703
+sihl_zuerich_scherfs,r,6807587,Spitalareal,67357,0.009894401643342935
+sihl_zurich_himmelhebern,r,7053838,Baumschule,64492,0.009142824090941698
+sihl_zurich_himmelhebern,r,7053838,Friedhof,117929,0.01671841627210605
+sihl_zurich_himmelhebern,r,7053838,Kraftwerkareal,1487,0.0002108072229614573
+sihl_zurich_himmelhebern,r,7053838,Oeffentliches Parkareal,36211,0.0051335173844366715
+sihl_zurich_himmelhebern,r,7053838,Schrebergartenareal,70711,0.010024471784013186
+sihl_zurich_himmelhebern,r,7053838,Schul- und Hochschulareal,83298,0.011808890422490564
+sihl_zurich_himmelhebern,r,7053838,Spitalareal,13129,0.0018612562409286973
+sitter_gaiserwald_buehlerf,r,7065000,Abwasserreinigungsareal,24173,0.003421514508138712
+sitter_gaiserwald_buehlerf,r,7065000,Deponieareal,193697,0.027416418966737438
+sitter_gaiserwald_buehlerf,r,7065000,Friedhof,85322,0.012076716206652512
+sitter_gaiserwald_buehlerf,r,7065000,Historisches Areal,2562,0.0003626326963906582
+sitter_gaiserwald_buehlerf,r,7065000,Kehrichtverbrennungsareal,8277,0.0011715498938428875
+sitter_gaiserwald_buehlerf,r,7065000,Kraftwerkareal,456,6.454352441613588e-05
+sitter_gaiserwald_buehlerf,r,7065000,Schrebergartenareal,58918,0.008339419674451521
+sitter_gaiserwald_buehlerf,r,7065000,Schul- und Hochschulareal,80996,0.011464401981599434
+sitter_stgallen_jennya,r,6940928,Abwasserreinigungsareal,24173,0.0034826755154354
+sitter_stgallen_jennya,r,6940928,Friedhof,20047,0.0028882305075056246
+sitter_stgallen_jennya,r,6940928,Kehrichtverbrennungsareal,8277,0.0011924918397078891
+sitter_stgallen_jennya,r,6940928,Kraftwerkareal,168,2.4204256260834287e-05
+sitter_stgallen_jennya,r,6940928,Schrebergartenareal,34246,0.0049339223804079225
+sitter_stgallen_jennya,r,6940928,Schul- und Hochschulareal,91462,0.013177200512669199
+sitter_stgallen_jennya,r,6940928,Truppenuebungsplatz,111339,0.016040938618006123
+sitter_stgallen_jennya,r,6940928,Unterwerkareal,1458,0.00021005836683509756
+sitter_stgallen_steinbrunnerf,r,7065000,Deponieareal,211466,0.029931493276716205
+sitter_stgallen_steinbrunnerf,r,7065000,Friedhof,80838,0.011442038216560509
+sitter_stgallen_steinbrunnerf,r,7065000,Historisches Areal,1511,0.00021387119603680113
+sitter_stgallen_steinbrunnerf,r,7065000,Oeffentliches Parkareal,2845,0.000402689313517339
+sitter_stgallen_steinbrunnerf,r,7065000,Schrebergartenareal,6782,0.0009599433828733192
+sitter_stgallen_steinbrunnerf,r,7065000,Schul- und Hochschulareal,223233,0.03159702760084926
+sorne_birse_wwfjura,r,7065000,Friedhof,3977,0.0005629157820240622
+sorne_birse_wwfjura,r,7065000,Historisches Areal,1237,0.00017508846426043877
+sorne_birse_wwfjura,r,7065000,Kraftwerkareal,248,3.510261854210899e-05
+sorne_birse_wwfjura,r,7065000,Messeareal,14450,0.002045293701344657
+sorne_birse_wwfjura,r,7065000,Schrebergartenareal,3687,0.0005218683651804671
+sorne_birse_wwfjura,r,7065000,Schul- und Hochschulareal,44907,0.006356263269639065
+sorne_birse_wwfjura,r,7065000,Unterwerkareal,4502,0.0006372257607926398
+sorne_birse_wwfjura,r,7065000,Wald nicht bestockt,7615,0.0010778485491861288
+spackmatt,r,7065000,Abwasserreinigungsareal,26799,0.0037932059447983017
+spackmatt,r,7065000,Deponieareal,55235,0.007818117480537862
+spackmatt,r,7065000,Friedhof,7815,0.0011061571125265393
+spackmatt,r,7065000,Historisches Areal,674,9.53998584571833e-05
+spackmatt,r,7065000,Kehrichtverbrennungsareal,15284,0.0021633404104741683
+spackmatt,r,7065000,Kraftwerkareal,6963,0.0009855626326963907
+spackmatt,r,7065000,Schrebergartenareal,2686,0.0003801840056617127
+spackmatt,r,7065000,Schul- und Hochschulareal,27973,0.003959377211606511
+spackmatt,r,7065000,Unterwerkareal,649,9.186128803963199e-05
+spackmatt,r,7065000,Wald nicht bestockt,24024,0.003400424628450106
+spiaggia-parco-ciani,l,4211368,Friedhof,3834,0.0009103930124368138
+spiaggia-parco-ciani,l,4211368,Historisches Areal,7214,0.0017129825747833009
+spiaggia-parco-ciani,l,4211368,Messeareal,27958,0.006638697924284936
+spiaggia-parco-ciani,l,4211368,Oeffentliches Parkareal,113212,0.026882476193009017
+spiaggia-parco-ciani,l,4211368,Schul- und Hochschulareal,165068,0.03919581475663015
+spiaggia-parco-ciani,l,4211368,Spitalareal,12210,0.0028992954308433745
+spiaggia-parco-ciani,l,4211368,Wald nicht bestockt,3340,0.0007930914610169427
+strandbeiz,l,2511663,Abwasserreinigungsareal,14709,0.005856279285875533
+strandbeiz,l,2511663,Friedhof,8322,0.0033133425941298655
+strandbeiz,l,2511663,Schrebergartenareal,7331,0.002918783292185297
+strandbeiz,l,2511663,Schul- und Hochschulareal,62496,0.02488231900537612
+strandbeiz,l,2511663,Unterwerkareal,5961,0.0023733279504455813
+strandboden-biel,l,5864928,Friedhof,5133,0.0008752025600314275
+strandboden-biel,l,5864928,Historisches Areal,14547,0.002480337354525068
+strandboden-biel,l,5864928,Massnahmenvollzugsanstaltsareal,3008,0.000512879271493188
+strandboden-biel,l,5864928,Oeffentliches Parkareal,70566,0.012031861260700898
+strandboden-biel,l,5864928,Schul- und Hochschulareal,141722,0.024164320516807707
+sundbach-strand,l,3947244,Abwasserreinigungsareal,998,0.00025283463601439383
+sundbach-strand,l,3947244,Friedhof,2995,0.0007587572493618333
+sundbach-strand,l,3947244,Wald nicht bestockt,22241,0.005634564268132398
+thun-strandbad,l,4343057,Historisches Areal,51380,0.0118303766218127
+thun-strandbad,l,4343057,Oeffentliches Parkareal,57242,0.013180117138688255
+thun-strandbad,l,4343057,Schul- und Hochschulareal,174387,0.04015305348283479
+thun-strandbad,l,4343057,Spitalareal,5434,0.0012511924204540719
+thunersee_spiez_meierd_1,l,3166434,Baumschule,1254,0.00039602909771686384
+thunersee_spiez_meierd_1,l,3166434,Friedhof,2280,0.0007200529049397524
+thunersee_spiez_meierd_1,l,3166434,Kraftwerkareal,4614,0.0014571596944701832
+thur_schwarzenbach_meiliw,r,7065000,Abwasserreinigungsareal,17753,0.0025128096249115357
+thur_schwarzenbach_meiliw,r,7065000,Baumschule,2634,0.00037282377919320593
+thur_schwarzenbach_meiliw,r,7065000,Friedhof,991,0.0001402689313517339
+thur_schwarzenbach_meiliw,r,7065000,Historisches Areal,16853,0.0023854210898796887
+thur_schwarzenbach_meiliw,r,7065000,Kiesabbauareal,52923,0.0074908704883227175
+thur_schwarzenbach_meiliw,r,7065000,Schrebergartenareal,4281,0.0006059447983014862
+thur_schwarzenbach_meiliw,r,7065000,Schul- und Hochschulareal,27419,0.003880962491153574
+tiger-duck-beach,l,4467799,Abwasserreinigungsareal,54193,0.012129686228050994
+tiger-duck-beach,l,4467799,Baumschule,36837,0.008244999383365276
+tiger-duck-beach,l,4467799,Friedhof,176400,0.03948252819788894
+tiger-duck-beach,l,4467799,Historisches Areal,17134,0.0038349979486543596
+tiger-duck-beach,l,4467799,Oeffentliches Parkareal,196993,0.04409173286443727
+tiger-duck-beach,l,4467799,Schrebergartenareal,21138,0.00473118866806676
+tiger-duck-beach,l,4467799,Schul- und Hochschulareal,1093664,0.24478809364521548
+tolochenaz,l,3841125,Abwasserreinigungsareal,3738,0.000973152396758762
+tolochenaz,l,3841125,Friedhof,15672,0.004080054671482964
+tolochenaz,l,3841125,Historisches Areal,9719,0.002530248299651795
+tolochenaz,l,3841125,Oeffentliches Parkareal,31296,0.008147613004002734
+tolochenaz,l,3841125,Schul- und Hochschulareal,8486,0.002209248592534739
+toss_bauma_kurthe,r,7065000,Friedhof,7918,0.0011207360226468508
+toss_bauma_kurthe,r,7065000,Historisches Areal,1032,0.00014607218683651804
+toss_bauma_kurthe,r,7065000,Schul- und Hochschulareal,41651,0.005895399858457183
+toss_kollbrunn_burgid,r,7065000,Friedhof,7592,0.0010745930644019816
+toss_kollbrunn_burgid,r,7065000,Historisches Areal,628,8.888888888888889e-05
+toss_kollbrunn_burgid,r,7065000,Kraftwerkareal,163,2.3071479122434537e-05
+toss_kollbrunn_burgid,r,7065000,Schul- und Hochschulareal,16121,0.0022818117480537864
+toss_winterthur-2,r,7065000,Baumschule,5641,0.0007984430290162775
+toss_winterthur-2,r,7065000,Schrebergartenareal,69455,0.009830856334041047
+toss_winterthur-2,r,7065000,Schul- und Hochschulareal,53345,0.007550601556970984
+toss_winterthur-2,r,7065000,Unterwerkareal,21884,0.0030975230007077143
+tschilljus,r,7019326,Friedhof,1837,0.0002617060384430072
+tschilljus,r,7019326,Historisches Areal,757,0.00010784511219453264
+tschilljus,r,7019326,Schrebergartenareal,9473,0.0013495597725479626
+tschilljus,r,7019326,Schul- und Hochschulareal,3786,0.0005393680247932636
+tschilljus,r,7019326,Wald nicht bestockt,7709,0.0010982535930087875
+unterdsee_ermatingen_brunkem,l,4677451,Baumschule,5304,0.0011339509489249593
+unterdsee_ermatingen_brunkem,l,4677451,Friedhof,7468,0.0015965960947533176
+unterdsee_ermatingen_brunkem,l,4677451,Oeffentliches Parkareal,2409,0.0005150241018024561
+unterdsee_ermatingen_brunkem,l,4677451,Schrebergartenareal,4082,0.0008726975440255815
+unterdsee_ermatingen_brunkem,l,4677451,Schul- und Hochschulareal,24973,0.00533901905118835
+untertenzen,l,3436553,Friedhof,1598,0.00046500083077432534
+untertenzen,l,3436553,Kraftwerkareal,103,2.997189334778192e-05
+untertenzen,l,3436553,Schul- und Hochschulareal,7889,0.002295614239035452
+urnaesch_urnaesch_meierr,r,7065000,Abwasserreinigungsareal,891,0.00012611464968152866
+urnaesch_urnaesch_meierr,r,7065000,Friedhof,3547,0.0005020523708421798
+urnaesch_urnaesch_meierr,r,7065000,Kraftwerkareal,121,1.7126680820948336e-05
+urnaesch_urnaesch_meierr,r,7065000,Schul- und Hochschulareal,5708,0.0008079263977353149
+urnaesch_urnaesch_meierr,r,7065000,Unterwerkareal,1626,0.00023014861995753716
+val-calanca,p,7065000,Friedhof,474,6.709129511677283e-05
+val-calanca,p,7065000,Wald nicht bestockt,71439,0.010111677282377919
+verbier,p,7065000,Schul- und Hochschulareal,5129,0.0007259731068648266
+verbier,p,7065000,Unterwerkareal,648,9.171974522292994e-05
+verbier,p,7065000,Wald nicht bestockt,14113,0.0019975937721160653
+versoix,l,3730114,Friedhof,6493,0.001740697469299866
+versoix,l,3730114,Historisches Areal,1558,0.0004176816043691962
+versoix,l,3730114,Oeffentliches Parkareal,46574,0.012485945469763123
+versoix,l,3730114,Schul- und Hochschulareal,158060,0.042374040042744004
+veveyse,l,3126368,Abwasserreinigungsareal,6481,0.002073012518040103
+veveyse,l,3126368,Friedhof,39674,0.012690124770980256
+veveyse,l,3126368,Historisches Areal,2340,0.0007484723487446135
+veveyse,l,3126368,Oeffentliches Parkareal,47577,0.015217978177872854
+veveyse,l,3126368,Schul- und Hochschulareal,52096,0.016663425418888628
+via-brunari-spiaggia,r,7065000,Friedhof,2748,0.00038895966029723993
+via-brunari-spiaggia,r,7065000,Historisches Areal,36676,0.005191224345364473
+via-brunari-spiaggia,r,7065000,Klosterareal,5578,0.0007895258315640481
+via-brunari-spiaggia,r,7065000,Messeareal,2352,0.0003329087048832272
+via-brunari-spiaggia,r,7065000,Oeffentliches Parkareal,3204,0.0004535031847133758
+via-brunari-spiaggia,r,7065000,Schul- und Hochschulareal,107210,0.015174805378627036
+via-brunari-spiaggia,r,7065000,Unterwerkareal,3828,0.0005418259023354565
+via-brunari-spiaggia,r,7065000,Wald nicht bestockt,11135,0.0015760792639773532
+via-mirasole-spiaggia,r,7065000,Friedhof,8998,0.0012736022646850672
+via-mirasole-spiaggia,r,7065000,Historisches Areal,36676,0.005191224345364473
+via-mirasole-spiaggia,r,7065000,Klosterareal,5578,0.0007895258315640481
+via-mirasole-spiaggia,r,7065000,Messeareal,2352,0.0003329087048832272
+via-mirasole-spiaggia,r,7065000,Oeffentliches Parkareal,3204,0.0004535031847133758
+via-mirasole-spiaggia,r,7065000,Schul- und Hochschulareal,103548,0.014656475583864119
+via-mirasole-spiaggia,r,7065000,Unterwerkareal,3828,0.0005418259023354565
+via-mirasole-spiaggia,r,7065000,Wald nicht bestockt,11135,0.0015760792639773532
+vidy,l,3683398,Abwasserreinigungsareal,54193,0.014712773368503757
+vidy,l,3683398,Baumschule,13216,0.0035879913058539967
+vidy,l,3683398,Friedhof,216359,0.05873896874570709
+vidy,l,3683398,Historisches Areal,19402,0.005267418834456662
+vidy,l,3683398,Oeffentliches Parkareal,272453,0.07396784165056287
+vidy,l,3683398,Schrebergartenareal,14726,0.003997938859715947
+vidy,l,3683398,Schul- und Hochschulareal,281593,0.07644924604943587
+vidy-ruines,l,4022452,Abwasserreinigungsareal,54193,0.013472628138259947
+vidy-ruines,l,4022452,Baumschule,13216,0.0032855581620364893
+vidy-ruines,l,4022452,Friedhof,216359,0.053787838860476146
+vidy-ruines,l,4022452,Historisches Areal,19402,0.004823426109248787
+vidy-ruines,l,4022452,Oeffentliches Parkareal,272453,0.06773306431002782
+vidy-ruines,l,4022452,Schrebergartenareal,15457,0.003842681031370915
+vidy-ruines,l,4022452,Schul- und Hochschulareal,460458,0.11447196883890721
+vierwaldstattersee_weggis_schoberls_1,l,4060624,Friedhof,492,0.00012116364381434971
+vierwaldstattersee_weggis_schoberls_1,l,4060624,Schul- und Hochschulareal,12642,0.00311331460386384
+vierwaldstattersee_weggis_schoberls_2,l,3967598,Schul- und Hochschulareal,9705,0.002446064344220357
+vierwaldstattersee_weggis_schoberls_3,l,2926722,Schul- und Hochschulareal,9705,0.003315996531272871
+villa-barton,l,3423779,Historisches Areal,31028,0.00906250082146073
+villa-barton,l,3423779,Oeffentliches Parkareal,673659,0.19675890295489282
+villa-barton,l,3423779,Schul- und Hochschulareal,112800,0.03294605171653895
+villars,p,6986101,Wald nicht bestockt,10013,0.0014332744402063469
+vira-gambarogno,l,3816571,Friedhof,2573,0.000674165369909272
+vira-gambarogno,l,3816571,Schul- und Hochschulareal,4028,0.0010553976331109784
+vira-spiaggia-left-of-river,l,3922974,Friedhof,2573,0.0006558799523014937
+vira-spiaggia-left-of-river,l,3922974,Schul- und Hochschulareal,4028,0.0010267720357055642
+vorderrhein_disentis_schmidn,r,7065000,Abwasserreinigungsareal,4484,0.0006346779900920028
+vorderrhein_disentis_schmidn,r,7065000,Friedhof,3543,0.0005014861995753715
+vorderrhein_disentis_schmidn,r,7065000,Historisches Areal,241,3.411181882519462e-05
+vorderrhein_disentis_schmidn,r,7065000,Klosterareal,8089,0.0011449398443029017
+vorderrhein_disentis_schmidn,r,7065000,Schul- und Hochschulareal,11931,0.0016887473460721867
+vorderrhein_disentis_schmidn,r,7065000,Wald nicht bestockt,102988,0.01457721160651097
+walensee_walenstadt_wysse,l,4896449,Abwasserreinigungsareal,4938,0.0010084859456312115
+walensee_walenstadt_wysse,l,4896449,Deponieareal,43594,0.00890318677882686
+walensee_walenstadt_wysse,l,4896449,Friedhof,3623,0.0007399239734754718
+walensee_walenstadt_wysse,l,4896449,Historisches Areal,1540,0.00031451364039531505
+walensee_walenstadt_wysse,l,4896449,Schul- und Hochschulareal,14312,0.0029229345593102265
+walensee_walenstadt_wysse,l,4896449,Spitalareal,27111,0.005536869678413887
+walensee_walenstadt_wysse,l,4896449,Truppenuebungsplatz,81495,0.016643694236374157
+weissenau-neuhaus,l,3707593,Baumschule,6521,0.0017588230423350136
+weissenau-neuhaus,l,3707593,Historisches Areal,6088,0.0016420356819100694
+wycheley,l,5425461,Abwasserreinigungsareal,6852,0.0012629341543511233
+wycheley,l,5425461,Kiesabbauareal,39695,0.0073164289633636664
+wycheley,l,5425461,Schul- und Hochschulareal,10154,0.0018715460308349834
+wycheley,l,5425461,Unterwerkareal,2087,0.0003846677729321066
+zuerichsee_maennedorf_vanderkaadene,l,3964841,Abwasserreinigungsareal,3090,0.000779350294248874
+zuerichsee_maennedorf_vanderkaadene,l,3964841,Friedhof,20626,0.005202226268342161
+zuerichsee_maennedorf_vanderkaadene,l,3964841,Historisches Areal,625,0.00015763557731571077
+zuerichsee_maennedorf_vanderkaadene,l,3964841,Schrebergartenareal,16426,0.0041429151887805845
+zuerichsee_maennedorf_vanderkaadene,l,3964841,Schul- und Hochschulareal,82626,0.020839675538060667
+zuerichsee_maennedorf_vanderkaadene,l,3964841,Spitalareal,44154,0.01113638604927663
+zuerichsee_richterswil_benkoem_2,l,3364094,Abwasserreinigungsareal,6085,0.0018088079583983088
+zuerichsee_richterswil_benkoem_2,l,3364094,Baumschule,3387,0.001006808965504531
+zuerichsee_richterswil_benkoem_2,l,3364094,Friedhof,11689,0.003474635369879676
+zuerichsee_richterswil_benkoem_2,l,3364094,Historisches Areal,5514,0.0016390742945946218
+zuerichsee_richterswil_benkoem_2,l,3364094,Oeffentliches Parkareal,18754,0.005574755045489216
+zuerichsee_richterswil_benkoem_2,l,3364094,Schrebergartenareal,1466,0.00043577854839965826
+zuerichsee_richterswil_benkoem_2,l,3364094,Schul- und Hochschulareal,159162,0.047311995443646934
+zuerichsee_staefa_hennm,l,3683138,Abwasserreinigungsareal,6281,0.0017053393057767589
+zuerichsee_staefa_hennm,l,3683138,Baumschule,40363,0.01095886170977031
+zuerichsee_staefa_hennm,l,3683138,Schrebergartenareal,2291,0.0006220239371970314
+zuerichsee_staefa_hennm,l,3683138,Schul- und Hochschulareal,16914,0.0045922797353778215
+zuerichsee_waedenswil_colomboc_1,l,3946246,Abwasserreinigungsareal,6085,0.0015419717878713086
+zuerichsee_waedenswil_colomboc_1,l,3946246,Baumschule,3387,0.00085828405020873
+zuerichsee_waedenswil_colomboc_1,l,3946246,Friedhof,33731,0.008547617153112096
+zuerichsee_waedenswil_colomboc_1,l,3946246,Historisches Areal,11629,0.002946851260666466
+zuerichsee_waedenswil_colomboc_1,l,3946246,Oeffentliches Parkareal,39949,0.010123291857628744
+zuerichsee_waedenswil_colomboc_1,l,3946246,Schrebergartenareal,13706,0.003473174252188029
+zuerichsee_waedenswil_colomboc_1,l,3946246,Schul- und Hochschulareal,167000,0.04231869984790609
+zuerichsee_zurich_kullg,l,3750060,Friedhof,2031,0.0005415913345386473
+zuerichsee_zurich_kullg,l,3750060,Oeffentliches Parkareal,375789,0.10020879665925345
+zuerichsee_zurich_kullg,l,3750060,Schul- und Hochschulareal,191010,0.05093518503703941
+zuerichsee_zurich_kullg,l,3750060,Spitalareal,74362,0.019829549393876364
+zugersee_immensee_guedesd,l,2934687,Baumschule,1516,0.0005165797919846307
+zugersee_immensee_guedesd,l,2934687,Schul- und Hochschulareal,4851,0.0016529871839824825
+zugerseecholler_cham_blarerm,l,3439487,Friedhof,248,7.210377594100516e-05
+zugerseecholler_cham_blarerm,l,3439487,Historisches Areal,69036,0.02007159788654529
+zugerseecholler_cham_blarerm,l,3439487,Oeffentliches Parkareal,33791,0.009824430212993973
+zugerseecholler_cham_blarerm,l,3439487,Schrebergartenareal,21514,0.006255002562882197
+zugerseecholler_cham_blarerm,l,3439487,Schul- und Hochschulareal,45460,0.013217087315637477
+zulg_steffisburg_schmassmanne,r,7065000,Baumschule,59675,0.008446567586694976
+zulg_steffisburg_schmassmanne,r,7065000,Friedhof,21709,0.003072753007784855
+zulg_steffisburg_schmassmanne,r,7065000,Kraftwerkareal,4290,0.0006072186836518046
+zulg_steffisburg_schmassmanne,r,7065000,Oeffentliches Parkareal,4738,0.0006706298655343242
+zulg_steffisburg_schmassmanne,r,7065000,Schrebergartenareal,10512,0.0014878980891719746
+zulg_steffisburg_schmassmanne,r,7065000,Schul- und Hochschulareal,91660,0.01297381457891012
+zulg_steffisburg_schmassmanne,r,7065000,Spitalareal,4945,0.0006999292285916489
+zurcher-strand,l,5861863,Friedhof,3233,0.0005515311429148038
+zurcher-strand,l,5861863,Historisches Areal,18797,0.003206659725756129
+zurcher-strand,l,5861863,Massnahmenvollzugsanstaltsareal,5161,0.0008804368167594501
+zurcher-strand,l,5861863,Oeffentliches Parkareal,397810,0.06786409030712591
+zurcher-strand,l,5861863,Schul- und Hochschulareal,307372,0.05243588940922024
+zurcher-strand,l,5861863,Spitalareal,17645,0.0030101351737493696
+zurichsee-feldeggstr-banningersand,l,4885814,Friedhof,3233,0.0006617116410898982
+zurichsee-feldeggstr-banningersand,l,4885814,Oeffentliches Parkareal,452605,0.09263655963980619
+zurichsee-feldeggstr-banningersand,l,4885814,Schul- und Hochschulareal,259407,0.053093916387320514
+zurichsee-feldeggstr-banningersand,l,4885814,Spitalareal,24068,0.004926098291912054
+zurichsee_kusnachterhorn_thirkell-whitej,l,3238234,Abwasserreinigungsareal,6985,0.002157039917436479
+zurichsee_kusnachterhorn_thirkell-whitej,l,3238234,Friedhof,13222,0.004083089733478186
+zurichsee_kusnachterhorn_thirkell-whitej,l,3238234,Historisches Areal,774,0.0002390191690903128
+zurichsee_kusnachterhorn_thirkell-whitej,l,3238234,Schul- und Hochschulareal,53046,0.01638115096067795
+zurichsee_wollishofen_langendorfm,l,4266194,Friedhof,101692,0.02383670315977192
+zurichsee_wollishofen_langendorfm,l,4266194,Kraftwerkareal,1487,0.0003485542382742088
+zurichsee_wollishofen_langendorfm,l,4266194,Oeffentliches Parkareal,207047,0.048532017062515205
+zurichsee_wollishofen_langendorfm,l,4266194,Schrebergartenareal,14625,0.003428114145770211
+zurichsee_wollishofen_langendorfm,l,4266194,Schul- und Hochschulareal,85294,0.019992996099099103
+zurichsee_wollishofen_langendorfm,l,4266194,Spitalareal,15109,0.003541564213910572
