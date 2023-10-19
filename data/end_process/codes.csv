@@ -25,7 +25,7 @@ G710,plastic,"Ski / Snowboards (ski, fixations et autres pièces)",Usagers,G79,F
 G711,plastic,Chaufferette,Usagers,G124,True,recreation,Chaufferette,Handwärmer 
 G713,plastic,Carpet from ski lift,Domaine skiable,G124,False,infrastructure,Carpet from ski lift,Skiförderband
 G75,plastic,Plastic/polystyrene pcs 0.5 - 2.5 cm,Undefined,Gfrags,False,plastic pieces,Plastique/polystyrène pièces 0 - 2.5 cm,"Objekte aus Kunststoff/Polystyrol 0,5 - 2,5 cm"
-G76,plastic,Plastic/foamed polystyrene 2.5 > < 50,Undefined,Gfoams,False,plastic pieces,"Plastique/polystyrène expansé 2,5 > < 50","Objekte aus Kunststoff/Polystyrol 2,5 - 50 cm"
+G76,plastic,Plastic/foamed polystyrene 2.5 > < 50,Undefined,Gfrags,False,plastic pieces,"Plastique/polystyrène expansé 2,5 > < 50","Objekte aus Kunststoff/Polystyrol 2,5 - 50 cm"
 G78,plastic,Plastic pieces 0.5cm - 2.5cm,Undefined,Gfrags,False,plastic pieces,Plastiques fragmentés .5mm < x < 25mm,"Objekte aus Kunststoff 0,5 - 2,5 cm"
 G79,plastic,Plastic pieces 2.5cm - 50cm,Undefined,Gfrags,False,plastic pieces,Plastiques fragmentés x > 25mm,"Objekte aus Kunststoff 2,5 - 50 cm"
 G80,plastic,Plastic pieces > 50cm,Undefined,Gfrags,False,plastic pieces,Pièces en plastique > 50cm,Objekte aus Kunststoff > 50 cm

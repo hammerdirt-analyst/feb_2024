@@ -15,6 +15,7 @@ def collect_vitals(data):
 
 def find_missing(more_than, less_than):
     return np.setdiff1d(more_than, less_than)
+
 def find_missing_loc_dates(done, dtwo):
     locs_one = done.loc_date.unique()
     locs_two = dtwo.loc_date.unique()
@@ -26,6 +27,10 @@ def use_gfrags_gfoams_gcaps(data, codes,columns=["Gfoams", "Gfrags", "Gcaps"]):
         data.loc[data.code.isin(change), "code"] = col
         
     return data
+
+def indexed_feature_data(data_location, index: str = "code"):
+    data = pd.read_csv(data_location)
+    return data.set_index(index)
 
 def make_a_summary(vitals, add_summary_name=False):
 
