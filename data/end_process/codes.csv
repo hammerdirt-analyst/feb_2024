@@ -25,7 +25,7 @@ G710,plastic,"Ski / Snowboards (ski, fixations et autres pièces)",Usagers,G79,F
 G711,plastic,Chaufferette,Usagers,G124,True,recreation,Chaufferette,Handwärmer 
 G713,plastic,Carpet from ski lift,Domaine skiable,G124,False,infrastructure,Carpet from ski lift,Skiförderband
 G75,plastic,Plastic/polystyrene pcs 0.5 - 2.5 cm,Undefined,Gfrags,False,plastic pieces,Plastique/polystyrène pièces 0 - 2.5 cm,"Objekte aus Kunststoff/Polystyrol 0,5 - 2,5 cm"
-G76,plastic,Plastic/foamed polystyrene 2.5 > < 50,Undefined,Gfoams,False,plastic pieces,"Plastique/polystyrène expansé 2,5 > < 50","Objekte aus Kunststoff/Polystyrol 2,5 - 50 cm"
+G76,plastic,Plastic/foamed polystyrene 2.5 > < 50,Undefined,Gfrags,False,plastic pieces,"Plastique/polystyrène expansé 2,5 > < 50","Objekte aus Kunststoff/Polystyrol 2,5 - 50 cm"
 G78,plastic,Plastic pieces 0.5cm - 2.5cm,Undefined,Gfrags,False,plastic pieces,Plastiques fragmentés .5mm < x < 25mm,"Objekte aus Kunststoff 0,5 - 2,5 cm"
 G79,plastic,Plastic pieces 2.5cm - 50cm,Undefined,Gfrags,False,plastic pieces,Plastiques fragmentés x > 25mm,"Objekte aus Kunststoff 2,5 - 50 cm"
 G80,plastic,Plastic pieces > 50cm,Undefined,Gfrags,False,plastic pieces,Pièces en plastique > 50cm,Objekte aus Kunststoff > 50 cm
@@ -222,7 +222,7 @@ G71,plastic,Shoes sandals,Clothing,G71,False,personal items,Chaussures sandales,
 G72,plastic,Traffic cones,Utility items,G72,False,infrastructure,Cônes de signalisation,Verkehrskegel
 G73,plastic,Foamed items & pieces (non packaging/insulation) foamed sponge material,Recreation,G73,False,recreation,Articles et pièces en mousse (pas d'emballage),Gegenstände aus Schaumstoff & Teilstücke (nicht Verpackung/Isolierung) schwammartige Gegenstände
 G74,plastic,Foam packaging/insulation/polyurethane,Undefined,G74,False,infrastructure,Mousse de plastique pour l'isolation thermique,description
-G77,plastic,Plastic or polystyrene  > 50cm,Undefined,G77,False,plastic pieces,Plastique ou polystyrène > 50cm,Kunststoff oder Styropor > 50cm
+G77,plastic,Plastic or polystyrene  > 50cm,Undefined,Gfrags,False,plastic pieces,Plastique ou polystyrène > 50cm,Kunststoff oder Styropor > 50cm
 G8,plastic,Drink bottles  > 0.5L,Packaging,G8,True,food and drink,"Bouteilles à boisson > = 0,5L","Getränkeflaschen > 0,5L"
 G84,plastic,CD or CD box,Packaging,G84,False,personal items,Disque compact ou conteneur,CD oder CD-Hülle
 G85,plastic,Salt packaging,Packaging,G85,False,unclassified,Emballage du sel,"Salzsäcke (gross, zum Salzstreuen) "

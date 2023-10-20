@@ -109,7 +109,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('tiger-duck-beach', '2021-10-07')",2021-10-07,lac-leman,tiger-duck-beach,G211,0.0,0,rhone,30,personal items,Saint-Sulpice (VD),l
 "('tiger-duck-beach', '2021-10-07')",2021-10-07,lac-leman,tiger-duck-beach,G213,0.0,0,rhone,30,recreation,Saint-Sulpice (VD),l
 "('tiger-duck-beach', '2021-10-07')",2021-10-07,lac-leman,tiger-duck-beach,G214,0.0,0,rhone,30,infrastructure,Saint-Sulpice (VD),l
-"('tiger-duck-beach', '2021-10-07')",2021-10-07,lac-leman,tiger-duck-beach,Gcaps,0.0,0,rhone,30,infrastructure,Saint-Sulpice (VD),l
+"('tiger-duck-beach', '2021-10-07')",2021-10-07,lac-leman,tiger-duck-beach,G22,0.0,0,rhone,30,infrastructure,Saint-Sulpice (VD),l
 "('tiger-duck-beach', '2021-10-07')",2021-10-07,lac-leman,tiger-duck-beach,G25,0.07,2,rhone,30,tobacco,Saint-Sulpice (VD),l
 "('tiger-duck-beach', '2021-10-07')",2021-10-07,lac-leman,tiger-duck-beach,G26,0.0,0,rhone,30,tobacco,Saint-Sulpice (VD),l
 "('tiger-duck-beach', '2021-10-07')",2021-10-07,lac-leman,tiger-duck-beach,G27,1.47,44,rhone,30,tobacco,Saint-Sulpice (VD),l
@@ -337,7 +337,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('villa-barton', '2021-11-14')",2021-11-14,lac-leman,villa-barton,G211,0.0,0,rhone,58,personal items,Genève,l
 "('villa-barton', '2021-11-14')",2021-11-14,lac-leman,villa-barton,G213,0.03,2,rhone,58,recreation,Genève,l
 "('villa-barton', '2021-11-14')",2021-11-14,lac-leman,villa-barton,G214,0.0,0,rhone,58,infrastructure,Genève,l
-"('villa-barton', '2021-11-14')",2021-11-14,lac-leman,villa-barton,Gcaps,0.14,8,rhone,58,infrastructure,Genève,l
+"('villa-barton', '2021-11-14')",2021-11-14,lac-leman,villa-barton,G22,0.14,8,rhone,58,infrastructure,Genève,l
 "('villa-barton', '2021-11-14')",2021-11-14,lac-leman,villa-barton,G25,0.05,3,rhone,58,tobacco,Genève,l
 "('villa-barton', '2021-11-14')",2021-11-14,lac-leman,villa-barton,G26,0.0,0,rhone,58,tobacco,Genève,l
 "('villa-barton', '2021-11-14')",2021-11-14,lac-leman,villa-barton,G27,0.07,4,rhone,58,tobacco,Genève,l
@@ -565,7 +565,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('parc-des-pierrettes', '2022-10-06')",2022-10-06,lac-leman,parc-des-pierrettes,G211,0.0,0,rhone,40,personal items,Saint-Sulpice (VD),l
 "('parc-des-pierrettes', '2022-10-06')",2022-10-06,lac-leman,parc-des-pierrettes,G213,0.0,0,rhone,40,recreation,Saint-Sulpice (VD),l
 "('parc-des-pierrettes', '2022-10-06')",2022-10-06,lac-leman,parc-des-pierrettes,G214,0.0,0,rhone,40,infrastructure,Saint-Sulpice (VD),l
-"('parc-des-pierrettes', '2022-10-06')",2022-10-06,lac-leman,parc-des-pierrettes,Gcaps,0.0,0,rhone,40,infrastructure,Saint-Sulpice (VD),l
+"('parc-des-pierrettes', '2022-10-06')",2022-10-06,lac-leman,parc-des-pierrettes,G22,0.0,0,rhone,40,infrastructure,Saint-Sulpice (VD),l
 "('parc-des-pierrettes', '2022-10-06')",2022-10-06,lac-leman,parc-des-pierrettes,G25,0.0,0,rhone,40,tobacco,Saint-Sulpice (VD),l
 "('parc-des-pierrettes', '2022-10-06')",2022-10-06,lac-leman,parc-des-pierrettes,G26,0.0,1,rhone,40,tobacco,Saint-Sulpice (VD),l
 "('parc-des-pierrettes', '2022-10-06')",2022-10-06,lac-leman,parc-des-pierrettes,G27,0.0,2,rhone,40,tobacco,Saint-Sulpice (VD),l
@@ -736,7 +736,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('plage-de-st-sulpice', '2021-10-07')",2021-10-07,lac-leman,plage-de-st-sulpice,G929,0.0,0,rhone,49,personal items,Saint-Sulpice (VD),l
 "('plage-de-st-sulpice', '2021-10-07')",2021-10-07,lac-leman,plage-de-st-sulpice,G34,0.0,0,rhone,49,food and drink,Saint-Sulpice (VD),l
 "('plage-de-st-sulpice', '2021-10-07')",2021-10-07,lac-leman,plage-de-st-sulpice,G945,0.0,0,rhone,49,personal items,Saint-Sulpice (VD),l
-"('plage-de-st-sulpice', '2021-10-07')",2021-10-07,lac-leman,plage-de-st-sulpice,Gcaps,0.0,0,rhone,49,infrastructure,Saint-Sulpice (VD),l
+"('plage-de-st-sulpice', '2021-10-07')",2021-10-07,lac-leman,plage-de-st-sulpice,G22,0.0,0,rhone,49,infrastructure,Saint-Sulpice (VD),l
 "('plage-de-st-sulpice', '2021-10-07')",2021-10-07,lac-leman,plage-de-st-sulpice,G2,0.0,0,rhone,49,packaging non food,Saint-Sulpice (VD),l
 "('plage-de-st-sulpice', '2021-10-07')",2021-10-07,lac-leman,plage-de-st-sulpice,G20,0.0,0,rhone,49,packaging non food,Saint-Sulpice (VD),l
 "('plage-de-st-sulpice', '2021-10-07')",2021-10-07,lac-leman,plage-de-st-sulpice,G11,0.0,0,rhone,49,recreation,Saint-Sulpice (VD),l
@@ -960,7 +960,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G159,0.4,2,les-alpes,5,food and drink,Mesocco,p
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G177,0.2,1,les-alpes,5,food and drink,Mesocco,p
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G89,0.6,3,les-alpes,5,infrastructure,Mesocco,p
-"('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,Gcaps,0.8,4,les-alpes,5,food and drink,Mesocco,p
+"('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G24,0.8,4,les-alpes,5,food and drink,Mesocco,p
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G30,8.2,41,les-alpes,5,food and drink,Mesocco,p
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G919,0.4,2,les-alpes,5,infrastructure,Mesocco,p
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G10,2.8,14,les-alpes,5,food and drink,Mesocco,p
@@ -969,7 +969,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G117,7.4,37,les-alpes,5,micro plastics (< 5mm),Mesocco,p
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G71,0.2,1,les-alpes,5,personal items,Mesocco,p
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G170,0.2,1,les-alpes,5,agriculture,Mesocco,p
-"('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,Gcaps,0.6,3,les-alpes,5,packaging non food,Mesocco,p
+"('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G23,0.6,3,les-alpes,5,packaging non food,Mesocco,p
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G27,0.2,1,les-alpes,5,tobacco,Mesocco,p
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G917,0.2,1,les-alpes,5,unclassified,Mesocco,p
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G20,0.03,1,les-alpes,38,packaging non food,Airolo,p
@@ -1020,7 +1020,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G124,0.94,60,les-alpes,64,unclassified,Nendaz,p
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G178,0.02,1,les-alpes,64,food and drink,Nendaz,p
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G93,0.45,29,les-alpes,64,infrastructure,Nendaz,p
-"('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,Gcaps,0.05,3,les-alpes,64,food and drink,Nendaz,p
+"('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G24,0.05,3,les-alpes,64,food and drink,Nendaz,p
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G30,0.27,17,les-alpes,64,food and drink,Nendaz,p
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G915,0.06,4,les-alpes,64,personal items,Nendaz,p
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G122,0.03,2,les-alpes,64,micro plastics (< 5mm),Nendaz,p
@@ -1045,7 +1045,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G152,0.08,1,les-alpes,12,tobacco,Nendaz,p
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G20,0.08,1,les-alpes,12,packaging non food,Nendaz,p
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G905,0.25,3,les-alpes,12,personal items,Nendaz,p
-"('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,Gcaps,0.25,3,les-alpes,12,food and drink,Nendaz,p
+"('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G24,0.25,3,les-alpes,12,food and drink,Nendaz,p
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G941,1.5,18,les-alpes,12,packaging non food,Nendaz,p
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G30,2.08,25,les-alpes,12,food and drink,Nendaz,p
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G122,0.17,2,les-alpes,12,micro plastics (< 5mm),Nendaz,p
@@ -1081,7 +1081,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G142,0.02,1,les-alpes,50,recreation,Val de Bagnes,p
 "('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G93,0.08,4,les-alpes,50,infrastructure,Val de Bagnes,p
 "('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G178,0.14,7,les-alpes,50,food and drink,Val de Bagnes,p
-"('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,Gcaps,0.14,7,les-alpes,50,food and drink,Val de Bagnes,p
+"('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G24,0.14,7,les-alpes,50,food and drink,Val de Bagnes,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G198,0.05,2,les-alpes,43,infrastructure,Lens,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G93,0.02,1,les-alpes,43,infrastructure,Lens,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G30,0.09,4,les-alpes,43,food and drink,Lens,p
@@ -1209,12 +1209,12 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G159,0.0,0,les-alpes,12,food and drink,Ormont-Dessus,p
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G177,0.0,0,les-alpes,12,food and drink,Ormont-Dessus,p
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G89,0.0,0,les-alpes,12,infrastructure,Ormont-Dessus,p
-"('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,Gcaps,0.0,0,les-alpes,12,food and drink,Ormont-Dessus,p
+"('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G24,0.0,0,les-alpes,12,food and drink,Ormont-Dessus,p
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G10,0.0,0,les-alpes,12,food and drink,Ormont-Dessus,p
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G66,0.0,0,les-alpes,12,infrastructure,Ormont-Dessus,p
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G117,0.0,0,les-alpes,12,micro plastics (< 5mm),Ormont-Dessus,p
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G71,0.0,0,les-alpes,12,personal items,Ormont-Dessus,p
-"('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,Gcaps,0.0,0,les-alpes,12,packaging non food,Ormont-Dessus,p
+"('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G23,0.0,0,les-alpes,12,packaging non food,Ormont-Dessus,p
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G917,0.0,0,les-alpes,12,unclassified,Ormont-Dessus,p
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G20,0.0,0,les-alpes,12,packaging non food,Ormont-Dessus,p
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G905,0.0,0,les-alpes,12,personal items,Ormont-Dessus,p
@@ -1273,7 +1273,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G98,0.0,0,les-alpes,12,waste water,Ormont-Dessus,p
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G935,0.0,0,les-alpes,12,personal items,Ormont-Dessus,p
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G135,0.0,0,les-alpes,12,personal items,Ormont-Dessus,p
-"('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,Gcaps,0.0,0,les-alpes,12,food and drink,Ormont-Dessus,p
+"('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G21,0.0,0,les-alpes,12,food and drink,Ormont-Dessus,p
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G144,0.0,0,les-alpes,12,waste water,Ormont-Dessus,p
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G154,0.0,0,les-alpes,12,personal items,Ormont-Dessus,p
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G904,0.0,0,les-alpes,12,recreation,Ormont-Dessus,p
@@ -1281,7 +1281,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G134,0.0,0,les-alpes,12,unclassified,Ormont-Dessus,p
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G70,0.0,0,les-alpes,12,recreation,Ormont-Dessus,p
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G939,0.0,0,les-alpes,12,personal items,Ormont-Dessus,p
-"('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,Gcaps,0.0,0,les-alpes,12,infrastructure,Ormont-Dessus,p
+"('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G22,0.0,0,les-alpes,12,infrastructure,Ormont-Dessus,p
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G165,0.0,0,les-alpes,12,food and drink,Ormont-Dessus,p
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G157,0.0,0,les-alpes,12,packaging non food,Ormont-Dessus,p
 "('clean-up-tour-cabanes-des-diablerets', '2021-08-28')",2021-08-28,alpes-vaudoises,cabanes-des-diablerets,G182,0.0,0,les-alpes,12,recreation,Ormont-Dessus,p
@@ -1420,12 +1420,12 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G159,0.0,0,les-alpes,80,food and drink,Calanca,p
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G177,0.0,0,les-alpes,80,food and drink,Calanca,p
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G89,0.0,0,les-alpes,80,infrastructure,Calanca,p
-"('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,Gcaps,0.0,0,les-alpes,80,food and drink,Calanca,p
+"('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G24,0.0,0,les-alpes,80,food and drink,Calanca,p
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G10,0.0,0,les-alpes,80,food and drink,Calanca,p
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G66,0.0,0,les-alpes,80,infrastructure,Calanca,p
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G117,0.0,0,les-alpes,80,micro plastics (< 5mm),Calanca,p
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G71,0.0,0,les-alpes,80,personal items,Calanca,p
-"('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,Gcaps,0.0,0,les-alpes,80,packaging non food,Calanca,p
+"('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G23,0.0,0,les-alpes,80,packaging non food,Calanca,p
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G917,0.0,0,les-alpes,80,unclassified,Calanca,p
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G20,0.0,0,les-alpes,80,packaging non food,Calanca,p
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G905,0.0,0,les-alpes,80,personal items,Calanca,p
@@ -1484,7 +1484,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G98,0.0,0,les-alpes,80,waste water,Calanca,p
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G935,0.0,0,les-alpes,80,personal items,Calanca,p
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G135,0.0,0,les-alpes,80,personal items,Calanca,p
-"('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,Gcaps,0.0,0,les-alpes,80,food and drink,Calanca,p
+"('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G21,0.0,0,les-alpes,80,food and drink,Calanca,p
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G144,0.0,0,les-alpes,80,waste water,Calanca,p
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G154,0.0,0,les-alpes,80,personal items,Calanca,p
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G904,0.0,0,les-alpes,80,recreation,Calanca,p
@@ -1492,7 +1492,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G134,0.0,0,les-alpes,80,unclassified,Calanca,p
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G70,0.0,0,les-alpes,80,recreation,Calanca,p
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G939,0.0,0,les-alpes,80,personal items,Calanca,p
-"('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,Gcaps,0.0,0,les-alpes,80,infrastructure,Calanca,p
+"('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G22,0.0,0,les-alpes,80,infrastructure,Calanca,p
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G165,0.0,0,les-alpes,80,food and drink,Calanca,p
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G157,0.0,0,les-alpes,80,packaging non food,Calanca,p
 "('clean-up-tour-val-calanca', '2021-08-07')",2021-08-07,alpes-lepontines,val-calanca,G182,0.0,0,les-alpes,80,recreation,Calanca,p
@@ -1684,7 +1684,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G98,0.0,0,les-alpes,5,waste water,Mesocco,p
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G935,0.0,0,les-alpes,5,personal items,Mesocco,p
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G135,0.0,0,les-alpes,5,personal items,Mesocco,p
-"('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,Gcaps,0.0,0,les-alpes,5,food and drink,Mesocco,p
+"('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G21,0.0,0,les-alpes,5,food and drink,Mesocco,p
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G144,0.0,0,les-alpes,5,waste water,Mesocco,p
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G154,0.0,0,les-alpes,5,personal items,Mesocco,p
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G904,0.0,0,les-alpes,5,recreation,Mesocco,p
@@ -1692,7 +1692,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G134,0.0,0,les-alpes,5,unclassified,Mesocco,p
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G70,0.0,0,les-alpes,5,recreation,Mesocco,p
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G939,0.0,0,les-alpes,5,personal items,Mesocco,p
-"('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,Gcaps,0.0,0,les-alpes,5,infrastructure,Mesocco,p
+"('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G22,0.0,0,les-alpes,5,infrastructure,Mesocco,p
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G165,0.0,0,les-alpes,5,food and drink,Mesocco,p
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G157,0.0,0,les-alpes,5,packaging non food,Mesocco,p
 "('clean-up-tour-san-bernardino', '2021-08-06')",2021-08-06,alpes-lepontines,san-bernardino,G182,0.0,0,les-alpes,5,recreation,Mesocco,p
@@ -1834,11 +1834,11 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G95,0.0,0,les-alpes,38,waste water,Airolo,p
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G159,0.0,0,les-alpes,38,food and drink,Airolo,p
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G89,0.0,0,les-alpes,38,infrastructure,Airolo,p
-"('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,Gcaps,0.0,0,les-alpes,38,food and drink,Airolo,p
+"('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G24,0.0,0,les-alpes,38,food and drink,Airolo,p
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G66,0.0,0,les-alpes,38,infrastructure,Airolo,p
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G117,0.0,0,les-alpes,38,micro plastics (< 5mm),Airolo,p
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G71,0.0,0,les-alpes,38,personal items,Airolo,p
-"('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,Gcaps,0.0,0,les-alpes,38,packaging non food,Airolo,p
+"('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G23,0.0,0,les-alpes,38,packaging non food,Airolo,p
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G917,0.0,0,les-alpes,38,unclassified,Airolo,p
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G208,0.0,0,les-alpes,38,unclassified,Airolo,p
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G931,0.0,0,les-alpes,38,infrastructure,Airolo,p
@@ -1878,7 +1878,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G98,0.0,0,les-alpes,38,waste water,Airolo,p
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G935,0.0,0,les-alpes,38,personal items,Airolo,p
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G135,0.0,0,les-alpes,38,personal items,Airolo,p
-"('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,Gcaps,0.0,0,les-alpes,38,food and drink,Airolo,p
+"('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G21,0.0,0,les-alpes,38,food and drink,Airolo,p
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G144,0.0,0,les-alpes,38,waste water,Airolo,p
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G154,0.0,0,les-alpes,38,personal items,Airolo,p
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G904,0.0,0,les-alpes,38,recreation,Airolo,p
@@ -1886,7 +1886,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G134,0.0,0,les-alpes,38,unclassified,Airolo,p
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G70,0.0,0,les-alpes,38,recreation,Airolo,p
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G939,0.0,0,les-alpes,38,personal items,Airolo,p
-"('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,Gcaps,0.0,0,les-alpes,38,infrastructure,Airolo,p
+"('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G22,0.0,0,les-alpes,38,infrastructure,Airolo,p
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G165,0.0,0,les-alpes,38,food and drink,Airolo,p
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G157,0.0,0,les-alpes,38,packaging non food,Airolo,p
 "('clean-up-tour-airolo', '2021-08-05')",2021-08-05,alpes-lepontines,airolo,G182,0.0,0,les-alpes,38,recreation,Airolo,p
@@ -2037,7 +2037,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G66,0.0,0,les-alpes,64,infrastructure,Nendaz,p
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G117,0.0,0,les-alpes,64,micro plastics (< 5mm),Nendaz,p
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G71,0.0,0,les-alpes,64,personal items,Nendaz,p
-"('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,Gcaps,0.0,0,les-alpes,64,packaging non food,Nendaz,p
+"('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G23,0.0,0,les-alpes,64,packaging non food,Nendaz,p
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G917,0.0,0,les-alpes,64,unclassified,Nendaz,p
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G20,0.0,0,les-alpes,64,packaging non food,Nendaz,p
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G905,0.0,0,les-alpes,64,personal items,Nendaz,p
@@ -2084,7 +2084,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G98,0.0,0,les-alpes,64,waste water,Nendaz,p
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G935,0.0,0,les-alpes,64,personal items,Nendaz,p
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G135,0.0,0,les-alpes,64,personal items,Nendaz,p
-"('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,Gcaps,0.0,0,les-alpes,64,food and drink,Nendaz,p
+"('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G21,0.0,0,les-alpes,64,food and drink,Nendaz,p
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G144,0.0,0,les-alpes,64,waste water,Nendaz,p
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G154,0.0,0,les-alpes,64,personal items,Nendaz,p
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G904,0.0,0,les-alpes,64,recreation,Nendaz,p
@@ -2092,7 +2092,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G134,0.0,0,les-alpes,64,unclassified,Nendaz,p
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G70,0.0,0,les-alpes,64,recreation,Nendaz,p
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G939,0.0,0,les-alpes,64,personal items,Nendaz,p
-"('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,Gcaps,0.0,0,les-alpes,64,infrastructure,Nendaz,p
+"('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G22,0.0,0,les-alpes,64,infrastructure,Nendaz,p
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G165,0.0,0,les-alpes,64,food and drink,Nendaz,p
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G157,0.0,0,les-alpes,64,packaging non food,Nendaz,p
 "('clean-up-tour-nendaz', '2021-07-04')",2021-07-04,alpes-valaisannes,nendaz,G182,0.0,0,les-alpes,64,recreation,Nendaz,p
@@ -2241,7 +2241,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G66,0.0,0,les-alpes,12,infrastructure,Nendaz,p
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G117,0.0,0,les-alpes,12,micro plastics (< 5mm),Nendaz,p
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G71,0.0,0,les-alpes,12,personal items,Nendaz,p
-"('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,Gcaps,0.0,0,les-alpes,12,packaging non food,Nendaz,p
+"('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G23,0.0,0,les-alpes,12,packaging non food,Nendaz,p
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G917,0.0,0,les-alpes,12,unclassified,Nendaz,p
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G926,0.0,0,les-alpes,12,food and drink,Nendaz,p
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G128,0.0,0,les-alpes,12,unclassified,Nendaz,p
@@ -2285,7 +2285,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G98,0.0,0,les-alpes,12,waste water,Nendaz,p
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G935,0.0,0,les-alpes,12,personal items,Nendaz,p
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G135,0.0,0,les-alpes,12,personal items,Nendaz,p
-"('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,Gcaps,0.0,0,les-alpes,12,food and drink,Nendaz,p
+"('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G21,0.0,0,les-alpes,12,food and drink,Nendaz,p
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G144,0.0,0,les-alpes,12,waste water,Nendaz,p
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G154,0.0,0,les-alpes,12,personal items,Nendaz,p
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G904,0.0,0,les-alpes,12,recreation,Nendaz,p
@@ -2293,7 +2293,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G134,0.0,0,les-alpes,12,unclassified,Nendaz,p
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G70,0.0,0,les-alpes,12,recreation,Nendaz,p
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G939,0.0,0,les-alpes,12,personal items,Nendaz,p
-"('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,Gcaps,0.0,0,les-alpes,12,infrastructure,Nendaz,p
+"('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G22,0.0,0,les-alpes,12,infrastructure,Nendaz,p
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G165,0.0,0,les-alpes,12,food and drink,Nendaz,p
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G157,0.0,0,les-alpes,12,packaging non food,Nendaz,p
 "('clean-up-tour-veysonnaz', '2021-07-03')",2021-07-03,alpes-valaisannes,veysonnaz,G182,0.0,0,les-alpes,12,recreation,Nendaz,p
@@ -2442,12 +2442,12 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G159,0.0,0,les-alpes,100,food and drink,Andermatt,p
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G177,0.0,0,les-alpes,100,food and drink,Andermatt,p
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G89,0.0,0,les-alpes,100,infrastructure,Andermatt,p
-"('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,Gcaps,0.0,0,les-alpes,100,food and drink,Andermatt,p
+"('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G24,0.0,0,les-alpes,100,food and drink,Andermatt,p
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G10,0.0,0,les-alpes,100,food and drink,Andermatt,p
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G66,0.0,0,les-alpes,100,infrastructure,Andermatt,p
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G117,0.0,0,les-alpes,100,micro plastics (< 5mm),Andermatt,p
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G71,0.0,0,les-alpes,100,personal items,Andermatt,p
-"('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,Gcaps,0.0,0,les-alpes,100,packaging non food,Andermatt,p
+"('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G23,0.0,0,les-alpes,100,packaging non food,Andermatt,p
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G917,0.0,0,les-alpes,100,unclassified,Andermatt,p
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G20,0.0,0,les-alpes,100,packaging non food,Andermatt,p
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G905,0.0,0,les-alpes,100,personal items,Andermatt,p
@@ -2500,7 +2500,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G98,0.0,0,les-alpes,100,waste water,Andermatt,p
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G935,0.0,0,les-alpes,100,personal items,Andermatt,p
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G135,0.0,0,les-alpes,100,personal items,Andermatt,p
-"('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,Gcaps,0.0,0,les-alpes,100,food and drink,Andermatt,p
+"('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G21,0.0,0,les-alpes,100,food and drink,Andermatt,p
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G144,0.0,0,les-alpes,100,waste water,Andermatt,p
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G154,0.0,0,les-alpes,100,personal items,Andermatt,p
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G904,0.0,0,les-alpes,100,recreation,Andermatt,p
@@ -2508,7 +2508,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G134,0.0,0,les-alpes,100,unclassified,Andermatt,p
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G70,0.0,0,les-alpes,100,recreation,Andermatt,p
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G939,0.0,0,les-alpes,100,personal items,Andermatt,p
-"('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,Gcaps,0.0,0,les-alpes,100,infrastructure,Andermatt,p
+"('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G22,0.0,0,les-alpes,100,infrastructure,Andermatt,p
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G165,0.0,0,les-alpes,100,food and drink,Andermatt,p
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G157,0.0,0,les-alpes,100,packaging non food,Andermatt,p
 "('clean-up-tour-andermatt', '2021-06-19')",2021-06-19,alpes-uranaises,andermatt,G182,0.0,0,les-alpes,100,recreation,Andermatt,p
@@ -2662,7 +2662,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G66,0.0,0,les-alpes,50,infrastructure,Val de Bagnes,p
 "('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G117,0.0,0,les-alpes,50,micro plastics (< 5mm),Val de Bagnes,p
 "('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G71,0.0,0,les-alpes,50,personal items,Val de Bagnes,p
-"('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,Gcaps,0.0,0,les-alpes,50,packaging non food,Val de Bagnes,p
+"('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G23,0.0,0,les-alpes,50,packaging non food,Val de Bagnes,p
 "('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G917,0.0,0,les-alpes,50,unclassified,Val de Bagnes,p
 "('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G905,0.0,0,les-alpes,50,personal items,Val de Bagnes,p
 "('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G926,0.0,0,les-alpes,50,food and drink,Val de Bagnes,p
@@ -2709,7 +2709,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G98,0.0,0,les-alpes,50,waste water,Val de Bagnes,p
 "('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G935,0.0,0,les-alpes,50,personal items,Val de Bagnes,p
 "('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G135,0.0,0,les-alpes,50,personal items,Val de Bagnes,p
-"('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,Gcaps,0.0,0,les-alpes,50,food and drink,Val de Bagnes,p
+"('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G21,0.0,0,les-alpes,50,food and drink,Val de Bagnes,p
 "('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G144,0.0,0,les-alpes,50,waste water,Val de Bagnes,p
 "('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G154,0.0,0,les-alpes,50,personal items,Val de Bagnes,p
 "('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G904,0.0,0,les-alpes,50,recreation,Val de Bagnes,p
@@ -2717,7 +2717,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G134,0.0,0,les-alpes,50,unclassified,Val de Bagnes,p
 "('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G70,0.0,0,les-alpes,50,recreation,Val de Bagnes,p
 "('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G939,0.0,0,les-alpes,50,personal items,Val de Bagnes,p
-"('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,Gcaps,0.0,0,les-alpes,50,infrastructure,Val de Bagnes,p
+"('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G22,0.0,0,les-alpes,50,infrastructure,Val de Bagnes,p
 "('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G165,0.0,0,les-alpes,50,food and drink,Val de Bagnes,p
 "('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G157,0.0,0,les-alpes,50,packaging non food,Val de Bagnes,p
 "('clean-up-tour-verbier', '2021-06-13')",2021-06-13,alpes-valaisannes,verbier,G182,0.0,0,les-alpes,50,recreation,Val de Bagnes,p
@@ -2864,12 +2864,12 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G95,0.0,0,les-alpes,43,waste water,Lens,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G177,0.0,0,les-alpes,43,food and drink,Lens,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G89,0.0,0,les-alpes,43,infrastructure,Lens,p
-"('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,Gcaps,0.0,0,les-alpes,43,food and drink,Lens,p
+"('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G24,0.0,0,les-alpes,43,food and drink,Lens,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G10,0.0,0,les-alpes,43,food and drink,Lens,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G66,0.0,0,les-alpes,43,infrastructure,Lens,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G117,0.0,0,les-alpes,43,micro plastics (< 5mm),Lens,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G71,0.0,0,les-alpes,43,personal items,Lens,p
-"('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,Gcaps,0.0,0,les-alpes,43,packaging non food,Lens,p
+"('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G23,0.0,0,les-alpes,43,packaging non food,Lens,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G917,0.0,0,les-alpes,43,unclassified,Lens,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G20,0.0,0,les-alpes,43,packaging non food,Lens,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G926,0.0,0,les-alpes,43,food and drink,Lens,p
@@ -2913,7 +2913,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G98,0.0,0,les-alpes,43,waste water,Lens,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G935,0.0,0,les-alpes,43,personal items,Lens,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G135,0.0,0,les-alpes,43,personal items,Lens,p
-"('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,Gcaps,0.0,0,les-alpes,43,food and drink,Lens,p
+"('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G21,0.0,0,les-alpes,43,food and drink,Lens,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G144,0.0,0,les-alpes,43,waste water,Lens,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G154,0.0,0,les-alpes,43,personal items,Lens,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G904,0.0,0,les-alpes,43,recreation,Lens,p
@@ -2921,7 +2921,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G134,0.0,0,les-alpes,43,unclassified,Lens,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G70,0.0,0,les-alpes,43,recreation,Lens,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G939,0.0,0,les-alpes,43,personal items,Lens,p
-"('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,Gcaps,0.0,0,les-alpes,43,infrastructure,Lens,p
+"('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G22,0.0,0,les-alpes,43,infrastructure,Lens,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G165,0.0,0,les-alpes,43,food and drink,Lens,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G157,0.0,0,les-alpes,43,packaging non food,Lens,p
 "('clean-up-tour-crans-montana', '2021-06-12')",2021-06-12,alpes-valaisannes,crans-montana,G182,0.0,0,les-alpes,43,recreation,Lens,p
@@ -3067,12 +3067,12 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G95,0.0,0,les-alpes,110,waste water,Ollon,p
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G159,0.0,0,les-alpes,110,food and drink,Ollon,p
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G89,0.0,0,les-alpes,110,infrastructure,Ollon,p
-"('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,Gcaps,0.0,0,les-alpes,110,food and drink,Ollon,p
+"('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G24,0.0,0,les-alpes,110,food and drink,Ollon,p
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G10,0.0,0,les-alpes,110,food and drink,Ollon,p
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G66,0.0,0,les-alpes,110,infrastructure,Ollon,p
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G117,0.0,0,les-alpes,110,micro plastics (< 5mm),Ollon,p
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G71,0.0,0,les-alpes,110,personal items,Ollon,p
-"('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,Gcaps,0.0,0,les-alpes,110,packaging non food,Ollon,p
+"('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G23,0.0,0,les-alpes,110,packaging non food,Ollon,p
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G917,0.0,0,les-alpes,110,unclassified,Ollon,p
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G20,0.0,0,les-alpes,110,packaging non food,Ollon,p
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G128,0.0,0,les-alpes,110,unclassified,Ollon,p
@@ -3114,7 +3114,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G98,0.0,0,les-alpes,110,waste water,Ollon,p
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G935,0.0,0,les-alpes,110,personal items,Ollon,p
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G135,0.0,0,les-alpes,110,personal items,Ollon,p
-"('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,Gcaps,0.0,0,les-alpes,110,food and drink,Ollon,p
+"('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G21,0.0,0,les-alpes,110,food and drink,Ollon,p
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G144,0.0,0,les-alpes,110,waste water,Ollon,p
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G154,0.0,0,les-alpes,110,personal items,Ollon,p
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G904,0.0,0,les-alpes,110,recreation,Ollon,p
@@ -3122,7 +3122,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G134,0.0,0,les-alpes,110,unclassified,Ollon,p
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G70,0.0,0,les-alpes,110,recreation,Ollon,p
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G939,0.0,0,les-alpes,110,personal items,Ollon,p
-"('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,Gcaps,0.0,0,les-alpes,110,infrastructure,Ollon,p
+"('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G22,0.0,0,les-alpes,110,infrastructure,Ollon,p
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G165,0.0,0,les-alpes,110,food and drink,Ollon,p
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G157,0.0,0,les-alpes,110,packaging non food,Ollon,p
 "('clean-up-tour-villars', '2021-06-12')",2021-06-12,alpes-vaudoises,villars,G182,0.0,0,les-alpes,110,recreation,Ollon,p
@@ -3270,12 +3270,12 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G159,0.0,0,les-alpes,94,food and drink,Val-d'Illiez,p
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G177,0.0,0,les-alpes,94,food and drink,Val-d'Illiez,p
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G89,0.0,0,les-alpes,94,infrastructure,Val-d'Illiez,p
-"('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,Gcaps,0.0,0,les-alpes,94,food and drink,Val-d'Illiez,p
+"('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G24,0.0,0,les-alpes,94,food and drink,Val-d'Illiez,p
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G10,0.0,0,les-alpes,94,food and drink,Val-d'Illiez,p
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G66,0.0,0,les-alpes,94,infrastructure,Val-d'Illiez,p
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G117,0.0,0,les-alpes,94,micro plastics (< 5mm),Val-d'Illiez,p
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G71,0.0,0,les-alpes,94,personal items,Val-d'Illiez,p
-"('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,Gcaps,0.0,0,les-alpes,94,packaging non food,Val-d'Illiez,p
+"('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G23,0.0,0,les-alpes,94,packaging non food,Val-d'Illiez,p
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G917,0.0,0,les-alpes,94,unclassified,Val-d'Illiez,p
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G20,0.0,0,les-alpes,94,packaging non food,Val-d'Illiez,p
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G926,0.0,0,les-alpes,94,food and drink,Val-d'Illiez,p
@@ -3321,7 +3321,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G98,0.0,0,les-alpes,94,waste water,Val-d'Illiez,p
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G935,0.0,0,les-alpes,94,personal items,Val-d'Illiez,p
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G135,0.0,0,les-alpes,94,personal items,Val-d'Illiez,p
-"('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,Gcaps,0.0,0,les-alpes,94,food and drink,Val-d'Illiez,p
+"('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G21,0.0,0,les-alpes,94,food and drink,Val-d'Illiez,p
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G144,0.0,0,les-alpes,94,waste water,Val-d'Illiez,p
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G154,0.0,0,les-alpes,94,personal items,Val-d'Illiez,p
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G904,0.0,0,les-alpes,94,recreation,Val-d'Illiez,p
@@ -3329,7 +3329,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G134,0.0,0,les-alpes,94,unclassified,Val-d'Illiez,p
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G70,0.0,0,les-alpes,94,recreation,Val-d'Illiez,p
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G939,0.0,0,les-alpes,94,personal items,Val-d'Illiez,p
-"('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,Gcaps,0.0,0,les-alpes,94,infrastructure,Val-d'Illiez,p
+"('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G22,0.0,0,les-alpes,94,infrastructure,Val-d'Illiez,p
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G165,0.0,0,les-alpes,94,food and drink,Val-d'Illiez,p
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G157,0.0,0,les-alpes,94,packaging non food,Val-d'Illiez,p
 "('clean-up-tour-les-crosets', '2021-06-06')",2021-06-06,alpes-valaisannes,les-crosets,G182,0.0,0,les-alpes,94,recreation,Val-d'Illiez,p
@@ -3475,12 +3475,12 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G95,0.0,0,les-alpes,75,waste water,Troistorrents,p
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G159,0.0,0,les-alpes,75,food and drink,Troistorrents,p
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G89,0.0,0,les-alpes,75,infrastructure,Troistorrents,p
-"('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,Gcaps,0.0,0,les-alpes,75,food and drink,Troistorrents,p
+"('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G24,0.0,0,les-alpes,75,food and drink,Troistorrents,p
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G10,0.0,0,les-alpes,75,food and drink,Troistorrents,p
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G66,0.0,0,les-alpes,75,infrastructure,Troistorrents,p
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G117,0.0,0,les-alpes,75,micro plastics (< 5mm),Troistorrents,p
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G71,0.0,0,les-alpes,75,personal items,Troistorrents,p
-"('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,Gcaps,0.0,0,les-alpes,75,packaging non food,Troistorrents,p
+"('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G23,0.0,0,les-alpes,75,packaging non food,Troistorrents,p
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G917,0.0,0,les-alpes,75,unclassified,Troistorrents,p
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G926,0.0,0,les-alpes,75,food and drink,Troistorrents,p
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G128,0.0,0,les-alpes,75,unclassified,Troistorrents,p
@@ -3525,7 +3525,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G98,0.0,0,les-alpes,75,waste water,Troistorrents,p
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G935,0.0,0,les-alpes,75,personal items,Troistorrents,p
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G135,0.0,0,les-alpes,75,personal items,Troistorrents,p
-"('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,Gcaps,0.0,0,les-alpes,75,food and drink,Troistorrents,p
+"('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G21,0.0,0,les-alpes,75,food and drink,Troistorrents,p
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G144,0.0,0,les-alpes,75,waste water,Troistorrents,p
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G154,0.0,0,les-alpes,75,personal items,Troistorrents,p
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G904,0.0,0,les-alpes,75,recreation,Troistorrents,p
@@ -3533,7 +3533,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G134,0.0,0,les-alpes,75,unclassified,Troistorrents,p
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G70,0.0,0,les-alpes,75,recreation,Troistorrents,p
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G939,0.0,0,les-alpes,75,personal items,Troistorrents,p
-"('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,Gcaps,0.0,0,les-alpes,75,infrastructure,Troistorrents,p
+"('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G22,0.0,0,les-alpes,75,infrastructure,Troistorrents,p
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G165,0.0,0,les-alpes,75,food and drink,Troistorrents,p
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G157,0.0,0,les-alpes,75,packaging non food,Troistorrents,p
 "('clean-up-tour-morgins', '2021-06-05')",2021-06-05,alpes-valaisannes,morgins,G182,0.0,0,les-alpes,75,recreation,Troistorrents,p
@@ -3682,12 +3682,12 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G95,0.0,0,les-alpes,60,waste water,La Roche,p
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G159,0.0,0,les-alpes,60,food and drink,La Roche,p
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G89,0.0,0,les-alpes,60,infrastructure,La Roche,p
-"('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,Gcaps,0.0,0,les-alpes,60,food and drink,La Roche,p
+"('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G24,0.0,0,les-alpes,60,food and drink,La Roche,p
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G10,0.0,0,les-alpes,60,food and drink,La Roche,p
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G66,0.0,0,les-alpes,60,infrastructure,La Roche,p
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G117,0.0,0,les-alpes,60,micro plastics (< 5mm),La Roche,p
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G71,0.0,0,les-alpes,60,personal items,La Roche,p
-"('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,Gcaps,0.0,0,les-alpes,60,packaging non food,La Roche,p
+"('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G23,0.0,0,les-alpes,60,packaging non food,La Roche,p
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G917,0.0,0,les-alpes,60,unclassified,La Roche,p
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G20,0.0,0,les-alpes,60,packaging non food,La Roche,p
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G905,0.0,0,les-alpes,60,personal items,La Roche,p
@@ -3741,7 +3741,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G98,0.0,0,les-alpes,60,waste water,La Roche,p
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G935,0.0,0,les-alpes,60,personal items,La Roche,p
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G135,0.0,0,les-alpes,60,personal items,La Roche,p
-"('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,Gcaps,0.0,0,les-alpes,60,food and drink,La Roche,p
+"('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G21,0.0,0,les-alpes,60,food and drink,La Roche,p
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G144,0.0,0,les-alpes,60,waste water,La Roche,p
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G154,0.0,0,les-alpes,60,personal items,La Roche,p
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G904,0.0,0,les-alpes,60,recreation,La Roche,p
@@ -3749,7 +3749,7 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G134,0.0,0,les-alpes,60,unclassified,La Roche,p
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G70,0.0,0,les-alpes,60,recreation,La Roche,p
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G939,0.0,0,les-alpes,60,personal items,La Roche,p
-"('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,Gcaps,0.0,0,les-alpes,60,infrastructure,La Roche,p
+"('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G22,0.0,0,les-alpes,60,infrastructure,La Roche,p
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G165,0.0,0,les-alpes,60,food and drink,La Roche,p
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G157,0.0,0,les-alpes,60,packaging non food,La Roche,p
 "('clean-up-tour-la-berra', '2021-06-05')",2021-06-05,prealpes-fribourgeoises,la-berra,G182,0.0,0,les-alpes,60,recreation,La Roche,p
