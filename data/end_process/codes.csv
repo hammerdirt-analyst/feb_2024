@@ -1,4 +1,4 @@
-code,material,en,source,parent_code,single_use,groupname,fr,de
+code,material,en.1,source,parent_code,single_use,groupname,fr,de
 G708,metal,Batons de ski,Usagers,G199,False,recreation,Batons de ski,Skistöcke
 G712,cloth,Gants de ski,Usagers,G135,False,recreation,Gants de ski,Skihandschuhe
 G902,cloth,"Mask medical, cloth",Personal hygiene,G145,False,personal items,"Masque médical, tissu réutilisable","Medizinische Masken, Stoff"
@@ -17,7 +17,7 @@ G23,plastic,Lids unidentified,Packaging,Gcaps,False,packaging non food,Couvercle
 G24,plastic,Lid/cap rings from plastic bottles/containers,Packaging,Gcaps,True,food and drink,Anneaux de fermeture de récipients en plastique,Ringe von Plastikflaschen/Behältern
 G700,plastic,The results from a clean up event,undefined,G700,True,unclassified,Les résultats d'un événement,Die Ergebnisse einer Aufräumaktion
 G703,plastic,piquet de ballisage,domaine skiable,G124,False,infrastructure,Piquet de ballisage en plastique,Pistenmarkierungspfosten (Plastik)
-G704,plastic,Brosse de télésiège,Domaine skiable,G124,True,infrastructure,Brosse de télésiège,description
+G704,plastic,Brosse de télésiège,Domaine skiable,G124,True,infrastructure,Brosse de télésiège,seilbahnbürsten
 G706,plastic,Abonnement de ski,Usagers,G124,False,recreation,Abonnement de ski,Skiabonnement
 G707,plastic,étiquette d’équipement de ski,Usagers,G124,False,recreation,"Déchets divers (bois travaillé, pièces métalliques)",Skiausrüstungsetikett
 G709,plastic,"Batons de ski parties (rondelles, attaches)",Usagers,G124,False,recreation,"Batons de ski parties (rondelles, attaches)",Teller von Skistock (runder Teil aus Plastik unten am Skistock)
@@ -34,7 +34,7 @@ G82,plastic,Foam polystyrene  2.5 - 50cm,Undefined,Gfoams,False,infrastructure,"
 G83,plastic,Polystyrene pieces > 50cm,Undefined,Gfoams,False,infrastructure,Pièces en polystyrène > 50cm,Objekte aus expandiertem Polystyrol > 50 cm
 G901,plastic,"Mask medical, synthetic",Personal hygiene,G124,True,personal items,"Masque médical, synthétique","Medizinische Masken, synthetische"
 G903,plastic,Hand sanitizer containers & packets,Personal hygiene,G12,True,personal items,Récipients et sachets de désinfectant pour les mains,Behälter und Packungen für Handdesinfektionsmittel
-G904,plastic,"Fireworks; rocket caps, exploded parts & packaging",Recreation,G124,True,recreation,"Feux d'artifice; capsules de fusées, pièces explosées",description
+G904,plastic,"Fireworks; rocket caps, exploded parts & packaging",Recreation,G124,True,recreation,"Feux d'artifice; capsules de fusées, pièces explosées",Feuerwerkskörper; Raketenkappen
 G905,plastic,"Hair clip,  hair ties, personal accessories plastic",Personal hygiene,G124,False,personal items,"Pince à cheveux, accessoires personnels","Haarspangen, Haargummis, persönliche Accessoires aus Kunststoff"
 G907,plastic,coffee capsules plastic,Undefined,G124,True,food and drink,Capsules de café en plastique,Kaffeekapseln aus Kunststoff
 G908,plastic,"Tape; electrical, insulating",Construction,G124,False,infrastructure,"Ruban ; électrique, isolant","Klebeband; elektrisch, isolierend"
@@ -56,8 +56,8 @@ G936,plastic,Sheeting ag. greenhouse film,Agriculture,G67,False,agriculture,Film
 G937,plastic,Pheromone baits for vineyards,Agriculture,G124,False,agriculture,Appâts à phéromones pour les vignobles,Pheromonköder für Weinberge
 G938,plastic,"Toothpicks, dental floss plastic",Personal hygiene,G124,True,food and drink,"Cure-dents, fil dentaire en plastique","Zahnstocher, Zahnseide Kunststoff"
 G939,plastic,"Flowers, plants plastic",Undefined,G124,False,personal items,"Fleurs, plantes en plastique","Kunststoffblumen, Kunststoffpflanzen"
-G940,plastic,Foamed EVA (flexible plastic) for crafts & watersports,Recreation,G73,False,recreation,Mousse EVA pour les sports nautiques,description
-G941,plastic,Packaging films nonfood or unknown,Packaging,G124,True,packaging non food,Emballage plastique non alimentaire,description
+G940,plastic,Foamed EVA (flexible plastic) for crafts & watersports,Recreation,G73,False,recreation,Mousse EVA pour les sports nautiques,Schaumstoff EVA (flexibler Kunststoff)
+G941,plastic,Packaging films nonfood or unknown,Packaging,G124,True,packaging non food,Emballage plastique non alimentaire,"Verpackungsfolien, nicht für Lebensmittel"
 G942,plastic,"Plastic shavings from lathes, CNC machining",Industry,G124,False,unclassified,Copeaux de plastique provenant de l'usinage,"Kunststoffspäne von Drehbänken, CNC-Bearbeitung"
 G943,plastic,"Fencing agriculture, plastic",Agriculture,G124,False,agriculture,"Clôturer l'agriculture, plastique","Zäune Landwirtschaft, Kunststoff"
 G944,plastic,Pellet mass from injection molding,Industry,G112,True,unclassified,Masse de granulés provenant du moulage par injection,Pelletmasse aus dem Spritzgussverfahren
@@ -93,7 +93,7 @@ G174,metal,Aerosol spray cans,Packaging,G174,False,infrastructure,Bombes aéroso
 G175,metal,"Cans, beverage",Packaging,G175,True,food and drink,"Boîtes de conserve, boissons","Getränkedosen (Dosen, Getränke)"
 G176,metal,"Cans, food",Packaging,G176,True,food and drink,Boîtes de conserve,Konservendosen (Lebensmitteldosen)
 G177,metal,"Foil wrappers, aluminum foil",Packaging,G177,False,food and drink,Papier d'emballage d'aluminium,Verpackungen aus Aluminiumfolie
-G178,metal,"Metal bottle caps, lids & pull tabs from cans",Packaging,G178,True,food and drink,"Bouchons de bouteilles en métal, couvercles et tirettes",description
+G178,metal,"Metal bottle caps, lids & pull tabs from cans",Packaging,G178,True,food and drink,"Bouchons de bouteilles en métal, couvercles et tirettes","Kronkorken, Lasche von Dose/Ausfreisslachen"
 G179,metal,Disposable BBQs,Recreation,G179,False,food and drink,Barbecues jetables,Einweg Grill
 G180,metal,Appliances,Utility items,G180,False,unclassified,Appareils ménagers,Haushaltsgeräte
 G181,metal,"Tableware metal;  cups, cutlery etc.",Food,G181,False,food and drink,"Vaisselle en métal; tasses, couverts","Geschirr aus Metall, Tassen, Besteck usw."
@@ -156,7 +156,7 @@ G120,plastic,Threadlike user plastic ( >1mm),Undefined,G120,False,micro plastics
 G121,plastic,Foamed user plastic ( >1mm),Undefined,G121,False,micro plastics (< 5mm),Plastique utilisateur moussé ( >1mm),Geschäumter Kunststoff ( >1mm)
 G122,plastic,Plastic fragments ( >1mm),Undefined,G122,False,micro plastics (< 5mm),Fragments de plastique ( >1mm),Kunststofffragmente (>1mm)
 G123,plastic,Polyurethane granules < 5mm,Industry,G123,False,micro plastics (< 5mm),Granulés de polyuréthane < 5mm,Polyurethan-Granulat < 5mm
-G124,plastic,Other plastic or foam products,Undefined,G124,False,unclassified,Autres produits en plastique ou en mousse,description
+G124,plastic,Other plastic or foam products,Undefined,G124,False,unclassified,Autres produits en plastique ou en mousse,Andere Kunststoff
 G13,plastic,"Bottles, containers, drums to transport, store material",Packaging,G13,False,agriculture,"Bouteilles, conteneurs, fûts pour le transport, le stockage","Flaschen, Behälter, Fässer zum Transportieren und Lagern von Material"
 G14,plastic,Engine oil bottles,Packaging,G14,False,unclassified,Bouteilles d'huile moteur,Flaschen für Motoröl (Motorölflaschen)
 G15,plastic,Engine oil bottles > 50cm,Packaging,G15,False,unclassified,Bouteilles d'huile moteur > 50cm,"Flaschen für Motoröl, Motorölflaschen > 50cm"
@@ -166,17 +166,17 @@ G18,plastic,Crates/baskets,Packaging,G18,False,agriculture,Caisses/paniers,Kiste
 G19,plastic,Car parts,Vehicle,G19,False,unclassified,Pièces détachées pour voitures,Autoteile
 G2,plastic,Bags,Packaging,G2,True,packaging non food,Sacs,"Säcke, Taschen"
 G20,plastic,Caps and lids,Packaging,G20,True,packaging non food,Capsules et couvercles,Laschen und Deckel
-G211,plastic,"Other medical (swabs, bandaging, adhesive plaster)",Medical,G211,True,personal items,"Autres articles médicaux: compresses, pansements",description
+G211,plastic,"Other medical (swabs, bandaging, adhesive plaster)",Medical,G211,True,personal items,"Autres articles médicaux: compresses, pansements",Sonstiges medizinisches Material
 G25,plastic,"Tobacco; plastic packaging, containers",Tobacco,G25,True,tobacco,Tabac emballages en plastique,"Tabak; Kunststoffverpackungen, Behälter"
 G26,plastic,Cigarette lighters,Tobacco,G26,False,tobacco,Allume-cigarettes,Feuerzeug
 G27,plastic,Cigarette filters,Tobacco,G27,True,tobacco,Mégots et filtres à cigarettes,Zigarettenfilter
 G28,plastic,"Pens, lids, mechanical pencils etc.",Utility items,G28,False,personal items,"Stylos, couvercles, porte-mines","Stifte, Deckel, Druckbleistifte usw."
 G29,plastic,"Combs, brushes and sunglasses",Utility items,G29,False,personal items,"Peignes, brosses et lunettes de soleil","Kämme, Bürsten und Sonnenbrillen"
-G3,plastic,Bags; plastic shopping/carrier/grocery and pieces,Packaging,G3,True,packaging non food,Sacs en plastique pour achats et pièces,description
-G30,plastic,"Food wrappers; candy, snacks",Packaging,G30,True,food and drink,"Emballages de bonbons, de snacks",description
-G31,plastic,Lollypop sticks,Packaging,G31,True,food and drink,Bâtonnets de sucette,description
+G3,plastic,Bags; plastic shopping/carrier/grocery and pieces,Packaging,G3,True,packaging non food,Sacs en plastique pour achats et pièces,"Einkaufstaschen, Shoppingtaschen"
+G30,plastic,"Food wrappers; candy, snacks",Packaging,G30,True,food and drink,"Emballages de bonbons, de snacks",Snack-Verpackungen
+G31,plastic,Lollypop sticks,Packaging,G31,True,food and drink,Bâtonnets de sucette,"Schleckstengel, Stengel von Lutscher"
 G32,plastic,Toys and party favors,Recreation,G32,False,recreation,Jouets et faveurs de fête,Spielzeug und Partyartikel
-G33,plastic,"Cups, lids, single use foamed and hard plastic",Packaging,G33,True,food and drink,"Gobelets, couvercles, mousse à usage unique et plastique dur",description
+G33,plastic,"Cups, lids, single use foamed and hard plastic",Packaging,G33,True,food and drink,"Gobelets, couvercles, mousse à usage unique et plastique dur",Einwegartikel; Tassen/Becher & Deckel
 G34,plastic,"Cutlery, plates and trays",Food,G34,True,food and drink,"Couverts, assiettes et plateaux palstique","Besteck, Teller und Tabletts"
 G35,plastic,Straws and stirrers,Food,G35,True,food and drink,Pailles et agitateurs,Strohhalme und Rührstäbchen
 G36,plastic,"Bags/sacks heavy duty plastic for 25 Kg or more; animal feed, fertilizers, garden trash etc.",Packaging,G36,True,agriculture,Sacs/sacs en plastique résistant pour 25 kg ou plus,"Säcke aus strapazierfähigem Kunststoff für 25 kg oder mehr; Tierfutter, Dünger, Gartenabfälle usw."
@@ -221,13 +221,13 @@ G70,plastic,Shotgun cartridges,Hunting,G70,False,recreation,Cartouches de fusil 
 G71,plastic,Shoes sandals,Clothing,G71,False,personal items,Chaussures sandales,Schuhe Sandalen
 G72,plastic,Traffic cones,Utility items,G72,False,infrastructure,Cônes de signalisation,Verkehrskegel
 G73,plastic,Foamed items & pieces (non packaging/insulation) foamed sponge material,Recreation,G73,False,recreation,Articles et pièces en mousse (pas d'emballage),Gegenstände aus Schaumstoff & Teilstücke (nicht Verpackung/Isolierung) schwammartige Gegenstände
-G74,plastic,Foam packaging/insulation/polyurethane,Undefined,G74,False,infrastructure,Mousse de plastique pour l'isolation thermique,description
-G77,plastic,Plastic or polystyrene  > 50cm,Undefined,G77,False,plastic pieces,Plastique ou polystyrène > 50cm,Kunststoff oder Styropor > 50cm
+G74,plastic,Foam packaging/insulation/polyurethane,Undefined,G74,False,infrastructure,Mousse de plastique pour l'isolation thermique,Schaumstoffverpackungen/Isolierung
+G77,plastic,Plastic or polystyrene  > 50cm,Undefined,Gfrags,False,plastic pieces,Plastique ou polystyrène > 50cm,Kunststoff oder Styropor > 50cm
 G8,plastic,Drink bottles  > 0.5L,Packaging,G8,True,food and drink,"Bouteilles à boisson > = 0,5L","Getränkeflaschen > 0,5L"
 G84,plastic,CD or CD box,Packaging,G84,False,personal items,Disque compact ou conteneur,CD oder CD-Hülle
 G85,plastic,Salt packaging,Packaging,G85,False,unclassified,Emballage du sel,"Salzsäcke (gross, zum Salzstreuen) "
 G86,plastic,Fin trees,Recreation,G86,False,recreation,Arbres à palmes,Scuba material
-G87,plastic,"Tape, masking/duct/packing",Utility items,G87,False,infrastructure,"Ruban adhésif, masquage, emballage",description
+G87,plastic,"Tape, masking/duct/packing",Utility items,G87,False,infrastructure,"Ruban adhésif, masquage, emballage",Abdeckklebeband/Verpackungsklebeband
 G88,plastic,Telephone incl. parts,Utility items,G88,False,personal items,"Téléphone, pièces détachées incluses",Telefon inkl. Teile
 G89,plastic,Plastic construction waste,Construction,G89,False,infrastructure,Déchets de construction en plastique,Kunststoff-Bauabfälle
 G9,plastic,"Cleaner, chemical bottles & containers",Packaging,G9,True,infrastructure,Récipients pour produits chimiques et nettoyants,Flaschen und Behälter für Reinigungsmittel und Chemikalien
@@ -268,7 +268,7 @@ G170,wood,Wood (processed),Undefined,G170,False,agriculture,Bois (transformé),H
 G171,wood,Other wood < 50cm,Undefined,G171,False,agriculture,Autre bois < 50cm,Sonstiges Holz < 50cm
 G172,wood,Other wood > 50cm,Undefined,G172,False,agriculture,Autres bois > 50cm,Sonstiges Holz > 50 cm
 G173,wood,Other,Undefined,G173,False,unclassified,Autres bois,Sonstiges
-Gfrags,plastic,Fragmented plastics,Undefined,Gfrags,False,plastic pieces,"Fragments de plastique: G80, G79, G78, G75",description
+Gfrags,plastic,Fragmented plastics,Undefined,Gfrags,False,plastic pieces,"Fragments de plastique: G80, G79, G78, G75","Fragmentierte Kunststoffe:G80, G79, G78, G75, G76, G77"
 Gcaps,plastic,"plastic caps, lid rings: G21, G22, G23, G24",Usagers,Gcaps,False,packaging non food,"Couvercles en plastique bouteille:  G21, G22, G23, G24","plastic caps, lid rings: G21, G22, G23, G24"
 Gfoams,plastic,Expanded polystyrene,Undefined,Gfoams,False,infrastructure,"Fragments de polystyrène expansé: G76, G81, G82, G83",Expandiertes Polystyrol
 G216,unidentified,"various rubbish (worked wood, metal parts)",Undefined,G216,False,unclassified,"déchets divers (bois travaillé, pièces métalliques)","diverser Müll (bearbeitetes Holz, Metallteile)"

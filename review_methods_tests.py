@@ -1,3 +1,6 @@
+# utility methods used when comaparing different sets of the same data
+
+
 import pandas as pd
 
 def collect_vitals(data):
