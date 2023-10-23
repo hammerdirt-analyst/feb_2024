@@ -15,7 +15,7 @@ survey_files = [
     "data/end_process/slr.csv",
 ]
 
-source_data = "data/end_process/new_allx.csv"
+# source_data = "data/end_process/new_allx.csv"
 
 code_data =  "data/end_process/codes.csv"
 beach_data = "data/end_process/beaches.csv"
