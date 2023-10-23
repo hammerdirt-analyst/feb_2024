@@ -8,7 +8,7 @@ period_dates = {
     "2022": ["2021-06-01", "2022-12-01"]
 }
 
-survey_data = [
+survey_files = [
     "data/end_process/after_may_2021.csv",
     "data/end_process/iqaasl.csv",
     "data/end_process/mcbp.csv",
