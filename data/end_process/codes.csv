@@ -1,4 +1,4 @@
-code,material,en.1,source,parent_code,single_use,groupname,fr,de
+code,material,en,source,parent_code,single_use,groupname,fr,de
 G708,metal,Batons de ski,Usagers,G199,False,recreation,Batons de ski,Skistöcke
 G712,cloth,Gants de ski,Usagers,G135,False,recreation,Gants de ski,Skihandschuhe
 G902,cloth,"Mask medical, cloth",Personal hygiene,G145,False,personal items,"Masque médical, tissu réutilisable","Medizinische Masken, Stoff"
