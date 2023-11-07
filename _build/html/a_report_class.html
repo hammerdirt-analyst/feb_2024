@@ -1,0 +1,2854 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report class &#8212; Feb 2024</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'a_report_class';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Land use class" href="landuse_class.html" />
+    <link rel="prev" title="Field observations to machine learning" href="titlepage.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="titlepage.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Feb 2024</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Models</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Report class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="landuse_class.html">Land use class</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="testing_data_models.html">Testing data models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="landuse_model_next_itteration.html">Extracting land use values</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hammerdirt-analyst/feb_2024" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hammerdirt-analyst/feb_2024/issues/new?title=Issue%20on%20page%20%2Fa_report_class.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Report class</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-and-collecting-the-data">Defining and collecting the data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-requirements">basic requirements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#work-data">Work data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reporting-categories">Reporting categories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-report-class">The report class</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-number-and-types-of-features-in-a-report">The number and types of features in a report</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-top-level-description">A top level description</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#by-criteria">By criteria</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#results-by-criteria-and-feature-type">Results by criteria and feature type</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alternate-object-groups">Alternate object groups</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#by-survey-area-or-parent-boundary">By Survey area or <code class="docutils literal notranslate"><span class="pre">parent_boundary</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#by-feature-name">By feature name:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#by-city">By city:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieveing-properties-from-test">Retrieveing properties from test</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Type</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Callable</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="kn">from</span> <span class="nn">review_methods_tests</span> <span class="kn">import</span> <span class="n">collect_vitals</span><span class="p">,</span> <span class="n">find_missing</span><span class="p">,</span> <span class="n">find_missing_loc_dates</span>
+<span class="kn">from</span> <span class="nn">review_methods_tests</span> <span class="kn">import</span> <span class="n">make_a_summary</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">import</span> <span class="nn">matplotlib.colors</span>
+<span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">LinearSegmentedColormap</span><span class="p">,</span> <span class="n">ListedColormap</span>
+
+<span class="kn">import</span> <span class="nn">setvariables</span> <span class="k">as</span> <span class="nn">conf_</span>
+<span class="kn">import</span> <span class="nn">reportclass</span> <span class="k">as</span> <span class="nn">r_class</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="report-class">
+<h1>Report class<a class="headerlink" href="#report-class" title="Permalink to this heading">#</a></h1>
+<p>The report class is used to generate descriptive statistics and identify objects of interest for a query defined by geographic, adminsitrative and temporal bounds. The reference is the swiss federal report published in 2022.</p>
+<div class="section" id="defining-and-collecting-the-data">
+<h2>Defining and collecting the data<a class="headerlink" href="#defining-and-collecting-the-data" title="Permalink to this heading">#</a></h2>
+<p>The survey records are stored separately from the environmental and administrative data. Each survey is identified by an id that is a combination of the location and date of the survey <code class="docutils literal notranslate"><span class="pre">loc_date</span></code>. There can be up to 228 codes associated to one <code class="docutils literal notranslate"><span class="pre">loc_date</span></code>, most of them will be zero. The combination of <code class="docutils literal notranslate"><span class="pre">loc_date</span></code> and <code class="docutils literal notranslate"><span class="pre">code</span></code> should result in a unique value.</p>
+<div class="section" id="basic-requirements">
+<h3>basic requirements<a class="headerlink" href="#basic-requirements" title="Permalink to this heading">#</a></h3>
+<p><strong>Define the limits of the request:</strong></p>
+<ul class="simple">
+<li><p>temporal</p></li>
+<li><p>geographic (includes features and parent boundaries)</p></li>
+<li><p>object types</p></li>
+<li><p>level of aggregation</p></li>
+</ul>
+<p>Define what codes are being used</p>
+<p>The default setting is to combine all the fragmented plastics into one group (all sizes) and the same for fragmented expanded polystyrene and plastic bottle tops. This results in three codes that represent objects that are very similar. This topic has been addressed many times. These groups register not-trivial quantities at most surveys. However, the differentiation of these objects into their respective subgroups ie. plastic caps for drinnking v/s plastic caps for household cleaners is not considered a priority by all groups that have collected data in the past.</p>
+<ul class="simple">
+<li><p>Gfrags</p></li>
+<li><p>Gfoams</p></li>
+<li><p>Gcaps</p></li>
+</ul>
+<p><strong>Define the reporting language:</strong></p>
+<p>The reporting language can be either French, German or English.</p>
+<p><strong>Note:</strong> The reporting language is only applied at the moment of display. The column names, feature labels and other underlying identifying criteria for the data remain unchanged. The column name definitions and translations are in the <em>random variables</em> section.</p>
+<p><strong>Summary</strong></p>
+<p>From the Annex in <code class="docutils literal notranslate"><span class="pre">testing_data_models</span></code> we identified the column combinantions needed to slice the data depending on the report request. At the same time we identify the operations to be performed and when they are to be performed as different columns are used to group the data. This was summrised as follows:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">(pd.DataFrame)</span></code>: The input DataFrame containing data for analysis.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cumulative_columns</span> <span class="pre">(List,</span> <span class="pre">optional)</span></code>: List of columns to be considered for cumulative values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">boundary_labels</span> <span class="pre">(List,</span> <span class="pre">optional)</span></code>: List of labels for boundary summaries.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">object_labels</span> <span class="pre">(List,</span> <span class="pre">optional)</span></code>: List of labels for individual objects.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">object_columns</span> <span class="pre">(List,</span> <span class="pre">optional)</span></code>: List of columns identifying objects.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unit_agg</span> <span class="pre">(dict,</span> <span class="pre">optional)</span></code>: Aggregation methods for unit summaries.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unit_columns</span> <span class="pre">(List,</span> <span class="pre">optional)</span></code>: List of columns for unit summaries.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">agg_groups</span> <span class="pre">(dict,</span> <span class="pre">optional)</span></code>: Aggregation methods for boundary summaries.</p></li>
+</ul>
+</div>
+<div class="section" id="work-data">
+<h3>Work data<a class="headerlink" href="#work-data" title="Permalink to this heading">#</a></h3>
+<p>A report can be defined by providing the temporal and geographic bounds of interest. Below is the current method.</p>
+<p><strong>code sample:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># starting data, can be MySQL or NoSQL calls</span>
+<span class="c1"># the three methods accept Callables, as long</span>
+<span class="c1"># as the out put is pd.DataFrame</span>
+<span class="n">c_l</span> <span class="o">=</span> <span class="n">r_class</span><span class="o">.</span><span class="n">language_maps</span><span class="p">()</span>
+<span class="n">surveys</span> <span class="o">=</span> <span class="n">r_class</span><span class="o">.</span><span class="n">collect_survey_data_for_report</span><span class="p">()</span>
+<span class="n">codes</span><span class="p">,</span> <span class="n">beaches</span><span class="p">,</span> <span class="n">land_cover</span><span class="p">,</span> <span class="n">land_use</span><span class="p">,</span> <span class="n">streets</span><span class="p">,</span> <span class="n">river_intersect_lakes</span> <span class="o">=</span> <span class="n">r_class</span><span class="o">.</span><span class="n">collect_env_data_for_report</span><span class="p">()</span>
+
+<span class="n">survey_data</span> <span class="o">=</span> <span class="n">surveys</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">survey_data</span> <span class="o">=</span> <span class="n">survey_data</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">beaches</span><span class="p">[</span><span class="s1">&#39;canton&#39;</span><span class="p">],</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;slug&#39;</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="s1">&#39;many_to_one&#39;</span><span class="p">)</span>
+
+<span class="c1"># temporal and geographic boundaries</span>
+<span class="c1"># user defined input</span>
+<span class="n">boundaries</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">canton</span><span class="o">=</span><span class="s1">&#39;Valais&#39;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s1">&#39;fr&#39;</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="s1">&#39;2019-01-01&#39;</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="s1">&#39;2022-01-01&#39;</span><span class="p">)</span>
+
+<span class="c1"># the level and label of the report</span>
+<span class="c1"># the language for display</span>
+<span class="c1"># the data for the report and all other</span>
+<span class="c1"># from the data range</span>
+<span class="n">top_label</span><span class="p">,</span> <span class="n">language</span><span class="p">,</span> <span class="n">w_df</span><span class="p">,</span> <span class="n">w_di</span> <span class="o">=</span> <span class="n">r_class</span><span class="o">.</span><span class="n">report_data</span><span class="p">(</span><span class="n">boundaries</span><span class="p">,</span> <span class="n">survey_data</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">beaches</span><span class="p">,</span> <span class="n">codes</span><span class="p">)</span>
+
+<span class="c1"># define the language map</span>
+<span class="n">w_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">set_table_styles</span><span class="p">(</span><span class="n">conf_</span><span class="o">.</span><span class="n">table_css_styles</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Which produces the following untranslated output.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_4d71c tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_4d71c tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_4d71c tr {
+  font-size: 10px;
+}
+#T_4d71c th:nth-child(1) {
+  background-color: #FFF;
+  font-size: 12px;
+  text-align: left;
+}
+#T_4d71c td {
+  padding: 4px;
+  font-size: 12px;
+}
+</style>
+<table id="T_4d71c">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_4d71c_level0_col0" class="col_heading level0 col0" >city</th>
+      <th id="T_4d71c_level0_col1" class="col_heading level0 col1" >parent_boundary</th>
+      <th id="T_4d71c_level0_col2" class="col_heading level0 col2" >loc_date</th>
+      <th id="T_4d71c_level0_col3" class="col_heading level0 col3" >length</th>
+      <th id="T_4d71c_level0_col4" class="col_heading level0 col4" >canton</th>
+      <th id="T_4d71c_level0_col5" class="col_heading level0 col5" >date</th>
+      <th id="T_4d71c_level0_col6" class="col_heading level0 col6" >feature_type</th>
+      <th id="T_4d71c_level0_col7" class="col_heading level0 col7" >slug</th>
+      <th id="T_4d71c_level0_col8" class="col_heading level0 col8" >feature_name</th>
+      <th id="T_4d71c_level0_col9" class="col_heading level0 col9" >groupname</th>
+      <th id="T_4d71c_level0_col10" class="col_heading level0 col10" >code</th>
+      <th id="T_4d71c_level0_col11" class="col_heading level0 col11" >quantity</th>
+      <th id="T_4d71c_level0_col12" class="col_heading level0 col12" >pcs_m</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_4d71c_level0_row0" class="row_heading level0 row0" >35698</th>
+      <td id="T_4d71c_row0_col0" class="data row0 col0" >Lens</td>
+      <td id="T_4d71c_row0_col1" class="data row0 col1" >les-alpes</td>
+      <td id="T_4d71c_row0_col2" class="data row0 col2" >('clean-up-tour-crans-montana', '2021-06-12')</td>
+      <td id="T_4d71c_row0_col3" class="data row0 col3" >43</td>
+      <td id="T_4d71c_row0_col4" class="data row0 col4" >Valais</td>
+      <td id="T_4d71c_row0_col5" class="data row0 col5" >2021-06-12</td>
+      <td id="T_4d71c_row0_col6" class="data row0 col6" >p</td>
+      <td id="T_4d71c_row0_col7" class="data row0 col7" >crans-montana</td>
+      <td id="T_4d71c_row0_col8" class="data row0 col8" >alpes-valaisannes</td>
+      <td id="T_4d71c_row0_col9" class="data row0 col9" >agriculture</td>
+      <td id="T_4d71c_row0_col10" class="data row0 col10" >G13</td>
+      <td id="T_4d71c_row0_col11" class="data row0 col11" >0</td>
+      <td id="T_4d71c_row0_col12" class="data row0 col12" >0.000000</td>
+    </tr>
+    <tr>
+      <th id="T_4d71c_level0_row1" class="row_heading level0 row1" >35699</th>
+      <td id="T_4d71c_row1_col0" class="data row1 col0" >Lens</td>
+      <td id="T_4d71c_row1_col1" class="data row1 col1" >les-alpes</td>
+      <td id="T_4d71c_row1_col2" class="data row1 col2" >('clean-up-tour-crans-montana', '2021-06-12')</td>
+      <td id="T_4d71c_row1_col3" class="data row1 col3" >43</td>
+      <td id="T_4d71c_row1_col4" class="data row1 col4" >Valais</td>
+      <td id="T_4d71c_row1_col5" class="data row1 col5" >2021-06-12</td>
+      <td id="T_4d71c_row1_col6" class="data row1 col6" >p</td>
+      <td id="T_4d71c_row1_col7" class="data row1 col7" >crans-montana</td>
+      <td id="T_4d71c_row1_col8" class="data row1 col8" >alpes-valaisannes</td>
+      <td id="T_4d71c_row1_col9" class="data row1 col9" >agriculture</td>
+      <td id="T_4d71c_row1_col10" class="data row1 col10" >G140</td>
+      <td id="T_4d71c_row1_col11" class="data row1 col11" >0</td>
+      <td id="T_4d71c_row1_col12" class="data row1 col12" >0.000000</td>
+    </tr>
+    <tr>
+      <th id="T_4d71c_level0_row2" class="row_heading level0 row2" >35700</th>
+      <td id="T_4d71c_row2_col0" class="data row2 col0" >Lens</td>
+      <td id="T_4d71c_row2_col1" class="data row2 col1" >les-alpes</td>
+      <td id="T_4d71c_row2_col2" class="data row2 col2" >('clean-up-tour-crans-montana', '2021-06-12')</td>
+      <td id="T_4d71c_row2_col3" class="data row2 col3" >43</td>
+      <td id="T_4d71c_row2_col4" class="data row2 col4" >Valais</td>
+      <td id="T_4d71c_row2_col5" class="data row2 col5" >2021-06-12</td>
+      <td id="T_4d71c_row2_col6" class="data row2 col6" >p</td>
+      <td id="T_4d71c_row2_col7" class="data row2 col7" >crans-montana</td>
+      <td id="T_4d71c_row2_col8" class="data row2 col8" >alpes-valaisannes</td>
+      <td id="T_4d71c_row2_col9" class="data row2 col9" >agriculture</td>
+      <td id="T_4d71c_row2_col10" class="data row2 col10" >G161</td>
+      <td id="T_4d71c_row2_col11" class="data row2 col11" >0</td>
+      <td id="T_4d71c_row2_col12" class="data row2 col12" >0.000000</td>
+    </tr>
+    <tr>
+      <th id="T_4d71c_level0_row3" class="row_heading level0 row3" >35701</th>
+      <td id="T_4d71c_row3_col0" class="data row3 col0" >Lens</td>
+      <td id="T_4d71c_row3_col1" class="data row3 col1" >les-alpes</td>
+      <td id="T_4d71c_row3_col2" class="data row3 col2" >('clean-up-tour-crans-montana', '2021-06-12')</td>
+      <td id="T_4d71c_row3_col3" class="data row3 col3" >43</td>
+      <td id="T_4d71c_row3_col4" class="data row3 col4" >Valais</td>
+      <td id="T_4d71c_row3_col5" class="data row3 col5" >2021-06-12</td>
+      <td id="T_4d71c_row3_col6" class="data row3 col6" >p</td>
+      <td id="T_4d71c_row3_col7" class="data row3 col7" >crans-montana</td>
+      <td id="T_4d71c_row3_col8" class="data row3 col8" >alpes-valaisannes</td>
+      <td id="T_4d71c_row3_col9" class="data row3 col9" >agriculture</td>
+      <td id="T_4d71c_row3_col10" class="data row3 col10" >G168</td>
+      <td id="T_4d71c_row3_col11" class="data row3 col11" >0</td>
+      <td id="T_4d71c_row3_col12" class="data row3 col12" >0.000000</td>
+    </tr>
+    <tr>
+      <th id="T_4d71c_level0_row4" class="row_heading level0 row4" >35702</th>
+      <td id="T_4d71c_row4_col0" class="data row4 col0" >Lens</td>
+      <td id="T_4d71c_row4_col1" class="data row4 col1" >les-alpes</td>
+      <td id="T_4d71c_row4_col2" class="data row4 col2" >('clean-up-tour-crans-montana', '2021-06-12')</td>
+      <td id="T_4d71c_row4_col3" class="data row4 col3" >43</td>
+      <td id="T_4d71c_row4_col4" class="data row4 col4" >Valais</td>
+      <td id="T_4d71c_row4_col5" class="data row4 col5" >2021-06-12</td>
+      <td id="T_4d71c_row4_col6" class="data row4 col6" >p</td>
+      <td id="T_4d71c_row4_col7" class="data row4 col7" >crans-montana</td>
+      <td id="T_4d71c_row4_col8" class="data row4 col8" >alpes-valaisannes</td>
+      <td id="T_4d71c_row4_col9" class="data row4 col9" >agriculture</td>
+      <td id="T_4d71c_row4_col10" class="data row4 col10" >G170</td>
+      <td id="T_4d71c_row4_col11" class="data row4 col11" >0</td>
+      <td id="T_4d71c_row4_col12" class="data row4 col12" >0.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+<div class="section" id="reporting-categories">
+<h2>Reporting categories<a class="headerlink" href="#reporting-categories" title="Permalink to this heading">#</a></h2>
+<p>The first variable of the input is used to define the hierarchy of the report. For administrative purposes a vertical approach that reflects areas of responsibility is important. For estimating values the geographic/topographic attributes are more important.</p>
+<p>The survey data is labeled for these purposes. The columns <code class="docutils literal notranslate"><span class="pre">parent_boundary</span></code>, <code class="docutils literal notranslate"><span class="pre">feature_type</span></code> and <code class="docutils literal notranslate"><span class="pre">feature_name</span></code> are the topographic features.</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">parent_boundary</span></code>: the name of the: river basin, catchment area, park, name of geograhphic region or other zone defined by swiss geo admin.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">feature_type</span></code>: lake, river or park</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">feature_name</span></code>: the name of the lake, river or park</p></li>
+</ol>
+<p>The <code class="docutils literal notranslate"><span class="pre">geo_h</span></code> array sets the order for reporting. Reports for cantons can contain subreports for all the values in the array, by default the cantonal results will reference the IQAASL report for threshold or prior results. Reports for cities will contain only geographic categories with reference to cantonal results.</p>
+<p><strong>code sample:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+
+<span class="n">geo_h</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;parent_boundary&#39;</span><span class="p">,</span> <span class="s1">&#39;feature_type&#39;</span><span class="p">,</span>  <span class="s1">&#39;feature_name&#39;</span><span class="p">,</span><span class="s1">&#39;canton&#39;</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">categorize_work_data</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">columns_of_interest</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">geo_h</span><span class="p">,</span> <span class="n">sample_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;loc_date&#39;</span><span class="p">):</span>
+       
+    <span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">==</span> <span class="n">labels</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    
+    <span class="n">summaries</span> <span class="o">=</span> <span class="n">columns_of_interest</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">summaries</span><span class="p">)</span>
+    
+    <span class="c1"># if city is selected the available boundaries</span>
+    <span class="c1"># are geographic. A city is in only one canton</span>
+    <span class="c1"># if canton is selected then city becomes a category</span>
+    <span class="c1"># for which a report can be produced    </span>
+    <span class="k">if</span> <span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">columns_of_interest</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">summaries</span> <span class="o">=</span> <span class="n">columns_of_interest</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">columns_of_interest</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]:</span>
+        <span class="n">summaries</span> <span class="o">=</span> <span class="p">[</span><span class="o">*</span><span class="n">columns_of_interest</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="n">columns_of_interest</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+    
+    <span class="n">new_columns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="n">sample_id</span><span class="p">,</span> <span class="o">*</span><span class="n">summaries</span><span class="p">]))</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">new_columns</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">an_attribute</span> <span class="ow">in</span> <span class="n">new_columns</span><span class="p">:</span>
+        <span class="n">datt</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">an_attribute</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">an_attribute</span><span class="p">:</span> <span class="n">datt</span><span class="p">})</span>
+    
+    <span class="n">res</span><span class="p">[</span><span class="s1">&#39;samples&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;loc_date&#39;</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="p">{</span><span class="n">labels</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span><span class="n">res</span><span class="p">}</span>
+
+<span class="c1"># this categorizes the survey data into search terms</span>
+<span class="c1"># the available data or reporting categories are retrieved</span>
+<span class="c1"># by getting the length of the array for each category</span>
+<span class="c1"># if the category is not present then the data is not available</span>
+<span class="n">parent_categories</span> <span class="o">=</span> <span class="n">categorize_work_data</span><span class="p">(</span><span class="n">w_df</span><span class="p">,</span> <span class="n">top_label</span><span class="p">)</span>
+<span class="n">p_vals</span> <span class="o">=</span> <span class="n">parent_categories</span><span class="p">[</span><span class="n">boundaries</span><span class="p">[</span><span class="n">top_label</span><span class="p">[</span><span class="mi">0</span><span class="p">]]]</span>
+
+<span class="c1"># the type and number of reports available</span>
+<span class="n">reporting_categories</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">p_vals</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+<span class="n">reporting_categories</span>
+</pre></div>
+</div>
+<p>Which gives the following result:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;city&#39;: 10,
+ &#39;parent_boundary&#39;: 2,
+ &#39;feature_type&#39;: 3,
+ &#39;feature_name&#39;: 3,
+ &#39;samples&#39;: 22}
+</pre></div>
+</div>
+</div>
+</div>
+<p>The same operation can be performed at each level. The first call to <code class="docutils literal notranslate"><span class="pre">categorize_work_data</span></code> gives the structure of the report. For each key value of the reporting categories there wil be a set of descriptive statistics.</p>
+<p>For example, a detailed report on all feature types within the canton includes the following summary data for each feature type.</p>
+<p><strong>code sample:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># identify and count the results from parcs</span>
+<span class="n">parc_features</span> <span class="o">=</span> <span class="n">categorize_work_data</span><span class="p">(</span><span class="n">w_df</span><span class="p">[</span><span class="n">w_df</span><span class="o">.</span><span class="n">feature_type</span> <span class="o">==</span> <span class="n">p_vals</span><span class="p">[</span><span class="s1">&#39;feature_type&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]],</span> <span class="n">top_label</span><span class="p">)</span>
+
+<span class="c1"># count the contents in each attribute</span>
+<span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">parc_features</span><span class="p">[</span><span class="n">top_label</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+
+<span class="c1"># out =&gt;</span>
+
+<span class="p">{</span><span class="s1">&#39;city&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+ <span class="s1">&#39;feature_type&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+ <span class="s1">&#39;parent_boundary&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+ <span class="s1">&#39;feature_name&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+ <span class="s1">&#39;samples&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">}</span>
+
+</pre></div>
+</div>
+<p>In this example there are 7 samples from 6 cities in the parcs feature_type.</p>
+<p>The summary of each label for each feature in the current data set can be obtained by providing the feature of interest to the groupby columns. By default the sample id: <code class="docutils literal notranslate"><span class="pre">loc_date</span></code> and the location name <code class="docutils literal notranslate"><span class="pre">slug</span></code> are required.</p>
+<p><strong>Essential:</strong> The boundaries variable defines the top level data structure, for example: <code class="docutils literal notranslate"><span class="pre">boundaries={'canton':</span> <span class="pre">'Valais',</span> <span class="pre">'language':</span> <span class="pre">'fr',</span> <span class="pre">'start_date':</span> <span class="pre">'2019-01-01',</span> <span class="pre">'end_date':</span> <span class="pre">'2022-01-01'}</span></code> will produce a dataframe with records only from the canton of Valais within the dates defined. Tables and charts will be translated to french.</p>
+<p>The report class uses the resulting data structure to define reports for the different features within the dataframe.</p>
+</div>
+<div class="section" id="the-report-class">
+<h2>The report class<a class="headerlink" href="#the-report-class" title="Permalink to this heading">#</a></h2>
+<p>The report class provides the set of arguments that define the structure of the report based on the user input. Those arguments are a property of the class <code class="docutils literal notranslate"><span class="pre">ReportClass.feautures</span></code>. The <code class="docutils literal notranslate"><span class="pre">ReportClass</span></code> also identifies objects that meet the criteria defined by <code class="docutils literal notranslate"><span class="pre">mc_criteria_one</span></code> and <code class="docutils literal notranslate"><span class="pre">mc_criteria_two</span></code>.</p>
+<p>To start a <code class="docutils literal notranslate"><span class="pre">ReportClass</span></code> call it with the dataframes of interest, the boundaries, the top level report, the language and the language map.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_report</span> <span class="o">=</span> <span class="n">r_class</span><span class="o">.</span><span class="n">ReportClass</span><span class="p">(</span><span class="n">w_df</span><span class="p">,</span> <span class="n">w_di</span><span class="p">,</span> <span class="n">boundaries</span><span class="p">,</span> <span class="n">top_label</span><span class="p">,</span> <span class="s1">&#39;fr&#39;</span><span class="p">,</span> <span class="n">c_l</span><span class="p">)</span>
+<span class="n">a_report</span><span class="o">.</span><span class="n">the_number_of_attributes_in_a_feature</span><span class="p">(</span><span class="s1">&#39;feature_type&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="the-number-and-types-of-features-in-a-report">
+<h3>The number and types of features in a report<a class="headerlink" href="#the-number-and-types-of-features-in-a-report" title="Permalink to this heading">#</a></h3>
+<p>Once a <code class="docutils literal notranslate"><span class="pre">ReportClass</span></code> is initiated a summary of the attributes can be obtained:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_b1969 tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_b1969 tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_b1969 tr {
+  font-size: 10px;
+}
+#T_b1969 th:nth-child(1) {
+  background-color: #FFF;
+  font-size: 12px;
+  text-align: left;
+}
+#T_b1969 td {
+  padding: 4px;
+  font-size: 12px;
+}
+</style>
+<table id="T_b1969">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_b1969_level0_col0" class="col_heading level0 col0" >Ville</th>
+      <th id="T_b1969_level0_col1" class="col_heading level0 col1" >Région</th>
+      <th id="T_b1969_level0_col2" class="col_heading level0 col2" >Zone</th>
+      <th id="T_b1969_level0_col3" class="col_heading level0 col3" >Feature_Name</th>
+      <th id="T_b1969_level0_col4" class="col_heading level0 col4" >Échantillons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_b1969_level0_row0" class="row_heading level0 row0" >Parc</th>
+      <td id="T_b1969_row0_col0" class="data row0 col0" >6</td>
+      <td id="T_b1969_row0_col1" class="data row0 col1" >1</td>
+      <td id="T_b1969_row0_col2" class="data row0 col2" >1</td>
+      <td id="T_b1969_row0_col3" class="data row0 col3" >1</td>
+      <td id="T_b1969_row0_col4" class="data row0 col4" >7</td>
+    </tr>
+    <tr>
+      <th id="T_b1969_level0_row1" class="row_heading level0 row1" >Rivière</th>
+      <td id="T_b1969_row1_col0" class="data row1 col0" >4</td>
+      <td id="T_b1969_row1_col1" class="data row1 col1" >1</td>
+      <td id="T_b1969_row1_col2" class="data row1 col2" >1</td>
+      <td id="T_b1969_row1_col3" class="data row1 col3" >1</td>
+      <td id="T_b1969_row1_col4" class="data row1 col4" >4</td>
+    </tr>
+    <tr>
+      <th id="T_b1969_level0_row2" class="row_heading level0 row2" >Lac</th>
+      <td id="T_b1969_row2_col0" class="data row2 col0" >1</td>
+      <td id="T_b1969_row2_col1" class="data row2 col1" >1</td>
+      <td id="T_b1969_row2_col2" class="data row2 col2" >1</td>
+      <td id="T_b1969_row2_col3" class="data row2 col3" >1</td>
+      <td id="T_b1969_row2_col4" class="data row2 col4" >11</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="section" id="a-top-level-description">
+<h4>A top level description<a class="headerlink" href="#a-top-level-description" title="Permalink to this heading">#</a></h4>
+<p>The first out put says there are three feature types (lakes, rivers and parks) in the data. There is one lake that was sampled 11 times, a river was sampled 4 times and the parks were sampled 7 times. In total there were 11 cities, 4 on the river, 6 in the parcs feature and 1 on the lake.</p>
+<p>Recall that the geographic column names are: <code class="docutils literal notranslate"><span class="pre">['feature_type',</span> <span class="pre">'feature_name',</span> <span class="pre">'parent_name']</span></code>.  The suvey results from each sector can be compared by selecting the column name of interest. Depending on the value of <code class="docutils literal notranslate"><span class="pre">boundaries</span></code> all the column names may not be available. There is a method to identify exactly what features are available. Note in the example below, canton is not an option. This is because the boundaries were set for a canton.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_feautures</span> <span class="o">=</span> <span class="n">my_report_class</span><span class="o">.</span><span class="n">available_features</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">my_features</span><span class="p">)</span>
+
+<span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;parent_boundary&#39;</span><span class="p">,</span> <span class="s1">&#39;feature_type&#39;</span><span class="p">,</span> <span class="s1">&#39;feature_name&#39;</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">summarize_feature_labels</span></code> method in the <code class="docutils literal notranslate"><span class="pre">ReportClass</span></code> creates a summary of the sample totals for each label of the selected feature. Calling the <code class="docutils literal notranslate"><span class="pre">translated_and_style_for_display</span></code> method puts the table to html and applies language specific formatting using the <code class="docutils literal notranslate"><span class="pre">dataframe.style</span></code> method. The index and column names are translated using the language maps.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">feature_type_summary</span> <span class="o">=</span>  <span class="n">my_report_class</span><span class="o">.</span><span class="n">summarize_feature_labels</span><span class="p">(</span><span class="s1">&#39;feature_type&#39;</span><span class="p">)</span>
+
+<span class="n">translated_and_style_for_display</span><span class="p">(</span><span class="n">feature_type_summary</span><span class="p">,</span> <span class="n">my_report</span><span class="o">.</span><span class="n">language_maps</span><span class="p">,</span> <span class="n">my_report</span><span class="o">.</span><span class="n">language</span><span class="p">,</span> <span class="n">gradient</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Combined with the output from above a desctription of the data and how it was collected can be constructed, the higlighted text can be called from the active variables.</p>
+<blockquote>
+<div><p>There were <code class="docutils literal notranslate"><span class="pre">13'782</span></code> objects identified in the period between <code class="docutils literal notranslate"><span class="pre">2019-01-01</span></code> and <code class="docutils literal notranslate"><span class="pre">2021-12-31</span></code> in the <code class="docutils literal notranslate"><span class="pre">canton</span></code> of <code class="docutils literal notranslate"><span class="pre">Valais</span></code>. In total, <code class="docutils literal notranslate"><span class="pre">22</span></code> samples were recorded, <code class="docutils literal notranslate"><span class="pre">11</span></code> on the <code class="docutils literal notranslate"><span class="pre">lake-shore</span></code>, <code class="docutils literal notranslate"><span class="pre">7</span></code> in <code class="docutils literal notranslate"><span class="pre">ski-areas</span></code> and <code class="docutils literal notranslate"><span class="pre">4</span></code> on <code class="docutils literal notranslate"><span class="pre">riverbanks</span></code>.  The lake samples were recorded from <code class="docutils literal notranslate"><span class="pre">one</span></code> <code class="docutils literal notranslate"><span class="pre">city</span></code> on the other hand the alpes and rivers were taken from <code class="docutils literal notranslate"><span class="pre">10</span></code> <code class="docutils literal notranslate"><span class="pre">different</span> <span class="pre">cities</span></code>. The <code class="docutils literal notranslate"><span class="pre">median</span></code> sample total of <em>pieces of trash per meter</em> <code class="docutils literal notranslate"><span class="pre">pcs/m</span></code> is highest at the <code class="docutils literal notranslate"><span class="pre">lakeside</span></code>, followed by the <code class="docutils literal notranslate"><span class="pre">parcs</span></code> and <code class="docutils literal notranslate"><span class="pre">rivers</span></code>.</p>
+</div></blockquote>
+<div class="admonition-ships-search-terms admonition">
+<p class="admonition-title">Ships search terms</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ReportClass.features</span></code> is a dictionary or .JSON file that contains the common labled geographic name of the region in question. Structuring these into search terms is a way to integrate a LLM into the analysis.</p>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_507df tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_507df tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_507df tr {
+  font-size: 10px;
+}
+#T_507df th:nth-child(1) {
+  background-color: #FFF;
+  font-size: 12px;
+  text-align: left;
+}
+#T_507df td {
+  padding: 4px;
+  font-size: 12px;
+}
+</style>
+<table id="T_507df">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_507df_level0_col0" class="col_heading level0 col0" colspan="3">Pcs_M</th>
+    </tr>
+    <tr>
+      <th class="index_name level1" >label</th>
+      <th id="T_507df_level1_col0" class="col_heading level1 col0" >L</th>
+      <th id="T_507df_level1_col1" class="col_heading level1 col1" >P</th>
+      <th id="T_507df_level1_col2" class="col_heading level1 col2" >R</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_507df_level0_row0" class="row_heading level0 row0" >25%</th>
+      <td id="T_507df_row0_col0" class="data row0 col0" >14,75</td>
+      <td id="T_507df_row0_col1" class="data row0 col1" >1,36</td>
+      <td id="T_507df_row0_col2" class="data row0 col2" >0,16</td>
+    </tr>
+    <tr>
+      <th id="T_507df_level0_row1" class="row_heading level0 row1" >50%</th>
+      <td id="T_507df_row1_col0" class="data row1 col0" >17,71</td>
+      <td id="T_507df_row1_col1" class="data row1 col1" >2,87</td>
+      <td id="T_507df_row1_col2" class="data row1 col2" >0,24</td>
+    </tr>
+    <tr>
+      <th id="T_507df_level0_row2" class="row_heading level0 row2" >75%</th>
+      <td id="T_507df_row2_col0" class="data row2 col0" >32,67</td>
+      <td id="T_507df_row2_col1" class="data row2 col1" >4,79</td>
+      <td id="T_507df_row2_col2" class="data row2 col2" >0,48</td>
+    </tr>
+    <tr>
+      <th id="T_507df_level0_row3" class="row_heading level0 row3" >Échantillons</th>
+      <td id="T_507df_row3_col0" class="data row3 col0" >11</td>
+      <td id="T_507df_row3_col1" class="data row3 col1" >7</td>
+      <td id="T_507df_row3_col2" class="data row3 col2" >4</td>
+    </tr>
+    <tr>
+      <th id="T_507df_level0_row4" class="row_heading level0 row4" >Max</th>
+      <td id="T_507df_row4_col0" class="data row4 col0" >52,73</td>
+      <td id="T_507df_row4_col1" class="data row4 col1" >415,05</td>
+      <td id="T_507df_row4_col2" class="data row4 col2" >1,02</td>
+    </tr>
+    <tr>
+      <th id="T_507df_level0_row5" class="row_heading level0 row5" >Moyenne</th>
+      <td id="T_507df_row5_col0" class="data row5 col0" >23,64</td>
+      <td id="T_507df_row5_col1" class="data row5 col1" >61,61</td>
+      <td id="T_507df_row5_col2" class="data row5 col2" >0,40</td>
+    </tr>
+    <tr>
+      <th id="T_507df_level0_row6" class="row_heading level0 row6" >Min</th>
+      <td id="T_507df_row6_col0" class="data row6 col0" >2,58</td>
+      <td id="T_507df_row6_col1" class="data row6 col1" >1,06</td>
+      <td id="T_507df_row6_col2" class="data row6 col2" >0,09</td>
+    </tr>
+    <tr>
+      <th id="T_507df_level0_row7" class="row_heading level0 row7" >Écart-Type</th>
+      <td id="T_507df_row7_col0" class="data row7 col0" >16,91</td>
+      <td id="T_507df_row7_col1" class="data row7 col1" >155,86</td>
+      <td id="T_507df_row7_col2" class="data row7 col2" >0,42</td>
+    </tr>
+    <tr>
+      <th id="T_507df_level0_row8" class="row_heading level0 row8" >Total</th>
+      <td id="T_507df_row8_col0" class="data row8 col0" >7'560</td>
+      <td id="T_507df_row8_col1" class="data row8 col1" >6'144</td>
+      <td id="T_507df_row8_col2" class="data row8 col2" >78</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div class="section" id="by-criteria">
+<h4>By criteria<a class="headerlink" href="#by-criteria" title="Permalink to this heading">#</a></h4>
+<p>Objects can be selected by criteria. The default criteria requires that the quantity be in the top ten or the fail rate &gt;= .5. This can be changed at any time using the keywords when the class is called or setting the class variables in the form <code class="docutils literal notranslate"><span class="pre">my_report_class.criteria_one</span> <span class="pre">=</span> <span class="pre">anewvalue</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">objects_selected_by_criteria</span> <span class="o">=</span> <span class="n">my_report_class</span><span class="o">.</span><span class="n">most_common</span>
+<span class="n">translated_and_style_for_display</span><span class="p">(</span><span class="n">a_report</span><span class="o">.</span><span class="n">most_common</span><span class="p">,</span> <span class="n">a_report</span><span class="o">.</span><span class="n">lang_maps</span><span class="p">[</span><span class="n">a_report</span><span class="o">.</span><span class="n">language</span><span class="p">],</span> <span class="n">a_report</span><span class="o">.</span><span class="n">language</span><span class="p">,</span> <span class="n">gradient</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Calling <code class="docutils literal notranslate"><span class="pre">my_report_class.most_common</span></code> will return a dataframe that has the test statistic and description of all objects that meet the criteria.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_75215 tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_75215 tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_75215 tr {
+  font-size: 10px;
+}
+#T_75215 th:nth-child(1) {
+  background-color: #FFF;
+  font-size: 12px;
+  text-align: left;
+}
+#T_75215 td {
+  padding: 4px;
+  font-size: 12px;
+}
+</style>
+<table id="T_75215">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_75215_level0_col0" class="col_heading level0 col0" >Quantité</th>
+      <th id="T_75215_level0_col1" class="col_heading level0 col1" >% Du Total</th>
+      <th id="T_75215_level0_col2" class="col_heading level0 col2" >Pcs/M</th>
+      <th id="T_75215_level0_col3" class="col_heading level0 col3" >Taux D'Échec</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_75215_level0_row0" class="row_heading level0 row0" >Brosse De Télésiège</th>
+      <td id="T_75215_row0_col0" class="data row0 col0" >5'181</td>
+      <td id="T_75215_row0_col1" class="data row0 col1" >0,38</td>
+      <td id="T_75215_row0_col2" class="data row0 col2" >0,00</td>
+      <td id="T_75215_row0_col3" class="data row0 col3" >0,09</td>
+    </tr>
+    <tr>
+      <th id="T_75215_level0_row1" class="row_heading level0 row1" >Fragments De Polystyrène Expansé: G76, G81, G82, G83</th>
+      <td id="T_75215_row1_col0" class="data row1 col0" >1'476</td>
+      <td id="T_75215_row1_col1" class="data row1 col1" >0,11</td>
+      <td id="T_75215_row1_col2" class="data row1 col2" >0,02</td>
+      <td id="T_75215_row1_col3" class="data row1 col3" >0,59</td>
+    </tr>
+    <tr>
+      <th id="T_75215_level0_row2" class="row_heading level0 row2" >Fragments De Plastique: G80, G79, G78, G75</th>
+      <td id="T_75215_row2_col0" class="data row2 col0" >1'299</td>
+      <td id="T_75215_row2_col1" class="data row2 col1" >0,09</td>
+      <td id="T_75215_row2_col2" class="data row2 col2" >0,23</td>
+      <td id="T_75215_row2_col3" class="data row2 col3" >0,91</td>
+    </tr>
+    <tr>
+      <th id="T_75215_level0_row3" class="row_heading level0 row3" >Couvercles En Plastique Bouteille:  G21, G22, G23, G24</th>
+      <td id="T_75215_row3_col0" class="data row3 col0" >589</td>
+      <td id="T_75215_row3_col1" class="data row3 col1" >0,04</td>
+      <td id="T_75215_row3_col2" class="data row3 col2" >0,06</td>
+      <td id="T_75215_row3_col3" class="data row3 col3" >0,64</td>
+    </tr>
+    <tr>
+      <th id="T_75215_level0_row4" class="row_heading level0 row4" >Emballages De Bonbons, De Snacks</th>
+      <td id="T_75215_row4_col0" class="data row4 col0" >564</td>
+      <td id="T_75215_row4_col1" class="data row4 col1" >0,04</td>
+      <td id="T_75215_row4_col2" class="data row4 col2" >0,35</td>
+      <td id="T_75215_row4_col3" class="data row4 col3" >0,82</td>
+    </tr>
+    <tr>
+      <th id="T_75215_level0_row5" class="row_heading level0 row5" >Bâche, Feuille Plastique Industrielle</th>
+      <td id="T_75215_row5_col0" class="data row5 col0" >516</td>
+      <td id="T_75215_row5_col1" class="data row5 col1" >0,04</td>
+      <td id="T_75215_row5_col2" class="data row5 col2" >0,15</td>
+      <td id="T_75215_row5_col3" class="data row5 col3" >0,59</td>
+    </tr>
+    <tr>
+      <th id="T_75215_level0_row6" class="row_heading level0 row6" >Mousse De Plastique Pour L'Isolation Thermique</th>
+      <td id="T_75215_row6_col0" class="data row6 col0" >453</td>
+      <td id="T_75215_row6_col1" class="data row6 col1" >0,03</td>
+      <td id="T_75215_row6_col2" class="data row6 col2" >0,03</td>
+      <td id="T_75215_row6_col3" class="data row6 col3" >0,55</td>
+    </tr>
+    <tr>
+      <th id="T_75215_level0_row7" class="row_heading level0 row7" >Coton-Tige</th>
+      <td id="T_75215_row7_col0" class="data row7 col0" >453</td>
+      <td id="T_75215_row7_col1" class="data row7 col1" >0,03</td>
+      <td id="T_75215_row7_col2" class="data row7 col2" >0,07</td>
+      <td id="T_75215_row7_col3" class="data row7 col3" >0,50</td>
+    </tr>
+    <tr>
+      <th id="T_75215_level0_row8" class="row_heading level0 row8" >Déchets De Construction En Plastique</th>
+      <td id="T_75215_row8_col0" class="data row8 col0" >307</td>
+      <td id="T_75215_row8_col1" class="data row8 col1" >0,02</td>
+      <td id="T_75215_row8_col2" class="data row8 col2" >0,15</td>
+      <td id="T_75215_row8_col3" class="data row8 col3" >0,59</td>
+    </tr>
+    <tr>
+      <th id="T_75215_level0_row9" class="row_heading level0 row9" >Mégots Et Filtres À Cigarettes</th>
+      <td id="T_75215_row9_col0" class="data row9 col0" >221</td>
+      <td id="T_75215_row9_col1" class="data row9 col1" >0,02</td>
+      <td id="T_75215_row9_col2" class="data row9 col2" >0,09</td>
+      <td id="T_75215_row9_col3" class="data row9 col3" >0,73</td>
+    </tr>
+    <tr>
+      <th id="T_75215_level0_row10" class="row_heading level0 row10" >Cartouches De Fusil De Chasse</th>
+      <td id="T_75215_row10_col0" class="data row10 col0" >219</td>
+      <td id="T_75215_row10_col1" class="data row10 col1" >0,02</td>
+      <td id="T_75215_row10_col2" class="data row10 col2" >0,05</td>
+      <td id="T_75215_row10_col3" class="data row10 col3" >0,55</td>
+    </tr>
+    <tr>
+      <th id="T_75215_level0_row11" class="row_heading level0 row11" >Emballage Fast Food</th>
+      <td id="T_75215_row11_col0" class="data row11 col0" >175</td>
+      <td id="T_75215_row11_col1" class="data row11 col1" >0,01</td>
+      <td id="T_75215_row11_col2" class="data row11 col2" >0,03</td>
+      <td id="T_75215_row11_col3" class="data row11 col3" >0,50</td>
+    </tr>
+    <tr>
+      <th id="T_75215_level0_row12" class="row_heading level0 row12" >Tabac Emballages En Plastique</th>
+      <td id="T_75215_row12_col0" class="data row12 col0" >139</td>
+      <td id="T_75215_row12_col1" class="data row12 col1" >0,01</td>
+      <td id="T_75215_row12_col2" class="data row12 col2" >0,01</td>
+      <td id="T_75215_row12_col3" class="data row12 col3" >0,55</td>
+    </tr>
+    <tr>
+      <th id="T_75215_level0_row13" class="row_heading level0 row13" >Gobelets, Couvercles, Mousse À Usage Unique Et Plastique Dur</th>
+      <td id="T_75215_row13_col0" class="data row13 col0" >100</td>
+      <td id="T_75215_row13_col1" class="data row13 col1" >0,01</td>
+      <td id="T_75215_row13_col2" class="data row13 col2" >0,07</td>
+      <td id="T_75215_row13_col3" class="data row13 col3" >0,73</td>
+    </tr>
+    <tr>
+      <th id="T_75215_level0_row14" class="row_heading level0 row14" >Bâtonnets De Sucette</th>
+      <td id="T_75215_row14_col0" class="data row14 col0" >85</td>
+      <td id="T_75215_row14_col1" class="data row14 col1" >0,01</td>
+      <td id="T_75215_row14_col2" class="data row14 col2" >0,01</td>
+      <td id="T_75215_row14_col3" class="data row14 col3" >0,50</td>
+    </tr>
+    <tr>
+      <th id="T_75215_level0_row15" class="row_heading level0 row15" >Pailles Et Agitateurs</th>
+      <td id="T_75215_row15_col0" class="data row15 col0" >77</td>
+      <td id="T_75215_row15_col1" class="data row15 col1" >0,01</td>
+      <td id="T_75215_row15_col2" class="data row15 col2" >0,03</td>
+      <td id="T_75215_row15_col3" class="data row15 col3" >0,59</td>
+    </tr>
+    <tr>
+      <th id="T_75215_level0_row16" class="row_heading level0 row16" >Jouets Et Faveurs De Fête</th>
+      <td id="T_75215_row16_col0" class="data row16 col0" >72</td>
+      <td id="T_75215_row16_col1" class="data row16 col1" >0,01</td>
+      <td id="T_75215_row16_col2" class="data row16 col2" >0,03</td>
+      <td id="T_75215_row16_col3" class="data row16 col3" >0,55</td>
+    </tr>
+    <tr>
+      <th id="T_75215_level0_row17" class="row_heading level0 row17" >Médical Conteneurs/Tubes/ Emballages</th>
+      <td id="T_75215_row17_col0" class="data row17 col0" >49</td>
+      <td id="T_75215_row17_col1" class="data row17 col1" >0,00</td>
+      <td id="T_75215_row17_col2" class="data row17 col2" >0,02</td>
+      <td id="T_75215_row17_col3" class="data row17 col3" >0,55</td>
+    </tr>
+    <tr>
+      <th id="T_75215_level0_row18" class="row_heading level0 row18" >Bouchons De Bouteilles En Métal, Couvercles Et Tirettes</th>
+      <td id="T_75215_row18_col0" class="data row18 col0" >37</td>
+      <td id="T_75215_row18_col1" class="data row18 col1" >0,00</td>
+      <td id="T_75215_row18_col2" class="data row18 col2" >0,02</td>
+      <td id="T_75215_row18_col3" class="data row18 col3" >0,59</td>
+    </tr>
+    <tr>
+      <th id="T_75215_level0_row19" class="row_heading level0 row19" >Bouteilles À Boisson < = 0,5L</th>
+      <td id="T_75215_row19_col0" class="data row19 col0" >33</td>
+      <td id="T_75215_row19_col1" class="data row19 col1" >0,00</td>
+      <td id="T_75215_row19_col2" class="data row19 col2" >0,03</td>
+      <td id="T_75215_row19_col3" class="data row19 col3" >0,55</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div class="section" id="results-by-criteria-and-feature-type">
+<h4>Results by criteria and feature type<a class="headerlink" href="#results-by-criteria-and-feature-type" title="Permalink to this heading">#</a></h4>
+<p>Once the the objects of intereste are identified (criteria) they can be compared accross the diferent feature_types and labels.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">a_cumulative_report</span><span class="p">(</span><span class="n">w_df</span><span class="p">[</span><span class="n">w_df</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">a_report</span><span class="o">.</span><span class="n">most_common</span><span class="o">.</span><span class="n">index</span><span class="p">)],</span> <span class="n">feature_name</span><span class="o">=</span><span class="s1">&#39;feature_type&#39;</span><span class="p">,</span> <span class="n">object_column</span><span class="o">=</span><span class="s1">&#39;code&#39;</span><span class="p">)</span>
+<span class="n">translated_and_style_for_display</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">a_report</span><span class="o">.</span><span class="n">lang_maps</span><span class="p">[</span><span class="n">a_report</span><span class="o">.</span><span class="n">language</span><span class="p">],</span> <span class="n">a_report</span><span class="o">.</span><span class="n">language</span><span class="p">,</span> <span class="n">gradient</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For example the most common objects are found at different densitiies depending on the feature type.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_0435f tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_0435f tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_0435f tr {
+  font-size: 10px;
+}
+#T_0435f th:nth-child(1) {
+  background-color: #FFF;
+  font-size: 12px;
+  text-align: left;
+}
+#T_0435f td {
+  padding: 4px;
+  font-size: 12px;
+}
+#T_0435f_row0_col0, #T_0435f_row0_col1, #T_0435f_row1_col0, #T_0435f_row1_col1, #T_0435f_row2_col1, #T_0435f_row3_col0, #T_0435f_row3_col1, #T_0435f_row4_col1, #T_0435f_row5_col1, #T_0435f_row6_col0, #T_0435f_row6_col1, #T_0435f_row7_col0, #T_0435f_row7_col1, #T_0435f_row8_col1, #T_0435f_row9_col0, #T_0435f_row9_col1, #T_0435f_row10_col0, #T_0435f_row11_col0, #T_0435f_row11_col1, #T_0435f_row12_col0, #T_0435f_row12_col1, #T_0435f_row13_col0, #T_0435f_row13_col1, #T_0435f_row13_col2, #T_0435f_row13_col3, #T_0435f_row14_col0, #T_0435f_row14_col1, #T_0435f_row15_col0, #T_0435f_row15_col1, #T_0435f_row16_col0, #T_0435f_row16_col1, #T_0435f_row17_col0, #T_0435f_row17_col1, #T_0435f_row18_col0 {
+  background-color: rgba(255,255,255, .5);
+  color: black;
+}
+#T_0435f_row0_col2 {
+  background-color: rgba(121,121,121, .5);
+  color: black;
+}
+#T_0435f_row0_col3, #T_0435f_row2_col2, #T_0435f_row10_col1 {
+  background-color: rgba(247,247,247, .5);
+  color: black;
+}
+#T_0435f_row1_col2 {
+  background-color: rgba(198,198,198, .5);
+  color: black;
+}
+#T_0435f_row1_col3, #T_0435f_row2_col0, #T_0435f_row2_col3 {
+  background-color: rgba(249,249,249, .5);
+  color: black;
+}
+#T_0435f_row3_col2, #T_0435f_row4_col0, #T_0435f_row9_col2 {
+  background-color: rgba(193,193,193, .5);
+  color: black;
+}
+#T_0435f_row3_col3, #T_0435f_row6_col3 {
+  background-color: rgba(251,251,251, .5);
+  color: black;
+}
+#T_0435f_row4_col2 {
+  background-color: rgba(208,208,208, .5);
+  color: black;
+}
+#T_0435f_row4_col3 {
+  background-color: rgba(226,226,226, .5);
+  color: black;
+}
+#T_0435f_row5_col0 {
+  background-color: rgba(188,188,188, .5);
+  color: black;
+}
+#T_0435f_row5_col2 {
+  background-color: rgba(224,82,6, .5);
+  color: black;
+}
+#T_0435f_row5_col3 {
+  background-color: rgba(67,67,67, .5);
+  color: black;
+}
+#T_0435f_row6_col2 {
+  background-color: rgba(115,115,115, .5);
+  color: black;
+}
+#T_0435f_row7_col2 {
+  background-color: rgba(203,203,203, .5);
+  color: black;
+}
+#T_0435f_row7_col3, #T_0435f_row9_col3, #T_0435f_row11_col3 {
+  background-color: rgba(248,248,248, .5);
+  color: black;
+}
+#T_0435f_row8_col0, #T_0435f_row12_col3 {
+  background-color: rgba(241,241,241, .5);
+  color: black;
+}
+#T_0435f_row8_col2 {
+  background-color: rgba(160,160,160, .5);
+  color: black;
+}
+#T_0435f_row8_col3, #T_0435f_row16_col3 {
+  background-color: rgba(236,236,236, .5);
+  color: black;
+}
+#T_0435f_row10_col2, #T_0435f_row16_col2, #T_0435f_row17_col2, #T_0435f_row18_col2, #T_0435f_row19_col2 {
+  background-color: rgba(127,39,4, .5);
+  color: black;
+}
+#T_0435f_row10_col3, #T_0435f_row15_col3 {
+  background-color: rgba(195,195,195, .5);
+  color: black;
+}
+#T_0435f_row11_col2, #T_0435f_row14_col3 {
+  background-color: rgba(244,244,244, .5);
+  color: black;
+}
+#T_0435f_row12_col2 {
+  background-color: rgba(253,179,115, .5);
+  color: black;
+}
+#T_0435f_row14_col2 {
+  background-color: rgba(253,197,144, .5);
+  color: black;
+}
+#T_0435f_row15_col2 {
+  background-color: rgba(161,52,3, .5);
+  color: black;
+}
+#T_0435f_row17_col3 {
+  background-color: rgba(170,170,170, .5);
+  color: black;
+}
+#T_0435f_row18_col1, #T_0435f_row19_col1 {
+  background-color: rgba(252,252,252, .5);
+  color: black;
+}
+#T_0435f_row18_col3 {
+  background-color: rgba(137,137,137, .5);
+  color: black;
+}
+#T_0435f_row19_col0 {
+  background-color: rgba(146,146,146, .5);
+  color: black;
+}
+#T_0435f_row19_col3 {
+  background-color: rgba(252,140,59, .5);
+  color: black;
+}
+</style>
+<table id="T_0435f">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_0435f_level0_col0" class="col_heading level0 col0" >Parc</th>
+      <th id="T_0435f_level0_col1" class="col_heading level0 col1" >Rivière</th>
+      <th id="T_0435f_level0_col2" class="col_heading level0 col2" >Lac</th>
+      <th id="T_0435f_level0_col3" class="col_heading level0 col3" >Cumulé</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_0435f_level0_row0" class="row_heading level0 row0" >Emballage Fast Food</th>
+      <td id="T_0435f_row0_col0" class="data row0 col0" >0,00</td>
+      <td id="T_0435f_row0_col1" class="data row0 col1" >0,00</td>
+      <td id="T_0435f_row0_col2" class="data row0 col2" >0,27</td>
+      <td id="T_0435f_row0_col3" class="data row0 col3" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_0435f_level0_row1" class="row_heading level0 row1" >Médical Conteneurs/Tubes/ Emballages</th>
+      <td id="T_0435f_row1_col0" class="data row1 col0" >0,00</td>
+      <td id="T_0435f_row1_col1" class="data row1 col1" >0,00</td>
+      <td id="T_0435f_row1_col2" class="data row1 col2" >0,15</td>
+      <td id="T_0435f_row1_col3" class="data row1 col3" >0,02</td>
+    </tr>
+    <tr>
+      <th id="T_0435f_level0_row2" class="row_heading level0 row2" >Bouchons De Bouteilles En Métal, Couvercles Et Tirettes</th>
+      <td id="T_0435f_row2_col0" class="data row2 col0" >0,02</td>
+      <td id="T_0435f_row2_col1" class="data row2 col1" >0,00</td>
+      <td id="T_0435f_row2_col2" class="data row2 col2" >0,03</td>
+      <td id="T_0435f_row2_col3" class="data row2 col3" >0,02</td>
+    </tr>
+    <tr>
+      <th id="T_0435f_level0_row3" class="row_heading level0 row3" >Tabac Emballages En Plastique</th>
+      <td id="T_0435f_row3_col0" class="data row3 col0" >0,00</td>
+      <td id="T_0435f_row3_col1" class="data row3 col1" >0,00</td>
+      <td id="T_0435f_row3_col2" class="data row3 col2" >0,16</td>
+      <td id="T_0435f_row3_col3" class="data row3 col3" >0,01</td>
+    </tr>
+    <tr>
+      <th id="T_0435f_level0_row4" class="row_heading level0 row4" >Mégots Et Filtres À Cigarettes</th>
+      <td id="T_0435f_row4_col0" class="data row4 col0" >0,16</td>
+      <td id="T_0435f_row4_col1" class="data row4 col1" >0,00</td>
+      <td id="T_0435f_row4_col2" class="data row4 col2" >0,13</td>
+      <td id="T_0435f_row4_col3" class="data row4 col3" >0,09</td>
+    </tr>
+    <tr>
+      <th id="T_0435f_level0_row5" class="row_heading level0 row5" >Emballages De Bonbons, De Snacks</th>
+      <td id="T_0435f_row5_col0" class="data row5 col0" >0,17</td>
+      <td id="T_0435f_row5_col1" class="data row5 col1" >0,00</td>
+      <td id="T_0435f_row5_col2" class="data row5 col2" >0,77</td>
+      <td id="T_0435f_row5_col3" class="data row5 col3" >0,35</td>
+    </tr>
+    <tr>
+      <th id="T_0435f_level0_row6" class="row_heading level0 row6" >Bâtonnets De Sucette</th>
+      <td id="T_0435f_row6_col0" class="data row6 col0" >0,00</td>
+      <td id="T_0435f_row6_col1" class="data row6 col1" >0,00</td>
+      <td id="T_0435f_row6_col2" class="data row6 col2" >0,28</td>
+      <td id="T_0435f_row6_col3" class="data row6 col3" >0,01</td>
+    </tr>
+    <tr>
+      <th id="T_0435f_level0_row7" class="row_heading level0 row7" >Jouets Et Faveurs De Fête</th>
+      <td id="T_0435f_row7_col0" class="data row7 col0" >0,00</td>
+      <td id="T_0435f_row7_col1" class="data row7 col1" >0,00</td>
+      <td id="T_0435f_row7_col2" class="data row7 col2" >0,14</td>
+      <td id="T_0435f_row7_col3" class="data row7 col3" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_0435f_level0_row8" class="row_heading level0 row8" >Gobelets, Couvercles, Mousse À Usage Unique Et Plastique Dur</th>
+      <td id="T_0435f_row8_col0" class="data row8 col0" >0,05</td>
+      <td id="T_0435f_row8_col1" class="data row8 col1" >0,00</td>
+      <td id="T_0435f_row8_col2" class="data row8 col2" >0,21</td>
+      <td id="T_0435f_row8_col3" class="data row8 col3" >0,07</td>
+    </tr>
+    <tr>
+      <th id="T_0435f_level0_row9" class="row_heading level0 row9" >Pailles Et Agitateurs</th>
+      <td id="T_0435f_row9_col0" class="data row9 col0" >0,00</td>
+      <td id="T_0435f_row9_col1" class="data row9 col1" >0,00</td>
+      <td id="T_0435f_row9_col2" class="data row9 col2" >0,16</td>
+      <td id="T_0435f_row9_col3" class="data row9 col3" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_0435f_level0_row10" class="row_heading level0 row10" >Bâche, Feuille Plastique Industrielle</th>
+      <td id="T_0435f_row10_col0" class="data row10 col0" >0,00</td>
+      <td id="T_0435f_row10_col1" class="data row10 col1" >0,03</td>
+      <td id="T_0435f_row10_col2" class="data row10 col2" >0,92</td>
+      <td id="T_0435f_row10_col3" class="data row10 col3" >0,15</td>
+    </tr>
+    <tr>
+      <th id="T_0435f_level0_row11" class="row_heading level0 row11" >Bouteilles À Boisson < = 0,5L</th>
+      <td id="T_0435f_row11_col0" class="data row11 col0" >0,00</td>
+      <td id="T_0435f_row11_col1" class="data row11 col1" >0,00</td>
+      <td id="T_0435f_row11_col2" class="data row11 col2" >0,04</td>
+      <td id="T_0435f_row11_col3" class="data row11 col3" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_0435f_level0_row12" class="row_heading level0 row12" >Cartouches De Fusil De Chasse</th>
+      <td id="T_0435f_row12_col0" class="data row12 col0" >0,00</td>
+      <td id="T_0435f_row12_col1" class="data row12 col1" >0,00</td>
+      <td id="T_0435f_row12_col2" class="data row12 col2" >0,61</td>
+      <td id="T_0435f_row12_col3" class="data row12 col3" >0,05</td>
+    </tr>
+    <tr>
+      <th id="T_0435f_level0_row13" class="row_heading level0 row13" >Brosse De Télésiège</th>
+      <td id="T_0435f_row13_col0" class="data row13 col0" >0,00</td>
+      <td id="T_0435f_row13_col1" class="data row13 col1" >0,00</td>
+      <td id="T_0435f_row13_col2" class="data row13 col2" >0,00</td>
+      <td id="T_0435f_row13_col3" class="data row13 col3" >0,00</td>
+    </tr>
+    <tr>
+      <th id="T_0435f_level0_row14" class="row_heading level0 row14" >Mousse De Plastique Pour L'Isolation Thermique</th>
+      <td id="T_0435f_row14_col0" class="data row14 col0" >0,00</td>
+      <td id="T_0435f_row14_col1" class="data row14 col1" >0,00</td>
+      <td id="T_0435f_row14_col2" class="data row14 col2" >0,58</td>
+      <td id="T_0435f_row14_col3" class="data row14 col3" >0,04</td>
+    </tr>
+    <tr>
+      <th id="T_0435f_level0_row15" class="row_heading level0 row15" >Déchets De Construction En Plastique</th>
+      <td id="T_0435f_row15_col0" class="data row15 col0" >0,00</td>
+      <td id="T_0435f_row15_col1" class="data row15 col1" >0,00</td>
+      <td id="T_0435f_row15_col2" class="data row15 col2" >0,85</td>
+      <td id="T_0435f_row15_col3" class="data row15 col3" >0,15</td>
+    </tr>
+    <tr>
+      <th id="T_0435f_level0_row16" class="row_heading level0 row16" >Coton-Tige</th>
+      <td id="T_0435f_row16_col0" class="data row16 col0" >0,00</td>
+      <td id="T_0435f_row16_col1" class="data row16 col1" >0,00</td>
+      <td id="T_0435f_row16_col2" class="data row16 col2" >1,25</td>
+      <td id="T_0435f_row16_col3" class="data row16 col3" >0,07</td>
+    </tr>
+    <tr>
+      <th id="T_0435f_level0_row17" class="row_heading level0 row17" >Couvercles En Plastique Bouteille:  G21, G22, G23, G24</th>
+      <td id="T_0435f_row17_col0" class="data row17 col0" >0,00</td>
+      <td id="T_0435f_row17_col1" class="data row17 col1" >0,00</td>
+      <td id="T_0435f_row17_col2" class="data row17 col2" >1,66</td>
+      <td id="T_0435f_row17_col3" class="data row17 col3" >0,20</td>
+    </tr>
+    <tr>
+      <th id="T_0435f_level0_row18" class="row_heading level0 row18" >Fragments De Polystyrène Expansé: G76, G81, G82, G83</th>
+      <td id="T_0435f_row18_col0" class="data row18 col0" >0,00</td>
+      <td id="T_0435f_row18_col1" class="data row18 col1" >0,01</td>
+      <td id="T_0435f_row18_col2" class="data row18 col2" >3,34</td>
+      <td id="T_0435f_row18_col3" class="data row18 col3" >0,24</td>
+    </tr>
+    <tr>
+      <th id="T_0435f_level0_row19" class="row_heading level0 row19" >Fragments De Plastique: G80, G79, G78, G75</th>
+      <td id="T_0435f_row19_col0" class="data row19 col0" >0,23</td>
+      <td id="T_0435f_row19_col1" class="data row19 col1" >0,01</td>
+      <td id="T_0435f_row19_col2" class="data row19 col2" >2,56</td>
+      <td id="T_0435f_row19_col3" class="data row19 col3" >0,68</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div class="section" id="alternate-object-groups">
+<h4>Alternate object groups<a class="headerlink" href="#alternate-object-groups" title="Permalink to this heading">#</a></h4>
+<p>If the column has other labeled values for object identification it can be used to aggregate results for each sample id. Here we consider `groupname, there is more than one object in a group. They represent use cases.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">a_cumulative_report</span><span class="p">(</span><span class="n">w_df</span><span class="p">[</span><span class="n">w_df</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">a_report</span><span class="o">.</span><span class="n">most_common</span><span class="o">.</span><span class="n">index</span><span class="p">)],</span> <span class="n">feature_name</span><span class="o">=</span><span class="s1">&#39;feature_type&#39;</span><span class="p">,</span> <span class="n">object_column</span><span class="o">=</span><span class="s1">&#39;groupname&#39;</span><span class="p">)</span>
+<span class="n">translated_and_style_for_display</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">a_report</span><span class="o">.</span><span class="n">lang_maps</span><span class="p">[</span><span class="n">a_report</span><span class="o">.</span><span class="n">language</span><span class="p">],</span> <span class="n">a_report</span><span class="o">.</span><span class="n">language</span><span class="p">,</span> <span class="n">gradient</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For example the different use cases are found at different densitiies depending on the feature type.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_40a03 tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_40a03 tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_40a03 tr {
+  font-size: 10px;
+}
+#T_40a03 th:nth-child(1) {
+  background-color: #FFF;
+  font-size: 12px;
+  text-align: left;
+}
+#T_40a03 td {
+  padding: 4px;
+  font-size: 12px;
+}
+#T_40a03_row0_col0, #T_40a03_row9_col0, #T_40a03_row9_col3 {
+  background-color: rgba(249,249,249, .5);
+  color: black;
+}
+#T_40a03_row0_col1, #T_40a03_row3_col0, #T_40a03_row7_col1 {
+  background-color: rgba(247,247,247, .5);
+  color: black;
+}
+#T_40a03_row0_col2, #T_40a03_row1_col2, #T_40a03_row1_col3, #T_40a03_row2_col2, #T_40a03_row2_col3, #T_40a03_row6_col2, #T_40a03_row7_col2, #T_40a03_row10_col2 {
+  background-color: rgba(127,39,4, .5);
+  color: black;
+}
+#T_40a03_row0_col3 {
+  background-color: rgba(143,143,143, .5);
+  color: black;
+}
+#T_40a03_row1_col0 {
+  background-color: rgba(128,128,128, .5);
+  color: black;
+}
+#T_40a03_row1_col1, #T_40a03_row4_col1, #T_40a03_row5_col1, #T_40a03_row6_col1, #T_40a03_row10_col1 {
+  background-color: rgba(252,252,252, .5);
+  color: black;
+}
+#T_40a03_row2_col0 {
+  background-color: rgba(253,197,144, .5);
+  color: black;
+}
+#T_40a03_row2_col1 {
+  background-color: rgba(240,240,240, .5);
+  color: black;
+}
+#T_40a03_row3_col1, #T_40a03_row8_col1, #T_40a03_row9_col1, #T_40a03_row10_col0 {
+  background-color: rgba(255,255,255, .5);
+  color: black;
+}
+#T_40a03_row3_col2 {
+  background-color: rgba(253,216,179, .5);
+  color: black;
+}
+#T_40a03_row3_col3 {
+  background-color: rgba(232,232,232, .5);
+  color: black;
+}
+#T_40a03_row4_col0 {
+  background-color: rgba(213,213,213, .5);
+  color: black;
+}
+#T_40a03_row4_col2 {
+  background-color: rgba(253,179,115, .5);
+  color: black;
+}
+#T_40a03_row4_col3 {
+  background-color: rgba(160,160,160, .5);
+  color: black;
+}
+#T_40a03_row5_col0 {
+  background-color: rgba(234,234,234, .5);
+  color: black;
+}
+#T_40a03_row5_col2 {
+  background-color: rgba(79,79,79, .5);
+  color: black;
+}
+#T_40a03_row5_col3 {
+  background-color: rgba(203,203,203, .5);
+  color: black;
+}
+#T_40a03_row6_col0 {
+  background-color: rgba(146,146,146, .5);
+  color: black;
+}
+#T_40a03_row6_col3 {
+  background-color: rgba(252,140,59, .5);
+  color: black;
+}
+#T_40a03_row7_col0 {
+  background-color: rgba(218,218,218, .5);
+  color: black;
+}
+#T_40a03_row7_col3 {
+  background-color: rgba(48,48,48, .5);
+  color: black;
+}
+#T_40a03_row8_col0 {
+  background-color: rgba(181,181,181, .5);
+  color: black;
+}
+#T_40a03_row8_col2 {
+  background-color: rgba(115,115,115, .5);
+  color: black;
+}
+#T_40a03_row8_col3 {
+  background-color: rgba(167,167,167, .5);
+  color: black;
+}
+#T_40a03_row9_col2 {
+  background-color: rgba(238,238,238, .5);
+  color: black;
+}
+#T_40a03_row10_col3 {
+  background-color: rgba(131,131,131, .5);
+  color: black;
+}
+</style>
+<table id="T_40a03">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_40a03_level0_col0" class="col_heading level0 col0" >Parc</th>
+      <th id="T_40a03_level0_col1" class="col_heading level0 col1" >Rivière</th>
+      <th id="T_40a03_level0_col2" class="col_heading level0 col2" >Lac</th>
+      <th id="T_40a03_level0_col3" class="col_heading level0 col3" >Cumulé</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_40a03_level0_row0" class="row_heading level0 row0" >Agriculture</th>
+      <td id="T_40a03_row0_col0" class="data row0 col0" >0,02</td>
+      <td id="T_40a03_row0_col1" class="data row0 col1" >0,03</td>
+      <td id="T_40a03_row0_col2" class="data row0 col2" >0,96</td>
+      <td id="T_40a03_row0_col3" class="data row0 col3" >0,23</td>
+    </tr>
+    <tr>
+      <th id="T_40a03_level0_row1" class="row_heading level0 row1" >Nourriture Et Boissons</th>
+      <td id="T_40a03_row1_col0" class="data row1 col0" >0,26</td>
+      <td id="T_40a03_row1_col1" class="data row1 col1" >0,01</td>
+      <td id="T_40a03_row1_col2" class="data row1 col2" >3,14</td>
+      <td id="T_40a03_row1_col3" class="data row1 col3" >1,02</td>
+    </tr>
+    <tr>
+      <th id="T_40a03_level0_row2" class="row_heading level0 row2" >Infrastructures</th>
+      <td id="T_40a03_row2_col0" class="data row2 col0" >0,58</td>
+      <td id="T_40a03_row2_col1" class="data row2 col1" >0,06</td>
+      <td id="T_40a03_row2_col2" class="data row2 col2" >5,72</td>
+      <td id="T_40a03_row2_col3" class="data row2 col3" >2,16</td>
+    </tr>
+    <tr>
+      <th id="T_40a03_level0_row3" class="row_heading level0 row3" >Micro-Plastiques (< 5Mm)</th>
+      <td id="T_40a03_row3_col0" class="data row3 col0" >0,03</td>
+      <td id="T_40a03_row3_col1" class="data row3 col1" >0,00</td>
+      <td id="T_40a03_row3_col2" class="data row3 col2" >0,54</td>
+      <td id="T_40a03_row3_col3" class="data row3 col3" >0,07</td>
+    </tr>
+    <tr>
+      <th id="T_40a03_level0_row4" class="row_heading level0 row4" >Emballage Non Alimentaire</th>
+      <td id="T_40a03_row4_col0" class="data row4 col0" >0,12</td>
+      <td id="T_40a03_row4_col1" class="data row4 col1" >0,01</td>
+      <td id="T_40a03_row4_col2" class="data row4 col2" >0,61</td>
+      <td id="T_40a03_row4_col3" class="data row4 col3" >0,21</td>
+    </tr>
+    <tr>
+      <th id="T_40a03_level0_row5" class="row_heading level0 row5" >Articles Personnels</th>
+      <td id="T_40a03_row5_col0" class="data row5 col0" >0,07</td>
+      <td id="T_40a03_row5_col1" class="data row5 col1" >0,01</td>
+      <td id="T_40a03_row5_col2" class="data row5 col2" >0,34</td>
+      <td id="T_40a03_row5_col3" class="data row5 col3" >0,14</td>
+    </tr>
+    <tr>
+      <th id="T_40a03_level0_row6" class="row_heading level0 row6" >Morceaux De Plastique</th>
+      <td id="T_40a03_row6_col0" class="data row6 col0" >0,23</td>
+      <td id="T_40a03_row6_col1" class="data row6 col1" >0,01</td>
+      <td id="T_40a03_row6_col2" class="data row6 col2" >2,56</td>
+      <td id="T_40a03_row6_col3" class="data row6 col3" >0,68</td>
+    </tr>
+    <tr>
+      <th id="T_40a03_level0_row7" class="row_heading level0 row7" >Loisirs</th>
+      <td id="T_40a03_row7_col0" class="data row7 col0" >0,11</td>
+      <td id="T_40a03_row7_col1" class="data row7 col1" >0,03</td>
+      <td id="T_40a03_row7_col2" class="data row7 col2" >0,99</td>
+      <td id="T_40a03_row7_col3" class="data row7 col3" >0,38</td>
+    </tr>
+    <tr>
+      <th id="T_40a03_level0_row8" class="row_heading level0 row8" >Tabac</th>
+      <td id="T_40a03_row8_col0" class="data row8 col0" >0,18</td>
+      <td id="T_40a03_row8_col1" class="data row8 col1" >0,00</td>
+      <td id="T_40a03_row8_col2" class="data row8 col2" >0,28</td>
+      <td id="T_40a03_row8_col3" class="data row8 col3" >0,20</td>
+    </tr>
+    <tr>
+      <th id="T_40a03_level0_row9" class="row_heading level0 row9" >Non Classé</th>
+      <td id="T_40a03_row9_col0" class="data row9 col0" >0,02</td>
+      <td id="T_40a03_row9_col1" class="data row9 col1" >0,00</td>
+      <td id="T_40a03_row9_col2" class="data row9 col2" >0,06</td>
+      <td id="T_40a03_row9_col3" class="data row9 col3" >0,02</td>
+    </tr>
+    <tr>
+      <th id="T_40a03_level0_row10" class="row_heading level0 row10" >Eaux Usées</th>
+      <td id="T_40a03_row10_col0" class="data row10 col0" >0,00</td>
+      <td id="T_40a03_row10_col1" class="data row10 col1" >0,01</td>
+      <td id="T_40a03_row10_col2" class="data row10 col2" >1,44</td>
+      <td id="T_40a03_row10_col3" class="data row10 col3" >0,26</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div class="section" id="by-survey-area-or-parent-boundary">
+<h4>By Survey area or <code class="docutils literal notranslate"><span class="pre">parent_boundary</span></code><a class="headerlink" href="#by-survey-area-or-parent-boundary" title="Permalink to this heading">#</a></h4>
+<p>There are two parent boundaries in the Valais, the <em>Alpes and Jura</em> and the <em>Rhône</em> river basin.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_6b8e7 tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_6b8e7 tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_6b8e7 tr {
+  font-size: 10px;
+}
+#T_6b8e7 th:nth-child(1) {
+  background-color: #FFF;
+  font-size: 12px;
+  text-align: left;
+}
+#T_6b8e7 td {
+  padding: 4px;
+  font-size: 12px;
+}
+#T_6b8e7_row0_col0, #T_6b8e7_row1_col0, #T_6b8e7_row3_col0, #T_6b8e7_row6_col0, #T_6b8e7_row7_col0, #T_6b8e7_row9_col0, #T_6b8e7_row10_col0, #T_6b8e7_row11_col0, #T_6b8e7_row12_col0, #T_6b8e7_row13_col0, #T_6b8e7_row13_col1, #T_6b8e7_row13_col2, #T_6b8e7_row14_col0, #T_6b8e7_row15_col0, #T_6b8e7_row16_col0, #T_6b8e7_row17_col0, #T_6b8e7_row18_col0 {
+  background-color: rgba(255,255,255, .5);
+  color: black;
+}
+#T_6b8e7_row0_col1 {
+  background-color: rgba(181,181,181, .5);
+  color: black;
+}
+#T_6b8e7_row0_col2 {
+  background-color: rgba(247,247,247, .5);
+  color: black;
+}
+#T_6b8e7_row1_col1, #T_6b8e7_row6_col1, #T_6b8e7_row8_col1, #T_6b8e7_row9_col1 {
+  background-color: rgba(218,218,218, .5);
+  color: black;
+}
+#T_6b8e7_row1_col2, #T_6b8e7_row2_col0, #T_6b8e7_row2_col1, #T_6b8e7_row2_col2 {
+  background-color: rgba(249,249,249, .5);
+  color: black;
+}
+#T_6b8e7_row3_col1 {
+  background-color: rgba(208,208,208, .5);
+  color: black;
+}
+#T_6b8e7_row3_col2, #T_6b8e7_row6_col2 {
+  background-color: rgba(251,251,251, .5);
+  color: black;
+}
+#T_6b8e7_row4_col0 {
+  background-color: rgba(193,193,193, .5);
+  color: black;
+}
+#T_6b8e7_row4_col1 {
+  background-color: rgba(238,238,238, .5);
+  color: black;
+}
+#T_6b8e7_row4_col2, #T_6b8e7_row7_col1 {
+  background-color: rgba(226,226,226, .5);
+  color: black;
+}
+#T_6b8e7_row5_col0 {
+  background-color: rgba(188,188,188, .5);
+  color: black;
+}
+#T_6b8e7_row5_col1 {
+  background-color: rgba(254,231,209, .5);
+  color: black;
+}
+#T_6b8e7_row5_col2 {
+  background-color: rgba(67,67,67, .5);
+  color: black;
+}
+#T_6b8e7_row7_col2, #T_6b8e7_row9_col2, #T_6b8e7_row11_col2 {
+  background-color: rgba(248,248,248, .5);
+  color: black;
+}
+#T_6b8e7_row8_col0, #T_6b8e7_row12_col2 {
+  background-color: rgba(241,241,241, .5);
+  color: black;
+}
+#T_6b8e7_row8_col2, #T_6b8e7_row16_col2 {
+  background-color: rgba(236,236,236, .5);
+  color: black;
+}
+#T_6b8e7_row10_col1, #T_6b8e7_row12_col1 {
+  background-color: rgba(253,220,187, .5);
+  color: black;
+}
+#T_6b8e7_row10_col2, #T_6b8e7_row15_col2 {
+  background-color: rgba(195,195,195, .5);
+  color: black;
+}
+#T_6b8e7_row11_col1, #T_6b8e7_row14_col2 {
+  background-color: rgba(244,244,244, .5);
+  color: black;
+}
+#T_6b8e7_row14_col1 {
+  background-color: rgba(115,115,115, .5);
+  color: black;
+}
+#T_6b8e7_row15_col1 {
+  background-color: rgba(6,6,6, .5);
+  color: black;
+}
+#T_6b8e7_row16_col1 {
+  background-color: rgba(251,137,56, .5);
+  color: black;
+}
+#T_6b8e7_row17_col1, #T_6b8e7_row18_col1, #T_6b8e7_row19_col1 {
+  background-color: rgba(127,39,4, .5);
+  color: black;
+}
+#T_6b8e7_row17_col2 {
+  background-color: rgba(170,170,170, .5);
+  color: black;
+}
+#T_6b8e7_row18_col2 {
+  background-color: rgba(137,137,137, .5);
+  color: black;
+}
+#T_6b8e7_row19_col0 {
+  background-color: rgba(146,146,146, .5);
+  color: black;
+}
+#T_6b8e7_row19_col2 {
+  background-color: rgba(252,140,59, .5);
+  color: black;
+}
+</style>
+<table id="T_6b8e7">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_6b8e7_level0_col0" class="col_heading level0 col0" >Alpes Et Jura</th>
+      <th id="T_6b8e7_level0_col1" class="col_heading level0 col1" >Rhône</th>
+      <th id="T_6b8e7_level0_col2" class="col_heading level0 col2" >Cumulé</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_6b8e7_level0_row0" class="row_heading level0 row0" >Emballage Fast Food</th>
+      <td id="T_6b8e7_row0_col0" class="data row0 col0" >0,00</td>
+      <td id="T_6b8e7_row0_col1" class="data row0 col1" >0,18</td>
+      <td id="T_6b8e7_row0_col2" class="data row0 col2" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_6b8e7_level0_row1" class="row_heading level0 row1" >Médical Conteneurs/Tubes/ Emballages</th>
+      <td id="T_6b8e7_row1_col0" class="data row1 col0" >0,00</td>
+      <td id="T_6b8e7_row1_col1" class="data row1 col1" >0,11</td>
+      <td id="T_6b8e7_row1_col2" class="data row1 col2" >0,02</td>
+    </tr>
+    <tr>
+      <th id="T_6b8e7_level0_row2" class="row_heading level0 row2" >Bouchons De Bouteilles En Métal, Couvercles Et Tirettes</th>
+      <td id="T_6b8e7_row2_col0" class="data row2 col0" >0,02</td>
+      <td id="T_6b8e7_row2_col1" class="data row2 col1" >0,02</td>
+      <td id="T_6b8e7_row2_col2" class="data row2 col2" >0,02</td>
+    </tr>
+    <tr>
+      <th id="T_6b8e7_level0_row3" class="row_heading level0 row3" >Tabac Emballages En Plastique</th>
+      <td id="T_6b8e7_row3_col0" class="data row3 col0" >0,00</td>
+      <td id="T_6b8e7_row3_col1" class="data row3 col1" >0,13</td>
+      <td id="T_6b8e7_row3_col2" class="data row3 col2" >0,01</td>
+    </tr>
+    <tr>
+      <th id="T_6b8e7_level0_row4" class="row_heading level0 row4" >Mégots Et Filtres À Cigarettes</th>
+      <td id="T_6b8e7_row4_col0" class="data row4 col0" >0,16</td>
+      <td id="T_6b8e7_row4_col1" class="data row4 col1" >0,06</td>
+      <td id="T_6b8e7_row4_col2" class="data row4 col2" >0,09</td>
+    </tr>
+    <tr>
+      <th id="T_6b8e7_level0_row5" class="row_heading level0 row5" >Emballages De Bonbons, De Snacks</th>
+      <td id="T_6b8e7_row5_col0" class="data row5 col0" >0,17</td>
+      <td id="T_6b8e7_row5_col1" class="data row5 col1" >0,50</td>
+      <td id="T_6b8e7_row5_col2" class="data row5 col2" >0,35</td>
+    </tr>
+    <tr>
+      <th id="T_6b8e7_level0_row6" class="row_heading level0 row6" >Bâtonnets De Sucette</th>
+      <td id="T_6b8e7_row6_col0" class="data row6 col0" >0,00</td>
+      <td id="T_6b8e7_row6_col1" class="data row6 col1" >0,11</td>
+      <td id="T_6b8e7_row6_col2" class="data row6 col2" >0,01</td>
+    </tr>
+    <tr>
+      <th id="T_6b8e7_level0_row7" class="row_heading level0 row7" >Jouets Et Faveurs De Fête</th>
+      <td id="T_6b8e7_row7_col0" class="data row7 col0" >0,00</td>
+      <td id="T_6b8e7_row7_col1" class="data row7 col1" >0,09</td>
+      <td id="T_6b8e7_row7_col2" class="data row7 col2" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_6b8e7_level0_row8" class="row_heading level0 row8" >Gobelets, Couvercles, Mousse À Usage Unique Et Plastique Dur</th>
+      <td id="T_6b8e7_row8_col0" class="data row8 col0" >0,05</td>
+      <td id="T_6b8e7_row8_col1" class="data row8 col1" >0,11</td>
+      <td id="T_6b8e7_row8_col2" class="data row8 col2" >0,07</td>
+    </tr>
+    <tr>
+      <th id="T_6b8e7_level0_row9" class="row_heading level0 row9" >Pailles Et Agitateurs</th>
+      <td id="T_6b8e7_row9_col0" class="data row9 col0" >0,00</td>
+      <td id="T_6b8e7_row9_col1" class="data row9 col1" >0,11</td>
+      <td id="T_6b8e7_row9_col2" class="data row9 col2" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_6b8e7_level0_row10" class="row_heading level0 row10" >Bâche, Feuille Plastique Industrielle</th>
+      <td id="T_6b8e7_row10_col0" class="data row10 col0" >0,00</td>
+      <td id="T_6b8e7_row10_col1" class="data row10 col1" >0,53</td>
+      <td id="T_6b8e7_row10_col2" class="data row10 col2" >0,15</td>
+    </tr>
+    <tr>
+      <th id="T_6b8e7_level0_row11" class="row_heading level0 row11" >Bouteilles À Boisson < = 0,5L</th>
+      <td id="T_6b8e7_row11_col0" class="data row11 col0" >0,00</td>
+      <td id="T_6b8e7_row11_col1" class="data row11 col1" >0,04</td>
+      <td id="T_6b8e7_row11_col2" class="data row11 col2" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_6b8e7_level0_row12" class="row_heading level0 row12" >Cartouches De Fusil De Chasse</th>
+      <td id="T_6b8e7_row12_col0" class="data row12 col0" >0,00</td>
+      <td id="T_6b8e7_row12_col1" class="data row12 col1" >0,53</td>
+      <td id="T_6b8e7_row12_col2" class="data row12 col2" >0,05</td>
+    </tr>
+    <tr>
+      <th id="T_6b8e7_level0_row13" class="row_heading level0 row13" >Brosse De Télésiège</th>
+      <td id="T_6b8e7_row13_col0" class="data row13 col0" >0,00</td>
+      <td id="T_6b8e7_row13_col1" class="data row13 col1" >0,00</td>
+      <td id="T_6b8e7_row13_col2" class="data row13 col2" >0,00</td>
+    </tr>
+    <tr>
+      <th id="T_6b8e7_level0_row14" class="row_heading level0 row14" >Mousse De Plastique Pour L'Isolation Thermique</th>
+      <td id="T_6b8e7_row14_col0" class="data row14 col0" >0,00</td>
+      <td id="T_6b8e7_row14_col1" class="data row14 col1" >0,28</td>
+      <td id="T_6b8e7_row14_col2" class="data row14 col2" >0,04</td>
+    </tr>
+    <tr>
+      <th id="T_6b8e7_level0_row15" class="row_heading level0 row15" >Déchets De Construction En Plastique</th>
+      <td id="T_6b8e7_row15_col0" class="data row15 col0" >0,00</td>
+      <td id="T_6b8e7_row15_col1" class="data row15 col1" >0,44</td>
+      <td id="T_6b8e7_row15_col2" class="data row15 col2" >0,15</td>
+    </tr>
+    <tr>
+      <th id="T_6b8e7_level0_row16" class="row_heading level0 row16" >Coton-Tige</th>
+      <td id="T_6b8e7_row16_col0" class="data row16 col0" >0,00</td>
+      <td id="T_6b8e7_row16_col1" class="data row16 col1" >0,68</td>
+      <td id="T_6b8e7_row16_col2" class="data row16 col2" >0,07</td>
+    </tr>
+    <tr>
+      <th id="T_6b8e7_level0_row17" class="row_heading level0 row17" >Couvercles En Plastique Bouteille:  G21, G22, G23, G24</th>
+      <td id="T_6b8e7_row17_col0" class="data row17 col0" >0,00</td>
+      <td id="T_6b8e7_row17_col1" class="data row17 col1" >0,96</td>
+      <td id="T_6b8e7_row17_col2" class="data row17 col2" >0,20</td>
+    </tr>
+    <tr>
+      <th id="T_6b8e7_level0_row18" class="row_heading level0 row18" >Fragments De Polystyrène Expansé: G76, G81, G82, G83</th>
+      <td id="T_6b8e7_row18_col0" class="data row18 col0" >0,00</td>
+      <td id="T_6b8e7_row18_col1" class="data row18 col1" >1,06</td>
+      <td id="T_6b8e7_row18_col2" class="data row18 col2" >0,24</td>
+    </tr>
+    <tr>
+      <th id="T_6b8e7_level0_row19" class="row_heading level0 row19" >Fragments De Plastique: G80, G79, G78, G75</th>
+      <td id="T_6b8e7_row19_col0" class="data row19 col0" >0,23</td>
+      <td id="T_6b8e7_row19_col1" class="data row19 col1" >2,04</td>
+      <td id="T_6b8e7_row19_col2" class="data row19 col2" >0,68</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div class="section" id="by-feature-name">
+<h4>By feature name:<a class="headerlink" href="#by-feature-name" title="Permalink to this heading">#</a></h4>
+<p>There are three different features with samples: Tha Alpes, the Rhône river and Lake Geneva.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_765a9 tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_765a9 tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_765a9 tr {
+  font-size: 10px;
+}
+#T_765a9 th:nth-child(1) {
+  background-color: #FFF;
+  font-size: 12px;
+  text-align: left;
+}
+#T_765a9 td {
+  padding: 4px;
+  font-size: 12px;
+}
+#T_765a9_row0_col0, #T_765a9_row0_col1, #T_765a9_row1_col0, #T_765a9_row1_col1, #T_765a9_row2_col1, #T_765a9_row3_col0, #T_765a9_row3_col1, #T_765a9_row4_col1, #T_765a9_row5_col1, #T_765a9_row6_col0, #T_765a9_row6_col1, #T_765a9_row7_col0, #T_765a9_row7_col1, #T_765a9_row8_col1, #T_765a9_row9_col0, #T_765a9_row9_col1, #T_765a9_row10_col0, #T_765a9_row11_col0, #T_765a9_row11_col1, #T_765a9_row12_col0, #T_765a9_row12_col1, #T_765a9_row13_col0, #T_765a9_row13_col1, #T_765a9_row13_col2, #T_765a9_row13_col3, #T_765a9_row14_col0, #T_765a9_row14_col1, #T_765a9_row15_col0, #T_765a9_row15_col1, #T_765a9_row16_col0, #T_765a9_row16_col1, #T_765a9_row17_col0, #T_765a9_row17_col1, #T_765a9_row18_col0 {
+  background-color: rgba(255,255,255, .5);
+  color: black;
+}
+#T_765a9_row0_col2 {
+  background-color: rgba(121,121,121, .5);
+  color: black;
+}
+#T_765a9_row0_col3, #T_765a9_row2_col2, #T_765a9_row10_col1 {
+  background-color: rgba(247,247,247, .5);
+  color: black;
+}
+#T_765a9_row1_col2 {
+  background-color: rgba(198,198,198, .5);
+  color: black;
+}
+#T_765a9_row1_col3, #T_765a9_row2_col0, #T_765a9_row2_col3 {
+  background-color: rgba(249,249,249, .5);
+  color: black;
+}
+#T_765a9_row3_col2, #T_765a9_row4_col0, #T_765a9_row9_col2 {
+  background-color: rgba(193,193,193, .5);
+  color: black;
+}
+#T_765a9_row3_col3, #T_765a9_row6_col3 {
+  background-color: rgba(251,251,251, .5);
+  color: black;
+}
+#T_765a9_row4_col2 {
+  background-color: rgba(208,208,208, .5);
+  color: black;
+}
+#T_765a9_row4_col3 {
+  background-color: rgba(226,226,226, .5);
+  color: black;
+}
+#T_765a9_row5_col0 {
+  background-color: rgba(188,188,188, .5);
+  color: black;
+}
+#T_765a9_row5_col2 {
+  background-color: rgba(224,82,6, .5);
+  color: black;
+}
+#T_765a9_row5_col3 {
+  background-color: rgba(67,67,67, .5);
+  color: black;
+}
+#T_765a9_row6_col2 {
+  background-color: rgba(115,115,115, .5);
+  color: black;
+}
+#T_765a9_row7_col2 {
+  background-color: rgba(203,203,203, .5);
+  color: black;
+}
+#T_765a9_row7_col3, #T_765a9_row9_col3, #T_765a9_row11_col3 {
+  background-color: rgba(248,248,248, .5);
+  color: black;
+}
+#T_765a9_row8_col0, #T_765a9_row12_col3 {
+  background-color: rgba(241,241,241, .5);
+  color: black;
+}
+#T_765a9_row8_col2 {
+  background-color: rgba(160,160,160, .5);
+  color: black;
+}
+#T_765a9_row8_col3, #T_765a9_row16_col3 {
+  background-color: rgba(236,236,236, .5);
+  color: black;
+}
+#T_765a9_row10_col2, #T_765a9_row16_col2, #T_765a9_row17_col2, #T_765a9_row18_col2, #T_765a9_row19_col2 {
+  background-color: rgba(127,39,4, .5);
+  color: black;
+}
+#T_765a9_row10_col3, #T_765a9_row15_col3 {
+  background-color: rgba(195,195,195, .5);
+  color: black;
+}
+#T_765a9_row11_col2, #T_765a9_row14_col3 {
+  background-color: rgba(244,244,244, .5);
+  color: black;
+}
+#T_765a9_row12_col2 {
+  background-color: rgba(253,179,115, .5);
+  color: black;
+}
+#T_765a9_row14_col2 {
+  background-color: rgba(253,197,144, .5);
+  color: black;
+}
+#T_765a9_row15_col2 {
+  background-color: rgba(161,52,3, .5);
+  color: black;
+}
+#T_765a9_row17_col3 {
+  background-color: rgba(170,170,170, .5);
+  color: black;
+}
+#T_765a9_row18_col1, #T_765a9_row19_col1 {
+  background-color: rgba(252,252,252, .5);
+  color: black;
+}
+#T_765a9_row18_col3 {
+  background-color: rgba(137,137,137, .5);
+  color: black;
+}
+#T_765a9_row19_col0 {
+  background-color: rgba(146,146,146, .5);
+  color: black;
+}
+#T_765a9_row19_col3 {
+  background-color: rgba(252,140,59, .5);
+  color: black;
+}
+</style>
+<table id="T_765a9">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_765a9_level0_col0" class="col_heading level0 col0" >Alpes-Valaisannes</th>
+      <th id="T_765a9_level0_col1" class="col_heading level0 col1" >Rhône</th>
+      <th id="T_765a9_level0_col2" class="col_heading level0 col2" >Lac-Leman</th>
+      <th id="T_765a9_level0_col3" class="col_heading level0 col3" >Cumulé</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_765a9_level0_row0" class="row_heading level0 row0" >Emballage Fast Food</th>
+      <td id="T_765a9_row0_col0" class="data row0 col0" >0,00</td>
+      <td id="T_765a9_row0_col1" class="data row0 col1" >0,00</td>
+      <td id="T_765a9_row0_col2" class="data row0 col2" >0,27</td>
+      <td id="T_765a9_row0_col3" class="data row0 col3" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_765a9_level0_row1" class="row_heading level0 row1" >Médical Conteneurs/Tubes/ Emballages</th>
+      <td id="T_765a9_row1_col0" class="data row1 col0" >0,00</td>
+      <td id="T_765a9_row1_col1" class="data row1 col1" >0,00</td>
+      <td id="T_765a9_row1_col2" class="data row1 col2" >0,15</td>
+      <td id="T_765a9_row1_col3" class="data row1 col3" >0,02</td>
+    </tr>
+    <tr>
+      <th id="T_765a9_level0_row2" class="row_heading level0 row2" >Bouchons De Bouteilles En Métal, Couvercles Et Tirettes</th>
+      <td id="T_765a9_row2_col0" class="data row2 col0" >0,02</td>
+      <td id="T_765a9_row2_col1" class="data row2 col1" >0,00</td>
+      <td id="T_765a9_row2_col2" class="data row2 col2" >0,03</td>
+      <td id="T_765a9_row2_col3" class="data row2 col3" >0,02</td>
+    </tr>
+    <tr>
+      <th id="T_765a9_level0_row3" class="row_heading level0 row3" >Tabac Emballages En Plastique</th>
+      <td id="T_765a9_row3_col0" class="data row3 col0" >0,00</td>
+      <td id="T_765a9_row3_col1" class="data row3 col1" >0,00</td>
+      <td id="T_765a9_row3_col2" class="data row3 col2" >0,16</td>
+      <td id="T_765a9_row3_col3" class="data row3 col3" >0,01</td>
+    </tr>
+    <tr>
+      <th id="T_765a9_level0_row4" class="row_heading level0 row4" >Mégots Et Filtres À Cigarettes</th>
+      <td id="T_765a9_row4_col0" class="data row4 col0" >0,16</td>
+      <td id="T_765a9_row4_col1" class="data row4 col1" >0,00</td>
+      <td id="T_765a9_row4_col2" class="data row4 col2" >0,13</td>
+      <td id="T_765a9_row4_col3" class="data row4 col3" >0,09</td>
+    </tr>
+    <tr>
+      <th id="T_765a9_level0_row5" class="row_heading level0 row5" >Emballages De Bonbons, De Snacks</th>
+      <td id="T_765a9_row5_col0" class="data row5 col0" >0,17</td>
+      <td id="T_765a9_row5_col1" class="data row5 col1" >0,00</td>
+      <td id="T_765a9_row5_col2" class="data row5 col2" >0,77</td>
+      <td id="T_765a9_row5_col3" class="data row5 col3" >0,35</td>
+    </tr>
+    <tr>
+      <th id="T_765a9_level0_row6" class="row_heading level0 row6" >Bâtonnets De Sucette</th>
+      <td id="T_765a9_row6_col0" class="data row6 col0" >0,00</td>
+      <td id="T_765a9_row6_col1" class="data row6 col1" >0,00</td>
+      <td id="T_765a9_row6_col2" class="data row6 col2" >0,28</td>
+      <td id="T_765a9_row6_col3" class="data row6 col3" >0,01</td>
+    </tr>
+    <tr>
+      <th id="T_765a9_level0_row7" class="row_heading level0 row7" >Jouets Et Faveurs De Fête</th>
+      <td id="T_765a9_row7_col0" class="data row7 col0" >0,00</td>
+      <td id="T_765a9_row7_col1" class="data row7 col1" >0,00</td>
+      <td id="T_765a9_row7_col2" class="data row7 col2" >0,14</td>
+      <td id="T_765a9_row7_col3" class="data row7 col3" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_765a9_level0_row8" class="row_heading level0 row8" >Gobelets, Couvercles, Mousse À Usage Unique Et Plastique Dur</th>
+      <td id="T_765a9_row8_col0" class="data row8 col0" >0,05</td>
+      <td id="T_765a9_row8_col1" class="data row8 col1" >0,00</td>
+      <td id="T_765a9_row8_col2" class="data row8 col2" >0,21</td>
+      <td id="T_765a9_row8_col3" class="data row8 col3" >0,07</td>
+    </tr>
+    <tr>
+      <th id="T_765a9_level0_row9" class="row_heading level0 row9" >Pailles Et Agitateurs</th>
+      <td id="T_765a9_row9_col0" class="data row9 col0" >0,00</td>
+      <td id="T_765a9_row9_col1" class="data row9 col1" >0,00</td>
+      <td id="T_765a9_row9_col2" class="data row9 col2" >0,16</td>
+      <td id="T_765a9_row9_col3" class="data row9 col3" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_765a9_level0_row10" class="row_heading level0 row10" >Bâche, Feuille Plastique Industrielle</th>
+      <td id="T_765a9_row10_col0" class="data row10 col0" >0,00</td>
+      <td id="T_765a9_row10_col1" class="data row10 col1" >0,03</td>
+      <td id="T_765a9_row10_col2" class="data row10 col2" >0,92</td>
+      <td id="T_765a9_row10_col3" class="data row10 col3" >0,15</td>
+    </tr>
+    <tr>
+      <th id="T_765a9_level0_row11" class="row_heading level0 row11" >Bouteilles À Boisson < = 0,5L</th>
+      <td id="T_765a9_row11_col0" class="data row11 col0" >0,00</td>
+      <td id="T_765a9_row11_col1" class="data row11 col1" >0,00</td>
+      <td id="T_765a9_row11_col2" class="data row11 col2" >0,04</td>
+      <td id="T_765a9_row11_col3" class="data row11 col3" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_765a9_level0_row12" class="row_heading level0 row12" >Cartouches De Fusil De Chasse</th>
+      <td id="T_765a9_row12_col0" class="data row12 col0" >0,00</td>
+      <td id="T_765a9_row12_col1" class="data row12 col1" >0,00</td>
+      <td id="T_765a9_row12_col2" class="data row12 col2" >0,61</td>
+      <td id="T_765a9_row12_col3" class="data row12 col3" >0,05</td>
+    </tr>
+    <tr>
+      <th id="T_765a9_level0_row13" class="row_heading level0 row13" >Brosse De Télésiège</th>
+      <td id="T_765a9_row13_col0" class="data row13 col0" >0,00</td>
+      <td id="T_765a9_row13_col1" class="data row13 col1" >0,00</td>
+      <td id="T_765a9_row13_col2" class="data row13 col2" >0,00</td>
+      <td id="T_765a9_row13_col3" class="data row13 col3" >0,00</td>
+    </tr>
+    <tr>
+      <th id="T_765a9_level0_row14" class="row_heading level0 row14" >Mousse De Plastique Pour L'Isolation Thermique</th>
+      <td id="T_765a9_row14_col0" class="data row14 col0" >0,00</td>
+      <td id="T_765a9_row14_col1" class="data row14 col1" >0,00</td>
+      <td id="T_765a9_row14_col2" class="data row14 col2" >0,58</td>
+      <td id="T_765a9_row14_col3" class="data row14 col3" >0,04</td>
+    </tr>
+    <tr>
+      <th id="T_765a9_level0_row15" class="row_heading level0 row15" >Déchets De Construction En Plastique</th>
+      <td id="T_765a9_row15_col0" class="data row15 col0" >0,00</td>
+      <td id="T_765a9_row15_col1" class="data row15 col1" >0,00</td>
+      <td id="T_765a9_row15_col2" class="data row15 col2" >0,85</td>
+      <td id="T_765a9_row15_col3" class="data row15 col3" >0,15</td>
+    </tr>
+    <tr>
+      <th id="T_765a9_level0_row16" class="row_heading level0 row16" >Coton-Tige</th>
+      <td id="T_765a9_row16_col0" class="data row16 col0" >0,00</td>
+      <td id="T_765a9_row16_col1" class="data row16 col1" >0,00</td>
+      <td id="T_765a9_row16_col2" class="data row16 col2" >1,25</td>
+      <td id="T_765a9_row16_col3" class="data row16 col3" >0,07</td>
+    </tr>
+    <tr>
+      <th id="T_765a9_level0_row17" class="row_heading level0 row17" >Couvercles En Plastique Bouteille:  G21, G22, G23, G24</th>
+      <td id="T_765a9_row17_col0" class="data row17 col0" >0,00</td>
+      <td id="T_765a9_row17_col1" class="data row17 col1" >0,00</td>
+      <td id="T_765a9_row17_col2" class="data row17 col2" >1,66</td>
+      <td id="T_765a9_row17_col3" class="data row17 col3" >0,20</td>
+    </tr>
+    <tr>
+      <th id="T_765a9_level0_row18" class="row_heading level0 row18" >Fragments De Polystyrène Expansé: G76, G81, G82, G83</th>
+      <td id="T_765a9_row18_col0" class="data row18 col0" >0,00</td>
+      <td id="T_765a9_row18_col1" class="data row18 col1" >0,01</td>
+      <td id="T_765a9_row18_col2" class="data row18 col2" >3,34</td>
+      <td id="T_765a9_row18_col3" class="data row18 col3" >0,24</td>
+    </tr>
+    <tr>
+      <th id="T_765a9_level0_row19" class="row_heading level0 row19" >Fragments De Plastique: G80, G79, G78, G75</th>
+      <td id="T_765a9_row19_col0" class="data row19 col0" >0,23</td>
+      <td id="T_765a9_row19_col1" class="data row19 col1" >0,01</td>
+      <td id="T_765a9_row19_col2" class="data row19 col2" >2,56</td>
+      <td id="T_765a9_row19_col3" class="data row19 col3" >0,68</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div class="section" id="by-city">
+<h4>By city:<a class="headerlink" href="#by-city" title="Permalink to this heading">#</a></h4>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_e57b4 tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_e57b4 tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_e57b4 tr {
+  font-size: 10px;
+}
+#T_e57b4 th:nth-child(1) {
+  background-color: #FFF;
+  font-size: 12px;
+  text-align: left;
+}
+#T_e57b4 td {
+  padding: 4px;
+  font-size: 12px;
+}
+#T_e57b4_row0_col0, #T_e57b4_row0_col1, #T_e57b4_row0_col2, #T_e57b4_row0_col3, #T_e57b4_row0_col5, #T_e57b4_row0_col6, #T_e57b4_row0_col7, #T_e57b4_row0_col8, #T_e57b4_row0_col9, #T_e57b4_row1_col0, #T_e57b4_row1_col1, #T_e57b4_row1_col5, #T_e57b4_row1_col6, #T_e57b4_row1_col8, #T_e57b4_row1_col9, #T_e57b4_row2_col1, #T_e57b4_row2_col5, #T_e57b4_row2_col6, #T_e57b4_row2_col9, #T_e57b4_row3_col0, #T_e57b4_row3_col1, #T_e57b4_row3_col5, #T_e57b4_row3_col6, #T_e57b4_row3_col7, #T_e57b4_row3_col8, #T_e57b4_row3_col9, #T_e57b4_row4_col1, #T_e57b4_row4_col5, #T_e57b4_row4_col9, #T_e57b4_row5_col1, #T_e57b4_row5_col5, #T_e57b4_row6_col0, #T_e57b4_row6_col1, #T_e57b4_row6_col2, #T_e57b4_row6_col3, #T_e57b4_row6_col5, #T_e57b4_row6_col6, #T_e57b4_row6_col7, #T_e57b4_row6_col8, #T_e57b4_row6_col9, #T_e57b4_row7_col0, #T_e57b4_row7_col2, #T_e57b4_row7_col3, #T_e57b4_row7_col5, #T_e57b4_row7_col6, #T_e57b4_row7_col7, #T_e57b4_row7_col8, #T_e57b4_row7_col9, #T_e57b4_row8_col1, #T_e57b4_row8_col3, #T_e57b4_row8_col5, #T_e57b4_row8_col6, #T_e57b4_row8_col8, #T_e57b4_row9_col1, #T_e57b4_row9_col2, #T_e57b4_row9_col3, #T_e57b4_row9_col5, #T_e57b4_row9_col6, #T_e57b4_row9_col8, #T_e57b4_row9_col9, #T_e57b4_row10_col0, #T_e57b4_row10_col2, #T_e57b4_row10_col3, #T_e57b4_row10_col6, #T_e57b4_row10_col7, #T_e57b4_row10_col8, #T_e57b4_row10_col9, #T_e57b4_row11_col1, #T_e57b4_row11_col2, #T_e57b4_row11_col3, #T_e57b4_row11_col5, #T_e57b4_row11_col6, #T_e57b4_row11_col7, #T_e57b4_row11_col8, #T_e57b4_row12_col0, #T_e57b4_row12_col1, #T_e57b4_row12_col2, #T_e57b4_row12_col3, #T_e57b4_row12_col5, #T_e57b4_row12_col7, #T_e57b4_row12_col8, #T_e57b4_row12_col9, #T_e57b4_row13_col0, #T_e57b4_row13_col1, #T_e57b4_row13_col3, #T_e57b4_row13_col4, #T_e57b4_row13_col5, #T_e57b4_row13_col6, #T_e57b4_row13_col7, #T_e57b4_row13_col8, #T_e57b4_row13_col10, #T_e57b4_row14_col0, #T_e57b4_row14_col1, #T_e57b4_row14_col3, #T_e57b4_row14_col5, #T_e57b4_row14_col6, #T_e57b4_row14_col7, #T_e57b4_row14_col8, #T_e57b4_row14_col9, #T_e57b4_row15_col0, #T_e57b4_row15_col2, #T_e57b4_row15_col5, #T_e57b4_row15_col6, #T_e57b4_row15_col7, #T_e57b4_row15_col8, #T_e57b4_row15_col9, #T_e57b4_row16_col0, #T_e57b4_row16_col1, #T_e57b4_row16_col2, #T_e57b4_row16_col3, #T_e57b4_row16_col5, #T_e57b4_row16_col6, #T_e57b4_row16_col7, #T_e57b4_row16_col8, #T_e57b4_row16_col9, #T_e57b4_row17_col0, #T_e57b4_row17_col1, #T_e57b4_row17_col3, #T_e57b4_row17_col5, #T_e57b4_row17_col6, #T_e57b4_row17_col7, #T_e57b4_row17_col9, #T_e57b4_row18_col0, #T_e57b4_row18_col2, #T_e57b4_row18_col3, #T_e57b4_row18_col5, #T_e57b4_row18_col7, #T_e57b4_row18_col8, #T_e57b4_row18_col9, #T_e57b4_row19_col5 {
+  background-color: rgba(255,255,255, .5);
+  color: black;
+}
+#T_e57b4_row0_col4 {
+  background-color: rgba(121,121,121, .5);
+  color: black;
+}
+#T_e57b4_row0_col10, #T_e57b4_row1_col7, #T_e57b4_row2_col4, #T_e57b4_row8_col7 {
+  background-color: rgba(247,247,247, .5);
+  color: black;
+}
+#T_e57b4_row1_col2, #T_e57b4_row2_col7, #T_e57b4_row4_col6, #T_e57b4_row11_col4, #T_e57b4_row14_col10 {
+  background-color: rgba(244,244,244, .5);
+  color: black;
+}
+#T_e57b4_row1_col3, #T_e57b4_row3_col3 {
+  background-color: rgba(253,253,253, .5);
+  color: black;
+}
+#T_e57b4_row1_col4, #T_e57b4_row17_col2 {
+  background-color: rgba(198,198,198, .5);
+  color: black;
+}
+#T_e57b4_row1_col10, #T_e57b4_row2_col0, #T_e57b4_row2_col10, #T_e57b4_row5_col6, #T_e57b4_row7_col1, #T_e57b4_row9_col0, #T_e57b4_row11_col9, #T_e57b4_row12_col6, #T_e57b4_row18_col1, #T_e57b4_row18_col6, #T_e57b4_row19_col1 {
+  background-color: rgba(249,249,249, .5);
+  color: black;
+}
+#T_e57b4_row2_col2, #T_e57b4_row8_col0, #T_e57b4_row8_col9, #T_e57b4_row11_col0, #T_e57b4_row12_col10 {
+  background-color: rgba(241,241,241, .5);
+  color: black;
+}
+#T_e57b4_row2_col3, #T_e57b4_row3_col10, #T_e57b4_row6_col10 {
+  background-color: rgba(251,251,251, .5);
+  color: black;
+}
+#T_e57b4_row2_col8, #T_e57b4_row7_col4, #T_e57b4_row17_col8 {
+  background-color: rgba(203,203,203, .5);
+  color: black;
+}
+#T_e57b4_row3_col2 {
+  background-color: rgba(184,184,184, .5);
+  color: black;
+}
+#T_e57b4_row3_col4, #T_e57b4_row4_col0, #T_e57b4_row9_col4 {
+  background-color: rgba(193,193,193, .5);
+  color: black;
+}
+#T_e57b4_row4_col2, #T_e57b4_row4_col8, #T_e57b4_row5_col2, #T_e57b4_row10_col4, #T_e57b4_row13_col2, #T_e57b4_row13_col9, #T_e57b4_row16_col4, #T_e57b4_row17_col4, #T_e57b4_row18_col4, #T_e57b4_row19_col2, #T_e57b4_row19_col4 {
+  background-color: rgba(127,39,4, .5);
+  color: black;
+}
+#T_e57b4_row4_col3 {
+  background-color: rgba(243,243,243, .5);
+  color: black;
+}
+#T_e57b4_row4_col4 {
+  background-color: rgba(208,208,208, .5);
+  color: black;
+}
+#T_e57b4_row4_col7, #T_e57b4_row5_col8 {
+  background-color: rgba(140,140,140, .5);
+  color: black;
+}
+#T_e57b4_row4_col10, #T_e57b4_row5_col0 {
+  background-color: rgba(226,226,226, .5);
+  color: black;
+}
+#T_e57b4_row5_col3 {
+  background-color: rgba(240,240,240, .5);
+  color: black;
+}
+#T_e57b4_row5_col4 {
+  background-color: rgba(224,82,6, .5);
+  color: black;
+}
+#T_e57b4_row5_col7 {
+  background-color: rgba(188,188,188, .5);
+  color: black;
+}
+#T_e57b4_row5_col9, #T_e57b4_row10_col1, #T_e57b4_row19_col6 {
+  background-color: rgba(238,238,238, .5);
+  color: black;
+}
+#T_e57b4_row5_col10 {
+  background-color: rgba(67,67,67, .5);
+  color: black;
+}
+#T_e57b4_row6_col4, #T_e57b4_row19_col8 {
+  background-color: rgba(115,115,115, .5);
+  color: black;
+}
+#T_e57b4_row7_col10, #T_e57b4_row9_col10, #T_e57b4_row11_col10 {
+  background-color: rgba(248,248,248, .5);
+  color: black;
+}
+#T_e57b4_row8_col2, #T_e57b4_row8_col10, #T_e57b4_row16_col10 {
+  background-color: rgba(236,236,236, .5);
+  color: black;
+}
+#T_e57b4_row8_col4 {
+  background-color: rgba(160,160,160, .5);
+  color: black;
+}
+#T_e57b4_row9_col7, #T_e57b4_row14_col2, #T_e57b4_row19_col9 {
+  background-color: rgba(252,252,252, .5);
+  color: black;
+}
+#T_e57b4_row10_col5 {
+  background-color: rgba(103,103,103, .5);
+  color: black;
+}
+#T_e57b4_row10_col10, #T_e57b4_row15_col10 {
+  background-color: rgba(195,195,195, .5);
+  color: black;
+}
+#T_e57b4_row12_col4 {
+  background-color: rgba(253,179,115, .5);
+  color: black;
+}
+#T_e57b4_row14_col4 {
+  background-color: rgba(253,197,144, .5);
+  color: black;
+}
+#T_e57b4_row15_col1 {
+  background-color: rgba(230,230,230, .5);
+  color: black;
+}
+#T_e57b4_row15_col3 {
+  background-color: rgba(232,232,232, .5);
+  color: black;
+}
+#T_e57b4_row15_col4 {
+  background-color: rgba(161,52,3, .5);
+  color: black;
+}
+#T_e57b4_row17_col10 {
+  background-color: rgba(170,170,170, .5);
+  color: black;
+}
+#T_e57b4_row18_col10 {
+  background-color: rgba(137,137,137, .5);
+  color: black;
+}
+#T_e57b4_row19_col0 {
+  background-color: rgba(234,234,234, .5);
+  color: black;
+}
+#T_e57b4_row19_col3 {
+  background-color: rgba(218,218,218, .5);
+  color: black;
+}
+#T_e57b4_row19_col7 {
+  background-color: rgba(254,234,214, .5);
+  color: black;
+}
+#T_e57b4_row19_col10 {
+  background-color: rgba(252,140,59, .5);
+  color: black;
+}
+</style>
+<table id="T_e57b4">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_e57b4_level0_col0" class="col_heading level0 col0" >Lens</th>
+      <th id="T_e57b4_level0_col1" class="col_heading level0 col1" >Leuk</th>
+      <th id="T_e57b4_level0_col2" class="col_heading level0 col2" >Nendaz</th>
+      <th id="T_e57b4_level0_col3" class="col_heading level0 col3" >Riddes</th>
+      <th id="T_e57b4_level0_col4" class="col_heading level0 col4" >Saint-Gingolph</th>
+      <th id="T_e57b4_level0_col5" class="col_heading level0 col5" >Salgesch</th>
+      <th id="T_e57b4_level0_col6" class="col_heading level0 col6" >Sion</th>
+      <th id="T_e57b4_level0_col7" class="col_heading level0 col7" >Troistorrents</th>
+      <th id="T_e57b4_level0_col8" class="col_heading level0 col8" >Val De Bagnes</th>
+      <th id="T_e57b4_level0_col9" class="col_heading level0 col9" >Val-D'Illiez</th>
+      <th id="T_e57b4_level0_col10" class="col_heading level0 col10" >Cumulé</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_e57b4_level0_row0" class="row_heading level0 row0" >Emballage Fast Food</th>
+      <td id="T_e57b4_row0_col0" class="data row0 col0" >0,00</td>
+      <td id="T_e57b4_row0_col1" class="data row0 col1" >0,00</td>
+      <td id="T_e57b4_row0_col2" class="data row0 col2" >0,00</td>
+      <td id="T_e57b4_row0_col3" class="data row0 col3" >0,00</td>
+      <td id="T_e57b4_row0_col4" class="data row0 col4" >0,27</td>
+      <td id="T_e57b4_row0_col5" class="data row0 col5" >0,00</td>
+      <td id="T_e57b4_row0_col6" class="data row0 col6" >0,00</td>
+      <td id="T_e57b4_row0_col7" class="data row0 col7" >0,00</td>
+      <td id="T_e57b4_row0_col8" class="data row0 col8" >0,00</td>
+      <td id="T_e57b4_row0_col9" class="data row0 col9" >0,00</td>
+      <td id="T_e57b4_row0_col10" class="data row0 col10" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_e57b4_level0_row1" class="row_heading level0 row1" >Médical Conteneurs/Tubes/ Emballages</th>
+      <td id="T_e57b4_row1_col0" class="data row1 col0" >0,00</td>
+      <td id="T_e57b4_row1_col1" class="data row1 col1" >0,00</td>
+      <td id="T_e57b4_row1_col2" class="data row1 col2" >0,04</td>
+      <td id="T_e57b4_row1_col3" class="data row1 col3" >0,01</td>
+      <td id="T_e57b4_row1_col4" class="data row1 col4" >0,15</td>
+      <td id="T_e57b4_row1_col5" class="data row1 col5" >0,00</td>
+      <td id="T_e57b4_row1_col6" class="data row1 col6" >0,00</td>
+      <td id="T_e57b4_row1_col7" class="data row1 col7" >0,03</td>
+      <td id="T_e57b4_row1_col8" class="data row1 col8" >0,00</td>
+      <td id="T_e57b4_row1_col9" class="data row1 col9" >0,00</td>
+      <td id="T_e57b4_row1_col10" class="data row1 col10" >0,02</td>
+    </tr>
+    <tr>
+      <th id="T_e57b4_level0_row2" class="row_heading level0 row2" >Bouchons De Bouteilles En Métal, Couvercles Et Tirettes</th>
+      <td id="T_e57b4_row2_col0" class="data row2 col0" >0,02</td>
+      <td id="T_e57b4_row2_col1" class="data row2 col1" >0,00</td>
+      <td id="T_e57b4_row2_col2" class="data row2 col2" >0,05</td>
+      <td id="T_e57b4_row2_col3" class="data row2 col3" >0,01</td>
+      <td id="T_e57b4_row2_col4" class="data row2 col4" >0,03</td>
+      <td id="T_e57b4_row2_col5" class="data row2 col5" >0,00</td>
+      <td id="T_e57b4_row2_col6" class="data row2 col6" >0,00</td>
+      <td id="T_e57b4_row2_col7" class="data row2 col7" >0,04</td>
+      <td id="T_e57b4_row2_col8" class="data row2 col8" >0,14</td>
+      <td id="T_e57b4_row2_col9" class="data row2 col9" >0,00</td>
+      <td id="T_e57b4_row2_col10" class="data row2 col10" >0,02</td>
+    </tr>
+    <tr>
+      <th id="T_e57b4_level0_row3" class="row_heading level0 row3" >Tabac Emballages En Plastique</th>
+      <td id="T_e57b4_row3_col0" class="data row3 col0" >0,00</td>
+      <td id="T_e57b4_row3_col1" class="data row3 col1" >0,00</td>
+      <td id="T_e57b4_row3_col2" class="data row3 col2" >0,18</td>
+      <td id="T_e57b4_row3_col3" class="data row3 col3" >0,01</td>
+      <td id="T_e57b4_row3_col4" class="data row3 col4" >0,16</td>
+      <td id="T_e57b4_row3_col5" class="data row3 col5" >0,00</td>
+      <td id="T_e57b4_row3_col6" class="data row3 col6" >0,00</td>
+      <td id="T_e57b4_row3_col7" class="data row3 col7" >0,00</td>
+      <td id="T_e57b4_row3_col8" class="data row3 col8" >0,00</td>
+      <td id="T_e57b4_row3_col9" class="data row3 col9" >0,00</td>
+      <td id="T_e57b4_row3_col10" class="data row3 col10" >0,01</td>
+    </tr>
+    <tr>
+      <th id="T_e57b4_level0_row4" class="row_heading level0 row4" >Mégots Et Filtres À Cigarettes</th>
+      <td id="T_e57b4_row4_col0" class="data row4 col0" >0,16</td>
+      <td id="T_e57b4_row4_col1" class="data row4 col1" >0,00</td>
+      <td id="T_e57b4_row4_col2" class="data row4 col2" >1,55</td>
+      <td id="T_e57b4_row4_col3" class="data row4 col3" >0,04</td>
+      <td id="T_e57b4_row4_col4" class="data row4 col4" >0,13</td>
+      <td id="T_e57b4_row4_col5" class="data row4 col5" >0,00</td>
+      <td id="T_e57b4_row4_col6" class="data row4 col6" >0,04</td>
+      <td id="T_e57b4_row4_col7" class="data row4 col7" >0,24</td>
+      <td id="T_e57b4_row4_col8" class="data row4 col8" >1,52</td>
+      <td id="T_e57b4_row4_col9" class="data row4 col9" >0,00</td>
+      <td id="T_e57b4_row4_col10" class="data row4 col10" >0,09</td>
+    </tr>
+    <tr>
+      <th id="T_e57b4_level0_row5" class="row_heading level0 row5" >Emballages De Bonbons, De Snacks</th>
+      <td id="T_e57b4_row5_col0" class="data row5 col0" >0,09</td>
+      <td id="T_e57b4_row5_col1" class="data row5 col1" >0,00</td>
+      <td id="T_e57b4_row5_col2" class="data row5 col2" >1,18</td>
+      <td id="T_e57b4_row5_col3" class="data row5 col3" >0,06</td>
+      <td id="T_e57b4_row5_col4" class="data row5 col4" >0,77</td>
+      <td id="T_e57b4_row5_col5" class="data row5 col5" >0,00</td>
+      <td id="T_e57b4_row5_col6" class="data row5 col6" >0,02</td>
+      <td id="T_e57b4_row5_col7" class="data row5 col7" >0,17</td>
+      <td id="T_e57b4_row5_col8" class="data row5 col8" >0,24</td>
+      <td id="T_e57b4_row5_col9" class="data row5 col9" >0,06</td>
+      <td id="T_e57b4_row5_col10" class="data row5 col10" >0,35</td>
+    </tr>
+    <tr>
+      <th id="T_e57b4_level0_row6" class="row_heading level0 row6" >Bâtonnets De Sucette</th>
+      <td id="T_e57b4_row6_col0" class="data row6 col0" >0,00</td>
+      <td id="T_e57b4_row6_col1" class="data row6 col1" >0,00</td>
+      <td id="T_e57b4_row6_col2" class="data row6 col2" >0,00</td>
+      <td id="T_e57b4_row6_col3" class="data row6 col3" >0,00</td>
+      <td id="T_e57b4_row6_col4" class="data row6 col4" >0,28</td>
+      <td id="T_e57b4_row6_col5" class="data row6 col5" >0,00</td>
+      <td id="T_e57b4_row6_col6" class="data row6 col6" >0,00</td>
+      <td id="T_e57b4_row6_col7" class="data row6 col7" >0,00</td>
+      <td id="T_e57b4_row6_col8" class="data row6 col8" >0,00</td>
+      <td id="T_e57b4_row6_col9" class="data row6 col9" >0,00</td>
+      <td id="T_e57b4_row6_col10" class="data row6 col10" >0,01</td>
+    </tr>
+    <tr>
+      <th id="T_e57b4_level0_row7" class="row_heading level0 row7" >Jouets Et Faveurs De Fête</th>
+      <td id="T_e57b4_row7_col0" class="data row7 col0" >0,00</td>
+      <td id="T_e57b4_row7_col1" class="data row7 col1" >0,02</td>
+      <td id="T_e57b4_row7_col2" class="data row7 col2" >0,00</td>
+      <td id="T_e57b4_row7_col3" class="data row7 col3" >0,00</td>
+      <td id="T_e57b4_row7_col4" class="data row7 col4" >0,14</td>
+      <td id="T_e57b4_row7_col5" class="data row7 col5" >0,00</td>
+      <td id="T_e57b4_row7_col6" class="data row7 col6" >0,00</td>
+      <td id="T_e57b4_row7_col7" class="data row7 col7" >0,00</td>
+      <td id="T_e57b4_row7_col8" class="data row7 col8" >0,00</td>
+      <td id="T_e57b4_row7_col9" class="data row7 col9" >0,00</td>
+      <td id="T_e57b4_row7_col10" class="data row7 col10" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_e57b4_level0_row8" class="row_heading level0 row8" >Gobelets, Couvercles, Mousse À Usage Unique Et Plastique Dur</th>
+      <td id="T_e57b4_row8_col0" class="data row8 col0" >0,05</td>
+      <td id="T_e57b4_row8_col1" class="data row8 col1" >0,00</td>
+      <td id="T_e57b4_row8_col2" class="data row8 col2" >0,07</td>
+      <td id="T_e57b4_row8_col3" class="data row8 col3" >0,00</td>
+      <td id="T_e57b4_row8_col4" class="data row8 col4" >0,21</td>
+      <td id="T_e57b4_row8_col5" class="data row8 col5" >0,00</td>
+      <td id="T_e57b4_row8_col6" class="data row8 col6" >0,00</td>
+      <td id="T_e57b4_row8_col7" class="data row8 col7" >0,03</td>
+      <td id="T_e57b4_row8_col8" class="data row8 col8" >0,00</td>
+      <td id="T_e57b4_row8_col9" class="data row8 col9" >0,05</td>
+      <td id="T_e57b4_row8_col10" class="data row8 col10" >0,07</td>
+    </tr>
+    <tr>
+      <th id="T_e57b4_level0_row9" class="row_heading level0 row9" >Pailles Et Agitateurs</th>
+      <td id="T_e57b4_row9_col0" class="data row9 col0" >0,02</td>
+      <td id="T_e57b4_row9_col1" class="data row9 col1" >0,00</td>
+      <td id="T_e57b4_row9_col2" class="data row9 col2" >0,00</td>
+      <td id="T_e57b4_row9_col3" class="data row9 col3" >0,00</td>
+      <td id="T_e57b4_row9_col4" class="data row9 col4" >0,16</td>
+      <td id="T_e57b4_row9_col5" class="data row9 col5" >0,00</td>
+      <td id="T_e57b4_row9_col6" class="data row9 col6" >0,00</td>
+      <td id="T_e57b4_row9_col7" class="data row9 col7" >0,01</td>
+      <td id="T_e57b4_row9_col8" class="data row9 col8" >0,00</td>
+      <td id="T_e57b4_row9_col9" class="data row9 col9" >0,00</td>
+      <td id="T_e57b4_row9_col10" class="data row9 col10" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_e57b4_level0_row10" class="row_heading level0 row10" >Bâche, Feuille Plastique Industrielle</th>
+      <td id="T_e57b4_row10_col0" class="data row10 col0" >0,00</td>
+      <td id="T_e57b4_row10_col1" class="data row10 col1" >0,06</td>
+      <td id="T_e57b4_row10_col2" class="data row10 col2" >0,00</td>
+      <td id="T_e57b4_row10_col3" class="data row10 col3" >0,00</td>
+      <td id="T_e57b4_row10_col4" class="data row10 col4" >0,92</td>
+      <td id="T_e57b4_row10_col5" class="data row10 col5" >0,30</td>
+      <td id="T_e57b4_row10_col6" class="data row10 col6" >0,00</td>
+      <td id="T_e57b4_row10_col7" class="data row10 col7" >0,00</td>
+      <td id="T_e57b4_row10_col8" class="data row10 col8" >0,00</td>
+      <td id="T_e57b4_row10_col9" class="data row10 col9" >0,00</td>
+      <td id="T_e57b4_row10_col10" class="data row10 col10" >0,15</td>
+    </tr>
+    <tr>
+      <th id="T_e57b4_level0_row11" class="row_heading level0 row11" >Bouteilles À Boisson < = 0,5L</th>
+      <td id="T_e57b4_row11_col0" class="data row11 col0" >0,05</td>
+      <td id="T_e57b4_row11_col1" class="data row11 col1" >0,00</td>
+      <td id="T_e57b4_row11_col2" class="data row11 col2" >0,00</td>
+      <td id="T_e57b4_row11_col3" class="data row11 col3" >0,00</td>
+      <td id="T_e57b4_row11_col4" class="data row11 col4" >0,04</td>
+      <td id="T_e57b4_row11_col5" class="data row11 col5" >0,00</td>
+      <td id="T_e57b4_row11_col6" class="data row11 col6" >0,00</td>
+      <td id="T_e57b4_row11_col7" class="data row11 col7" >0,00</td>
+      <td id="T_e57b4_row11_col8" class="data row11 col8" >0,00</td>
+      <td id="T_e57b4_row11_col9" class="data row11 col9" >0,02</td>
+      <td id="T_e57b4_row11_col10" class="data row11 col10" >0,03</td>
+    </tr>
+    <tr>
+      <th id="T_e57b4_level0_row12" class="row_heading level0 row12" >Cartouches De Fusil De Chasse</th>
+      <td id="T_e57b4_row12_col0" class="data row12 col0" >0,00</td>
+      <td id="T_e57b4_row12_col1" class="data row12 col1" >0,00</td>
+      <td id="T_e57b4_row12_col2" class="data row12 col2" >0,00</td>
+      <td id="T_e57b4_row12_col3" class="data row12 col3" >0,00</td>
+      <td id="T_e57b4_row12_col4" class="data row12 col4" >0,61</td>
+      <td id="T_e57b4_row12_col5" class="data row12 col5" >0,00</td>
+      <td id="T_e57b4_row12_col6" class="data row12 col6" >0,02</td>
+      <td id="T_e57b4_row12_col7" class="data row12 col7" >0,00</td>
+      <td id="T_e57b4_row12_col8" class="data row12 col8" >0,00</td>
+      <td id="T_e57b4_row12_col9" class="data row12 col9" >0,00</td>
+      <td id="T_e57b4_row12_col10" class="data row12 col10" >0,05</td>
+    </tr>
+    <tr>
+      <th id="T_e57b4_level0_row13" class="row_heading level0 row13" >Brosse De Télésiège</th>
+      <td id="T_e57b4_row13_col0" class="data row13 col0" >0,00</td>
+      <td id="T_e57b4_row13_col1" class="data row13 col1" >0,00</td>
+      <td id="T_e57b4_row13_col2" class="data row13 col2" >196,66</td>
+      <td id="T_e57b4_row13_col3" class="data row13 col3" >0,00</td>
+      <td id="T_e57b4_row13_col4" class="data row13 col4" >0,00</td>
+      <td id="T_e57b4_row13_col5" class="data row13 col5" >0,00</td>
+      <td id="T_e57b4_row13_col6" class="data row13 col6" >0,00</td>
+      <td id="T_e57b4_row13_col7" class="data row13 col7" >0,00</td>
+      <td id="T_e57b4_row13_col8" class="data row13 col8" >0,00</td>
+      <td id="T_e57b4_row13_col9" class="data row13 col9" >4,90</td>
+      <td id="T_e57b4_row13_col10" class="data row13 col10" >0,00</td>
+    </tr>
+    <tr>
+      <th id="T_e57b4_level0_row14" class="row_heading level0 row14" >Mousse De Plastique Pour L'Isolation Thermique</th>
+      <td id="T_e57b4_row14_col0" class="data row14 col0" >0,00</td>
+      <td id="T_e57b4_row14_col1" class="data row14 col1" >0,00</td>
+      <td id="T_e57b4_row14_col2" class="data row14 col2" >0,01</td>
+      <td id="T_e57b4_row14_col3" class="data row14 col3" >0,00</td>
+      <td id="T_e57b4_row14_col4" class="data row14 col4" >0,58</td>
+      <td id="T_e57b4_row14_col5" class="data row14 col5" >0,00</td>
+      <td id="T_e57b4_row14_col6" class="data row14 col6" >0,00</td>
+      <td id="T_e57b4_row14_col7" class="data row14 col7" >0,00</td>
+      <td id="T_e57b4_row14_col8" class="data row14 col8" >0,00</td>
+      <td id="T_e57b4_row14_col9" class="data row14 col9" >0,00</td>
+      <td id="T_e57b4_row14_col10" class="data row14 col10" >0,04</td>
+    </tr>
+    <tr>
+      <th id="T_e57b4_level0_row15" class="row_heading level0 row15" >Déchets De Construction En Plastique</th>
+      <td id="T_e57b4_row15_col0" class="data row15 col0" >0,00</td>
+      <td id="T_e57b4_row15_col1" class="data row15 col1" >0,08</td>
+      <td id="T_e57b4_row15_col2" class="data row15 col2" >0,00</td>
+      <td id="T_e57b4_row15_col3" class="data row15 col3" >0,07</td>
+      <td id="T_e57b4_row15_col4" class="data row15 col4" >0,85</td>
+      <td id="T_e57b4_row15_col5" class="data row15 col5" >0,00</td>
+      <td id="T_e57b4_row15_col6" class="data row15 col6" >0,00</td>
+      <td id="T_e57b4_row15_col7" class="data row15 col7" >0,00</td>
+      <td id="T_e57b4_row15_col8" class="data row15 col8" >0,00</td>
+      <td id="T_e57b4_row15_col9" class="data row15 col9" >0,00</td>
+      <td id="T_e57b4_row15_col10" class="data row15 col10" >0,15</td>
+    </tr>
+    <tr>
+      <th id="T_e57b4_level0_row16" class="row_heading level0 row16" >Coton-Tige</th>
+      <td id="T_e57b4_row16_col0" class="data row16 col0" >0,00</td>
+      <td id="T_e57b4_row16_col1" class="data row16 col1" >0,00</td>
+      <td id="T_e57b4_row16_col2" class="data row16 col2" >0,00</td>
+      <td id="T_e57b4_row16_col3" class="data row16 col3" >0,00</td>
+      <td id="T_e57b4_row16_col4" class="data row16 col4" >1,25</td>
+      <td id="T_e57b4_row16_col5" class="data row16 col5" >0,00</td>
+      <td id="T_e57b4_row16_col6" class="data row16 col6" >0,00</td>
+      <td id="T_e57b4_row16_col7" class="data row16 col7" >0,00</td>
+      <td id="T_e57b4_row16_col8" class="data row16 col8" >0,00</td>
+      <td id="T_e57b4_row16_col9" class="data row16 col9" >0,00</td>
+      <td id="T_e57b4_row16_col10" class="data row16 col10" >0,07</td>
+    </tr>
+    <tr>
+      <th id="T_e57b4_level0_row17" class="row_heading level0 row17" >Couvercles En Plastique Bouteille:  G21, G22, G23, G24</th>
+      <td id="T_e57b4_row17_col0" class="data row17 col0" >0,00</td>
+      <td id="T_e57b4_row17_col1" class="data row17 col1" >0,00</td>
+      <td id="T_e57b4_row17_col2" class="data row17 col2" >0,15</td>
+      <td id="T_e57b4_row17_col3" class="data row17 col3" >0,00</td>
+      <td id="T_e57b4_row17_col4" class="data row17 col4" >1,66</td>
+      <td id="T_e57b4_row17_col5" class="data row17 col5" >0,00</td>
+      <td id="T_e57b4_row17_col6" class="data row17 col6" >0,00</td>
+      <td id="T_e57b4_row17_col7" class="data row17 col7" >0,00</td>
+      <td id="T_e57b4_row17_col8" class="data row17 col8" >0,14</td>
+      <td id="T_e57b4_row17_col9" class="data row17 col9" >0,00</td>
+      <td id="T_e57b4_row17_col10" class="data row17 col10" >0,20</td>
+    </tr>
+    <tr>
+      <th id="T_e57b4_level0_row18" class="row_heading level0 row18" >Fragments De Polystyrène Expansé: G76, G81, G82, G83</th>
+      <td id="T_e57b4_row18_col0" class="data row18 col0" >0,00</td>
+      <td id="T_e57b4_row18_col1" class="data row18 col1" >0,02</td>
+      <td id="T_e57b4_row18_col2" class="data row18 col2" >0,00</td>
+      <td id="T_e57b4_row18_col3" class="data row18 col3" >0,00</td>
+      <td id="T_e57b4_row18_col4" class="data row18 col4" >3,34</td>
+      <td id="T_e57b4_row18_col5" class="data row18 col5" >0,00</td>
+      <td id="T_e57b4_row18_col6" class="data row18 col6" >0,02</td>
+      <td id="T_e57b4_row18_col7" class="data row18 col7" >0,00</td>
+      <td id="T_e57b4_row18_col8" class="data row18 col8" >0,00</td>
+      <td id="T_e57b4_row18_col9" class="data row18 col9" >0,00</td>
+      <td id="T_e57b4_row18_col10" class="data row18 col10" >0,24</td>
+    </tr>
+    <tr>
+      <th id="T_e57b4_level0_row19" class="row_heading level0 row19" >Fragments De Plastique: G80, G79, G78, G75</th>
+      <td id="T_e57b4_row19_col0" class="data row19 col0" >0,07</td>
+      <td id="T_e57b4_row19_col1" class="data row19 col1" >0,02</td>
+      <td id="T_e57b4_row19_col2" class="data row19 col2" >1,28</td>
+      <td id="T_e57b4_row19_col3" class="data row19 col3" >0,11</td>
+      <td id="T_e57b4_row19_col4" class="data row19 col4" >2,56</td>
+      <td id="T_e57b4_row19_col5" class="data row19 col5" >0,00</td>
+      <td id="T_e57b4_row19_col6" class="data row19 col6" >0,06</td>
+      <td id="T_e57b4_row19_col7" class="data row19 col7" >0,49</td>
+      <td id="T_e57b4_row19_col8" class="data row19 col8" >0,28</td>
+      <td id="T_e57b4_row19_col9" class="data row19 col9" >0,01</td>
+      <td id="T_e57b4_row19_col10" class="data row19 col10" >0,68</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this heading">#</a></h2>
+<p>There are 318’478 rows in the survey data. We can test the sorting and grouping functions by running a report class on all possible combinations of the features of interest. The test should produce the set of arguments that define the survey locations and surveys that define the boundaries of a report.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">some_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;feature_type&#39;</span><span class="p">,</span> <span class="s1">&#39;parent_boundary&#39;</span><span class="p">,</span> <span class="s1">&#39;feature_name&#39;</span><span class="p">,</span> <span class="s1">&#39;canton&#39;</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">produce_reports_for_testing</span><span class="p">(</span><span class="n">survey_data</span><span class="p">,</span> <span class="n">some_features</span><span class="p">):</span>
+    <span class="n">reports</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">a_feature</span> <span class="ow">in</span> <span class="n">some_features</span><span class="p">:</span>
+        <span class="n">labels</span> <span class="o">=</span> <span class="n">survey_data</span><span class="p">[</span><span class="n">a_feature</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+        <span class="n">label_reports</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">labels</span><span class="p">:</span>
+            <span class="n">start_date</span> <span class="o">=</span> <span class="n">survey_data</span><span class="p">[</span><span class="n">survey_data</span><span class="p">[</span><span class="n">a_feature</span><span class="p">]</span> <span class="o">==</span> <span class="n">label</span><span class="p">][</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+            <span class="n">end_date</span> <span class="o">=</span> <span class="n">survey_data</span><span class="p">[</span><span class="n">survey_data</span><span class="p">[</span><span class="n">a_feature</span><span class="p">]</span> <span class="o">==</span> <span class="n">label</span><span class="p">][</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+            
+            <span class="n">boundaries</span> <span class="o">=</span> <span class="p">{</span><span class="n">a_feature</span><span class="p">:</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;language&#39;</span><span class="p">:</span><span class="s1">&#39;fr&#39;</span><span class="p">,</span> <span class="s1">&#39;start_date&#39;</span><span class="p">:</span><span class="n">start_date</span><span class="p">,</span> <span class="s1">&#39;end_date&#39;</span><span class="p">:</span><span class="n">end_date</span><span class="p">}</span>
+            <span class="n">top_label</span><span class="p">,</span> <span class="n">language</span><span class="p">,</span> <span class="n">w_df</span><span class="p">,</span> <span class="n">w_di</span> <span class="o">=</span> <span class="n">report_data</span><span class="p">(</span><span class="n">boundaries</span><span class="p">,</span> <span class="n">survey_data</span><span class="o">.</span><span class="n">copy</span><span class="p">())</span>
+            <span class="n">a_report</span> <span class="o">=</span> <span class="n">ReportClass</span><span class="p">(</span><span class="n">w_df</span><span class="p">,</span> <span class="n">w_di</span><span class="p">,</span> <span class="n">boundaries</span><span class="p">,</span> <span class="n">top_label</span><span class="p">,</span> <span class="s1">&#39;fr&#39;</span><span class="p">,</span> <span class="n">c_l</span><span class="p">)</span>
+            <span class="n">label_reports</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">label</span><span class="p">:</span><span class="n">a_report</span><span class="o">.</span><span class="n">features</span><span class="p">})</span>
+        <span class="n">reports</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">a_feature</span><span class="p">:</span><span class="n">label_reports</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">reports</span>
+   
+<span class="n">t</span> <span class="o">=</span> <span class="n">produce_reports_for_testing</span><span class="p">(</span><span class="n">survey_data</span><span class="p">,</span> <span class="n">some_features</span><span class="p">)</span>
+
+<span class="n">t</span><span class="p">[</span><span class="s1">&#39;canton&#39;</span><span class="p">][</span><span class="s1">&#39;Valais&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="section" id="retrieveing-properties-from-test">
+<h3>Retrieveing properties from test<a class="headerlink" href="#retrieveing-properties-from-test" title="Permalink to this heading">#</a></h3>
+<p>This should match <code class="docutils literal notranslate"><span class="pre">a_report.features</span></code> from the example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="p">[</span><span class="s1">&#39;canton&#39;</span><span class="p">][</span><span class="s1">&#39;Valais&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;city&#39;: array([&#39;Lens&#39;, &#39;Leuk&#39;, &#39;Nendaz&#39;, &#39;Riddes&#39;, &#39;Saint-Gingolph&#39;, &#39;Salgesch&#39;,
+        &#39;Sion&#39;, &#39;Troistorrents&#39;, &#39;Val de Bagnes&#39;, &quot;Val-d&#39;Illiez&quot;],
+       dtype=object),
+ &#39;parent_boundary&#39;: array([&#39;les-alpes&#39;, &#39;rhone&#39;], dtype=object),
+ &#39;feature_type&#39;: array([&#39;p&#39;, &#39;r&#39;, &#39;l&#39;], dtype=object),
+ &#39;feature_name&#39;: array([&#39;alpes-valaisannes&#39;, &#39;rhone&#39;, &#39;lac-leman&#39;], dtype=object),
+ &#39;samples&#39;: array([&quot;(&#39;clean-up-tour-crans-montana&#39;, &#39;2021-06-12&#39;)&quot;,
+        &quot;(&#39;leuk-mattenstrasse&#39;, &#39;2021-02-14&#39;)&quot;,
+        &quot;(&#39;clean-up-tour-nendaz&#39;, &#39;2021-07-04&#39;)&quot;,
+        &quot;(&#39;clean-up-tour-veysonnaz&#39;, &#39;2021-07-03&#39;)&quot;,
+        &quot;(&#39;clean-up-tour-la-tzoumaz&#39;, &#39;2021-05-22&#39;)&quot;,
+        &quot;(&#39;les-glariers&#39;, &#39;2020-12-01&#39;)&quot;, &quot;(&#39;grand-clos&#39;, &#39;2016-09-21&#39;)&quot;,
+        &quot;(&#39;grand-clos&#39;, &#39;2017-10-22&#39;)&quot;, &quot;(&#39;grand-clos&#39;, &#39;2020-05-07&#39;)&quot;,
+        &quot;(&#39;grand-clos&#39;, &#39;2020-06-09&#39;)&quot;, &quot;(&#39;grand-clos&#39;, &#39;2020-07-07&#39;)&quot;,
+        &quot;(&#39;grand-clos&#39;, &#39;2020-08-06&#39;)&quot;, &quot;(&#39;grand-clos&#39;, &#39;2020-09-08&#39;)&quot;,
+        &quot;(&#39;grand-clos&#39;, &#39;2020-10-06&#39;)&quot;, &quot;(&#39;grand-clos&#39;, &#39;2020-12-08&#39;)&quot;,
+        &quot;(&#39;grand-clos&#39;, &#39;2021-01-07&#39;)&quot;, &quot;(&#39;grand-clos&#39;, &#39;2021-02-09&#39;)&quot;,
+        &quot;(&#39;grand-clos&#39;, &#39;2021-03-09&#39;)&quot;, &quot;(&#39;grand-clos&#39;, &#39;2021-04-10&#39;)&quot;,
+        &quot;(&#39;tschilljus&#39;, &#39;2020-11-12&#39;)&quot;,
+        &quot;(&#39;les-vieux-ronquoz&#39;, &#39;2020-10-15&#39;)&quot;,
+        &quot;(&#39;clean-up-tour-morgins&#39;, &#39;2021-06-05&#39;)&quot;,
+        &quot;(&#39;clean-up-tour-verbier&#39;, &#39;2021-06-13&#39;)&quot;,
+        &quot;(&#39;clean-up-tour-les-crosets&#39;, &#39;2021-06-06&#39;)&quot;], dtype=object)}
+</pre></div>
+</div>
+</div>
+</div>
+<p>The properties should contain the arguments for cities in the example report</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="p">[</span><span class="s1">&#39;city&#39;</span><span class="p">][</span><span class="s1">&#39;Saint-Gingolph&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;feature_name&#39;: array([&#39;lac-leman&#39;], dtype=object),
+ &#39;feature_type&#39;: array([&#39;l&#39;], dtype=object),
+ &#39;parent_boundary&#39;: array([&#39;rhone&#39;], dtype=object),
+ &#39;samples&#39;: array([&quot;(&#39;grand-clos&#39;, &#39;2016-09-21&#39;)&quot;, &quot;(&#39;grand-clos&#39;, &#39;2017-10-22&#39;)&quot;,
+        &quot;(&#39;grand-clos&#39;, &#39;2020-05-07&#39;)&quot;, &quot;(&#39;grand-clos&#39;, &#39;2020-06-09&#39;)&quot;,
+        &quot;(&#39;grand-clos&#39;, &#39;2020-07-07&#39;)&quot;, &quot;(&#39;grand-clos&#39;, &#39;2020-08-06&#39;)&quot;,
+        &quot;(&#39;grand-clos&#39;, &#39;2020-09-08&#39;)&quot;, &quot;(&#39;grand-clos&#39;, &#39;2020-10-06&#39;)&quot;,
+        &quot;(&#39;grand-clos&#39;, &#39;2020-12-08&#39;)&quot;, &quot;(&#39;grand-clos&#39;, &#39;2021-01-07&#39;)&quot;,
+        &quot;(&#39;grand-clos&#39;, &#39;2021-02-09&#39;)&quot;, &quot;(&#39;grand-clos&#39;, &#39;2021-03-09&#39;)&quot;,
+        &quot;(&#39;grand-clos&#39;, &#39;2021-04-10&#39;)&quot;], dtype=object)}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Author: hammerdirt-analyst
+
+conda environment: cantonal_report
+
+numpy     : 1.25.2
+matplotlib: 3.7.1
+pandas    : 2.0.3
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="titlepage.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Field observations to machine learning</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="landuse_class.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Land use class</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-and-collecting-the-data">Defining and collecting the data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-requirements">basic requirements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#work-data">Work data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reporting-categories">Reporting categories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-report-class">The report class</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-number-and-types-of-features-in-a-report">The number and types of features in a report</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#a-top-level-description">A top level description</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#by-criteria">By criteria</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#results-by-criteria-and-feature-type">Results by criteria and feature type</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alternate-object-groups">Alternate object groups</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#by-survey-area-or-parent-boundary">By Survey area or <code class="docutils literal notranslate"><span class="pre">parent_boundary</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#by-feature-name">By feature name:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#by-city">By city:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieveing-properties-from-test">Retrieveing properties from test</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By team@
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+   hammerdirt 2023
+</p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

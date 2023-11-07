@@ -1,0 +1,1389 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Extracting land use values &#8212; Feb 2024</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'landuse_model_next_itteration';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Testing data models" href="testing_data_models.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="titlepage.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Feb 2024</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Models</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="a_report_class.html">Report class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="landuse_class.html">Land use class</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="testing_data_models.html">Testing data models</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Extracting land use values</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hammerdirt-analyst/feb_2024" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hammerdirt-analyst/feb_2024/issues/new?title=Issue%20on%20page%20%2Flanduse_model_next_itteration.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Extracting land use values</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#land-use-land-cover-and-streets">Land-use, land-cover and streets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extracting-land-cover-and-land-use">Extracting land-cover and land-use:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extracting-street-lengths">Extracting street lengths</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#land-cover">Land-cover</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#land-use">Land-use</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#streets">Streets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rivers-intersection-size-and-class">Rivers: intersection, size and class</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intersection-size-and-class">intersection, size and class</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distance-to-intersection">distance to intersection</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> watermark
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="extracting-land-use-values">
+<h1>Extracting land use values<a class="headerlink" href="#extracting-land-use-values" title="Permalink to this heading">#</a></h1>
+<p>This is a summary of the methods to extract topographical features from vector and points layers using QGIS. Atribute names are translated to the target languages and Null values are either corrected or eliminated.</p>
+<p>QGIS is not the optimal tool for this operation if the intention is to automate the aquisition of the data. However for a limited number of users and relatively few sample locations added each year this method is adequate to the task.</p>
+<p><strong>Note: 1’500 meter buffer (circular)</strong></p>
+<p>The land-use chapter in the federal report generated alot of interest. It inspired an academic article and collaboration with Wagenigen Research and University. The principal was applied using an empirical Bayes method with the Solid-Waste-Team at the EPFL.</p>
+<ol class="arabic simple">
+<li><p>the area of the buffer is  <span class="math notranslate nohighlight">\(\pi * 1500²\)</span> or 7065000 m²</p></li>
+</ol>
+<div class="section" id="land-use-land-cover-and-streets">
+<h2>Land-use, land-cover and streets<a class="headerlink" href="#land-use-land-cover-and-streets" title="Permalink to this heading">#</a></h2>
+<p><strong>Land-cover:</strong> Are elements such as buildings, forest, orchard or undefined. There is at least one land-cover element for each survey location. If so then it takes 100% of the available dry land.</p>
+<p><strong>Land-use:</strong> Are elements that may or may not be in the buffer. These are items like schools, hospitals, water-treatment plants. Individually they are only a small portion of the available dry land.</p>
+<div class="section" id="extracting-land-cover-and-land-use">
+<h3>Extracting land-cover and land-use:<a class="headerlink" href="#extracting-land-cover-and-land-use" title="Permalink to this heading">#</a></h3>
+<p>For this method we are using the land-cover layer from swissTLM regio</p>
+<p>finished columns = slug, attribute , attribute_type, area, dry,	scale</p>
+<p>In QGIS:</p>
+<ol class="arabic simple">
+<li><p>create a buffer around each survey point</p>
+<ul class="simple">
+<li><p>make sure that the survey location and feature_type is in the attributes of the new buffer layer</p></li>
+<li><p>the survey locations are loaded as points from .csv file</p></li>
+<li><p>reproject the points layer to the project CRS</p></li>
+</ul>
+</li>
+<li><p>use the new buffer layer as an overlay to the land-cover layer</p>
+<ul class="simple">
+<li><p>use the overlay intersection tool</p></li>
+<li><p>select the fields to keep from the buffer (slug and feature type)</p></li>
+<li><p>select the fields to keep from the land-cover layer</p></li>
+<li><p>run the function</p></li>
+<li><p>this creates a temporary layer called <em>intersection</em></p></li>
+</ul>
+</li>
+<li><p>get the surface area of all the land-cover and land-use features in each buffer of the temporary layer</p>
+<ul class="simple">
+<li><p>use the field calculator for the attribute table of the layer</p></li>
+<li><p>in the field calculator, make a new field and enter the formula <code class="docutils literal notranslate"><span class="pre">\$area</span></code></p></li>
+<li><p>for this example the method is elipsoid <em>bessel 1841 (epsg 7001)</em></p></li>
+<li><p>this is set in the properties of the QGIS project</p></li>
+<li><p>Export the layer as .csv</p></li>
+</ul>
+</li>
+<li><p>verify the land-use features per location</p>
+<ul class="simple">
+<li><p>drop duplicate values: use location, feature and area to define duplicates</p></li>
+<li><p>attention! different names for lake and reservoir</p>
+<ul>
+<li><p>change Stausee to See</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>make a dry land feature</p>
+<ul class="simple">
+<li><p>this is the surface area of the buffer that is not covered by water</p></li>
+<li><p>substract the area of See from the area of the buffer</p></li>
+<li><p>identify survey locations that have siginifcant water features but are not listed as lakes</p></li>
+</ul>
+</li>
+<li><p>Scale the land-use attributes of interest to the available dry-land</p></li>
+</ol>
+<p><strong>Example making dry land columns and scaling the land-use</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># locations with significant still water feature but</span>
+<span class="c1"># not listed as a lake</span>
+<span class="n">see_not_lake</span> <span class="o">=</span> <span class="n">l_u</span><span class="p">[(</span><span class="n">l_u</span><span class="o">.</span><span class="n">feature</span> <span class="o">==</span> <span class="s2">&quot;See&quot;</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">l_u</span><span class="o">.</span><span class="n">feature_ty</span> <span class="o">!=</span> <span class="s2">&quot;l&quot;</span><span class="p">)]</span>
+<span class="n">snl</span> <span class="o">=</span> <span class="n">see_not_lake</span><span class="o">.</span><span class="n">slug</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+
+<span class="c1"># lakes and locations in snl</span>
+<span class="c1"># recall that feature type has a designator for lakes</span>
+<span class="n">lakes</span> <span class="o">=</span> <span class="n">lg</span><span class="p">[(</span><span class="n">lg</span><span class="o">.</span><span class="n">feature_ty</span> <span class="o">==</span> <span class="s1">&#39;l&#39;</span><span class="p">)</span> <span class="o">|</span> <span class="n">lg</span><span class="o">.</span><span class="n">slug</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">snl</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># from this subset of data separate the surface area covered by water</span>
+<span class="c1"># set the slug to the index and substract the surface area of the water</span>
+<span class="c1"># from the surface area of the buffer</span>
+<span class="n">lake_only</span> <span class="o">=</span> <span class="n">lakes</span><span class="p">[</span><span class="n">lakes</span><span class="o">.</span><span class="n">feature</span> <span class="o">==</span> <span class="s2">&quot;See&quot;</span><span class="p">]</span>
+<span class="n">lo</span> <span class="o">=</span> <span class="n">lake_only</span><span class="p">[[</span><span class="s2">&quot;slug&quot;</span><span class="p">,</span> <span class="s2">&quot;area&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;slug&quot;</span><span class="p">)</span>
+
+<span class="c1"># substract the lake value from the area of the buffer</span>
+<span class="n">lo</span><span class="p">[</span><span class="s2">&quot;dry&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">7065000</span> <span class="o">-</span> <span class="n">lo</span><span class="o">.</span><span class="n">area</span>
+<span class="n">lodry</span> <span class="o">=</span> <span class="n">lo</span><span class="p">[</span><span class="s2">&quot;dry&quot;</span><span class="p">]</span>
+
+<span class="c1"># merge the original land-use data from lakes with the</span>
+<span class="c1"># the dry land results</span>
+<span class="n">lgi</span> <span class="o">=</span> <span class="n">lakes</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">lo</span><span class="p">[</span><span class="s2">&quot;dry&quot;</span><span class="p">],</span> <span class="n">left_on</span><span class="o">=</span><span class="s2">&quot;slug&quot;</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># remove the lake feature from the features columns</span>
+<span class="n">lgi</span> <span class="o">=</span> <span class="n">lgi</span><span class="p">[</span><span class="n">lgi</span><span class="o">.</span><span class="n">feature</span> <span class="o">!=</span> <span class="s2">&quot;See&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># scale the landuse feature to the available dry land</span>
+<span class="n">lgi</span><span class="p">[</span><span class="s2">&quot;scale&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">lgi</span><span class="o">.</span><span class="n">area</span><span class="o">/</span><span class="n">lgi</span><span class="o">.</span><span class="n">dry</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># repeat the process for locations that do not have a lake feature</span>
+<span class="c1"># these locations are accounted for above</span>
+<span class="n">eliminate</span> <span class="o">=</span> <span class="p">[</span><span class="o">*</span><span class="n">snl</span><span class="p">,</span> <span class="o">*</span><span class="n">lo</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+<span class="c1"># recuperate all other locations</span>
+<span class="n">rivers_parcs</span> <span class="o">=</span> <span class="n">lg</span><span class="p">[</span><span class="o">~</span><span class="n">lg</span><span class="o">.</span><span class="n">slug</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">eliminate</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="c1"># define the dry land as the area of the buffer</span>
+<span class="n">rivers_parcs</span><span class="p">[</span><span class="s2">&quot;dry&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">7065000</span>
+<span class="c1"># scale the features with the dry land value</span>
+<span class="n">rivers_parcs</span><span class="p">[</span><span class="s2">&quot;scale&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rivers_parcs</span><span class="o">.</span><span class="n">area</span><span class="o">/</span><span class="n">rivers_parcs</span><span class="o">.</span><span class="n">dry</span>
+
+<span class="c1"># combine the two results</span>
+<span class="n">land_cover</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">rivers_parcs</span><span class="p">,</span> <span class="n">lgi</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Once the dry land value is calculated for each buffer of the land-cover buffer use the dry-land value to scale the components of the land-use buffer</p>
+</div>
+<div class="section" id="extracting-street-lengths">
+<h3>Extracting street lengths<a class="headerlink" href="#extracting-street-lengths" title="Permalink to this heading">#</a></h3>
+<p>The tlmREgio streets or strasse layer is applicable.</p>
+<p><strong>Note:</strong> the street lenghts are not scaled</p>
+<p>finished columns = slug, attribute, attribute_type, length</p>
+<p><strong>Attention:</strong></p>
+<ol class="arabic simple">
+<li><p>The streets layer can have many copies of the same street in a buffer</p></li>
+<li><p>The cumulative sum of a street in a layer can exceed the radius of the buffer (windy roads)</p></li>
+<li><p>Dissolving the polylines of each buffer in the layer is essential</p></li>
+<li><p>Drop duplicate values on slug, attribute, length</p></li>
+<li><p>Using the same 1’500 m buffer that was used for land-cover and land-use. Intersect the buffer with the street layer</p></li>
+<li><p>Dissolve the polylines in each buffer</p>
+<ul class="simple">
+<li><p>select the fields from the streets layer to keep (OBJVAL)</p></li>
+<li><p>select the fields from the buffer layer to kepp (slug, feature_ty)</p></li>
+<li><p>check the box <code class="docutils literal notranslate"><span class="pre">keep</span> <span class="pre">disjoint</span> <span class="pre">features</span> <span class="pre">separate</span></code></p></li>
+<li><p>run the function</p></li>
+<li><p>export to .csv</p></li>
+</ul>
+</li>
+</ol>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">collect_vitals</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">quantity</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">median</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">pcs_m</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+    <span class="n">samples</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc_date</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+    <span class="n">ncodes</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+    <span class="n">nlocations</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">slug</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+    <span class="n">nbodies</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">feature_name</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+    <span class="n">ncities</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">city</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+    <span class="n">min_date</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+    <span class="n">max_date</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+    
+    <span class="k">return</span> <span class="n">total</span><span class="p">,</span> <span class="n">median</span><span class="p">,</span> <span class="n">samples</span><span class="p">,</span> <span class="n">ncodes</span><span class="p">,</span> <span class="n">nlocations</span><span class="p">,</span> <span class="n">nbodies</span><span class="p">,</span> <span class="n">ncities</span><span class="p">,</span> <span class="n">min_date</span><span class="p">,</span> <span class="n">max_date</span>
+
+<span class="k">def</span> <span class="nf">find_missing</span><span class="p">(</span><span class="n">more_than</span><span class="p">,</span> <span class="n">less_than</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">setdiff1d</span><span class="p">(</span><span class="n">more_than</span><span class="p">,</span> <span class="n">less_than</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">find_missing_loc_dates</span><span class="p">(</span><span class="n">done</span><span class="p">,</span> <span class="n">dtwo</span><span class="p">):</span>
+    <span class="n">locs_one</span> <span class="o">=</span> <span class="n">done</span><span class="o">.</span><span class="n">loc_date</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+    <span class="n">locs_two</span> <span class="o">=</span> <span class="n">dtwo</span><span class="o">.</span><span class="n">loc_date</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">find_missing</span><span class="p">(</span><span class="n">locs_one</span><span class="p">,</span> <span class="n">locs_two</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">aggregate_gcaps_gfoams_gfrags</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">codes</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Gfoams&quot;</span><span class="p">,</span> <span class="s2">&quot;Gfrags&quot;</span><span class="p">,</span> <span class="s2">&quot;Gcaps&quot;</span><span class="p">]):</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">columns</span><span class="p">:</span>
+        <span class="n">change</span> <span class="o">=</span> <span class="n">codes</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">codes</span><span class="o">.</span><span class="n">parent_code</span> <span class="o">==</span> <span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">index</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">change</span><span class="p">),</span> <span class="s2">&quot;code&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">col</span>
+        
+    <span class="k">return</span> <span class="n">data</span>
+
+<span class="k">def</span> <span class="nf">make_a_summary</span><span class="p">(</span><span class="n">vitals</span><span class="p">,</span> <span class="n">add_summary_name</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+    <span class="n">a_summary</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    Number of objects: </span><span class="si">{</span><span class="n">vitals</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">    </span>
+<span class="s2">    Median pieces/meter: </span><span class="si">{</span><span class="n">vitals</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">    </span>
+<span class="s2">    Number of samples: </span><span class="si">{</span><span class="n">vitals</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">    </span>
+<span class="s2">    Number of unique codes: </span><span class="si">{</span><span class="n">vitals</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">    </span>
+<span class="s2">    Number of sample locations: </span><span class="si">{</span><span class="n">vitals</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">    </span>
+<span class="s2">    Number of features: </span><span class="si">{</span><span class="n">vitals</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">    </span>
+<span class="s2">    Number of cities: </span><span class="si">{</span><span class="n">vitals</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">    </span>
+<span class="s2">    Start date: </span><span class="si">{</span><span class="n">vitals</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">    </span>
+<span class="s2">    End date: </span><span class="si">{</span><span class="n">vitals</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">    </span>
+<span class="s2">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">add_summary_name</span><span class="p">:</span>
+        <span class="n">a_summary</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        Summary name = </span><span class="si">{</span><span class="n">add_summary_name</span><span class="si">}</span>
+
+<span class="s2">        </span><span class="si">{</span><span class="n">a_summary</span><span class="si">}</span>
+<span class="s2">        &quot;&quot;&quot;</span>
+        
+    <span class="k">return</span> <span class="n">a_summary</span>
+<span class="k">def</span> <span class="nf">combine_survey_files</span><span class="p">(</span><span class="n">list_of_files</span><span class="p">):</span>
+
+    <span class="n">files</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">afile</span> <span class="ow">in</span> <span class="n">list_of_files</span><span class="p">:</span>
+        <span class="n">files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">afile</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">indexed_feature_data</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;code&quot;</span><span class="p">):</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span>
+<span class="n">code_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;material&#39;</span><span class="p">,</span> <span class="s1">&#39;description&#39;</span><span class="p">,</span> <span class="s1">&#39;source&#39;</span><span class="p">,</span> <span class="s1">&#39;parent_code&#39;</span><span class="p">,</span> <span class="s1">&#39;single_use&#39;</span><span class="p">,</span> <span class="s1">&#39;groupname&#39;</span><span class="p">]</span>
+
+<span class="n">group_by_columns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;loc_date&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;date&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;feature_name&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;slug&#39;</span><span class="p">,</span>     
+    <span class="s1">&#39;parent_boundary&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;length&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;groupname&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;city&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;code&#39;</span><span class="p">,</span> 
+<span class="p">]</span>
+<span class="n">agg_this</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;quantity&quot;</span><span class="p">:</span><span class="s2">&quot;sum&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pcs_m&quot;</span><span class="p">:</span> <span class="s2">&quot;sum&quot;</span>
+<span class="p">}</span>
+
+<span class="n">survey_data</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;data/end_process/after_may_2021.csv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;data/end_process/iqaasl.csv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;data/end_process/mcbp.csv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;data/end_process/slr.csv&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">code_data</span> <span class="o">=</span>  <span class="s2">&quot;data/end_process/codes.csv&quot;</span>
+<span class="n">beach_data</span> <span class="o">=</span> <span class="s2">&quot;data/end_process/beaches.csv&quot;</span>
+<span class="n">land_cover_data</span> <span class="o">=</span> <span class="s2">&quot;data/end_process/land_cover.csv&quot;</span>
+<span class="n">land_use_data</span> <span class="o">=</span> <span class="s2">&quot;data/end_process/land_use.csv&quot;</span>
+<span class="n">street_data</span> <span class="o">=</span> <span class="s2">&quot;data/end_process/streets.csv&quot;</span>
+<span class="n">intersection_attributes</span> <span class="o">=</span> <span class="s2">&quot;data/end_process/river_intersect_lakes.csv&quot;</span>
+<span class="n">surveys</span> <span class="o">=</span> <span class="n">combine_survey_files</span><span class="p">(</span><span class="n">survey_data</span><span class="p">)</span>
+<span class="n">codes</span> <span class="o">=</span> <span class="n">indexed_feature_data</span><span class="p">(</span><span class="n">code_data</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s2">&quot;code&quot;</span><span class="p">)</span>
+<span class="n">beaches</span> <span class="o">=</span> <span class="n">indexed_feature_data</span><span class="p">(</span><span class="n">beach_data</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s2">&quot;slug&quot;</span><span class="p">)</span>
+<span class="n">land_cover</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">land_cover_data</span><span class="p">)</span>
+<span class="n">land_use</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">land_use_data</span><span class="p">)</span>
+<span class="n">streets</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">street_data</span><span class="p">)</span>
+<span class="n">river_intersect_lakes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">intersection_attributes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>loc_date</th>
+      <th>date</th>
+      <th>feature_name</th>
+      <th>slug</th>
+      <th>code</th>
+      <th>pcs_m</th>
+      <th>quantity</th>
+      <th>parent_boundary</th>
+      <th>length</th>
+      <th>groupname</th>
+      <th>city</th>
+      <th>feature_type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>('tiger-duck-beach', '2021-10-07')</td>
+      <td>2021-10-07</td>
+      <td>lac-leman</td>
+      <td>tiger-duck-beach</td>
+      <td>G1</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>rhone</td>
+      <td>30</td>
+      <td>food and drink</td>
+      <td>Saint-Sulpice (VD)</td>
+      <td>l</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>('tiger-duck-beach', '2021-10-07')</td>
+      <td>2021-10-07</td>
+      <td>lac-leman</td>
+      <td>tiger-duck-beach</td>
+      <td>G10</td>
+      <td>0.07</td>
+      <td>2</td>
+      <td>rhone</td>
+      <td>30</td>
+      <td>food and drink</td>
+      <td>Saint-Sulpice (VD)</td>
+      <td>l</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>('tiger-duck-beach', '2021-10-07')</td>
+      <td>2021-10-07</td>
+      <td>lac-leman</td>
+      <td>tiger-duck-beach</td>
+      <td>G100</td>
+      <td>0.30</td>
+      <td>9</td>
+      <td>rhone</td>
+      <td>30</td>
+      <td>waste water</td>
+      <td>Saint-Sulpice (VD)</td>
+      <td>l</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>('tiger-duck-beach', '2021-10-07')</td>
+      <td>2021-10-07</td>
+      <td>lac-leman</td>
+      <td>tiger-duck-beach</td>
+      <td>G101</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>rhone</td>
+      <td>30</td>
+      <td>personal items</td>
+      <td>Saint-Sulpice (VD)</td>
+      <td>l</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>('tiger-duck-beach', '2021-10-07')</td>
+      <td>2021-10-07</td>
+      <td>lac-leman</td>
+      <td>tiger-duck-beach</td>
+      <td>G102</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>rhone</td>
+      <td>30</td>
+      <td>personal items</td>
+      <td>Saint-Sulpice (VD)</td>
+      <td>l</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="section" id="land-cover">
+<h4>Land-cover<a class="headerlink" href="#land-cover" title="Permalink to this heading">#</a></h4>
+<p>Null values:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>slug              False
+attribute         False
+attribute_type    False
+area              False
+dry               False
+scale             False
+dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+<p>Land-cover attributes</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;undefined&#39;, &#39;Siedl&#39;, &#39;Wald&#39;, &#39;Reben&#39;, &#39;Obstanlage&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<p>land-cover attribute translations</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">land_cover_fr</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;undefined&#39;</span><span class="p">:</span> <span class="s1">&#39;Non défini&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Siedl&#39;</span><span class="p">:</span> <span class="s1">&#39;Siedl&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Wald&#39;</span><span class="p">:</span> <span class="s1">&#39;Forêt&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Reben&#39;</span><span class="p">:</span> <span class="s1">&#39;Vignes&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Obstanlage&#39;</span><span class="p">:</span> <span class="s1">&#39;Verger&#39;</span>
+<span class="p">}</span>
+
+<span class="n">land_cover_en</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;undefined&#39;</span><span class="p">:</span> <span class="s1">&#39;Undefined&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Siedl&#39;</span><span class="p">:</span> <span class="s1">&#39;Settlement&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Wald&#39;</span><span class="p">:</span> <span class="s1">&#39;Forest&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Reben&#39;</span><span class="p">:</span> <span class="s1">&#39;Vines&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Obstanlage&#39;</span><span class="p">:</span> <span class="s1">&#39;Orchard&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Land-cover results for one location</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>slug</th>
+      <th>attribute</th>
+      <th>attribute_type</th>
+      <th>area</th>
+      <th>dry</th>
+      <th>scale</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>141</th>
+      <td>parc-des-pierrettes</td>
+      <td>undefined</td>
+      <td>land-cover</td>
+      <td>68285</td>
+      <td>3832559</td>
+      <td>0.018</td>
+    </tr>
+    <tr>
+      <th>623</th>
+      <td>parc-des-pierrettes</td>
+      <td>Siedl</td>
+      <td>land-cover</td>
+      <td>3606885</td>
+      <td>3832559</td>
+      <td>0.941</td>
+    </tr>
+    <tr>
+      <th>624</th>
+      <td>parc-des-pierrettes</td>
+      <td>Wald</td>
+      <td>land-cover</td>
+      <td>157389</td>
+      <td>3832559</td>
+      <td>0.041</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="land-use">
+<h4>Land-use<a class="headerlink" href="#land-use" title="Permalink to this heading">#</a></h4>
+<p>Null values:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>slug              False
+attribute         False
+attribute_type    False
+area              False
+dry               False
+scale             False
+dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+<p>Land-use attributes:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Baumschule&#39;, &#39;Friedhof&#39;, &#39;Schul- und Hochschulareal&#39;,
+       &#39;Wald nicht bestockt&#39;, &#39;Abwasserreinigungsareal&#39;,
+       &#39;Historisches Areal&#39;, &#39;Kraftwerkareal&#39;, &#39;Schrebergartenareal&#39;,
+       &#39;Truppenuebungsplatz&#39;, &#39;Unterwerkareal&#39;,
+       &#39;Kehrichtverbrennungsareal&#39;, &#39;Spitalareal&#39;,
+       &#39;Oeffentliches Parkareal&#39;, &#39;Messeareal&#39;,
+       &#39;Massnahmenvollzugsanstaltsareal&#39;, &#39;Kiesabbauareal&#39;,
+       &#39;Steinbruchareal&#39;, &#39;Klosterareal&#39;, &#39;Deponieareal&#39;, &#39;Antennenareal&#39;,
+       &#39;Lehmabbauareal&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Land-use translations and groups</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="n">land_use_fr</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Baumschule&#39;</span><span class="p">:</span> <span class="s1">&#39;Pépinière&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Friedhof&#39;</span><span class="p">:</span> <span class="s1">&#39;Cimetière&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Schul- und Hochschulareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Zone scolaire et universitaire&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Wald nicht bestockt&#39;</span><span class="p">:</span> <span class="s1">&#39;Forêt non peuplée&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Abwasserreinigungsareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Zone de traitement des eaux usées&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Historisches Areal&#39;</span><span class="p">:</span> <span class="s1">&#39;Zone historique&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Kraftwerkareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Zone de centrale électrique&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Schrebergartenareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Zone de jardins familiaux&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Truppenübungsplatz&#39;</span><span class="p">:</span> <span class="s1">&#39;Terrain d</span><span class="se">\&#39;</span><span class="s1">entraînement militaire&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Unterwerkareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Zone de sous-station&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Kehrichtverbrennungsareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Zone d</span><span class="se">\&#39;</span><span class="s1">incinération des déchets&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Spitalareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Zone d</span><span class="se">\&#39;</span><span class="s1">hôpital&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Öffentliches Parkareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Zone de parc public&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Messeareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Zone d</span><span class="se">\&#39;</span><span class="s1">exposition&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Massnahmenvollzugsanstaltsareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Zone d</span><span class="se">\&#39;</span><span class="s1">établissement de traitement&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Kiesabbauareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Zone d</span><span class="se">\&#39;</span><span class="s1">extraction de gravier&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Steinbruchareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Zone de carrière&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Klosterareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Zone de monastère&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Deponieareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Zone de décharge&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Antennenareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Zone d</span><span class="se">\&#39;</span><span class="s1">antennes&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Lehmabbauareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Zone d</span><span class="se">\&#39;</span><span class="s1">extraction d</span><span class="se">\&#39;</span><span class="s1">argile&#39;</span>
+<span class="p">}</span>
+
+<span class="n">land_use_en</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Baumschule&#39;</span><span class="p">:</span> <span class="s1">&#39;Nursery&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Friedhof&#39;</span><span class="p">:</span> <span class="s1">&#39;Cemetery&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Schul- und Hochschulareal&#39;</span><span class="p">:</span> <span class="s1">&#39;School and University Area&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Wald nicht bestockt&#39;</span><span class="p">:</span> <span class="s1">&#39;Non-stocked Forest&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Abwasserreinigungsareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Wastewater Treatment Area&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Historisches Areal&#39;</span><span class="p">:</span> <span class="s1">&#39;Historical Area&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Kraftwerkareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Power Plant Area&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Schrebergartenareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Allotment Garden Area&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Truppenübungsplatz&#39;</span><span class="p">:</span> <span class="s1">&#39;Military Training Ground&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Unterwerkareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Substation Area&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Kehrichtverbrennungsareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Waste Incineration Area&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Spitalareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Hospital Area&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Öffentliches Parkareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Public Park Area&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Messeareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Exhibition Area&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Massnahmenvollzugsanstaltsareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Correctional Facility Area&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Kiesabbauareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Gravel Extraction Area&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Steinbruchareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Quarry Area&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Klosterareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Monastery Area&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Deponieareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Landfill Area&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Antennenareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Antenna Area&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Lehmabbauareal&#39;</span><span class="p">:</span> <span class="s1">&#39;Clay Extraction Area&#39;</span>
+<span class="p">}</span>
+
+<span class="c1"># land_uses_grouped:</span>
+<span class="c1"># outdoor non technical use:</span>
+<span class="n">lu_non_tech</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Friedhof&#39;</span><span class="p">,</span> <span class="s1">&#39;Hitorisches Areal&#39;</span><span class="p">,</span> <span class="s1">&#39;Schrebergartenareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Öffentliches Parkareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Messeareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Klosterareal&#39;</span><span class="p">,</span>  <span class="s1">&#39;Wald nicht bestockt&#39;</span><span class="p">]</span>
+
+<span class="c1"># technical-extraction-incineration</span>
+<span class="n">lu_extraction</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Kiesabbauareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Steinbruchareal&#39;</span><span class="p">,</span>  <span class="s1">&#39;Lehmabbauareal&#39;</span><span class="p">,]</span>
+
+<span class="c1"># waste-water-treatment-powere</span>
+<span class="n">lu_technical</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Kehrichtverbrennungsareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Deponieareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Deponieareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Abwasserreinigungsareal&#39;</span><span class="p">,</span><span class="s1">&#39;Unterwerkareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Antennenareal&#39;</span><span class="p">]</span>
+
+<span class="c1"># services:</span>
+<span class="n">lu_serives</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Massnahmenvollzugsanstaltsareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Schul- und Hochschulareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Spitalareal&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Land-use for one location:</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>slug</th>
+      <th>attribute</th>
+      <th>attribute_type</th>
+      <th>area</th>
+      <th>dry</th>
+      <th>scale</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>685</th>
+      <td>parc-des-pierrettes</td>
+      <td>Abwasserreinigungsareal</td>
+      <td>land-use</td>
+      <td>49488</td>
+      <td>3832559</td>
+      <td>0.012913</td>
+    </tr>
+    <tr>
+      <th>686</th>
+      <td>parc-des-pierrettes</td>
+      <td>Friedhof</td>
+      <td>land-use</td>
+      <td>11325</td>
+      <td>3832559</td>
+      <td>0.002955</td>
+    </tr>
+    <tr>
+      <th>687</th>
+      <td>parc-des-pierrettes</td>
+      <td>Oeffentliches Parkareal</td>
+      <td>land-use</td>
+      <td>175591</td>
+      <td>3832559</td>
+      <td>0.045816</td>
+    </tr>
+    <tr>
+      <th>688</th>
+      <td>parc-des-pierrettes</td>
+      <td>Schrebergartenareal</td>
+      <td>land-use</td>
+      <td>17306</td>
+      <td>3832559</td>
+      <td>0.004516</td>
+    </tr>
+    <tr>
+      <th>689</th>
+      <td>parc-des-pierrettes</td>
+      <td>Schul- und Hochschulareal</td>
+      <td>land-use</td>
+      <td>1189161</td>
+      <td>3832559</td>
+      <td>0.310279</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="streets">
+<h4>Streets<a class="headerlink" href="#streets" title="Permalink to this heading">#</a></h4>
+<p>Null values</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">streets</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>slug              False
+attribute_type    False
+attribute         False
+length            False
+dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Autostr&#39;, &#39;Fahrstraes&#39;, &#39;Fussweg&#39;, &#39;HauptStrAB6&#39;, &#39;VerbindStr4&#39;,
+       &#39;NebenStr3&#39;, &#39;VerbindStr6&#39;, &#39;Autobahn&#39;, &#39;HauptStrAB4&#39;, &#39;NebenStr6&#39;,
+       &#39;Autob_Ri&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Streets: translations and groups</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">streets_fr</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Autostr&#39;</span><span class="p">:</span> <span class="s1">&#39;autoroute&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;NebenStr3&#39;</span><span class="p">:</span> <span class="s1">&#39;route secondaire 3&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;NebenStr6&#39;</span><span class="p">:</span> <span class="s1">&#39;route secondaire 6&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;HauptStrAB6&#39;</span><span class="p">:</span> <span class="s1">&#39;route principale 6&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;HauptStrAB4&#39;</span><span class="p">:</span> <span class="s1">&#39;route principale 4&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Fahrstraes&#39;</span><span class="p">:</span> <span class="s1">&#39;chemin carrossable&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Fussweg&#39;</span><span class="p">:</span> <span class="s1">&#39;chemin pédestre&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Autobahn&#39;</span><span class="p">:</span> <span class="s1">&#39;autoroute&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Autob_Ri&#39;</span><span class="p">:</span> <span class="s1">&#39;autoroute&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;VerbindStr4&#39;</span><span class="p">:</span> <span class="s1">&#39;route de liason 4&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;VerbindStr6&#39;</span><span class="p">:</span> <span class="s1">&#39;route de liason 6&#39;</span><span class="p">,</span>   
+<span class="p">}</span>
+
+<span class="n">streets_en</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Autostr&#39;</span><span class="p">:</span> <span class="s1">&#39;freeway&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;NebenStr3&#39;</span><span class="p">:</span> <span class="s1">&#39;surface streets 3&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;NebenStr6&#39;</span><span class="p">:</span> <span class="s1">&#39;surface streets 3 6&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;HauptStrAB6&#39;</span><span class="p">:</span> <span class="s1">&#39;inter regional 6&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;HauptStrAB4&#39;</span><span class="p">:</span> <span class="s1">&#39;inter regional 4&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Fahrstraes&#39;</span><span class="p">:</span> <span class="s1">&#39;bridle path&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Fussweg&#39;</span><span class="p">:</span> <span class="s1">&#39;pedestrian trail&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Autobahn&#39;</span><span class="p">:</span> <span class="s1">&#39;freeway&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Autob_Ri&#39;</span><span class="p">:</span> <span class="s1">&#39;freeway&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;VerbindStr4&#39;</span><span class="p">:</span> <span class="s1">&#39;intra regional 4&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;VerbindStr6&#39;</span><span class="p">:</span> <span class="s1">&#39;intra regional 6&#39;</span><span class="p">,</span>   
+<span class="p">}</span>
+
+<span class="c1"># surface streets</span>
+
+<span class="n">str_surface</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NebenStr3&#39;</span><span class="p">,</span> <span class="s1">&#39;NebenStr6&#39;</span><span class="p">]</span>
+<span class="n">str_ped_br</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Fahrstraes&#39;</span><span class="p">,</span> <span class="s1">&#39;Fussweg&#39;</span><span class="p">]</span>
+<span class="n">str_main</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;HauptStrAB6&#39;</span><span class="p">,</span> <span class="s1">&#39;VerbindStr4&#39;</span><span class="p">,</span><span class="s1">&#39;VerbindStr6&#39;</span><span class="p">,</span> <span class="s1">&#39;HauptStrAB4&#39;</span><span class="p">,</span> <span class="s1">&#39;NebenStr6&#39;</span><span class="p">]</span>
+<span class="n">str_auto</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Autobahn&#39;</span><span class="p">,</span> <span class="s1">&#39;Autostr&#39;</span><span class="p">,</span> <span class="s1">&#39;Autob_Ri&#39;</span><span class="p">]</span>
+
+</pre></div>
+</div>
+<p>The streets at one survey location:</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>slug</th>
+      <th>attribute_type</th>
+      <th>attribute</th>
+      <th>length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>638</th>
+      <td>parc-des-pierrettes</td>
+      <td>streets</td>
+      <td>Autobahn</td>
+      <td>1685</td>
+    </tr>
+    <tr>
+      <th>639</th>
+      <td>parc-des-pierrettes</td>
+      <td>streets</td>
+      <td>Fahrstraes</td>
+      <td>1046</td>
+    </tr>
+    <tr>
+      <th>640</th>
+      <td>parc-des-pierrettes</td>
+      <td>streets</td>
+      <td>Fussweg</td>
+      <td>3257</td>
+    </tr>
+    <tr>
+      <th>641</th>
+      <td>parc-des-pierrettes</td>
+      <td>streets</td>
+      <td>HauptStrAB6</td>
+      <td>2918</td>
+    </tr>
+    <tr>
+      <th>642</th>
+      <td>parc-des-pierrettes</td>
+      <td>streets</td>
+      <td>NebenStr3</td>
+      <td>2850</td>
+    </tr>
+    <tr>
+      <th>643</th>
+      <td>parc-des-pierrettes</td>
+      <td>streets</td>
+      <td>VerbindStr4</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <th>644</th>
+      <td>parc-des-pierrettes</td>
+      <td>streets</td>
+      <td>VerbindStr6</td>
+      <td>2864</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="rivers-intersection-size-and-class">
+<h2>Rivers: intersection, size and class<a class="headerlink" href="#rivers-intersection-size-and-class" title="Permalink to this heading">#</a></h2>
+<p>This requires the 1’500 m buffer created at the begininng and the rivers layer and the lakes layer.</p>
+<div class="section" id="intersection-size-and-class">
+<h3>intersection, size and class<a class="headerlink" href="#intersection-size-and-class" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Create a points layer of the intersection of rivers to lakes</p>
+<ul class="simple">
+<li><p>Keep only points that are labeled as river (fluss, fluss_u)</p></li>
+<li><p>Use the attribute table to select the points</p></li>
+</ul>
+</li>
+<li><p>Overlay the 1 500 m buffer on the new layer and collect all the intersections within each buffer</p>
+<ul class="simple">
+<li><p>export to .csv</p></li>
+</ul>
+</li>
+<li><p>Check for intersections that do not have lake name</p>
+<ul class="simple">
+<li><p>not all lakes and rivers have names in the layer</p></li>
+<li><p>find the correct name for the lake and add it to the record</p></li>
+<li><p>replace river names with nan value with “no name”</p></li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="distance-to-intersection">
+<h3>distance to intersection<a class="headerlink" href="#distance-to-intersection" title="Permalink to this heading">#</a></h3>
+<p><strong>Note:</strong> the intersection points layer needs to be available</p>
+<ol class="arabic simple">
+<li><p>Using the <code class="docutils literal notranslate"><span class="pre">hub</span> <span class="pre">lines</span></code> tool in QGIS draw lines from survey location to intersect location</p>
+<ul class="simple">
+<li><p>Limit the distance to the radius of the buffer</p></li>
+<li><p>join on the slug field in both layers</p></li>
+<li><p>eliminate duplicates</p></li>
+<li><p>calculate the length of the line with <code class="docutils literal notranslate"><span class="pre">$length</span></code> in field calculator of the attribute table</p></li>
+<li><p>export to .csv</p></li>
+</ul>
+</li>
+<li><p>Identify locations (slugs) that are missing either the river_name or lake</p>
+<ul class="simple">
+<li><p>use the previous results (intersection, size and class) to fill in the missing values</p></li>
+<li><p>check that slugs not in the distance matrix are truly without intersections</p></li>
+</ul>
+</li>
+</ol>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>slug</th>
+      <th>lake</th>
+      <th>river_name</th>
+      <th>size</th>
+      <th>class</th>
+      <th>distance</th>
+      <th>attribute_type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>72</th>
+      <td>parc-des-pierrettes</td>
+      <td>Le Léman</td>
+      <td>La Mèbre</td>
+      <td>8</td>
+      <td>8</td>
+      <td>333</td>
+      <td>river intersection</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>slug              False
+lake              False
+river_name        False
+size              False
+class             False
+distance          False
+attribute_type    False
+dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">watermark</span> -a hammerdirt-analyst -co --iversions
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Author: hammerdirt-analyst
+
+conda environment: cantonal_report
+
+numpy : 1.25.2
+pandas: 2.0.3
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="testing_data_models.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Testing data models</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#land-use-land-cover-and-streets">Land-use, land-cover and streets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extracting-land-cover-and-land-use">Extracting land-cover and land-use:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extracting-street-lengths">Extracting street lengths</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#land-cover">Land-cover</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#land-use">Land-use</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#streets">Streets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rivers-intersection-size-and-class">Rivers: intersection, size and class</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intersection-size-and-class">intersection, size and class</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distance-to-intersection">distance to intersection</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By team@
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+   hammerdirt 2023
+</p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

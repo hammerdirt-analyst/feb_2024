@@ -24,12 +24,7 @@ def find_missing_loc_dates(done, dtwo):
     locs_two = dtwo.loc_date.unique()
     return find_missing(locs_one, locs_two)
 
-def use_gfrags_gfoams_gcaps(data, codes,columns=["Gfoams", "Gfrags", "Gcaps"]):
-    for col in columns:
-        change = codes.loc[codes.parent_code == col].index
-        data.loc[data.code.isin(change), "code"] = col
-        
-    return data
+
 
 def indexed_feature_data(data_location, index: str = "code"):
     data = pd.read_csv(data_location)

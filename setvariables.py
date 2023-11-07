@@ -94,4 +94,124 @@ unit_agg = {
 }
 
 
+land_cover_fr = {
+    'undefined': 'Non défini',
+    'Siedl': 'Siedl',
+    'Wald': 'Forêt',
+    'Reben': 'Vignes',
+    'Obstanlage': 'Verger'
+}
 
+land_cover_en = {
+    'undefined': 'Undefined',
+    'Siedl': 'Settlement',
+    'Wald': 'Forest',
+    'Reben': 'Vines',
+    'Obstanlage': 'Orchard'
+}
+
+land_use_fr = {
+    'Baumschule': 'Pépinière',
+    'Friedhof': 'Cimetière',
+    'Schul- und Hochschulareal': 'Zone scolaire et universitaire',
+    'Wald nicht bestockt': 'Forêt non peuplée',
+    'Abwasserreinigungsareal': 'Zone de traitement des eaux usées',
+    'Historisches Areal': 'Zone historique',
+    'Kraftwerkareal': 'Zone de centrale électrique',
+    'Schrebergartenareal': 'Zone de jardins familiaux',
+    'Truppenuebungsplatz': 'Terrain d\'entraînement militaire',
+    'Unterwerkareal': 'Zone de sous-station',
+    'Kehrichtverbrennungsareal': 'Zone d\'incinération des déchets',
+    'Spitalareal': 'Zone d\'hôpital',
+    'Oeffentliches Parkareal': 'Zone de parc public',
+    'Messeareal': 'Zone d\'exposition',
+    'Massnahmenvollzugsanstaltsareal': 'Zone d\'établissement de traitement',
+    'Kiesabbauareal': 'Zone d\'extraction de gravier',
+    'Steinbruchareal': 'Zone de carrière',
+    'Klosterareal': 'Zone de monastère',
+    'Deponieareal': 'Zone de décharge',
+    'Antennenareal': 'Zone d\'antennes',
+    'Lehmabbauareal': 'Zone d\'extraction d\'argile'
+}
+
+land_use_en = {
+    'Baumschule': 'Nursery',
+    'Friedhof': 'Cemetery',
+    'Schul- und Hochschulareal': 'School and University Area',
+    'Wald nicht bestockt': 'Non-stocked Forest',
+    'Abwasserreinigungsareal': 'Wastewater Treatment Area',
+    'Historisches Areal': 'Historical Area',
+    'Kraftwerkareal': 'Power Plant Area',
+    'Schrebergartenareal': 'Allotment Garden Area',
+    'Truppenuebungsplatz': 'Military Training Ground',
+    'Unterwerkareal': 'Substation Area',
+    'Kehrichtverbrennungsareal': 'Waste Incineration Area',
+    'Spitalareal': 'Hospital Area',
+    'Oeffentliches Parkareal': 'Public Park Area',
+    'Messeareal': 'Exhibition Area',
+    'Massnahmenvollzugsanstaltsareal': 'Correctional Facility Area',
+    'Kiesabbauareal': 'Gravel Extraction Area',
+    'Steinbruchareal': 'Quarry Area',
+    'Klosterareal': 'Monastery Area',
+    'Deponieareal': 'Landfill Area',
+    'Antennenareal': 'Antenna Area',
+    'Lehmabbauareal': 'Clay Extraction Area'
+}
+
+# land_uses_grouped:
+# outdoor non technical use:
+lu_non_tech = {'places': ['Friedhof', 'Hitorisches Areal', 'Schrebergartenareal', 'Oeffentliches Parkareal', 'Messeareal', 'Klosterareal',  'Wald nicht bestockt', 'Baumschule']}
+
+# technical-extraction-incineration
+# lu_extraction = {'mining': ['Kiesabbauareal', 'Steinbruchareal',  'Lehmabbauareal']}
+
+# waste-water-treatment-powere
+lu_technical = {'technical':['Kehrichtverbrennungsareal', 'Deponieareal', 'Deponieareal', 'Abwasserreinigungsareal','Unterwerkareal', 'Antennenareal', 'Kraftwerkareal', 'Kiesabbauareal', 'Steinbruchareal',  'Lehmabbauareal']}
+
+# services:
+lu_services = {'services': ['Massnahmenvollzugsanstaltsareal', 'Schul- und Hochschulareal', 'Spitalareal', 'Historisches Areal', 'Truppenuebungsplatz']}
+
+#combined:
+lu_combined = {'land_use':[*list(lu_non_tech.keys()), *list(lu_technical.keys()), *list(lu_services.keys())]}
+
+lu_groups = [lu_non_tech,lu_technical, lu_services, lu_combined]
+
+streets_fr = {
+    'Autostr': 'autoroute',
+    'NebenStr3': 'route secondaire 3',
+    'NebenStr6': 'route secondaire 6',
+    'HauptStrAB6': 'route principale 6',
+    'HauptStrAB4': 'route principale 4',
+    'Fahrstraes': 'chemin carrossable',
+    'Fussweg': 'chemin pédestre',
+    'Autobahn': 'autoroute',
+    'Autob_Ri': 'autoroute',
+    'VerbindStr4': 'route de liason 4',
+    'VerbindStr6': 'route de liason 6',   
+}
+
+streets_en = {
+    'Autostr': 'freeway',
+    'NebenStr3': 'surface streets 3',
+    'NebenStr6': 'surface streets 3 6',
+    'HauptStrAB6': 'inter regional 6',
+    'HauptStrAB4': 'inter regional 4',
+    'Fahrstraes': 'bridle path',
+    'Fussweg': 'pedestrian trail',
+    'Autobahn': 'freeway',
+    'Autob_Ri': 'freeway',
+    'VerbindStr4': 'intra regional 4',
+    'VerbindStr6': 'intra regional 6',   
+}
+
+str_surface = {'surface streets':['NebenStr3', 'NebenStr6']}
+str_ped_br = {'pedestrian': ['Fahrstraes', 'Fussweg']}
+str_main = {'principal': [ 'HauptStrAB6', 'VerbindStr4','VerbindStr6', 'HauptStrAB4', 'NebenStr6']}
+
+str_auto = {'highways': ['Autobahn', 'Autostr', 'Autob_Ri']}
+
+str_combined = {'streets':['surface streets', 'pedestrian', 'principal', 'highways']}
+
+street_groups = [str_surface, str_ped_br, str_main, str_auto, str_combined]
+
+work_columns = ['slug', 'loc_date', 'feature_name', 'parent_boundary', 'city','canton', 'pcs_m', 'quantity','code', 'feature_type']

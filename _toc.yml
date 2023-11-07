@@ -1,0 +1,23 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: titlepage
+parts:
+  - caption: Models
+    chapters:
+    - file: a_report_class
+    - file: landuse_class
+  - caption: Annex
+    chapters:
+    - file: testing_data_models
+    - file: landuse_model_next_itteration
+
+
+
+
+
+   
+    
+   
+ 
