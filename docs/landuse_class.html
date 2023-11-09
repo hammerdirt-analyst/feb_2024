@@ -297,6 +297,10 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-is-this-important">Why is this important?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-important">What is important?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-land-use-class">Using the land use class</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#land-use-and-density">Land use and density</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlation-of-independent-variables">Correlation of independent variables</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-significant-correlations">Definition of significant correlations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-selection-and-combination">Variable selection and combination</a><ul class="nav section-nav flex-column">
@@ -314,6 +318,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalized-linear-models">Generalized linear models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-tests">Unit tests</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-topographical-data">Grouping topographical data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistic-of-critical-value">Statistic of critical value</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -362,6 +371,8 @@ document.write(`
 
 <span class="kn">import</span> <span class="nn">setvariables</span> <span class="k">as</span> <span class="nn">conf_</span>
 <span class="kn">import</span> <span class="nn">reportclass</span> <span class="k">as</span> <span class="nn">r_class</span>
+
+<span class="kn">import</span> <span class="nn">unittest</span>
 </pre></div>
 </div>
 </div>
@@ -399,14 +410,19 @@ document.write(`
 <p><strong>The reliability and the continuity of the data and analysis.</strong></p>
 <p>The collected data is a diverse combination of different interpretations of the same protocol. The reasons for this is because there is no <em>centralized authority</em> that requires the data be collected in a specific way. The basic assumption is that all stakeholders did the best they could within the limits of the resources at hand and the experience of their respective teams. From this we conclude that the surveys are a resonable description of the minimum number of objects found at the defined survey location within the limits of the length recorded. There are many ways that survey consistency can improve, the easiest and fastet is: i. Defining a standard method, ii. allocating resources to collect the data using the defined method.</p>
 <p>The topographical data from the confederation provides continuity to what could be interpreted as unrelated observations. Furthermore, the labels provided for the various topographical features are indicators of use and have a real meaning to georaphers and engineers in planning and development. Local associations that are involved in preventing and reducing litter may also be interested.</p>
+</div>
+<div class="section" id="using-the-land-use-class">
+<h2>Using the land use class<a class="headerlink" href="#using-the-land-use-class" title="Permalink to this heading">#</a></h2>
 <p>To start a <code class="docutils literal notranslate"><span class="pre">LandUse</span> <span class="pre">class</span></code>, first intiate a <code class="docutils literal notranslate"><span class="pre">ReportClass</span></code> for the boundaries of interest. In this example all lakes have been selected for all results between 2015 and 2022.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ! USER DEFINED INPUT</span>
 <span class="c1"># Temporal and geographic boundaries.</span>
 <span class="n">boundaries</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">feature_type</span><span class="o">=</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s1">&#39;fr&#39;</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="s1">&#39;2015-01-01&#39;</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="s1">&#39;2022-01-01&#39;</span><span class="p">)</span>
 
+<span class="c1"># pass request to API</span>
 <span class="c1"># Make the report data and report</span>
 <span class="n">top_label</span><span class="p">,</span> <span class="n">language</span><span class="p">,</span> <span class="n">w_df</span><span class="p">,</span> <span class="n">w_di</span> <span class="o">=</span> <span class="n">r_class</span><span class="o">.</span><span class="n">report_data</span><span class="p">(</span><span class="n">boundaries</span><span class="p">,</span> <span class="n">survey_data</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">beaches</span><span class="p">,</span> <span class="n">codes</span><span class="p">)</span>
 <span class="n">a_report</span> <span class="o">=</span> <span class="n">r_class</span><span class="o">.</span><span class="n">ReportClass</span><span class="p">(</span><span class="n">w_df</span><span class="p">,</span> <span class="n">w_di</span><span class="p">,</span> <span class="n">boundaries</span><span class="p">,</span> <span class="n">top_label</span><span class="p">,</span> <span class="s1">&#39;fr&#39;</span><span class="p">,</span> <span class="n">c_l</span><span class="p">)</span>
+
 </pre></div>
 </div>
 <p>The locations from the ReportClass are used to select the relevant geo-data. Survey locations that have no geo-data are dropped from the analysis, a list of dropped locations is produced.</p>
@@ -439,6 +455,8 @@ document.write(`
 <span class="c1"># select an object from the most common:</span>
 <span class="n">selected</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;G27&quot;</span><span class="p">]</span>
 <span class="n">w_datai</span> <span class="o">=</span> <span class="n">work_data_i</span><span class="p">[</span><span class="n">work_data_i</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">selected</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># scale the value column</span>
 <span class="n">w_datai</span> <span class="o">=</span> <span class="n">scale_a_column</span><span class="p">(</span><span class="n">w_datai</span><span class="p">,</span> <span class="n">column_to_scale</span><span class="o">=</span><span class="s1">&#39;pcs_m&#39;</span><span class="p">,</span> <span class="n">column_name</span><span class="o">=</span><span class="s2">&quot;scaled&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -469,7 +487,10 @@ document.write(`
 
     <span class="n">locations</span> <span class="o">=</span> <span class="n">survey_data</span><span class="o">.</span><span class="n">slug</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
     <span class="n">available</span> <span class="o">=</span> <span class="n">topo_data</span><span class="o">.</span><span class="n">index</span>
+    <span class="c1"># identify the locations that have no topo data</span>
     <span class="n">no_data</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">locations</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">available</span><span class="p">]</span>
+
+    <span class="c1"># take the available data and names of locations with no data</span>
     <span class="n">locations_with_data</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">locations</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">available</span><span class="p">]</span>
     
     <span class="k">return</span> <span class="n">topo_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">locations_with_data</span><span class="p">],</span> <span class="n">no_data</span>
@@ -536,7 +557,7 @@ document.write(`
             <span class="c1"># the attributes in the list</span>
             <span class="n">new_val</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">new_labels</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
             <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;attribute&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">attributes</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="s1">&#39;attribute&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_val</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="c1"># sum the new attributes</span>
+    <span class="c1"># sum the occurrences of the same attribute</span>
     <span class="n">r</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;slug&#39;</span><span class="p">,</span><span class="s1">&#39;attribute&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="n">coi</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 
     <span class="c1"># pivot and set the index to the locations</span>
@@ -544,6 +565,38 @@ document.write(`
     <span class="n">r</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;attribute&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s1">&#39;slug&#39;</span><span class="p">)</span>            
             
     <span class="k">return</span> <span class="n">r</span><span class="o">.</span><span class="n">droplevel</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">statistic_of_critical_value</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> 
+                                <span class="n">df_feature_columns</span><span class="p">,</span> 
+                                <span class="n">df_target_column</span><span class="p">,</span> 
+                                <span class="n">sample_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;loc_date&#39;</span><span class="p">,</span>
+                                <span class="n">value_counts</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                                <span class="n">average</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Compute statistics of critical values for given data.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    df (pd.DataFrame): The input DataFrame containing the data.</span>
+<span class="sd">    df_feature_columns (list): A list of columns to be used as feature columns.</span>
+<span class="sd">    df_target_column (list): A list of columns to be used as target columns.</span>
+<span class="sd">    sample_id (str, optional): The column representing sample identifiers (default is &#39;loc_date&#39;).</span>
+<span class="sd">    value_counts (bool, optional): If True, compute value counts as weights (default is True).</span>
+<span class="sd">    average (bool, optional): If True, compute the median for the feature columns (default is False).</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    pd.DataFrame: A DataFrame containing computed statistics based on the specified options.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">value_vars</span><span class="o">=</span><span class="n">df_feature_columns</span><span class="p">,</span> <span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="n">df_target_column</span><span class="p">,</span> <span class="n">sample_id</span><span class="p">])</span>
+    
+    <span class="k">if</span> <span class="n">value_counts</span><span class="p">:</span>
+        <span class="n">di</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;variable&#39;</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+        <span class="n">di</span><span class="p">[</span><span class="s1">&#39;weight&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">di</span><span class="p">[</span><span class="s1">&#39;count&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">d</span><span class="p">[</span><span class="n">sample_id</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+        <span class="n">di</span> <span class="o">=</span> <span class="n">di</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;variable&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;weight&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">average</span><span class="p">:</span>        
+        <span class="n">di</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;variable&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="n">df_target_column</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+        <span class="n">di</span> <span class="o">=</span> <span class="n">di</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;variable&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="n">df_target_column</span><span class="p">)</span>
+                
+    <span class="k">return</span> <span class="n">di</span>
 
 <span class="k">class</span> <span class="nc">LandUse</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
@@ -637,390 +690,419 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
+<div class="section" id="land-use-and-density">
+<h3>Land use and density<a class="headerlink" href="#land-use-and-density" title="Permalink to this heading">#</a></h3>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead tr th {
-        text-align: left;
-    }
+<img alt="_images/c13b69b0852265a0c23d4e82e078bc6a2af931c548af84ceb1df59bba2741ce7.png" src="_images/c13b69b0852265a0c23d4e82e078bc6a2af931c548af84ceb1df59bba2741ce7.png" />
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_cb3e5 tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_cb3e5 tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_cb3e5 tr {
+  font-size: 10px;
+}
+#T_cb3e5 th:nth-child(1) {
+  background-color: #FFF;
+  font-size: 12px;
+  text-align: left;
+}
+#T_cb3e5 td {
+  padding: 4px;
+  font-size: 12px;
+}
+#T_cb3e5 caption {
+  caption-side: bottom;
+  font-size: 1em;
+  text-align: left;
+}
+#T_cb3e5_row0_col0 {
+  background-color: rgba(172,56,2, .5);
+  color: black;
+}
+#T_cb3e5_row0_col1 {
+  background-color: rgba(208,68,1, .5);
+  color: black;
+}
+#T_cb3e5_row0_col2 {
+  background-color: rgba(250,250,250, .5);
+  color: black;
+}
+#T_cb3e5_row0_col3 {
+  background-color: rgba(92,92,92, .5);
+  color: black;
+}
+#T_cb3e5_row0_col4, #T_cb3e5_row2_col3 {
+  background-color: rgba(137,137,137, .5);
+  color: black;
+}
+#T_cb3e5_row0_col5, #T_cb3e5_row3_col0, #T_cb3e5_row4_col4, #T_cb3e5_row4_col6 {
+  background-color: rgba(253,253,253, .5);
+  color: black;
+}
+#T_cb3e5_row0_col6 {
+  background-color: rgba(197,197,197, .5);
+  color: black;
+}
+#T_cb3e5_row1_col0 {
+  background-color: rgba(235,235,235, .5);
+  color: black;
+}
+#T_cb3e5_row1_col1, #T_cb3e5_row1_col2 {
+  background-color: rgba(186,186,186, .5);
+  color: black;
+}
+#T_cb3e5_row1_col3 {
+  background-color: rgba(25,25,25, .5);
+  color: black;
+}
+#T_cb3e5_row1_col4 {
+  background-color: rgba(253,181,118, .5);
+  color: black;
+}
+#T_cb3e5_row1_col5 {
+  background-color: rgba(254,242,230, .5);
+  color: black;
+}
+#T_cb3e5_row1_col6 {
+  background-color: rgba(98,98,98, .5);
+  color: black;
+}
+#T_cb3e5_row2_col0, #T_cb3e5_row4_col2 {
+  background-color: rgba(226,226,226, .5);
+  color: black;
+}
+#T_cb3e5_row2_col1, #T_cb3e5_row3_col4 {
+  background-color: rgba(247,247,247, .5);
+  color: black;
+}
+#T_cb3e5_row2_col2 {
+  background-color: rgba(13,13,13, .5);
+  color: black;
+}
+#T_cb3e5_row2_col4 {
+  background-color: rgba(216,216,216, .5);
+  color: black;
+}
+#T_cb3e5_row2_col5 {
+  background-color: rgba(253,220,186, .5);
+  color: black;
+}
+#T_cb3e5_row2_col6 {
+  background-color: rgba(58,58,58, .5);
+  color: black;
+}
+#T_cb3e5_row3_col1, #T_cb3e5_row3_col5 {
+  background-color: rgba(255,255,255, .5);
+  color: black;
+}
+#T_cb3e5_row3_col2 {
+  background-color: rgba(109,109,109, .5);
+  color: black;
+}
+#T_cb3e5_row3_col3 {
+  background-color: rgba(248,248,248, .5);
+  color: black;
+}
+#T_cb3e5_row3_col6 {
+  background-color: rgba(189,189,189, .5);
+  color: black;
+}
+#T_cb3e5_row4_col0, #T_cb3e5_row4_col1, #T_cb3e5_row4_col3, #T_cb3e5_row4_col5 {
+  background-color: rgba(254,254,254, .5);
+  color: black;
+}
 </style>
-<table border="1" class="dataframe">
+<table id="T_cb3e5">
+  <caption>The weight of each category in the feauture variables. For example: the component Forest is 32% composed of locations that fall within the lowest amount dedicated to forests.</caption>
   <thead>
     <tr>
-      <th></th>
-      <th colspan="16" halign="left">pcs_m</th>
-    </tr>
-    <tr>
-      <th>label</th>
-      <th>bielersee</th>
-      <th>bodensee</th>
-      <th>brienzersee</th>
-      <th>greifensee</th>
-      <th>katzensee</th>
-      <th>lac-leman</th>
-      <th>lago-di-lugano</th>
-      <th>lago-maggiore</th>
-      <th>neuenburgersee</th>
-      <th>quatre-cantons</th>
-      <th>sempachsee</th>
-      <th>thunersee</th>
-      <th>untersee</th>
-      <th>walensee</th>
-      <th>zugersee</th>
-      <th>zurichsee</th>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_cb3e5_level0_col0" class="col_heading level0 col0" >Verger</th>
+      <th id="T_cb3e5_level0_col1" class="col_heading level0 col1" >Vignes</th>
+      <th id="T_cb3e5_level0_col2" class="col_heading level0 col2" >Bâtiments</th>
+      <th id="T_cb3e5_level0_col3" class="col_heading level0 col3" >Forêt</th>
+      <th id="T_cb3e5_level0_col4" class="col_heading level0 col4" >Services Publics</th>
+      <th id="T_cb3e5_level0_col5" class="col_heading level0 col5" >Rues</th>
+      <th id="T_cb3e5_level0_col6" class="col_heading level0 col6" >Non Défini</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>25%</th>
-      <td>0.03</td>
-      <td>0.09</td>
-      <td>0.0</td>
-      <td>0.33</td>
-      <td>0.4875</td>
-      <td>0.14</td>
-      <td>1.215</td>
-      <td>0.07</td>
-      <td>0.03</td>
-      <td>0.0</td>
-      <td>0.09</td>
-      <td>0.065</td>
-      <td>0.37</td>
-      <td>0.145</td>
-      <td>0.11</td>
-      <td>0.2</td>
+      <th id="T_cb3e5_level0_row0" class="row_heading level0 row0" >Le Plus Bas</th>
+      <td id="T_cb3e5_row0_col0" class="data row0 col0" >0,84</td>
+      <td id="T_cb3e5_row0_col1" class="data row0 col1" >0,80</td>
+      <td id="T_cb3e5_row0_col2" class="data row0 col2" >0,02</td>
+      <td id="T_cb3e5_row0_col3" class="data row0 col3" >0,32</td>
+      <td id="T_cb3e5_row0_col4" class="data row0 col4" >0,25</td>
+      <td id="T_cb3e5_row0_col5" class="data row0 col5" >0,01</td>
+      <td id="T_cb3e5_row0_col6" class="data row0 col6" >0,15</td>
     </tr>
     <tr>
-      <th>50%</th>
-      <td>0.06</td>
-      <td>0.17</td>
-      <td>0.06</td>
-      <td>0.745</td>
-      <td>0.74</td>
-      <td>0.66</td>
-      <td>2.42</td>
-      <td>0.095</td>
-      <td>0.18</td>
-      <td>0.03</td>
-      <td>0.25</td>
-      <td>0.14</td>
-      <td>0.76</td>
-      <td>0.29</td>
-      <td>0.165</td>
-      <td>0.54</td>
+      <th id="T_cb3e5_level0_row1" class="row_heading level0 row1" >Faible</th>
+      <td id="T_cb3e5_row1_col0" class="data row1 col0" >0,07</td>
+      <td id="T_cb3e5_row1_col1" class="data row1 col1" >0,17</td>
+      <td id="T_cb3e5_row1_col2" class="data row1 col2" >0,17</td>
+      <td id="T_cb3e5_row1_col3" class="data row1 col3" >0,41</td>
+      <td id="T_cb3e5_row1_col4" class="data row1 col4" >0,61</td>
+      <td id="T_cb3e5_row1_col5" class="data row1 col5" >0,46</td>
+      <td id="T_cb3e5_row1_col6" class="data row1 col6" >0,31</td>
     </tr>
     <tr>
-      <th>75%</th>
-      <td>0.43</td>
-      <td>0.3075</td>
-      <td>1.0</td>
-      <td>1.1775</td>
-      <td>0.8675</td>
-      <td>1.59</td>
-      <td>4.925</td>
-      <td>0.3675</td>
-      <td>0.3225</td>
-      <td>0.075</td>
-      <td>0.31</td>
-      <td>0.31</td>
-      <td>0.94</td>
-      <td>1.07</td>
-      <td>0.8</td>
-      <td>1.36</td>
+      <th id="T_cb3e5_level0_row2" class="row_heading level0 row2" >Milieu</th>
+      <td id="T_cb3e5_row2_col0" class="data row2 col0" >0,09</td>
+      <td id="T_cb3e5_row2_col1" class="data row2 col1" >0,03</td>
+      <td id="T_cb3e5_row2_col2" class="data row2 col2" >0,43</td>
+      <td id="T_cb3e5_row2_col3" class="data row2 col3" >0,24</td>
+      <td id="T_cb3e5_row2_col4" class="data row2 col4" >0,11</td>
+      <td id="T_cb3e5_row2_col5" class="data row2 col5" >0,53</td>
+      <td id="T_cb3e5_row2_col6" class="data row2 col6" >0,37</td>
     </tr>
     <tr>
-      <th>count</th>
-      <td>51</td>
-      <td>28</td>
-      <td>5</td>
-      <td>34</td>
-      <td>12</td>
-      <td>249</td>
-      <td>4</td>
-      <td>18</td>
-      <td>52</td>
-      <td>35</td>
-      <td>11</td>
-      <td>43</td>
-      <td>6</td>
-      <td>42</td>
-      <td>24</td>
-      <td>141</td>
+      <th id="T_cb3e5_level0_row3" class="row_heading level0 row3" >Élévé</th>
+      <td id="T_cb3e5_row3_col0" class="data row3 col0" >0,00</td>
+      <td id="T_cb3e5_row3_col1" class="data row3 col1" >0,00</td>
+      <td id="T_cb3e5_row3_col2" class="data row3 col2" >0,29</td>
+      <td id="T_cb3e5_row3_col3" class="data row3 col3" >0,02</td>
+      <td id="T_cb3e5_row3_col4" class="data row3 col4" >0,03</td>
+      <td id="T_cb3e5_row3_col5" class="data row3 col5" >0,00</td>
+      <td id="T_cb3e5_row3_col6" class="data row3 col6" >0,17</td>
     </tr>
     <tr>
-      <th>max</th>
-      <td>3.23</td>
-      <td>1.1</td>
-      <td>1.37</td>
-      <td>9.38</td>
-      <td>2.78</td>
-      <td>19.7</td>
-      <td>10.04</td>
-      <td>3.85</td>
-      <td>3.1</td>
-      <td>0.37</td>
-      <td>1.25</td>
-      <td>1.42</td>
-      <td>1.64</td>
-      <td>3.31</td>
-      <td>1.69</td>
-      <td>7.62</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>0.490392</td>
-      <td>0.241071</td>
-      <td>0.486</td>
-      <td>1.284706</td>
-      <td>0.941667</td>
-      <td>1.351245</td>
-      <td>3.72</td>
-      <td>0.437222</td>
-      <td>0.326731</td>
-      <td>0.056</td>
-      <td>0.344545</td>
-      <td>0.259767</td>
-      <td>0.773333</td>
-      <td>0.757381</td>
-      <td>0.474167</td>
-      <td>1.086383</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>0.0</td>
-      <td>0.03</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.38</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.02</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.24</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>0.860404</td>
-      <td>0.245226</td>
-      <td>0.651828</td>
-      <td>1.810343</td>
-      <td>0.739814</td>
-      <td>2.156339</td>
-      <td>4.413646</td>
-      <td>0.892022</td>
-      <td>0.51681</td>
-      <td>0.093469</td>
-      <td>0.431355</td>
-      <td>0.323813</td>
-      <td>0.518253</td>
-      <td>0.979425</td>
-      <td>0.531781</td>
-      <td>1.480187</td>
-    </tr>
-    <tr>
-      <th>total</th>
-      <td>845</td>
-      <td>307</td>
-      <td>102</td>
-      <td>2007</td>
-      <td>711</td>
-      <td>13925</td>
-      <td>389</td>
-      <td>312</td>
-      <td>958</td>
-      <td>114</td>
-      <td>61</td>
-      <td>695</td>
-      <td>116</td>
-      <td>1151</td>
-      <td>387</td>
-      <td>6953</td>
+      <th id="T_cb3e5_level0_row4" class="row_heading level0 row4" >Le Plus Élévé</th>
+      <td id="T_cb3e5_row4_col0" class="data row4 col0" >0,00</td>
+      <td id="T_cb3e5_row4_col1" class="data row4 col1" >0,00</td>
+      <td id="T_cb3e5_row4_col2" class="data row4 col2" >0,09</td>
+      <td id="T_cb3e5_row4_col3" class="data row4 col3" >0,00</td>
+      <td id="T_cb3e5_row4_col4" class="data row4 col4" >0,01</td>
+      <td id="T_cb3e5_row4_col5" class="data row4 col5" >0,00</td>
+      <td id="T_cb3e5_row4_col6" class="data row4 col6" >0,00</td>
     </tr>
   </tbody>
 </table>
-</div></div></div>
+</div></div>
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/c858ebcb211edbbfadd280c860c0582def0ccbd92693048eceb4391ea7332b59.png" src="_images/c858ebcb211edbbfadd280c860c0582def0ccbd92693048eceb4391ea7332b59.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m_ui</span><span class="o">.</span><span class="n">ordinal_land_rank</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
+<div class="output text_html"><style type="text/css">
+#T_efa46 tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_efa46 tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_efa46 tr {
+  font-size: 10px;
+}
+#T_efa46 th:nth-child(1) {
+  background-color: #FFF;
+  font-size: 12px;
+  text-align: left;
+}
+#T_efa46 td {
+  padding: 4px;
+  font-size: 12px;
+}
+#T_efa46 caption {
+  caption-side: bottom;
+  font-size: 1em;
+  text-align: left;
+}
+#T_efa46_row0_col0 {
+  background-color: rgba(29,29,29, .5);
+  color: black;
+}
+#T_efa46_row0_col1 {
+  background-color: rgba(92,92,92, .5);
+  color: black;
+}
+#T_efa46_row0_col2 {
+  background-color: rgba(255,245,235, .5);
+  color: black;
+}
+#T_efa46_row0_col3, #T_efa46_row1_col1 {
+  background-color: rgba(254,239,224, .5);
+  color: black;
+}
+#T_efa46_row0_col4 {
+  background-color: rgba(226,226,226, .5);
+  color: black;
+}
+#T_efa46_row0_col5 {
+  background-color: rgba(249,249,249, .5);
+  color: black;
+}
+#T_efa46_row0_col6 {
+  background-color: rgba(154,49,3, .5);
+  color: black;
+}
+#T_efa46_row1_col0 {
+  background-color: rgba(146,146,146, .5);
+  color: black;
+}
+#T_efa46_row1_col2 {
+  background-color: rgba(224,224,224, .5);
+  color: black;
+}
+#T_efa46_row1_col3 {
+  background-color: rgba(48,48,48, .5);
+  color: black;
+}
+#T_efa46_row1_col4 {
+  background-color: rgba(6,6,6, .5);
+  color: black;
+}
+#T_efa46_row1_col5, #T_efa46_row2_col3 {
+  background-color: rgba(160,160,160, .5);
+  color: black;
+}
+#T_efa46_row1_col6 {
+  background-color: rgba(253,173,105, .5);
+  color: black;
+}
+#T_efa46_row2_col0 {
+  background-color: rgba(236,236,236, .5);
+  color: black;
+}
+#T_efa46_row2_col1 {
+  background-color: rgba(71,71,71, .5);
+  color: black;
+}
+#T_efa46_row2_col2 {
+  background-color: rgba(115,115,115, .5);
+  color: black;
+}
+#T_efa46_row2_col4 {
+  background-color: rgba(214,71,1, .5);
+  color: black;
+}
+#T_efa46_row2_col5 {
+  background-color: rgba(253,210,167, .5);
+  color: black;
+}
+#T_efa46_row2_col6 {
+  background-color: rgba(156,156,156, .5);
+  color: black;
+}
+#T_efa46_row3_col0 {
+  background-color: rgba(98,98,98, .5);
+  color: black;
+}
+#T_efa46_row3_col1, #T_efa46_row3_col5 {
+  background-color: rgba(0,0,0, .5);
+  color: black;
+}
+#T_efa46_row3_col2 {
+  background-color: rgba(253,228,203, .5);
+  color: black;
+}
+#T_efa46_row3_col3 {
+  background-color: rgba(213,213,213, .5);
+  color: black;
+}
+#T_efa46_row3_col4, #T_efa46_row4_col2, #T_efa46_row4_col4, #T_efa46_row4_col5 {
+  background-color: rgba(127,39,4, .5);
+  color: black;
+}
+#T_efa46_row3_col6 {
+  background-color: rgba(238,238,238, .5);
+  color: black;
+}
+#T_efa46_row4_col0 {
+  background-color: rgba(147,46,3, .5);
+  color: black;
+}
+#T_efa46_row4_col1 {
+  background-color: rgba(83,83,83, .5);
+  color: black;
+}
+#T_efa46_row4_col3 {
+  background-color: rgba(255,255,255, .5);
+  color: black;
+}
+#T_efa46_row4_col6 {
+  background-color: rgba(253,209,164, .5);
+  color: black;
+}
 </style>
-<table border="1" class="dataframe">
+<table id="T_efa46">
+  <caption>The median pcs/m of each category in the feature variables. For example: The average pcs/m at the lowest category of forests was 0.47</caption>
   <thead>
-    <tr style="text-align: right;">
-      <th>attribute</th>
-      <th>Obstanlage</th>
-      <th>Reben</th>
-      <th>Siedl</th>
-      <th>Wald</th>
-      <th>undefined</th>
-      <th>land_use</th>
-      <th>streets</th>
-    </tr>
     <tr>
-      <th>slug</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_efa46_level0_col0" class="col_heading level0 col0" >Verger</th>
+      <th id="T_efa46_level0_col1" class="col_heading level0 col1" >Vignes</th>
+      <th id="T_efa46_level0_col2" class="col_heading level0 col2" >Bâtiments</th>
+      <th id="T_efa46_level0_col3" class="col_heading level0 col3" >Forêt</th>
+      <th id="T_efa46_level0_col4" class="col_heading level0 col4" >Services Publics</th>
+      <th id="T_efa46_level0_col5" class="col_heading level0 col5" >Rues</th>
+      <th id="T_efa46_level0_col6" class="col_heading level0 col6" >Non Défini</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>aabach</th>
-      <td>lowest</td>
-      <td>lowest</td>
-      <td>low</td>
-      <td>middle</td>
-      <td>middle</td>
-      <td>lowest</td>
-      <td>low</td>
+      <th id="T_efa46_level0_row0" class="row_heading level0 row0" >Le Plus Bas</th>
+      <td id="T_efa46_row0_col0" class="data row0 col0" >0,41</td>
+      <td id="T_efa46_row0_col1" class="data row0 col1" >0,32</td>
+      <td id="T_efa46_row0_col2" class="data row0 col2" >0,45</td>
+      <td id="T_efa46_row0_col3" class="data row0 col3" >0,47</td>
+      <td id="T_efa46_row0_col4" class="data row0 col4" >0,09</td>
+      <td id="T_efa46_row0_col5" class="data row0 col5" >0,02</td>
+      <td id="T_efa46_row0_col6" class="data row0 col6" >0,86</td>
     </tr>
     <tr>
-      <th>anarchy-beach</th>
-      <td>lowest</td>
-      <td>lowest</td>
-      <td>highest</td>
-      <td>lowest</td>
-      <td>lowest</td>
-      <td>low</td>
-      <td>low</td>
+      <th id="T_efa46_level0_row1" class="row_heading level0 row1" >Faible</th>
+      <td id="T_efa46_row1_col0" class="data row1 col0" >0,23</td>
+      <td id="T_efa46_row1_col1" class="data row1 col1" >0,47</td>
+      <td id="T_efa46_row1_col2" class="data row1 col2" >0,10</td>
+      <td id="T_efa46_row1_col3" class="data row1 col3" >0,38</td>
+      <td id="T_efa46_row1_col4" class="data row1 col4" >0,44</td>
+      <td id="T_efa46_row1_col5" class="data row1 col5" >0,21</td>
+      <td id="T_efa46_row1_col6" class="data row1 col6" >0,62</td>
     </tr>
     <tr>
-      <th>arabie</th>
-      <td>lowest</td>
-      <td>low</td>
-      <td>high</td>
-      <td>lowest</td>
-      <td>lowest</td>
-      <td>low</td>
-      <td>middle</td>
+      <th id="T_efa46_level0_row2" class="row_heading level0 row2" >Milieu</th>
+      <td id="T_efa46_row2_col0" class="data row2 col0" >0,07</td>
+      <td id="T_efa46_row2_col1" class="data row2 col1" >0,35</td>
+      <td id="T_efa46_row2_col2" class="data row2 col2" >0,28</td>
+      <td id="T_efa46_row2_col3" class="data row2 col3" >0,21</td>
+      <td id="T_efa46_row2_col4" class="data row2 col4" >0,79</td>
+      <td id="T_efa46_row2_col5" class="data row2 col5" >0,56</td>
+      <td id="T_efa46_row2_col6" class="data row2 col6" >0,21</td>
     </tr>
     <tr>
-      <th>ascona-traghetto-spiaggia</th>
-      <td>lowest</td>
-      <td>lowest</td>
-      <td>middle</td>
-      <td>middle</td>
-      <td>low</td>
-      <td>low</td>
-      <td>middle</td>
+      <th id="T_efa46_level0_row3" class="row_heading level0 row3" >Élévé</th>
+      <td id="T_efa46_row3_col0" class="data row3 col0" >0,31</td>
+      <td id="T_efa46_row3_col1" class="data row3 col1" >nan</td>
+      <td id="T_efa46_row3_col2" class="data row3 col2" >0,51</td>
+      <td id="T_efa46_row3_col3" class="data row3 col3" >0,12</td>
+      <td id="T_efa46_row3_col4" class="data row3 col4" >0,91</td>
+      <td id="T_efa46_row3_col5" class="data row3 col5" >nan</td>
+      <td id="T_efa46_row3_col6" class="data row3 col6" >0,06</td>
     </tr>
     <tr>
-      <th>augustmutzenbergstrandweg</th>
-      <td>lowest</td>
-      <td>low</td>
-      <td>middle</td>
-      <td>low</td>
-      <td>low</td>
-      <td>low</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>zugerseecholler_cham_blarerm</th>
-      <td>lowest</td>
-      <td>lowest</td>
-      <td>middle</td>
-      <td>lowest</td>
-      <td>middle</td>
-      <td>low</td>
-      <td>middle</td>
-    </tr>
-    <tr>
-      <th>zurcher-strand</th>
-      <td>lowest</td>
-      <td>lowest</td>
-      <td>high</td>
-      <td>lowest</td>
-      <td>low</td>
-      <td>middle</td>
-      <td>highest</td>
-    </tr>
-    <tr>
-      <th>zurichsee-feldeggstr-banningersand</th>
-      <td>lowest</td>
-      <td>lowest</td>
-      <td>high</td>
-      <td>lowest</td>
-      <td>low</td>
-      <td>middle</td>
-      <td>middle</td>
-    </tr>
-    <tr>
-      <th>zurichsee_kusnachterhorn_thirkell-whitej</th>
-      <td>lowest</td>
-      <td>lowest</td>
-      <td>high</td>
-      <td>low</td>
-      <td>low</td>
-      <td>low</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>zurichsee_wollishofen_langendorfm</th>
-      <td>lowest</td>
-      <td>lowest</td>
-      <td>high</td>
-      <td>lowest</td>
-      <td>low</td>
-      <td>middle</td>
-      <td>middle</td>
+      <th id="T_efa46_level0_row4" class="row_heading level0 row4" >Le Plus Élévé</th>
+      <td id="T_efa46_row4_col0" class="data row4 col0" >0,87</td>
+      <td id="T_efa46_row4_col1" class="data row4 col1" >0,34</td>
+      <td id="T_efa46_row4_col2" class="data row4 col2" >1,31</td>
+      <td id="T_efa46_row4_col3" class="data row4 col3" >0,00</td>
+      <td id="T_efa46_row4_col4" class="data row4 col4" >1,16</td>
+      <td id="T_efa46_row4_col5" class="data row4 col5" >4,00</td>
+      <td id="T_efa46_row4_col6" class="data row4 col6" >0,56</td>
     </tr>
   </tbody>
 </table>
-<p>124 rows × 7 columns</p>
-</div></div></div>
+</div></div>
 </div>
 <p>Locations with no landuse data are excluded.</p>
+</div>
 </div>
 <div class="section" id="correlation-of-independent-variables">
 <h2>Correlation of independent variables<a class="headerlink" href="#correlation-of-independent-variables" title="Permalink to this heading">#</a></h2>
@@ -1098,7 +1180,6 @@ document.write(`
     <span class="c1"># Remove duplicates with values in different orders</span>
     <span class="n">unique_correlations</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">correlation</span><span class="p">))</span> <span class="k">for</span> <span class="n">correlation</span> <span class="ow">in</span> <span class="n">significant_correlations</span><span class="p">)</span>
 
-
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">unique_correlations</span><span class="p">)),</span> <span class="n">mask</span>
 
 <span class="k">def</span> <span class="nf">combining_and_interacting</span><span class="p">(</span><span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">combining</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span><span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
@@ -1124,13 +1205,13 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[&#39;Siedl&#39;, &#39;Wald&#39;],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[&#39;land_use&#39;, &#39;streets&#39;],
        [&#39;streets&#39;, &#39;undefined&#39;],
-       [&#39;Siedl&#39;, &#39;streets&#39;],
+       [&#39;land_use&#39;, &#39;undefined&#39;],
+       [&#39;Siedl&#39;, &#39;Wald&#39;],
        [&#39;Siedl&#39;, &#39;undefined&#39;],
        [&#39;Siedl&#39;, &#39;land_use&#39;],
-       [&#39;land_use&#39;, &#39;streets&#39;],
-       [&#39;land_use&#39;, &#39;undefined&#39;]], dtype=&#39;&lt;U9&#39;)
+       [&#39;Siedl&#39;, &#39;streets&#39;]], dtype=&#39;&lt;U9&#39;)
 </pre></div>
 </div>
 </div>
@@ -1202,7 +1283,7 @@ document.write(`
 <p>The purpose of collecting the topographic data is to understand the relationship between the density of objects observed and the physical environment they are observed in (the conditions of the observation).</p>
 <div class="section" id="random-sample-consensus-ransac">
 <h3>Random Sample Consensus (RANSAC)<a class="headerlink" href="#random-sample-consensus-ransac" title="Permalink to this heading">#</a></h3>
-<p>From <span class="xref myst">scikit-learn</span></p>
+<p>From <a class="reference external" href="https://scikit-learn.org/stable/modules/linear_model.html#robustness-regression-outliers-and-modeling-errors">scikit-learn</a></p>
 <p>RANSAC (RANdom SAmple Consensus) fits a model from random subsets of inliers from the complete data set.</p>
 <p>RANSAC is a non-deterministic algorithm producing only a reasonable result with a certain probability, which is dependent on the number of iterations (see max_trials parameter). It is typically used for linear and non-linear regression problems and is especially popular in the field of photogrammetric computer vision.</p>
 <p>The algorithm splits the complete input sample data into a set of inliers, which may be subject to noise, and outliers, which are e.g. caused by erroneous measurements or invalid hypotheses about the data. The resulting model is then estimated only from the determined inliers.</p>
@@ -1216,7 +1297,7 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/ccf6f735baf4363eb9787abef50e8e7d9ee5ed93934763c122e3dc2f97a8afd2.png" src="_images/ccf6f735baf4363eb9787abef50e8e7d9ee5ed93934763c122e3dc2f97a8afd2.png" />
+<img alt="_images/47102f1310796a233541b8c446bfe996b2606cccf17392d4b46596ca9930e53f.png" src="_images/47102f1310796a233541b8c446bfe996b2606cccf17392d4b46596ca9930e53f.png" />
 </div>
 </div>
 </div>
@@ -1230,7 +1311,7 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/58d03b48f41389893a40be3c90a18b608b931b0fb707af0ecf654d4b7d0412cf.png" src="_images/58d03b48f41389893a40be3c90a18b608b931b0fb707af0ecf654d4b7d0412cf.png" />
+<img alt="_images/c47cbd9938d76e661c96d1fc9a424be96918b2a0cadc20e295f4eb6428b76ad8.png" src="_images/c47cbd9938d76e661c96d1fc9a424be96918b2a0cadc20e295f4eb6428b76ad8.png" />
 </div>
 </div>
 </div>
@@ -1244,7 +1325,7 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/ee042f0730d8c7a715d033249333b362ef5c51f8bcb73f6f1dbc96ac140c72f5.png" src="_images/ee042f0730d8c7a715d033249333b362ef5c51f8bcb73f6f1dbc96ac140c72f5.png" />
+<img alt="_images/5146b18451a8f25a4d392ececbf0b61059c1533dce893d8c07998574c0a45942.png" src="_images/5146b18451a8f25a4d392ececbf0b61059c1533dce893d8c07998574c0a45942.png" />
 </div>
 </div>
 </div>
@@ -1260,7 +1341,7 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/521cb6324a21f12d20a0e8989c309f52227a98832e1420998a968e2ce1d3176e.png" src="_images/521cb6324a21f12d20a0e8989c309f52227a98832e1420998a968e2ce1d3176e.png" />
+<img alt="_images/1d7b51640bbbb88e897154b89b468b3682c636ca657ca95af529cbd09b6865f3.png" src="_images/1d7b51640bbbb88e897154b89b468b3682c636ca657ca95af529cbd09b6865f3.png" />
 </div>
 </div>
 <div class="cell tag_remove-input docutils container">
@@ -1273,7 +1354,7 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/a4d636b7dddcb374dd5a03539c7734c5830701a83c0f4e58ff360c892df5dd90.png" src="_images/a4d636b7dddcb374dd5a03539c7734c5830701a83c0f4e58ff360c892df5dd90.png" />
+<img alt="_images/23a3be915f02e74bb38a46054906f4afbf15665fb60464b14b41ecd18e1f26dd.png" src="_images/23a3be915f02e74bb38a46054906f4afbf15665fb60464b14b41ecd18e1f26dd.png" />
 </div>
 </div>
 </div>
@@ -1306,23 +1387,23 @@ document.write(`
   <tbody>
     <tr>
       <th>RANSAC-Linear</th>
-      <td>0.011185</td>
-      <td>0.042132</td>
+      <td>0.004532</td>
+      <td>0.117823</td>
     </tr>
     <tr>
       <th>Forest</th>
-      <td>0.010317</td>
-      <td>0.116478</td>
+      <td>0.004183</td>
+      <td>0.185773</td>
     </tr>
     <tr>
       <th>PCA =&gt; Linear</th>
-      <td>0.011003</td>
-      <td>0.057695</td>
+      <td>0.004409</td>
+      <td>0.141772</td>
     </tr>
     <tr>
       <th>PCA =&gt; polynomial =&gt; linear</th>
-      <td>0.011188</td>
-      <td>0.041884</td>
+      <td>0.004416</td>
+      <td>0.140344</td>
     </tr>
   </tbody>
 </table>
@@ -1341,8 +1422,8 @@ Model:                            GLM   Df Residuals:                      746
 Model Family:        NegativeBinomial   Df Model:                            6
 Link Function:                    Log   Scale:                          1.0000
 Method:                          IRLS   Log-Likelihood:                -135.82
-Date:                Tue, 07 Nov 2023   Deviance:                       44.155
-Time:                        10:42:48   Pearson chi2:                     67.8
+Date:                Thu, 09 Nov 2023   Deviance:                       44.155
+Time:                        15:30:40   Pearson chi2:                     67.8
 No. Iterations:                     5   Pseudo R-squ. (CS):            0.01682
 Covariance Type:            nonrobust                                         
 ==============================================================================
@@ -1360,20 +1441,175 @@ streets        1.2936      1.232      1.050      0.294      -1.120       3.708
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="unit-tests">
+<h2>Unit tests<a class="headerlink" href="#unit-tests" title="Permalink to this heading">#</a></h2>
+<div class="section" id="grouping-topographical-data">
+<h3>Grouping topographical data<a class="headerlink" href="#grouping-topographical-data" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TestGroupTopographicAttributes</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">test_group_topographic_attributes_no_grouping</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># sample DataFrame for testing</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;slug&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Location1&#39;</span><span class="p">,</span> <span class="s1">&#39;Location2&#39;</span><span class="p">,</span> <span class="s1">&#39;Location1&#39;</span><span class="p">,</span> <span class="s1">&#39;location3&#39;</span><span class="p">,</span> <span class="s1">&#39;Location2&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;attribute&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;scale&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+        <span class="p">}</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>        
+
+        <span class="c1"># Test without grouping</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">group_topographic_attributes</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+                
+        <span class="c1"># expected result</span>
+        <span class="n">expected</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+            <span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Location1&#39;</span><span class="p">:</span> <span class="mf">15.0</span><span class="p">,</span> <span class="s1">&#39;Location2&#39;</span><span class="p">:</span> <span class="mf">5.0</span><span class="p">,</span> <span class="s1">&#39;location3&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">},</span>
+            <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Location1&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;Location2&#39;</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">,</span> <span class="s1">&#39;location3&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">},</span>
+            <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Location1&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;Location2&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;location3&#39;</span><span class="p">:</span> <span class="mf">5.0</span><span class="p">}})</span>
+        <span class="n">expected</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;slug&quot;</span>
+        <span class="n">expected</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="c1"># Assert </span>
+        <span class="n">pd</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_frame_equal</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">expected</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_group_topographic_attributes_with_grouping</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Create a sample DataFrame for testing</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;slug&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Location1&#39;</span><span class="p">,</span> <span class="s1">&#39;Location2&#39;</span><span class="p">,</span> <span class="s1">&#39;Location1&#39;</span><span class="p">,</span> <span class="s1">&#39;Location3&#39;</span><span class="p">,</span> <span class="s1">&#39;Location1&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;attribute&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;PropertyA&#39;</span><span class="p">,</span> <span class="s1">&#39;PropertyB&#39;</span><span class="p">,</span> <span class="s1">&#39;PropertyA&#39;</span><span class="p">,</span> <span class="s1">&#39;PropertyC&#39;</span><span class="p">,</span> <span class="s1">&#39;PropertyB&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;scale&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+        <span class="p">}</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>   
+
+        <span class="c1"># Test with grouping</span>
+        <span class="n">labels</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;NewPropertyA&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;PropertyA&#39;</span><span class="p">,</span> <span class="s1">&#39;PropertyB&#39;</span><span class="p">]}]</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">group_topographic_attributes</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">list_of_labels</span><span class="o">=</span><span class="n">labels</span><span class="p">)</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+                
+        <span class="c1"># Define your expected result based on the input data and grouping</span>
+        <span class="n">expected</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+            <span class="s1">&#39;NewPropertyA&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Location1&#39;</span><span class="p">:</span> <span class="mf">25.0</span><span class="p">,</span> <span class="s1">&#39;Location2&#39;</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">,</span> <span class="s1">&#39;Location3&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">},</span>
+            <span class="s1">&#39;PropertyC&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Location1&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;Location2&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;Location3&#39;</span><span class="p">:</span> <span class="mf">5.0</span><span class="p">}})</span>
+        
+        <span class="c1"># Assert that the result matches the expected result</span>
+        <span class="n">pd</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_frame_equal</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">expected</span><span class="p">)</span>
+        
+<span class="n">test_suite</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TestLoader</span><span class="p">()</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">TestGroupTopographicAttributes</span><span class="p">)</span>
+<span class="n">test_runner</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">test_result</span> <span class="o">=</span> <span class="n">test_runner</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">test_suite</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>test_group_topographic_attributes_no_grouping (__main__.TestGroupTopographicAttributes) ... ok
+test_group_topographic_attributes_with_grouping (__main__.TestGroupTopographicAttributes) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.015s
+
+OK
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="statistic-of-critical-value">
+<h3>Statistic of critical value<a class="headerlink" href="#statistic-of-critical-value" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TestCriticalValue</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">test_value_counts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;sample_id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;feature1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+                <span class="s1">&#39;feature2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+                <span class="s1">&#39;target1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]}</span>
+
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">df_feature_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;feature1&#39;</span><span class="p">,</span> <span class="s1">&#39;feature2&#39;</span><span class="p">]</span>
+        <span class="n">df_target_column</span> <span class="o">=</span> <span class="s1">&#39;target1&#39;</span>
+        <span class="n">expected_result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+            <span class="s1">&#39;feature1&#39;</span><span class="p">:</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mf">0.33</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mf">0.33</span><span class="p">},</span>
+            <span class="s1">&#39;feature2&#39;</span><span class="p">:</span> <span class="p">{</span><span class="mi">2</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mf">0.33</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mf">0.33</span><span class="p">}</span>
+        <span class="p">},</span> <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
+        <span class="n">expected_result</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+      
+        <span class="n">result</span> <span class="o">=</span> <span class="n">statistic_of_critical_value</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">df_feature_columns</span><span class="p">,</span> <span class="n">df_target_column</span><span class="p">,</span> <span class="n">sample_id</span><span class="o">=</span><span class="s1">&#39;sample_id&#39;</span><span class="p">)</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+       
+        
+        <span class="n">pd</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_frame_equal</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">expected_result</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">test_statistic_median</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;sample_id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">],</span>
+                <span class="s1">&#39;feature1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+                <span class="s1">&#39;feature2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+                <span class="s1">&#39;target&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]}</span>
+
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">df_feature_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;feature1&#39;</span><span class="p">,</span> <span class="s1">&#39;feature2&#39;</span><span class="p">]</span>
+        <span class="n">df_target_column</span> <span class="o">=</span> <span class="s1">&#39;target&#39;</span>
+        <span class="n">expected_result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+            <span class="s1">&#39;feature1&#39;</span><span class="p">:</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">8</span><span class="p">},</span>
+            <span class="s1">&#39;feature2&#39;</span><span class="p">:</span> <span class="p">{</span><span class="mi">2</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">8</span><span class="p">}</span>
+        <span class="p">})</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="n">statistic_of_critical_value</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">df_feature_columns</span><span class="p">,</span> <span class="n">df_target_column</span><span class="p">,</span> <span class="n">sample_id</span><span class="o">=</span><span class="s1">&#39;sample_id&#39;</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">pd</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_frame_equal</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">expected_result</span><span class="p">)</span>
+
+
+<span class="n">test_suite</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TestLoader</span><span class="p">()</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">TestCriticalValue</span><span class="p">)</span>
+<span class="n">test_runner</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">(</span><span class="n">verbosity</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">test_result</span> <span class="o">=</span> <span class="n">test_runner</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">test_suite</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>test_statistic_median (__main__.TestCriticalValue) ... ok
+test_value_counts (__main__.TestCriticalValue) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.024s
+
+OK
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Author: hammerdirt-analyst
 
 conda environment: cantonal_report
 
-scipy      : 1.11.2
-statsmodels: 0.14.0
-sklearn    : 1.3.0
-matplotlib : 3.7.1
 pandas     : 2.0.3
-seaborn    : 0.12.2
+sklearn    : 1.3.0
 numpy      : 1.25.2
+matplotlib : 3.7.1
+seaborn    : 0.12.2
+statsmodels: 0.14.0
+scipy      : 1.11.2
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -1449,6 +1685,10 @@ numpy      : 1.25.2
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-is-this-important">Why is this important?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-important">What is important?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-land-use-class">Using the land use class</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#land-use-and-density">Land use and density</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlation-of-independent-variables">Correlation of independent variables</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-significant-correlations">Definition of significant correlations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-selection-and-combination">Variable selection and combination</a><ul class="nav section-nav flex-column">
@@ -1466,6 +1706,11 @@ numpy      : 1.25.2
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalized-linear-models">Generalized linear models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-tests">Unit tests</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-topographical-data">Grouping topographical data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistic-of-critical-value">Statistic of critical value</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

@@ -1242,6 +1242,56 @@ dtype: bool
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">reportclass</span> <span class="k">as</span> <span class="nn">r_class</span>
+<span class="kn">import</span> <span class="nn">setvariables</span> <span class="k">as</span> <span class="nn">conf_</span>
+<span class="c1"># updating language maps</span>
+<span class="c1"># Collecting required data to establish a report</span>
+<span class="c1"># This includes the language maps for all the common</span>
+<span class="c1"># abbreviations and columns or index labels.</span>
+<span class="n">c_l</span> <span class="o">=</span> <span class="n">r_class</span><span class="o">.</span><span class="n">language_maps</span><span class="p">()</span>
+<span class="c1"># luen = conf_.land_use_fr</span>
+<span class="c1"># land_cover_fr = {</span>
+<span class="c1">#     &#39;undefined&#39;: &#39;Non défini&#39;,</span>
+<span class="c1">#     &#39;Siedl&#39;: &#39;Siedl&#39;,</span>
+<span class="c1">#     &#39;Wald&#39;: &#39;Forêt&#39;,</span>
+<span class="c1">#     &#39;Reben&#39;: &#39;Vignes&#39;,</span>
+<span class="c1">#     &#39;Obstanlage&#39;: &#39;Verger&#39;</span>
+<span class="c1"># }</span>
+
+<span class="c1"># luen.update(land_cover_fr)</span>
+<span class="c1"># fren = pd.read_csv(&#39;data/end_process/fr_labels.csv&#39;).set_index(&#39;en&#39;)</span>
+<span class="c1"># ty = pd.DataFrame(luen.values(), index=luen.keys())</span>
+<span class="c1"># ty[&#39;fr&#39;] = ty[0]</span>
+<span class="c1"># ty.index.name=&#39;en&#39;</span>
+
+<span class="c1"># ty.drop(0, axis=1,inplace=True)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c_l</span><span class="p">[</span><span class="s1">&#39;fr&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;Siedl&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fr    Siedl
+Name: Siedl, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># updated = pd.concat([fren, ty], axis=0)</span>
+<span class="c1"># updated.to_csv(&#39;data/end_process/fr_labels.csv&#39;, index=True)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">watermark</span> -a hammerdirt-analyst -co --iversions
 </pre></div>
 </div>
