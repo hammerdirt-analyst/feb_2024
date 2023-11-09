@@ -12,7 +12,8 @@ even_rows = {"selector": 'tr:nth-child(even)', 'props': f'background-color: rgba
 odd_rows = {'selector': 'tr:nth-child(odd)', 'props': 'background: #FFF;'}
 table_font = {'selector': 'tr', 'props': 'font-size: 10px;'}
 table_data = {'selector': 'td', 'props': 'padding:4px; font-size:12px;'}
-table_css_styles = [even_rows, odd_rows, table_font, header_row, table_data]
+table_caption = {'selector': 'caption', 'props': 'caption-side: bottom; font-size:1em; text-align: left;'}
+table_css_styles = [even_rows, odd_rows, table_font, header_row, table_data, table_caption]
 
 # a color gradient for heat maps
 # this uses a mix and resamples between 0 and 1
@@ -48,8 +49,6 @@ language_maps = {
     'de': 'data/end_process/de_labels.csv'
 }
 
-geo_h = ['parent_boundary', 'feature_type',  'feature_name','canton', 'city']
-
 code_data =  "data/end_process/codes.csv"
 beach_data = "data/end_process/beaches.csv"
 land_cover_data = "data/end_process/land_cover.csv"
@@ -57,8 +56,13 @@ land_use_data = "data/end_process/land_use.csv"
 street_data = "data/end_process/streets.csv"
 intersection_attributes = "data/end_process/river_intersect_lakes.csv"
 
+# order of aggregation corresponds to place labels and types
+geo_h = ['parent_boundary', 'feature_type',  'feature_name','canton', 'city']
+
+# the unit total columns. aggregating by these columns will give
+# total value for each unique code identified with loc_date
 code_result_columns = [
-    'loc_date', 
+    'loc_date',
     'date',
     'parent_boundary',
     'feature_name',
@@ -67,18 +71,18 @@ code_result_columns = [
     'length',
     'code'
 ]
-
-group_by_columns = [
-    'loc_date',
-    'date',
-    'parent_boundary',
-    'feature_name',
-    'city',
-    'slug',
-    'length',
-    'groupname',
-    'code',
-]
+#
+# group_by_columns = [
+#     'loc_date',
+#     'date',
+#     'parent_boundary',
+#     'feature_name',
+#     'city',
+#     'slug',
+#     'length',
+#     'groupname',
+#     'code',
+# ]
 
 agg_groups = {
     "quantity":"sum",

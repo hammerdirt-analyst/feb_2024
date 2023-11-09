@@ -111,6 +111,37 @@ def get_top_x_records_with_max_quantity(df: pd.DataFrame, quantity_column: str, 
     return top_x_records[[id_column, quantity_column, "%"]]
 
 
+
+
+def count_objects_with_positive_quantity(df: pd.DataFrame, value_column: str = 'quantity',
+                                         object_column: str = 'code') -> Dict[str, int]:
+    """
+    Count how many times each object had a quantity greater than zero in a DataFrame.
+
+    Args:
+        df (pd.DataFrame): The input DataFrame with columns 'sample,' 'object,' and 'quantity.'
+        value_column (str): The column label of the values being counted.
+        object_column (str): The column label of the objects being counted.
+
+    Returns:
+        pd.Series: A Series with the count of positive quantity occurrences for each object.
+    """
+    # Filter the DataFrame to include rows where quantity is greater than zero
+    positive_quantity_df = df[df[value_column] > 0]
+    no_count_df = df[(df[value_column] == 0)]
+    
+    # Count the occurrences of positive quantities for each object
+    object_counts = positive_quantity_df[object_column].value_counts()
+    failed = object_counts / df.loc_date.nunique()
+    
+    # identify the objects with a zero count
+    no_counts = no_count_df[object_column].value_counts()
+    zeroes = no_counts[~no_counts.index.isin(object_counts.index)]
+    zeroes.loc[:] = 0
+    
+    return pd.concat([failed, zeroes])
+
+
 def calculate_rate_per_unit(df: pd.DataFrame,
                             objects_to_check: List[str],
                             column_of_interest: str = "code",
@@ -145,36 +176,8 @@ def calculate_rate_per_unit(df: pd.DataFrame,
     return rates
 
 
-def count_objects_with_positive_quantity(df: pd.DataFrame, value_column: str = 'quantity',
-                                         object_column: str = 'code') -> Dict[str, int]:
-    """
-    Count how many times each object had a quantity greater than zero in a DataFrame.
-
-    Args:
-        df (pd.DataFrame): The input DataFrame with columns 'sample,' 'object,' and 'quantity.'
-        value_column (str): The column label of the values being counted.
-        object_column (str): The column label of the objects being counted.
-
-    Returns:
-        pd.Series: A Series with the count of positive quantity occurrences for each object.
-    """
-    # Filter the DataFrame to include rows where quantity is greater than zero
-    positive_quantity_df = df[df[value_column] > 0]
-    no_count_df = df[(df[value_column] == 0)]
-    
-    # Count the occurrences of positive quantities for each object
-    object_counts = positive_quantity_df[object_column].value_counts()
-    failed = object_counts / df.loc_date.nunique()
-    
-    # identify the objects with a zero count
-    no_counts = no_count_df[object_column].value_counts()
-    zeroes = no_counts[~no_counts.index.isin(object_counts.index)]
-    zeroes.loc[:] = 0
-    
-    return pd.concat([failed, zeroes])
-
-
 # pieces per meter for a set of data
+# rate_per_unit_cumulative(df, cumulative_columns, object_labels, object_columns, unit_agg)
 def rate_per_unit_cumulative(df: pd.DataFrame, groupby_columns: List, object_labels: List, objects: List,
                              agg_methods: Dict) -> pd.DataFrame:
     """
@@ -202,12 +205,16 @@ def rate_per_unit_cumulative(df: pd.DataFrame, groupby_columns: List, object_lab
         cumulative_rates = rate_per_unit_cumulative(df, groupby_columns, object_labels, objects, agg_methods)
     """
     parent_summary = aggregate_dataframe(df, groupby_columns, agg_methods)
-    parent_boundary_summary = calculate_rate_per_unit(parent_summary, object_labels, objects[0], objects)
+
+    parent_boundary_summary = calculate_rate_per_unit(parent_summary, groupby_columns=groupby_columns,
+                                                      objects_to_check=object_labels,
+                                                      column_of_interest=objects[0])
     parent_boundary_summary.reset_index(drop=False, inplace=True)
-    
+
     return parent_boundary_summary
 
-
+# aggregate_boundaries(p_boundary, unit_columns, unit_agg, boundary_labels, object_columns,
+#                                               agg_groups)
 def aggregate_boundaries(df: pd.DataFrame, unit_columns: list, unit_agg: dict, boundary_labels: list,
                          boundary_columns: list, group_agg: dict) -> pd.DataFrame:
     """
@@ -231,8 +238,13 @@ def aggregate_boundaries(df: pd.DataFrame, unit_columns: list, unit_agg: dict, b
         pd.DataFrame: A DataFrame containing aggregated data at the 'boundary' level with
         additional 'label' column indicating the boundary label.
     """
-    
+   
     unit_aggregate = aggregate_dataframe(df, unit_columns, unit_agg)
+    if boundary_labels is None:
+        d = aggregate_dataframe(unit_aggregate, unit_columns[-1:], group_agg)
+        d['label'] = 'all'
+        return d
+    
     boundary_summaries = []
     for label in boundary_labels:
         boundary_mask = unit_aggregate[unit_columns[0]] == label
@@ -303,15 +315,17 @@ def boundary_summary(parent_boundary: pd.DataFrame, child_summaries: pd.DataFram
 
         boundary_result = boundary_summary(parent_boundary, boundary_summaries, object_columns, unit)
     """
+
     boundary_limits = pd.concat([parent_boundary, child_summaries])
     objects = boundary_limits[object_columns[0]].nunique()
     boundaries = boundary_limits.label.nunique()
+    
     if objects >= boundaries:
         b = boundary_limits.pivot(index=object_columns[0], columns="label", values=unit)
         b = b[[*child_summaries.label.unique(), *parent_boundary.label.unique()]]
     else:
         b = boundary_limits.pivot(columns=object_columns[0], index="label", values=unit)
-    
+
     return b
 
 
@@ -379,12 +393,12 @@ def translate_for_display(df: pd.DataFrame, amap: pd.DataFrame, lan: str):
     new_columns = {x: translate_word(x, amap, lan) for x in df.columns}
     df.rename(columns=new_columns, inplace=True)
     
-    new_index = {x: translate_word(x, amap, lan) for x in df.index}
-    df['new_index'] = new_index
+    new_index = [translate_word(x, amap, lan) for x in df.index]
+    df.loc[:, 'new_index'] = new_index
     df.set_index('new_index', drop=True, inplace=True)
     
     # either change the labels to something significant for
-    # display or remove them fron the data frame
+    # display or remove them from the data frame
     df.index.name = None
     df.columns.name = None
     
@@ -508,10 +522,23 @@ def summary_of_parent_and_child_features(df: pd.DataFrame,
                                                           unit_columns, agg_groups)
     """
     
-    parent_boundary = rate_per_unit_cumulative(df, cumulative_columns, object_labels, object_columns, unit_agg)
-    boundary_summaries = aggregate_boundaries(df, unit_columns, unit_agg, boundary_labels, object_columns, agg_groups)
-    x = boundary_summary(parent_boundary, boundary_summaries, object_columns, "pcs_m")
-    
+    # the parent summary
+    p_boundary = aggregate_boundaries(df,
+                                      unit_columns=unit_columns,
+                                      unit_agg=unit_agg,
+                                      boundary_labels=None,
+                                      boundary_columns=object_columns,
+                                      group_agg=agg_groups)
+    # the summary of the child features
+    boundary_summaries = aggregate_boundaries(df,
+                                              unit_columns=unit_columns,
+                                              unit_agg=unit_agg,
+                                              boundary_labels=boundary_labels,
+                                              boundary_columns=object_columns,
+                                              group_agg=agg_groups)
+
+    x = boundary_summary(p_boundary, boundary_summaries, object_columns, "pcs_m")
+ 
     return x
 
 
@@ -947,7 +974,6 @@ class ReportClass:
     object_of_interest = 'code'
     
     def __init__(self, w_df: pd.DataFrame = None,
-                 w_di: pd.DataFrame = None,
                  boundaries: dict = None,
                  top_label: List[str] = None,
                  language: str = None,
@@ -957,7 +983,6 @@ class ReportClass:
                  ooi=object_of_interest
                  ):
         self.w_df = w_df
-        self.w_di = w_di
         self.boundaries = boundaries
         self.top_label = top_label
         self.language = language
@@ -1043,8 +1068,8 @@ class ReportClass:
             print(f'This count is for {feature}')
             print('To specify call the_number_of_attributes_in_a_feature(<column-label>)')
             print(f'these are your choices {self.available_features}\n')
-        
         labels = self.features[feature]
+        
         
         feature_attributes = []
         for a_label in labels:

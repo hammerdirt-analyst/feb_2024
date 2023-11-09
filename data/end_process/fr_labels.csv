@@ -405,3 +405,34 @@ Gfrags,"Fragments de plastique: G80, G79, G78, G75"
 Gcaps,"Couvercles en plastique bouteille:  G21, G22, G23, G24"
 Gfoams,"Fragments de polystyrène expansé: G76, G81, G82, G83"
 G216,"déchets divers (bois travaillé, pièces métalliques)"
+Baumschule,Pépinière
+Friedhof,Cimetière
+Schul- und Hochschulareal,Zone scolaire et universitaire
+Wald nicht bestockt,Forêt non peuplée
+Abwasserreinigungsareal,Zone de traitement des eaux usées
+Historisches Areal,Zone historique
+Kraftwerkareal,Zone de centrale électrique
+Schrebergartenareal,Zone de jardins familiaux
+Truppenuebungsplatz,Terrain d'entraînement militaire
+Unterwerkareal,Zone de sous-station
+Kehrichtverbrennungsareal,Zone d'incinération des déchets
+Spitalareal,Zone d'hôpital
+Oeffentliches Parkareal,Zone de parc public
+Messeareal,Zone d'exposition
+Massnahmenvollzugsanstaltsareal,Zone d'établissement de traitement
+Kiesabbauareal,Zone d'extraction de gravier
+Steinbruchareal,Zone de carrière
+Klosterareal,Zone de monastère
+Deponieareal,Zone de décharge
+Antennenareal,Zone d'antennes
+Lehmabbauareal,Zone d'extraction d'argile
+Siedl,bâtiments
+Wald,Forêt
+Reben,Vignes
+Obstanlage,Verger
+land_use,services publics
+lowest,le plus bas
+low,faible
+middle,milieu
+high,élévé
+highest,le plus élévé
