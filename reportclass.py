@@ -149,7 +149,7 @@ def calculate_rate_per_unit(df: pd.DataFrame,
                             method: Dict[str, str] = {"pcs_m": "median", "quantity": "sum"},
                             ) -> pd.DataFrame:
     """
-    Calculate the rate of occurence of object(s) for a given unit measurement. Adds the label
+    Calculate the rate of object(s) for a given unit measurement. Adds the label
     'all' to each record.
 
     Args:
@@ -206,9 +206,10 @@ def rate_per_unit_cumulative(df: pd.DataFrame, groupby_columns: List, object_lab
     """
     parent_summary = aggregate_dataframe(df, groupby_columns, agg_methods)
 
-    parent_boundary_summary = calculate_rate_per_unit(parent_summary, groupby_columns=groupby_columns,
-                                                      objects_to_check=object_labels,
-                                                      column_of_interest=objects[0])
+    parent_boundary_summary = calculate_rate_per_unit(parent_summary,
+                                                      groupby_columns=groupby_columns[-1:],
+                                                      objects_to_check=df[groupby_columns[-1]].unique(),
+                                                      column_of_interest=groupby_columns[-1])
     parent_boundary_summary.reset_index(drop=False, inplace=True)
 
     return parent_boundary_summary
