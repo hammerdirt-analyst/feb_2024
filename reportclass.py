@@ -147,6 +147,7 @@ def calculate_rate_per_unit(df: pd.DataFrame,
                             column_of_interest: str = "code",
                             groupby_columns: List[str] = ['code'],
                             method: Dict[str, str] = {"pcs_m": "median", "quantity": "sum"},
+                            a_label: str = "all",
                             ) -> pd.DataFrame:
     """
     Calculate the rate of object(s) for a given unit measurement. Adds the label
@@ -171,90 +172,48 @@ def calculate_rate_per_unit(df: pd.DataFrame,
     
     # Calculate the proportion for each object
     rates = object_rates[[column_of_interest, *method.keys()]].set_index(column_of_interest, drop=True)
-    rates["label"] = "all"
+    rates["label"] = a_label
     
     return rates
 
 
 # pieces per meter for a set of data
-# rate_per_unit_cumulative(df, cumulative_columns, object_labels, object_columns, unit_agg)
-def rate_per_unit_cumulative(df: pd.DataFrame, groupby_columns: List, object_labels: List, objects: List,
-                             agg_methods: Dict) -> pd.DataFrame:
-    """
-    Calculate cumulative rates per unit for specific objects and aggregation methods.
-
-    This function takes a DataFrame and calculates cumulative rates per unit based on
-    the specified groupby columns, object labels, objects of interest, and aggregation methods.
-
-    Args:
-        df (pd.DataFrame): The input DataFrame containing data for analysis.
-        groupby_columns (List): List of columns to group by in the DataFrame.
-        object_labels (List): List of labels to identify objects of interest.
-        objects (List): List of objects for which cumulative rates are calculated.
-        agg_methods (Dict): Dictionary specifying aggregation methods for calculating rates.
-
-    Returns:
-        pd.DataFrame: A DataFrame containing the cumulative rates per unit.
-
-    Example:
-        groupby_columns = ['Region', 'Year']
-        object_labels = ['Object A', 'Object B']
-        objects = ['A', 'B']
-        agg_methods = {'Value': 'sum', 'Count': 'count'}
-
-        cumulative_rates = rate_per_unit_cumulative(df, groupby_columns, object_labels, objects, agg_methods)
-    """
-    parent_summary = aggregate_dataframe(df, groupby_columns, agg_methods)
-
-    parent_boundary_summary = calculate_rate_per_unit(parent_summary,
-                                                      groupby_columns=groupby_columns[-1:],
-                                                      objects_to_check=df[groupby_columns[-1]].unique(),
-                                                      column_of_interest=groupby_columns[-1])
-    parent_boundary_summary.reset_index(drop=False, inplace=True)
-
-    return parent_boundary_summary
-
-# aggregate_boundaries(p_boundary, unit_columns, unit_agg, boundary_labels, object_columns,
-#                                               agg_groups)
-def aggregate_boundaries(df: pd.DataFrame, unit_columns: list, unit_agg: dict, boundary_labels: list,
-                         boundary_columns: list, group_agg: dict) -> pd.DataFrame:
-    """
-    Aggregate data from a dataframe by boundaries and groups.
-
-    Aggregates a dataframe in two steps. First, it performs
-    aggregation at the 'unit' level defined by 'unit_columns' and 'unit_agg' to obtain
-    test statistics. Then, it aggregates these 'unit' statistics further at the
-    'boundary' level defined by 'boundary_labels' and 'boundary_columns', and computes
-    the test statistics for each boundary.
-
-    Args:
-        df (pd.DataFrame): The input DataFrame containing data to be aggregated.
-        unit_columns (list): List of columns for 'unit' level aggregation.
-        unit_agg (dict): Dictionary specifying the aggregation functions for 'unit' level.
-        boundary_labels (list): List of boundary labels to define 'boundaries' for further aggregation.
-        boundary_columns (list): List of columns for 'boundary' level aggregation.
-        group_agg (dict): Dictionary specifying the aggregation functions for 'boundary' level.
-
-    Returns:
-        pd.DataFrame: A DataFrame containing aggregated data at the 'boundary' level with
-        additional 'label' column indicating the boundary label.
-    """
-   
-    unit_aggregate = aggregate_dataframe(df, unit_columns, unit_agg)
-    if boundary_labels is None:
-        d = aggregate_dataframe(unit_aggregate, unit_columns[-1:], group_agg)
-        d['label'] = 'all'
-        return d
-    
-    boundary_summaries = []
-    for label in boundary_labels:
-        boundary_mask = unit_aggregate[unit_columns[0]] == label
-        boundary_aggregate = unit_aggregate[boundary_mask].groupby(boundary_columns, as_index=False).agg(group_agg)
-        boundary_aggregate['label'] = label
-        boundary_summaries.append(boundary_aggregate)
-    
-    return pd.concat(boundary_summaries)
-
+# # rate_per_unit_cumulative(df, cumulative_columns, object_labels, object_columns, unit_agg)
+# def rate_per_unit_cumulative(df: pd.DataFrame, groupby_columns: List, object_labels: List, objects: List,
+#                              agg_methods: Dict) -> pd.DataFrame:
+#     """
+#     Calculate cumulative rates per unit for specific objects and aggregation methods.
+#
+#     This function takes a DataFrame and calculates cumulative rates per unit based on
+#     the specified groupby columns, object labels, objects of interest, and aggregation methods.
+#
+#     Args:
+#         df (pd.DataFrame): The input DataFrame containing data for analysis.
+#         groupby_columns (List): List of columns to group by in the DataFrame.
+#         object_labels (List): List of labels to identify objects of interest.
+#         objects (List): List of objects for which cumulative rates are calculated.
+#         agg_methods (Dict): Dictionary specifying aggregation methods for calculating rates.
+#
+#     Returns:
+#         pd.DataFrame: A DataFrame containing the cumulative rates per unit.
+#
+#     Example:
+#         groupby_columns = ['Region', 'Year']
+#         object_labels = ['Object A', 'Object B']
+#         objects = ['A', 'B']
+#         agg_methods = {'Value': 'sum', 'Count': 'count'}
+#
+#         cumulative_rates = rate_per_unit_cumulative(df, groupby_columns, object_labels, objects, agg_methods)
+#     """
+#     parent_summary = aggregate_dataframe(df, groupby_columns, agg_methods)
+#
+#     parent_boundary_summary = calculate_rate_per_unit(parent_summary,
+#                                                       groupby_columns=groupby_columns[-1:],
+#                                                       objects_to_check=df[groupby_columns[-1]].unique(),
+#                                                       column_of_interest=groupby_columns[-1])
+#     parent_boundary_summary.reset_index(drop=False, inplace=True)
+#
+#     return parent_boundary_summary
 
 def color_gradient(val, cmap: ListedColormap = None, cmin: float = 0.0, cmax: float = .9):
     """
@@ -291,43 +250,6 @@ def color_gradient(val, cmap: ListedColormap = None, cmin: float = 0.0, cmax: fl
     return f'background-color: {hex_color}; color:black'
 
 
-def boundary_summary(parent_boundary: pd.DataFrame, child_summaries: pd.DataFrame, object_columns: List,
-                     unit: str) -> pd.DataFrame:
-    """
-    Create a boundary summary DataFrame based on parent and boundary summaries.
-
-    This function combines parent and boundary summaries to create a consolidated boundary summary
-    DataFrame. The aggregation is based on the specified object columns and the 'unit' of interest.
-
-    Args:
-        parent_boundary (pd.DataFrame): The parent boundary summary DataFrame.
-        child_summaries (pd.DataFrame): The child boundary summary DataFrame.
-        object_columns (List): List of columns identifying the objects.
-        unit (str): The unit of interest for aggregation.
-
-    Returns:
-        pd.DataFrame: A boundary summary DataFrame that combines parent and individual object summaries.
-
-    Example:
-        parent_boundary = ...
-        boundary_summaries = ...
-        object_columns = ['Object']
-        unit = 'pcs_m'
-
-        boundary_result = boundary_summary(parent_boundary, boundary_summaries, object_columns, unit)
-    """
-
-    boundary_limits = pd.concat([parent_boundary, child_summaries])
-    objects = boundary_limits[object_columns[0]].nunique()
-    boundaries = boundary_limits.label.nunique()
-    
-    if objects >= boundaries:
-        b = boundary_limits.pivot(index=object_columns[0], columns="label", values=unit)
-        b = b[[*child_summaries.label.unique(), *parent_boundary.label.unique()]]
-    else:
-        b = boundary_limits.pivot(columns=object_columns[0], index="label", values=unit)
-
-    return b
 
 
 def translate_word(x: str, amap: pd.DataFrame, lan: str):
@@ -359,7 +281,6 @@ def translate_word(x: str, amap: pd.DataFrame, lan: str):
         return amap.loc[x, lan]
     else:
         return x
-
 
 def translate_for_display(df: pd.DataFrame, amap: pd.DataFrame, lan: str):
     """
@@ -404,7 +325,6 @@ def translate_for_display(df: pd.DataFrame, amap: pd.DataFrame, lan: str):
     df.columns.name = None
     
     return df
-
 
 def translated_and_style_for_display(df, amap, lan, gradient: bool = True):
     """
@@ -477,71 +397,6 @@ def display_tabular_data_by_column_values(df, column_one: dict, column_two: dict
     d.set_index(index, inplace=True, drop=True)
     d.index.name = None
     return d
-
-
-def summary_of_parent_and_child_features(df: pd.DataFrame,
-                                         cumulative_columns: List = None,
-                                         boundary_labels: List = None,
-                                         object_labels: List = None,
-                                         object_columns: List = None,
-                                         unit_agg: dict = None,
-                                         unit_columns: List = None,
-                                         agg_groups: dict = None) -> pd.DataFrame:
-    """
-    Generate a summary of parent and child features based on a DataFrame.
-
-    This function computes a summary of parent and child features based on the provided DataFrame 'df'.
-    It calculates cumulative values, aggregates boundary summaries, and generates a comprehensive summary
-    DataFrame that includes both parent and child features.
-
-    Args:
-        df (pd.DataFrame): The input DataFrame containing data for analysis.
-        cumulative_columns (List, optional): List of columns to be considered for cumulative values.
-        boundary_labels (List, optional): List of labels for boundary summaries.
-        object_labels (List, optional): List of labels for individual objects.
-        object_columns (List, optional): List of columns identifying objects.
-        unit_agg (dict, optional): Aggregation methods for unit summaries.
-        unit_columns (List, optional): List of columns for unit summaries.
-        agg_groups (dict, optional): Aggregation methods for boundary summaries.
-
-    Returns:
-        pd.DataFrame: A summary of parent and child features with comprehensive information.
-
-    Example:
-        # Define parameters for generating the summary
-        cumulative_columns = ['quantity', 'total_weight']
-        boundary_labels = ['Boundary 1', 'Boundary 2']
-        object_labels = ['Object 1', 'Object 2']
-        object_columns = ['object_id', 'object_name']
-        unit_agg = {'quantity': 'sum', 'total_weight': 'mean'}
-        unit_columns = ['unit_id', 'unit_name']
-        agg_groups = {'quantity': 'sum', 'total_weight': 'mean'}
-
-        # Generate the summary of parent and child features
-        summary_df = summary_of_parent_and_child_features(data_df, cumulative_columns, boundary_labels,
-                                                         object_labels, object_columns, unit_agg,
-                                                          unit_columns, agg_groups)
-    """
-    
-    # the parent summary
-    p_boundary = aggregate_boundaries(df,
-                                      unit_columns=unit_columns,
-                                      unit_agg=unit_agg,
-                                      boundary_labels=None,
-                                      boundary_columns=object_columns,
-                                      group_agg=agg_groups)
-    # the summary of the child features
-    boundary_summaries = aggregate_boundaries(df,
-                                              unit_columns=unit_columns,
-                                              unit_agg=unit_agg,
-                                              boundary_labels=boundary_labels,
-                                              boundary_columns=object_columns,
-                                              group_agg=agg_groups)
-
-    x = boundary_summary(p_boundary, boundary_summaries, object_columns, "pcs_m")
- 
-    return x
-
 
 def collect_survey_data_for_report(a_func: Callable = None, **kwargs) -> pd.DataFrame:
     """
@@ -878,47 +733,102 @@ def a_summary_of_one_vector(df, unit_columns, unit_agg, describe='pcs_m', label:
     return sample_summary
 
 
-def a_cumulative_report(df, feature_name: str = 'feature_type',
-                        object_column: str = 'groupname',
-                        sample_id: str = 'loc_date') -> pd.DataFrame:
+def aggregate_boundaries(df: pd.DataFrame,
+                         groupby_columns: list,
+                         unit_agg: dict = None,
+                         group_agg: dict = None,
+                         boundary_labels: list = None,
+                         boundary_columns: list = None) -> pd.DataFrame:
     """
-    Generate a cumulative report based on specified data columns.
+    Aggregate data from a dataframe by boundaries and groups.
 
-    Parameters:
-        df (pd.DataFrame): The input DataFrame containing the data.
-        feature_name (str, optional): The name of the feature column (default is 'feature_type').
-        object_column (str, optional): The name of the object column (default is 'groupname').
-        sample_id (str, optional): The column name representing sample identifiers (default is 'loc_date').
+    Aggregates a dataframe in two steps. First, it performs
+    aggregation at the 'unit' level defined by 'unit_columns' and 'unit_agg' to obtain
+    test statistics. Then, it aggregates these 'unit' statistics further at the
+    'boundary' level defined by 'boundary_labels' and 'boundary_columns', and computes
+    the test statistics for each boundary.
+
+    Args:
+        df (pd.DataFrame): The input DataFrame containing data to be aggregated.
+        groupby_columns (list): List of columns for 'unit' level aggregation.
+        unit_agg (dict): Dictionary specifying the aggregation functions for 'unit' level.
+        boundary_labels (list): List of boundary labels to define 'boundaries' for further aggregation.
+        boundary_columns (list): List of columns for 'boundary' level aggregation.
+        group_agg (dict): Dictionary specifying the aggregation functions for 'boundary' level.
 
     Returns:
-        pd.DataFrame: A DataFrame containing the cumulative report.
-
-    This function generates a cumulative report based on the specified data columns and parameters.
-    It calculates cumulative statistics and aggregations for the data, including parent and child features.
-
-    By default, it uses 'feature_type' as the feature name, 'groupname' as the object column, and 'loc_date'
-    as the sample identifier. These parameters can be customized as needed.
-
-    The function returns a DataFrame containing the cumulative report.
+        pd.DataFrame: A DataFrame containing aggregated data at the 'boundary' level with
+        additional 'label' column indicating the boundary label.
     """
-    cumulative_columns = [sample_id, object_column]
+    
+    unit_aggregate = aggregate_dataframe(df, groupby_columns=groupby_columns, aggregation_functions=unit_agg)
+    if boundary_labels is None:
+        d = aggregate_dataframe(unit_aggregate, groupby_columns=groupby_columns[-1:], aggregation_functions=group_agg)
+        d['label'] = 'all'
+        return d
+    
+    boundary_summaries = []
+    for label in boundary_labels:
+        boundary_mask = unit_aggregate[groupby_columns[0]] == label
+        boundary_aggregate = unit_aggregate[boundary_mask].groupby(boundary_columns, as_index=False).agg(group_agg)
+        boundary_aggregate['label'] = label
+        boundary_summaries.append(boundary_aggregate)
+    
+    return pd.concat(boundary_summaries)
+
+def a_cumulative_report(df, feature_name: str = 'feature_type',
+                        object_column: str = 'groupname',
+                        sample_id: str = 'loc_date',
+                        group_agg: dict = conf_.agg_groups,
+                        unit_agg: dict = conf_.unit_agg,
+                        pivot_values: str = 'pcs_m') -> pd.DataFrame:
+    """
+     Generate a cumulative report by aggregating specified features and objects.
+
+     This function creates a cumulative report by aggregating data from the input DataFrame
+     based on the specified feature, object, and sample identifiers. It performs aggregation at
+     both the 'unit' level (defined by feature, sample_id, and object_column) and the 'boundary'
+     level (defined by feature and object_column).
+
+     Args:
+         df (pd.DataFrame): The input DataFrame containing data to be aggregated.
+         feature_name (str): The column name representing the feature to be aggregated (default is 'feature_type').
+         object_column (str): The column name representing the objects (default is 'groupname').
+         sample_id (str): The column name representing the sample identifier (default is 'loc_date').
+         group_agg (dict): Dictionary specifying the aggregation functions for 'boundary' level (default is conf_.agg_groups).
+         unit_agg (dict): Dictionary specifying the aggregation functions for 'unit' level (default is conf_.unit_agg).
+         pivot_values (str): The values to pivot for the resulting DataFrame (default is 'pcs_m').
+
+     Returns:
+         pd.DataFrame: A DataFrame containing the cumulative report with aggregated values.
+
+    """
+   
     unit_columns = [feature_name, sample_id, object_column]
-    object_labels = df[object_column].unique()
     object_columns = [object_column]
     boundary_labels = df[feature_name].unique()
     
-    args = {
-        'cumulative_columns': cumulative_columns,
-        'object_labels': object_labels,
-        'boundary_labels': boundary_labels,
-        'object_columns': object_columns,
-        'unit_agg': conf_.unit_agg,
-        'unit_columns': unit_columns,
-        'agg_groups': conf_.agg_groups
-    }
+    # the parent summary
+    # calling boundary_labels=None will return a summary of all parent features
+    p_boundary = aggregate_boundaries(df,
+                                      groupby_columns=unit_columns,
+                                      unit_agg=unit_agg,
+                                      boundary_labels=None,
+                                      boundary_columns=object_columns,
+                                      group_agg=group_agg)
     
-    tix = summary_of_parent_and_child_features(df.copy(), **args)
-    return tix
+    # the summary of the child features
+    boundary_summaries = aggregate_boundaries(df,
+                                              groupby_columns=unit_columns,
+                                              unit_agg=unit_agg,
+                                              boundary_labels=boundary_labels,
+                                              boundary_columns=object_columns,
+                                              group_agg=group_agg)
+
+    cumulative = pd.concat([boundary_summaries, p_boundary])
+    x = cumulative.pivot(columns=['label'], index=object_columns, values=[pivot_values])
+    
+    return x.droplevel(0, axis=1)
 
 
 class ReportClass:
@@ -927,7 +837,6 @@ class ReportClass:
 
     Parameters:
         w_df (pd.DataFrame, optional): The survey data DataFrame for report generation.
-        w_di (pd.DataFrame, optional): Additional survey data for report purposes.
         boundaries (dict, optional): A dictionary defining the reporting boundaries, including 'start_date',
             'end_date', and 'language'.
         top_label (List, optional): A list containing two elements - [label_column, label_value].
@@ -939,7 +848,6 @@ class ReportClass:
 
     Attributes:
         w_df (pd.DataFrame): The survey data DataFrame for report generation.
-        w_di (pd.DataFrame): Additional survey data for report purposes.
         boundaries (dict): Reporting boundaries, including 'start_date', 'end_date', and 'language'.
         top_label (List): The label for the report, containing label_column and label_value.
         language (str): The language in which the report is generated.
@@ -962,11 +870,15 @@ class ReportClass:
     """
     # default arguments that define the most common objects
     # this assumes that the columns quantity and fail rate exist
+
+    # a ranking criteria based off of the quantity column
     column_one = {
+        
         'column': 'quantity',
         'val': 10
     }
     
+    # a ranking criteria based off of the fail rate column
     column_two = {
         'column': 'fail rate',
         'val': 0.5
