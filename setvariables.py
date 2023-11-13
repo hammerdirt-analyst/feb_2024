@@ -57,7 +57,7 @@ street_data = "data/end_process/streets.csv"
 intersection_attributes = "data/end_process/river_intersect_lakes.csv"
 
 # order of aggregation corresponds to place labels and types
-geo_h = ['parent_boundary', 'feature_type',  'feature_name','canton', 'city']
+geo_h = ['parent_boundary', 'feature_type',  'feature_name', 'canton', 'city']
 
 # the unit total columns. aggregating by these columns will give
 # total value for each unique code identified with loc_date

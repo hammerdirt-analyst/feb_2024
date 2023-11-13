@@ -378,25 +378,13 @@ def display_tabular_data_by_column_values(df, column_one: dict, column_two: dict
     Returns:
         pd.DataFrame: The filtered DataFrame with 'index' as the index and the index name removed.
 
-    Example:
-        # Create a sample DataFrame 'data_df'
-        data_df = pd.DataFrame({'Name': ['Alice', 'Bob', 'Charlie'],
-                                'Age': [25, 30, 35],
-                                'Salary': [50000, 60000, 70000]})
-
-        # Define filtering conditions for 'Age' and 'Salary'
-        column_one = {'column': 'Age', 'val': 30}
-        column_two = {'column': 'Salary', 'val': 65000}
-
-        # Display filtered tabular data by 'Name' where either 'Age' or 'Salary' meets the conditions
-        filtered_data = display_tabular_data_by_column_values(data_df, column_one, column_two, 'Name')
     """
     d = df.sort_values(by=column_one['column'], ascending=False)
-    the_min_val = d.iloc[int(column_one['val'])]['quantity']
+    the_min_val = d.iloc[int(column_one['val'])][column_one["column"]]
     d = df[(df[column_one["column"]] >= the_min_val) | (df[column_two["column"]] >= column_two["val"])].copy()
     d.set_index(index, inplace=True, drop=True)
     d.index.name = None
-    return d
+    return d.sort_values(by=column_one['column'], ascending=False)
 
 def collect_survey_data_for_report(a_func: Callable = None, **kwargs) -> pd.DataFrame:
     """
@@ -653,26 +641,21 @@ geo_h = conf_.geo_h
 
 
 def categorize_work_data(df, labels, columns_of_interest: List[str] = geo_h, sample_id: str = 'loc_date'):
-    """
-    Categorize and summarize data based on provided labels and columns of interest.
-
+    """Categorizes and organizes data from a pandas DataFrame based on specified column labels.
+    
+    This function filters the DataFrame based on the given label criteria, then rearranges and summarizes the data according to the specified columns of interest and sample ID. The function dynamically adjusts the summary columns based on the label criteria and provides a unique set of attributes for each category.
+    
     Parameters:
-        df (pd.DataFrame): The input DataFrame containing survey data.
-        labels (list): A list containing two elements - [label_column, label_value].
-        columns_of_interest (List, optional): A list of columns to consider when categorizing and summarizing the data.
-        sample_id (str, optional): The column name representing sample identifiers.
-
+    - df (pd.DataFrame): The DataFrame to be categorized.
+    - labels (List): A two-element list where the first element is the column name to filter by and the second element is the value to filter for in that column.
+    - columns_of_interest (List[str], optional): List of column names that are of interest for the summary. Defaults to `geo_h`.
+    - sample_id (str, optional): The column name to be used as the sample identifier. Defaults to 'loc_date'.
+    
     Returns:
-        dict: A dictionary containing categorized and summarized data based on the provided labels.
+    - dict: A dictionary where keys are the attributes from 'columns_of_interest' and 'sample_id', and values are unique values for each attribute in the filtered data. The key for 'sample_id' is renamed to 'samples'.
 
-    This function categorizes and summarizes data from the input DataFrame based on the specified 'labels'
-    and 'columns_of_interest'. It creates categories for each unique value in the 'label_column' matching 'label_value'.
-    The 'sample_id' is used to identify sample identifiers in the output.
-
-    If the label column is found in 'columns_of_interest', it is removed from the summaries to avoid duplication.
-
-    The result is returned as a dictionary with 'label_value' as the key and the categorized data as its value.
     """
+    
     
     data = df[df[labels[0]] == labels[1]].copy()
     
@@ -691,12 +674,13 @@ def categorize_work_data(df, labels, columns_of_interest: List[str] = geo_h, sam
         datt = d[an_attribute].unique()
         res.update({an_attribute: datt})
     
-    res['samples'] = res.pop('loc_date')
+    res['samples'] = res.pop(sample_id)
     
     return {labels[1]: res}
 
 
-def a_summary_of_one_vector(df, unit_columns, unit_agg, describe='pcs_m', label: str = None):
+def a_summary_of_one_vector(df, unit_columns: List[str] = None, unit_agg: dict = None, describe: str = 'pcs_m',
+                            label: str = None, total_column: str = 'quantity'):
     """
     Generate a summary of a single vector (column) within a DataFrame.
 
@@ -721,7 +705,7 @@ def a_summary_of_one_vector(df, unit_columns, unit_agg, describe='pcs_m', label:
     """
     sample_totals = aggregate_dataframe(df, unit_columns, unit_agg)
     sample_summary = sample_totals[describe].describe()
-    sample_summary["total"] = sample_totals.quantity.sum()
+    sample_summary["total"] = sample_totals[total_column].sum()
     sample_summary = pd.DataFrame(sample_summary)
     sample_summary[describe] = sample_summary[describe].astype(object)
     sample_summary.loc['count', describe] = int(sample_summary.loc['count', describe])
@@ -953,8 +937,13 @@ class ReportClass:
         mc = display_tabular_data_by_column_values(self.inventory, self.criteria_one, self.criteria_two, self.ooi)
         return mc
     
-    def summarize_feature_labels(self, feature: str = None, sample_id: str = 'loc_date', location: str = 'slug'):
-        
+    def summarize_feature_labels(self,
+                                 feature: str = None,
+                                 sample_id: str = 'loc_date',
+                                 location: str = 'slug',
+                                 describe_column: str = 'pcs_m',
+                                 unit_agg: dict = conf_.unit_agg,
+                                 **kwargs):
         if feature is None:
             feature = self.available_features[0]
             print('\nThis is the default summary. A column label can be specified.')
@@ -968,7 +957,11 @@ class ReportClass:
         x = []
         for the_label in labels:
             d = self.w_df[self.w_df[feature] == the_label].copy()
-            ds = a_summary_of_one_vector(d.copy(), unit_columns, conf_.unit_agg, describe='pcs_m', label=the_label)
+            ds = a_summary_of_one_vector(d.copy(),
+                                         unit_columns=unit_columns,
+                                         unit_agg=unit_agg,
+                                         describe=describe_column,
+                                         label=the_label, **kwargs)
             x.append(ds)
         
         return pd.concat(x).pivot(columns='label')
