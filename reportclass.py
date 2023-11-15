@@ -935,7 +935,23 @@ class ReportClass:
     def most_common(self):
         # use the criteria to find the objects of interest
         mc = display_tabular_data_by_column_values(self.inventory, self.criteria_one, self.criteria_two, self.ooi)
-        return mc
+        weight = mc[["quantity", "%"]].sum().to_dict()
+        return mc, weight
+    
+    @property
+    def a_short_description(self):
+        t_q = self.inventory.quantity.sum()
+        r_type, r_name = self.top_label[0], self.top_label[1]
+        start, end = self.boundaries['start_date'], self.boundaries['end_date']
+        n_samples = len(self.features["samples"])
+        
+        data = [r_type, r_name, start, end, n_samples, t_q]
+        index = ['type', 'name', 'start', 'end', 'samples', 'quantity']
+        columns = ['Report']
+        
+        return pd.DataFrame(data, index=index, columns=columns)
+    
+        
     
     def summarize_feature_labels(self,
                                  feature: str = None,
@@ -970,12 +986,11 @@ class ReportClass:
         
         if feature is None:
             feature = self.available_features[0]
-            print('\nThis the default attribute count. A column label can be specified.')
+            print('\nThis is the default attribute count. A column label can be specified.')
             print(f'This count is for {feature}')
             print('To specify call the_number_of_attributes_in_a_feature(<column-label>)')
             print(f'these are your choices {self.available_features}\n')
         labels = self.features[feature]
-        
         
         feature_attributes = []
         for a_label in labels:
@@ -983,8 +998,35 @@ class ReportClass:
             summed = {k: len(v) for k, v in these_attributes[self.top_label[1]].items()}
             feature_attributes.append(summed)
         counts = pd.DataFrame(feature_attributes, index=labels)
-        # counts.drop(feature, axis=1, inplace=True)
+        counts = counts[['city', 'feature_name', 'samples']]
+        
         return counts
+
+    def feature_labels(self, available_features: List[str] = None, labels_for: dict = {'feature_name': 'unique', 'city': 'unique'}):
+        
+        data = self.w_df.copy()
+        if available_features is None:
+            available_features = ['feature_type']
+        f_labels = {}
+        for a_feature in available_features:
+            d = data[a_feature].unique()
+            for item in d:
+                l = data[data[a_feature] == item].agg(labels_for).to_dict()
+                labels = {item: l}
+                f_labels.update(labels)
+        return f_labels
+
+    def a_subreport(self, feature_of_interest: str = None, key: str = 'feature_name'):
+        new_boundaries = {
+            key: feature_of_interest,
+            'language': self.boundaries['language'],
+            'start_date': self.boundaries['start_date'],
+            'end_date': self.boundaries['end_date']
+        }
+        top_label = [key, feature_of_interest]
+        d = self.w_df[self.w_df[key] == feature_of_interest].copy()
+        a_subreport = ReportClass(d, new_boundaries, top_label, new_boundaries['language'], self.lang_maps)
+        return a_subreport
     
     def __repr__(self):
         return f'Report: {self.boundaries}, features: {self.available_features}'

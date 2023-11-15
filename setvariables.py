@@ -73,18 +73,7 @@ code_result_columns = [
 ]
 
 work_columns = ['slug', 'loc_date', 'feature_name', 'parent_boundary', 'city','canton', 'pcs_m', 'quantity','code', 'feature_type']
-#
-# group_by_columns = [
-#     'loc_date',
-#     'date',
-#     'parent_boundary',
-#     'feature_name',
-#     'city',
-#     'slug',
-#     'length',
-#     'groupname',
-#     'code',
-# ]
+
 
 agg_groups = {
     "quantity":"sum",
@@ -98,15 +87,6 @@ unit_agg = {
     "quantity":"sum",
     "pcs_m": "sum"
 }
-
-
-# land_cover_fr = {
-#     'undefined': 'Non défini',
-#     'Siedl': 'Siedl',
-#     'Wald': 'Forêt',
-#     'Reben': 'Vignes',
-#     'Obstanlage': 'Verger'
-# }
 
 land_cover_en = {
     'undefined': 'Undefined',
