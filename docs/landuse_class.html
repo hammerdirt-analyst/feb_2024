@@ -143,6 +143,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Models</span></p>
 <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cumulative_land_use.html">Checking the assistant</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cumulative_reports.html">Cumulative reports</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a_report_class.html">Reporting</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Land use class</a></li>
 </ul>
@@ -301,23 +303,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#land-use-and-density">Land use and density</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlation-of-independent-variables">Correlation of independent variables</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-significant-correlations">Definition of significant correlations</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-selection-and-combination">Variable selection and combination</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#combination">Combination</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-models">Linear regression models</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#random-sample-consensus-ransac">Random Sample Consensus (RANSAC)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polynomial-regression">Polynomial regression</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest">Random forest</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compression-pca">Compression: PCA</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-performance">Model performance</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalized-linear-models">Generalized linear models</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-tests">Unit tests</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-topographical-data">Grouping topographical data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistic-of-critical-value">Statistic of critical value</a></li>
@@ -692,198 +677,162 @@ document.write(`
 </div>
 <div class="section" id="land-use-and-density">
 <h3>Land use and density<a class="headerlink" href="#land-use-and-density" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w_datai</span><span class="o">.</span><span class="n">feature_type</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;l&#39;, &#39;r&#39;, &#39;p&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/83501c4429e66b3053291b65dbd61d02fb54b3095b9689cd548271c2e2155f83.png" src="_images/83501c4429e66b3053291b65dbd61d02fb54b3095b9689cd548271c2e2155f83.png" />
+<img alt="_images/55898d07a2f55ffbea72d2905809e70e263d13cef736969f83615bf882e8860e.png" src="_images/55898d07a2f55ffbea72d2905809e70e263d13cef736969f83615bf882e8860e.png" />
 </div>
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_7d197 tr:nth-child(even) {
+#T_4b545 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_7d197 tr:nth-child(odd) {
+#T_4b545 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_7d197 tr {
+#T_4b545 tr {
   font-size: 10px;
 }
-#T_7d197 th:nth-child(1) {
+#T_4b545 th:nth-child(1) {
   background-color: #FFF;
   font-size: 12px;
   text-align: left;
 }
-#T_7d197 td {
+#T_4b545 td {
   padding: 4px;
   font-size: 12px;
 }
-#T_7d197 caption {
+#T_4b545 caption {
   caption-side: bottom;
   font-size: 1em;
   text-align: left;
 }
-#T_7d197_row0_col0 {
-  background-color: rgba(172,56,2, .5);
+#T_4b545_row0_col0 {
+  background-color: rgba(127,39,4, .5);
   color: black;
 }
-#T_7d197_row0_col1 {
-  background-color: rgba(208,68,1, .5);
+#T_4b545_row0_col1 {
+  background-color: rgba(189,62,2, .5);
   color: black;
 }
-#T_7d197_row0_col2 {
-  background-color: rgba(250,250,250, .5);
+#T_4b545_row0_col2, #T_4b545_row0_col3, #T_4b545_row0_col6, #T_4b545_row1_col1, #T_4b545_row1_col5, #T_4b545_row2_col0, #T_4b545_row4_col0, #T_4b545_row4_col1, #T_4b545_row4_col2, #T_4b545_row4_col3, #T_4b545_row4_col4, #T_4b545_row4_col5, #T_4b545_row4_col6 {
+  background-color: rgba(242,242,242, .5);
   color: black;
 }
-#T_7d197_row0_col3 {
-  background-color: rgba(92,92,92, .5);
+#T_4b545_row0_col4 {
+  background-color: rgba(148,148,148, .5);
   color: black;
 }
-#T_7d197_row0_col4, #T_7d197_row2_col3 {
-  background-color: rgba(137,137,137, .5);
+#T_4b545_row0_col5, #T_4b545_row3_col3 {
+  background-color: rgba(253,163,92, .5);
   color: black;
 }
-#T_7d197_row0_col5, #T_7d197_row3_col0, #T_7d197_row4_col4, #T_7d197_row4_col6 {
-  background-color: rgba(253,253,253, .5);
-  color: black;
-}
-#T_7d197_row0_col6 {
-  background-color: rgba(197,197,197, .5);
-  color: black;
-}
-#T_7d197_row1_col0 {
-  background-color: rgba(235,235,235, .5);
-  color: black;
-}
-#T_7d197_row1_col1, #T_7d197_row1_col2 {
-  background-color: rgba(186,186,186, .5);
-  color: black;
-}
-#T_7d197_row1_col3 {
-  background-color: rgba(25,25,25, .5);
-  color: black;
-}
-#T_7d197_row1_col4 {
-  background-color: rgba(253,181,118, .5);
-  color: black;
-}
-#T_7d197_row1_col5 {
-  background-color: rgba(254,242,230, .5);
-  color: black;
-}
-#T_7d197_row1_col6 {
-  background-color: rgba(98,98,98, .5);
-  color: black;
-}
-#T_7d197_row2_col0, #T_7d197_row4_col2 {
-  background-color: rgba(226,226,226, .5);
-  color: black;
-}
-#T_7d197_row2_col1, #T_7d197_row3_col4 {
-  background-color: rgba(247,247,247, .5);
-  color: black;
-}
-#T_7d197_row2_col2 {
-  background-color: rgba(13,13,13, .5);
-  color: black;
-}
-#T_7d197_row2_col4 {
-  background-color: rgba(216,216,216, .5);
-  color: black;
-}
-#T_7d197_row2_col5 {
-  background-color: rgba(253,220,186, .5);
-  color: black;
-}
-#T_7d197_row2_col6 {
-  background-color: rgba(58,58,58, .5);
-  color: black;
-}
-#T_7d197_row3_col1, #T_7d197_row3_col5 {
+#T_4b545_row1_col0, #T_4b545_row3_col0, #T_4b545_row3_col1, #T_4b545_row3_col2, #T_4b545_row3_col4, #T_4b545_row3_col5, #T_4b545_row3_col6 {
   background-color: rgba(255,255,255, .5);
   color: black;
 }
-#T_7d197_row3_col2 {
-  background-color: rgba(109,109,109, .5);
+#T_4b545_row1_col2, #T_4b545_row2_col6 {
+  background-color: rgba(179,179,179, .5);
   color: black;
 }
-#T_7d197_row3_col3 {
-  background-color: rgba(248,248,248, .5);
+#T_4b545_row1_col3, #T_4b545_row2_col3, #T_4b545_row2_col4 {
+  background-color: rgba(205,205,205, .5);
   color: black;
 }
-#T_7d197_row3_col6 {
-  background-color: rgba(189,189,189, .5);
+#T_4b545_row1_col4 {
+  background-color: rgba(253,190,134, .5);
   color: black;
 }
-#T_7d197_row4_col0, #T_7d197_row4_col1, #T_7d197_row4_col3, #T_7d197_row4_col5 {
-  background-color: rgba(254,254,254, .5);
+#T_4b545_row1_col6, #T_4b545_row2_col2 {
+  background-color: rgba(241,107,21, .5);
+  color: black;
+}
+#T_4b545_row2_col1 {
+  background-color: rgba(225,225,225, .5);
+  color: black;
+}
+#T_4b545_row2_col5 {
+  background-color: rgba(120,120,120, .5);
   color: black;
 }
 </style>
-<table id="T_7d197">
-  <caption>The weight of each category in the feauture variables. For example: the component Forest is 32% composed of locations that fall within the lowest amount dedicated to forests.</caption>
+<table id="T_4b545">
+  <caption>The weight of each category in the feauture variables. For example: the component Forest is 5% composed of locations that fall within the lowest amount dedicated to forests.</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_7d197_level0_col0" class="col_heading level0 col0" >Verger</th>
-      <th id="T_7d197_level0_col1" class="col_heading level0 col1" >Vignes</th>
-      <th id="T_7d197_level0_col2" class="col_heading level0 col2" >Bâtiments</th>
-      <th id="T_7d197_level0_col3" class="col_heading level0 col3" >Forêt</th>
-      <th id="T_7d197_level0_col4" class="col_heading level0 col4" >Services Publics</th>
-      <th id="T_7d197_level0_col5" class="col_heading level0 col5" >Rues</th>
-      <th id="T_7d197_level0_col6" class="col_heading level0 col6" >Non Défini</th>
+      <th id="T_4b545_level0_col0" class="col_heading level0 col0" >Verger</th>
+      <th id="T_4b545_level0_col1" class="col_heading level0 col1" >Vignes</th>
+      <th id="T_4b545_level0_col2" class="col_heading level0 col2" >Bâtiments</th>
+      <th id="T_4b545_level0_col3" class="col_heading level0 col3" >Forêt</th>
+      <th id="T_4b545_level0_col4" class="col_heading level0 col4" >Services Publics</th>
+      <th id="T_4b545_level0_col5" class="col_heading level0 col5" >Rues</th>
+      <th id="T_4b545_level0_col6" class="col_heading level0 col6" >Non Défini</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_7d197_level0_row0" class="row_heading level0 row0" >Le Plus Bas</th>
-      <td id="T_7d197_row0_col0" class="data row0 col0" >0,84</td>
-      <td id="T_7d197_row0_col1" class="data row0 col1" >0,80</td>
-      <td id="T_7d197_row0_col2" class="data row0 col2" >0,02</td>
-      <td id="T_7d197_row0_col3" class="data row0 col3" >0,32</td>
-      <td id="T_7d197_row0_col4" class="data row0 col4" >0,25</td>
-      <td id="T_7d197_row0_col5" class="data row0 col5" >0,01</td>
-      <td id="T_7d197_row0_col6" class="data row0 col6" >0,15</td>
+      <th id="T_4b545_level0_row0" class="row_heading level0 row0" >Le Plus Bas</th>
+      <td id="T_4b545_row0_col0" class="data row0 col0" >0,91</td>
+      <td id="T_4b545_row0_col1" class="data row0 col1" >0,82</td>
+      <td id="T_4b545_row0_col2" class="data row0 col2" >0,05</td>
+      <td id="T_4b545_row0_col3" class="data row0 col3" >0,05</td>
+      <td id="T_4b545_row0_col4" class="data row0 col4" >0,23</td>
+      <td id="T_4b545_row0_col5" class="data row0 col5" >0,64</td>
+      <td id="T_4b545_row0_col6" class="data row0 col6" >0,05</td>
     </tr>
     <tr>
-      <th id="T_7d197_level0_row1" class="row_heading level0 row1" >Faible</th>
-      <td id="T_7d197_row1_col0" class="data row1 col0" >0,07</td>
-      <td id="T_7d197_row1_col1" class="data row1 col1" >0,17</td>
-      <td id="T_7d197_row1_col2" class="data row1 col2" >0,17</td>
-      <td id="T_7d197_row1_col3" class="data row1 col3" >0,41</td>
-      <td id="T_7d197_row1_col4" class="data row1 col4" >0,61</td>
-      <td id="T_7d197_row1_col5" class="data row1 col5" >0,46</td>
-      <td id="T_7d197_row1_col6" class="data row1 col6" >0,31</td>
+      <th id="T_4b545_level0_row1" class="row_heading level0 row1" >Faible</th>
+      <td id="T_4b545_row1_col0" class="data row1 col0" >0,00</td>
+      <td id="T_4b545_row1_col1" class="data row1 col1" >0,05</td>
+      <td id="T_4b545_row1_col2" class="data row1 col2" >0,18</td>
+      <td id="T_4b545_row1_col3" class="data row1 col3" >0,14</td>
+      <td id="T_4b545_row1_col4" class="data row1 col4" >0,59</td>
+      <td id="T_4b545_row1_col5" class="data row1 col5" >0,05</td>
+      <td id="T_4b545_row1_col6" class="data row1 col6" >0,73</td>
     </tr>
     <tr>
-      <th id="T_7d197_level0_row2" class="row_heading level0 row2" >Milieu</th>
-      <td id="T_7d197_row2_col0" class="data row2 col0" >0,09</td>
-      <td id="T_7d197_row2_col1" class="data row2 col1" >0,03</td>
-      <td id="T_7d197_row2_col2" class="data row2 col2" >0,43</td>
-      <td id="T_7d197_row2_col3" class="data row2 col3" >0,24</td>
-      <td id="T_7d197_row2_col4" class="data row2 col4" >0,11</td>
-      <td id="T_7d197_row2_col5" class="data row2 col5" >0,53</td>
-      <td id="T_7d197_row2_col6" class="data row2 col6" >0,37</td>
+      <th id="T_4b545_level0_row2" class="row_heading level0 row2" >Milieu</th>
+      <td id="T_4b545_row2_col0" class="data row2 col0" >0,05</td>
+      <td id="T_4b545_row2_col1" class="data row2 col1" >0,09</td>
+      <td id="T_4b545_row2_col2" class="data row2 col2" >0,73</td>
+      <td id="T_4b545_row2_col3" class="data row2 col3" >0,14</td>
+      <td id="T_4b545_row2_col4" class="data row2 col4" >0,14</td>
+      <td id="T_4b545_row2_col5" class="data row2 col5" >0,27</td>
+      <td id="T_4b545_row2_col6" class="data row2 col6" >0,18</td>
     </tr>
     <tr>
-      <th id="T_7d197_level0_row3" class="row_heading level0 row3" >Élévé</th>
-      <td id="T_7d197_row3_col0" class="data row3 col0" >0,00</td>
-      <td id="T_7d197_row3_col1" class="data row3 col1" >0,00</td>
-      <td id="T_7d197_row3_col2" class="data row3 col2" >0,29</td>
-      <td id="T_7d197_row3_col3" class="data row3 col3" >0,02</td>
-      <td id="T_7d197_row3_col4" class="data row3 col4" >0,03</td>
-      <td id="T_7d197_row3_col5" class="data row3 col5" >0,00</td>
-      <td id="T_7d197_row3_col6" class="data row3 col6" >0,17</td>
+      <th id="T_4b545_level0_row3" class="row_heading level0 row3" >Élévé</th>
+      <td id="T_4b545_row3_col0" class="data row3 col0" >0,00</td>
+      <td id="T_4b545_row3_col1" class="data row3 col1" >0,00</td>
+      <td id="T_4b545_row3_col2" class="data row3 col2" >0,00</td>
+      <td id="T_4b545_row3_col3" class="data row3 col3" >0,64</td>
+      <td id="T_4b545_row3_col4" class="data row3 col4" >0,00</td>
+      <td id="T_4b545_row3_col5" class="data row3 col5" >0,00</td>
+      <td id="T_4b545_row3_col6" class="data row3 col6" >0,00</td>
     </tr>
     <tr>
-      <th id="T_7d197_level0_row4" class="row_heading level0 row4" >Le Plus Élévé</th>
-      <td id="T_7d197_row4_col0" class="data row4 col0" >0,00</td>
-      <td id="T_7d197_row4_col1" class="data row4 col1" >0,00</td>
-      <td id="T_7d197_row4_col2" class="data row4 col2" >0,09</td>
-      <td id="T_7d197_row4_col3" class="data row4 col3" >0,00</td>
-      <td id="T_7d197_row4_col4" class="data row4 col4" >0,01</td>
-      <td id="T_7d197_row4_col5" class="data row4 col5" >0,00</td>
-      <td id="T_7d197_row4_col6" class="data row4 col6" >0,00</td>
+      <th id="T_4b545_level0_row4" class="row_heading level0 row4" >Le Plus Élévé</th>
+      <td id="T_4b545_row4_col0" class="data row4 col0" >0,05</td>
+      <td id="T_4b545_row4_col1" class="data row4 col1" >0,05</td>
+      <td id="T_4b545_row4_col2" class="data row4 col2" >0,05</td>
+      <td id="T_4b545_row4_col3" class="data row4 col3" >0,05</td>
+      <td id="T_4b545_row4_col4" class="data row4 col4" >0,05</td>
+      <td id="T_4b545_row4_col5" class="data row4 col5" >0,05</td>
+      <td id="T_4b545_row4_col6" class="data row4 col6" >0,05</td>
     </tr>
   </tbody>
 </table>
@@ -892,543 +841,144 @@ document.write(`
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_13620 tr:nth-child(even) {
+#T_f5eab tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_13620 tr:nth-child(odd) {
+#T_f5eab tr:nth-child(odd) {
   background: #FFF;
 }
-#T_13620 tr {
+#T_f5eab tr {
   font-size: 10px;
 }
-#T_13620 th:nth-child(1) {
+#T_f5eab th:nth-child(1) {
   background-color: #FFF;
   font-size: 12px;
   text-align: left;
 }
-#T_13620 td {
+#T_f5eab td {
   padding: 4px;
   font-size: 12px;
 }
-#T_13620 caption {
+#T_f5eab caption {
   caption-side: bottom;
   font-size: 1em;
   text-align: left;
 }
-#T_13620_row0_col0 {
-  background-color: rgba(29,29,29, .5);
+#T_f5eab_row0_col0 {
+  background-color: rgba(218,218,218, .5);
   color: black;
 }
-#T_13620_row0_col1 {
-  background-color: rgba(92,92,92, .5);
+#T_f5eab_row0_col1, #T_f5eab_row0_col5, #T_f5eab_row1_col6, #T_f5eab_row3_col3 {
+  background-color: rgba(188,188,188, .5);
   color: black;
 }
-#T_13620_row0_col2 {
-  background-color: rgba(255,245,235, .5);
+#T_f5eab_row0_col2 {
+  background-color: rgba(247,247,247, .5);
   color: black;
 }
-#T_13620_row0_col3, #T_13620_row1_col1 {
-  background-color: rgba(254,239,224, .5);
-  color: black;
-}
-#T_13620_row0_col4 {
-  background-color: rgba(226,226,226, .5);
-  color: black;
-}
-#T_13620_row0_col5 {
-  background-color: rgba(249,249,249, .5);
-  color: black;
-}
-#T_13620_row0_col6 {
-  background-color: rgba(154,49,3, .5);
-  color: black;
-}
-#T_13620_row1_col0 {
-  background-color: rgba(146,146,146, .5);
-  color: black;
-}
-#T_13620_row1_col2 {
-  background-color: rgba(224,224,224, .5);
-  color: black;
-}
-#T_13620_row1_col3 {
-  background-color: rgba(48,48,48, .5);
-  color: black;
-}
-#T_13620_row1_col4 {
-  background-color: rgba(6,6,6, .5);
-  color: black;
-}
-#T_13620_row1_col5, #T_13620_row2_col3 {
-  background-color: rgba(160,160,160, .5);
-  color: black;
-}
-#T_13620_row1_col6 {
-  background-color: rgba(253,173,105, .5);
-  color: black;
-}
-#T_13620_row2_col0 {
-  background-color: rgba(236,236,236, .5);
-  color: black;
-}
-#T_13620_row2_col1 {
-  background-color: rgba(71,71,71, .5);
-  color: black;
-}
-#T_13620_row2_col2 {
-  background-color: rgba(115,115,115, .5);
-  color: black;
-}
-#T_13620_row2_col4 {
-  background-color: rgba(214,71,1, .5);
-  color: black;
-}
-#T_13620_row2_col5 {
-  background-color: rgba(253,210,167, .5);
-  color: black;
-}
-#T_13620_row2_col6 {
-  background-color: rgba(156,156,156, .5);
-  color: black;
-}
-#T_13620_row3_col0 {
-  background-color: rgba(98,98,98, .5);
-  color: black;
-}
-#T_13620_row3_col1, #T_13620_row3_col5 {
-  background-color: rgba(0,0,0, .5);
-  color: black;
-}
-#T_13620_row3_col2 {
-  background-color: rgba(253,228,203, .5);
-  color: black;
-}
-#T_13620_row3_col3 {
-  background-color: rgba(213,213,213, .5);
-  color: black;
-}
-#T_13620_row3_col4, #T_13620_row4_col2, #T_13620_row4_col4, #T_13620_row4_col5 {
-  background-color: rgba(127,39,4, .5);
-  color: black;
-}
-#T_13620_row3_col6 {
-  background-color: rgba(238,238,238, .5);
-  color: black;
-}
-#T_13620_row4_col0 {
-  background-color: rgba(147,46,3, .5);
-  color: black;
-}
-#T_13620_row4_col1 {
-  background-color: rgba(83,83,83, .5);
-  color: black;
-}
-#T_13620_row4_col3 {
+#T_f5eab_row0_col3, #T_f5eab_row0_col4, #T_f5eab_row1_col2, #T_f5eab_row2_col1, #T_f5eab_row2_col3, #T_f5eab_row2_col5, #T_f5eab_row4_col0, #T_f5eab_row4_col1, #T_f5eab_row4_col6 {
   background-color: rgba(255,255,255, .5);
   color: black;
 }
-#T_13620_row4_col6 {
-  background-color: rgba(253,209,164, .5);
+#T_f5eab_row0_col6, #T_f5eab_row1_col1, #T_f5eab_row1_col3, #T_f5eab_row2_col0, #T_f5eab_row4_col2, #T_f5eab_row4_col4, #T_f5eab_row4_col5 {
+  background-color: rgba(244,244,244, .5);
+  color: black;
+}
+#T_f5eab_row1_col0, #T_f5eab_row3_col0, #T_f5eab_row3_col1, #T_f5eab_row3_col2, #T_f5eab_row3_col4, #T_f5eab_row3_col5, #T_f5eab_row3_col6 {
+  background-color: rgba(0,0,0, .5);
+  color: black;
+}
+#T_f5eab_row1_col4 {
+  background-color: rgba(160,160,160, .5);
+  color: black;
+}
+#T_f5eab_row1_col5, #T_f5eab_row4_col3 {
+  background-color: rgba(140,140,140, .5);
+  color: black;
+}
+#T_f5eab_row2_col2 {
+  background-color: rgba(150,150,150, .5);
+  color: black;
+}
+#T_f5eab_row2_col4 {
+  background-color: rgba(226,226,226, .5);
+  color: black;
+}
+#T_f5eab_row2_col6 {
+  background-color: rgba(238,238,238, .5);
   color: black;
 }
 </style>
-<table id="T_13620">
-  <caption>The median pcs/m of each category in the feature variables. For example: The average pcs/m at the lowest category of forests was 0.47</caption>
+<table id="T_f5eab">
+  <caption>The median pcs/m of each category in the feature variables. For example: The average pcs/m at the lowest category of forests was 0.00</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_13620_level0_col0" class="col_heading level0 col0" >Verger</th>
-      <th id="T_13620_level0_col1" class="col_heading level0 col1" >Vignes</th>
-      <th id="T_13620_level0_col2" class="col_heading level0 col2" >Bâtiments</th>
-      <th id="T_13620_level0_col3" class="col_heading level0 col3" >Forêt</th>
-      <th id="T_13620_level0_col4" class="col_heading level0 col4" >Services Publics</th>
-      <th id="T_13620_level0_col5" class="col_heading level0 col5" >Rues</th>
-      <th id="T_13620_level0_col6" class="col_heading level0 col6" >Non Défini</th>
+      <th id="T_f5eab_level0_col0" class="col_heading level0 col0" >Verger</th>
+      <th id="T_f5eab_level0_col1" class="col_heading level0 col1" >Vignes</th>
+      <th id="T_f5eab_level0_col2" class="col_heading level0 col2" >Bâtiments</th>
+      <th id="T_f5eab_level0_col3" class="col_heading level0 col3" >Forêt</th>
+      <th id="T_f5eab_level0_col4" class="col_heading level0 col4" >Services Publics</th>
+      <th id="T_f5eab_level0_col5" class="col_heading level0 col5" >Rues</th>
+      <th id="T_f5eab_level0_col6" class="col_heading level0 col6" >Non Défini</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_13620_level0_row0" class="row_heading level0 row0" >Le Plus Bas</th>
-      <td id="T_13620_row0_col0" class="data row0 col0" >0,41</td>
-      <td id="T_13620_row0_col1" class="data row0 col1" >0,32</td>
-      <td id="T_13620_row0_col2" class="data row0 col2" >0,45</td>
-      <td id="T_13620_row0_col3" class="data row0 col3" >0,47</td>
-      <td id="T_13620_row0_col4" class="data row0 col4" >0,09</td>
-      <td id="T_13620_row0_col5" class="data row0 col5" >0,02</td>
-      <td id="T_13620_row0_col6" class="data row0 col6" >0,86</td>
+      <th id="T_f5eab_level0_row0" class="row_heading level0 row0" >Le Plus Bas</th>
+      <td id="T_f5eab_row0_col0" class="data row0 col0" >0,11</td>
+      <td id="T_f5eab_row0_col1" class="data row0 col1" >0,17</td>
+      <td id="T_f5eab_row0_col2" class="data row0 col2" >0,03</td>
+      <td id="T_f5eab_row0_col3" class="data row0 col3" >0,00</td>
+      <td id="T_f5eab_row0_col4" class="data row0 col4" >0,00</td>
+      <td id="T_f5eab_row0_col5" class="data row0 col5" >0,17</td>
+      <td id="T_f5eab_row0_col6" class="data row0 col6" >0,04</td>
     </tr>
     <tr>
-      <th id="T_13620_level0_row1" class="row_heading level0 row1" >Faible</th>
-      <td id="T_13620_row1_col0" class="data row1 col0" >0,23</td>
-      <td id="T_13620_row1_col1" class="data row1 col1" >0,47</td>
-      <td id="T_13620_row1_col2" class="data row1 col2" >0,10</td>
-      <td id="T_13620_row1_col3" class="data row1 col3" >0,38</td>
-      <td id="T_13620_row1_col4" class="data row1 col4" >0,44</td>
-      <td id="T_13620_row1_col5" class="data row1 col5" >0,21</td>
-      <td id="T_13620_row1_col6" class="data row1 col6" >0,62</td>
+      <th id="T_f5eab_level0_row1" class="row_heading level0 row1" >Faible</th>
+      <td id="T_f5eab_row1_col0" class="data row1 col0" >nan</td>
+      <td id="T_f5eab_row1_col1" class="data row1 col1" >0,04</td>
+      <td id="T_f5eab_row1_col2" class="data row1 col2" >0,00</td>
+      <td id="T_f5eab_row1_col3" class="data row1 col3" >0,04</td>
+      <td id="T_f5eab_row1_col4" class="data row1 col4" >0,21</td>
+      <td id="T_f5eab_row1_col5" class="data row1 col5" >0,24</td>
+      <td id="T_f5eab_row1_col6" class="data row1 col6" >0,17</td>
     </tr>
     <tr>
-      <th id="T_13620_level0_row2" class="row_heading level0 row2" >Milieu</th>
-      <td id="T_13620_row2_col0" class="data row2 col0" >0,07</td>
-      <td id="T_13620_row2_col1" class="data row2 col1" >0,35</td>
-      <td id="T_13620_row2_col2" class="data row2 col2" >0,28</td>
-      <td id="T_13620_row2_col3" class="data row2 col3" >0,21</td>
-      <td id="T_13620_row2_col4" class="data row2 col4" >0,79</td>
-      <td id="T_13620_row2_col5" class="data row2 col5" >0,56</td>
-      <td id="T_13620_row2_col6" class="data row2 col6" >0,21</td>
+      <th id="T_f5eab_level0_row2" class="row_heading level0 row2" >Milieu</th>
+      <td id="T_f5eab_row2_col0" class="data row2 col0" >0,04</td>
+      <td id="T_f5eab_row2_col1" class="data row2 col1" >0,00</td>
+      <td id="T_f5eab_row2_col2" class="data row2 col2" >0,22</td>
+      <td id="T_f5eab_row2_col3" class="data row2 col3" >0,00</td>
+      <td id="T_f5eab_row2_col4" class="data row2 col4" >0,09</td>
+      <td id="T_f5eab_row2_col5" class="data row2 col5" >0,00</td>
+      <td id="T_f5eab_row2_col6" class="data row2 col6" >0,06</td>
     </tr>
     <tr>
-      <th id="T_13620_level0_row3" class="row_heading level0 row3" >Élévé</th>
-      <td id="T_13620_row3_col0" class="data row3 col0" >0,31</td>
-      <td id="T_13620_row3_col1" class="data row3 col1" >nan</td>
-      <td id="T_13620_row3_col2" class="data row3 col2" >0,51</td>
-      <td id="T_13620_row3_col3" class="data row3 col3" >0,12</td>
-      <td id="T_13620_row3_col4" class="data row3 col4" >0,91</td>
-      <td id="T_13620_row3_col5" class="data row3 col5" >nan</td>
-      <td id="T_13620_row3_col6" class="data row3 col6" >0,06</td>
+      <th id="T_f5eab_level0_row3" class="row_heading level0 row3" >Élévé</th>
+      <td id="T_f5eab_row3_col0" class="data row3 col0" >nan</td>
+      <td id="T_f5eab_row3_col1" class="data row3 col1" >nan</td>
+      <td id="T_f5eab_row3_col2" class="data row3 col2" >nan</td>
+      <td id="T_f5eab_row3_col3" class="data row3 col3" >0,17</td>
+      <td id="T_f5eab_row3_col4" class="data row3 col4" >nan</td>
+      <td id="T_f5eab_row3_col5" class="data row3 col5" >nan</td>
+      <td id="T_f5eab_row3_col6" class="data row3 col6" >nan</td>
     </tr>
     <tr>
-      <th id="T_13620_level0_row4" class="row_heading level0 row4" >Le Plus Élévé</th>
-      <td id="T_13620_row4_col0" class="data row4 col0" >0,87</td>
-      <td id="T_13620_row4_col1" class="data row4 col1" >0,34</td>
-      <td id="T_13620_row4_col2" class="data row4 col2" >1,31</td>
-      <td id="T_13620_row4_col3" class="data row4 col3" >0,00</td>
-      <td id="T_13620_row4_col4" class="data row4 col4" >1,16</td>
-      <td id="T_13620_row4_col5" class="data row4 col5" >4,00</td>
-      <td id="T_13620_row4_col6" class="data row4 col6" >0,56</td>
+      <th id="T_f5eab_level0_row4" class="row_heading level0 row4" >Le Plus Élévé</th>
+      <td id="T_f5eab_row4_col0" class="data row4 col0" >0,00</td>
+      <td id="T_f5eab_row4_col1" class="data row4 col1" >0,00</td>
+      <td id="T_f5eab_row4_col2" class="data row4 col2" >0,04</td>
+      <td id="T_f5eab_row4_col3" class="data row4 col3" >0,24</td>
+      <td id="T_f5eab_row4_col4" class="data row4 col4" >0,04</td>
+      <td id="T_f5eab_row4_col5" class="data row4 col5" >0,04</td>
+      <td id="T_f5eab_row4_col6" class="data row4 col6" >0,00</td>
     </tr>
   </tbody>
 </table>
 </div></div>
 </div>
 <p>Locations with no landuse data are excluded.</p>
-</div>
-</div>
-<div class="section" id="correlation-of-independent-variables">
-<h2>Correlation of independent variables<a class="headerlink" href="#correlation-of-independent-variables" title="Permalink to this heading">#</a></h2>
-<div class="section" id="definition-of-significant-correlations">
-<h3>Definition of significant correlations<a class="headerlink" href="#definition-of-significant-correlations" title="Permalink to this heading">#</a></h3>
-<p>The p value of the Pearson correlation coefficient is used to decide whether or not a correlation is of interest. The default threshold is set at 0.05, the absolute value of the correlation is another threshold that can be changed.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># the topographical feautures</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">w_data</span><span class="p">[</span><span class="n">lcu</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
-
-<span class="c1"># scaled result of pcs/m</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">w_data</span><span class="o">.</span><span class="n">scale</span>
-
-<span class="c1"># the correlation matirx of</span>
-<span class="c1"># of the topogrphical features</span>
-<span class="n">X_corr</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
-
-   
-<span class="n">significant</span> <span class="o">=</span> <span class="n">find_significant_correlations</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">p_value_threshold</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
-</pre></div>
-</div>
-<p><strong>The significant correlations:</strong></p>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_significant_correlations</span><span class="p">(</span><span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">threshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.4</span><span class="p">,</span> <span class="n">p_value_threshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span> <span class="n">func</span><span class="p">:</span> <span class="n">Callable</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">pearsonr</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Find significant correlations in a DataFrame.</span>
-
-<span class="sd">    Parameters:</span>
-<span class="sd">        df (pd.DataFrame): The input DataFrame containing the data.</span>
-<span class="sd">        threshold (float): The threshold for the absolute correlation coefficient (default is 0.7).</span>
-<span class="sd">        p_value_threshold (float): The p-value threshold for significance (default is 0.05).</span>
-<span class="sd">        func (Callable): The correlation method from scipy.stats</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">        List[Tuple[str, str]]: A list of significant correlations as tuples of column labels.</span>
-
-<span class="sd">    Example:</span>
-<span class="sd">        data = {</span>
-<span class="sd">            &#39;A&#39;: np.random.rand(100),</span>
-<span class="sd">            &#39;B&#39;: np.random rand(100),</span>
-<span class="sd">            &#39;C&#39;: np.random rand(100),</span>
-<span class="sd">        }</span>
-<span class="sd">        df = pd.DataFrame(data)</span>
-<span class="sd">        significant_correlations = find_significant_correlations(df)</span>
-<span class="sd">        print(significant_correlations)</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Calculate the correlation matrix</span>
-    <span class="n">X_corr</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span><span class="o">.</span><span class="n">values</span>
-
-    <span class="c1"># Calculate the p-values for each correlation coefficient</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
-    <span class="n">p_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty_like</span><span class="p">(</span><span class="n">X_corr</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">X_corr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">X_corr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
-            <span class="n">corr</span><span class="p">,</span> <span class="n">p_value</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="n">i</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="n">j</span><span class="p">])</span>
-            <span class="n">p_values</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">p_value</span>
-
-    <span class="c1"># Mask the diagonal by setting it to NaN</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">X_corr</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
-
-    <span class="c1"># Create a mask to filter out correlations with p-values less than p_value_threshold</span>
-    <span class="n">mask</span> <span class="o">=</span> <span class="n">p_values</span> <span class="o">&lt;</span> <span class="n">p_value_threshold</span>
-
-    <span class="c1"># Find significant correlations using NumPy operations</span>
-    <span class="n">significant_i</span><span class="p">,</span> <span class="n">significant_j</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">mask</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">X_corr</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">threshold</span><span class="p">))</span>
-
-    <span class="c1"># Get the index and column labels of significant correlations</span>
-    <span class="n">significant_correlations</span> <span class="o">=</span> <span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">significant_i</span><span class="p">,</span> <span class="n">significant_j</span><span class="p">)]</span>
-
-    <span class="c1"># Remove duplicates with values in different orders</span>
-    <span class="n">unique_correlations</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">correlation</span><span class="p">))</span> <span class="k">for</span> <span class="n">correlation</span> <span class="ow">in</span> <span class="n">significant_correlations</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">unique_correlations</span><span class="p">)),</span> <span class="n">mask</span>
-
-<span class="k">def</span> <span class="nf">combining_and_interacting</span><span class="p">(</span><span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">cols</span><span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">combining</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span><span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">label</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">cols</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;_&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cols</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">combining</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
-        <span class="n">df</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">df</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-    
-
-<span class="k">def</span> <span class="nf">combine_or_multipy_column_values</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">significant</span><span class="p">,</span> <span class="n">func</span><span class="p">:</span> <span class="n">Callable</span> <span class="o">=</span> <span class="n">combining_and_interacting</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    
-    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">a_pair</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">significant</span><span class="p">):</span>
-        <span class="n">func</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">a_pair</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="n">i</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">df</span>
-</pre></div>
-</div>
-</div>
-</details>
-</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[&#39;Siedl&#39;, &#39;Wald&#39;],
-       [&#39;land_use&#39;, &#39;undefined&#39;],
-       [&#39;land_use&#39;, &#39;streets&#39;],
-       [&#39;streets&#39;, &#39;undefined&#39;],
-       [&#39;Siedl&#39;, &#39;land_use&#39;],
-       [&#39;Siedl&#39;, &#39;undefined&#39;],
-       [&#39;Siedl&#39;, &#39;streets&#39;]], dtype=&#39;&lt;U9&#39;)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/aa1f0d3e5ca48d32f5c6df05d9d8bfbd9438471b59ff0042ea16a6a355498b6b.png" src="_images/aa1f0d3e5ca48d32f5c6df05d9d8bfbd9438471b59ff0042ea16a6a355498b6b.png" />
-</div>
-</div>
-<p>There are some standard methods that can be used to reduce the effects of multicolinearity. Some of these methods happen before applying a regression model and some are part of the regression model.</p>
-<p><strong>Before running regression:</strong></p>
-<p>This is a function of the ReportClass and LandUse class. Both classes have methods to pass different combinations of columns. The columns are the feauture variables from the LandUse class. The target variable can be parameterized in the ReportClass. The LandUse class is dependent on the ReportClass for the list of locations.</p>
-<ol class="arabic simple">
-<li><p>Variable selection:  select a subset of the correlated variables based on domain knowledge or theoretical understanding of the problem. Choose the variables that are most relevant to the target variable and exclude the others.</p></li>
-<li><p>Combine variables: If the correlated variables measure similar aspects of the phenomenon you are studying, you can consider creating a composite variable by averaging or summing them. This can help reduce multicollinearity and provide a more interpretable model.</p></li>
-<li><p>Interaction terms: Interaction terms can be created by multiplying the correlated variables together and including these terms in the regression model.</p></li>
-</ol>
-<p>The default value for the land use data is everything is aggregated to the top-level group. However, all subgroups from the original layer are available for grouping.</p>
-<p><strong>Regression:</strong></p>
-<ol class="arabic simple">
-<li><p>Regularization techniques: Ridge regression and Lasso regression are designed to handle multicollinearity. Ridge regression adds a penalty term to the loss function that shrinks the coefficients of correlated variables, making them more stable. Lasso regression not only shrinks coefficients but can also set some of them to exactly zero, effectively selecting a subset of variables.</p></li>
-<li><p>Principal component analysis (PCA): PCA transforms the original variables into a set of uncorrelated variables (principal components). You can then use these components in your regression model. PCA can be effective when the multicollinearity is high and you want to retain most of the variance explained by the correlated variables.</p></li>
-</ol>
-</div>
-<div class="section" id="variable-selection-and-combination">
-<h3>Variable selection and combination<a class="headerlink" href="#variable-selection-and-combination" title="Permalink to this heading">#</a></h3>
-<div class="section" id="combination">
-<h4>Combination<a class="headerlink" href="#combination" title="Permalink to this heading">#</a></h4>
-<p>The land-use variables have been combined by use. We have defined three use cases:</p>
-<ol class="arabic simple">
-<li><p>non-technical: places where people go. Sports, outdoor parks, Nurseries, cemeteries</p></li>
-<li><p>technical: electrical substations, trash-dumps, trash incineration, water-treatment, antennae, mining</p></li>
-<li><p>services: hospitals, schools, prisons, military parade grounds</p></li>
-</ol>
-<p>The streets are combined in the same fashion. The following code is used to implement those groups based on the map-label:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-<span class="c1"># land_uses_grouped:</span>
-<span class="n">lu_non_tech</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;places&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Friedhof&#39;</span><span class="p">,</span> <span class="s1">&#39;Hitorisches Areal&#39;</span><span class="p">,</span> <span class="s1">&#39;Schrebergartenareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Oeffentliches Parkareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Messeareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Klosterareal&#39;</span><span class="p">,</span>  <span class="s1">&#39;Wald nicht bestockt&#39;</span><span class="p">,</span> <span class="s1">&#39;Baumschule&#39;</span><span class="p">]}</span>
-<span class="n">lu_technical</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;technical&#39;</span><span class="p">:[</span><span class="s1">&#39;Kehrichtverbrennungsareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Deponieareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Deponieareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Abwasserreinigungsareal&#39;</span><span class="p">,</span><span class="s1">&#39;Unterwerkareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Antennenareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Kraftwerkareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Kiesabbauareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Steinbruchareal&#39;</span><span class="p">,</span>  <span class="s1">&#39;Lehmabbauareal&#39;</span><span class="p">]}</span>
-<span class="n">lu_services</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;services&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Massnahmenvollzugsanstaltsareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Schul- und Hochschulareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Spitalareal&#39;</span><span class="p">,</span> <span class="s1">&#39;Historisches Areal&#39;</span><span class="p">,</span> <span class="s1">&#39;Truppenuebungsplatz&#39;</span><span class="p">]}</span>
-<span class="n">lu_combined</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;land_use&#39;</span><span class="p">:[</span><span class="o">*</span><span class="nb">list</span><span class="p">(</span><span class="n">lu_non_tech</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span> <span class="o">*</span><span class="nb">list</span><span class="p">(</span><span class="n">lu_technical</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span> <span class="o">*</span><span class="nb">list</span><span class="p">(</span><span class="n">lu_services</span><span class="o">.</span><span class="n">keys</span><span class="p">())]}</span>
-<span class="n">lu_groups</span> <span class="o">=</span> <span class="p">[</span><span class="n">lu_non_tech</span><span class="p">,</span><span class="n">lu_technical</span><span class="p">,</span> <span class="n">lu_services</span><span class="p">,</span> <span class="n">lu_combined</span><span class="p">]</span>
-
-<span class="c1"># streets grouped</span>
-<span class="n">str_surface</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;surface streets&#39;</span><span class="p">:[</span><span class="s1">&#39;NebenStr3&#39;</span><span class="p">,</span> <span class="s1">&#39;NebenStr6&#39;</span><span class="p">]}</span>
-<span class="n">str_ped_br</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;pedestrian&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Fahrstraes&#39;</span><span class="p">,</span> <span class="s1">&#39;Fussweg&#39;</span><span class="p">]}</span>
-<span class="n">str_main</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;principal&#39;</span><span class="p">:</span> <span class="p">[</span> <span class="s1">&#39;HauptStrAB6&#39;</span><span class="p">,</span> <span class="s1">&#39;VerbindStr4&#39;</span><span class="p">,</span><span class="s1">&#39;VerbindStr6&#39;</span><span class="p">,</span> <span class="s1">&#39;HauptStrAB4&#39;</span><span class="p">,</span> <span class="s1">&#39;NebenStr6&#39;</span><span class="p">]}</span>
-<span class="n">str_auto</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;highways&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Autobahn&#39;</span><span class="p">,</span> <span class="s1">&#39;Autostr&#39;</span><span class="p">,</span> <span class="s1">&#39;Autob_Ri&#39;</span><span class="p">]}</span>
-<span class="n">str_combined</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;streets&#39;</span><span class="p">:[</span><span class="s1">&#39;surface streets&#39;</span><span class="p">,</span> <span class="s1">&#39;pedestrian&#39;</span><span class="p">,</span> <span class="s1">&#39;principal&#39;</span><span class="p">,</span> <span class="s1">&#39;highways&#39;</span><span class="p">]}</span>
-<span class="n">street_groups</span> <span class="o">=</span> <span class="p">[</span><span class="n">str_surface</span><span class="p">,</span> <span class="n">str_ped_br</span><span class="p">,</span> <span class="n">str_main</span><span class="p">,</span> <span class="n">str_auto</span><span class="p">,</span> <span class="n">str_combined</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="linear-regression-models">
-<h2>Linear regression models<a class="headerlink" href="#linear-regression-models" title="Permalink to this heading">#</a></h2>
-<p>The purpose of collecting the topographic data is to understand the relationship between the density of objects observed and the physical environment they are observed in (the conditions of the observation).</p>
-<div class="section" id="random-sample-consensus-ransac">
-<h3>Random Sample Consensus (RANSAC)<a class="headerlink" href="#random-sample-consensus-ransac" title="Permalink to this heading">#</a></h3>
-<p>From <a class="reference external" href="https://scikit-learn.org/stable/modules/linear_model.html#robustness-regression-outliers-and-modeling-errors">scikit-learn</a></p>
-<p>RANSAC (RANdom SAmple Consensus) fits a model from random subsets of inliers from the complete data set.</p>
-<p>RANSAC is a non-deterministic algorithm producing only a reasonable result with a certain probability, which is dependent on the number of iterations (see max_trials parameter). It is typically used for linear and non-linear regression problems and is especially popular in the field of photogrammetric computer vision.</p>
-<p>The algorithm splits the complete input sample data into a set of inliers, which may be subject to noise, and outliers, which are e.g. caused by erroneous measurements or invalid hypotheses about the data. The resulting model is then estimated only from the determined inliers.</p>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html"><style>#sk-container-id-1 {color: black;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>RANSACRegressor(estimator=LinearRegression(), max_trials=1000, min_samples=0.8,
-                random_state=42, residual_threshold=0.3147208121827411)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" ><label for="sk-estimator-id-1" class="sk-toggleable__label sk-toggleable__label-arrow">RANSACRegressor</label><div class="sk-toggleable__content"><pre>RANSACRegressor(estimator=LinearRegression(), max_trials=1000, min_samples=0.8,
-                random_state=42, residual_threshold=0.3147208121827411)</pre></div></div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" ><label for="sk-estimator-id-2" class="sk-toggleable__label sk-toggleable__label-arrow">estimator: LinearRegression</label><div class="sk-toggleable__content"><pre>LinearRegression()</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox" ><label for="sk-estimator-id-3" class="sk-toggleable__label sk-toggleable__label-arrow">LinearRegression</label><div class="sk-toggleable__content"><pre>LinearRegression()</pre></div></div></div></div></div></div></div></div></div></div></div></div>
-</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/ad66b6b3ff372707392c5f8881f1a0b0efc0e8789dba8ac7a00dd054097f87c9.png" src="_images/ad66b6b3ff372707392c5f8881f1a0b0efc0e8789dba8ac7a00dd054097f87c9.png" />
-</div>
-</div>
-</div>
-<div class="section" id="polynomial-regression">
-<h3>Polynomial regression<a class="headerlink" href="#polynomial-regression" title="Permalink to this heading">#</a></h3>
-<p>From <a class="reference external" href="https://scikit-learn.org/stable/modules/linear_model.html#polynomial-regression-extending-linear-models-with-basis-functions">scikit-learn</a></p>
-<p>One common pattern within machine learning is to use linear models trained on nonlinear functions of the data. This approach maintains the generally fast performance of linear methods, while allowing them to fit a much wider range of data. For example, a simple linear regression can be extended by constructing polynomial features from the coefficients. In the standard linear regression case, you might have a model that looks like this for two-dimensional data:</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html"><style>#sk-container-id-2 {color: black;}#sk-container-id-2 pre{padding: 0;}#sk-container-id-2 div.sk-toggleable {background-color: white;}#sk-container-id-2 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-2 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-2 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-2 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-2 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-2 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-2 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-2 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-2 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-2 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-2 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-2 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-2 div.sk-item {position: relative;z-index: 1;}#sk-container-id-2 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-2 div.sk-item::before, #sk-container-id-2 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-2 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-2 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-2 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-2 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-2 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-2 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-2 div.sk-label-container {text-align: center;}#sk-container-id-2 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-2 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LinearRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-4" type="checkbox" checked><label for="sk-estimator-id-4" class="sk-toggleable__label sk-toggleable__label-arrow">LinearRegression</label><div class="sk-toggleable__content"><pre>LinearRegression()</pre></div></div></div></div></div></div></div>
-</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/0d3ef679941997de80b54c41ed50c6984bf0e55f577ba25a1bf9987b031bf9aa.png" src="_images/0d3ef679941997de80b54c41ed50c6984bf0e55f577ba25a1bf9987b031bf9aa.png" />
-</div>
-</div>
-</div>
-<div class="section" id="random-forest">
-<h3>Random forest<a class="headerlink" href="#random-forest" title="Permalink to this heading">#</a></h3>
-<p>From <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html#sklearn.ensemble.RandomForestRegressor">scikit-learn</a></p>
-<p>A random forest is a meta estimator that fits a number of classifying decision trees on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting. The sub-sample size is controlled with the max_samples parameter if bootstrap=True (default), otherwise the whole dataset is used to build each tree.</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html"><style>#sk-container-id-3 {color: black;}#sk-container-id-3 pre{padding: 0;}#sk-container-id-3 div.sk-toggleable {background-color: white;}#sk-container-id-3 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-3 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-3 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-3 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-3 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-3 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-3 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-3 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-3 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-3 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-3 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-3 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-3 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-3 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-3 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-3 div.sk-item {position: relative;z-index: 1;}#sk-container-id-3 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-3 div.sk-item::before, #sk-container-id-3 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-3 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-3 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-3 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-3 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-3 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-3 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-3 div.sk-label-container {text-align: center;}#sk-container-id-3 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-3 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-3" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>RandomForestRegressor(n_estimators=1000, n_jobs=-1, random_state=1)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-5" type="checkbox" checked><label for="sk-estimator-id-5" class="sk-toggleable__label sk-toggleable__label-arrow">RandomForestRegressor</label><div class="sk-toggleable__content"><pre>RandomForestRegressor(n_estimators=1000, n_jobs=-1, random_state=1)</pre></div></div></div></div></div></div></div>
-</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/a50eca1109016e8b979eaea8ab0c71ccf77dad26dd83e653d7ca39d5b130ad4c.png" src="_images/a50eca1109016e8b979eaea8ab0c71ccf77dad26dd83e653d7ca39d5b130ad4c.png" />
-</div>
-</div>
-</div>
-<div class="section" id="compression-pca">
-<h3>Compression: PCA<a class="headerlink" href="#compression-pca" title="Permalink to this heading">#</a></h3>
-<p>From <a class="reference external" href="https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html">scikit-learn</a></p>
-<p>In the context of dimensionality reduction, feature extraction can be understood as an approach to data compression with the goal of maintaining most of the relevant information. In practice, feature extraction is not only used to improve storage space or the computational efficiency of the learning algorithm but can also improve the predictive performance by reducing the noise or the curse of dimensionality.</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html"><style>#sk-container-id-4 {color: black;}#sk-container-id-4 pre{padding: 0;}#sk-container-id-4 div.sk-toggleable {background-color: white;}#sk-container-id-4 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-4 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-4 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-4 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-4 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-4 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-4 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-4 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-4 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-4 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-4 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-4 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-4 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-4 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-4 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-4 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-4 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-4 div.sk-item {position: relative;z-index: 1;}#sk-container-id-4 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-4 div.sk-item::before, #sk-container-id-4 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-4 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-4 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-4 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-4 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-4 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-4 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-4 div.sk-label-container {text-align: center;}#sk-container-id-4 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-4 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-4" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>Pipeline(steps=[(&#x27;reduce_dim&#x27;, PCA(n_components=5)),
-                (&#x27;regressor&#x27;, LinearRegression())])</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-6" type="checkbox" ><label for="sk-estimator-id-6" class="sk-toggleable__label sk-toggleable__label-arrow">Pipeline</label><div class="sk-toggleable__content"><pre>Pipeline(steps=[(&#x27;reduce_dim&#x27;, PCA(n_components=5)),
-                (&#x27;regressor&#x27;, LinearRegression())])</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-7" type="checkbox" ><label for="sk-estimator-id-7" class="sk-toggleable__label sk-toggleable__label-arrow">PCA</label><div class="sk-toggleable__content"><pre>PCA(n_components=5)</pre></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-8" type="checkbox" ><label for="sk-estimator-id-8" class="sk-toggleable__label sk-toggleable__label-arrow">LinearRegression</label><div class="sk-toggleable__content"><pre>LinearRegression()</pre></div></div></div></div></div></div></div></div></div>
-</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/890c901022140be5b836d7b828dd4344c985c088a0c564361bc37c7bb53dc507.png" src="_images/890c901022140be5b836d7b828dd4344c985c088a0c564361bc37c7bb53dc507.png" />
-</div>
-</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html"><style>#sk-container-id-5 {color: black;}#sk-container-id-5 pre{padding: 0;}#sk-container-id-5 div.sk-toggleable {background-color: white;}#sk-container-id-5 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-5 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-5 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-5 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-5 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-5 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-5 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-5 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-5 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-5 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-5 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-5 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-5 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-5 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-5 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-5 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-5 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-5 div.sk-item {position: relative;z-index: 1;}#sk-container-id-5 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-5 div.sk-item::before, #sk-container-id-5 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-5 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-5 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-5 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-5 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-5 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-5 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-5 div.sk-label-container {text-align: center;}#sk-container-id-5 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-5 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-5" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>Pipeline(steps=[(&#x27;reduce_dim&#x27;, PCA(n_components=2)),
-                (&#x27;polynomial_features&#x27;, PolynomialFeatures()),
-                (&#x27;regressor&#x27;, LinearRegression())])</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-9" type="checkbox" ><label for="sk-estimator-id-9" class="sk-toggleable__label sk-toggleable__label-arrow">Pipeline</label><div class="sk-toggleable__content"><pre>Pipeline(steps=[(&#x27;reduce_dim&#x27;, PCA(n_components=2)),
-                (&#x27;polynomial_features&#x27;, PolynomialFeatures()),
-                (&#x27;regressor&#x27;, LinearRegression())])</pre></div></div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-10" type="checkbox" ><label for="sk-estimator-id-10" class="sk-toggleable__label sk-toggleable__label-arrow">PCA</label><div class="sk-toggleable__content"><pre>PCA(n_components=2)</pre></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-11" type="checkbox" ><label for="sk-estimator-id-11" class="sk-toggleable__label sk-toggleable__label-arrow">PolynomialFeatures</label><div class="sk-toggleable__content"><pre>PolynomialFeatures()</pre></div></div></div><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-12" type="checkbox" ><label for="sk-estimator-id-12" class="sk-toggleable__label sk-toggleable__label-arrow">LinearRegression</label><div class="sk-toggleable__content"><pre>LinearRegression()</pre></div></div></div></div></div></div></div></div></div>
-</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="_images/b6ef10cc63d82f9ec5b432e90b1bc0ea11ad58a5071aa305bbfa9cf684b0e727.png" src="_images/b6ef10cc63d82f9ec5b432e90b1bc0ea11ad58a5071aa305bbfa9cf684b0e727.png" />
-</div>
-</div>
-</div>
-<div class="section" id="model-performance">
-<h3>Model performance<a class="headerlink" href="#model-performance" title="Permalink to this heading">#</a></h3>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>MSE</th>
-      <th>r²</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>RANSAC-Linear</th>
-      <td>0.005079</td>
-      <td>0.104994</td>
-    </tr>
-    <tr>
-      <th>Forest</th>
-      <td>0.005349</td>
-      <td>0.057480</td>
-    </tr>
-    <tr>
-      <th>PCA =&gt; Linear</th>
-      <td>0.005098</td>
-      <td>0.101685</td>
-    </tr>
-    <tr>
-      <th>PCA =&gt; polynomial =&gt; linear</th>
-      <td>0.005141</td>
-      <td>0.094228</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-</div>
-</div>
-<div class="section" id="generalized-linear-models">
-<h2>Generalized linear models<a class="headerlink" href="#generalized-linear-models" title="Permalink to this heading">#</a></h2>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                 Generalized Linear Model Regression Results                  
-==============================================================================
-Dep. Variable:                 scaled   No. Observations:                  753
-Model:                            GLM   Df Residuals:                      746
-Model Family:        NegativeBinomial   Df Model:                            6
-Link Function:                    Log   Scale:                          1.0000
-Method:                          IRLS   Log-Likelihood:                -135.82
-Date:                Mon, 13 Nov 2023   Deviance:                       44.155
-Time:                        04:16:55   Pearson chi2:                     67.8
-No. Iterations:                     5   Pseudo R-squ. (CS):            0.01682
-Covariance Type:            nonrobust                                         
-==============================================================================
-                 coef    std err          z      P&gt;|z|      [0.025      0.975]
-------------------------------------------------------------------------------
-Obstanlage    -2.8856      2.249     -1.283      0.200      -7.294       1.523
-Reben         -2.4753      2.611     -0.948      0.343      -7.593       2.642
-Siedl         -2.7228      0.580     -4.698      0.000      -3.859      -1.587
-Wald          -2.7639      1.116     -2.476      0.013      -4.951      -0.576
-undefined     -3.5092      0.728     -4.818      0.000      -4.937      -2.082
-land_use      -0.5738      1.008     -0.569      0.569      -2.550       1.403
-streets        1.2936      1.232      1.050      0.294      -1.120       3.708
-==============================================================================
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="unit-tests">
@@ -1503,7 +1053,7 @@ streets        1.2936      1.232      1.050      0.294      -1.120       3.708
 test_group_topographic_attributes_with_grouping (__main__.TestGroupTopographicAttributes) ... ok
 
 ----------------------------------------------------------------------
-Ran 2 tests in 0.014s
+Ran 2 tests in 0.015s
 
 OK
 </pre></div>
@@ -1590,13 +1140,13 @@ OK
 
 conda environment: cantonal_report
 
+statsmodels: 0.14.0
+matplotlib : 3.7.1
 scipy      : 1.11.2
+seaborn    : 0.12.2
+sklearn    : 1.3.0
 pandas     : 2.0.3
 numpy      : 1.25.2
-matplotlib : 3.7.1
-statsmodels: 0.14.0
-sklearn    : 1.3.0
-seaborn    : 0.12.2
 </pre></div>
 </div>
 </div>
@@ -1678,23 +1228,6 @@ seaborn    : 0.12.2
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#land-use-and-density">Land use and density</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correlation-of-independent-variables">Correlation of independent variables</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-significant-correlations">Definition of significant correlations</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-selection-and-combination">Variable selection and combination</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#combination">Combination</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-models">Linear regression models</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#random-sample-consensus-ransac">Random Sample Consensus (RANSAC)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polynomial-regression">Polynomial regression</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest">Random forest</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compression-pca">Compression: PCA</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-performance">Model performance</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalized-linear-models">Generalized linear models</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-tests">Unit tests</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouping-topographical-data">Grouping topographical data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistic-of-critical-value">Statistic of critical value</a></li>

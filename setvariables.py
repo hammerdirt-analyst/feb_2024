@@ -72,7 +72,9 @@ code_result_columns = [
     'code'
 ]
 
-work_columns = ['slug', 'loc_date', 'feature_name', 'parent_boundary', 'city','canton', 'pcs_m', 'quantity','code', 'feature_type']
+work_columns = ['slug', 'loc_date', 'date',
+                'feature_name', 'parent_boundary',
+                'city','canton', 'pcs_m', 'quantity','code', 'feature_type']
 
 
 agg_groups = {

@@ -6,6 +6,8 @@ root: titlepage
 parts:
   - caption: Models
     chapters:
+    - file: cumulative_land_use
+    - file: cumulative_reports
     - file: a_report_class
     - file: landuse_class
   - caption: Annex
