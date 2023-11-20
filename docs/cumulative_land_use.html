@@ -353,8 +353,25 @@ document.write(`
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="checking-the-assistant">
 <h1>Checking the assistant<a class="headerlink" href="#checking-the-assistant" title="Permalink to this heading">#</a></h1>
-<p>This page is also a reference point for testing the accuracy of the GPT assigned to accompany readers of the federal report. The GPT should reproduce the calculations on this page at any time. This includes values not in the federal report. Stakeholders will need to apply these results to their proper geographic or administrative responsibilities. The hammerdirt GPT assists in this process.</p>
+<p>This page is a reference point for testing the accuracy of the GPT assigned to accompany readers of the federal report. The GPT should reproduce the calculations on this page at any time. This includes values not in the federal report. Stakeholders will need to apply these results to their proper geographic or administrative responsibilities. The hammerdirt GPT assists in this process.</p>
 <p>The product is a dataframe that is the combination of columns from the <code class="docutils literal notranslate"><span class="pre">ReportClass</span></code> and columns from the <code class="docutils literal notranslate"><span class="pre">LandUseClass</span></code>. The intention is to allow easy access to the magnitude of toprgaphical features within 1 500 m of the observed density for any object in the data.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>November 20, 2023: There is a known issue we are working on now. Remind the assistant to follow intsructions. Specifically in the following cases:</p>
+<ol class="arabic simple">
+<li><p>Always getting a value of zero for the median sample total</p>
+<ul class="simple">
+<li><p>The GPT has specific instructions on this</p></li>
+</ul>
+</li>
+<li><p>Tells you the correct columns are not available</p>
+<ul class="simple">
+<li><p>The GPT has the column names and definitions from this page</p></li>
+</ul>
+</li>
+</ol>
+<p>The data has a two column index, somtheing the GPT does not always recognize. An issue has been submitted <a class="reference external" href="https://github.com/hammerdirt-analyst/feb_2024/issues/1">issue</a></p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The assistants role is to provide mathematical and graphical representations of the data in response to the researchers request. This often involves aggregating values at different levels, combining attributes and the like.</p>
