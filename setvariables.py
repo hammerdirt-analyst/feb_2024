@@ -3,32 +3,6 @@ import matplotlib as mpl
 import numpy as np
 from matplotlib.colors import ListedColormap
 
-# the formatting for pd.styler
-format_kwargs = dict(precision=2, thousands="'", decimal=",")
-
-# this defines the css rules for the note-book table displays
-header_row = {'selector': 'th:nth-child(1)', 'props': f'background-color: #FFF; font-size:12px; text-align:left;'}
-even_rows = {"selector": 'tr:nth-child(even)', 'props': f'background-color: rgba(139, 69, 19, 0.08);'}
-odd_rows = {'selector': 'tr:nth-child(odd)', 'props': 'background: #FFF;'}
-table_font = {'selector': 'tr', 'props': 'font-size: 10px;'}
-table_data = {'selector': 'td', 'props': 'padding:4px; font-size:12px;'}
-table_caption = {'selector': 'caption', 'props': 'caption-side: bottom; font-size:1em; text-align: left;'}
-table_css_styles = [even_rows, odd_rows, table_font, header_row, table_data, table_caption]
-
-# a color gradient for heat maps
-# this uses a mix and resamples between 0 and 1
-# change the colors  or substitute a  valid matplotlib colormap
-top = mpl.colormaps['Oranges'].resampled(2000)
-bottom = mpl.colormaps['Greys'].resampled(2000)
-
-newcolors = np.vstack((bottom(np.linspace(0, 1, 2000)),
-                   top(np.linspace(0, 1, 2000))))
-newcmp = ListedColormap(newcolors, name='OrangeBlue')
-
-a_cmap = newcmp(np.arange(newcmp.N))
-a_cmap[:, -1] = np.linspace(0, 1, newcmp.N)
-newcmp = ListedColormap(a_cmap)
-
 # period dates
 period_dates = {
     "mcbp":["2015-11-15", "2017-03-31"],
@@ -57,10 +31,15 @@ street_data = "data/end_process/streets.csv"
 intersection_attributes = "data/end_process/river_intersect_lakes.csv"
 
 # order of aggregation corresponds to place labels and types
+# this sets certain aggregation rules for the data.
+# the value for city is last in the chain and a subset of canton.
+# this means that the city can only have one canto but any numnber of
+# parent boundaries, feature types and feature names.
 geo_h = ['parent_boundary', 'feature_type',  'feature_name', 'canton', 'city']
 
 # the unit total columns. aggregating by these columns will give
 # total value for each unique code identified with loc_date
+# the term loc_date is changed to sample_id when exported to the GPT
 code_result_columns = [
     'loc_date',
     'date',
@@ -72,24 +51,40 @@ code_result_columns = [
     'code'
 ]
 
+# these are the columns that are necessary to do any calculation on the data
+# the slug column is indexed with another dataframe that contains land-cover and land-use
+# information. the slug column is used to join the two dataframes. The loc_date column identifies
+# the unique survey. The date column is the date of the survey. The feature_name column is the
+# name of the lake, river or park where the sample was taken. The parent_boundary column is the
+# the name of a designated survey area. In this data we have River Basins and Mountains. The Feature_type
+# column is the type of feature. In this data we have lakes, rivers and parks. The city column is the
+# name of the city where the sample was taken. The canton column is the name of the canton where the
+# sample was taken. The pcs_m column is the number of pieces of litter per meter. The quantity column
+# is the total number of pieces of litter found in the sample. The code column is the unique code
+# for each type of litter.
 work_columns = ['slug', 'loc_date', 'date',
                 'feature_name', 'parent_boundary',
-                'city','canton', 'pcs_m', 'quantity','code', 'feature_type']
+                'city', 'canton', 'pcs_m', 'quantity','code', 'feature_type']
 
-
-agg_groups = {
-    "quantity":"sum",
-    "pcs_m": "median"
-}
-
-
-
-
+# these are the columns and methods used to aggregate the data at the sample level
+# the sample level is the lowest level of aggregation. The sample level the collection of all
+# the records that share the same loc_date. The loc_date is the unique identifier for each survey.
 unit_agg = {
     "quantity":"sum",
     "pcs_m": "sum"
 }
 
+# Once the data is aggregated at the sample level, it is aggregated at the feature level. The pcs/m or pcs_m
+# column can no longer be summed. We can only talk about the median, average or distribution of the pcs/m for the
+# samples contained in each feature. The quantity column can still be summed. The median is used for reporting
+# purposes. The median is less sensitive to outliers than the average. The median is also more intuitive than the
+# average.
+agg_groups = {
+    "quantity":"sum",
+    "pcs_m": "median"
+}
+# the map layers and attribute tables for the topographical features are in german.
+# the translations have been added to the language maps.
 land_cover_en = {
     'undefined': 'Undefined',
     'Siedl': 'Settlement',
@@ -97,6 +92,76 @@ land_cover_en = {
     'Reben': 'Vines',
     'Obstanlage': 'Orchard'
 }
+
+
+# there are different subgroups of land use. The subgroups are defined by the map layers and the experts in the domain.
+# by default we have combined all the subgroups into one vector. However the functions defined in the LandUse class can
+# can be used. The english and french translations for these terms are in the language maps.
+lu_non_tech = {'places': ['Friedhof', 'Hitorisches Areal', 'Schrebergartenareal', 'Oeffentliches Parkareal', 'Messeareal', 'Klosterareal',  'Wald nicht bestockt', 'Baumschule']}
+
+# waste-water-treatment, antennaes, municipal maintenance sights
+lu_technical = {'technical':['Kehrichtverbrennungsareal', 'Deponieareal', 'Deponieareal', 'Abwasserreinigungsareal','Unterwerkareal', 'Antennenareal', 'Kraftwerkareal', 'Kiesabbauareal', 'Steinbruchareal',  'Lehmabbauareal']}
+
+# services, hospitals, schools, military
+lu_services = {'services': ['Massnahmenvollzugsanstaltsareal', 'Schul- und Hochschulareal', 'Spitalareal', 'Historisches Areal', 'Truppenuebungsplatz']}
+
+# combined land use
+lu_combined = {'land_use':[*list(lu_non_tech.keys()), *list(lu_technical.keys()), *list(lu_services.keys())]}
+
+# all land use
+lu_groups = [lu_non_tech,lu_technical, lu_services, lu_combined]
+
+# the streets map layers also contain many subgroups. The subgroups are defined by the map layers and the experts
+# in the domain. By default we have combined all the subgroups into one vector. However the functions defined in the
+# LandUse class can be used. The english and french translations for these terms are in the language maps.
+
+
+# residential streets, local traffic
+str_surface = {'surface streets':['NebenStr3', 'NebenStr6']}
+# pedestrian and bike paths, horse trails
+str_ped_br = {'pedestrian': ['Fahrstraes', 'Fussweg']}
+# main streets, highways, ramps
+str_main = {'principal': [ 'HauptStrAB6', 'VerbindStr4','VerbindStr6', 'HauptStrAB4', 'NebenStr6']}
+# highways
+str_auto = {'highways': ['Autobahn', 'Autostr', 'Autob_Ri']}
+# combined streets
+str_combined = {'streets':['surface streets', 'pedestrian', 'principal', 'highways']}
+# all streets
+street_groups = [str_surface, str_ped_br, str_main, str_auto, str_combined]
+
+# the formatting for pd.styler
+format_kwargs = dict(precision=2, thousands="'", decimal=",")
+
+# this defines the css rules for the note-book table displays
+header_row = {'selector': 'th:nth-child(1)', 'props': f'background-color: #FFF; font-size:12px; text-align:left;'}
+even_rows = {"selector": 'tr:nth-child(even)', 'props': f'background-color: rgba(139, 69, 19, 0.08);'}
+odd_rows = {'selector': 'tr:nth-child(odd)', 'props': 'background: #FFF;'}
+table_font = {'selector': 'tr', 'props': 'font-size: 10px;'}
+table_data = {'selector': 'td', 'props': 'padding:4px; font-size:12px;'}
+table_caption = {'selector': 'caption', 'props': 'caption-side: bottom; font-size:1em; text-align: left;'}
+table_css_styles = [even_rows, odd_rows, table_font, header_row, table_data, table_caption]
+
+# a color gradient for heat maps
+# this uses a mix and resamples between 0 and 1
+# change the colors  or substitute a  valid matplotlib colormap
+top = mpl.colormaps['Oranges'].resampled(2000)
+bottom = mpl.colormaps['Greys'].resampled(2000)
+
+newcolors = np.vstack((bottom(np.linspace(0, 1, 2000)),
+                   top(np.linspace(0, 1, 2000))))
+newcmp = ListedColormap(newcolors, name='OrangeBlue')
+
+a_cmap = newcmp(np.arange(newcmp.N))
+a_cmap[:, -1] = np.linspace(0, 1, newcmp.N)
+
+# hour color map should be type matplotlib.colors.ListedColormap
+newcmp = ListedColormap(a_cmap)
+
+
+
+
+
+
 
 # land_use_fr = {
 #     'Baumschule': 'Pépinière',
@@ -146,23 +211,7 @@ land_cover_en = {
 #     'Lehmabbauareal': 'Clay Extraction Area'
 # }
 
-# land_uses_grouped:
-# outdoor non technical use:
-lu_non_tech = {'places': ['Friedhof', 'Hitorisches Areal', 'Schrebergartenareal', 'Oeffentliches Parkareal', 'Messeareal', 'Klosterareal',  'Wald nicht bestockt', 'Baumschule']}
 
-# technical-extraction-incineration
-# lu_extraction = {'mining': ['Kiesabbauareal', 'Steinbruchareal',  'Lehmabbauareal']}
-
-# waste-water-treatment-powere
-lu_technical = {'technical':['Kehrichtverbrennungsareal', 'Deponieareal', 'Deponieareal', 'Abwasserreinigungsareal','Unterwerkareal', 'Antennenareal', 'Kraftwerkareal', 'Kiesabbauareal', 'Steinbruchareal',  'Lehmabbauareal']}
-
-# services:
-lu_services = {'services': ['Massnahmenvollzugsanstaltsareal', 'Schul- und Hochschulareal', 'Spitalareal', 'Historisches Areal', 'Truppenuebungsplatz']}
-
-#combined:
-lu_combined = {'land_use':[*list(lu_non_tech.keys()), *list(lu_technical.keys()), *list(lu_services.keys())]}
-
-lu_groups = [lu_non_tech,lu_technical, lu_services, lu_combined]
 
 # streets_fr = {
 #     'Autostr': 'autoroute',
