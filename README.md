@@ -12,13 +12,6 @@ Interested contributors can check the repo: https://github.com/hammerdirt-analys
 
 ### The litter assistant
 
-```{image} resources/hammerdirt.png
-:alt: bob
-:class: bg-primary mb-1
-:width: 400px
-:align: center
-```
-
 The assistants function is to assist the researcher in placing the current litter survey results within the context of their own projects. This includes conducting analysis that is not considered in the federal report. Another example is defining reports on administrative boundaries that are not considered in the federal report.
 
 The _checking the assistant_ section is where users can check the data and methods of the assistant.
