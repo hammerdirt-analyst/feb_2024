@@ -4,17 +4,6 @@ import setvariables as conf_
 from typing import List, Dict, Union, Tuple, Callable
 from matplotlib.colors import ListedColormap
 
-
-
-# def convert_pixel_to_cm(file_name: str = None) -> ():
-#     im = PILImage.open(file_name)
-#     width, height = im.size
-#     dpi = im.info.get("dpi", (72, 72))
-#     width_cm = width / dpi[0] * 2.54
-#     height_cm = height / dpi[1] * 2.54
-#
-#     return width_cm, height_cm
-
 def use_gfrags_gfoams_gcaps(data, codes,columns=["Gfoams", "Gfrags", "Gcaps"]):
     for col in columns:
         change = codes.loc[codes.parent_code == col].index
@@ -30,15 +19,12 @@ def combine_survey_files(list_of_files):
         files.append(pd.read_csv(afile))
     return pd.concat(files)
 
-
 def slice_data_by_date(data: pd.DataFrame, start: str, end: str):
     mask = (data.date >= start) & (data.date <= end)
     return data[mask]
 
-
 def capitalize_index(x):
     return x.title()
-
 
 def aggregate_dataframe(df: pd.DataFrame,
                         groupby_columns: List[str],
@@ -111,8 +97,6 @@ def get_top_x_records_with_max_quantity(df: pd.DataFrame, quantity_column: str, 
     return top_x_records[[id_column, quantity_column, "%"]]
 
 
-
-
 def count_objects_with_positive_quantity(df: pd.DataFrame, value_column: str = 'quantity',
                                          object_column: str = 'code') -> Dict[str, int]:
     """
@@ -124,22 +108,16 @@ def count_objects_with_positive_quantity(df: pd.DataFrame, value_column: str = '
         object_column (str): The column label of the objects being counted.
 
     Returns:
-        pd.Series: A Series with the count of positive quantity occurrences for each object.
+        pd.Series: A Series with the rate of the x>0 / n(x) for each object.
     """
-    # Filter the DataFrame to include rows where quantity is greater than zero
-    positive_quantity_df = df[df[value_column] > 0]
-    no_count_df = df[(df[value_column] == 0)]
-    
-    # Count the occurrences of positive quantities for each object
-    object_counts = positive_quantity_df[object_column].value_counts()
-    failed = object_counts / df.loc_date.nunique()
-    
-    # identify the objects with a zero count
-    no_counts = no_count_df[object_column].value_counts()
-    zeroes = no_counts[~no_counts.index.isin(object_counts.index)]
-    zeroes.loc[:] = 0
-    
-    return pd.concat([failed, zeroes])
+    positive_quantity_counts = df[df[value_column] > 0].groupby(object_column).size()
+   
+    # Ensure every object is represented, including those with zero positive quantities
+    all_objects = df[object_column].unique()
+    aos = pd.Series(index=all_objects, data=0)  # Initialize all objects with zero counts
+    aos.update(positive_quantity_counts)
+    aos = aos/df.loc_date.nunique()
+    return aos
 
 
 def calculate_rate_per_unit(df: pd.DataFrame,
@@ -632,7 +610,7 @@ def report_data(a_start, df, beaches, codes, add_columns: List = None, use_gfrag
         w_d = add_columns_to_work_data(w_d, add_columns)
     
     # this is the data for report
-    w_df = w_d[w_d[top_label[0]].isin([top_label[1]])].copy()
+    w_df = w_d[w_d[top_label[0]].isin([top_label[1]])]
     
     return top_label, a_start['language'], w_df, w_d
 
@@ -643,12 +621,16 @@ geo_h = conf_.geo_h
 def categorize_work_data(df, labels, columns_of_interest: List[str] = geo_h, sample_id: str = 'loc_date'):
     """Categorizes and organizes data from a pandas DataFrame based on specified column labels.
     
-    This function filters the DataFrame based on the given label criteria, then rearranges and summarizes the data according to the specified columns of interest and sample ID. The function dynamically adjusts the summary columns based on the label criteria and provides a unique set of attributes for each category.
+    This function filters the DataFrame based on the given label criteria, then rearranges and summarizes the data
+    according to the specified columns of interest and sample ID. The function dynamically adjusts the summary columns
+    based on the label criteria and provides a unique set of attributes for each category.
     
     Parameters:
     - df (pd.DataFrame): The DataFrame to be categorized.
-    - labels (List): A two-element list where the first element is the column name to filter by and the second element is the value to filter for in that column.
-    - columns_of_interest (List[str], optional): List of column names that are of interest for the summary. Defaults to `geo_h`.
+    - labels (List): A two-element list where the first element is the column name to filter by and the second element
+        is the value to filter for in that column.
+    - columns_of_interest (List[str], optional): List of column names that are of interest for the summary. Defaults to
+        `geo_h`. Geo_h gives the hierarchy of the administrative features.
     - sample_id (str, optional): The column name to be used as the sample identifier. Defaults to 'loc_date'.
     
     Returns:
@@ -726,12 +708,9 @@ def aggregate_boundaries(df: pd.DataFrame,
     """
     Aggregate data from a dataframe by boundaries and groups.
 
-    Aggregates a dataframe in two steps. First, it performs
-    aggregation at the 'unit' level defined by 'unit_columns' and 'unit_agg' to obtain
-    test statistics. Then, it aggregates these 'unit' statistics further at the
-    'boundary' level defined by 'boundary_labels' and 'boundary_columns', and computes
-    the test statistics for each boundary.
-
+    Aggregates a dataframe in two steps. First, it performs aggregation at the 'unit' level defined by 'unit_columns'
+    and 'unit_agg' to obtain totals per sample. Then, it computes the test statistics for the sample totals at the
+    boundary level defined by 'boundary_columns' using the operations defined in group_agg.
     Args:
         df (pd.DataFrame): The input DataFrame containing data to be aggregated.
         groupby_columns (list): List of columns for 'unit' level aggregation.

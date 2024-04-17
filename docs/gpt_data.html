@@ -60,7 +60,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'cumulative_land_use';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'gpt_data';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Cumulative reports" href="cumulative_reports.html" />
@@ -141,7 +141,7 @@ const thebe_selector_output = ".output, .cell_output"
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Models</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data and reporting</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Checking the assistant</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cumulative_reports.html">Cumulative reports</a></li>
@@ -223,7 +223,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/hammerdirt-analyst/feb_2024/issues/new?title=Issue%20on%20page%20%2Fcumulative_land_use.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/hammerdirt-analyst/feb_2024/issues/new?title=Issue%20on%20page%20%2Fgpt_data.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -357,6 +357,9 @@ document.write(`
 <p>The product is a dataframe that is the combination of columns from the <code class="docutils literal notranslate"><span class="pre">ReportClass</span></code> and columns from the <code class="docutils literal notranslate"><span class="pre">LandUseClass</span></code>. The intention is to allow easy access to the magnitude of toprgaphical features within 1 500 m of the observed density for any object in the data.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
+<p><strong>April 17, 2023:</strong> The app that uses the hammerdirtGPT is in demo-form. We have abandoned the intial method of defining the prompt through the api. We are now developing a RAG application. A component of the context for the prompt is the results from users request. With this we combine the references from the federal report and any updated references that can be included.</p>
+<p><strong>Changes to class definitions:</strong> Building a RAG application means that we have to consider both the user visualisation of the report and the consumption of that data for the AI model, data_frame or array for the former, .JSON for the latter. These considerations will have a transformative effect on all the code in this module.</p>
+<p><strong>PREVIOUS</strong></p>
 <p>November 20, 2023: There is a known issue we are working on now. Remind the assistant to follow intsructions. Specifically in the following cases:</p>
 <ol class="arabic simple">
 <li><p>Always getting a value of zero for the median sample total</p>
@@ -478,109 +481,109 @@ document.write(`
   </thead>
   <tbody>
     <tr>
+      <th>0</th>
+      <td>aabach</td>
+      <td>('aabach', '2020-10-22')</td>
+      <td>2020-10-22</td>
+      <td>zurichsee</td>
+      <td>linth</td>
+      <td>Schmerikon</td>
+      <td>St. Gallen</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>G1</td>
+      <td>l</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.204522</td>
+      <td>0.535456</td>
+      <td>0.561892</td>
+      <td>0.018241</td>
+      <td>0.207248</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>aabach</td>
+      <td>('aabach', '2020-10-22')</td>
+      <td>2020-10-22</td>
+      <td>zurichsee</td>
+      <td>linth</td>
+      <td>Schmerikon</td>
+      <td>St. Gallen</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>G10</td>
+      <td>l</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.204522</td>
+      <td>0.535456</td>
+      <td>0.561892</td>
+      <td>0.018241</td>
+      <td>0.207248</td>
+    </tr>
+    <tr>
       <th>2</th>
-      <td>ligerz-strand</td>
-      <td>('ligerz-strand', '2019-07-19')</td>
-      <td>2019-07-19</td>
-      <td>bielersee</td>
-      <td>aare</td>
-      <td>Ligerz</td>
-      <td>Bern</td>
+      <td>aabach</td>
+      <td>('aabach', '2020-10-22')</td>
+      <td>2020-10-22</td>
+      <td>zurichsee</td>
+      <td>linth</td>
+      <td>Schmerikon</td>
+      <td>St. Gallen</td>
       <td>0.0</td>
       <td>0</td>
-      <td>G1</td>
+      <td>G100</td>
       <td>l</td>
       <td>0.0</td>
-      <td>0.398747</td>
-      <td>0.119219</td>
-      <td>0.442836</td>
-      <td>0.500695</td>
-      <td>0.006679</td>
-      <td>0.186289</td>
+      <td>0.0</td>
+      <td>0.204522</td>
+      <td>0.535456</td>
+      <td>0.561892</td>
+      <td>0.018241</td>
+      <td>0.207248</td>
     </tr>
     <tr>
-      <th>25</th>
-      <td>ligerz-strand</td>
-      <td>('ligerz-strand', '2020-07-29')</td>
-      <td>2020-07-29</td>
-      <td>bielersee</td>
-      <td>aare</td>
-      <td>Ligerz</td>
-      <td>Bern</td>
+      <th>3</th>
+      <td>aabach</td>
+      <td>('aabach', '2020-10-22')</td>
+      <td>2020-10-22</td>
+      <td>zurichsee</td>
+      <td>linth</td>
+      <td>Schmerikon</td>
+      <td>St. Gallen</td>
       <td>0.0</td>
       <td>0</td>
-      <td>G1</td>
+      <td>G101</td>
       <td>l</td>
       <td>0.0</td>
-      <td>0.398747</td>
-      <td>0.119219</td>
-      <td>0.442836</td>
-      <td>0.500695</td>
-      <td>0.006679</td>
-      <td>0.186289</td>
+      <td>0.0</td>
+      <td>0.204522</td>
+      <td>0.535456</td>
+      <td>0.561892</td>
+      <td>0.018241</td>
+      <td>0.207248</td>
     </tr>
     <tr>
-      <th>37</th>
-      <td>ligerz-strand</td>
-      <td>('ligerz-strand', '2020-09-09')</td>
-      <td>2020-09-09</td>
-      <td>bielersee</td>
-      <td>aare</td>
-      <td>Ligerz</td>
-      <td>Bern</td>
+      <th>4</th>
+      <td>aabach</td>
+      <td>('aabach', '2020-10-22')</td>
+      <td>2020-10-22</td>
+      <td>zurichsee</td>
+      <td>linth</td>
+      <td>Schmerikon</td>
+      <td>St. Gallen</td>
       <td>0.0</td>
       <td>0</td>
-      <td>G1</td>
+      <td>G102</td>
       <td>l</td>
       <td>0.0</td>
-      <td>0.398747</td>
-      <td>0.119219</td>
-      <td>0.442836</td>
-      <td>0.500695</td>
-      <td>0.006679</td>
-      <td>0.186289</td>
-    </tr>
-    <tr>
-      <th>1247</th>
-      <td>ligerz-strand</td>
-      <td>('ligerz-strand', '2019-07-19')</td>
-      <td>2019-07-19</td>
-      <td>bielersee</td>
-      <td>aare</td>
-      <td>Ligerz</td>
-      <td>Bern</td>
       <td>0.0</td>
-      <td>0</td>
-      <td>G10</td>
-      <td>l</td>
-      <td>0.0</td>
-      <td>0.398747</td>
-      <td>0.119219</td>
-      <td>0.442836</td>
-      <td>0.500695</td>
-      <td>0.006679</td>
-      <td>0.186289</td>
-    </tr>
-    <tr>
-      <th>1278</th>
-      <td>ligerz-strand</td>
-      <td>('ligerz-strand', '2020-09-09')</td>
-      <td>2020-09-09</td>
-      <td>bielersee</td>
-      <td>aare</td>
-      <td>Ligerz</td>
-      <td>Bern</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>G10</td>
-      <td>l</td>
-      <td>0.0</td>
-      <td>0.398747</td>
-      <td>0.119219</td>
-      <td>0.442836</td>
-      <td>0.500695</td>
-      <td>0.006679</td>
-      <td>0.186289</td>
+      <td>0.204522</td>
+      <td>0.535456</td>
+      <td>0.561892</td>
+      <td>0.018241</td>
+      <td>0.207248</td>
     </tr>
   </tbody>
 </table>
@@ -599,6 +602,250 @@ document.write(`
 </pre></div>
 </div>
 <div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gptdfx</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sample_id</th>
+      <th>location</th>
+      <th>date</th>
+      <th>feature_name</th>
+      <th>parent_boundary</th>
+      <th>city</th>
+      <th>canton</th>
+      <th>feature_type</th>
+      <th>orchards</th>
+      <th>vineyards</th>
+      <th>...</th>
+      <th>forest</th>
+      <th>undefined</th>
+      <th>public services</th>
+      <th>streets</th>
+      <th>code</th>
+      <th>pcs/m</th>
+      <th>quantity</th>
+      <th>fr</th>
+      <th>en</th>
+      <th>de</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>('aabach', '2020-10-22')</td>
+      <td>aabach</td>
+      <td>2020-10-22</td>
+      <td>zurichsee</td>
+      <td>linth</td>
+      <td>Schmerikon</td>
+      <td>St. Gallen</td>
+      <td>l</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.535456</td>
+      <td>0.561892</td>
+      <td>0.018241</td>
+      <td>0.207248</td>
+      <td>G1</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>Anneaux pour six packs</td>
+      <td>Six pack rings</td>
+      <td>Sixpack-Ringe</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>('aabach', '2020-10-22')</td>
+      <td>aabach</td>
+      <td>2020-10-22</td>
+      <td>zurichsee</td>
+      <td>linth</td>
+      <td>Schmerikon</td>
+      <td>St. Gallen</td>
+      <td>l</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.535456</td>
+      <td>0.561892</td>
+      <td>0.018241</td>
+      <td>0.207248</td>
+      <td>G10</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>Emballage fast food</td>
+      <td>Food containers single use foamed or plastic</td>
+      <td>Lebensmittelbehälter zum einmaligen Gebrauch a...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>('aabach', '2020-10-22')</td>
+      <td>aabach</td>
+      <td>2020-10-22</td>
+      <td>zurichsee</td>
+      <td>linth</td>
+      <td>Schmerikon</td>
+      <td>St. Gallen</td>
+      <td>l</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.535456</td>
+      <td>0.561892</td>
+      <td>0.018241</td>
+      <td>0.207248</td>
+      <td>G100</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>Médical conteneurs/tubes/ emballages</td>
+      <td>Medical; containers/tubes/ packaging</td>
+      <td>Medizin; Behälter/Röhrchen/Verpackungen</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>('aabach', '2020-10-22')</td>
+      <td>aabach</td>
+      <td>2020-10-22</td>
+      <td>zurichsee</td>
+      <td>linth</td>
+      <td>Schmerikon</td>
+      <td>St. Gallen</td>
+      <td>l</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.535456</td>
+      <td>0.561892</td>
+      <td>0.018241</td>
+      <td>0.207248</td>
+      <td>G101</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>Sac pour déjections canines</td>
+      <td>Dog feces bag</td>
+      <td>Robidog Hundekot-Säcklein, andere Hundekotsäck...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>('aabach', '2020-10-22')</td>
+      <td>aabach</td>
+      <td>2020-10-22</td>
+      <td>zurichsee</td>
+      <td>linth</td>
+      <td>Schmerikon</td>
+      <td>St. Gallen</td>
+      <td>l</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.535456</td>
+      <td>0.561892</td>
+      <td>0.018241</td>
+      <td>0.207248</td>
+      <td>G102</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>Tongs</td>
+      <td>Flip-flops</td>
+      <td>Flip-Flops</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 21 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gptdfx</span><span class="p">[</span><span class="n">gptdfx</span><span class="o">.</span><span class="n">code</span> <span class="o">==</span> <span class="s1">&#39;G79&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sample_id</th>
+      <th>location</th>
+      <th>date</th>
+      <th>feature_name</th>
+      <th>parent_boundary</th>
+      <th>city</th>
+      <th>canton</th>
+      <th>feature_type</th>
+      <th>orchards</th>
+      <th>vineyards</th>
+      <th>...</th>
+      <th>forest</th>
+      <th>undefined</th>
+      <th>public services</th>
+      <th>streets</th>
+      <th>code</th>
+      <th>pcs/m</th>
+      <th>quantity</th>
+      <th>fr</th>
+      <th>en</th>
+      <th>de</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+<p>0 rows × 21 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gptdfx</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;sample_id&#39;, &#39;location&#39;, &#39;date&#39;, &#39;feature_name&#39;, &#39;parent_boundary&#39;,
+       &#39;city&#39;, &#39;canton&#39;, &#39;feature_type&#39;, &#39;orchards&#39;, &#39;vineyards&#39;, &#39;buildings&#39;,
+       &#39;forest&#39;, &#39;undefined&#39;, &#39;public services&#39;, &#39;streets&#39;, &#39;code&#39;, &#39;pcs/m&#39;,
+       &#39;quantity&#39;, &#39;fr&#39;, &#39;en&#39;, &#39;de&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>

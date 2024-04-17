@@ -18,6 +18,7 @@ survey_files = [
     "data/end_process/slr.csv",
 ]
 
+# two column csv files that contain the translations for the labels in english
 language_maps = {
     'fr':'data/end_process/fr_labels.csv',
     'de': 'data/end_process/de_labels.csv'

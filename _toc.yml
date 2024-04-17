@@ -4,9 +4,9 @@
 format: jb-book
 root: titlepage
 parts:
-  - caption: Models
+  - caption: Data and reporting
     chapters:
-    - file: cumulative_land_use
+    - file: gpt_data
     - file: cumulative_reports
     - file: a_report_class
     - file: landuse_class
