@@ -214,7 +214,7 @@ untertenzen,undefined,land-cover,2113947,3436553,0.615
 urnaesch_urnaesch_meierr,undefined,land-cover,5137973,7065000,0.727
 val-calanca,undefined,land-cover,2774602,7065000,0.393
 verbier,undefined,land-cover,3619843,7065000,0.512
-versoix,undefined,land-cover,525221,3730114,0.141
+port-choiseul,undefined,land-cover,525221,3730114,0.141
 veveyse,undefined,land-cover,47043,3126368,0.015
 veysonnaz,undefined,land-cover,3400559,7065000,0.481
 via-brunari-spiaggia,undefined,land-cover,1160986,7065000,0.164
@@ -725,9 +725,9 @@ unterdsee_ermatingen_brunkem,Siedl,land-cover,1565191,4677451,0.335
 unterdsee_ermatingen_brunkem,Wald,land-cover,258200,4677451,0.055
 untertenzen,Siedl,land-cover,816008,3436553,0.237
 untertenzen,Wald,land-cover,506598,3436553,0.147
-versoix,Obstanlage,land-cover,38795,3730114,0.01
-versoix,Siedl,land-cover,3045943,3730114,0.817
-versoix,Wald,land-cover,120155,3730114,0.032
+port-choiseul,Obstanlage,land-cover,38795,3730114,0.01
+port-choiseul,Siedl,land-cover,3045943,3730114,0.817
+port-choiseul,Wald,land-cover,120155,3730114,0.032
 veveyse,Reben,land-cover,83954,3126368,0.027
 veveyse,Siedl,land-cover,2995371,3126368,0.958
 vidy,Siedl,land-cover,3565388,3683398,0.968

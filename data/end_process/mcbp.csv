@@ -6799,188 +6799,188 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('baye-de-montreux-g', '2015-11-23')",2015-11-23,lac-leman,baye-de-montreux-g,G56,0.0,0,rhone,57,recreation,Montreux,l
 "('baye-de-montreux-g', '2015-11-23')",2015-11-23,lac-leman,baye-de-montreux-g,G88,0.0,0,rhone,57,personal items,Montreux,l
 "('baye-de-montreux-g', '2015-11-23')",2015-11-23,lac-leman,baye-de-montreux-g,G205,0.0,0,rhone,57,unclassified,Montreux,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G48,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G170,0.0,0,rhone,165,agriculture,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G709,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G204,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G705,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G919,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G93,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G78,0.0,0,rhone,165,plastic pieces,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G122,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G915,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G146,0.0,0,rhone,165,packaging non food,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G922,0.0,0,rhone,165,packaging non food,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G208,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G941,0.0,0,rhone,165,packaging non food,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G74,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G142,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G921,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G198,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G931,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G916,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G936,0.0,0,rhone,165,agriculture,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G703,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G707,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G139,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G152,0.0,0,rhone,165,tobacco,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G75,0.0,0,rhone,165,plastic pieces,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G20,0.0,0,rhone,165,packaging non food,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G905,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G704,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G711,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G934,0.0,0,rhone,165,agriculture,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G158,0.0,0,rhone,165,packaging non food,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G210,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G926,0.0,0,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G923,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G702,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G706,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G712,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G159,0.0,0,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G901,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G710,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G708,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G175,0.0,0,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G171,0.0,0,rhone,165,agriculture,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G8,0.0,0,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G943,0.0,0,rhone,165,agriculture,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G155,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G3,0.0,0,rhone,165,packaging non food,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G929,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G194,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G82,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G134,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G939,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G149,0.0,0,rhone,165,packaging non food,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G201,0.0,0,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G938,0.0,0,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G137,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G213,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G76,0.0,0,rhone,165,plastic pieces,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G98,0.0,0,rhone,165,waste water,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G935,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G135,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G144,0.0,0,rhone,165,waste water,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G154,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G904,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G51,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G81,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G940,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G157,0.0,0,rhone,165,packaging non food,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G182,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G73,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G148,0.0,0,rhone,165,packaging non food,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G933,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G914,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G147,0.0,0,rhone,165,packaging non food,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G203,0.0,0,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G38,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G937,0.0,0,rhone,165,agriculture,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G193,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G918,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G13,0.0,0,rhone,165,agriculture,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G930,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G83,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G106,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G103,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G112,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G99,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G97,0.0,0,rhone,165,waste water,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G9,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G151,0.0,0,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G179,0.0,0,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G62,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G181,0.0,0,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G713,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G108,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G107,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G173,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G942,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G43,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G928,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G128,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G908,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G117,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G64,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G907,0.0,0,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G917,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G2,0.0,0,rhone,165,packaging non food,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G900,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G202,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G115,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G906,0.0,0,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G197,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G186,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G167,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G136,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G903,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G132,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G927,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G36,0.0,0,rhone,165,agriculture,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G902,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G129,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G6,0.0,0,rhone,165,packaging non food,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G53,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G92,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G199,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G71,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G133,0.0,0,rhone,165,waste water,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G138,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G190,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G59,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G39,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G68,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G14,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G183,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G61,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G105,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G113,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G104,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G55,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G109,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G123,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G150,0.0,0,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G114,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G140,0.0,0,rhone,165,agriculture,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G195,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G118,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G176,0.0,0,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G925,0.0,0,rhone,165,packaging non food,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G17,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G116,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G63,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G913,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G19,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G944,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G111,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G945,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G60,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G119,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G52,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G172,0.0,0,rhone,165,agriculture,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G143,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G41,0.0,0,rhone,165,agriculture,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G188,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G162,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G40,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G999,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G141,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G207,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G174,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G160,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G84,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G94,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G196,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G185,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G932,0.0,0,rhone,165,waste water,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G214,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G1,0.0,0,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G166,0.0,0,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G180,0.0,0,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G56,0.0,0,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G88,0.0,0,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G205,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G48,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G170,0.0,0,rhone,165,agriculture,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G709,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G204,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G705,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G919,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G93,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G78,0.0,0,rhone,165,plastic pieces,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G122,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G915,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G146,0.0,0,rhone,165,packaging non food,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G922,0.0,0,rhone,165,packaging non food,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G208,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G941,0.0,0,rhone,165,packaging non food,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G74,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G142,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G921,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G198,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G931,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G916,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G936,0.0,0,rhone,165,agriculture,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G703,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G707,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G139,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G152,0.0,0,rhone,165,tobacco,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G75,0.0,0,rhone,165,plastic pieces,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G20,0.0,0,rhone,165,packaging non food,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G905,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G704,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G711,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G934,0.0,0,rhone,165,agriculture,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G158,0.0,0,rhone,165,packaging non food,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G210,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G926,0.0,0,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G923,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G702,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G706,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G712,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G159,0.0,0,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G901,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G710,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G708,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G175,0.0,0,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G171,0.0,0,rhone,165,agriculture,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G8,0.0,0,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G943,0.0,0,rhone,165,agriculture,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G155,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G3,0.0,0,rhone,165,packaging non food,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G929,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G194,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G82,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G134,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G939,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G149,0.0,0,rhone,165,packaging non food,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G201,0.0,0,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G938,0.0,0,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G137,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G213,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G76,0.0,0,rhone,165,plastic pieces,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G98,0.0,0,rhone,165,waste water,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G935,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G135,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G144,0.0,0,rhone,165,waste water,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G154,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G904,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G51,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G81,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G940,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G157,0.0,0,rhone,165,packaging non food,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G182,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G73,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G148,0.0,0,rhone,165,packaging non food,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G933,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G914,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G147,0.0,0,rhone,165,packaging non food,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G203,0.0,0,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G38,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G937,0.0,0,rhone,165,agriculture,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G193,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G918,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G13,0.0,0,rhone,165,agriculture,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G930,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G83,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G106,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G103,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G112,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G99,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G97,0.0,0,rhone,165,waste water,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G9,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G151,0.0,0,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G179,0.0,0,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G62,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G181,0.0,0,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G713,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G108,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G107,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G173,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G942,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G43,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G928,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G128,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G908,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G117,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G64,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G907,0.0,0,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G917,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G2,0.0,0,rhone,165,packaging non food,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G900,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G202,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G115,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G906,0.0,0,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G197,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G186,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G167,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G136,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G903,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G132,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G927,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G36,0.0,0,rhone,165,agriculture,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G902,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G129,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G6,0.0,0,rhone,165,packaging non food,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G53,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G92,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G199,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G71,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G133,0.0,0,rhone,165,waste water,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G138,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G190,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G59,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G39,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G68,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G14,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G183,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G61,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G105,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G113,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G104,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G55,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G109,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G123,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G150,0.0,0,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G114,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G140,0.0,0,rhone,165,agriculture,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G195,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G118,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G176,0.0,0,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G925,0.0,0,rhone,165,packaging non food,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G17,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G116,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G63,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G913,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G19,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G944,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G111,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G945,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G60,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G119,0.0,0,rhone,165,micro plastics (< 5mm),Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G52,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G172,0.0,0,rhone,165,agriculture,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G143,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G41,0.0,0,rhone,165,agriculture,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G188,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G162,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G40,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G999,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G141,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G207,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G174,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G160,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G84,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G94,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G196,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G185,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G932,0.0,0,rhone,165,waste water,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G214,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G1,0.0,0,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G166,0.0,0,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G180,0.0,0,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G56,0.0,0,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G88,0.0,0,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G205,0.0,0,rhone,165,unclassified,Versoix,l
 "('parc-des-pierrettes', '2016-10-13')",2016-10-13,lac-leman,parc-des-pierrettes,G48,0.0,0,rhone,49,recreation,Saint-Sulpice (VD),l
 "('parc-des-pierrettes', '2016-10-13')",2016-10-13,lac-leman,parc-des-pierrettes,G170,0.0,0,rhone,49,agriculture,Saint-Sulpice (VD),l
 "('parc-des-pierrettes', '2016-10-13')",2016-10-13,lac-leman,parc-des-pierrettes,G709,0.0,0,rhone,49,recreation,Saint-Sulpice (VD),l
@@ -20413,60 +20413,60 @@ loc_date,date,feature_name,slug,code,pcs_m,quantity,parent_boundary,length,group
 "('baye-de-montreux-g', '2015-11-23')",2015-11-23,lac-leman,baye-de-montreux-g,G31,0.1,6,rhone,57,food and drink,Montreux,l
 "('baye-de-montreux-g', '2015-11-23')",2015-11-23,lac-leman,baye-de-montreux-g,G172,0.1,6,rhone,57,agriculture,Montreux,l
 "('baye-de-montreux-g', '2015-11-23')",2015-11-23,lac-leman,baye-de-montreux-g,G34,0.03,2,rhone,57,food and drink,Montreux,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G101,0.01,1,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G200,0.1,16,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G35,0.12,20,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G90,0.01,2,rhone,165,agriculture,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G12,0.02,3,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G22,0.12,19,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G49,0.01,1,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G96,0.06,10,rhone,165,waste water,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G126,0.01,2,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G25,0.28,45,rhone,165,tobacco,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G65,0.01,1,rhone,165,agriculture,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G153,0.02,3,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G28,0.02,3,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G7,0.01,1,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G165,0.01,2,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G31,0.14,23,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G80,0.01,2,rhone,165,plastic pieces,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G100,0.02,4,rhone,165,waste water,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G191,0.01,2,rhone,165,agriculture,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G34,0.03,5,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G89,0.35,57,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G11,0.01,1,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G211,0.02,4,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G4,0.02,4,rhone,165,packaging non food,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G95,0.68,111,rhone,165,waste water,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G125,0.12,20,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G24,0.24,39,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G50,0.05,8,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G145,0.01,1,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G27,0.85,138,rhone,165,tobacco,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G67,0.65,106,rhone,165,agriculture,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G161,0.01,1,rhone,165,agriculture,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G30,1.38,225,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G79,1.95,318,rhone,165,plastic pieces,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G10,0.06,9,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G178,0.2,32,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G33,0.14,23,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G87,0.05,8,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G102,0.02,4,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G21,0.28,45,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G37,0.01,1,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G91,0.17,28,rhone,165,waste water,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G124,0.01,2,rhone,165,unclassified,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G23,0.22,36,rhone,165,packaging non food,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G5,0.01,1,rhone,165,packaging non food,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G131,0.01,2,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G26,0.01,2,rhone,165,tobacco,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G66,0.03,5,rhone,165,infrastructure,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G156,0.05,8,rhone,165,packaging non food,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G29,0.01,1,rhone,165,personal items,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G70,0.13,22,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G177,0.06,9,rhone,165,food and drink,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G32,0.13,21,rhone,165,recreation,Versoix,l
-"('versoix', '2016-11-17')",2016-11-17,lac-leman,versoix,G82,0.2,33,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G101,0.01,1,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G200,0.1,16,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G35,0.12,20,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G90,0.01,2,rhone,165,agriculture,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G12,0.02,3,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G22,0.12,19,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G49,0.01,1,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G96,0.06,10,rhone,165,waste water,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G126,0.01,2,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G25,0.28,45,rhone,165,tobacco,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G65,0.01,1,rhone,165,agriculture,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G153,0.02,3,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G28,0.02,3,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G7,0.01,1,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G165,0.01,2,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G31,0.14,23,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G80,0.01,2,rhone,165,plastic pieces,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G100,0.02,4,rhone,165,waste water,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G191,0.01,2,rhone,165,agriculture,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G34,0.03,5,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G89,0.35,57,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G11,0.01,1,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G211,0.02,4,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G4,0.02,4,rhone,165,packaging non food,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G95,0.68,111,rhone,165,waste water,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G125,0.12,20,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G24,0.24,39,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G50,0.05,8,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G145,0.01,1,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G27,0.85,138,rhone,165,tobacco,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G67,0.65,106,rhone,165,agriculture,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G161,0.01,1,rhone,165,agriculture,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G30,1.38,225,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G79,1.95,318,rhone,165,plastic pieces,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G10,0.06,9,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G178,0.2,32,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G33,0.14,23,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G87,0.05,8,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G102,0.02,4,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G21,0.28,45,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G37,0.01,1,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G91,0.17,28,rhone,165,waste water,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G124,0.01,2,rhone,165,unclassified,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G23,0.22,36,rhone,165,packaging non food,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G5,0.01,1,rhone,165,packaging non food,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G131,0.01,2,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G26,0.01,2,rhone,165,tobacco,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G66,0.03,5,rhone,165,infrastructure,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G156,0.05,8,rhone,165,packaging non food,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G29,0.01,1,rhone,165,personal items,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G70,0.13,22,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G177,0.06,9,rhone,165,food and drink,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G32,0.13,21,rhone,165,recreation,Versoix,l
+"('port-choiseul', '2016-11-17')",2016-11-17,lac-leman,port-choiseul,G82,0.2,33,rhone,165,infrastructure,Versoix,l
 "('parc-des-pierrettes', '2016-10-13')",2016-10-13,lac-leman,parc-des-pierrettes,G24,0.06,3,rhone,49,food and drink,Saint-Sulpice (VD),l
 "('parc-des-pierrettes', '2016-10-13')",2016-10-13,lac-leman,parc-des-pierrettes,G87,0.19,9,rhone,49,infrastructure,Saint-Sulpice (VD),l
 "('parc-des-pierrettes', '2016-10-13')",2016-10-13,lac-leman,parc-des-pierrettes,G28,0.02,1,rhone,49,personal items,Saint-Sulpice (VD),l
