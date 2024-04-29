@@ -12,8 +12,8 @@ parts:
     - file: landuse_class
   - caption: Annex
     chapters:
-    - file: testing_data_models
-    - file: landuse_model_next_itteration
+    - file: the_survey_data
+    - file: extracting_topo_data
 
 
 
