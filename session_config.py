@@ -35,12 +35,6 @@ feature_data = dict(
 
 )
 
-
-
-
-
-
-
 # languages
 languages = ['de', 'en', 'fr']
 
@@ -103,6 +97,12 @@ index_label = "sample_id"
 data_directory = 'data/end_process/'
 date_format = "%Y-%m-%d"
 default_data = ['data/end_process/before_2019.csv', 'data/end_process/after_2019.csv']
+
+buildings_services = ['buildings', 'public services']
+new_label = 'buildings_services'
+new_display_label = 'Urbanization'
+combination_method = 'sum'
+default_args = [(buildings_services, new_label, combination_method)]
 
 
 def assign_target_variable(target: str = None) -> str:

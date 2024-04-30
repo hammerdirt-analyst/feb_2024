@@ -1,8 +1,7 @@
-import pandas
 import pandas as pd
 import numpy as np
 
-# import geospatial
+import geospatial
 from session_config import administrative, feature_variables, feature_types
 from session_config import object_of_interest
 from session_config import index_label, location_label, Y, Q
@@ -50,26 +49,6 @@ default_groups = [
 
 
 
-# def combine_feature_labels(df, feature: str, labels_to_combine: list, new_label_name: str) -> pd.DataFrame:
-#     """Combines the feature labels of one series of features. accepts a pd.DataFrame"""
-#     try:
-#         df.loc[df[feature].isin(labels_to_combine), feature] = new_label_name
-#         return df
-#     except Exception as e:
-#         statement = "That combination of variables did not work. See below."
-#         print(f'{statement}\n{e}')
-#
-#     finally:
-#         return df
-#
-#
-# def reduce_dimensionality_observed(df, groups: list) -> pd.DataFrame:
-#     for agroup in groups:
-#         df = combine_feature_labels(df, *agroup)
-#     df.groupby(columns, as_index=False).agg(unit_agg)
-#     return df
-
-
 class SurveyReport:
     
     def __init__(self, dfc):
@@ -101,24 +80,28 @@ class SurveyReport:
                 }
         return result
 
+    @property
     def date_range(self):
         """The date range of the selected results"""
         start = self.df['date'].min()
         end = self.df['date'].max()
         return {'start': start, 'end': end}
-    
+
+
     def inventory(self):
         """Returns the total quantity, median pcs/m, % of total and fail rate for each object code in the report"""
-        tq = self.total_quantity()
+        tq = self.total_quantity
         object_totals = self.df.groupby(object_of_interest).agg(agg_groups)
         object_totals['% of total'] = object_totals[Q]/tq
         
         return object_totals
 
+    @property
     def total_quantity(self):
         """Returns the total quantity of the report"""
         return self.df[Q].sum()
-    
+
+    @property
     def number_of_samples(self):
         """Returns the number of unique sample_ids in the report"""
         return self.df.sample_id.nunique()
@@ -130,9 +113,10 @@ class SurveyReport:
             n_anobject = rates.loc[rates[object_of_interest] == anobject, index_label].values[0]
             rates.loc[rates[object_of_interest] == anobject, ['fails', 'rate']] = [nfails, nfails/n_anobject]
 
-        return rates
+        return rates.set_index('code', drop=True)
 
-    def sample_results(self, df: pandas.DataFrame = None, **kwargs):
+    @property
+    def sample_results(self, df: pd.DataFrame = None, **kwargs):
         """The sample totals for the date range of the selected results"""
 
         if not df:
@@ -140,27 +124,33 @@ class SurveyReport:
         else:
             return collect_sample_totals(df.copy(), **kwargs)
 
+    @property
     def sampling_results_summary(self):
         """The summary of the sample totals"""
 
-        data = self.sample_results()[Y].values
+        data = self.sample_results[Y].values
         qtiles = np.quantile(data, report_quantiles)
-        average = np.mean(data)
-        total = self.inventory()[Q].sum()
-        nsamples = self.number_of_samples()
-        date_range = self.date_range()
 
-        return {'total': total, 'nsamples': nsamples, 'average': average, 'quantiles': qtiles, 'start': date_range['start'], 'end': date_range['end']}
+        asummary = {
+            'total':self.total_quantity,
+            'nsamples': self.number_of_samples,
+            'average': np.mean(data),
+            'quantiles': qtiles,
+            'start': self.date_range['start'],
+            'end': self.date_range['end']
+        }
+
+        return asummary
 
     def object_summary(self):
         qtys = self.inventory()
         return qtys.merge(self.fail_rate(), right_on=object_of_interest, left_on=object_of_interest)
     
-    # def sampling_conditions(self):
-    #     """Returns the land use profile of the data"""
-    #
-    #     locations = self.df[location_label].unique()
-    #
-    #     topo_data = geospatial.collect_topo_data(locations=locations)
-    #     return topo_data
+    def sampling_conditions(self):
+        """Returns the land use profile of the data"""
+
+        locations = self.df[location_label].unique()
+
+        topo_data = geospatial.collect_topo_data(locations=locations)
+        return topo_data
 
