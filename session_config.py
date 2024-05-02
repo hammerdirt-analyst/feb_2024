@@ -3,6 +3,7 @@ Parameters for the session configuration
 
 """
 import pandas as pd
+from pathlib import Path
 
 # labels and groups for selection
 administrative = ['location', 'city', 'canton', 'parent_boundary']
@@ -97,7 +98,6 @@ index_label = "sample_id"
 data_directory = 'data/end_process/'
 date_format = "%Y-%m-%d"
 default_data = ['data/end_process/before_2019.csv', 'data/end_process/after_2019.csv']
-
 buildings_services = ['buildings', 'public services']
 new_label = 'buildings_services'
 new_display_label = 'Urbanization'
@@ -111,8 +111,6 @@ def assign_target_variable(target: str = None) -> str:
     if target not in [Y, 'pcs/m2']:
         raise ValueError('target must be either pcs/m or pcs/m2')
     return target
-
-
 
 
 def define_data_fields(survey_type: str = None, reporting_units: str = None) -> []:
@@ -163,23 +161,32 @@ def collect_survey_data(connection: str = None, afunc: callable = None, columns:
                 return datas
             else:
                 raise ValueError(f'The columns in the dataframe : {datas.columns} do not match the supplied columns {columns}')
+#
+#
+# def select_features(df, column, labels):
+#     feature_mask = df[column].isin(labels)
+#     return feature_mask
+#
+# def select_dates(df, start_end):
+#     data_mask = (df['date'] >= start_end[0]) & (df['date'] <= start_end[1])
+#     return data_mask
+# def filter_data(df: pd.DataFrame, date_mask: pd.Series = None, feature_mask: pd.Series = None) -> pd.DataFrame:
+#     if date_mask is None and feature_mask is None:
+#         return df
+#     elif date_mask is None and feature_mask is not None:
+#         mask = feature_mask
+#     elif date_mask is not None and feature_mask is None:
+#         mask = date_mask
+#     else:
+#         mask = date_mask & feature_mask
+#
+#     return df[mask]
 
-
-def select_features(df, column, labels):
-    feature_mask = df[column].isin(labels)
-    return feature_mask
-
-def select_dates(df, start_end):
-    data_mask = (df['date'] >= start_end[0]) & (df['date'] <= start_end[1])
-    return data_mask
-def filter_data(df: pd.DataFrame, date_mask: pd.Series = None, feature_mask: pd.Series = None) -> pd.DataFrame:
-    if date_mask is None and feature_mask is None:
-        return df
-    elif date_mask is None and feature_mask is not None:
-        mask = feature_mask
-    elif date_mask is not None and feature_mask is None:
-        mask = date_mask
-    else:
-        mask = date_mask & feature_mask
-
-    return df[mask]
+def unpack_with_pandas(path_variables: tuple) -> pd.DataFrame:
+    """Utility function to put csv to pd.DataFrame"""
+    try:
+        d = pd.read_csv(Path(*path_variables))
+        return d
+    except Exception as e:
+        statement = "Either the path variables did not work or the file is not readable, see below."
+        print(f'{statement}\n{e}')

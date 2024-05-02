@@ -1,22 +1,21 @@
 import pandas as pd
 import numpy as np
 
-import geospatial
-from session_config import administrative, feature_variables, feature_types
+from session_config import administrative, feature_types
 from session_config import object_of_interest
 from session_config import index_label, location_label, Y, Q
 from session_config import unit_agg, agg_groups
 from session_config import report_quantiles
 
 
-def select_features(df, column, labels):
-    mask = df[column].isin(labels)
-    return df[mask]
-
-
-def select_dates(df, start_end):
-    mask = (df['date'] >= start_end[0]) & (df['date'] <= start_end[1])
-    return df[mask]
+# def select_features(df, column, labels):
+#     mask = df[column].isin(labels)
+#     return df[mask]
+#
+#
+# def select_dates(df, start_end):
+#     mask = (df['date'] >= start_end[0]) & (df['date'] <= start_end[1])
+#     return df[mask]
 
 
 def collect_sample_totals(df, sample_id: str = 'sample_id', location_label: str = location_label,
@@ -28,10 +27,10 @@ def collect_sample_totals(df, sample_id: str = 'sample_id', location_label: str 
     else:
         return df.groupby([sample_id, location_label, 'date', *info_columns], as_index=False).agg(afunc)
 
-
-def collect_aggregate_values(df, column: str = None, funcs: {} = agg_groups):
-    
-    return df.groupby(column).agg(funcs)
+#
+# def collect_aggregate_values(df, column: str = None, funcs: {} = agg_groups):
+#
+#     return df.groupby(column).agg(funcs)
 
 
 # # combining feature labels
@@ -146,11 +145,4 @@ class SurveyReport:
         qtys = self.inventory()
         return qtys.merge(self.fail_rate(), right_on=object_of_interest, left_on=object_of_interest)
     
-    def sampling_conditions(self):
-        """Returns the land use profile of the data"""
-
-        locations = self.df[location_label].unique()
-
-        topo_data = geospatial.collect_topo_data(locations=locations)
-        return topo_data
 

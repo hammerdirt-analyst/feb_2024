@@ -28,12 +28,14 @@ words_land_use_litter_rates = {
 }
 
 column_labels_land_use = {
-    1: '> 0 - 20%',
+    1: '0 - 20%',
     2: '20 - 40%',
     3: '40 - 60%',
     4: '60 - 80%',
     5: '80 - 100%'
 }
+
+
 
 
 def select_x_and_y(df_target, features, x_value: str = 'scale'):
@@ -46,10 +48,10 @@ def select_x_and_y(df_target, features, x_value: str = 'scale'):
         df = df_target.merge(features[label], left_on=location_label, right_on=location_label, how='left')
     for label in ['river_intersects']:
         if len(features[label]) == 0:
-            return df
+            return df.fillna(0)
         else:
             df_rivers = df_target.merge(features[label], left_on=location_label, right_on=location_label, how='left')
-            return df, df_rivers
+            return df.fillna(0), df_rivers.fillna(0)
 
 def categorize_features(df, feature_columns=feature_variables):
     """Categorizes the feature columns in the DataFrame"""
@@ -105,12 +107,12 @@ def collect_topo_data(locations: [] = None, labels: {} = None):
         return labels
     
 
-def unscale_land_use(df, feature_columns=feature_variables):
-    """Unscales the land use features"""
-    for column in feature_columns:
-        df[f'{column}_m'] = df[column] * session_config.buffer_area
-    
-    return df
+# def unscale_land_use(df, feature_columns=feature_variables):
+#     """Unscales the land use features"""
+#     for column in feature_columns:
+#         df[f'{column}_m'] = df[column] * session_config.buffer_area
+#
+#     return df
 
 
 def combine_landuse_features(data, columns_to_combine: list = None, new_column_name: str = None, method: str = 'sum'):
@@ -119,22 +121,11 @@ def combine_landuse_features(data, columns_to_combine: list = None, new_column_n
     The columns are put back into m² before combining. Then scaled back.
     """
     if method == 'sum':
-        data = unscale_land_use(data, feature_columns=columns_to_combine)
         data[new_column_name] = data[columns_to_combine[0]] + data[columns_to_combine[1]]
-        data[new_column_name] = data[new_column_name] / session_config.buffer_area
-        data = scale_combined(data, new_column_name, new_column_name)
-        columns_to_drop = [f'{x}_m' for x in columns_to_combine]
-        data.drop(columns=columns_to_drop, inplace=True, axis=1)
-        
         return data
     if method == 'rate':
         not_public_services = [x for x in columns_to_combine if 'public services' not in x]
-        data = unscale_land_use(data, feature_columns=columns_to_combine)
         data[new_column_name] = (data['public services']*data[not_public_services[0]]).round(3)
-        data = scale_combined(data, new_column_name, new_column_name)
-        columns_to_drop = [f'{x}_m' for x in columns_to_combine]
-        data.drop(columns=columns_to_drop, inplace=True, axis=1)
-        
         return data
     
     else:
@@ -168,44 +159,44 @@ def make_multi_index(column_labels: dict, group_label: dict, nlabels: int, sessi
     return pd.MultiIndex.from_tuples(indexes)
 
 
-def the_land_use_profile(df, feature_columns: [] = session_config.feature_variables,
-                         session_language: str = 'en'):
-    """Creates a profile of the land use data"""
-
-    # avg_matrix = pd.DataFrame(index=session_config.feature_variables, columns=session_config.bin_labels)
-    #
-    # d = df.copy()
-    #
-    # # Calculate the mean for each category in each identified column
-    # for column in session_config.feature_variables:
-    #     for category in session_config.bin_labels:
-    #         # Filter df by category and calculate mean for the target variable, only if it's relevant
-    #         filtered = df[df[column] == category]
-    #         avg_matrix.at[column, category] = filtered[Y].mean() if not filtered.empty else 0
-    #
-    # return avg_matrix.round(2)
-    
-    d = df[feature_columns].copy()
-    d = d.T
-    # indexes = [(words_land_use_profile[session_language], column_labels[x]) for x in range(1, len(df) + 1)]
-    column_index = make_multi_index(column_labels_land_use, words_land_use_profile, len(df), session_language)
-    d.columns = column_index
-    
-    return d
-
-
-def the_litter_rate_per_land_use(df, feature_columns: [] = session_config.feature_variables,
-                                 session_language: str = 'en'):
-    """Creates a profile of the litter rate per land use data"""
-    
-    # d = df[feature_columns].copy()
-    # d = d.T
-    # column_index = make_multi_index(column_labels_land_use, words_land_use_litter_rates, len(df), session_language)
-    # d.columns = column_index
-    # column_index = make_multi_index(column_labels_land_use, words_land_use_profile, len(df), session_language)
-    # df.columns = column_index
-    
-    return df
+# def the_land_use_profile(df, feature_columns: [] = session_config.feature_variables,
+#                          session_language: str = 'en'):
+#     """Creates a profile of the land use data"""
+#
+#     # avg_matrix = pd.DataFrame(index=session_config.feature_variables, columns=session_config.bin_labels)
+#     #
+#     # d = df.copy()
+#     #
+#     # # Calculate the mean for each category in each identified column
+#     # for column in session_config.feature_variables:
+#     #     for category in session_config.bin_labels:
+#     #         # Filter df by category and calculate mean for the target variable, only if it's relevant
+#     #         filtered = df[df[column] == category]
+#     #         avg_matrix.at[column, category] = filtered[Y].mean() if not filtered.empty else 0
+#     #
+#     # return avg_matrix.round(2)
+#
+#     d = df[feature_columns].copy()
+#     d = d.T
+#     # indexes = [(words_land_use_profile[session_language], column_labels[x]) for x in range(1, len(df) + 1)]
+#     column_index = make_multi_index(column_labels_land_use, words_land_use_profile, len(df), session_language)
+#     d.columns = column_index
+#
+#     return d
+#
+#
+# def the_litter_rate_per_land_use(df, feature_columns: [] = session_config.feature_variables,
+#                                  session_language: str = 'en'):
+#     """Creates a profile of the litter rate per land use data"""
+#
+#     # d = df[feature_columns].copy()
+#     # d = d.T
+#     # column_index = make_multi_index(column_labels_land_use, words_land_use_litter_rates, len(df), session_language)
+#     # d.columns = column_index
+#     # column_index = make_multi_index(column_labels_land_use, words_land_use_profile, len(df), session_language)
+#     # df.columns = column_index
+#
+#     return df
 
 
 class ALandUseObject:
@@ -308,7 +299,7 @@ class LandUseReport:
         new_feature_columns = [*feature_variables, *new_names]
         self.feature_variables = new_feature_columns
         self.df_cat = self.categorize_columns(d.copy(), feature_columns=new_feature_columns)
-        return new_feature_columns
+
 
     def correlation_matrix(self):
 
