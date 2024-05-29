@@ -3,6 +3,7 @@ Parameters for the session configuration
 
 """
 import pandas as pd
+import numpy as np
 from pathlib import Path
 
 # labels and groups for selection
@@ -41,12 +42,16 @@ languages = ['de', 'en', 'fr']
 
 session_language = 'en'
 
-# quintiles for the report
+# the 90th percentile range
 report_quantiles = [.05, .25, .5, .75, .95]
 
 # bins and labels for land use categorization
 bins = [-1, 0.2, 0.4, 0.6, 0.8, 1]
 bin_labels = [1, 2, 3, 4, 5]
+
+# forecasting grid
+index_range = np.arange(0.0, 100, 0.1)
+max_range = .99
 
 # area of a buffer pi*1500²
 buffer_radius = 1500
@@ -108,8 +113,8 @@ default_args = [(buildings_services, new_label, combination_method)]
 def assign_target_variable(target: str = None) -> str:
     if target is None:
         return Y
-    if target not in [Y, 'pcs/m2']:
-        raise ValueError('target must be either pcs/m or pcs/m2')
+    if target not in [Y, 'pcs/m²']:
+        raise ValueError('target must be either pcs/m or pcs/m²')
     return target
 
 

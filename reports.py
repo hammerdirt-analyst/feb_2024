@@ -8,16 +8,6 @@ from session_config import unit_agg, agg_groups
 from session_config import report_quantiles
 
 
-# def select_features(df, column, labels):
-#     mask = df[column].isin(labels)
-#     return df[mask]
-#
-#
-# def select_dates(df, start_end):
-#     mask = (df['date'] >= start_end[0]) & (df['date'] <= start_end[1])
-#     return df[mask]
-
-
 def collect_sample_totals(df, sample_id: str = 'sample_id', location_label: str = location_label,
                           info_columns: list = None, afunc: {} = unit_agg):
     # a sample total is the sum of all the codes with the same sample Id. The code column is identified
@@ -26,26 +16,6 @@ def collect_sample_totals(df, sample_id: str = 'sample_id', location_label: str 
         return df.groupby([sample_id, location_label, 'date'], as_index=False).agg(afunc)
     else:
         return df.groupby([sample_id, location_label, 'date', *info_columns], as_index=False).agg(afunc)
-
-#
-# def collect_aggregate_values(df, column: str = None, funcs: {} = agg_groups):
-#
-#     return df.groupby(column).agg(funcs)
-
-
-# # combining feature labels
-# # reducing dimensions
-# # good for combining object classes into use groups
-
-# # method to group feature labels before applying any other methods
-# # here we are using the groups from the plastock project. The tuple
-# # starts with the feature to be combined, then an array of the labels
-# # to combine and the then the value attributed to the new label.
-# or [<column name>, <list of labels to combine>, <new label name>]
-default_groups = [
-        ('code', ['G22', 'G23', 'G24'], 'Gcaps'),
-]
-
 
 
 class SurveyReport:
@@ -135,6 +105,8 @@ class SurveyReport:
             'nsamples': self.number_of_samples,
             'average': np.mean(data),
             'quantiles': qtiles,
+            'std': np.std(data),
+            'max':self.sample_results[Y].max(),
             'start': self.date_range['start'],
             'end': self.date_range['end']
         }

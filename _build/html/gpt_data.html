@@ -63,7 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'gpt_data';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Display reports" href="cumulative_reports.html" />
+    <link rel="next" title="Bern" href="bern.html" />
     <link rel="prev" title="Field observations to machine learning" href="titlepage.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -144,7 +144,12 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data and reporting</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Checking the assistant</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cumulative_reports.html">Display reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bern.html">Bern</a></li>
+<li class="toctree-l1"><a class="reference internal" href="display_reports.html">Use cases</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Methods and classes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="forecasts.html">Grid forecast</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a_report_class.html">Survey report class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="landuse_class.html">Land use class</a></li>
 </ul>
@@ -441,153 +446,32 @@ document.write(`
 <p>The preceding code produces the following table:</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">35</span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span> <span class="n">m_ui</span> <span class="o">=</span> <span class="n">LandUse</span><span class="p">(</span><span class="n">land_cover</span><span class="p">,</span> <span class="n">land_use</span><span class="p">,</span> <span class="n">streets</span><span class="p">,</span> <span class="n">w_df_locations</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">34</span> <span class="c1"># for the region of interest</span>
+<span class="ne">---&gt; </span><span class="mi">35</span> <span class="n">lcui</span> <span class="o">=</span> <span class="n">m_ui</span><span class="o">.</span><span class="n">use_of_land</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">36</span> <span class="n">lc_sti</span><span class="p">,</span> <span class="n">no_datai</span> <span class="o">=</span> <span class="n">match_topo_attributes_to_surveys</span><span class="p">(</span><span class="n">lcui</span><span class="p">,</span> <span class="n">a_report</span><span class="o">.</span><span class="n">w_df</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">38</span> <span class="c1"># the basic work data contains the survey results and the </span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span> <span class="c1"># topographical data merged on the &lt;slug&gt; column</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+<span class="nn">Cell In[2], line 197,</span> in <span class="ni">LandUse.use_of_land</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">195</span> <span class="nd">@property</span>
+<span class="g g-Whitespace">    </span><span class="mi">196</span> <span class="k">def</span> <span class="nf">use_of_land</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">197</span>     <span class="n">a</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">land_cover</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">land_use</span><span class="p">,</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">198</span>     <span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">trans</span><span class="p">,</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">200</span>     <span class="k">return</span> <span class="n">b</span>
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>location</th>
-      <th>sample_id</th>
-      <th>date</th>
-      <th>feature_name</th>
-      <th>parent_boundary</th>
-      <th>city</th>
-      <th>canton</th>
-      <th>pcs/m</th>
-      <th>quantity</th>
-      <th>code</th>
-      <th>feature_type</th>
-      <th>orchards</th>
-      <th>vineyards</th>
-      <th>buildings</th>
-      <th>forest</th>
-      <th>undefined</th>
-      <th>public services</th>
-      <th>streets</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>aabach</td>
-      <td>('aabach', '2020-10-22')</td>
-      <td>2020-10-22</td>
-      <td>zurichsee</td>
-      <td>linth</td>
-      <td>Schmerikon</td>
-      <td>St. Gallen</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>G1</td>
-      <td>l</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.204522</td>
-      <td>0.535456</td>
-      <td>0.561892</td>
-      <td>0.018241</td>
-      <td>0.207248</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>aabach</td>
-      <td>('aabach', '2020-10-22')</td>
-      <td>2020-10-22</td>
-      <td>zurichsee</td>
-      <td>linth</td>
-      <td>Schmerikon</td>
-      <td>St. Gallen</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>G10</td>
-      <td>l</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.204522</td>
-      <td>0.535456</td>
-      <td>0.561892</td>
-      <td>0.018241</td>
-      <td>0.207248</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>aabach</td>
-      <td>('aabach', '2020-10-22')</td>
-      <td>2020-10-22</td>
-      <td>zurichsee</td>
-      <td>linth</td>
-      <td>Schmerikon</td>
-      <td>St. Gallen</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>G100</td>
-      <td>l</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.204522</td>
-      <td>0.535456</td>
-      <td>0.561892</td>
-      <td>0.018241</td>
-      <td>0.207248</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>aabach</td>
-      <td>('aabach', '2020-10-22')</td>
-      <td>2020-10-22</td>
-      <td>zurichsee</td>
-      <td>linth</td>
-      <td>Schmerikon</td>
-      <td>St. Gallen</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>G101</td>
-      <td>l</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.204522</td>
-      <td>0.535456</td>
-      <td>0.561892</td>
-      <td>0.018241</td>
-      <td>0.207248</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>aabach</td>
-      <td>('aabach', '2020-10-22')</td>
-      <td>2020-10-22</td>
-      <td>zurichsee</td>
-      <td>linth</td>
-      <td>Schmerikon</td>
-      <td>St. Gallen</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>G102</td>
-      <td>l</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.204522</td>
-      <td>0.535456</td>
-      <td>0.561892</td>
-      <td>0.018241</td>
-      <td>0.207248</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<span class="nn">Cell In[2], line 186,</span> in <span class="ni">LandUse.land_use</span><span class="nt">(self, new_labels)</span>
+<span class="g g-Whitespace">    </span><span class="mi">184</span>     <span class="k">return</span> <span class="n">group_topographic_attributes</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lu</span><span class="p">,</span> <span class="n">locations</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">locations</span><span class="p">,</span> <span class="n">list_of_labels</span><span class="o">=</span><span class="n">new_labels</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">185</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">186</span>     <span class="k">return</span> <span class="n">group_topographic_attributes</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lu</span><span class="p">,</span> <span class="n">locations</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">locations</span><span class="p">,</span> <span class="n">list_of_labels</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">slug</span><span class="p">)</span>
+
+<span class="ne">AttributeError</span>: &#39;LandUse&#39; object has no attribute &#39;slug&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="hand-file-to-assistant">
 <h3>Hand file to assistant<a class="headerlink" href="#hand-file-to-assistant" title="Permalink to this heading">#</a></h3>
@@ -609,173 +493,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sample_id</th>
-      <th>location</th>
-      <th>date</th>
-      <th>feature_name</th>
-      <th>parent_boundary</th>
-      <th>city</th>
-      <th>canton</th>
-      <th>feature_type</th>
-      <th>orchards</th>
-      <th>vineyards</th>
-      <th>...</th>
-      <th>forest</th>
-      <th>undefined</th>
-      <th>public services</th>
-      <th>streets</th>
-      <th>code</th>
-      <th>pcs/m</th>
-      <th>quantity</th>
-      <th>fr</th>
-      <th>en</th>
-      <th>de</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>('aabach', '2020-10-22')</td>
-      <td>aabach</td>
-      <td>2020-10-22</td>
-      <td>zurichsee</td>
-      <td>linth</td>
-      <td>Schmerikon</td>
-      <td>St. Gallen</td>
-      <td>l</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>...</td>
-      <td>0.535456</td>
-      <td>0.561892</td>
-      <td>0.018241</td>
-      <td>0.207248</td>
-      <td>G1</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>Anneaux pour six packs</td>
-      <td>Six pack rings</td>
-      <td>Sixpack-Ringe</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>('aabach', '2020-10-22')</td>
-      <td>aabach</td>
-      <td>2020-10-22</td>
-      <td>zurichsee</td>
-      <td>linth</td>
-      <td>Schmerikon</td>
-      <td>St. Gallen</td>
-      <td>l</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>...</td>
-      <td>0.535456</td>
-      <td>0.561892</td>
-      <td>0.018241</td>
-      <td>0.207248</td>
-      <td>G10</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>Emballage fast food</td>
-      <td>Food containers single use foamed or plastic</td>
-      <td>Lebensmittelbehälter zum einmaligen Gebrauch a...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>('aabach', '2020-10-22')</td>
-      <td>aabach</td>
-      <td>2020-10-22</td>
-      <td>zurichsee</td>
-      <td>linth</td>
-      <td>Schmerikon</td>
-      <td>St. Gallen</td>
-      <td>l</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>...</td>
-      <td>0.535456</td>
-      <td>0.561892</td>
-      <td>0.018241</td>
-      <td>0.207248</td>
-      <td>G100</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>Médical conteneurs/tubes/ emballages</td>
-      <td>Medical; containers/tubes/ packaging</td>
-      <td>Medizin; Behälter/Röhrchen/Verpackungen</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>('aabach', '2020-10-22')</td>
-      <td>aabach</td>
-      <td>2020-10-22</td>
-      <td>zurichsee</td>
-      <td>linth</td>
-      <td>Schmerikon</td>
-      <td>St. Gallen</td>
-      <td>l</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>...</td>
-      <td>0.535456</td>
-      <td>0.561892</td>
-      <td>0.018241</td>
-      <td>0.207248</td>
-      <td>G101</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>Sac pour déjections canines</td>
-      <td>Dog feces bag</td>
-      <td>Robidog Hundekot-Säcklein, andere Hundekotsäck...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>('aabach', '2020-10-22')</td>
-      <td>aabach</td>
-      <td>2020-10-22</td>
-      <td>zurichsee</td>
-      <td>linth</td>
-      <td>Schmerikon</td>
-      <td>St. Gallen</td>
-      <td>l</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>...</td>
-      <td>0.535456</td>
-      <td>0.561892</td>
-      <td>0.018241</td>
-      <td>0.207248</td>
-      <td>G102</td>
-      <td>0.0</td>
-      <td>0</td>
-      <td>Tongs</td>
-      <td>Flip-flops</td>
-      <td>Flip-Flops</td>
-    </tr>
-  </tbody>
-</table>
-<p>5 rows × 21 columns</p>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -783,66 +500,10 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>sample_id</th>
-      <th>location</th>
-      <th>date</th>
-      <th>feature_name</th>
-      <th>parent_boundary</th>
-      <th>city</th>
-      <th>canton</th>
-      <th>feature_type</th>
-      <th>orchards</th>
-      <th>vineyards</th>
-      <th>...</th>
-      <th>forest</th>
-      <th>undefined</th>
-      <th>public services</th>
-      <th>streets</th>
-      <th>code</th>
-      <th>pcs/m</th>
-      <th>quantity</th>
-      <th>fr</th>
-      <th>en</th>
-      <th>de</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
-<p>0 rows × 21 columns</p>
-</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gptdfx</span><span class="o">.</span><span class="n">columns</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;sample_id&#39;, &#39;location&#39;, &#39;date&#39;, &#39;feature_name&#39;, &#39;parent_boundary&#39;,
-       &#39;city&#39;, &#39;canton&#39;, &#39;feature_type&#39;, &#39;orchards&#39;, &#39;vineyards&#39;, &#39;buildings&#39;,
-       &#39;forest&#39;, &#39;undefined&#39;, &#39;public services&#39;, &#39;streets&#39;, &#39;code&#39;, &#39;pcs/m&#39;,
-       &#39;quantity&#39;, &#39;fr&#39;, &#39;en&#39;, &#39;de&#39;],
-      dtype=&#39;object&#39;)
 </pre></div>
 </div>
 </div>
@@ -916,11 +577,6 @@ document.write(`
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;lakes&#39;: 16, &#39;cities&#39;: 67, &#39;quantity&#39;: 146066, &#39;samples&#39;: 753, &#39;cantons&#39;: 14, &#39;median_pcs_m&#39;: 2.77}
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="most-common">
@@ -933,119 +589,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>quantity</th>
-      <th>%</th>
-      <th>pcs_m</th>
-      <th>fail rate</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>G27</th>
-      <td>29033</td>
-      <td>0.198674</td>
-      <td>0.33</td>
-      <td>0.904636</td>
-    </tr>
-    <tr>
-      <th>Gfrags</th>
-      <td>17073</td>
-      <td>0.116831</td>
-      <td>0.04</td>
-      <td>0.905960</td>
-    </tr>
-    <tr>
-      <th>Gfoams</th>
-      <td>14989</td>
-      <td>0.102570</td>
-      <td>0.00</td>
-      <td>0.754967</td>
-    </tr>
-    <tr>
-      <th>G208</th>
-      <td>10445</td>
-      <td>0.071475</td>
-      <td>0.00</td>
-      <td>0.328477</td>
-    </tr>
-    <tr>
-      <th>G30</th>
-      <td>8931</td>
-      <td>0.061115</td>
-      <td>0.12</td>
-      <td>0.845033</td>
-    </tr>
-    <tr>
-      <th>G67</th>
-      <td>6926</td>
-      <td>0.047395</td>
-      <td>0.06</td>
-      <td>0.650331</td>
-    </tr>
-    <tr>
-      <th>Gcaps</th>
-      <td>5382</td>
-      <td>0.036829</td>
-      <td>0.00</td>
-      <td>0.750993</td>
-    </tr>
-    <tr>
-      <th>G95</th>
-      <td>4610</td>
-      <td>0.031546</td>
-      <td>0.00</td>
-      <td>0.482119</td>
-    </tr>
-    <tr>
-      <th>G200</th>
-      <td>4232</td>
-      <td>0.028960</td>
-      <td>0.01</td>
-      <td>0.508609</td>
-    </tr>
-    <tr>
-      <th>G178</th>
-      <td>2558</td>
-      <td>0.017504</td>
-      <td>0.03</td>
-      <td>0.607947</td>
-    </tr>
-    <tr>
-      <th>G156</th>
-      <td>2190</td>
-      <td>0.014986</td>
-      <td>0.00</td>
-      <td>0.429139</td>
-    </tr>
-    <tr>
-      <th>G177</th>
-      <td>1447</td>
-      <td>0.009902</td>
-      <td>0.01</td>
-      <td>0.525828</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </div>
 <div class="section" id="aggregating-samples">
@@ -1055,19 +598,6 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gp_dt</span><span class="p">[</span><span class="s1">&#39;pcs/m&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    753.000000
-mean       5.628738
-std        9.367900
-min        0.040000
-25%        1.220000
-50%        2.770000
-75%        6.000000
-max       77.100000
-Name: pcs/m, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -1083,19 +613,6 @@ Name: pcs/m, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    753.000000
-mean       0.907304
-std        1.605537
-min        0.000000
-25%        0.090000
-50%        0.340000
-75%        1.040000
-max       19.700000
-Name: pcs/m, dtype: float64
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="combining-codes">
@@ -1105,19 +622,6 @@ Name: pcs/m, dtype: float64
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gp_dtcodes</span> <span class="o">=</span> <span class="n">gptdfx</span><span class="p">[</span><span class="n">gptdfx</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;G27&#39;</span><span class="p">,</span> <span class="s1">&#39;G30&#39;</span><span class="p">])]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;sample_id&#39;</span><span class="p">,</span> <span class="o">*</span><span class="n">geo_features</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;pcs/m&#39;</span><span class="p">:</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span> <span class="s1">&#39;quantity&#39;</span><span class="p">:</span><span class="s1">&#39;sum&#39;</span><span class="p">})</span>
 <span class="n">gp_dtcodes</span><span class="p">[</span><span class="s1">&#39;pcs/m&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    753.000000
-mean       1.238433
-std        2.035005
-min        0.000000
-25%        0.210000
-50%        0.550000
-75%        1.450000
-max       23.270000
-Name: pcs/m, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -1134,19 +638,6 @@ Name: pcs/m, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    51.000000
-mean      4.023725
-std       2.995087
-min       0.400000
-25%       1.450000
-50%       3.380000
-75%       5.470000
-max      14.800000
-Name: pcs/m, dtype: float64
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="combined-features">
@@ -1156,19 +647,6 @@ Name: pcs/m, dtype: float64
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gp_dtbt</span> <span class="o">=</span> <span class="n">gptdfx</span><span class="p">[</span><span class="n">gptdfx</span><span class="o">.</span><span class="n">feature_name</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;bielersee&#39;</span><span class="p">,</span> <span class="s1">&#39;thunersee&#39;</span><span class="p">])]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;sample_id&#39;</span><span class="p">,</span> <span class="o">*</span><span class="n">geo_features</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;pcs/m&#39;</span><span class="p">:</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span> <span class="s1">&#39;quantity&#39;</span><span class="p">:</span><span class="s1">&#39;sum&#39;</span><span class="p">})</span>
 <span class="n">gp_dtbt</span><span class="p">[</span><span class="s1">&#39;pcs/m&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    94.000000
-mean      2.738085
-std       2.682369
-min       0.160000
-25%       0.862500
-50%       1.685000
-75%       3.477500
-max      14.800000
-Name: pcs/m, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -1184,119 +662,8 @@ Name: pcs/m, dtype: float64
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>vineyards</th>
-      <th>orchards</th>
-      <th>buildings</th>
-      <th>forest</th>
-      <th>undefined</th>
-      <th>public services</th>
-      <th>streets</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>vineyards</th>
-      <td>1.000000</td>
-      <td>-0.088721</td>
-      <td>-0.174585</td>
-      <td>-0.087445</td>
-      <td>0.057518</td>
-      <td>-0.110552</td>
-      <td>0.101623</td>
-    </tr>
-    <tr>
-      <th>orchards</th>
-      <td>-0.088721</td>
-      <td>1.000000</td>
-      <td>-0.195273</td>
-      <td>0.586422</td>
-      <td>-0.335178</td>
-      <td>-0.220276</td>
-      <td>-0.185527</td>
-    </tr>
-    <tr>
-      <th>buildings</th>
-      <td>-0.174585</td>
-      <td>-0.195273</td>
-      <td>1.000000</td>
-      <td>-0.249992</td>
-      <td>-0.699952</td>
-      <td>0.833019</td>
-      <td>0.631690</td>
-    </tr>
-    <tr>
-      <th>forest</th>
-      <td>-0.087445</td>
-      <td>0.586422</td>
-      <td>-0.249992</td>
-      <td>1.000000</td>
-      <td>-0.487967</td>
-      <td>-0.077841</td>
-      <td>-0.129156</td>
-    </tr>
-    <tr>
-      <th>undefined</th>
-      <td>0.057518</td>
-      <td>-0.335178</td>
-      <td>-0.699952</td>
-      <td>-0.487967</td>
-      <td>1.000000</td>
-      <td>-0.664196</td>
-      <td>-0.487873</td>
-    </tr>
-    <tr>
-      <th>public services</th>
-      <td>-0.110552</td>
-      <td>-0.220276</td>
-      <td>0.833019</td>
-      <td>-0.077841</td>
-      <td>-0.664196</td>
-      <td>1.000000</td>
-      <td>0.831108</td>
-    </tr>
-    <tr>
-      <th>streets</th>
-      <td>0.101623</td>
-      <td>-0.185527</td>
-      <td>0.631690</td>
-      <td>-0.129156</td>
-      <td>-0.487873</td>
-      <td>0.831108</td>
-      <td>1.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Author: hammerdirt-analyst
-
-conda environment: cantonal_report
-
-pandas: 2.0.3
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -1343,11 +710,11 @@ pandas: 2.0.3
       </div>
     </a>
     <a class="right-next"
-       href="cumulative_reports.html"
+       href="bern.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Display reports</p>
+        <p class="prev-next-title">Bern</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

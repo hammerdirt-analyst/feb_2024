@@ -142,9 +142,14 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data and reporting</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="gpt_data.html">Checking the assistant</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cumulative_reports.html">Display reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bern.html">Canton - sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="display_reports.html">Use cases</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Methods and classes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="forecasts.html">Grid forecast</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a_report_class.html">Survey report class</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Land use class</a></li>
 </ul>
@@ -347,7 +352,7 @@ document.write(`
 </details>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="land-use-class">
-<h1>Land use class<a class="headerlink" href="#land-use-class" title="Permalink to this heading">#</a></h1>
+<span id="landusereporter"></span><h1>Land use class<a class="headerlink" href="#land-use-class" title="Permalink to this heading">#</a></h1>
 <p>The landuse class groups the survey results according to the rate of landuse at each survey location. Provides the correlation matrix of the feature variables and the number of samples and the average result for each landuse type and magnitude.</p>
 <div class="section" id="why-is-this-important">
 <h2>Why is this important?<a class="headerlink" href="#why-is-this-important" title="Permalink to this heading">#</a></h2>
@@ -427,88 +432,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>orchards</th>
-      <th>vineyards</th>
-      <th>buildings</th>
-      <th>forest</th>
-      <th>undefined</th>
-      <th>public services</th>
-      <th>streets</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>251</td>
-      <td>248</td>
-      <td>25</td>
-      <td>216</td>
-      <td>208</td>
-      <td>200</td>
-      <td>46</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0</td>
-      <td>1</td>
-      <td>17</td>
-      <td>22</td>
-      <td>18</td>
-      <td>51</td>
-      <td>160</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0</td>
-      <td>2</td>
-      <td>1</td>
-      <td>13</td>
-      <td>25</td>
-      <td>0</td>
-      <td>45</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0</td>
-      <td>0</td>
-      <td>50</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>0</td>
-      <td>0</td>
-      <td>158</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </div>
 <div class="section" id="quantity-per-feature">
@@ -520,88 +443,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>orchards</th>
-      <th>vineyards</th>
-      <th>buildings</th>
-      <th>forest</th>
-      <th>undefined</th>
-      <th>public services</th>
-      <th>streets</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>80016</td>
-      <td>79749</td>
-      <td>2115</td>
-      <td>69630</td>
-      <td>68202</td>
-      <td>62279</td>
-      <td>14442</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0</td>
-      <td>146</td>
-      <td>9513</td>
-      <td>1484</td>
-      <td>9699</td>
-      <td>17737</td>
-      <td>50897</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0</td>
-      <td>121</td>
-      <td>186</td>
-      <td>8902</td>
-      <td>2115</td>
-      <td>0</td>
-      <td>14677</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0</td>
-      <td>0</td>
-      <td>13315</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>0</td>
-      <td>0</td>
-      <td>54887</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </div>
 <div class="section" id="locations-per-feature">
@@ -613,88 +454,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>orchards</th>
-      <th>vineyards</th>
-      <th>buildings</th>
-      <th>forest</th>
-      <th>undefined</th>
-      <th>public services</th>
-      <th>streets</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>38</td>
-      <td>36</td>
-      <td>3</td>
-      <td>35</td>
-      <td>31</td>
-      <td>29</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0</td>
-      <td>1</td>
-      <td>3</td>
-      <td>2</td>
-      <td>4</td>
-      <td>9</td>
-      <td>22</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>3</td>
-      <td>0</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0</td>
-      <td>0</td>
-      <td>5</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>0</td>
-      <td>0</td>
-      <td>26</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </div>
 <div class="section" id="density-per-feature">
@@ -706,88 +465,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>orchards</th>
-      <th>vineyards</th>
-      <th>buildings</th>
-      <th>forest</th>
-      <th>undefined</th>
-      <th>public services</th>
-      <th>streets</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>8.921753</td>
-      <td>8.949919</td>
-      <td>4.6128</td>
-      <td>8.507593</td>
-      <td>8.632308</td>
-      <td>7.8458</td>
-      <td>11.502174</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0</td>
-      <td>9.75</td>
-      <td>19.01</td>
-      <td>4.256364</td>
-      <td>18.251111</td>
-      <td>13.141176</td>
-      <td>7.273375</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0</td>
-      <td>5.015</td>
-      <td>5.35</td>
-      <td>23.698462</td>
-      <td>4.6128</td>
-      <td>0</td>
-      <td>12.144889</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0</td>
-      <td>0</td>
-      <td>5.5604</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>0</td>
-      <td>0</td>
-      <td>9.60443</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </div>
 <div class="section" id="corelation-matrix">
@@ -798,108 +475,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>orchards</th>
-      <th>vineyards</th>
-      <th>buildings</th>
-      <th>forest</th>
-      <th>undefined</th>
-      <th>public services</th>
-      <th>streets</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>orchards</th>
-      <td>1.000000</td>
-      <td>0.215632</td>
-      <td>-0.232329</td>
-      <td>-0.044311</td>
-      <td>0.205992</td>
-      <td>-0.195685</td>
-      <td>-0.087427</td>
-    </tr>
-    <tr>
-      <th>vineyards</th>
-      <td>0.215632</td>
-      <td>1.000000</td>
-      <td>-0.100630</td>
-      <td>-0.190298</td>
-      <td>-0.057757</td>
-      <td>-0.215319</td>
-      <td>-0.155203</td>
-    </tr>
-    <tr>
-      <th>buildings</th>
-      <td>-0.232329</td>
-      <td>-0.100630</td>
-      <td>1.000000</td>
-      <td>-0.872981</td>
-      <td>-0.946109</td>
-      <td>0.480962</td>
-      <td>0.532584</td>
-    </tr>
-    <tr>
-      <th>forest</th>
-      <td>-0.044311</td>
-      <td>-0.190298</td>
-      <td>-0.872981</td>
-      <td>1.000000</td>
-      <td>0.767505</td>
-      <td>-0.367753</td>
-      <td>-0.538793</td>
-    </tr>
-    <tr>
-      <th>undefined</th>
-      <td>0.205992</td>
-      <td>-0.057757</td>
-      <td>-0.946109</td>
-      <td>0.767505</td>
-      <td>1.000000</td>
-      <td>-0.425264</td>
-      <td>-0.412409</td>
-    </tr>
-    <tr>
-      <th>public services</th>
-      <td>-0.195685</td>
-      <td>-0.215319</td>
-      <td>0.480962</td>
-      <td>-0.367753</td>
-      <td>-0.425264</td>
-      <td>1.000000</td>
-      <td>0.542128</td>
-    </tr>
-    <tr>
-      <th>streets</th>
-      <td>-0.087427</td>
-      <td>-0.155203</td>
-      <td>0.532584</td>
-      <td>-0.538793</td>
-      <td>-0.412409</td>
-      <td>0.542128</td>
-      <td>1.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </div>
 <div class="section" id="corelated-pairs">
@@ -908,12 +483,6 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Correlated pairs:</span><span class="se">\n</span><span class="si">{</span><span class="n">correlated_pairs</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Correlated pairs:
-[(&#39;buildings&#39;, &#39;public services&#39;, &#39;rate&#39;), (&#39;forest&#39;, &#39;undefined&#39;, &#39;sum&#39;)]
 </pre></div>
 </div>
 </div>
@@ -929,68 +498,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>orchards</th>
-      <th>vineyards</th>
-      <th>buildings</th>
-      <th>forest</th>
-      <th>undefined</th>
-      <th>public services</th>
-      <th>streets</th>
-    </tr>
-    <tr>
-      <th>location</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>la-pecherie</th>
-      <td>0.171</td>
-      <td>0.162</td>
-      <td>0.106</td>
-      <td>0.096</td>
-      <td>0.464</td>
-      <td>0.010449</td>
-      <td>0.166033</td>
-    </tr>
-    <tr>
-      <th>veveyse</th>
-      <td>0.000</td>
-      <td>0.027</td>
-      <td>0.958</td>
-      <td>0.000</td>
-      <td>0.015</td>
-      <td>0.047393</td>
-      <td>0.344649</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </div>
 <div class="section" id="categorical">
@@ -1003,82 +510,8 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>orchards</th>
-      <th>vineyards</th>
-      <th>buildings</th>
-      <th>forest</th>
-      <th>undefined</th>
-      <th>public services</th>
-      <th>streets</th>
-    </tr>
-    <tr>
-      <th>location</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>la-pecherie</th>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>veveyse</th>
-      <td>1</td>
-      <td>1</td>
-      <td>5</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Author: hammerdirt-analyst
-
-conda environment: cantonal_report
-
-seaborn   : 0.12.2
-matplotlib: 3.7.1
-pandas    : 2.0.3
-numpy     : 1.25.2
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 </div>

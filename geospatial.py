@@ -13,8 +13,6 @@ landcover = pd.read_csv(feature_data['land_cover_data'])
 streets = pd.read_csv(feature_data['street_data'])
 river_intersects = pd.read_csv(feature_data['intersection_attributes'])
 
-
-
 words_land_use_profile = {
     'en': 'Percent of land attributed v/s % of samples',
     'fr': 'Pourcentage d\'occupation du sol v/s % d\'échantillons',
@@ -34,9 +32,6 @@ column_labels_land_use = {
     4: '60 - 80%',
     5: '80 - 100%'
 }
-
-
-
 
 def select_x_and_y(df_target, features, x_value: str = 'scale'):
     """Selects the feature columns and the target column from the DataFrame"""
@@ -106,15 +101,6 @@ def collect_topo_data(locations: [] = None, labels: {} = None):
     else:
         return labels
     
-
-# def unscale_land_use(df, feature_columns=feature_variables):
-#     """Unscales the land use features"""
-#     for column in feature_columns:
-#         df[f'{column}_m'] = df[column] * session_config.buffer_area
-#
-#     return df
-
-
 def combine_landuse_features(data, columns_to_combine: list = None, new_column_name: str = None, method: str = 'sum'):
     """Combines the columns in the DataFrame
     
@@ -157,46 +143,6 @@ def make_multi_index(column_labels: dict, group_label: dict, nlabels: int, sessi
     indexes = [(group_label[session_language], column_labels[x]) for x in range(1, nlabels+1)]
     
     return pd.MultiIndex.from_tuples(indexes)
-
-
-# def the_land_use_profile(df, feature_columns: [] = session_config.feature_variables,
-#                          session_language: str = 'en'):
-#     """Creates a profile of the land use data"""
-#
-#     # avg_matrix = pd.DataFrame(index=session_config.feature_variables, columns=session_config.bin_labels)
-#     #
-#     # d = df.copy()
-#     #
-#     # # Calculate the mean for each category in each identified column
-#     # for column in session_config.feature_variables:
-#     #     for category in session_config.bin_labels:
-#     #         # Filter df by category and calculate mean for the target variable, only if it's relevant
-#     #         filtered = df[df[column] == category]
-#     #         avg_matrix.at[column, category] = filtered[Y].mean() if not filtered.empty else 0
-#     #
-#     # return avg_matrix.round(2)
-#
-#     d = df[feature_columns].copy()
-#     d = d.T
-#     # indexes = [(words_land_use_profile[session_language], column_labels[x]) for x in range(1, len(df) + 1)]
-#     column_index = make_multi_index(column_labels_land_use, words_land_use_profile, len(df), session_language)
-#     d.columns = column_index
-#
-#     return d
-#
-#
-# def the_litter_rate_per_land_use(df, feature_columns: [] = session_config.feature_variables,
-#                                  session_language: str = 'en'):
-#     """Creates a profile of the litter rate per land use data"""
-#
-#     # d = df[feature_columns].copy()
-#     # d = d.T
-#     # column_index = make_multi_index(column_labels_land_use, words_land_use_litter_rates, len(df), session_language)
-#     # d.columns = column_index
-#     # column_index = make_multi_index(column_labels_land_use, words_land_use_profile, len(df), session_language)
-#     # df.columns = column_index
-#
-#     return df
 
 
 class ALandUseObject:
@@ -243,6 +189,7 @@ class LandUseReport:
         self.intersects = None
         self.df_cat = None
         self.merge_land_use_to_survey_data()
+        self.combine_features(self.correlated_pairs())
 
     def merge_land_use_to_survey_data(self):
         lu = select_x_and_y(self.target, self.features)

@@ -7,9 +7,15 @@ parts:
   - caption: Data and reporting
     chapters:
     - file: gpt_data
-    - file: cumulative_reports
+    - file: bern
+    - file: display_reports
+    
+  - caption: Methods and classes
+    chapters:
+    - file: forecasts
     - file: a_report_class
     - file: landuse_class
+  
   - caption: Annex
     chapters:
     - file: the_survey_data
