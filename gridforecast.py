@@ -290,7 +290,7 @@ def posterior_dirichlet_counts(regional_likelihood, regional_prior, max_range: f
 
 
 def reports_and_forecast(likelihood_params: dict, prior_params: dict, ldata: pd.DataFrame,
-                         feature_columns: [] = None, samples_needed: int = 100, logger = None):
+                         feature_columns: [] = None, samples_needed: int = 100, other_data: pd.DataFrame = None, logger = None):
     comments = ''
     ldi, l_locations, c = check_params(likelihood_params, ldata.copy(), logger)
     if c != 'ok':
@@ -303,12 +303,16 @@ def reports_and_forecast(likelihood_params: dict, prior_params: dict, ldata: pd.
 
     if c == 'No survey results found.':
         use_case = prior_params['feature_type']
-        odf = ldata[
-            (ldata['feature_type'] == use_case) & (~ldata.sample_id.isin(this_report.df.sample_id.unique()))].copy()
+        odf = other_data[
+            (other_data['feature_type'] == use_case) & (~other_data.sample_id.isin(this_report.df.sample_id.unique()))].copy()
         other_report, other_land_use = make_report_objects(odf)
         d = other_land_use.df_cat[~other_land_use.df_cat.location.isin(l_locations)].copy()
         weights = this_land_use.n_samples_per_feature()[feature_columns] / this_report.number_of_samples
-        new_data, weights = select_prior_data_by_feature_weight(d, weights, feature_columns, samples_needed=len(ldi))
+        if len(ldi) < 100:
+            new_data, weights = select_prior_data_by_feature_weight(d, weights, feature_columns, samples_needed=len(ldi))
+        else:
+            new_data, weights = select_prior_data_by_feature_weight(d, weights, feature_columns, samples_needed=samples_needed)
+
         prior_report, prior_land_use = make_report_objects(new_data)
     else:
         prior_report, prior_land_use = make_report_objects(pdf)

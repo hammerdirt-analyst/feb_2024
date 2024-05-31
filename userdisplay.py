@@ -247,9 +247,15 @@ def sampling_result_summary(data: dict, session_language: str, texts: dict = w_s
 
     for akey in ['nsamples', 'total', 'average']:
         to_display += f"* {data_labels[akey]}: {round(data[akey], 2)}\n"
-    for akey in ['start', 'end']:
-        the_date = dt.datetime.strftime(data[akey], session_config.date_format)
-        to_display += f"* {data_labels[akey]}: {the_date}\n"
+    if 'start' in data.keys():
+
+        for akey in ['start', 'end']:
+            if isinstance(data[akey], str):
+                to_display += f"* {data_labels[akey]}: {data[akey]}\n"
+            else:
+                the_date = dt.datetime.strftime(data[akey], session_config.date_format)
+                to_display += f"* {data_labels[akey]}: {the_date}\n"
+
 
     display_observed_quantiles = ""
     for akey in ['quantiles']:
