@@ -12,16 +12,11 @@ from matplotlib.colors import ListedColormap
 import numpy as np
 
 from bokeh.plotting import figure
-from session_config import data_directory, feature_data, unpack_with_pandas
+from session_config import code_material, codes, code_definitions_map,  feature_data, unpack_with_pandas
 from session_config import corr_threshold
 
-# the material and definitions for each code are on
-# on a different table. In this instance we call the
-# session config to get the data for codes and the lat
-# lon data for the beaches
-codes = pd.read_csv(feature_data['code_data'])
-code_definitions_map = codes[['code', 'en', 'fr', 'de']].set_index('code')
-code_material = codes[['code', 'material']].set_index('code')
+
+
 
 beaches = pd.read_csv(feature_data['beach_data'])
 lat_lon = beaches[['slug', 'latitude', 'longitude']].set_index('slug')
@@ -96,7 +91,7 @@ w_sampling_results = {
         'total': 'Total number of objects',
         'nsamples': 'Number of samples',
         'average': 'Average sample count',
-        'quantiles': f'Observed distribution of {display_units[session_language]}',
+        'quantiles': f'Distribution of {display_units[session_language]}',
         'start': 'Date of first sample',
         'end': 'Date of last sample'
     },
@@ -428,9 +423,8 @@ def code_selector_to_code_label(a_description: str, session_language: str = 'en'
         language_map = code_definitions_map[session_language]
         return language_map[language_map == a_description].index[0]
 
-    
 
-def most_common(df, session_language: str = 'en'):
+def most_common(df, session_language: str = 'en', caption: bool = False):
     """Display the most common objects"""
     explain = {
         'en': "The most common objects are a combination of the top ten most abundant objects and those objects that "
@@ -465,7 +459,10 @@ def most_common(df, session_language: str = 'en'):
     data['code'] = code_definitions(data['code'], session_language)
 
     data.rename(columns=most_common_columns[session_language], inplace=True)
-    data = data.style.set_table_styles(table_style).set_caption(caption[session_language]).format(**format_kwargs)
+    if caption:
+        data = data.style.set_table_styles(table_style).set_caption(caption[session_language]).format(**format_kwargs)
+    else:
+        data = data.style.set_table_styles(table_style).format(**format_kwargs)
     
     return data.hide(axis=0), mc_codes, pct_total
 
@@ -502,7 +499,7 @@ def highlight_max(s, props: str = highlight_props):
     return np.where((s == np.max(s.values)) & (s != 0), props, '')
 
 
-def landuse_profile(aprofile: pd.DataFrame, session_language: str = 'en', nsamples: int = 0):
+def landuse_profile(aprofile: pd.DataFrame, session_language: str = 'en', nsamples: int = 0, caption: bool = False):
     
     """Display the land use profiles"""
     
@@ -530,11 +527,9 @@ def landuse_profile(aprofile: pd.DataFrame, session_language: str = 'en', nsampl
     f = f.style.apply(highlight_max, axis=1)
     
     f = f.set_table_styles([table_caption_top, caption_css]).format('{:.0%}')
-    f = f.set_table_styles([table_caption_top, caption_css]).format('{:.0%}')
-    f = f.set_caption(caption[session_language])
+    if caption:
+        f = f.set_caption(caption[session_language])
     f.data = f.data.set_index(pd.Index(a_new_index))
-
-
     return f
 
 
@@ -585,6 +580,9 @@ def street_profile(aprofile: pd.DataFrame, session_language: str = 'en', nsample
         'de': "Die durchschnittliche Anzahl von Objekten pro Meter Strasse im Puffer. Die hervorgehobene Zelle ist der Maximalwert in der Zeile."
     }
     column_labels_land_use = geospatial.column_labels_land_use
+    d = aprofile / nsamples
+    d.rename(columns=column_labels_land_use, inplace=True)
+    f = d.style.set_table_styles([table_caption_top, caption_css]).format('{:.0%}')
 
     if caption == 'profile':
         caption = {
@@ -592,11 +590,7 @@ def street_profile(aprofile: pd.DataFrame, session_language: str = 'en', nsample
             'fr': f"<b>La proportion d'échantillons par densité de rues.</b> {explain_profile['fr']}",
             'de': f"<b>Der Anteil der Proben nach der Dichte der Strassen</b> {explain_profile['de']}"
         }
-        d = aprofile / nsamples
-        d.rename(columns=column_labels_land_use, inplace=True)
-        # new_cols = [f'< {round(x, 1)}' for x in session_config.bins[1:]]
-        # d.columns = new_cols
-        f = d.style.set_table_styles([table_caption_top, caption_css]).format('{:.0%}')
+
         f = f.set_caption(caption[session_language])
         f = f.apply(highlight_max, axis=1)
         return f
@@ -607,12 +601,13 @@ def street_profile(aprofile: pd.DataFrame, session_language: str = 'en', nsample
             'de': f"<b>Die durchschnittliche Anzahl von Objekten pro Meter Strasse im Puffer.</b> {explain_rate['de']}"
         }
 
-        d = aprofile.copy()
-        d.rename(columns=column_labels_land_use, inplace=True)
-        # new_cols = [f'< {round(x, 1)}' for x in session_config.bins[1:]]
-        # d.columns = new_cols
-        f = d.style.set_table_styles([table_caption_top, caption_css]).format('{:.2f}')
         f = f.set_caption(caption[session_language])
+        f = f.apply(highlight_max, axis=1)
+        return f
+    else:
+
+
+
         f = f.apply(highlight_max, axis=1)
         return f
 

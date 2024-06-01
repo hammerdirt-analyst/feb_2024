@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 
+import session_config
 from session_config import administrative, feature_types
 from session_config import object_of_interest
 from session_config import index_label, location_label, Y, Q
@@ -74,6 +75,18 @@ class SurveyReport:
     def number_of_samples(self):
         """Returns the number of unique sample_ids in the report"""
         return self.df.sample_id.nunique()
+
+    def material_report(self):
+        inv = self.inventory()
+        inv['material'] = inv.merge(session_config.code_material, right_index=True, left_index=True)['material']
+        material_report = inv.groupby(['material']).quantity.sum()
+        mr = material_report / sum(material_report)
+        mr = (mr * 100).astype(int)
+        mr = pd.DataFrame(mr[mr > 1])
+        mr['% of total'] = mr.quantity.apply(lambda x: f'{x}%')
+        mr = mr[['% of total']]
+
+        return mr
 
     def fail_rate(self, threshold: int = 1):
         rates = self.df.groupby([object_of_interest])[index_label].nunique().reset_index()

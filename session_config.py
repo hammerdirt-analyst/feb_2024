@@ -99,6 +99,14 @@ location_label = "location"
 # the sample id
 index_label = "sample_id"
 
+# the material and definitions for each code are on
+# on a different table. In this instance we call the
+# session config to get the data for codes and the lat
+# lon data for the beaches
+codes = pd.read_csv(feature_data['code_data'])
+code_definitions_map = codes[['code', 'en', 'fr', 'de']].set_index('code')
+code_material = codes[['code', 'material']].set_index('code')
+
 # default location of data
 data_directory = 'data/end_process/'
 date_format = "%Y-%m-%d"
