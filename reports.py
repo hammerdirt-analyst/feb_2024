@@ -76,6 +76,7 @@ class SurveyReport:
         """Returns the number of unique sample_ids in the report"""
         return self.df.sample_id.nunique()
 
+    @property
     def material_report(self):
         inv = self.inventory()
         inv['material'] = inv.merge(session_config.code_material, right_index=True, left_index=True)['material']

@@ -88,9 +88,11 @@ display_units = {
 w_sampling_results = {
     "en": {
         'title': 'Summary of selected data',
-        'total': 'Total number of objects',
+        'total': 'Total objects',
         'nsamples': 'Number of samples',
-        'average': 'Average sample count',
+        'average': 'Average pcs/m',
+        'std': 'Standard deviation',
+        'max': 'Maximum pcs/m',
         'quantiles': f'Distribution of {display_units[session_language]}',
         'start': 'Date of first sample',
         'end': 'Date of last sample'
@@ -240,7 +242,7 @@ def sampling_result_summary(data: dict, session_language: str, texts: dict = w_s
 
     to_display = ""
 
-    for akey in ['nsamples', 'total', 'average']:
+    for akey in ['nsamples', 'total', 'average', 'std', 'max']:
         to_display += f"* {data_labels[akey]}: {round(data[akey], 2)}\n"
     if 'start' in data.keys():
 
@@ -525,8 +527,9 @@ def landuse_profile(aprofile: pd.DataFrame, session_language: str = 'en', nsampl
     f.rename(columns=column_labels_land_use, inplace=True)
     
     f = f.style.apply(highlight_max, axis=1)
+    table_data = {'selector': 'td', 'props': 'padding:4px; font-size:12px;text-align: center; padding: 4px;'}
     
-    f = f.set_table_styles([table_caption_top, caption_css]).format('{:.0%}')
+    f = f.set_table_styles([table_caption_top, caption_css, table_data]).format('{:.0%}')
     if caption:
         f = f.set_caption(caption[session_language])
     f.data = f.data.set_index(pd.Index(a_new_index))
@@ -551,11 +554,13 @@ def litter_rates_per_feature(aresult: pd.DataFrame, session_language: str = 'en'
         'de': f"<b>Das Landnutzungsprofil und die beobachteten durchschnittlichen Müllraten pro Funktion.</b> {explain['de']}"
     }
     column_labels_land_use = geospatial.column_labels_land_use
+    # table_font = {'selector': 'tr', 'props': 'font-size: 10px;'}
+    table_data = {'selector': 'td', 'props': 'padding:4px; font-size:12px;text-align: center; padding: 4px;'}
 
     d = aresult.copy()
     d.rename(columns=column_labels_land_use, inplace=True)
     a_new_index = [land_use_map[session_language][x] for x in d.index]
-    f = d.style.set_table_styles([table_caption_top, caption_css]).format('{:.2f}')
+    f = d.style.set_table_styles([table_caption_top, caption_css, table_data]).format('{:.2f}')
     f = f.set_caption(caption[session_language])
     f = f.apply(highlight_max, axis=1)
     f.data = f.data.set_index(pd.Index(a_new_index))
@@ -580,9 +585,9 @@ def street_profile(aprofile: pd.DataFrame, session_language: str = 'en', nsample
         'de': "Die durchschnittliche Anzahl von Objekten pro Meter Strasse im Puffer. Die hervorgehobene Zelle ist der Maximalwert in der Zeile."
     }
     column_labels_land_use = geospatial.column_labels_land_use
-    d = aprofile / nsamples
-    d.rename(columns=column_labels_land_use, inplace=True)
-    f = d.style.set_table_styles([table_caption_top, caption_css]).format('{:.0%}')
+
+    table_data = {'selector': 'td', 'props': 'padding:4px; font-size:12px;text-align: center; padding: 4px;'}
+
 
     if caption == 'profile':
         caption = {
@@ -590,7 +595,9 @@ def street_profile(aprofile: pd.DataFrame, session_language: str = 'en', nsample
             'fr': f"<b>La proportion d'échantillons par densité de rues.</b> {explain_profile['fr']}",
             'de': f"<b>Der Anteil der Proben nach der Dichte der Strassen</b> {explain_profile['de']}"
         }
-
+        d = aprofile / nsamples
+        d.rename(columns=column_labels_land_use, inplace=True)
+        f = d.style.set_table_styles([table_caption_top, caption_css, table_data]).format('{:.0%}')
         f = f.set_caption(caption[session_language])
         f = f.apply(highlight_max, axis=1)
         return f
@@ -601,14 +608,14 @@ def street_profile(aprofile: pd.DataFrame, session_language: str = 'en', nsample
             'de': f"<b>Die durchschnittliche Anzahl von Objekten pro Meter Strasse im Puffer.</b> {explain_rate['de']}"
         }
 
+        aprofile.rename(columns=column_labels_land_use, inplace=True)
+        f = aprofile.style.set_table_styles([table_caption_top, caption_css, table_data]).format(precision=2)
         f = f.set_caption(caption[session_language])
         f = f.apply(highlight_max, axis=1)
         return f
     else:
 
-
-
-        f = f.apply(highlight_max, axis=1)
+        f = aprofile.apply(highlight_max, axis=1)
         return f
 
 

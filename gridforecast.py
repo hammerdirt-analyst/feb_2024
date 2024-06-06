@@ -28,6 +28,12 @@ columns =  [
     'date'
 ]
 
+def forecast_weighted_prior(landuse_of_interest, feature_variables, landuse_from_other, likelihood_data):
+    weights = land_use_weights(landuse_of_interest, feature_variables)
+    g, w = select_prior_data_by_feature_weight(landuse_from_other, weights, feature_variables)
+    posterior_by_weight, c = posterior_dirichlet_counts(likelihood_data, g['pcs/m'].values)
+    sample_values, adist, summary = dirichlet_posterior(posterior_by_weight)
+    return sample_values, adist, summary
 
 def make_report_objects(df):
 

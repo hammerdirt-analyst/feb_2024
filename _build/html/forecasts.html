@@ -148,7 +148,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="gpt_data.html">Checking the assistant</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bern.html">Canton Bern</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vaud.html">Canton Vaud</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="display_reports.html">Use cases</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Methods and classes</span></p>
@@ -308,24 +307,32 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assumptions-of-the-model-about-the-sample-data">Assumptions of the model about the sample data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-probability">Conditional probability</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formal-definition">Formal Definition</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bayes-theorem">Bayes’ theorem</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#prior-knowledge">Prior knowledge</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-bayes">Empirical Bayes</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conjugate-prior">Conjugate prior</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#deriving-conjugate-relationship">Deriving conjugate relationship</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-approximation">Grid Approximation</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-bayes-grid-approximation-using-a-conjugate-prior">Empirical Bayes grid approximation using a conjugate prior</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#deriving-conjugate-relationship">Deriving conjugate relationship</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-bayes-grid-approximation-using-a-conjugate-prior">Empirical Bayes grid approximation using a conjugate prior</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-grid-forecaster">The grid forecaster</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predict-density-from-past-experiences">Predict density from past experiences</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predict-density-given-similar-locations">Predict density given similar locations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#different-priors-different-points-of-view">Different priors = different points of view</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-probability-of-finding-one-object">The probability of finding one object</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-grid-forecast">Using the grid forecast</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-grid-size">The grid size</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-counts">The counts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-posterior-parameters">The posterior parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-posterior-distribution">The posterior distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-the-posterior-distribution">Sample the posterior distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-90-interval-of-the-predictions">The 90% interval of the predictions</a></li>
 </ul>
 </li>
 </ul>
@@ -343,19 +350,36 @@ document.write(`
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="grid-forecast">
 <span id="gridforecaster"></span><h1>Grid forecast<a class="headerlink" href="#grid-forecast" title="Permalink to this heading">#</a></h1>
-<p>For many forecasting and predicting are interchangeable terms. We consider that forecasting or predicting is the process of making statements about events that have yet to occurr. In this case we are using historical results to form our opinion about what might happen in the future. The question we are answering is fairly simple:</p>
+<p>We consider that forecasting or predicting is the process of making statements about events that have yet to occurr. In this case we are using historical results to form our opinion about the probability of an event in the future. The event we considering is rather pedestrian:</p>
 <blockquote>
-<div><p>What will I find at <strong>this</strong> beach today, given what has been found at <strong>other similar</strong> beaches ?</p>
+<div><p>What will I find at the beach today, given what has been found at <strong>other similar</strong> beaches or what was found at the beach in the past ?</p>
 </div></blockquote>
-<p>Note that this question has condtions: <em>given what has been found at other similar beaches</em>. Which means we are assuming that the density of litter from beaches is conditioned or dependent on the attributes or feature that describe the beach. Features are the measured attributes or characteristics of a survey location that are used to compare one survey location to another.</p>
+<p>Which means that our estimation of the objects we are likely to find is based on our own experience as well as the experience of others under similar conditions. This reasoning does not tell us about the reason why the object has bypassed the elaborate system put in place to prevent it from ending up on the beach.</p>
+<p>We do, however, identify quantifiable vectors that certainly contain the cause. The vectors come directly from the official topographical map for the territory. As a result locations can be grouped according to the magnitude of the vector that has been derived from the topographical map. By comparing local results to national results with a quantifiable vector we have a very efficient way to combine experiences beyond a geographic limit. Thus we can estimate the comparison from one location using the results from locations that have similar attributes but not geographically related.</p>
+<p>Here we show how the <code class="docutils literal notranslate"><span class="pre">gridforecast</span></code> module works. Specifically the different methods of the  <code class="docutils literal notranslate"><span class="pre">gridforecast.MulitnomialDirichlet</span></code> class. It is a grid aproximation in Bayesien framework. We start the process with conditional probability, make the connection with Bayes` theorem and finish with the conjugate relationship Dirichlet-Multinomial. The application to survey data is implemented in scipy and numpy.</p>
+<p>Our first consideration, however, is wether or not our research question is comensurate with our assumptions of the model. Otherwise no amount of mathematical manipulation will persuade a reasonable individual that an outstanding or extreme result is probable when there is no evidence that rises to the same level.</p>
 <div class="section" id="assumptions-of-the-model-about-the-sample-data">
 <h2>Assumptions of the model about the sample data<a class="headerlink" href="#assumptions-of-the-model-about-the-sample-data" title="Permalink to this heading">#</a></h2>
+<p>The data is assumed to be subject to the experience of the surveyor and each survey is independent and identically distributed. We add to these basic assumptions the particularities of the domain:</p>
+<ol class="arabic simple">
+<li><p>Locations that have similar environmental conditions will yield similar survey results</p></li>
+<li><p>There is an exchange of material (trash) between the beach and body of water</p></li>
+<li><p>Following from two, the material recovered at the beach is a result of the assumed exchange</p></li>
+<li><p>The type of activities adjacent to the survey location are an indicator of the trash that will be found there</p></li>
+<li><p>Following from four and three, the local environmental conditions are an indicator of the local contribution to the mix of objects at the beach</p></li>
+<li><p>Surveys are not accurate</p>
+<ul class="simple">
+<li><p>Some objects will be misidentified</p></li>
+<li><p>Not all objects will be found</p></li>
+<li><p>There will be inaccuracies in object counts or data entry</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Following 1 through 6:</strong> the survey results are a reasonable estimate of the minimum number of objects that were present at the time the survey was completed.</p>
 </div>
 <div class="section" id="conditional-probability">
 <h2>Conditional probability<a class="headerlink" href="#conditional-probability" title="Permalink to this heading">#</a></h2>
-<p><a class="reference external" href="https://en.wikipedia.org/wiki/Conditional_probability">Conditional probability</a> is a fundamental concept in probability theory that describes the probability of an event occurring given that another event has already occurred. It is denoted as <span class="math notranslate nohighlight">\(P(A∣B)\)</span>, which reads as “the probability of A given B.”</p>
-<div class="section" id="formal-definition">
-<h3>Formal Definition<a class="headerlink" href="#formal-definition" title="Permalink to this heading">#</a></h3>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Conditional_probability">Conditional probability</a> is a fundamental concept in probability theory that describes the probability of an event occurring given that another event has already occurred. It is denoted as <span class="math notranslate nohighlight">\(P(A∣B)\)</span>, which reads as “the probability of A given B”.</p>
 <p>The conditional probability of event (A) given event (B) is defined as:</p>
 <div class="math notranslate nohighlight">
 \[P(A|B) = \frac{P(A \cap B)}{P(B)}\]</div>
@@ -365,7 +389,6 @@ document.write(`
 <li><p><span class="math notranslate nohighlight">\(P(A \cap B)\)</span> is the joint probability of both <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> occurring.</p></li>
 <li><p><span class="math notranslate nohighlight">\(P(B)\)</span> is the probability of event <span class="math notranslate nohighlight">\(B\)</span> occurring, provided that <span class="math notranslate nohighlight">\(P(B) &gt; 0\)</span>.</p></li>
 </ul>
-</div>
 <div class="section" id="bayes-theorem">
 <h3>Bayes’ theorem<a class="headerlink" href="#bayes-theorem" title="Permalink to this heading">#</a></h3>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Bayes%27_theorem">Bayes’ Theorem</a> is a fundamental principle in probability theory and statistics that describes the probability of an event based on <strong>prior</strong> knowledge of conditions that might be related to the event. It allows for the updating of probabilities as new evidence or information becomes available. It is derived from the definition of conditional probability.</p>
@@ -436,7 +459,10 @@ This is Bayes’ Theorem</div>
 </div>
 <div class="section" id="empirical-bayes">
 <h3>Empirical Bayes<a class="headerlink" href="#empirical-bayes" title="Permalink to this heading">#</a></h3>
-<p>Empirical Bayes methods are statistical techniques that combine the principles of Bayesian inference with empirical data. These methods use data to estimate the prior distribution, which is then used in the Bayesian framework to update probabilities and make inferences.</p>
+<p>Empirical Bayes methods are statistical techniques that combine the principles of Bayesian inference with empirical data. These methods use data to estimate the prior distribution, which is then used in the Bayesian framework to update probabilities and make inferences. Using this method means that our prior distribution is testable in the sense of Jaynes</p>
+<blockquote>
+<div><p>A piece of information <em>I</em> concerning a parameter <span class="math notranslate nohighlight">\(\theta\)</span> will be called <strong>testable</strong> if, given any proposed prior probability assignment  <span class="math notranslate nohighlight">\(f( \theta )\)</span> <span class="math notranslate nohighlight">\(d\theta\)</span>, there is a procedure which will determine unambiguously whether <span class="math notranslate nohighlight">\(f( \theta )\)</span> does or does not agree with the information <em>I</em>. (<a class="reference external" href="https://bayes.wustl.edu/etj/articles/prior.pdf">Jaynes,1968</a>)</p>
+</div></blockquote>
 <p>In traditional Bayesian analysis, the prior distribution is chosen based on subjective beliefs or historical data. In contrast, empirical Bayes methods <strong>estimate the prior distribution directly from the observed data, making the process more objective and often more practical in large-scale problems</strong>. (<a class="reference external" href="https://link.springer.com/article/10.1007/s40300-014-0044-1">Petrone, S. et al, 2014</a>)</p>
 <div class="section" id="conjugate-prior">
 <h4>Conjugate prior<a class="headerlink" href="#conjugate-prior" title="Permalink to this heading">#</a></h4>
@@ -446,15 +472,6 @@ This is Bayes’ Theorem</div>
 <li><p>Gelman, A. et al.: <a class="reference external" href="http://www.stat.columbia.edu/~gelman/book/">“Bayesian Data Analysis”</a> : discusses conjugate priors in the context of hierarchical models and practical Bayesian analysis.</p></li>
 </ol>
 </div>
-<div class="section" id="grid-approximation">
-<h4>Grid Approximation<a class="headerlink" href="#grid-approximation" title="Permalink to this heading">#</a></h4>
-<p>Grid approximation is a technique used in numerical analysis and statistical inference to approximate the values of a continuous function or parameter by evaluating it at a discrete set of points. This involves creating a grid of possible values within a defined range and calculating the function or parameter at each grid point.</p>
-</div>
-</div>
-<div class="section" id="empirical-bayes-grid-approximation-using-a-conjugate-prior">
-<h3>Empirical Bayes grid approximation using a conjugate prior<a class="headerlink" href="#empirical-bayes-grid-approximation-using-a-conjugate-prior" title="Permalink to this heading">#</a></h3>
-<p>Empirical Bayes grid approximations involve estimating the prior and posterior distributions of parameters using a discretized set of values. In the context of the multinomial-Dirichlet conjugate relationship, this method is particularly effective. The Dirichlet distribution serves as the prior for the multinomial likelihood, and empirical Bayes methods estimate this prior directly from the data. By defining a grid of possible parameter values, often spaced every 0.1 units from 0 to the maximum observed value, the posterior distribution is approximated by evaluating the likelihood and updating the Dirichlet prior at each grid point.</p>
-<p>This approach simplifies the computational complexity of Bayesian inference. Instead of integrating over a continuous parameter space, which can be analytically challenging, grid approximation transforms the problem into a finite summation. The <a class="reference external" href="https://en.wikipedia.org/wiki/Dirichlet-multinomial_distribution">multinomial-Dirichlet conjugate pair</a> ensures that the posterior remains in the Dirichlet family, making the updates straightforward.</p>
 <div class="section" id="deriving-conjugate-relationship">
 <h4>Deriving conjugate relationship<a class="headerlink" href="#deriving-conjugate-relationship" title="Permalink to this heading">#</a></h4>
 <p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Binomial_distribution">binomial</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Multinomial_distribution">multinomial</a>, and <a class="reference external" href="https://en.wikipedia.org/wiki/Dirichlet_distribution">Dirichlet</a> distributions are intrinsically linked through the concept of conjugate priors in Bayesian statistics. The binomial distribution describes the probability of a fixed number of successes in a series of independent trials, with a success probability <em>p</em>. When modeling this in a Bayesian framework, the Beta distribution is used as a conjugate prior for <em>p</em>. This means that the posterior distribution, after observing data, remains a Beta distribution, simplifying the update process.</p>
@@ -542,124 +559,248 @@ Posterior with updated parameters</div>
 </div>
 </div>
 </div>
+<div class="section" id="grid-approximation">
+<h4>Grid Approximation<a class="headerlink" href="#grid-approximation" title="Permalink to this heading">#</a></h4>
+<p>Grid approximation is a technique used in numerical analysis and statistical inference to approximate the values of a continuous function or parameter by evaluating it at a discrete set of points. This involves creating a grid of possible values within a defined range and calculating the function or parameter at each grid point. We are using <span class="math notranslate nohighlight">\(P(\mathbf{p}|\mathbf{x}) = \text{D}(\mathbf{p}|x_1 + \alpha_1, \ldots, x_K + \alpha_K)\)</span> to approximate the grid.</p>
 </div>
 </div>
-<div class="section" id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h2>
-<div class="section" id="the-probability-of-finding-one-object">
-<h3>The probability of finding one object<a class="headerlink" href="#the-probability-of-finding-one-object" title="Permalink to this heading">#</a></h3>
-<p>Here we consider the following question:</p>
+<div class="section" id="empirical-bayes-grid-approximation-using-a-conjugate-prior">
+<h3>Empirical Bayes grid approximation using a conjugate prior<a class="headerlink" href="#empirical-bayes-grid-approximation-using-a-conjugate-prior" title="Permalink to this heading">#</a></h3>
+<p>Empirical Bayes grid approximations involves estimating the prior and posterior distributions of parameters using a discretized set of values. In the context of the multinomial-Dirichlet conjugate relationship, this method is particularly effective. The Dirichlet distribution serves as the prior for the multinomial likelihood, and empirical Bayes methods estimate this prior directly from the data. By defining a grid of possible parameter values, in this case spaced every 0.1 units from 0 to the maximum observed value or 100, the posterior distribution is approximated by evaluating the likelihood and updating the Dirichlet prior at each grid point.</p>
+<p>This approach simplifies the computational complexity of Bayesian inference. Instead of integrating over a continuous parameter space, which can be analytically challenging, grid approximation transforms the problem into a finite summation. The <a class="reference external" href="https://en.wikipedia.org/wiki/Dirichlet-multinomial_distribution">multinomial-Dirichlet conjugate pair</a> ensures that the posterior remains in the Dirichlet family, making the updates straightforward.</p>
+<p><strong>Adding probability</strong></p>
+<p>We have noticed that using this method is sensitive to the max value of the likelihood. The further out the maximum is the more likely elevated values appear. This may be the case, but there is also the chance that extreme elements are just that.</p>
+</div>
+</div>
+<div class="section" id="the-grid-forecaster">
+<h2>The grid forecaster<a class="headerlink" href="#the-grid-forecaster" title="Permalink to this heading">#</a></h2>
+<p>The <em>grid forecaster</em> refers to the methods defined in <code class="docutils literal notranslate"><span class="pre">gridforecast.py</span></code>. The main purpose of the <em>grid forecaster</em> is to implement the process described in the preceding sections. Here we define three methods for making a forecast for a particular region that are inline with the assumptions.</p>
+<p><strong>Given the experience in the past</strong></p>
 <ol class="arabic simple">
-<li><p>What are the chances of finding at least one <em>O</em> if I go to the beach at <em>C</em> ?</p></li>
+<li><p>The prior probability is based on the collection of all previous experiences in the region</p></li>
+<li><p>The prior probability is based on the 99th percentile of all previous experiences in the region</p></li>
 </ol>
-<p>Where <em>O</em> is some object of interest that is in the list of items identified on the beach (there are 229 options) and C is a lake or municipality on a lake.</p>
-<p>This example was first tested in November 2021 at the request of members from an environmental organization that was visiting Lake Geneva, <a class="reference external" href="https://hammerdirt-analyst.github.io/finding-one-object/titlepage.html">finding one object</a>. This value was initially expected to be approximately 40%. The method of calculation was the Beta-Binomial conjugate pair. Instead of considering all the values on the grid we consider only two results: was the number found greater than zero or not. From the general form in (1) we get:</p>
-<blockquote>
-<div><p>What is the chance of finding at least one feminine hygiene product at the beach on Lac Léman ?</p>
-</div></blockquote>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-0">
-Steps to complete the calculation</label><div class="sd-tab-content docutils">
-<ol class="arabic simple">
-<li><p>identify the codes for the items of interest: <code class="docutils literal notranslate"><span class="pre">G96</span></code> and <code class="docutils literal notranslate"><span class="pre">G144</span></code></p></li>
-<li><p>define the region of interest: <code class="docutils literal notranslate"><span class="pre">lac-leman</span></code></p></li>
-<li><p>define the date range of the likelihood : <code class="docutils literal notranslate"><span class="pre">{'start':'2020-01-01',</span> <span class="pre">'end':'2021-11-01'}</span></code></p></li>
-<li><p>define the date range of the prior :  <code class="docutils literal notranslate"><span class="pre">{'start':'2015-11-15',</span> <span class="pre">'end':'2019-12-31'}</span></code></p></li>
+<p><strong>Given the experience in similar locations</strong></p>
+<ol class="arabic simple" start="3">
+<li><p>The prior probability is based on the collection of experiences from locations with similar land use</p></li>
 </ol>
-<p class="rubric">The likelihood and prior</p>
-<p>The likelihood data is defined as all the data collected durring the current sampling campaign, up to one week before the planned event in Geneva. The prior data is all collected in the previous sampling campaigns, not including results from locations in the likelihod. In both cases we are considering only the codes G96 and G144.</p>
-</div>
-<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-1">
-Default parameters and methods</label><div class="sd-tab-content docutils">
-<p><strong>Default parameters</strong></p>
-<ol class="arabic simple">
-<li><p>range of the default index <span class="math notranslate nohighlight">\(X = \{ x \in \mathbb{R} \mid x = 0.1k, \; k \in \mathbb{Z}, \; 0 \leq x &lt; 100 \}\)</span></p>
-<ul class="simple">
-<li><p>or <code class="docutils literal notranslate"><span class="pre">np.arange(0,</span> <span class="pre">100,</span> <span class="pre">0.1)</span></code></p></li>
-</ul>
-</li>
-<li><p>Max range of forecast grid = <span class="math notranslate nohighlight">\(\max_{i} \{ x_i \} \text{ or } P_{99} = \text{percentile}_{99} \{ x_i \}\)</span></p></li>
-<li><p>The magnitude of the land use for each survey location is categorized in the following manner:</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\text{binning}(x) = 
-\begin{cases} 
-1 &amp; \text{if } -1 \leq x &lt; 0.2 \\
-2 &amp; \text{if } 0.2 \leq x &lt; 0.4 \\
-3 &amp; \text{if } 0.4 \leq x &lt; 0.6 \\
-4 &amp; \text{if } 0.6 \leq x &lt; 0.8 \\
-5 &amp; \text{if } 0.8 \leq x \leq 1 
-\end{cases},
-\text{ where x is the \% of land occupied by a land-use feature } 
-\end{split}\]</div>
-<p><strong>Distributions</strong></p>
-<p>The posterior distribution is <span class="math notranslate nohighlight">\(P(\text{Likelihood} \mid \text{Prior}) \approx \text{Dirichlet}(\alpha)\)</span> or more commonly: <span class="math notranslate nohighlight">\(P(\theta \mid \mathbf{X}) \approx  text{Dirichlet}(\alpha + \mathbf{n})\)</span></p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(\theta\)</span> is the parameters of the Dirichlet distribution</p></li>
-<li><p><span class="math notranslate nohighlight">\(\mathbf{X}\)</span> is the observed data</p></li>
-<li><p><span class="math notranslate nohighlight">\(\alpha\)</span> is the parameters of the prior Dirichlet distribution</p></li>
-<li><p><span class="math notranslate nohighlight">\(\mathbf{n}\)</span> is the count data from the likelihood</p></li>
-</ol>
-<p><strong>Forecasted samples</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*}
-\theta &amp;\sim \text{Dirichlet}(\alpha) \\
-\mathbf{X} \mid \theta &amp;\sim \text{Multinomial}(N, \theta)
-\end{align*}
-\end{split}\]</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># user selects survey area</span>
-<span class="c1"># user selects all dates</span>
-<span class="c1"># prior = survey results from other survey areas</span>
-<span class="c1"># prior = same land use composition</span>
-<span class="c1"># same feature types</span>
+<div class="section" id="predict-density-from-past-experiences">
+<h3>Predict density from past experiences<a class="headerlink" href="#predict-density-from-past-experiences" title="Permalink to this heading">#</a></h3>
+<p>For regions that have a sampling history, previous to the most recent set of survey data, a forecast can be implemented by designating or selecting all the data in the region prior to the most recent survey results.</p>
+<p><strong>Example creating reports and forecasts</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># collecting the default data</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">session_config</span><span class="o">.</span><span class="n">collect_survey_data</span><span class="p">()</span>
 
-<span class="n">fname_ftype</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/end_process/beaches.csv&#39;</span><span class="p">)</span>
-<span class="n">fname_ftype</span> <span class="o">=</span> <span class="n">fname_ftype</span><span class="p">[[</span><span class="s1">&#39;feature_name&#39;</span><span class="p">,</span> <span class="s1">&#39;feature_type&#39;</span><span class="p">]]</span>
-<span class="n">fname_ftype</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="s1">&#39;feature_name&#39;</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">fname_ftype</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;feature_name&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="c1"># the likelihood: the dates of the most recent samples</span>
+<span class="n">recent_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;start&#39;</span><span class="p">:</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;end&#39;</span><span class="p">:</span><span class="s1">&#39;2021-12-31&#39;</span><span class="p">}</span>
+<span class="c1"># the prior: the dates prior to the most recent samples</span>
+<span class="n">prior_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;start&#39;</span><span class="p">:</span><span class="s1">&#39;2015-11-15&#39;</span><span class="p">,</span> <span class="s1">&#39;end&#39;</span><span class="p">:</span><span class="s1">&#39;2019-12-31&#39;</span><span class="p">}</span>
+<span class="c1"># the region of interest</span>
+<span class="n">canton</span> <span class="o">=</span> <span class="s1">&#39;Vaud&#39;</span>
 
-<span class="n">sns</span><span class="o">.</span><span class="n">ecdfplot</span><span class="p">(</span><span class="n">prr</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;prior&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">ecdfplot</span><span class="p">(</span><span class="n">lkl</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;observed&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">ecdfplot</span><span class="p">(</span><span class="n">sample_values</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;expected 99%&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">ecdfplot</span><span class="p">(</span><span class="n">xii</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;expected max&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-.&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">.1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># the search parameters for the prior and likelihood</span>
+<span class="n">likelihood_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;canton&#39;</span><span class="p">:</span><span class="n">canton</span><span class="p">,</span> <span class="s1">&#39;date_range&#39;</span><span class="p">:</span><span class="n">recent_dates</span><span class="p">}</span>
+<span class="n">prior_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;canton&#39;</span><span class="p">:</span><span class="n">canton</span><span class="p">,</span> <span class="s1">&#39;date_range&#39;</span><span class="p">:</span><span class="n">prior_dates</span><span class="p">}</span>
+
+<span class="c1"># verify the parameters exist in the data</span>
+<span class="c1"># checking the parameters will verify that the requested data</span>
+<span class="c1"># exists. If the query is possible it is executed and the value of</span>
+<span class="c1"># comments=&#39;ok&#39;, if not empty arrays are returned with the message</span>
+<span class="c1"># &#39;no survey results found&#39;. The method returns the query data, a list</span>
+<span class="c1"># of the sample locations and the comment.</span>
+<span class="n">likelihood_data</span><span class="p">,</span> <span class="n">likelihood_locations</span><span class="p">,</span> <span class="n">likelihood_comments</span> <span class="o">=</span> <span class="n">check_params</span><span class="p">(</span><span class="n">likelihood_params</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">logger</span><span class="p">)</span>
+<span class="n">prior_data</span><span class="p">,</span> <span class="n">prior_locations</span><span class="p">,</span> <span class="n">prior_comments</span> <span class="o">=</span> <span class="n">check_params</span><span class="p">(</span><span class="n">prior_params</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">logger</span><span class="p">)</span>
+
+<span class="c1"># if there is data for both the likelihood and the prior</span>
+<span class="c1"># make a survey report and a land use report for both sets of data</span>
+<span class="n">likelihood_report</span><span class="p">,</span> <span class="n">likelihood_land_use</span> <span class="o">=</span> <span class="n">make_report_objects</span><span class="p">(</span><span class="n">likelihood_data</span><span class="p">)</span>
+<span class="n">prior_report</span><span class="p">,</span> <span class="n">prior_land_use</span> <span class="o">=</span> <span class="n">make_report_objects</span><span class="p">(</span><span class="n">likelihood_data</span><span class="p">)</span>
+
+<span class="c1"># make forecast from all the available liklihood data</span>
+<span class="n">forecast_object</span> <span class="o">=</span> <span class="n">MulitnomialDirichlet</span><span class="p">(</span><span class="s1">&#39;comb&#39;</span><span class="p">,</span> <span class="n">prior_report</span><span class="o">.</span><span class="n">sample_results</span><span class="p">[</span><span class="s1">&#39;pcs/m&#39;</span><span class="p">],</span> <span class="n">likelihood_report</span><span class="o">.</span><span class="n">sample_results</span><span class="p">[</span><span class="s1">&#39;pcs/m&#39;</span><span class="p">],</span> <span class="n">logger</span><span class="p">)</span>
+
+<span class="c1"># make forecast limiting the likelihood to the 99the percentile</span>
+<span class="n">posterior_counts</span><span class="p">,</span> <span class="n">comments</span> <span class="o">=</span> <span class="n">posterior_dirichlet_counts</span><span class="p">(</span><span class="n">lkl</span><span class="p">,</span> <span class="n">prr</span><span class="p">,</span> <span class="n">max_range</span><span class="o">=</span><span class="mf">0.99</span><span class="p">)</span>
+
+<span class="c1"># forecasts from all the data</span>
+<span class="n">forecasted_samples</span> <span class="o">=</span> <span class="n">forecast_object</span><span class="o">.</span><span class="n">sample_posterior</span><span class="p">()</span>
+<span class="n">forecasted_summary</span> <span class="o">=</span> <span class="n">forecast_object</span><span class="o">.</span><span class="n">get_descriptive_statistics</span><span class="p">()</span>
+
+<span class="c1"># forecasts limited to the 99th percentile</span>
+<span class="n">sample_values_99</span><span class="p">,</span> <span class="n">posterior_99</span><span class="p">,</span> <span class="n">summary_99</span> <span class="o">=</span> <span class="n">gfcast</span><span class="o">.</span><span class="n">dirichlet_posterior</span><span class="p">(</span><span class="n">posterior_counts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="predict-density-given-similar-locations">
+<h3>Predict density given similar locations<a class="headerlink" href="#predict-density-given-similar-locations" title="Permalink to this heading">#</a></h3>
+<p>To predict density given similar locations we need to create another prior experience, that does not include any of the locations that are in the likelihood. Furthermore, we need to ensure that the land-use conditions in the likelihood are reflected in the prior.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># determine the proportion of each land-use feature in the likelihood</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="n">land_use_weights</span><span class="p">(</span><span class="n">likelihood_land_use</span><span class="p">,</span> <span class="n">session_config</span><span class="o">.</span><span class="n">feature_variables</span><span class="p">)</span>
+
+<span class="c1"># from the pool of available data select records that are not included in the likelihood</span>
+<span class="c1"># in this case we eliminate the canton of interest, limit the date to the end date of the prior</span>
+<span class="c1"># and create a survey report and land use report for *the other prior data*</span>
+<span class="n">other_data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="o">.</span><span class="n">canton</span> <span class="o">!=</span> <span class="n">canton</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">prior_dates</span><span class="p">[</span><span class="s1">&#39;end&#39;</span><span class="p">])]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">other_prior_report</span><span class="p">,</span> <span class="n">other_prior_land_use</span> <span class="o">=</span> <span class="n">gfcast</span><span class="o">.</span><span class="n">make_report_objects</span><span class="p">(</span><span class="n">other_prior_data</span><span class="p">)</span>
+
+<span class="c1"># using the weights from the likelihood and the other_prior_land_use</span>
+<span class="n">other_prior_data</span><span class="p">,</span> <span class="n">prior_weights</span> <span class="o">=</span> <span class="n">select_prior_data_by_feature_weight</span><span class="p">(</span><span class="n">other_prior_land_use</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">session_config</span><span class="o">.</span><span class="n">feature_variables</span><span class="p">)</span>
+<span class="n">posterior_by_weight</span><span class="p">,</span> <span class="n">weighted_comments</span> <span class="o">=</span> <span class="n">posterior_dirichlet_counts</span><span class="p">(</span><span class="n">likelihood_data</span><span class="p">,</span> <span class="n">g</span><span class="p">[</span><span class="s1">&#39;pcs/m&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="n">posterior_sample_values</span><span class="p">,</span> <span class="n">weighted_dist</span><span class="p">,</span> <span class="n">weighted_summary</span> <span class="o">=</span> <span class="n">dirichlet_posterior</span><span class="p">(</span><span class="n">posterior_by_weight</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="different-priors-different-points-of-view">
+<h3>Different priors = different points of view<a class="headerlink" href="#different-priors-different-points-of-view" title="Permalink to this heading">#</a></h3>
+<p>The three models are based off the experiences from the field and for the most part all give a reasonable estimate of what we would expect to find. The differences between the expected outcomes may or may not be of importance. We won’t know untill we sample again.</p>
+</div>
+</div>
+<div class="section" id="using-the-grid-forecast">
+<h2>Using the grid forecast<a class="headerlink" href="#using-the-grid-forecast" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="section" id="the-grid-size">
+<h3>The grid size<a class="headerlink" href="#the-grid-size" title="Permalink to this heading">#</a></h3>
+<p>The grid size for each combination is based on the maximum value of either the likelihood or the prior.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">compute_grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.000e+00, 1.000e-02, 2.000e-02, ..., 7.707e+01, 7.708e+01,
+       7.709e+01])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-counts">
+<h3>The counts<a class="headerlink" href="#the-counts" title="Permalink to this heading">#</a></h3>
+<p>The number of times that a survey result was either equal to zero or any other place on the grid can be accessed with <code class="docutils literal notranslate"><span class="pre">forecastobject.prior</span></code> or <code class="docutils literal notranslate"><span class="pre">forecastobject.compute_counts(forecast_object.prior_data)</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">prior_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 0, 0, ..., 0, 0, 1])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-posterior-parameters">
+<h3>The posterior parameters<a class="headerlink" href="#the-posterior-parameters" title="Permalink to this heading">#</a></h3>
+<p>The parameters for the Dirichlet posterior: <code class="docutils literal notranslate"><span class="pre">forecastobject.compute_posterior_params(self)</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">compute_posterior_params</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.01, 0.01, 0.01, ..., 0.01, 0.01, 1.  ])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-posterior-distribution">
+<h3>The posterior distribution<a class="headerlink" href="#the-posterior-distribution" title="Permalink to this heading">#</a></h3>
+<p>The posterior distribution : <code class="docutils literal notranslate"><span class="pre">forecastobject.posterior_dist</span></code> is a <code class="docutils literal notranslate"><span class="pre">scipy.stats.dirichlet</span></code> object.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">posterior_dist</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3.26850793e-05, 3.26850793e-05, 3.26850793e-05, ...,
+       3.26850793e-05, 3.26850793e-05, 3.26850793e-03])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="sample-the-posterior-distribution">
+<h3>Sample the posterior distribution<a class="headerlink" href="#sample-the-posterior-distribution" title="Permalink to this heading">#</a></h3>
+<p>Sample the posterior distribution</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">sample_posterior</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.1 ,  0.47,  0.71,  0.99,  1.16,  1.26,  1.65,  1.86,  1.86,
+        1.89,  1.89,  2.03,  2.1 ,  2.1 ,  2.21,  2.21,  2.21,  2.21,
+        2.29,  2.29,  2.56,  2.56,  2.6 ,  2.68,  2.75,  2.75,  2.77,
+        3.11,  3.19,  3.27,  3.35,  3.59,  3.73,  3.73,  3.81,  3.81,
+        4.  ,  4.  ,  4.  ,  4.17,  4.22,  4.42,  4.55,  4.59,  5.12,
+        5.26,  5.34,  5.36,  5.43,  5.59,  5.8 ,  6.04,  6.04,  6.13,
+        6.15,  6.25,  6.59,  6.88,  6.97,  6.97,  7.26,  8.38,  8.92,
+        9.45,  9.45,  9.45, 10.07, 10.08, 10.67, 12.36, 15.01, 15.01,
+       16.36, 17.52, 17.52, 17.52, 17.89, 17.89, 18.36, 18.36, 18.97,
+       22.38, 23.18, 23.5 , 23.65, 23.65, 23.73, 23.73, 38.69, 41.85,
+       50.06, 53.78, 60.34, 60.61, 61.06, 61.06, 61.06, 62.89, 64.4 ,
+       75.67])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-90-interval-of-the-predictions">
+<h3>The 90% interval of the predictions<a class="headerlink" href="#the-90-interval-of-the-predictions" title="Permalink to this heading">#</a></h3>
+<p>The 90% interval of the predictions : <code class="docutils literal notranslate"><span class="pre">forecast_object.compute_percentiles()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">compute_percentiles</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.589,  2.77 ,  6.26 , 13.75 , 59.73 ])
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># prior_locations = other_report.df[(other_report.df.parent_boundary == &#39;aare&#39;)&amp;(other_report.df.feature_type == &#39;l&#39;)].location.unique()</span>
-<span class="c1"># prior_data = other_land_use.df_cat[other_land_use.df_cat.location.isin(prior_locations)]</span>
-<span class="c1"># prior_data.to_csv(&#39;sample_by_weight.csv&#39;, index=False)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prior_report</span><span class="o">.</span><span class="n">sampling_results_summary</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;total&#39;: 44911,
+ &#39;nsamples&#39;: 142,
+ &#39;average&#39;: 8.371830985915492,
+ &#39;quantiles&#39;: array([ 0.812 ,  2.6925,  4.905 ,  9.63  , 28.09  ]),
+ &#39;std&#39;: 10.433750262241018,
+ &#39;max&#39;: 77.1,
+ &#39;start&#39;: Timestamp(&#39;2015-11-23 00:00:00&#39;),
+ &#39;end&#39;: Timestamp(&#39;2019-10-24 00:00:00&#39;)}
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell tag_remove-input docutils container">
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">forecast_object</span><span class="o">.</span><span class="n">prior</span> 
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
 </div>
-<div class="cell tag_remove-input docutils container">
 </div>
-<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7710
+142
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -734,24 +875,32 @@ Default parameters and methods</label><div class="sd-tab-content docutils">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assumptions-of-the-model-about-the-sample-data">Assumptions of the model about the sample data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-probability">Conditional probability</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formal-definition">Formal Definition</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bayes-theorem">Bayes’ theorem</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#prior-knowledge">Prior knowledge</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-bayes">Empirical Bayes</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conjugate-prior">Conjugate prior</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#deriving-conjugate-relationship">Deriving conjugate relationship</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-approximation">Grid Approximation</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-bayes-grid-approximation-using-a-conjugate-prior">Empirical Bayes grid approximation using a conjugate prior</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#deriving-conjugate-relationship">Deriving conjugate relationship</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-bayes-grid-approximation-using-a-conjugate-prior">Empirical Bayes grid approximation using a conjugate prior</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-grid-forecaster">The grid forecaster</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predict-density-from-past-experiences">Predict density from past experiences</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#predict-density-given-similar-locations">Predict density given similar locations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#different-priors-different-points-of-view">Different priors = different points of view</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-probability-of-finding-one-object">The probability of finding one object</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-grid-forecast">Using the grid forecast</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-grid-size">The grid size</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-counts">The counts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-posterior-parameters">The posterior parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-posterior-distribution">The posterior distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-the-posterior-distribution">Sample the posterior distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-90-interval-of-the-predictions">The 90% interval of the predictions</a></li>
 </ul>
 </li>
 </ul>
