@@ -60,12 +60,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'display_reports';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Grid forecast" href="forecasts.html" />
+    <link rel="next" title="Survey report class" href="a_report_class.html" />
     <link rel="prev" title="Canton Vaud" href="vaud.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -152,14 +150,15 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Methods and classes</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="forecasts.html">Grid forecast</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a_report_class.html">Survey report class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="landuse_class.html">Land use class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forecasts.html">Forecasts</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="the_survey_data.html">The survey data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="extracting_topo_data.html">Extracting land use values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cantonal_report.html">Grid forecast</a></li>
 </ul>
 
     </div>
@@ -305,10 +304,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-probability-of-finding-one-object">The probability of finding one object</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#is-their-more-now-than-there-was-before">Is their more now than there was before ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-is-the-cleanest-beach">Where is the cleanest beach ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-much-of-the-items-are-single-use-plastics">How much of the items are single use plastics ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-much-of-the-items-can-you-identify">How much of the items can you identify ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-objects-are-common-to-all-cantons">What objects are common to all cantons ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-chance-of-finding-x">What is the chance of finding X ?</a></li>
 </ul>
             </nav>
         </div>
@@ -353,76 +354,28 @@ document.write(`
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="use-cases">
 <h1>Use cases<a class="headerlink" href="#use-cases" title="Permalink to this heading">#</a></h1>
-<div class="section" id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h2>
-<div class="section" id="the-probability-of-finding-one-object">
-<h3>The probability of finding one object<a class="headerlink" href="#the-probability-of-finding-one-object" title="Permalink to this heading">#</a></h3>
-<p>Here we consider the following question:</p>
-<ol class="arabic simple">
-<li><p>What are the chances of finding at least one <em>O</em> if I go to the beach at <em>C</em> ?</p></li>
-</ol>
-<p>Where <em>O</em> is some object of interest that is in the list of items identified on the beach (there are 229 options) and C is a lake or municipality on a lake.</p>
-<p>This example was first tested in November 2021 at the request of members from an environmental organization that was visiting Lake Geneva, <a class="reference external" href="https://hammerdirt-analyst.github.io/finding-one-object/titlepage.html">finding one object</a>. This value was initially expected to be approximately 40%. The method of calculation was the Beta-Binomial conjugate pair. Instead of considering all the values on the grid we consider only two results: was the number found greater than zero or not. From the general form in (1) we get:</p>
-<blockquote>
-<div><p>What is the chance of finding at least one feminine hygiene product at the beach on Lac Léman ?</p>
-</div></blockquote>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-0">
-Steps to complete the calculation</label><div class="sd-tab-content docutils">
-<ol class="arabic simple">
-<li><p>identify the codes for the items of interest: <code class="docutils literal notranslate"><span class="pre">G96</span></code> and <code class="docutils literal notranslate"><span class="pre">G144</span></code></p></li>
-<li><p>define the region of interest: <code class="docutils literal notranslate"><span class="pre">lac-leman</span></code></p></li>
-<li><p>define the date range of the likelihood : <code class="docutils literal notranslate"><span class="pre">{'start':'2020-01-01',</span> <span class="pre">'end':'2021-11-01'}</span></code></p></li>
-<li><p>define the date range of the prior :  <code class="docutils literal notranslate"><span class="pre">{'start':'2015-11-15',</span> <span class="pre">'end':'2019-12-31'}</span></code></p></li>
-</ol>
-<p class="rubric">The likelihood and prior</p>
-<p>The likelihood data is defined as all the data collected durring the current sampling campaign, up to one week before the planned event in Geneva. The prior data is all collected in the previous sampling campaigns, not including results from locations in the likelihod. In both cases we are considering only the codes G96 and G144.</p>
+<p>How each stake holder interprets the data is dependent on the use case. Here we present the answers to some of the most common questions that can be answered using the report or the methods desccribed in this document.</p>
+<div class="section" id="is-their-more-now-than-there-was-before">
+<h2>Is their more now than there was before ?<a class="headerlink" href="#is-their-more-now-than-there-was-before" title="Permalink to this heading">#</a></h2>
+<p><strong>How do you know ?</strong></p>
 </div>
-<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-1">
-Default parameters and methods</label><div class="sd-tab-content docutils">
-<p><strong>Default parameters</strong></p>
-<ol class="arabic simple">
-<li><p>range of the default index <span class="math notranslate nohighlight">\(X = \{ x \in \mathbb{R} \mid x = 0.1k, \; k \in \mathbb{Z}, \; 0 \leq x &lt; 100 \}\)</span></p>
-<ul class="simple">
-<li><p>or <code class="docutils literal notranslate"><span class="pre">np.arange(0,</span> <span class="pre">100,</span> <span class="pre">0.1)</span></code></p></li>
-</ul>
-</li>
-<li><p>Max range of forecast grid = <span class="math notranslate nohighlight">\(\max_{i} \{ x_i \} \text{ or } P_{99} = \text{percentile}_{99} \{ x_i \}\)</span></p></li>
-<li><p>The magnitude of the land use for each survey location is categorized in the following manner:</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\text{binning}(x) = 
-\begin{cases} 
-1 &amp; \text{if } -1 \leq x &lt; 0.2 \\
-2 &amp; \text{if } 0.2 \leq x &lt; 0.4 \\
-3 &amp; \text{if } 0.4 \leq x &lt; 0.6 \\
-4 &amp; \text{if } 0.6 \leq x &lt; 0.8 \\
-5 &amp; \text{if } 0.8 \leq x \leq 1 
-\end{cases},
-\text{ where x is the \% of land occupied by a land-use feature } 
-\end{split}\]</div>
-<p><strong>Distributions</strong></p>
-<p>The posterior distribution is <span class="math notranslate nohighlight">\(P(\text{Likelihood} \mid \text{Prior}) \approx \text{Dirichlet}(\alpha)\)</span> or more commonly: <span class="math notranslate nohighlight">\(P(\theta \mid \mathbf{X}) \approx  text{Dirichlet}(\alpha + \mathbf{n})\)</span></p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(\theta\)</span> is the parameters of the Dirichlet distribution</p></li>
-<li><p><span class="math notranslate nohighlight">\(\mathbf{X}\)</span> is the observed data</p></li>
-<li><p><span class="math notranslate nohighlight">\(\alpha\)</span> is the parameters of the prior Dirichlet distribution</p></li>
-<li><p><span class="math notranslate nohighlight">\(\mathbf{n}\)</span> is the count data from the likelihood</p></li>
-</ol>
-<p><strong>Forecasted samples</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*}
-\theta &amp;\sim \text{Dirichlet}(\alpha) \\
-\mathbf{X} \mid \theta &amp;\sim \text{Multinomial}(N, \theta)
-\end{align*}
-\end{split}\]</div>
+<div class="section" id="where-is-the-cleanest-beach">
+<h2>Where is the cleanest beach ?<a class="headerlink" href="#where-is-the-cleanest-beach" title="Permalink to this heading">#</a></h2>
+<p><strong>How do you find the cleanest locations ?</strong></p>
 </div>
+<div class="section" id="how-much-of-the-items-are-single-use-plastics">
+<h2>How much of the items are single use plastics ?<a class="headerlink" href="#how-much-of-the-items-are-single-use-plastics" title="Permalink to this heading">#</a></h2>
+<p><strong>Is their more now than there was before ?</strong></p>
 </div>
+<div class="section" id="how-much-of-the-items-can-you-identify">
+<h2>How much of the items can you identify ?<a class="headerlink" href="#how-much-of-the-items-can-you-identify" title="Permalink to this heading">#</a></h2>
+<p><strong>Is their more now than there was before ?</strong></p>
 </div>
+<div class="section" id="what-objects-are-common-to-all-cantons">
+<h2>What objects are common to all cantons ?<a class="headerlink" href="#what-objects-are-common-to-all-cantons" title="Permalink to this heading">#</a></h2>
+</div>
+<div class="section" id="what-is-the-chance-of-finding-x">
+<h2>What is the chance of finding X ?<a class="headerlink" href="#what-is-the-chance-of-finding-x" title="Permalink to this heading">#</a></h2>
 </div>
 </div>
 
@@ -467,11 +420,11 @@ Default parameters and methods</label><div class="sd-tab-content docutils">
       </div>
     </a>
     <a class="right-next"
-       href="forecasts.html"
+       href="a_report_class.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Grid forecast</p>
+        <p class="prev-next-title">Survey report class</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -493,10 +446,12 @@ Default parameters and methods</label><div class="sd-tab-content docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-probability-of-finding-one-object">The probability of finding one object</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#is-their-more-now-than-there-was-before">Is their more now than there was before ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-is-the-cleanest-beach">Where is the cleanest beach ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-much-of-the-items-are-single-use-plastics">How much of the items are single use plastics ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-much-of-the-items-can-you-identify">How much of the items can you identify ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-objects-are-common-to-all-cantons">What objects are common to all cantons ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-chance-of-finding-x">What is the chance of finding X ?</a></li>
 </ul>
   </nav></div>
 

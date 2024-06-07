@@ -12,15 +12,16 @@ parts:
     - file: display_reports
     
   - caption: Methods and classes
-    chapters:
-    - file: forecasts
+    chapters:    
     - file: a_report_class
     - file: landuse_class
+    - file: forecasts
   
   - caption: Annex
-    chapters:
+    chapters:    
     - file: the_survey_data
     - file: extracting_topo_data
+    - file: cantonal_report
 
 
 

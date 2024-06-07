@@ -404,10 +404,10 @@ class MulitnomialDirichlet:
         if x < 0 or x > self.grid.max():
             raise ValueError("x must be within the range of the grid.")
 
-        posterior_samples = self.posterior_dist.rvs(10000)
+        posterior_samples = self.posterior_dist.rvs(1000)
         mp = np.mean(posterior_samples, axis=0)
-        bin_index = np.digitize([x], self.grid)[0] - 1
-        return mp[bin_index]
+        bin_index = np.digitize([x], self.grid)
+        return mp, bin_index, posterior_samples
 
     def get_descriptive_statistics(self):
         average = np.mean(self.sample_posterior())

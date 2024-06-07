@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Field observations to machine learning &#8212; Feb 2024</title>
+    <title>The litter assistant &#8212; Feb 2024</title>
   
   
   
@@ -149,14 +149,15 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Methods and classes</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="forecasts.html">Grid forecast</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a_report_class.html">Survey report class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="landuse_class.html">Land use class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forecasts.html">Forecasts</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="the_survey_data.html">The survey data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="extracting_topo_data.html">Extracting land use values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cantonal_report.html">Grid forecast</a></li>
 </ul>
 
     </div>
@@ -292,7 +293,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Field observations to machine learning</h1>
+    <h1>The litter assistant</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -302,11 +303,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#draft-in-process">Draft in process</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-litter-assistant">The litter assistant</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#this-work-is-the-result-of-the-previous-projects">This work is the result of the previous projects:</a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a></li>
 </ul>
             </nav>
@@ -319,35 +315,57 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="field-observations-to-machine-learning">
-<h1>Field observations to machine learning<a class="headerlink" href="#field-observations-to-machine-learning" title="Permalink to this heading">#</a></h1>
-<div class="section" id="draft-in-process">
-<h2>Draft in process<a class="headerlink" href="#draft-in-process" title="Permalink to this heading">#</a></h2>
-<p>Notes, prototype code and data checking for API that formats the data and methods of a ChatGPT research assistant.</p>
-<p>The UX and final app structure can be tested here (! the llm is not yet attached): <a class="reference external" href="https://litterassistant.streamlit.app/">litter assisstant</a></p>
-<p>Interested contributors can check the repo: <a class="github reference external" href="https://github.com/hammerdirt-analyst/litterassistant">hammerdirt-analyst/litterassistant</a></p>
-<div class="section" id="the-litter-assistant">
-<h3>The litter assistant<a class="headerlink" href="#the-litter-assistant" title="Permalink to this heading">#</a></h3>
+  <div class="tex2jax_ignore mathjax_ignore section" id="the-litter-assistant">
+<h1>The litter assistant<a class="headerlink" href="#the-litter-assistant" title="Permalink to this heading">#</a></h1>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-0 sd-g-xs-0 sd-g-sm-0 sd-g-md-0 sd-g-lg-0 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/hammerdirt.png"><img alt="bob" class="bg-primary mb-1 align-center" src="_images/hammerdirt.png" style="width: 400px;" /></a>
-<p>The assistants function is to assist the researcher in placing the current litter survey results within the context of their own projects. This includes conducting analysis that is not considered in the federal report. Another example is defining reports on administrative boundaries that are not considered in the federal report.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text"><a class="github reference external" href="https://github.com/hammerdirt-analyst/IQAASL-End-0f-Sampling-2021">hammerdirt-analyst/IQAASL-End-0f-Sampling-2021</a></p></li>
+<li><p class="sd-card-text"><a class="github reference external" href="https://github.com/hammerdirt-analyst/cantonal_reports">hammerdirt-analyst/cantonal_reports</a></p></li>
+<li><p class="sd-card-text"><a class="github reference external" href="https://github.com/hammerdirt-analyst/solid-waste-team">hammerdirt-analyst/solid-waste-team</a></p></li>
+<li><p class="sd-card-text"><a class="github reference external" href="https://github.com/hammerdirt-analyst/landuse">hammerdirt-analyst/landuse</a></p></li>
+<li><p class="sd-card-text">plastock project with <a class="reference external" href="https://asleman.org/">ASL</a></p></li>
+<li><p class="sd-card-text"><a class="github reference external" href="https://github.com/hammerdirt-analyst/finding-one-object">hammerdirt-analyst/finding-one-object</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>The UX and final app structure can be tested here (! the llm is not yet attached): <a class="reference external" href="https://litterassistant.streamlit.app/">litter assisstant</a></p>
+<p>Interested contributors can check the repo: <a class="github reference external" href="https://github.com/hammerdirt-analyst/litterassistant">hammerdirt-analyst/litterassistant</a>
+The assistants function is to assist the researcher in placing the current litter survey results within the context of their own projects. This includes conducting analysis that is not considered in the federal report. Another example is defining reports on administrative boundaries that are not considered in the federal report.</p>
 <p>The <em>checking the assistant</em> section is where users can check the data and methods of the assistant.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>We have reproduced the figures in all the reports produced thus far. We are now training the model to defaults so
 that clients have access to a standardised display of the results.</p>
-</div>
-</div>
-<div class="section" id="this-work-is-the-result-of-the-previous-projects">
-<h3>This work is the result of the previous projects:<a class="headerlink" href="#this-work-is-the-result-of-the-previous-projects" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p><a class="github reference external" href="https://github.com/hammerdirt-analyst/IQAASL-End-0f-Sampling-2021">hammerdirt-analyst/IQAASL-End-0f-Sampling-2021</a></p></li>
-<li><p><a class="github reference external" href="https://github.com/hammerdirt-analyst/cantonal_reports">hammerdirt-analyst/cantonal_reports</a></p></li>
-<li><p><a class="github reference external" href="https://github.com/hammerdirt-analyst/solid-waste-team">hammerdirt-analyst/solid-waste-team</a></p></li>
-<li><p><a class="github reference external" href="https://github.com/hammerdirt-analyst/landuse">hammerdirt-analyst/landuse</a></p></li>
-<li><p>plastock project with <a class="reference external" href="https://asleman.org/">ASL</a></p></li>
-<li><p><a class="github reference external" href="https://github.com/hammerdirt-analyst/finding-one-object">hammerdirt-analyst/finding-one-object</a></p></li>
-</ul>
-</div>
 </div>
 <div class="section" id="questions">
 <h2>Questions<a class="headerlink" href="#questions" title="Permalink to this heading">#</a></h2>
@@ -419,11 +437,6 @@ that clients have access to a standardised display of the results.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#draft-in-process">Draft in process</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-litter-assistant">The litter assistant</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#this-work-is-the-result-of-the-previous-projects">This work is the result of the previous projects:</a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions">Questions</a></li>
 </ul>
   </nav></div>
