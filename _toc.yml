@@ -6,10 +6,10 @@ root: titlepage
 parts:
   - caption: Data and reporting
     chapters:
-    - file: gpt_data
     - file: bern
     - file: vaud
     - file: display_reports
+    - file: project
     
   - caption: Methods and classes
     chapters:    

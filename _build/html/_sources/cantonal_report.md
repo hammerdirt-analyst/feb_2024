@@ -1,15 +1,11 @@
 (gridforecaster)=
 # Grid forecast
 
-We consider that forecasting or predicting is the process of making statements about events that have yet to occurr. In this case we are using historical results to form our opinion about the probability of an event in the future. The event we considering is rather pedestrian:
+We consider that forecasting or predicting is the process of making statements about events that have yet to occurr. In this case we are using historical results to form our opinion about the probability of an event in the future. The event we are considering is rather pedestrian:
 
 > What will I find at the beach today, given what has been found at __other similar__ beaches or what was found at the beach in the past ?
 
-Which means that our estimation of the objects we are likely to find is based on our own experience as well as the experience of others under similar conditions. This reasoning does not tell us about the reason why the object has bypassed the elaborate system put in place to prevent it from ending up on the beach. 
-
-We do, however, identify quantifiable vectors that certainly contain the cause. The vectors come directly from the official topographical map for the territory. As a result locations can be grouped according to the magnitude of the vector that has been derived from the topographical map. By comparing local results to national results with a quantifiable vector we have a very efficient way to combine experiences beyond a geographic limit. Thus we can estimate the comparison from one location using the results from locations that have similar attributes but not geographically related.
-
-Here we show how the `gridforecast` module works. Specifically the different methods of the  `gridforecast.MulitnomialDirichlet` class. It is a grid aproximation in Bayesien framework. We start the process with conditional probability, make the connection with Bayes` theorem and finish with the conjugate relationship Dirichlet-Multinomial. The application to survey data is implemented in scipy and numpy. 
+Which means that the estimation of the most common objects we are likely to find is based on our own experience as well as the experience of others under similar conditions. 
 
 Our first consideration, however, is wether or not our research question is comensurate with our assumptions of the model. Otherwise no amount of mathematical manipulation will persuade a reasonable individual that an outstanding or extreme result is probable when there is no evidence that rises to the same level.
 
