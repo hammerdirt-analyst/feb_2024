@@ -1,6 +1,6 @@
 # Proposal
 
-The challenge in front of us is to transform the observations into accurate and actionable information for two different purposes. There is the administration of the territory and identification of priorities with regard to plastics in the environment. Once the priorities have been established, the relevant data must now be communicated to the targeted population. In the first use case, which is a decision support role, we do not want to simplify/aggregate the data in such a way that the stake holders appreciation of the subject is reduced. 
+The challenge in front of us is to transform the observations into accurate and actionable information for two different purposes. There is the administration of the territory and identification of priorities with regard to plastics in the environment. Then, once the priorities have been established these new indicators must be reported on. This project concerns the infrastructure and processes necessary to identify priorities and develop indicators to reduce plastics in the environment from litter density counts.
 
 Therefore, we propose a haromnised reporting system that is administered by regional or national NGOS in collaboration with an academic partner with the stated goal of producing reliable reports for the public administration and others who communicate on such matters. This allows administrations to identify priorities and set baseline values according to agreed upon and observed indicators. 
 
