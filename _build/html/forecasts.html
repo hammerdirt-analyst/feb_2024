@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forecasts &#8212; Feb 2024</title>
+    <title>Grid forecast class &#8212; Feb 2024</title>
   
   
   
@@ -144,21 +144,25 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data and reporting</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="bern.html">Canton Bern</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geneve.html">Canton Genève</a></li>
+<li class="toctree-l1"><a class="reference internal" href="valais.html">Canton Valais</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vaud.html">Canton Vaud</a></li>
-<li class="toctree-l1"><a class="reference internal" href="display_reports.html">Use cases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="project.html">Project proposal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zurich.html">Canton Zürich</a></li>
+<li class="toctree-l1"><a class="reference internal" href="combined.html">Canton - combined</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use_cases.html">Use cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">Proposal</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Methods and classes</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="a_report_class.html">Survey report class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="landuse_class.html">Land use class</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Forecasts</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Grid forecast class</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="the_survey_data.html">The survey data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="extracting_topo_data.html">Extracting land use values</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cantonal_report.html">Grid forecast</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multinomial_conjugate.html">Empirical Bayes</a></li>
 </ul>
 
     </div>
@@ -294,7 +298,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Forecasts</h1>
+    <h1>Grid forecast class</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -331,8 +335,8 @@ document.write(`
                   
   <div class="cell tag_remove-input docutils container">
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="forecasts">
-<h1>Forecasts<a class="headerlink" href="#forecasts" title="Permalink to this heading">#</a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="grid-forecast-class">
+<h1>Grid forecast class<a class="headerlink" href="#grid-forecast-class" title="Permalink to this heading">#</a></h1>
 <p>The <em>grid forecaster</em> refers to the methods defined in <code class="docutils literal notranslate"><span class="pre">gridforecast.py</span></code>. The main purpose of the <em>grid forecaster</em> is to implement estimate the probability that a survey result <em>y</em> from a collection of survey results <em>Y</em> will exceed a value <em>x</em> on the grid <em>X</em> from 0 - max(<em>X</em>) for every <em>x</em> spaced 0.1, where max(<em>X</em>) is defined by <em>Y</em>. This is called a grid approximation, in this case we use a Bayesien framework and implement <em>multinomila-Dirichlet</em> conjugate to estimate the probabilities on each point of the grid. The complete method is a defined in <span class="xref myst">grid approximation</span>.</p>
 <p>The grid forecast for any two arrays can be initiated by calling <code class="docutils literal notranslate"><span class="pre">gridforecast.MulitnomialDirichlet</span></code> and providing two pd.series of float values. However, for reporting we use the grid forecast to supplement the <a class="reference internal" href="a_report_class.html#surveyreporter"><span class="std std-ref">SurveyReport</span></a> and the <a class="reference internal" href="landuse_class.html#landusereporter"><span class="std std-ref">LandUseReport</span></a>.</p>
 <div class="admonition note">
@@ -475,18 +479,18 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.35,  0.74,  0.74,  1.  ,  1.16,  1.16,  1.16,  1.41,  1.41,
-        1.43,  1.43,  1.75,  2.03,  2.03,  2.1 ,  2.21,  2.31,  2.32,
-        2.47,  2.6 ,  2.6 ,  2.6 ,  2.6 ,  2.7 ,  2.74,  2.74,  2.8 ,
-        3.03,  3.25,  3.27,  3.33,  3.33,  3.57,  3.81,  4.01,  4.22,
-        4.22,  4.42,  4.53,  4.55,  4.71,  4.74,  4.74,  4.74,  4.78,
-        4.78,  4.93,  4.93,  5.59,  5.8 ,  6.04,  6.85,  6.86,  8.55,
-        8.65,  9.09,  9.69, 11.77, 12.36, 12.67, 12.99, 13.75, 13.75,
-       14.38, 14.52, 15.92, 17.54, 17.54, 18.97, 20.97, 22.38, 22.8 ,
-       24.25, 24.34, 24.34, 24.65, 28.62, 28.62, 33.74, 41.19, 43.78,
-       47.64, 48.33, 48.56, 52.35, 53.89, 63.02, 64.14, 64.14, 66.17,
-       66.82, 66.82, 66.84, 69.75, 69.75, 75.5 , 75.75, 75.75, 76.42,
-       77.06])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.44,  0.55,  0.71,  0.81,  0.85,  1.26,  1.26,  1.41,  1.43,
+        1.5 ,  1.59,  1.59,  1.65,  1.75,  1.76,  1.76,  1.86,  1.89,
+        1.89,  2.03,  2.1 ,  2.15,  2.21,  2.4 ,  2.45,  2.56,  2.57,
+        2.57,  2.57,  2.57,  2.64,  2.69,  2.74,  3.41,  3.46,  3.73,
+        4.01,  4.76,  4.76,  5.39,  5.43,  5.59,  6.29,  6.29,  6.43,
+        6.55,  6.85,  6.94,  6.94,  6.95,  6.97,  7.26,  7.4 ,  7.68,
+        8.4 ,  8.92,  9.57,  9.69, 10.07, 10.56, 10.64, 10.67, 10.67,
+       10.67, 11.62, 12.37, 12.37, 12.61, 13.6 , 15.74, 18.36, 18.61,
+       18.9 , 19.26, 22.38, 22.38, 23.73, 27.33, 28.13, 31.53, 31.98,
+       33.55, 34.73, 35.57, 37.77, 39.36, 39.54, 40.69, 41.74, 44.1 ,
+       46.96, 47.76, 50.51, 51.84, 51.92, 53.96, 59.09, 70.24, 70.24,
+       75.28])
 </pre></div>
 </div>
 </div>
@@ -500,7 +504,7 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 1.  ,  2.87,  6.25, 17.54, 59.5 ])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.74  ,  2.8   ,  7.065 , 22.18  , 58.5515])
 </pre></div>
 </div>
 </div>
@@ -514,7 +518,7 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.18, 60.93)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.18, 58.83)
 </pre></div>
 </div>
 </div>
@@ -546,7 +550,7 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9284483972879759
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9288737193351585
 </pre></div>
 </div>
 </div>
@@ -561,9 +565,9 @@ document.write(`
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;code&#39;: &#39;comb&#39;,
- &#39;average&#39;: 11.873,
- &#39;hdi&#39;: (0.1, 57.69),
- &#39;range&#39;: array([ 0.807,  2.61 ,  5.84 , 17.54 , 68.541]),
+ &#39;average&#39;: 17.717200000000002,
+ &#39;hdi&#39;: (0.18, 65.66),
+ &#39;range&#39;: array([ 0.64  ,  2.86  ,  6.9   , 19.17  , 59.2875]),
  &#39;max_observed&#39;: 77.1}
 </pre></div>
 </div>
@@ -627,82 +631,82 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>('zurichsee_kusnachterhorn_thirkell-whitej', '...</td>
-      <td>zurichsee_kusnachterhorn_thirkell-whitej</td>
-      <td>2018-01-28</td>
-      <td>51</td>
-      <td>3.63</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
+      <td>('aare_kehrsatz_stolten', '2017-07-03')</td>
+      <td>aare_kehrsatz_stolten</td>
+      <td>2017-07-03</td>
       <td>5</td>
+      <td>0.10</td>
+      <td>1</td>
+      <td>3</td>
       <td>1</td>
       <td>1</td>
+      <td>2</td>
+      <td>1</td>
+      <td>3</td>
       <td>1</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>('zugersee_immensee_guedesd', '2017-04-30')</td>
-      <td>zugersee_immensee_guedesd</td>
-      <td>2017-04-30</td>
-      <td>170</td>
-      <td>8.15</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
+      <td>('birs_basel_laderachs', '2018-03-24')</td>
+      <td>birs_basel_laderachs</td>
+      <td>2018-03-24</td>
+      <td>31</td>
+      <td>1.12</td>
       <td>1</td>
       <td>3</td>
-      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4</td>
+      <td>1</td>
+      <td>1</td>
       <td>1</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>('aare_koniz_hoppej', '2017-12-25')</td>
-      <td>aare_koniz_hoppej</td>
-      <td>2017-12-25</td>
-      <td>47</td>
-      <td>2.16</td>
+      <td>('limmat_zurich_mortensena_meiera', '2017-08-07')</td>
+      <td>limmat_zurich_mortensena_meiera</td>
+      <td>2017-08-07</td>
+      <td>39</td>
+      <td>1.32</td>
       <td>1</td>
-      <td>4</td>
+      <td>3</td>
       <td>1</td>
       <td>1</td>
-      <td>4</td>
+      <td>5</td>
       <td>1</td>
       <td>1</td>
       <td>1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>('villa-barton', '2016-04-10')</td>
-      <td>villa-barton</td>
-      <td>2016-04-10</td>
-      <td>79</td>
-      <td>5.63</td>
+      <td>('birs_reinach_dinuccin', '2017-05-29')</td>
+      <td>birs_reinach_dinuccin</td>
+      <td>2017-05-29</td>
+      <td>138</td>
+      <td>3.86</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4</td>
       <td>2</td>
-      <td>2</td>
       <td>1</td>
       <td>1</td>
-      <td>5</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>('thur_schwarzenbach_meiliw', '2017-05-03')</td>
-      <td>thur_schwarzenbach_meiliw</td>
-      <td>2017-05-03</td>
-      <td>41</td>
-      <td>0.54</td>
+      <td>('vierwaldstattersee_weggis_schoberls_1', '201...</td>
+      <td>vierwaldstattersee_weggis_schoberls_1</td>
+      <td>2018-01-27</td>
+      <td>5</td>
+      <td>0.21</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
       <td>1</td>
       <td>2</td>
       <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>1</td>
-      <td>3</td>
+      <td>4</td>
       <td>1</td>
     </tr>
   </tbody>
@@ -722,10 +726,10 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;range&#39;: array([ 0.3  ,  1.   ,  2.2  ,  4.525, 16.51 ]),
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;range&#39;: array([0.3  , 0.675, 2.3  , 4.7  , 9.97 ]),
  &#39;nsamples&#39;: 100,
- &#39;average&#39;: 4.4830000000000005,
- &#39;hdi&#39;: (0.2, 18.6)}
+ &#39;average&#39;: 3.6220000000000003,
+ &#39;hdi&#39;: (0.1, 15.100000000000001)}
 </pre></div>
 </div>
 </div>

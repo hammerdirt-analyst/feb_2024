@@ -86,6 +86,12 @@ The proposal is thus to establish a hub that is dedicated to the collection, cle
 
 :::
 
+:::{dropdown} Cost
+
+> Less than 1% of the estimated cost to prevent and remove litter annualy in Switzerland. [BAFU/OFEV - litter costs](https://www.bafu.admin.ch/bafu/en/home/topics/waste/publications-studies/publications/litter-dropping-costs-money.html)
+
+:::
+
 
 ## Interested ?
 

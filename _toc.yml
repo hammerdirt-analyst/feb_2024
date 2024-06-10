@@ -7,8 +7,12 @@ parts:
   - caption: Data and reporting
     chapters:
     - file: bern
+    - file: geneve
+    - file: valais
     - file: vaud
-    - file: display_reports
+    - file: zurich
+    - file: combined
+    - file: use_cases
     - file: project
     
   - caption: Methods and classes
@@ -21,7 +25,7 @@ parts:
     chapters:    
     - file: the_survey_data
     - file: extracting_topo_data
-    - file: cantonal_report
+    - file: multinomial_conjugate
 
 
 

@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'bern';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Canton Vaud" href="vaud.html" />
+    <link rel="next" title="Canton Genève" href="geneve.html" />
     <link rel="prev" title="The litter assistant" href="titlepage.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -146,21 +146,25 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data and reporting</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Canton Bern</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geneve.html">Canton Genève</a></li>
+<li class="toctree-l1"><a class="reference internal" href="valais.html">Canton Valais</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vaud.html">Canton Vaud</a></li>
-<li class="toctree-l1"><a class="reference internal" href="display_reports.html">Use cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zurich.html">Canton Zürich</a></li>
+<li class="toctree-l1"><a class="reference internal" href="combined.html">Canton - combined</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use_cases.html">Use cases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="project.html">Proposal</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Methods and classes</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="a_report_class.html">Survey report class</a></li>
 <li class="toctree-l1"><a class="reference internal" href="landuse_class.html">Land use class</a></li>
-<li class="toctree-l1"><a class="reference internal" href="forecasts.html">Forecasts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forecasts.html">Grid forecast class</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="the_survey_data.html">The survey data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="extracting_topo_data.html">Extracting land use values</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cantonal_report.html">Grid forecast</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multinomial_conjugate.html">Empirical Bayes</a></li>
 </ul>
 
     </div>
@@ -337,6 +341,8 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
+<div class="cell tag_remove-input docutils container">
+</div>
 <div class="tex2jax_ignore mathjax_ignore section" id="canton-bern">
 <h1>Canton Bern<a class="headerlink" href="#canton-bern" title="Permalink to this heading">#</a></h1>
 <p><strong>Density of trash along lakes and rivers</strong></p>
@@ -381,7 +387,7 @@ Initial assessment: stakeholder discussion and priorities.<div class="sd-summary
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-Where does this data come from?<div class="sd-summary-down docutils">
+Map of survey locations<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -391,27 +397,12 @@ Where does this data come from?<div class="sd-summary-down docutils">
 <div class="sd-col sd-d-flex-row docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
-<img alt="_images/de80443bf63d9feb13e0d0bc9c8af7a80156af84f37b81529bd2cc62c8fc96d0.png" src="_images/de80443bf63d9feb13e0d0bc9c8af7a80156af84f37b81529bd2cc62c8fc96d0.png" />
-</div>
-<div class="sd-card-footer docutils">
-<p class="sd-card-text">The data is a combination of observations from variety of groups in Switerland since 2015. The observations were recorded using an interpretation of the <em>Guide for Monitoring Marine Litter on European Seas</em> <a class="reference external" href="https://mcc.jrc.ec.europa.eu/main/dev.py?N=41&amp;O=439&amp;titre_chap=TG%20Litter&amp;titre_page=Guidance%20for%20the%20Monitoring%20of%20Marine%20Litter">The guide</a>. The guide and the monitoring of beach litter are part of decades of research, here is the brief history <a class="reference external" href="https://link.springer.com/chapter/10.1007/978-3-319-16510-3_1">A Brief History of Marine Litter Research</a>.</p>
+<img alt="_images/f960e632ff90c5101a6b6fa992c215b7578ddd0d18ee3c4abbfe5a823a7d613e.png" src="_images/f960e632ff90c5101a6b6fa992c215b7578ddd0d18ee3c4abbfe5a823a7d613e.png" />
 </div>
 </div>
 </div>
 </div>
 </div>
-<p class="sd-card-text"><strong>Common sense guidance:</strong></p>
-<ol class="arabic simple">
-<li><p class="sd-card-text">The data should be considered as a reasonable estimate of the minimum amount of trash on the ground at the time of the survey.</p></li>
-<li><p class="sd-card-text">There are many sources of variance. We have considered the following:</p>
-<ul class="simple">
-<li><p class="sd-card-text">litter density between sampling groups.</p></li>
-<li><p class="sd-card-text">litter density with respect to topographical features.</p></li>
-</ul>
-</li>
-<li><p class="sd-card-text">There are differences in detect-ability and appearance for items of the same classification that are due to the effects of decomposition.</p></li>
-<li><p class="sd-card-text">Many surveyors are volunteers and have different levels of experience or physical constraints that limit what will actually be collected and counted.</p></li>
-</ol>
 </div>
 </details><div class="section" id="vital-statistics">
 <h2>Vital statistics<a class="headerlink" href="#vital-statistics" title="Permalink to this heading">#</a></h2>
@@ -434,38 +425,38 @@ All data</label><div class="sd-tab-content docutils">
 </ul>
 <p><strong>Material composition</strong></p>
 <div class="output text_html"><style type="text/css">
-#T_649d6 tr:nth-child(even) {
+#T_c00a2 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_649d6 tr:nth-child(odd) {
+#T_c00a2 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_649d6 tr {
+#T_c00a2 tr {
   font-size: 10px;
 }
-#T_649d6 th {
+#T_c00a2 th {
   background-color: #FFF;
   font-size: 12px;
   text-align: left;
   width: auto;
   word-break: keep-all;
 }
-#T_649d6 td {
+#T_c00a2 td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
 }
-#T_649d6 caption {
+#T_c00a2 caption {
   caption-side: bottom;
   font-size: 1em;
   text-align: left;
 }
 </style>
-<table id="T_649d6">
+<table id="T_c00a2">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_649d6_level0_col0" class="col_heading level0 col0" >% of total</th>
+      <th id="T_c00a2_level0_col0" class="col_heading level0 col0" >% of total</th>
     </tr>
     <tr>
       <th class="index_name level0" >material</th>
@@ -474,28 +465,28 @@ All data</label><div class="sd-tab-content docutils">
   </thead>
   <tbody>
     <tr>
-      <th id="T_649d6_level0_row0" class="row_heading level0 row0" >cloth</th>
-      <td id="T_649d6_row0_col0" class="data row0 col0" >4%</td>
+      <th id="T_c00a2_level0_row0" class="row_heading level0 row0" >cloth</th>
+      <td id="T_c00a2_row0_col0" class="data row0 col0" >4%</td>
     </tr>
     <tr>
-      <th id="T_649d6_level0_row1" class="row_heading level0 row1" >glass</th>
-      <td id="T_649d6_row1_col0" class="data row1 col0" >6%</td>
+      <th id="T_c00a2_level0_row1" class="row_heading level0 row1" >glass</th>
+      <td id="T_c00a2_row1_col0" class="data row1 col0" >6%</td>
     </tr>
     <tr>
-      <th id="T_649d6_level0_row2" class="row_heading level0 row2" >metal</th>
-      <td id="T_649d6_row2_col0" class="data row2 col0" >4%</td>
+      <th id="T_c00a2_level0_row2" class="row_heading level0 row2" >metal</th>
+      <td id="T_c00a2_row2_col0" class="data row2 col0" >4%</td>
     </tr>
     <tr>
-      <th id="T_649d6_level0_row3" class="row_heading level0 row3" >paper</th>
-      <td id="T_649d6_row3_col0" class="data row3 col0" >3%</td>
+      <th id="T_c00a2_level0_row3" class="row_heading level0 row3" >paper</th>
+      <td id="T_c00a2_row3_col0" class="data row3 col0" >3%</td>
     </tr>
     <tr>
-      <th id="T_649d6_level0_row4" class="row_heading level0 row4" >plastic</th>
-      <td id="T_649d6_row4_col0" class="data row4 col0" >76%</td>
+      <th id="T_c00a2_level0_row4" class="row_heading level0 row4" >plastic</th>
+      <td id="T_c00a2_row4_col0" class="data row4 col0" >76%</td>
     </tr>
     <tr>
-      <th id="T_649d6_level0_row5" class="row_heading level0 row5" >wood</th>
-      <td id="T_649d6_row5_col0" class="data row5 col0" >2%</td>
+      <th id="T_c00a2_level0_row5" class="row_heading level0 row5" >wood</th>
+      <td id="T_c00a2_row5_col0" class="data row5 col0" >2%</td>
     </tr>
   </tbody>
 </table>
@@ -576,38 +567,38 @@ Lakes</label><div class="sd-tab-content docutils">
 </ul>
 <p><strong>Material composition</strong></p>
 <div class="output text_html"><style type="text/css">
-#T_bddbf tr:nth-child(even) {
+#T_69a45 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_bddbf tr:nth-child(odd) {
+#T_69a45 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_bddbf tr {
+#T_69a45 tr {
   font-size: 10px;
 }
-#T_bddbf th {
+#T_69a45 th {
   background-color: #FFF;
   font-size: 12px;
   text-align: left;
   width: auto;
   word-break: keep-all;
 }
-#T_bddbf td {
+#T_69a45 td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
 }
-#T_bddbf caption {
+#T_69a45 caption {
   caption-side: bottom;
   font-size: 1em;
   text-align: left;
 }
 </style>
-<table id="T_bddbf">
+<table id="T_69a45">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_bddbf_level0_col0" class="col_heading level0 col0" >% of total</th>
+      <th id="T_69a45_level0_col0" class="col_heading level0 col0" >% of total</th>
     </tr>
     <tr>
       <th class="index_name level0" >material</th>
@@ -616,20 +607,20 @@ Lakes</label><div class="sd-tab-content docutils">
   </thead>
   <tbody>
     <tr>
-      <th id="T_bddbf_level0_row0" class="row_heading level0 row0" >glass</th>
-      <td id="T_bddbf_row0_col0" class="data row0 col0" >5%</td>
+      <th id="T_69a45_level0_row0" class="row_heading level0 row0" >glass</th>
+      <td id="T_69a45_row0_col0" class="data row0 col0" >5%</td>
     </tr>
     <tr>
-      <th id="T_bddbf_level0_row1" class="row_heading level0 row1" >metal</th>
-      <td id="T_bddbf_row1_col0" class="data row1 col0" >3%</td>
+      <th id="T_69a45_level0_row1" class="row_heading level0 row1" >metal</th>
+      <td id="T_69a45_row1_col0" class="data row1 col0" >3%</td>
     </tr>
     <tr>
-      <th id="T_bddbf_level0_row2" class="row_heading level0 row2" >paper</th>
-      <td id="T_bddbf_row2_col0" class="data row2 col0" >2%</td>
+      <th id="T_69a45_level0_row2" class="row_heading level0 row2" >paper</th>
+      <td id="T_69a45_row2_col0" class="data row2 col0" >2%</td>
     </tr>
     <tr>
-      <th id="T_bddbf_level0_row3" class="row_heading level0 row3" >plastic</th>
-      <td id="T_bddbf_row3_col0" class="data row3 col0" >84%</td>
+      <th id="T_69a45_level0_row3" class="row_heading level0 row3" >plastic</th>
+      <td id="T_69a45_row3_col0" class="data row3 col0" >84%</td>
     </tr>
   </tbody>
 </table>
@@ -710,38 +701,38 @@ Rivers</label><div class="sd-tab-content docutils">
 </ul>
 <p><strong>Material composition</strong></p>
 <div class="output text_html"><style type="text/css">
-#T_63f04 tr:nth-child(even) {
+#T_11f59 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_63f04 tr:nth-child(odd) {
+#T_11f59 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_63f04 tr {
+#T_11f59 tr {
   font-size: 10px;
 }
-#T_63f04 th {
+#T_11f59 th {
   background-color: #FFF;
   font-size: 12px;
   text-align: left;
   width: auto;
   word-break: keep-all;
 }
-#T_63f04 td {
+#T_11f59 td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
 }
-#T_63f04 caption {
+#T_11f59 caption {
   caption-side: bottom;
   font-size: 1em;
   text-align: left;
 }
 </style>
-<table id="T_63f04">
+<table id="T_11f59">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_63f04_level0_col0" class="col_heading level0 col0" >% of total</th>
+      <th id="T_11f59_level0_col0" class="col_heading level0 col0" >% of total</th>
     </tr>
     <tr>
       <th class="index_name level0" >material</th>
@@ -750,28 +741,28 @@ Rivers</label><div class="sd-tab-content docutils">
   </thead>
   <tbody>
     <tr>
-      <th id="T_63f04_level0_row0" class="row_heading level0 row0" >cloth</th>
-      <td id="T_63f04_row0_col0" class="data row0 col0" >15%</td>
+      <th id="T_11f59_level0_row0" class="row_heading level0 row0" >cloth</th>
+      <td id="T_11f59_row0_col0" class="data row0 col0" >15%</td>
     </tr>
     <tr>
-      <th id="T_63f04_level0_row1" class="row_heading level0 row1" >glass</th>
-      <td id="T_63f04_row1_col0" class="data row1 col0" >7%</td>
+      <th id="T_11f59_level0_row1" class="row_heading level0 row1" >glass</th>
+      <td id="T_11f59_row1_col0" class="data row1 col0" >7%</td>
     </tr>
     <tr>
-      <th id="T_63f04_level0_row2" class="row_heading level0 row2" >metal</th>
-      <td id="T_63f04_row2_col0" class="data row2 col0" >10%</td>
+      <th id="T_11f59_level0_row2" class="row_heading level0 row2" >metal</th>
+      <td id="T_11f59_row2_col0" class="data row2 col0" >10%</td>
     </tr>
     <tr>
-      <th id="T_63f04_level0_row3" class="row_heading level0 row3" >paper</th>
-      <td id="T_63f04_row3_col0" class="data row3 col0" >6%</td>
+      <th id="T_11f59_level0_row3" class="row_heading level0 row3" >paper</th>
+      <td id="T_11f59_row3_col0" class="data row3 col0" >6%</td>
     </tr>
     <tr>
-      <th id="T_63f04_level0_row4" class="row_heading level0 row4" >plastic</th>
-      <td id="T_63f04_row4_col0" class="data row4 col0" >52%</td>
+      <th id="T_11f59_level0_row4" class="row_heading level0 row4" >plastic</th>
+      <td id="T_11f59_row4_col0" class="data row4 col0" >52%</td>
     </tr>
     <tr>
-      <th id="T_63f04_level0_row5" class="row_heading level0 row5" >wood</th>
-      <td id="T_63f04_row5_col0" class="data row5 col0" >5%</td>
+      <th id="T_11f59_level0_row5" class="row_heading level0 row5" >wood</th>
+      <td id="T_11f59_row5_col0" class="data row5 col0" >5%</td>
     </tr>
   </tbody>
 </table>
@@ -838,6 +829,40 @@ Rivers</label><div class="sd-tab-content docutils">
 </div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
+How did we get this data ?<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 sd-p-2 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<img alt="_images/de80443bf63d9feb13e0d0bc9c8af7a80156af84f37b81529bd2cc62c8fc96d0.png" src="_images/de80443bf63d9feb13e0d0bc9c8af7a80156af84f37b81529bd2cc62c8fc96d0.png" />
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">The data is a combination of observations from variety of groups in Switerland since 2015. The observations were recorded using an interpretation of the <em>Guide for Monitoring Marine Litter on European Seas</em> <a class="reference external" href="https://mcc.jrc.ec.europa.eu/main/dev.py?N=41&amp;O=439&amp;titre_chap=TG%20Litter&amp;titre_page=Guidance%20for%20the%20Monitoring%20of%20Marine%20Litter">The guide</a>. The guide and the monitoring of beach litter are part of decades of research, here is the brief history <a class="reference external" href="https://link.springer.com/chapter/10.1007/978-3-319-16510-3_1">A Brief History of Marine Litter Research</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p class="sd-card-text"><strong>Common sense guidance:</strong></p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">The data should be considered as a reasonable estimate of the minimum amount of trash on the ground at the time of the survey.</p></li>
+<li><p class="sd-card-text">There are many sources of variance. We have considered the following:</p>
+<ul class="simple">
+<li><p class="sd-card-text">litter density between sampling groups.</p></li>
+<li><p class="sd-card-text">litter density with respect to topographical features.</p></li>
+</ul>
+</li>
+<li><p class="sd-card-text">There are differences in detect-ability and appearance for items of the same classification that are due to the effects of decomposition.</p></li>
+<li><p class="sd-card-text">Many surveyors are volunteers and have different levels of experience or physical constraints that limit what will actually be collected and counted.</p></li>
+</ol>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
 How to make a report<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
@@ -886,7 +911,7 @@ These proportions are compared to the <code class="docutils literal notranslate"
 <span class="n">this_land_use</span> <span class="o">=</span> <span class="n">geospatial</span><span class="o">.</span><span class="n">LandUseReport</span><span class="p">(</span><span class="n">target_df</span><span class="p">,</span> <span class="n">features</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sd-card-text">Each report and the inference method are documented: <a class="reference internal" href="a_report_class.html#surveyreporter"><span class="std std-ref">SurveyReport</span></a>, <a class="reference internal" href="landuse_class.html#landusereporter"><span class="std std-ref">LandUseReport</span></a>, <a class="reference internal" href="cantonal_report.html#gridforecaster"><span class="std std-ref">GridForecaster</span></a></p>
+<p class="sd-card-text">Each report and the inference method are documented: <a class="reference internal" href="a_report_class.html#surveyreporter"><span class="std std-ref">SurveyReport</span></a>, <a class="reference internal" href="landuse_class.html#landusereporter"><span class="std std-ref">LandUseReport</span></a>, <a class="reference internal" href="multinomial_conjugate.html#gridforecaster"><span class="std std-ref">GridForecaster</span></a></p>
 </div>
 </details></div>
 <div class="section" id="most-common-objects-2020-2021">
@@ -905,131 +930,131 @@ All data</label><div class="sd-tab-content docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-none docutils">
 <div class="sd-card-body docutils">
 <div class="output text_html"><style type="text/css">
-#T_46bd9 tr:nth-child(even) {
+#T_d5145 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_46bd9 tr:nth-child(odd) {
+#T_d5145 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_46bd9 tr {
+#T_d5145 tr {
   font-size: 10px;
 }
-#T_46bd9 th {
+#T_d5145 th {
   background-color: #FFF;
   font-size: 12px;
   text-align: left;
   width: auto;
   word-break: keep-all;
 }
-#T_46bd9 td {
+#T_d5145 td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
 }
-#T_46bd9 caption {
+#T_d5145 caption {
   caption-side: top;
   font-size: 1em;
   text-align: left;
   margin-bottom: 10px;
 }
-#T_46bd9 caption {
+#T_d5145 caption {
   caption-side: top;
   font-size: .9em;
   text-align: left;
   font-style: italic;
   color: #000;
 }
-#T_46bd9 td:nth-child(1) {
+#T_d5145 td:nth-child(1) {
   text-align: left;
 }
 </style>
-<table id="T_46bd9">
+<table id="T_d5145">
   <thead>
     <tr>
-      <th id="T_46bd9_level0_col0" class="col_heading level0 col0" >Object</th>
-      <th id="T_46bd9_level0_col1" class="col_heading level0 col1" >Quantity</th>
-      <th id="T_46bd9_level0_col2" class="col_heading level0 col2" >pcs/m</th>
-      <th id="T_46bd9_level0_col3" class="col_heading level0 col3" >% of total</th>
-      <th id="T_46bd9_level0_col4" class="col_heading level0 col4" >Fail rate</th>
+      <th id="T_d5145_level0_col0" class="col_heading level0 col0" >Object</th>
+      <th id="T_d5145_level0_col1" class="col_heading level0 col1" >Quantity</th>
+      <th id="T_d5145_level0_col2" class="col_heading level0 col2" >pcs/m</th>
+      <th id="T_d5145_level0_col3" class="col_heading level0 col3" >% of total</th>
+      <th id="T_d5145_level0_col4" class="col_heading level0 col4" >Fail rate</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td id="T_46bd9_row0_col0" class="data row0 col0" >Cigarette filters</td>
-      <td id="T_46bd9_row0_col1" class="data row0 col1" >1'671</td>
-      <td id="T_46bd9_row0_col2" class="data row0 col2" >0,42</td>
-      <td id="T_46bd9_row0_col3" class="data row0 col3" >0,19</td>
-      <td id="T_46bd9_row0_col4" class="data row0 col4" >0,81</td>
+      <td id="T_d5145_row0_col0" class="data row0 col0" >Cigarette filters</td>
+      <td id="T_d5145_row0_col1" class="data row0 col1" >1'671</td>
+      <td id="T_d5145_row0_col2" class="data row0 col2" >0,42</td>
+      <td id="T_d5145_row0_col3" class="data row0 col3" >0,19</td>
+      <td id="T_d5145_row0_col4" class="data row0 col4" >0,81</td>
     </tr>
     <tr>
-      <td id="T_46bd9_row1_col0" class="data row1 col0" >Fragmented plastics</td>
-      <td id="T_46bd9_row1_col1" class="data row1 col1" >1'323</td>
-      <td id="T_46bd9_row1_col2" class="data row1 col2" >0,46</td>
-      <td id="T_46bd9_row1_col3" class="data row1 col3" >0,15</td>
-      <td id="T_46bd9_row1_col4" class="data row1 col4" >0,89</td>
+      <td id="T_d5145_row1_col0" class="data row1 col0" >Fragmented plastics</td>
+      <td id="T_d5145_row1_col1" class="data row1 col1" >1'323</td>
+      <td id="T_d5145_row1_col2" class="data row1 col2" >0,46</td>
+      <td id="T_d5145_row1_col3" class="data row1 col3" >0,15</td>
+      <td id="T_d5145_row1_col4" class="data row1 col4" >0,89</td>
     </tr>
     <tr>
-      <td id="T_46bd9_row2_col0" class="data row2 col0" >Industrial sheeting</td>
-      <td id="T_46bd9_row2_col1" class="data row2 col1" >686</td>
-      <td id="T_46bd9_row2_col2" class="data row2 col2" >0,24</td>
-      <td id="T_46bd9_row2_col3" class="data row2 col3" >0,08</td>
-      <td id="T_46bd9_row2_col4" class="data row2 col4" >0,78</td>
+      <td id="T_d5145_row2_col0" class="data row2 col0" >Industrial sheeting</td>
+      <td id="T_d5145_row2_col1" class="data row2 col1" >686</td>
+      <td id="T_d5145_row2_col2" class="data row2 col2" >0,24</td>
+      <td id="T_d5145_row2_col3" class="data row2 col3" >0,08</td>
+      <td id="T_d5145_row2_col4" class="data row2 col4" >0,78</td>
     </tr>
     <tr>
-      <td id="T_46bd9_row3_col0" class="data row3 col0" >Food wrappers; candy, snacks</td>
-      <td id="T_46bd9_row3_col1" class="data row3 col1" >589</td>
-      <td id="T_46bd9_row3_col2" class="data row3 col2" >0,19</td>
-      <td id="T_46bd9_row3_col3" class="data row3 col3" >0,07</td>
-      <td id="T_46bd9_row3_col4" class="data row3 col4" >0,80</td>
+      <td id="T_d5145_row3_col0" class="data row3 col0" >Food wrappers; candy, snacks</td>
+      <td id="T_d5145_row3_col1" class="data row3 col1" >589</td>
+      <td id="T_d5145_row3_col2" class="data row3 col2" >0,19</td>
+      <td id="T_d5145_row3_col3" class="data row3 col3" >0,07</td>
+      <td id="T_d5145_row3_col4" class="data row3 col4" >0,80</td>
     </tr>
     <tr>
-      <td id="T_46bd9_row4_col0" class="data row4 col0" >Expanded polystyrene</td>
-      <td id="T_46bd9_row4_col1" class="data row4 col1" >474</td>
-      <td id="T_46bd9_row4_col2" class="data row4 col2" >0,12</td>
-      <td id="T_46bd9_row4_col3" class="data row4 col3" >0,05</td>
-      <td id="T_46bd9_row4_col4" class="data row4 col4" >0,62</td>
+      <td id="T_d5145_row4_col0" class="data row4 col0" >Expanded polystyrene</td>
+      <td id="T_d5145_row4_col1" class="data row4 col1" >474</td>
+      <td id="T_d5145_row4_col2" class="data row4 col2" >0,12</td>
+      <td id="T_d5145_row4_col3" class="data row4 col3" >0,05</td>
+      <td id="T_d5145_row4_col4" class="data row4 col4" >0,62</td>
     </tr>
     <tr>
-      <td id="T_46bd9_row5_col0" class="data row5 col0" >Glass drink bottles, pieces</td>
-      <td id="T_46bd9_row5_col1" class="data row5 col1" >348</td>
-      <td id="T_46bd9_row5_col2" class="data row5 col2" >0,12</td>
-      <td id="T_46bd9_row5_col3" class="data row5 col3" >0,04</td>
-      <td id="T_46bd9_row5_col4" class="data row5 col4" >0,65</td>
+      <td id="T_d5145_row5_col0" class="data row5 col0" >Glass drink bottles, pieces</td>
+      <td id="T_d5145_row5_col1" class="data row5 col1" >348</td>
+      <td id="T_d5145_row5_col2" class="data row5 col2" >0,12</td>
+      <td id="T_d5145_row5_col3" class="data row5 col3" >0,04</td>
+      <td id="T_d5145_row5_col4" class="data row5 col4" >0,65</td>
     </tr>
     <tr>
-      <td id="T_46bd9_row6_col0" class="data row6 col0" >Packaging films nonfood or unknown</td>
-      <td id="T_46bd9_row6_col1" class="data row6 col1" >261</td>
-      <td id="T_46bd9_row6_col2" class="data row6 col2" >0,09</td>
-      <td id="T_46bd9_row6_col3" class="data row6 col3" >0,03</td>
-      <td id="T_46bd9_row6_col4" class="data row6 col4" >0,49</td>
+      <td id="T_d5145_row6_col0" class="data row6 col0" >Packaging films nonfood or unknown</td>
+      <td id="T_d5145_row6_col1" class="data row6 col1" >261</td>
+      <td id="T_d5145_row6_col2" class="data row6 col2" >0,09</td>
+      <td id="T_d5145_row6_col3" class="data row6 col3" >0,03</td>
+      <td id="T_d5145_row6_col4" class="data row6 col4" >0,49</td>
     </tr>
     <tr>
-      <td id="T_46bd9_row7_col0" class="data row7 col0" >Foam packaging/insulation/polyurethane</td>
-      <td id="T_46bd9_row7_col1" class="data row7 col1" >240</td>
-      <td id="T_46bd9_row7_col2" class="data row7 col2" >0,03</td>
-      <td id="T_46bd9_row7_col3" class="data row7 col3" >0,03</td>
-      <td id="T_46bd9_row7_col4" class="data row7 col4" >0,78</td>
+      <td id="T_d5145_row7_col0" class="data row7 col0" >Foam packaging/insulation/polyurethane</td>
+      <td id="T_d5145_row7_col1" class="data row7 col1" >240</td>
+      <td id="T_d5145_row7_col2" class="data row7 col2" >0,03</td>
+      <td id="T_d5145_row7_col3" class="data row7 col3" >0,03</td>
+      <td id="T_d5145_row7_col4" class="data row7 col4" >0,78</td>
     </tr>
     <tr>
-      <td id="T_46bd9_row8_col0" class="data row8 col0" >plastic caps, lid rings: G21, G22, G23, G24</td>
-      <td id="T_46bd9_row8_col1" class="data row8 col1" >227</td>
-      <td id="T_46bd9_row8_col2" class="data row8 col2" >0,07</td>
-      <td id="T_46bd9_row8_col3" class="data row8 col3" >0,03</td>
-      <td id="T_46bd9_row8_col4" class="data row8 col4" >0,60</td>
+      <td id="T_d5145_row8_col0" class="data row8 col0" >plastic caps, lid rings: G21, G22, G23, G24</td>
+      <td id="T_d5145_row8_col1" class="data row8 col1" >227</td>
+      <td id="T_d5145_row8_col2" class="data row8 col2" >0,07</td>
+      <td id="T_d5145_row8_col3" class="data row8 col3" >0,03</td>
+      <td id="T_d5145_row8_col4" class="data row8 col4" >0,60</td>
     </tr>
     <tr>
-      <td id="T_46bd9_row9_col0" class="data row9 col0" >Industrial pellets (nurdles)</td>
-      <td id="T_46bd9_row9_col1" class="data row9 col1" >196</td>
-      <td id="T_46bd9_row9_col2" class="data row9 col2" >0,05</td>
-      <td id="T_46bd9_row9_col3" class="data row9 col3" >0,02</td>
-      <td id="T_46bd9_row9_col4" class="data row9 col4" >0,33</td>
+      <td id="T_d5145_row9_col0" class="data row9 col0" >Industrial pellets (nurdles)</td>
+      <td id="T_d5145_row9_col1" class="data row9 col1" >196</td>
+      <td id="T_d5145_row9_col2" class="data row9 col2" >0,05</td>
+      <td id="T_d5145_row9_col3" class="data row9 col3" >0,02</td>
+      <td id="T_d5145_row9_col4" class="data row9 col4" >0,33</td>
     </tr>
     <tr>
-      <td id="T_46bd9_row10_col0" class="data row10 col0" >Plastic construction waste</td>
-      <td id="T_46bd9_row10_col1" class="data row10 col1" >160</td>
-      <td id="T_46bd9_row10_col2" class="data row10 col2" >0,06</td>
-      <td id="T_46bd9_row10_col3" class="data row10 col3" >0,02</td>
-      <td id="T_46bd9_row10_col4" class="data row10 col4" >0,52</td>
+      <td id="T_d5145_row10_col0" class="data row10 col0" >Plastic construction waste</td>
+      <td id="T_d5145_row10_col1" class="data row10 col1" >160</td>
+      <td id="T_d5145_row10_col2" class="data row10 col2" >0,06</td>
+      <td id="T_d5145_row10_col3" class="data row10 col3" >0,02</td>
+      <td id="T_d5145_row10_col4" class="data row10 col4" >0,52</td>
     </tr>
   </tbody>
 </table>
@@ -1052,159 +1077,159 @@ Lakes</label><div class="sd-tab-content docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-none docutils">
 <div class="sd-card-body docutils">
 <div class="output text_html"><style type="text/css">
-#T_1ddd5 tr:nth-child(even) {
+#T_ba8d3 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_1ddd5 tr:nth-child(odd) {
+#T_ba8d3 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_1ddd5 tr {
+#T_ba8d3 tr {
   font-size: 10px;
 }
-#T_1ddd5 th {
+#T_ba8d3 th {
   background-color: #FFF;
   font-size: 12px;
   text-align: left;
   width: auto;
   word-break: keep-all;
 }
-#T_1ddd5 td {
+#T_ba8d3 td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
 }
-#T_1ddd5 caption {
+#T_ba8d3 caption {
   caption-side: top;
   font-size: 1em;
   text-align: left;
   margin-bottom: 10px;
 }
-#T_1ddd5 caption {
+#T_ba8d3 caption {
   caption-side: top;
   font-size: .9em;
   text-align: left;
   font-style: italic;
   color: #000;
 }
-#T_1ddd5 td:nth-child(1) {
+#T_ba8d3 td:nth-child(1) {
   text-align: left;
 }
 </style>
-<table id="T_1ddd5">
+<table id="T_ba8d3">
   <thead>
     <tr>
-      <th id="T_1ddd5_level0_col0" class="col_heading level0 col0" >Object</th>
-      <th id="T_1ddd5_level0_col1" class="col_heading level0 col1" >Quantity</th>
-      <th id="T_1ddd5_level0_col2" class="col_heading level0 col2" >pcs/m</th>
-      <th id="T_1ddd5_level0_col3" class="col_heading level0 col3" >% of total</th>
-      <th id="T_1ddd5_level0_col4" class="col_heading level0 col4" >Fail rate</th>
+      <th id="T_ba8d3_level0_col0" class="col_heading level0 col0" >Object</th>
+      <th id="T_ba8d3_level0_col1" class="col_heading level0 col1" >Quantity</th>
+      <th id="T_ba8d3_level0_col2" class="col_heading level0 col2" >pcs/m</th>
+      <th id="T_ba8d3_level0_col3" class="col_heading level0 col3" >% of total</th>
+      <th id="T_ba8d3_level0_col4" class="col_heading level0 col4" >Fail rate</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td id="T_1ddd5_row0_col0" class="data row0 col0" >Cigarette filters</td>
-      <td id="T_1ddd5_row0_col1" class="data row0 col1" >1'563</td>
-      <td id="T_1ddd5_row0_col2" class="data row0 col2" >0,48</td>
-      <td id="T_1ddd5_row0_col3" class="data row0 col3" >0,19</td>
-      <td id="T_1ddd5_row0_col4" class="data row0 col4" >0,84</td>
+      <td id="T_ba8d3_row0_col0" class="data row0 col0" >Cigarette filters</td>
+      <td id="T_ba8d3_row0_col1" class="data row0 col1" >1'563</td>
+      <td id="T_ba8d3_row0_col2" class="data row0 col2" >0,48</td>
+      <td id="T_ba8d3_row0_col3" class="data row0 col3" >0,19</td>
+      <td id="T_ba8d3_row0_col4" class="data row0 col4" >0,84</td>
     </tr>
     <tr>
-      <td id="T_1ddd5_row1_col0" class="data row1 col0" >Fragmented plastics</td>
-      <td id="T_1ddd5_row1_col1" class="data row1 col1" >1'283</td>
-      <td id="T_1ddd5_row1_col2" class="data row1 col2" >0,54</td>
-      <td id="T_1ddd5_row1_col3" class="data row1 col3" >0,15</td>
-      <td id="T_1ddd5_row1_col4" class="data row1 col4" >0,95</td>
+      <td id="T_ba8d3_row1_col0" class="data row1 col0" >Fragmented plastics</td>
+      <td id="T_ba8d3_row1_col1" class="data row1 col1" >1'283</td>
+      <td id="T_ba8d3_row1_col2" class="data row1 col2" >0,54</td>
+      <td id="T_ba8d3_row1_col3" class="data row1 col3" >0,15</td>
+      <td id="T_ba8d3_row1_col4" class="data row1 col4" >0,95</td>
     </tr>
     <tr>
-      <td id="T_1ddd5_row2_col0" class="data row2 col0" >Industrial sheeting</td>
-      <td id="T_1ddd5_row2_col1" class="data row2 col1" >661</td>
-      <td id="T_1ddd5_row2_col2" class="data row2 col2" >0,27</td>
-      <td id="T_1ddd5_row2_col3" class="data row2 col3" >0,08</td>
-      <td id="T_1ddd5_row2_col4" class="data row2 col4" >0,86</td>
+      <td id="T_ba8d3_row2_col0" class="data row2 col0" >Industrial sheeting</td>
+      <td id="T_ba8d3_row2_col1" class="data row2 col1" >661</td>
+      <td id="T_ba8d3_row2_col2" class="data row2 col2" >0,27</td>
+      <td id="T_ba8d3_row2_col3" class="data row2 col3" >0,08</td>
+      <td id="T_ba8d3_row2_col4" class="data row2 col4" >0,86</td>
     </tr>
     <tr>
-      <td id="T_1ddd5_row3_col0" class="data row3 col0" >Food wrappers; candy, snacks</td>
-      <td id="T_1ddd5_row3_col1" class="data row3 col1" >565</td>
-      <td id="T_1ddd5_row3_col2" class="data row3 col2" >0,22</td>
-      <td id="T_1ddd5_row3_col3" class="data row3 col3" >0,07</td>
-      <td id="T_1ddd5_row3_col4" class="data row3 col4" >0,82</td>
+      <td id="T_ba8d3_row3_col0" class="data row3 col0" >Food wrappers; candy, snacks</td>
+      <td id="T_ba8d3_row3_col1" class="data row3 col1" >565</td>
+      <td id="T_ba8d3_row3_col2" class="data row3 col2" >0,22</td>
+      <td id="T_ba8d3_row3_col3" class="data row3 col3" >0,07</td>
+      <td id="T_ba8d3_row3_col4" class="data row3 col4" >0,82</td>
     </tr>
     <tr>
-      <td id="T_1ddd5_row4_col0" class="data row4 col0" >Expanded polystyrene</td>
-      <td id="T_1ddd5_row4_col1" class="data row4 col1" >462</td>
-      <td id="T_1ddd5_row4_col2" class="data row4 col2" >0,14</td>
-      <td id="T_1ddd5_row4_col3" class="data row4 col3" >0,05</td>
-      <td id="T_1ddd5_row4_col4" class="data row4 col4" >0,73</td>
+      <td id="T_ba8d3_row4_col0" class="data row4 col0" >Expanded polystyrene</td>
+      <td id="T_ba8d3_row4_col1" class="data row4 col1" >462</td>
+      <td id="T_ba8d3_row4_col2" class="data row4 col2" >0,14</td>
+      <td id="T_ba8d3_row4_col3" class="data row4 col3" >0,05</td>
+      <td id="T_ba8d3_row4_col4" class="data row4 col4" >0,73</td>
     </tr>
     <tr>
-      <td id="T_1ddd5_row5_col0" class="data row5 col0" >Glass drink bottles, pieces</td>
-      <td id="T_1ddd5_row5_col1" class="data row5 col1" >319</td>
-      <td id="T_1ddd5_row5_col2" class="data row5 col2" >0,14</td>
-      <td id="T_1ddd5_row5_col3" class="data row5 col3" >0,04</td>
-      <td id="T_1ddd5_row5_col4" class="data row5 col4" >0,72</td>
+      <td id="T_ba8d3_row5_col0" class="data row5 col0" >Glass drink bottles, pieces</td>
+      <td id="T_ba8d3_row5_col1" class="data row5 col1" >319</td>
+      <td id="T_ba8d3_row5_col2" class="data row5 col2" >0,14</td>
+      <td id="T_ba8d3_row5_col3" class="data row5 col3" >0,04</td>
+      <td id="T_ba8d3_row5_col4" class="data row5 col4" >0,72</td>
     </tr>
     <tr>
-      <td id="T_1ddd5_row6_col0" class="data row6 col0" >Packaging films nonfood or unknown</td>
-      <td id="T_1ddd5_row6_col1" class="data row6 col1" >249</td>
-      <td id="T_1ddd5_row6_col2" class="data row6 col2" >0,10</td>
-      <td id="T_1ddd5_row6_col3" class="data row6 col3" >0,03</td>
-      <td id="T_1ddd5_row6_col4" class="data row6 col4" >0,53</td>
+      <td id="T_ba8d3_row6_col0" class="data row6 col0" >Packaging films nonfood or unknown</td>
+      <td id="T_ba8d3_row6_col1" class="data row6 col1" >249</td>
+      <td id="T_ba8d3_row6_col2" class="data row6 col2" >0,10</td>
+      <td id="T_ba8d3_row6_col3" class="data row6 col3" >0,03</td>
+      <td id="T_ba8d3_row6_col4" class="data row6 col4" >0,53</td>
     </tr>
     <tr>
-      <td id="T_1ddd5_row7_col0" class="data row7 col0" >Foam packaging/insulation/polyurethane</td>
-      <td id="T_1ddd5_row7_col1" class="data row7 col1" >227</td>
-      <td id="T_1ddd5_row7_col2" class="data row7 col2" >0,04</td>
-      <td id="T_1ddd5_row7_col3" class="data row7 col3" >0,03</td>
-      <td id="T_1ddd5_row7_col4" class="data row7 col4" >0,89</td>
+      <td id="T_ba8d3_row7_col0" class="data row7 col0" >Foam packaging/insulation/polyurethane</td>
+      <td id="T_ba8d3_row7_col1" class="data row7 col1" >227</td>
+      <td id="T_ba8d3_row7_col2" class="data row7 col2" >0,04</td>
+      <td id="T_ba8d3_row7_col3" class="data row7 col3" >0,03</td>
+      <td id="T_ba8d3_row7_col4" class="data row7 col4" >0,89</td>
     </tr>
     <tr>
-      <td id="T_1ddd5_row8_col0" class="data row8 col0" >plastic caps, lid rings: G21, G22, G23, G24</td>
-      <td id="T_1ddd5_row8_col1" class="data row8 col1" >216</td>
-      <td id="T_1ddd5_row8_col2" class="data row8 col2" >0,07</td>
-      <td id="T_1ddd5_row8_col3" class="data row8 col3" >0,03</td>
-      <td id="T_1ddd5_row8_col4" class="data row8 col4" >0,65</td>
+      <td id="T_ba8d3_row8_col0" class="data row8 col0" >plastic caps, lid rings: G21, G22, G23, G24</td>
+      <td id="T_ba8d3_row8_col1" class="data row8 col1" >216</td>
+      <td id="T_ba8d3_row8_col2" class="data row8 col2" >0,07</td>
+      <td id="T_ba8d3_row8_col3" class="data row8 col3" >0,03</td>
+      <td id="T_ba8d3_row8_col4" class="data row8 col4" >0,65</td>
     </tr>
     <tr>
-      <td id="T_1ddd5_row9_col0" class="data row9 col0" >Industrial pellets (nurdles)</td>
-      <td id="T_1ddd5_row9_col1" class="data row9 col1" >186</td>
-      <td id="T_1ddd5_row9_col2" class="data row9 col2" >0,06</td>
-      <td id="T_1ddd5_row9_col3" class="data row9 col3" >0,02</td>
-      <td id="T_1ddd5_row9_col4" class="data row9 col4" >0,36</td>
+      <td id="T_ba8d3_row9_col0" class="data row9 col0" >Industrial pellets (nurdles)</td>
+      <td id="T_ba8d3_row9_col1" class="data row9 col1" >186</td>
+      <td id="T_ba8d3_row9_col2" class="data row9 col2" >0,06</td>
+      <td id="T_ba8d3_row9_col3" class="data row9 col3" >0,02</td>
+      <td id="T_ba8d3_row9_col4" class="data row9 col4" >0,36</td>
     </tr>
     <tr>
-      <td id="T_1ddd5_row10_col0" class="data row10 col0" >Plastic construction waste</td>
-      <td id="T_1ddd5_row10_col1" class="data row10 col1" >159</td>
-      <td id="T_1ddd5_row10_col2" class="data row10 col2" >0,07</td>
-      <td id="T_1ddd5_row10_col3" class="data row10 col3" >0,02</td>
-      <td id="T_1ddd5_row10_col4" class="data row10 col4" >0,61</td>
+      <td id="T_ba8d3_row10_col0" class="data row10 col0" >Plastic construction waste</td>
+      <td id="T_ba8d3_row10_col1" class="data row10 col1" >159</td>
+      <td id="T_ba8d3_row10_col2" class="data row10 col2" >0,07</td>
+      <td id="T_ba8d3_row10_col3" class="data row10 col3" >0,02</td>
+      <td id="T_ba8d3_row10_col4" class="data row10 col4" >0,61</td>
     </tr>
     <tr>
-      <td id="T_1ddd5_row11_col0" class="data row11 col0" >Fireworks; rocket caps, exploded parts & packaging</td>
-      <td id="T_1ddd5_row11_col1" class="data row11 col1" >113</td>
-      <td id="T_1ddd5_row11_col2" class="data row11 col2" >0,05</td>
-      <td id="T_1ddd5_row11_col3" class="data row11 col3" >0,01</td>
-      <td id="T_1ddd5_row11_col4" class="data row11 col4" >0,53</td>
+      <td id="T_ba8d3_row11_col0" class="data row11 col0" >Fireworks; rocket caps, exploded parts & packaging</td>
+      <td id="T_ba8d3_row11_col1" class="data row11 col1" >113</td>
+      <td id="T_ba8d3_row11_col2" class="data row11 col2" >0,05</td>
+      <td id="T_ba8d3_row11_col3" class="data row11 col3" >0,01</td>
+      <td id="T_ba8d3_row11_col4" class="data row11 col4" >0,53</td>
     </tr>
     <tr>
-      <td id="T_1ddd5_row12_col0" class="data row12 col0" >Cotton bud/swab sticks</td>
-      <td id="T_1ddd5_row12_col1" class="data row12 col1" >107</td>
-      <td id="T_1ddd5_row12_col2" class="data row12 col2" >0,04</td>
-      <td id="T_1ddd5_row12_col3" class="data row12 col3" >0,01</td>
-      <td id="T_1ddd5_row12_col4" class="data row12 col4" >0,53</td>
+      <td id="T_ba8d3_row12_col0" class="data row12 col0" >Cotton bud/swab sticks</td>
+      <td id="T_ba8d3_row12_col1" class="data row12 col1" >107</td>
+      <td id="T_ba8d3_row12_col2" class="data row12 col2" >0,04</td>
+      <td id="T_ba8d3_row12_col3" class="data row12 col3" >0,01</td>
+      <td id="T_ba8d3_row12_col4" class="data row12 col4" >0,53</td>
     </tr>
     <tr>
-      <td id="T_1ddd5_row13_col0" class="data row13 col0" >Tobacco; plastic packaging, containers</td>
-      <td id="T_1ddd5_row13_col1" class="data row13 col1" >106</td>
-      <td id="T_1ddd5_row13_col2" class="data row13 col2" >0,05</td>
-      <td id="T_1ddd5_row13_col3" class="data row13 col3" >0,01</td>
-      <td id="T_1ddd5_row13_col4" class="data row13 col4" >0,51</td>
+      <td id="T_ba8d3_row13_col0" class="data row13 col0" >Tobacco; plastic packaging, containers</td>
+      <td id="T_ba8d3_row13_col1" class="data row13 col1" >106</td>
+      <td id="T_ba8d3_row13_col2" class="data row13 col2" >0,05</td>
+      <td id="T_ba8d3_row13_col3" class="data row13 col3" >0,01</td>
+      <td id="T_ba8d3_row13_col4" class="data row13 col4" >0,51</td>
     </tr>
     <tr>
-      <td id="T_1ddd5_row14_col0" class="data row14 col0" >Foil wrappers, aluminum foil</td>
-      <td id="T_1ddd5_row14_col1" class="data row14 col1" >89</td>
-      <td id="T_1ddd5_row14_col2" class="data row14 col2" >0,03</td>
-      <td id="T_1ddd5_row14_col3" class="data row14 col3" >0,01</td>
-      <td id="T_1ddd5_row14_col4" class="data row14 col4" >0,50</td>
+      <td id="T_ba8d3_row14_col0" class="data row14 col0" >Foil wrappers, aluminum foil</td>
+      <td id="T_ba8d3_row14_col1" class="data row14 col1" >89</td>
+      <td id="T_ba8d3_row14_col2" class="data row14 col2" >0,03</td>
+      <td id="T_ba8d3_row14_col3" class="data row14 col3" >0,01</td>
+      <td id="T_ba8d3_row14_col4" class="data row14 col4" >0,50</td>
     </tr>
   </tbody>
 </table>
@@ -1227,124 +1252,124 @@ Rivers</label><div class="sd-tab-content docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-none docutils">
 <div class="sd-card-body docutils">
 <div class="output text_html"><style type="text/css">
-#T_39017 tr:nth-child(even) {
+#T_09e65 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_39017 tr:nth-child(odd) {
+#T_09e65 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_39017 tr {
+#T_09e65 tr {
   font-size: 10px;
 }
-#T_39017 th {
+#T_09e65 th {
   background-color: #FFF;
   font-size: 12px;
   text-align: left;
   width: auto;
   word-break: keep-all;
 }
-#T_39017 td {
+#T_09e65 td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
 }
-#T_39017 caption {
+#T_09e65 caption {
   caption-side: top;
   font-size: 1em;
   text-align: left;
   margin-bottom: 10px;
 }
-#T_39017 caption {
+#T_09e65 caption {
   caption-side: top;
   font-size: .9em;
   text-align: left;
   font-style: italic;
   color: #000;
 }
-#T_39017 td:nth-child(1) {
+#T_09e65 td:nth-child(1) {
   text-align: left;
 }
 </style>
-<table id="T_39017">
+<table id="T_09e65">
   <thead>
     <tr>
-      <th id="T_39017_level0_col0" class="col_heading level0 col0" >Object</th>
-      <th id="T_39017_level0_col1" class="col_heading level0 col1" >Quantity</th>
-      <th id="T_39017_level0_col2" class="col_heading level0 col2" >pcs/m</th>
-      <th id="T_39017_level0_col3" class="col_heading level0 col3" >% of total</th>
-      <th id="T_39017_level0_col4" class="col_heading level0 col4" >Fail rate</th>
+      <th id="T_09e65_level0_col0" class="col_heading level0 col0" >Object</th>
+      <th id="T_09e65_level0_col1" class="col_heading level0 col1" >Quantity</th>
+      <th id="T_09e65_level0_col2" class="col_heading level0 col2" >pcs/m</th>
+      <th id="T_09e65_level0_col3" class="col_heading level0 col3" >% of total</th>
+      <th id="T_09e65_level0_col4" class="col_heading level0 col4" >Fail rate</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td id="T_39017_row0_col0" class="data row0 col0" >Diapers - wipes</td>
-      <td id="T_39017_row0_col1" class="data row0 col1" >117</td>
-      <td id="T_39017_row0_col2" class="data row0 col2" >0,29</td>
-      <td id="T_39017_row0_col3" class="data row0 col3" >0,19</td>
-      <td id="T_39017_row0_col4" class="data row0 col4" >0,33</td>
+      <td id="T_09e65_row0_col0" class="data row0 col0" >Diapers - wipes</td>
+      <td id="T_09e65_row0_col1" class="data row0 col1" >117</td>
+      <td id="T_09e65_row0_col2" class="data row0 col2" >0,29</td>
+      <td id="T_09e65_row0_col3" class="data row0 col3" >0,19</td>
+      <td id="T_09e65_row0_col4" class="data row0 col4" >0,33</td>
     </tr>
     <tr>
-      <td id="T_39017_row1_col0" class="data row1 col0" >Cigarette filters</td>
-      <td id="T_39017_row1_col1" class="data row1 col1" >108</td>
-      <td id="T_39017_row1_col2" class="data row1 col2" >0,17</td>
-      <td id="T_39017_row1_col3" class="data row1 col3" >0,18</td>
-      <td id="T_39017_row1_col4" class="data row1 col4" >0,67</td>
+      <td id="T_09e65_row1_col0" class="data row1 col0" >Cigarette filters</td>
+      <td id="T_09e65_row1_col1" class="data row1 col1" >108</td>
+      <td id="T_09e65_row1_col2" class="data row1 col2" >0,17</td>
+      <td id="T_09e65_row1_col3" class="data row1 col3" >0,18</td>
+      <td id="T_09e65_row1_col4" class="data row1 col4" >0,67</td>
     </tr>
     <tr>
-      <td id="T_39017_row2_col0" class="data row2 col0" >Fragmented plastics</td>
-      <td id="T_39017_row2_col1" class="data row2 col1" >40</td>
-      <td id="T_39017_row2_col2" class="data row2 col2" >0,06</td>
-      <td id="T_39017_row2_col3" class="data row2 col3" >0,07</td>
-      <td id="T_39017_row2_col4" class="data row2 col4" >0,60</td>
+      <td id="T_09e65_row2_col0" class="data row2 col0" >Fragmented plastics</td>
+      <td id="T_09e65_row2_col1" class="data row2 col1" >40</td>
+      <td id="T_09e65_row2_col2" class="data row2 col2" >0,06</td>
+      <td id="T_09e65_row2_col3" class="data row2 col3" >0,07</td>
+      <td id="T_09e65_row2_col4" class="data row2 col4" >0,60</td>
     </tr>
     <tr>
-      <td id="T_39017_row3_col0" class="data row3 col0" >Glass drink bottles, pieces</td>
-      <td id="T_39017_row3_col1" class="data row3 col1" >29</td>
-      <td id="T_39017_row3_col2" class="data row3 col2" >0,05</td>
-      <td id="T_39017_row3_col3" class="data row3 col3" >0,05</td>
-      <td id="T_39017_row3_col4" class="data row3 col4" >0,33</td>
+      <td id="T_09e65_row3_col0" class="data row3 col0" >Glass drink bottles, pieces</td>
+      <td id="T_09e65_row3_col1" class="data row3 col1" >29</td>
+      <td id="T_09e65_row3_col2" class="data row3 col2" >0,05</td>
+      <td id="T_09e65_row3_col3" class="data row3 col3" >0,05</td>
+      <td id="T_09e65_row3_col4" class="data row3 col4" >0,33</td>
     </tr>
     <tr>
-      <td id="T_39017_row4_col0" class="data row4 col0" >Industrial sheeting</td>
-      <td id="T_39017_row4_col1" class="data row4 col1" >25</td>
-      <td id="T_39017_row4_col2" class="data row4 col2" >0,07</td>
-      <td id="T_39017_row4_col3" class="data row4 col3" >0,04</td>
-      <td id="T_39017_row4_col4" class="data row4 col4" >0,33</td>
+      <td id="T_09e65_row4_col0" class="data row4 col0" >Industrial sheeting</td>
+      <td id="T_09e65_row4_col1" class="data row4 col1" >25</td>
+      <td id="T_09e65_row4_col2" class="data row4 col2" >0,07</td>
+      <td id="T_09e65_row4_col3" class="data row4 col3" >0,04</td>
+      <td id="T_09e65_row4_col4" class="data row4 col4" >0,33</td>
     </tr>
     <tr>
-      <td id="T_39017_row5_col0" class="data row5 col0" >Food wrappers; candy, snacks</td>
-      <td id="T_39017_row5_col1" class="data row5 col1" >24</td>
-      <td id="T_39017_row5_col2" class="data row5 col2" >0,04</td>
-      <td id="T_39017_row5_col3" class="data row5 col3" >0,04</td>
-      <td id="T_39017_row5_col4" class="data row5 col4" >0,67</td>
+      <td id="T_09e65_row5_col0" class="data row5 col0" >Food wrappers; candy, snacks</td>
+      <td id="T_09e65_row5_col1" class="data row5 col1" >24</td>
+      <td id="T_09e65_row5_col2" class="data row5 col2" >0,04</td>
+      <td id="T_09e65_row5_col3" class="data row5 col3" >0,04</td>
+      <td id="T_09e65_row5_col4" class="data row5 col4" >0,67</td>
     </tr>
     <tr>
-      <td id="T_39017_row6_col0" class="data row6 col0" >Tampons</td>
-      <td id="T_39017_row6_col1" class="data row6 col1" >17</td>
-      <td id="T_39017_row6_col2" class="data row6 col2" >0,03</td>
-      <td id="T_39017_row6_col3" class="data row6 col3" >0,03</td>
-      <td id="T_39017_row6_col4" class="data row6 col4" >0,07</td>
+      <td id="T_09e65_row6_col0" class="data row6 col0" >Tampons</td>
+      <td id="T_09e65_row6_col1" class="data row6 col1" >17</td>
+      <td id="T_09e65_row6_col2" class="data row6 col2" >0,03</td>
+      <td id="T_09e65_row6_col3" class="data row6 col3" >0,03</td>
+      <td id="T_09e65_row6_col4" class="data row6 col4" >0,07</td>
     </tr>
     <tr>
-      <td id="T_39017_row7_col0" class="data row7 col0" >Foam packaging/insulation/polyurethane</td>
-      <td id="T_39017_row7_col1" class="data row7 col1" >13</td>
-      <td id="T_39017_row7_col2" class="data row7 col2" >0,01</td>
-      <td id="T_39017_row7_col3" class="data row7 col3" >0,02</td>
-      <td id="T_39017_row7_col4" class="data row7 col4" >0,20</td>
+      <td id="T_09e65_row7_col0" class="data row7 col0" >Foam packaging/insulation/polyurethane</td>
+      <td id="T_09e65_row7_col1" class="data row7 col1" >13</td>
+      <td id="T_09e65_row7_col2" class="data row7 col2" >0,01</td>
+      <td id="T_09e65_row7_col3" class="data row7 col3" >0,02</td>
+      <td id="T_09e65_row7_col4" class="data row7 col4" >0,20</td>
     </tr>
     <tr>
-      <td id="T_39017_row8_col0" class="data row8 col0" >Packaging films nonfood or unknown</td>
-      <td id="T_39017_row8_col1" class="data row8 col1" >12</td>
-      <td id="T_39017_row8_col2" class="data row8 col2" >0,02</td>
-      <td id="T_39017_row8_col3" class="data row8 col3" >0,02</td>
-      <td id="T_39017_row8_col4" class="data row8 col4" >0,33</td>
+      <td id="T_09e65_row8_col0" class="data row8 col0" >Packaging films nonfood or unknown</td>
+      <td id="T_09e65_row8_col1" class="data row8 col1" >12</td>
+      <td id="T_09e65_row8_col2" class="data row8 col2" >0,02</td>
+      <td id="T_09e65_row8_col3" class="data row8 col3" >0,02</td>
+      <td id="T_09e65_row8_col4" class="data row8 col4" >0,33</td>
     </tr>
     <tr>
-      <td id="T_39017_row9_col0" class="data row9 col0" >Expanded polystyrene</td>
-      <td id="T_39017_row9_col1" class="data row9 col1" >12</td>
-      <td id="T_39017_row9_col2" class="data row9 col2" >0,02</td>
-      <td id="T_39017_row9_col3" class="data row9 col3" >0,02</td>
-      <td id="T_39017_row9_col4" class="data row9 col4" >0,07</td>
+      <td id="T_09e65_row9_col0" class="data row9 col0" >Expanded polystyrene</td>
+      <td id="T_09e65_row9_col1" class="data row9 col1" >12</td>
+      <td id="T_09e65_row9_col2" class="data row9 col2" >0,02</td>
+      <td id="T_09e65_row9_col3" class="data row9 col3" >0,02</td>
+      <td id="T_09e65_row9_col4" class="data row9 col4" >0,07</td>
     </tr>
   </tbody>
 </table>
@@ -1380,30 +1405,30 @@ Defining the most common objects<div class="sd-summary-down docutils">
 <div class="section" id="land-use">
 <h2>Land use<a class="headerlink" href="#land-use" title="Permalink to this heading">#</a></h2>
 <p>Land use refers to the measurable topographic features within a cirlce of r = 1 500 m and area = <span class="math notranslate nohighlight">\(\pi r²\)</span> with the survey location in the middle. The features, measured in meters squared, are given as a ratio <span class="math notranslate nohighlight">\(\frac{\text{area of feature}}{\text{area of circle}}\)</span>. Thus a location with high percentage of buildings will have a rating or value between 60% and 100%. The pcs/m rating is the average of all locations with a land-use profile of the same rating.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
 <ol class="arabic simple">
-<li><p>The sampling profile refers to the ratio of samples that were taken at a particular land use rate</p>
-<ul class="simple">
-<li><p>Does the sampling profile reflect the topography of the region?</p></li>
-</ul>
-</li>
 <li><p>The rate per feature refers to the average pcs/m observed at a particular land use rate</p>
 <ul class="simple">
 <li><p>Under what conditions is the pcs/m elevated? Where is it the least?</p></li>
 </ul>
 </li>
+<li><p>The sampling profile refers to the ratio of samples that were taken at a particular land use rate</p>
+<ul class="simple">
+<li><p>Does the sampling profile reflect the topography of the region?</p></li>
+</ul>
+</li>
 </ol>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
-</div>
 <div class="section" id="rate-per-feature-2020-2021">
 <h3>Rate per feature 2020 - 2021<a class="headerlink" href="#rate-per-feature-2020-2021" title="Permalink to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
@@ -1412,88 +1437,88 @@ Defining the most common objects<div class="sd-summary-down docutils">
 All lakes and rivers</label><div class="sd-tab-content docutils">
 <p><strong>Land use</strong></p>
 <div class="output text_html"><style type="text/css">
-#T_1f322 caption {
+#T_3dec2 caption {
   caption-side: top;
   font-size: 1em;
   text-align: left;
   margin-bottom: 10px;
 }
-#T_1f322 caption {
+#T_3dec2 caption {
   caption-side: top;
   font-size: .9em;
   text-align: left;
   font-style: italic;
   color: #000;
 }
-#T_1f322 td {
+#T_3dec2 td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
   padding: 4px;
 }
-#T_1f322_row0_col0, #T_1f322_row1_col0, #T_1f322_row2_col2, #T_1f322_row3_col0, #T_1f322_row4_col0, #T_1f322_row5_col0 {
+#T_3dec2_row0_col0, #T_3dec2_row1_col0, #T_3dec2_row2_col2, #T_3dec2_row3_col0, #T_3dec2_row4_col0, #T_3dec2_row5_col0 {
   background-color: #FAE8E8;
 }
 </style>
-<table id="T_1f322">
+<table id="T_3dec2">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_1f322_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
-      <th id="T_1f322_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
-      <th id="T_1f322_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
-      <th id="T_1f322_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
-      <th id="T_1f322_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
+      <th id="T_3dec2_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
+      <th id="T_3dec2_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
+      <th id="T_3dec2_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
+      <th id="T_3dec2_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
+      <th id="T_3dec2_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_1f322_level0_row0" class="row_heading level0 row0" >Orchards</th>
-      <td id="T_1f322_row0_col0" class="data row0 col0" >2.76</td>
-      <td id="T_1f322_row0_col1" class="data row0 col1" >0.00</td>
-      <td id="T_1f322_row0_col2" class="data row0 col2" >0.00</td>
-      <td id="T_1f322_row0_col3" class="data row0 col3" >0.00</td>
-      <td id="T_1f322_row0_col4" class="data row0 col4" >0.00</td>
+      <th id="T_3dec2_level0_row0" class="row_heading level0 row0" >Orchards</th>
+      <td id="T_3dec2_row0_col0" class="data row0 col0" >2.76</td>
+      <td id="T_3dec2_row0_col1" class="data row0 col1" >0.00</td>
+      <td id="T_3dec2_row0_col2" class="data row0 col2" >0.00</td>
+      <td id="T_3dec2_row0_col3" class="data row0 col3" >0.00</td>
+      <td id="T_3dec2_row0_col4" class="data row0 col4" >0.00</td>
     </tr>
     <tr>
-      <th id="T_1f322_level0_row1" class="row_heading level0 row1" >Vineyards</th>
-      <td id="T_1f322_row1_col0" class="data row1 col0" >2.76</td>
-      <td id="T_1f322_row1_col1" class="data row1 col1" >0.00</td>
-      <td id="T_1f322_row1_col2" class="data row1 col2" >0.00</td>
-      <td id="T_1f322_row1_col3" class="data row1 col3" >0.00</td>
-      <td id="T_1f322_row1_col4" class="data row1 col4" >0.00</td>
+      <th id="T_3dec2_level0_row1" class="row_heading level0 row1" >Vineyards</th>
+      <td id="T_3dec2_row1_col0" class="data row1 col0" >2.76</td>
+      <td id="T_3dec2_row1_col1" class="data row1 col1" >0.00</td>
+      <td id="T_3dec2_row1_col2" class="data row1 col2" >0.00</td>
+      <td id="T_3dec2_row1_col3" class="data row1 col3" >0.00</td>
+      <td id="T_3dec2_row1_col4" class="data row1 col4" >0.00</td>
     </tr>
     <tr>
-      <th id="T_1f322_level0_row2" class="row_heading level0 row2" >Buildings</th>
-      <td id="T_1f322_row2_col0" class="data row2 col0" >2.37</td>
-      <td id="T_1f322_row2_col1" class="data row2 col1" >2.52</td>
-      <td id="T_1f322_row2_col2" class="data row2 col2" >4.09</td>
-      <td id="T_1f322_row2_col3" class="data row2 col3" >1.59</td>
-      <td id="T_1f322_row2_col4" class="data row2 col4" >1.24</td>
+      <th id="T_3dec2_level0_row2" class="row_heading level0 row2" >Buildings</th>
+      <td id="T_3dec2_row2_col0" class="data row2 col0" >2.37</td>
+      <td id="T_3dec2_row2_col1" class="data row2 col1" >2.52</td>
+      <td id="T_3dec2_row2_col2" class="data row2 col2" >4.09</td>
+      <td id="T_3dec2_row2_col3" class="data row2 col3" >1.59</td>
+      <td id="T_3dec2_row2_col4" class="data row2 col4" >1.24</td>
     </tr>
     <tr>
-      <th id="T_1f322_level0_row3" class="row_heading level0 row3" >Forest</th>
-      <td id="T_1f322_row3_col0" class="data row3 col0" >3.02</td>
-      <td id="T_1f322_row3_col1" class="data row3 col1" >2.86</td>
-      <td id="T_1f322_row3_col2" class="data row3 col2" >1.27</td>
-      <td id="T_1f322_row3_col3" class="data row3 col3" >0.00</td>
-      <td id="T_1f322_row3_col4" class="data row3 col4" >0.00</td>
+      <th id="T_3dec2_level0_row3" class="row_heading level0 row3" >Forest</th>
+      <td id="T_3dec2_row3_col0" class="data row3 col0" >3.02</td>
+      <td id="T_3dec2_row3_col1" class="data row3 col1" >2.86</td>
+      <td id="T_3dec2_row3_col2" class="data row3 col2" >1.27</td>
+      <td id="T_3dec2_row3_col3" class="data row3 col3" >0.00</td>
+      <td id="T_3dec2_row3_col4" class="data row3 col4" >0.00</td>
     </tr>
     <tr>
-      <th id="T_1f322_level0_row4" class="row_heading level0 row4" >Undefined</th>
-      <td id="T_1f322_row4_col0" class="data row4 col0" >3.22</td>
-      <td id="T_1f322_row4_col1" class="data row4 col1" >3.10</td>
-      <td id="T_1f322_row4_col2" class="data row4 col2" >2.64</td>
-      <td id="T_1f322_row4_col3" class="data row4 col3" >1.81</td>
-      <td id="T_1f322_row4_col4" class="data row4 col4" >0.00</td>
+      <th id="T_3dec2_level0_row4" class="row_heading level0 row4" >Undefined</th>
+      <td id="T_3dec2_row4_col0" class="data row4 col0" >3.22</td>
+      <td id="T_3dec2_row4_col1" class="data row4 col1" >3.10</td>
+      <td id="T_3dec2_row4_col2" class="data row4 col2" >2.64</td>
+      <td id="T_3dec2_row4_col3" class="data row4 col3" >1.81</td>
+      <td id="T_3dec2_row4_col4" class="data row4 col4" >0.00</td>
     </tr>
     <tr>
-      <th id="T_1f322_level0_row5" class="row_heading level0 row5" >Public Services</th>
-      <td id="T_1f322_row5_col0" class="data row5 col0" >2.82</td>
-      <td id="T_1f322_row5_col1" class="data row5 col1" >0.07</td>
-      <td id="T_1f322_row5_col2" class="data row5 col2" >0.00</td>
-      <td id="T_1f322_row5_col3" class="data row5 col3" >0.00</td>
-      <td id="T_1f322_row5_col4" class="data row5 col4" >0.00</td>
+      <th id="T_3dec2_level0_row5" class="row_heading level0 row5" >Public Services</th>
+      <td id="T_3dec2_row5_col0" class="data row5 col0" >2.82</td>
+      <td id="T_3dec2_row5_col1" class="data row5 col1" >0.07</td>
+      <td id="T_3dec2_row5_col2" class="data row5 col2" >0.00</td>
+      <td id="T_3dec2_row5_col3" class="data row5 col3" >0.00</td>
+      <td id="T_3dec2_row5_col4" class="data row5 col4" >0.00</td>
     </tr>
   </tbody>
 </table>
@@ -1501,48 +1526,48 @@ All lakes and rivers</label><div class="sd-tab-content docutils">
 <p>The streets are measured as the length of the road network in the cirlce with r= 1 500 m and area <span class="math notranslate nohighlight">\(\pi r²\)</span> and the survey location in the middle. The lenghts for each location are normalized from 0 - 1. Thus in the table below, the locations that have the shortest road net work will be in category 1, the those with a more dense network will be higher.
 <br></br></p>
 <div class="output text_html"><style type="text/css">
-#T_57878 caption {
+#T_8217e caption {
   caption-side: top;
   font-size: 1em;
   text-align: left;
   margin-bottom: 10px;
 }
-#T_57878 caption {
+#T_8217e caption {
   caption-side: top;
   font-size: .9em;
   text-align: left;
   font-style: italic;
   color: #000;
 }
-#T_57878 td {
+#T_8217e td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
   padding: 4px;
 }
-#T_57878_row0_col1 {
+#T_8217e_row0_col1 {
   background-color: #FAE8E8;
 }
 </style>
-<table id="T_57878">
+<table id="T_8217e">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_57878_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
-      <th id="T_57878_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
-      <th id="T_57878_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
-      <th id="T_57878_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
-      <th id="T_57878_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
+      <th id="T_8217e_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
+      <th id="T_8217e_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
+      <th id="T_8217e_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
+      <th id="T_8217e_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
+      <th id="T_8217e_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_57878_level0_row0" class="row_heading level0 row0" >streets</th>
-      <td id="T_57878_row0_col0" class="data row0 col0" >1.66</td>
-      <td id="T_57878_row0_col1" class="data row0 col1" >4.04</td>
-      <td id="T_57878_row0_col2" class="data row0 col2" >0.99</td>
-      <td id="T_57878_row0_col3" class="data row0 col3" >0.16</td>
-      <td id="T_57878_row0_col4" class="data row0 col4" >0</td>
+      <th id="T_8217e_level0_row0" class="row_heading level0 row0" >streets</th>
+      <td id="T_8217e_row0_col0" class="data row0 col0" >1.66</td>
+      <td id="T_8217e_row0_col1" class="data row0 col1" >4.04</td>
+      <td id="T_8217e_row0_col2" class="data row0 col2" >0.99</td>
+      <td id="T_8217e_row0_col3" class="data row0 col3" >0.16</td>
+      <td id="T_8217e_row0_col4" class="data row0 col4" >0</td>
     </tr>
   </tbody>
 </table>
@@ -1552,88 +1577,88 @@ All lakes and rivers</label><div class="sd-tab-content docutils">
 Lakes</label><div class="sd-tab-content docutils">
 <p><strong>Land use</strong></p>
 <div class="output text_html"><style type="text/css">
-#T_c6078 caption {
+#T_92a8d caption {
   caption-side: top;
   font-size: 1em;
   text-align: left;
   margin-bottom: 10px;
 }
-#T_c6078 caption {
+#T_92a8d caption {
   caption-side: top;
   font-size: .9em;
   text-align: left;
   font-style: italic;
   color: #000;
 }
-#T_c6078 td {
+#T_92a8d td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
   padding: 4px;
 }
-#T_c6078_row0_col0, #T_c6078_row1_col0, #T_c6078_row2_col2, #T_c6078_row3_col0, #T_c6078_row4_col1, #T_c6078_row5_col0 {
+#T_92a8d_row0_col0, #T_92a8d_row1_col0, #T_92a8d_row2_col2, #T_92a8d_row3_col0, #T_92a8d_row4_col1, #T_92a8d_row5_col0 {
   background-color: #FAE8E8;
 }
 </style>
-<table id="T_c6078">
+<table id="T_92a8d">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_c6078_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
-      <th id="T_c6078_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
-      <th id="T_c6078_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
-      <th id="T_c6078_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
-      <th id="T_c6078_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
+      <th id="T_92a8d_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
+      <th id="T_92a8d_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
+      <th id="T_92a8d_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
+      <th id="T_92a8d_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
+      <th id="T_92a8d_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_c6078_level0_row0" class="row_heading level0 row0" >Orchards</th>
-      <td id="T_c6078_row0_col0" class="data row0 col0" >3.09</td>
-      <td id="T_c6078_row0_col1" class="data row0 col1" >0.00</td>
-      <td id="T_c6078_row0_col2" class="data row0 col2" >0.00</td>
-      <td id="T_c6078_row0_col3" class="data row0 col3" >0.00</td>
-      <td id="T_c6078_row0_col4" class="data row0 col4" >0.00</td>
+      <th id="T_92a8d_level0_row0" class="row_heading level0 row0" >Orchards</th>
+      <td id="T_92a8d_row0_col0" class="data row0 col0" >3.09</td>
+      <td id="T_92a8d_row0_col1" class="data row0 col1" >0.00</td>
+      <td id="T_92a8d_row0_col2" class="data row0 col2" >0.00</td>
+      <td id="T_92a8d_row0_col3" class="data row0 col3" >0.00</td>
+      <td id="T_92a8d_row0_col4" class="data row0 col4" >0.00</td>
     </tr>
     <tr>
-      <th id="T_c6078_level0_row1" class="row_heading level0 row1" >Vineyards</th>
-      <td id="T_c6078_row1_col0" class="data row1 col0" >3.09</td>
-      <td id="T_c6078_row1_col1" class="data row1 col1" >0.00</td>
-      <td id="T_c6078_row1_col2" class="data row1 col2" >0.00</td>
-      <td id="T_c6078_row1_col3" class="data row1 col3" >0.00</td>
-      <td id="T_c6078_row1_col4" class="data row1 col4" >0.00</td>
+      <th id="T_92a8d_level0_row1" class="row_heading level0 row1" >Vineyards</th>
+      <td id="T_92a8d_row1_col0" class="data row1 col0" >3.09</td>
+      <td id="T_92a8d_row1_col1" class="data row1 col1" >0.00</td>
+      <td id="T_92a8d_row1_col2" class="data row1 col2" >0.00</td>
+      <td id="T_92a8d_row1_col3" class="data row1 col3" >0.00</td>
+      <td id="T_92a8d_row1_col4" class="data row1 col4" >0.00</td>
     </tr>
     <tr>
-      <th id="T_c6078_level0_row2" class="row_heading level0 row2" >Buildings</th>
-      <td id="T_c6078_row2_col0" class="data row2 col0" >2.52</td>
-      <td id="T_c6078_row2_col1" class="data row2 col1" >2.52</td>
-      <td id="T_c6078_row2_col2" class="data row2 col2" >5.35</td>
-      <td id="T_c6078_row2_col3" class="data row2 col3" >2.38</td>
-      <td id="T_c6078_row2_col4" class="data row2 col4" >1.24</td>
+      <th id="T_92a8d_level0_row2" class="row_heading level0 row2" >Buildings</th>
+      <td id="T_92a8d_row2_col0" class="data row2 col0" >2.52</td>
+      <td id="T_92a8d_row2_col1" class="data row2 col1" >2.52</td>
+      <td id="T_92a8d_row2_col2" class="data row2 col2" >5.35</td>
+      <td id="T_92a8d_row2_col3" class="data row2 col3" >2.38</td>
+      <td id="T_92a8d_row2_col4" class="data row2 col4" >1.24</td>
     </tr>
     <tr>
-      <th id="T_c6078_level0_row3" class="row_heading level0 row3" >Forest</th>
-      <td id="T_c6078_row3_col0" class="data row3 col0" >3.51</td>
-      <td id="T_c6078_row3_col1" class="data row3 col1" >3.20</td>
-      <td id="T_c6078_row3_col2" class="data row3 col2" >1.23</td>
-      <td id="T_c6078_row3_col3" class="data row3 col3" >0.00</td>
-      <td id="T_c6078_row3_col4" class="data row3 col4" >0.00</td>
+      <th id="T_92a8d_level0_row3" class="row_heading level0 row3" >Forest</th>
+      <td id="T_92a8d_row3_col0" class="data row3 col0" >3.51</td>
+      <td id="T_92a8d_row3_col1" class="data row3 col1" >3.20</td>
+      <td id="T_92a8d_row3_col2" class="data row3 col2" >1.23</td>
+      <td id="T_92a8d_row3_col3" class="data row3 col3" >0.00</td>
+      <td id="T_92a8d_row3_col4" class="data row3 col4" >0.00</td>
     </tr>
     <tr>
-      <th id="T_c6078_level0_row4" class="row_heading level0 row4" >Undefined</th>
-      <td id="T_c6078_row4_col0" class="data row4 col0" >3.75</td>
-      <td id="T_c6078_row4_col1" class="data row4 col1" >4.90</td>
-      <td id="T_c6078_row4_col2" class="data row4 col2" >2.64</td>
-      <td id="T_c6078_row4_col3" class="data row4 col3" >1.89</td>
-      <td id="T_c6078_row4_col4" class="data row4 col4" >0.00</td>
+      <th id="T_92a8d_level0_row4" class="row_heading level0 row4" >Undefined</th>
+      <td id="T_92a8d_row4_col0" class="data row4 col0" >3.75</td>
+      <td id="T_92a8d_row4_col1" class="data row4 col1" >4.90</td>
+      <td id="T_92a8d_row4_col2" class="data row4 col2" >2.64</td>
+      <td id="T_92a8d_row4_col3" class="data row4 col3" >1.89</td>
+      <td id="T_92a8d_row4_col4" class="data row4 col4" >0.00</td>
     </tr>
     <tr>
-      <th id="T_c6078_level0_row5" class="row_heading level0 row5" >Public Services</th>
-      <td id="T_c6078_row5_col0" class="data row5 col0" >3.09</td>
-      <td id="T_c6078_row5_col1" class="data row5 col1" >0.00</td>
-      <td id="T_c6078_row5_col2" class="data row5 col2" >0.00</td>
-      <td id="T_c6078_row5_col3" class="data row5 col3" >0.00</td>
-      <td id="T_c6078_row5_col4" class="data row5 col4" >0.00</td>
+      <th id="T_92a8d_level0_row5" class="row_heading level0 row5" >Public Services</th>
+      <td id="T_92a8d_row5_col0" class="data row5 col0" >3.09</td>
+      <td id="T_92a8d_row5_col1" class="data row5 col1" >0.00</td>
+      <td id="T_92a8d_row5_col2" class="data row5 col2" >0.00</td>
+      <td id="T_92a8d_row5_col3" class="data row5 col3" >0.00</td>
+      <td id="T_92a8d_row5_col4" class="data row5 col4" >0.00</td>
     </tr>
   </tbody>
 </table>
@@ -1641,48 +1666,48 @@ Lakes</label><div class="sd-tab-content docutils">
 <p>The streets are measured as the length of the road network in the cirlce with r= 1 500 m and area <span class="math notranslate nohighlight">\(\pi r²\)</span> and the survey location in the middle. The lenghts for each location are normalized from 0 - 1. Thus in the table below, the locations that have the shortest road net work will be in category 1, the those with a more dense network will be higher.
 <br></br></p>
 <div class="output text_html"><style type="text/css">
-#T_515a2 caption {
+#T_e20a9 caption {
   caption-side: top;
   font-size: 1em;
   text-align: left;
   margin-bottom: 10px;
 }
-#T_515a2 caption {
+#T_e20a9 caption {
   caption-side: top;
   font-size: .9em;
   text-align: left;
   font-style: italic;
   color: #000;
 }
-#T_515a2 td {
+#T_e20a9 td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
   padding: 4px;
 }
-#T_515a2_row0_col1 {
+#T_e20a9_row0_col1 {
   background-color: #FAE8E8;
 }
 </style>
-<table id="T_515a2">
+<table id="T_e20a9">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_515a2_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
-      <th id="T_515a2_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
-      <th id="T_515a2_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
-      <th id="T_515a2_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
-      <th id="T_515a2_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
+      <th id="T_e20a9_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
+      <th id="T_e20a9_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
+      <th id="T_e20a9_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
+      <th id="T_e20a9_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
+      <th id="T_e20a9_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_515a2_level0_row0" class="row_heading level0 row0" >streets</th>
-      <td id="T_515a2_row0_col0" class="data row0 col0" >1.70</td>
-      <td id="T_515a2_row0_col1" class="data row0 col1" >4.41</td>
-      <td id="T_515a2_row0_col2" class="data row0 col2" >0</td>
-      <td id="T_515a2_row0_col3" class="data row0 col3" >0</td>
-      <td id="T_515a2_row0_col4" class="data row0 col4" >0</td>
+      <th id="T_e20a9_level0_row0" class="row_heading level0 row0" >streets</th>
+      <td id="T_e20a9_row0_col0" class="data row0 col0" >1.70</td>
+      <td id="T_e20a9_row0_col1" class="data row0 col1" >4.41</td>
+      <td id="T_e20a9_row0_col2" class="data row0 col2" >0</td>
+      <td id="T_e20a9_row0_col3" class="data row0 col3" >0</td>
+      <td id="T_e20a9_row0_col4" class="data row0 col4" >0</td>
     </tr>
   </tbody>
 </table>
@@ -1692,88 +1717,88 @@ Lakes</label><div class="sd-tab-content docutils">
 Rivers</label><div class="sd-tab-content docutils">
 <p><strong>Land use</strong></p>
 <div class="output text_html"><style type="text/css">
-#T_4da72 caption {
+#T_a2a51 caption {
   caption-side: top;
   font-size: 1em;
   text-align: left;
   margin-bottom: 10px;
 }
-#T_4da72 caption {
+#T_a2a51 caption {
   caption-side: top;
   font-size: .9em;
   text-align: left;
   font-style: italic;
   color: #000;
 }
-#T_4da72 td {
+#T_a2a51 td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
   padding: 4px;
 }
-#T_4da72_row0_col0, #T_4da72_row1_col0, #T_4da72_row2_col0, #T_4da72_row3_col2, #T_4da72_row4_col2, #T_4da72_row5_col0 {
+#T_a2a51_row0_col0, #T_a2a51_row1_col0, #T_a2a51_row2_col0, #T_a2a51_row3_col2, #T_a2a51_row4_col2, #T_a2a51_row5_col0 {
   background-color: #FAE8E8;
 }
 </style>
-<table id="T_4da72">
+<table id="T_a2a51">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_4da72_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
-      <th id="T_4da72_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
-      <th id="T_4da72_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
-      <th id="T_4da72_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
-      <th id="T_4da72_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
+      <th id="T_a2a51_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
+      <th id="T_a2a51_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
+      <th id="T_a2a51_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
+      <th id="T_a2a51_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
+      <th id="T_a2a51_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_4da72_level0_row0" class="row_heading level0 row0" >Orchards</th>
-      <td id="T_4da72_row0_col0" class="data row0 col0" >1.12</td>
-      <td id="T_4da72_row0_col1" class="data row0 col1" >0.00</td>
-      <td id="T_4da72_row0_col2" class="data row0 col2" >0.00</td>
-      <td id="T_4da72_row0_col3" class="data row0 col3" >0.00</td>
-      <td id="T_4da72_row0_col4" class="data row0 col4" >0.00</td>
+      <th id="T_a2a51_level0_row0" class="row_heading level0 row0" >Orchards</th>
+      <td id="T_a2a51_row0_col0" class="data row0 col0" >1.12</td>
+      <td id="T_a2a51_row0_col1" class="data row0 col1" >0.00</td>
+      <td id="T_a2a51_row0_col2" class="data row0 col2" >0.00</td>
+      <td id="T_a2a51_row0_col3" class="data row0 col3" >0.00</td>
+      <td id="T_a2a51_row0_col4" class="data row0 col4" >0.00</td>
     </tr>
     <tr>
-      <th id="T_4da72_level0_row1" class="row_heading level0 row1" >Vineyards</th>
-      <td id="T_4da72_row1_col0" class="data row1 col0" >1.12</td>
-      <td id="T_4da72_row1_col1" class="data row1 col1" >0.00</td>
-      <td id="T_4da72_row1_col2" class="data row1 col2" >0.00</td>
-      <td id="T_4da72_row1_col3" class="data row1 col3" >0.00</td>
-      <td id="T_4da72_row1_col4" class="data row1 col4" >0.00</td>
+      <th id="T_a2a51_level0_row1" class="row_heading level0 row1" >Vineyards</th>
+      <td id="T_a2a51_row1_col0" class="data row1 col0" >1.12</td>
+      <td id="T_a2a51_row1_col1" class="data row1 col1" >0.00</td>
+      <td id="T_a2a51_row1_col2" class="data row1 col2" >0.00</td>
+      <td id="T_a2a51_row1_col3" class="data row1 col3" >0.00</td>
+      <td id="T_a2a51_row1_col4" class="data row1 col4" >0.00</td>
     </tr>
     <tr>
-      <th id="T_4da72_level0_row2" class="row_heading level0 row2" >Buildings</th>
-      <td id="T_4da72_row2_col0" class="data row2 col0" >1.51</td>
-      <td id="T_4da72_row2_col1" class="data row2 col1" >0.00</td>
-      <td id="T_4da72_row2_col2" class="data row2 col2" >1.20</td>
-      <td id="T_4da72_row2_col3" class="data row2 col3" >0.60</td>
-      <td id="T_4da72_row2_col4" class="data row2 col4" >0.00</td>
+      <th id="T_a2a51_level0_row2" class="row_heading level0 row2" >Buildings</th>
+      <td id="T_a2a51_row2_col0" class="data row2 col0" >1.51</td>
+      <td id="T_a2a51_row2_col1" class="data row2 col1" >0.00</td>
+      <td id="T_a2a51_row2_col2" class="data row2 col2" >1.20</td>
+      <td id="T_a2a51_row2_col3" class="data row2 col3" >0.60</td>
+      <td id="T_a2a51_row2_col4" class="data row2 col4" >0.00</td>
     </tr>
     <tr>
-      <th id="T_4da72_level0_row3" class="row_heading level0 row3" >Forest</th>
-      <td id="T_4da72_row3_col0" class="data row3 col0" >1.54</td>
-      <td id="T_4da72_row3_col1" class="data row3 col1" >0.76</td>
-      <td id="T_4da72_row3_col2" class="data row3 col2" >1.56</td>
-      <td id="T_4da72_row3_col3" class="data row3 col3" >0.00</td>
-      <td id="T_4da72_row3_col4" class="data row3 col4" >0.00</td>
+      <th id="T_a2a51_level0_row3" class="row_heading level0 row3" >Forest</th>
+      <td id="T_a2a51_row3_col0" class="data row3 col0" >1.54</td>
+      <td id="T_a2a51_row3_col1" class="data row3 col1" >0.76</td>
+      <td id="T_a2a51_row3_col2" class="data row3 col2" >1.56</td>
+      <td id="T_a2a51_row3_col3" class="data row3 col3" >0.00</td>
+      <td id="T_a2a51_row3_col4" class="data row3 col4" >0.00</td>
     </tr>
     <tr>
-      <th id="T_4da72_level0_row4" class="row_heading level0 row4" >Undefined</th>
-      <td id="T_4da72_row4_col0" class="data row4 col0" >0.50</td>
-      <td id="T_4da72_row4_col1" class="data row4 col1" >0.93</td>
-      <td id="T_4da72_row4_col2" class="data row4 col2" >2.59</td>
-      <td id="T_4da72_row4_col3" class="data row4 col3" >1.50</td>
-      <td id="T_4da72_row4_col4" class="data row4 col4" >0.00</td>
+      <th id="T_a2a51_level0_row4" class="row_heading level0 row4" >Undefined</th>
+      <td id="T_a2a51_row4_col0" class="data row4 col0" >0.50</td>
+      <td id="T_a2a51_row4_col1" class="data row4 col1" >0.93</td>
+      <td id="T_a2a51_row4_col2" class="data row4 col2" >2.59</td>
+      <td id="T_a2a51_row4_col3" class="data row4 col3" >1.50</td>
+      <td id="T_a2a51_row4_col4" class="data row4 col4" >0.00</td>
     </tr>
     <tr>
-      <th id="T_4da72_level0_row5" class="row_heading level0 row5" >Public Services</th>
-      <td id="T_4da72_row5_col0" class="data row5 col0" >1.29</td>
-      <td id="T_4da72_row5_col1" class="data row5 col1" >0.07</td>
-      <td id="T_4da72_row5_col2" class="data row5 col2" >0.00</td>
-      <td id="T_4da72_row5_col3" class="data row5 col3" >0.00</td>
-      <td id="T_4da72_row5_col4" class="data row5 col4" >0.00</td>
+      <th id="T_a2a51_level0_row5" class="row_heading level0 row5" >Public Services</th>
+      <td id="T_a2a51_row5_col0" class="data row5 col0" >1.29</td>
+      <td id="T_a2a51_row5_col1" class="data row5 col1" >0.07</td>
+      <td id="T_a2a51_row5_col2" class="data row5 col2" >0.00</td>
+      <td id="T_a2a51_row5_col3" class="data row5 col3" >0.00</td>
+      <td id="T_a2a51_row5_col4" class="data row5 col4" >0.00</td>
     </tr>
   </tbody>
 </table>
@@ -1781,48 +1806,48 @@ Rivers</label><div class="sd-tab-content docutils">
 <p>The streets are measured as the length of the road network in the cirlce with r= 1 500 m and area <span class="math notranslate nohighlight">\(\pi r²\)</span> and the survey location in the middle. The lenghts for each location are normalized from 0 - 1. Thus in the table below, the locations that have the shortest road net work will be in category 1, the those with a more dense network will be higher.
 <br></br></p>
 <div class="output text_html"><style type="text/css">
-#T_44fce caption {
+#T_9af73 caption {
   caption-side: top;
   font-size: 1em;
   text-align: left;
   margin-bottom: 10px;
 }
-#T_44fce caption {
+#T_9af73 caption {
   caption-side: top;
   font-size: .9em;
   text-align: left;
   font-style: italic;
   color: #000;
 }
-#T_44fce td {
+#T_9af73 td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
   padding: 4px;
 }
-#T_44fce_row0_col1 {
+#T_9af73_row0_col1 {
   background-color: #FAE8E8;
 }
 </style>
-<table id="T_44fce">
+<table id="T_9af73">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_44fce_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
-      <th id="T_44fce_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
-      <th id="T_44fce_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
-      <th id="T_44fce_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
-      <th id="T_44fce_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
+      <th id="T_9af73_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
+      <th id="T_9af73_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
+      <th id="T_9af73_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
+      <th id="T_9af73_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
+      <th id="T_9af73_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_44fce_level0_row0" class="row_heading level0 row0" >streets</th>
-      <td id="T_44fce_row0_col0" class="data row0 col0" >0.22</td>
-      <td id="T_44fce_row0_col1" class="data row0 col1" >1.72</td>
-      <td id="T_44fce_row0_col2" class="data row0 col2" >0.99</td>
-      <td id="T_44fce_row0_col3" class="data row0 col3" >0.16</td>
-      <td id="T_44fce_row0_col4" class="data row0 col4" >0</td>
+      <th id="T_9af73_level0_row0" class="row_heading level0 row0" >streets</th>
+      <td id="T_9af73_row0_col0" class="data row0 col0" >0.22</td>
+      <td id="T_9af73_row0_col1" class="data row0 col1" >1.72</td>
+      <td id="T_9af73_row0_col2" class="data row0 col2" >0.99</td>
+      <td id="T_9af73_row0_col3" class="data row0 col3" >0.16</td>
+      <td id="T_9af73_row0_col4" class="data row0 col4" >0</td>
     </tr>
   </tbody>
 </table>
@@ -1837,88 +1862,88 @@ Rivers</label><div class="sd-tab-content docutils">
 All lakes and rivers</label><div class="sd-tab-content docutils">
 <p><strong>Land use</strong></p>
 <div class="output text_html"><style type="text/css">
-#T_c5a42 caption {
+#T_5b96b caption {
   caption-side: top;
   font-size: 1em;
   text-align: left;
   margin-bottom: 10px;
 }
-#T_c5a42 caption {
+#T_5b96b caption {
   caption-side: top;
   font-size: .9em;
   text-align: left;
   font-style: italic;
   color: #000;
 }
-#T_c5a42 td {
+#T_5b96b td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
   padding: 4px;
 }
-#T_c5a42_row0_col0, #T_c5a42_row1_col0, #T_c5a42_row2_col1, #T_c5a42_row3_col1, #T_c5a42_row4_col2, #T_c5a42_row5_col0 {
+#T_5b96b_row0_col0, #T_5b96b_row1_col0, #T_5b96b_row2_col1, #T_5b96b_row3_col1, #T_5b96b_row4_col2, #T_5b96b_row5_col0 {
   background-color: #FAE8E8;
 }
 </style>
-<table id="T_c5a42">
+<table id="T_5b96b">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_c5a42_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
-      <th id="T_c5a42_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
-      <th id="T_c5a42_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
-      <th id="T_c5a42_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
-      <th id="T_c5a42_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
+      <th id="T_5b96b_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
+      <th id="T_5b96b_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
+      <th id="T_5b96b_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
+      <th id="T_5b96b_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
+      <th id="T_5b96b_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_c5a42_level0_row0" class="row_heading level0 row0" >Orchards</th>
-      <td id="T_c5a42_row0_col0" class="data row0 col0" >100%</td>
-      <td id="T_c5a42_row0_col1" class="data row0 col1" >0%</td>
-      <td id="T_c5a42_row0_col2" class="data row0 col2" >0%</td>
-      <td id="T_c5a42_row0_col3" class="data row0 col3" >0%</td>
-      <td id="T_c5a42_row0_col4" class="data row0 col4" >0%</td>
+      <th id="T_5b96b_level0_row0" class="row_heading level0 row0" >Orchards</th>
+      <td id="T_5b96b_row0_col0" class="data row0 col0" >100%</td>
+      <td id="T_5b96b_row0_col1" class="data row0 col1" >0%</td>
+      <td id="T_5b96b_row0_col2" class="data row0 col2" >0%</td>
+      <td id="T_5b96b_row0_col3" class="data row0 col3" >0%</td>
+      <td id="T_5b96b_row0_col4" class="data row0 col4" >0%</td>
     </tr>
     <tr>
-      <th id="T_c5a42_level0_row1" class="row_heading level0 row1" >Vineyards</th>
-      <td id="T_c5a42_row1_col0" class="data row1 col0" >100%</td>
-      <td id="T_c5a42_row1_col1" class="data row1 col1" >0%</td>
-      <td id="T_c5a42_row1_col2" class="data row1 col2" >0%</td>
-      <td id="T_c5a42_row1_col3" class="data row1 col3" >0%</td>
-      <td id="T_c5a42_row1_col4" class="data row1 col4" >0%</td>
+      <th id="T_5b96b_level0_row1" class="row_heading level0 row1" >Vineyards</th>
+      <td id="T_5b96b_row1_col0" class="data row1 col0" >100%</td>
+      <td id="T_5b96b_row1_col1" class="data row1 col1" >0%</td>
+      <td id="T_5b96b_row1_col2" class="data row1 col2" >0%</td>
+      <td id="T_5b96b_row1_col3" class="data row1 col3" >0%</td>
+      <td id="T_5b96b_row1_col4" class="data row1 col4" >0%</td>
     </tr>
     <tr>
-      <th id="T_c5a42_level0_row2" class="row_heading level0 row2" >Buildings</th>
-      <td id="T_c5a42_row2_col0" class="data row2 col0" >30%</td>
-      <td id="T_c5a42_row2_col1" class="data row2 col1" >31%</td>
-      <td id="T_c5a42_row2_col2" class="data row2 col2" >26%</td>
-      <td id="T_c5a42_row2_col3" class="data row2 col3" >10%</td>
-      <td id="T_c5a42_row2_col4" class="data row2 col4" >2%</td>
+      <th id="T_5b96b_level0_row2" class="row_heading level0 row2" >Buildings</th>
+      <td id="T_5b96b_row2_col0" class="data row2 col0" >30%</td>
+      <td id="T_5b96b_row2_col1" class="data row2 col1" >31%</td>
+      <td id="T_5b96b_row2_col2" class="data row2 col2" >26%</td>
+      <td id="T_5b96b_row2_col3" class="data row2 col3" >10%</td>
+      <td id="T_5b96b_row2_col4" class="data row2 col4" >2%</td>
     </tr>
     <tr>
-      <th id="T_c5a42_level0_row3" class="row_heading level0 row3" >Forest</th>
-      <td id="T_c5a42_row3_col0" class="data row3 col0" >27%</td>
-      <td id="T_c5a42_row3_col1" class="data row3 col1" >64%</td>
-      <td id="T_c5a42_row3_col2" class="data row3 col2" >9%</td>
-      <td id="T_c5a42_row3_col3" class="data row3 col3" >0%</td>
-      <td id="T_c5a42_row3_col4" class="data row3 col4" >0%</td>
+      <th id="T_5b96b_level0_row3" class="row_heading level0 row3" >Forest</th>
+      <td id="T_5b96b_row3_col0" class="data row3 col0" >27%</td>
+      <td id="T_5b96b_row3_col1" class="data row3 col1" >64%</td>
+      <td id="T_5b96b_row3_col2" class="data row3 col2" >9%</td>
+      <td id="T_5b96b_row3_col3" class="data row3 col3" >0%</td>
+      <td id="T_5b96b_row3_col4" class="data row3 col4" >0%</td>
     </tr>
     <tr>
-      <th id="T_c5a42_level0_row4" class="row_heading level0 row4" >Undefined</th>
-      <td id="T_c5a42_row4_col0" class="data row4 col0" >35%</td>
-      <td id="T_c5a42_row4_col1" class="data row4 col1" >12%</td>
-      <td id="T_c5a42_row4_col2" class="data row4 col2" >36%</td>
-      <td id="T_c5a42_row4_col3" class="data row4 col3" >17%</td>
-      <td id="T_c5a42_row4_col4" class="data row4 col4" >0%</td>
+      <th id="T_5b96b_level0_row4" class="row_heading level0 row4" >Undefined</th>
+      <td id="T_5b96b_row4_col0" class="data row4 col0" >35%</td>
+      <td id="T_5b96b_row4_col1" class="data row4 col1" >12%</td>
+      <td id="T_5b96b_row4_col2" class="data row4 col2" >36%</td>
+      <td id="T_5b96b_row4_col3" class="data row4 col3" >17%</td>
+      <td id="T_5b96b_row4_col4" class="data row4 col4" >0%</td>
     </tr>
     <tr>
-      <th id="T_c5a42_level0_row5" class="row_heading level0 row5" >Public Services</th>
-      <td id="T_c5a42_row5_col0" class="data row5 col0" >98%</td>
-      <td id="T_c5a42_row5_col1" class="data row5 col1" >2%</td>
-      <td id="T_c5a42_row5_col2" class="data row5 col2" >0%</td>
-      <td id="T_c5a42_row5_col3" class="data row5 col3" >0%</td>
-      <td id="T_c5a42_row5_col4" class="data row5 col4" >0%</td>
+      <th id="T_5b96b_level0_row5" class="row_heading level0 row5" >Public Services</th>
+      <td id="T_5b96b_row5_col0" class="data row5 col0" >98%</td>
+      <td id="T_5b96b_row5_col1" class="data row5 col1" >2%</td>
+      <td id="T_5b96b_row5_col2" class="data row5 col2" >0%</td>
+      <td id="T_5b96b_row5_col3" class="data row5 col3" >0%</td>
+      <td id="T_5b96b_row5_col4" class="data row5 col4" >0%</td>
     </tr>
   </tbody>
 </table>
@@ -1926,48 +1951,48 @@ All lakes and rivers</label><div class="sd-tab-content docutils">
 <p>The streets are measured as the length of the road network in the cirlce with r= 1 500 m and area <span class="math notranslate nohighlight">\(\pi r²\)</span> and the survey location in the middle. The lengths for each location are normalized from 0 - 1. Thus in the table below, the locations that have the shortest road net work will be in category 1, the those with a more dense network will be higher.
 <br></br></p>
 <div class="output text_html"><style type="text/css">
-#T_f1c79 caption {
+#T_335c8 caption {
   caption-side: top;
   font-size: 1em;
   text-align: left;
   margin-bottom: 10px;
 }
-#T_f1c79 caption {
+#T_335c8 caption {
   caption-side: top;
   font-size: .9em;
   text-align: left;
   font-style: italic;
   color: #000;
 }
-#T_f1c79 td {
+#T_335c8 td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
   padding: 4px;
 }
-#T_f1c79_row0_col1 {
+#T_335c8_row0_col1 {
   background-color: #FAE8E8;
 }
 </style>
-<table id="T_f1c79">
+<table id="T_335c8">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_f1c79_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
-      <th id="T_f1c79_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
-      <th id="T_f1c79_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
-      <th id="T_f1c79_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
-      <th id="T_f1c79_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
+      <th id="T_335c8_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
+      <th id="T_335c8_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
+      <th id="T_335c8_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
+      <th id="T_335c8_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
+      <th id="T_335c8_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_f1c79_level0_row0" class="row_heading level0 row0" >streets</th>
-      <td id="T_f1c79_row0_col0" class="data row0 col0" >42%</td>
-      <td id="T_f1c79_row0_col1" class="data row0 col1" >49%</td>
-      <td id="T_f1c79_row0_col2" class="data row0 col2" >7%</td>
-      <td id="T_f1c79_row0_col3" class="data row0 col3" >2%</td>
-      <td id="T_f1c79_row0_col4" class="data row0 col4" >0%</td>
+      <th id="T_335c8_level0_row0" class="row_heading level0 row0" >streets</th>
+      <td id="T_335c8_row0_col0" class="data row0 col0" >42%</td>
+      <td id="T_335c8_row0_col1" class="data row0 col1" >49%</td>
+      <td id="T_335c8_row0_col2" class="data row0 col2" >7%</td>
+      <td id="T_335c8_row0_col3" class="data row0 col3" >2%</td>
+      <td id="T_335c8_row0_col4" class="data row0 col4" >0%</td>
     </tr>
   </tbody>
 </table>
@@ -1977,88 +2002,88 @@ All lakes and rivers</label><div class="sd-tab-content docutils">
 Lakes</label><div class="sd-tab-content docutils">
 <p><strong>Land use</strong></p>
 <div class="output text_html"><style type="text/css">
-#T_22912 caption {
+#T_2f8e6 caption {
   caption-side: top;
   font-size: 1em;
   text-align: left;
   margin-bottom: 10px;
 }
-#T_22912 caption {
+#T_2f8e6 caption {
   caption-side: top;
   font-size: .9em;
   text-align: left;
   font-style: italic;
   color: #000;
 }
-#T_22912 td {
+#T_2f8e6 td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
   padding: 4px;
 }
-#T_22912_row0_col0, #T_22912_row1_col0, #T_22912_row2_col1, #T_22912_row3_col1, #T_22912_row4_col2, #T_22912_row5_col0 {
+#T_2f8e6_row0_col0, #T_2f8e6_row1_col0, #T_2f8e6_row2_col1, #T_2f8e6_row3_col1, #T_2f8e6_row4_col2, #T_2f8e6_row5_col0 {
   background-color: #FAE8E8;
 }
 </style>
-<table id="T_22912">
+<table id="T_2f8e6">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_22912_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
-      <th id="T_22912_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
-      <th id="T_22912_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
-      <th id="T_22912_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
-      <th id="T_22912_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
+      <th id="T_2f8e6_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
+      <th id="T_2f8e6_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
+      <th id="T_2f8e6_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
+      <th id="T_2f8e6_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
+      <th id="T_2f8e6_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_22912_level0_row0" class="row_heading level0 row0" >Orchards</th>
-      <td id="T_22912_row0_col0" class="data row0 col0" >100%</td>
-      <td id="T_22912_row0_col1" class="data row0 col1" >0%</td>
-      <td id="T_22912_row0_col2" class="data row0 col2" >0%</td>
-      <td id="T_22912_row0_col3" class="data row0 col3" >0%</td>
-      <td id="T_22912_row0_col4" class="data row0 col4" >0%</td>
+      <th id="T_2f8e6_level0_row0" class="row_heading level0 row0" >Orchards</th>
+      <td id="T_2f8e6_row0_col0" class="data row0 col0" >100%</td>
+      <td id="T_2f8e6_row0_col1" class="data row0 col1" >0%</td>
+      <td id="T_2f8e6_row0_col2" class="data row0 col2" >0%</td>
+      <td id="T_2f8e6_row0_col3" class="data row0 col3" >0%</td>
+      <td id="T_2f8e6_row0_col4" class="data row0 col4" >0%</td>
     </tr>
     <tr>
-      <th id="T_22912_level0_row1" class="row_heading level0 row1" >Vineyards</th>
-      <td id="T_22912_row1_col0" class="data row1 col0" >100%</td>
-      <td id="T_22912_row1_col1" class="data row1 col1" >0%</td>
-      <td id="T_22912_row1_col2" class="data row1 col2" >0%</td>
-      <td id="T_22912_row1_col3" class="data row1 col3" >0%</td>
-      <td id="T_22912_row1_col4" class="data row1 col4" >0%</td>
+      <th id="T_2f8e6_level0_row1" class="row_heading level0 row1" >Vineyards</th>
+      <td id="T_2f8e6_row1_col0" class="data row1 col0" >100%</td>
+      <td id="T_2f8e6_row1_col1" class="data row1 col1" >0%</td>
+      <td id="T_2f8e6_row1_col2" class="data row1 col2" >0%</td>
+      <td id="T_2f8e6_row1_col3" class="data row1 col3" >0%</td>
+      <td id="T_2f8e6_row1_col4" class="data row1 col4" >0%</td>
     </tr>
     <tr>
-      <th id="T_22912_level0_row2" class="row_heading level0 row2" >Buildings</th>
-      <td id="T_22912_row2_col0" class="data row2 col0" >31%</td>
-      <td id="T_22912_row2_col1" class="data row2 col1" >38%</td>
-      <td id="T_22912_row2_col2" class="data row2 col2" >22%</td>
-      <td id="T_22912_row2_col3" class="data row2 col3" >7%</td>
-      <td id="T_22912_row2_col4" class="data row2 col4" >3%</td>
+      <th id="T_2f8e6_level0_row2" class="row_heading level0 row2" >Buildings</th>
+      <td id="T_2f8e6_row2_col0" class="data row2 col0" >31%</td>
+      <td id="T_2f8e6_row2_col1" class="data row2 col1" >38%</td>
+      <td id="T_2f8e6_row2_col2" class="data row2 col2" >22%</td>
+      <td id="T_2f8e6_row2_col3" class="data row2 col3" >7%</td>
+      <td id="T_2f8e6_row2_col4" class="data row2 col4" >3%</td>
     </tr>
     <tr>
-      <th id="T_22912_level0_row3" class="row_heading level0 row3" >Forest</th>
-      <td id="T_22912_row3_col0" class="data row3 col0" >24%</td>
-      <td id="T_22912_row3_col1" class="data row3 col1" >66%</td>
-      <td id="T_22912_row3_col2" class="data row3 col2" >9%</td>
-      <td id="T_22912_row3_col3" class="data row3 col3" >0%</td>
-      <td id="T_22912_row3_col4" class="data row3 col4" >0%</td>
+      <th id="T_2f8e6_level0_row3" class="row_heading level0 row3" >Forest</th>
+      <td id="T_2f8e6_row3_col0" class="data row3 col0" >24%</td>
+      <td id="T_2f8e6_row3_col1" class="data row3 col1" >66%</td>
+      <td id="T_2f8e6_row3_col2" class="data row3 col2" >9%</td>
+      <td id="T_2f8e6_row3_col3" class="data row3 col3" >0%</td>
+      <td id="T_2f8e6_row3_col4" class="data row3 col4" >0%</td>
     </tr>
     <tr>
-      <th id="T_22912_level0_row4" class="row_heading level0 row4" >Undefined</th>
-      <td id="T_22912_row4_col0" class="data row4 col0" >35%</td>
-      <td id="T_22912_row4_col1" class="data row4 col1" >8%</td>
-      <td id="T_22912_row4_col2" class="data row4 col2" >41%</td>
-      <td id="T_22912_row4_col3" class="data row4 col3" >16%</td>
-      <td id="T_22912_row4_col4" class="data row4 col4" >0%</td>
+      <th id="T_2f8e6_level0_row4" class="row_heading level0 row4" >Undefined</th>
+      <td id="T_2f8e6_row4_col0" class="data row4 col0" >35%</td>
+      <td id="T_2f8e6_row4_col1" class="data row4 col1" >8%</td>
+      <td id="T_2f8e6_row4_col2" class="data row4 col2" >41%</td>
+      <td id="T_2f8e6_row4_col3" class="data row4 col3" >16%</td>
+      <td id="T_2f8e6_row4_col4" class="data row4 col4" >0%</td>
     </tr>
     <tr>
-      <th id="T_22912_level0_row5" class="row_heading level0 row5" >Public Services</th>
-      <td id="T_22912_row5_col0" class="data row5 col0" >100%</td>
-      <td id="T_22912_row5_col1" class="data row5 col1" >0%</td>
-      <td id="T_22912_row5_col2" class="data row5 col2" >0%</td>
-      <td id="T_22912_row5_col3" class="data row5 col3" >0%</td>
-      <td id="T_22912_row5_col4" class="data row5 col4" >0%</td>
+      <th id="T_2f8e6_level0_row5" class="row_heading level0 row5" >Public Services</th>
+      <td id="T_2f8e6_row5_col0" class="data row5 col0" >100%</td>
+      <td id="T_2f8e6_row5_col1" class="data row5 col1" >0%</td>
+      <td id="T_2f8e6_row5_col2" class="data row5 col2" >0%</td>
+      <td id="T_2f8e6_row5_col3" class="data row5 col3" >0%</td>
+      <td id="T_2f8e6_row5_col4" class="data row5 col4" >0%</td>
     </tr>
   </tbody>
 </table>
@@ -2066,48 +2091,48 @@ Lakes</label><div class="sd-tab-content docutils">
 <p>The streets are measured as the length of the road network in the cirlce with r= 1 500 m and area <span class="math notranslate nohighlight">\(\pi r²\)</span> and the survey location in the middle. The lenghts for each location are normalized from 0 - 1. Thus in the table below, the locations that have the shortest road net work will be in category 1, the those with a more dense network will be higher.
 <br></br></p>
 <div class="output text_html"><style type="text/css">
-#T_dcfee caption {
+#T_b2fe9 caption {
   caption-side: top;
   font-size: 1em;
   text-align: left;
   margin-bottom: 10px;
 }
-#T_dcfee caption {
+#T_b2fe9 caption {
   caption-side: top;
   font-size: .9em;
   text-align: left;
   font-style: italic;
   color: #000;
 }
-#T_dcfee td {
+#T_b2fe9 td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
   padding: 4px;
 }
-#T_dcfee_row0_col1 {
+#T_b2fe9_row0_col1 {
   background-color: #FAE8E8;
 }
 </style>
-<table id="T_dcfee">
+<table id="T_b2fe9">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_dcfee_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
-      <th id="T_dcfee_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
-      <th id="T_dcfee_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
-      <th id="T_dcfee_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
-      <th id="T_dcfee_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
+      <th id="T_b2fe9_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
+      <th id="T_b2fe9_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
+      <th id="T_b2fe9_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
+      <th id="T_b2fe9_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
+      <th id="T_b2fe9_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_dcfee_level0_row0" class="row_heading level0 row0" >streets</th>
-      <td id="T_dcfee_row0_col0" class="data row0 col0" >49%</td>
-      <td id="T_dcfee_row0_col1" class="data row0 col1" >51%</td>
-      <td id="T_dcfee_row0_col2" class="data row0 col2" >0%</td>
-      <td id="T_dcfee_row0_col3" class="data row0 col3" >0%</td>
-      <td id="T_dcfee_row0_col4" class="data row0 col4" >0%</td>
+      <th id="T_b2fe9_level0_row0" class="row_heading level0 row0" >streets</th>
+      <td id="T_b2fe9_row0_col0" class="data row0 col0" >49%</td>
+      <td id="T_b2fe9_row0_col1" class="data row0 col1" >51%</td>
+      <td id="T_b2fe9_row0_col2" class="data row0 col2" >0%</td>
+      <td id="T_b2fe9_row0_col3" class="data row0 col3" >0%</td>
+      <td id="T_b2fe9_row0_col4" class="data row0 col4" >0%</td>
     </tr>
   </tbody>
 </table>
@@ -2117,88 +2142,88 @@ Lakes</label><div class="sd-tab-content docutils">
 Rivers</label><div class="sd-tab-content docutils">
 <p><strong>Land use</strong></p>
 <div class="output text_html"><style type="text/css">
-#T_012fb caption {
+#T_a2c83 caption {
   caption-side: top;
   font-size: 1em;
   text-align: left;
   margin-bottom: 10px;
 }
-#T_012fb caption {
+#T_a2c83 caption {
   caption-side: top;
   font-size: .9em;
   text-align: left;
   font-style: italic;
   color: #000;
 }
-#T_012fb td {
+#T_a2c83 td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
   padding: 4px;
 }
-#T_012fb_row0_col0, #T_012fb_row1_col0, #T_012fb_row2_col2, #T_012fb_row3_col1, #T_012fb_row4_col0, #T_012fb_row4_col1, #T_012fb_row5_col0 {
+#T_a2c83_row0_col0, #T_a2c83_row1_col0, #T_a2c83_row2_col2, #T_a2c83_row3_col1, #T_a2c83_row4_col0, #T_a2c83_row4_col1, #T_a2c83_row5_col0 {
   background-color: #FAE8E8;
 }
 </style>
-<table id="T_012fb">
+<table id="T_a2c83">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_012fb_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
-      <th id="T_012fb_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
-      <th id="T_012fb_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
-      <th id="T_012fb_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
-      <th id="T_012fb_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
+      <th id="T_a2c83_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
+      <th id="T_a2c83_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
+      <th id="T_a2c83_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
+      <th id="T_a2c83_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
+      <th id="T_a2c83_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_012fb_level0_row0" class="row_heading level0 row0" >Orchards</th>
-      <td id="T_012fb_row0_col0" class="data row0 col0" >100%</td>
-      <td id="T_012fb_row0_col1" class="data row0 col1" >0%</td>
-      <td id="T_012fb_row0_col2" class="data row0 col2" >0%</td>
-      <td id="T_012fb_row0_col3" class="data row0 col3" >0%</td>
-      <td id="T_012fb_row0_col4" class="data row0 col4" >0%</td>
+      <th id="T_a2c83_level0_row0" class="row_heading level0 row0" >Orchards</th>
+      <td id="T_a2c83_row0_col0" class="data row0 col0" >100%</td>
+      <td id="T_a2c83_row0_col1" class="data row0 col1" >0%</td>
+      <td id="T_a2c83_row0_col2" class="data row0 col2" >0%</td>
+      <td id="T_a2c83_row0_col3" class="data row0 col3" >0%</td>
+      <td id="T_a2c83_row0_col4" class="data row0 col4" >0%</td>
     </tr>
     <tr>
-      <th id="T_012fb_level0_row1" class="row_heading level0 row1" >Vineyards</th>
-      <td id="T_012fb_row1_col0" class="data row1 col0" >100%</td>
-      <td id="T_012fb_row1_col1" class="data row1 col1" >0%</td>
-      <td id="T_012fb_row1_col2" class="data row1 col2" >0%</td>
-      <td id="T_012fb_row1_col3" class="data row1 col3" >0%</td>
-      <td id="T_012fb_row1_col4" class="data row1 col4" >0%</td>
+      <th id="T_a2c83_level0_row1" class="row_heading level0 row1" >Vineyards</th>
+      <td id="T_a2c83_row1_col0" class="data row1 col0" >100%</td>
+      <td id="T_a2c83_row1_col1" class="data row1 col1" >0%</td>
+      <td id="T_a2c83_row1_col2" class="data row1 col2" >0%</td>
+      <td id="T_a2c83_row1_col3" class="data row1 col3" >0%</td>
+      <td id="T_a2c83_row1_col4" class="data row1 col4" >0%</td>
     </tr>
     <tr>
-      <th id="T_012fb_level0_row2" class="row_heading level0 row2" >Buildings</th>
-      <td id="T_012fb_row2_col0" class="data row2 col0" >27%</td>
-      <td id="T_012fb_row2_col1" class="data row2 col1" >0%</td>
-      <td id="T_012fb_row2_col2" class="data row2 col2" >47%</td>
-      <td id="T_012fb_row2_col3" class="data row2 col3" >27%</td>
-      <td id="T_012fb_row2_col4" class="data row2 col4" >0%</td>
+      <th id="T_a2c83_level0_row2" class="row_heading level0 row2" >Buildings</th>
+      <td id="T_a2c83_row2_col0" class="data row2 col0" >27%</td>
+      <td id="T_a2c83_row2_col1" class="data row2 col1" >0%</td>
+      <td id="T_a2c83_row2_col2" class="data row2 col2" >47%</td>
+      <td id="T_a2c83_row2_col3" class="data row2 col3" >27%</td>
+      <td id="T_a2c83_row2_col4" class="data row2 col4" >0%</td>
     </tr>
     <tr>
-      <th id="T_012fb_level0_row3" class="row_heading level0 row3" >Forest</th>
-      <td id="T_012fb_row3_col0" class="data row3 col0" >40%</td>
-      <td id="T_012fb_row3_col1" class="data row3 col1" >53%</td>
-      <td id="T_012fb_row3_col2" class="data row3 col2" >7%</td>
-      <td id="T_012fb_row3_col3" class="data row3 col3" >0%</td>
-      <td id="T_012fb_row3_col4" class="data row3 col4" >0%</td>
+      <th id="T_a2c83_level0_row3" class="row_heading level0 row3" >Forest</th>
+      <td id="T_a2c83_row3_col0" class="data row3 col0" >40%</td>
+      <td id="T_a2c83_row3_col1" class="data row3 col1" >53%</td>
+      <td id="T_a2c83_row3_col2" class="data row3 col2" >7%</td>
+      <td id="T_a2c83_row3_col3" class="data row3 col3" >0%</td>
+      <td id="T_a2c83_row3_col4" class="data row3 col4" >0%</td>
     </tr>
     <tr>
-      <th id="T_012fb_level0_row4" class="row_heading level0 row4" >Undefined</th>
-      <td id="T_012fb_row4_col0" class="data row4 col0" >33%</td>
-      <td id="T_012fb_row4_col1" class="data row4 col1" >33%</td>
-      <td id="T_012fb_row4_col2" class="data row4 col2" >13%</td>
-      <td id="T_012fb_row4_col3" class="data row4 col3" >20%</td>
-      <td id="T_012fb_row4_col4" class="data row4 col4" >0%</td>
+      <th id="T_a2c83_level0_row4" class="row_heading level0 row4" >Undefined</th>
+      <td id="T_a2c83_row4_col0" class="data row4 col0" >33%</td>
+      <td id="T_a2c83_row4_col1" class="data row4 col1" >33%</td>
+      <td id="T_a2c83_row4_col2" class="data row4 col2" >13%</td>
+      <td id="T_a2c83_row4_col3" class="data row4 col3" >20%</td>
+      <td id="T_a2c83_row4_col4" class="data row4 col4" >0%</td>
     </tr>
     <tr>
-      <th id="T_012fb_level0_row5" class="row_heading level0 row5" >Public Services</th>
-      <td id="T_012fb_row5_col0" class="data row5 col0" >87%</td>
-      <td id="T_012fb_row5_col1" class="data row5 col1" >13%</td>
-      <td id="T_012fb_row5_col2" class="data row5 col2" >0%</td>
-      <td id="T_012fb_row5_col3" class="data row5 col3" >0%</td>
-      <td id="T_012fb_row5_col4" class="data row5 col4" >0%</td>
+      <th id="T_a2c83_level0_row5" class="row_heading level0 row5" >Public Services</th>
+      <td id="T_a2c83_row5_col0" class="data row5 col0" >87%</td>
+      <td id="T_a2c83_row5_col1" class="data row5 col1" >13%</td>
+      <td id="T_a2c83_row5_col2" class="data row5 col2" >0%</td>
+      <td id="T_a2c83_row5_col3" class="data row5 col3" >0%</td>
+      <td id="T_a2c83_row5_col4" class="data row5 col4" >0%</td>
     </tr>
   </tbody>
 </table>
@@ -2206,48 +2231,48 @@ Rivers</label><div class="sd-tab-content docutils">
 <p>The streets are measured as the length of the road network in the cirlce with r= 1 500 m and area <span class="math notranslate nohighlight">\(\pi r²\)</span> and the survey location in the middle. The lenghts for each location are normalized from 0 - 1. Thus in the table below, the locations that have the shortest road net work will be in category 1, the those with a more dense network will be higher.
 <b></b></p>
 <div class="output text_html"><style type="text/css">
-#T_a92cc caption {
+#T_a7b9a caption {
   caption-side: top;
   font-size: 1em;
   text-align: left;
   margin-bottom: 10px;
 }
-#T_a92cc caption {
+#T_a7b9a caption {
   caption-side: top;
   font-size: .9em;
   text-align: left;
   font-style: italic;
   color: #000;
 }
-#T_a92cc td {
+#T_a7b9a td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
   padding: 4px;
 }
-#T_a92cc_row0_col1, #T_a92cc_row0_col2 {
+#T_a7b9a_row0_col1, #T_a7b9a_row0_col2 {
   background-color: #FAE8E8;
 }
 </style>
-<table id="T_a92cc">
+<table id="T_a7b9a">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_a92cc_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
-      <th id="T_a92cc_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
-      <th id="T_a92cc_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
-      <th id="T_a92cc_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
-      <th id="T_a92cc_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
+      <th id="T_a7b9a_level0_col0" class="col_heading level0 col0" >0 - 20%</th>
+      <th id="T_a7b9a_level0_col1" class="col_heading level0 col1" >20 - 40%</th>
+      <th id="T_a7b9a_level0_col2" class="col_heading level0 col2" >40 - 60%</th>
+      <th id="T_a7b9a_level0_col3" class="col_heading level0 col3" >60 - 80%</th>
+      <th id="T_a7b9a_level0_col4" class="col_heading level0 col4" >80 - 100%</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_a92cc_level0_row0" class="row_heading level0 row0" >streets</th>
-      <td id="T_a92cc_row0_col0" class="data row0 col0" >7%</td>
-      <td id="T_a92cc_row0_col1" class="data row0 col1" >40%</td>
-      <td id="T_a92cc_row0_col2" class="data row0 col2" >40%</td>
-      <td id="T_a92cc_row0_col3" class="data row0 col3" >13%</td>
-      <td id="T_a92cc_row0_col4" class="data row0 col4" >0%</td>
+      <th id="T_a7b9a_level0_row0" class="row_heading level0 row0" >streets</th>
+      <td id="T_a7b9a_row0_col0" class="data row0 col0" >7%</td>
+      <td id="T_a7b9a_row0_col1" class="data row0 col1" >40%</td>
+      <td id="T_a7b9a_row0_col2" class="data row0 col2" >40%</td>
+      <td id="T_a7b9a_row0_col3" class="data row0 col3" >13%</td>
+      <td id="T_a7b9a_row0_col4" class="data row0 col4" >0%</td>
     </tr>
   </tbody>
 </table>
@@ -2310,21 +2335,21 @@ All data</label><div class="sd-tab-content docutils">
 <div class="sd-card-body docutils">
 <p class="sd-card-text"><strong>Given the 99th percentile</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Average: 1.91</p></li>
+<li><p class="sd-card-text">Average: 1.83</p></li>
 <li><p class="sd-card-text">HDI 95%: 0.1 - 6.8</p></li>
-<li><p class="sd-card-text">90% Range: 0.1 - 6.8</p></li>
+<li><p class="sd-card-text">90% Range: 0.1 - 6.42</p></li>
 </ul>
 <p class="sd-card-text"><strong>Given the weighted prior</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Average: 2.03</p></li>
-<li><p class="sd-card-text">HDI 95%: 0.1 - 6.8</p></li>
-<li><p class="sd-card-text">90% Range: 0.2 - 6.42</p></li>
+<li><p class="sd-card-text">Average: 1.96</p></li>
+<li><p class="sd-card-text">HDI 95%: 0.1 - 5.9</p></li>
+<li><p class="sd-card-text">90% Range: 0.2 - 5.9</p></li>
 </ul>
 <p class="sd-card-text"><strong>Given the observed max</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Average: 2.3</p></li>
-<li><p class="sd-card-text">HDI 95%: 0.02 - 9.15</p></li>
-<li><p class="sd-card-text">90% Range: 0.18 - 12.19</p></li>
+<li><p class="sd-card-text">Average: 2.57</p></li>
+<li><p class="sd-card-text">HDI 95%: 0.02 - 8.02</p></li>
+<li><p class="sd-card-text">90% Range: 0.13 - 8.21</p></li>
 </ul>
 </div>
 </div>
@@ -2332,7 +2357,7 @@ All data</label><div class="sd-tab-content docutils">
 <div class="sd-col sd-d-flex-row sd-col-12 sd-col-xs-12 sd-col-sm-7 sd-col-md-7 sd-col-lg-7 docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-none docutils">
 <div class="sd-card-body docutils">
-<img alt="_images/8ce7d7290f8a45fc986406c076277163d7936a996505d3074485e6e55734d5c6.png" src="_images/8ce7d7290f8a45fc986406c076277163d7936a996505d3074485e6e55734d5c6.png" />
+<img alt="_images/319ed67567cbed079d7c56040c89068cf8fa3d0c7e851de754d4298532b299ad.png" src="_images/319ed67567cbed079d7c56040c89068cf8fa3d0c7e851de754d4298532b299ad.png" />
 </div>
 <div class="sd-card-footer docutils">
 <p class="sd-card-text">Cumulative distribution of observed, sampling history and forecasts using to different priors.</p>
@@ -2355,21 +2380,21 @@ Lakes</label><div class="sd-tab-content docutils">
 <div class="sd-card-body docutils">
 <p class="sd-card-text"><strong>Given the 99th percentile</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Average: 2.78</p></li>
-<li><p class="sd-card-text">HDI 95%: 0.2 - 10.5</p></li>
-<li><p class="sd-card-text">90% Range: 0.3 - 10.5</p></li>
+<li><p class="sd-card-text">Average: 2.75</p></li>
+<li><p class="sd-card-text">HDI 95%: 0.3 - 6.4</p></li>
+<li><p class="sd-card-text">90% Range: 0.4 - 6.4</p></li>
 </ul>
 <p class="sd-card-text"><strong>Given the weighted prior</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Average: 1.34</p></li>
-<li><p class="sd-card-text">HDI 95%: 0.1 - 4.9</p></li>
-<li><p class="sd-card-text">90% Range: 0.1 - 4.9</p></li>
+<li><p class="sd-card-text">Average: 2.22</p></li>
+<li><p class="sd-card-text">HDI 95%: 0.3 - 6.8</p></li>
+<li><p class="sd-card-text">90% Range: 0.4 - 6.04</p></li>
 </ul>
 <p class="sd-card-text"><strong>Given the observed max</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Average: 1.53</p></li>
-<li><p class="sd-card-text">HDI 95%: 0.02 - 6.3</p></li>
-<li><p class="sd-card-text">90% Range: 0.04 - 4.34</p></li>
+<li><p class="sd-card-text">Average: 3.74</p></li>
+<li><p class="sd-card-text">HDI 95%: 0.02 - 10.02</p></li>
+<li><p class="sd-card-text">90% Range: 0.29 - 13.66</p></li>
 </ul>
 </div>
 </div>
@@ -2377,7 +2402,7 @@ Lakes</label><div class="sd-tab-content docutils">
 <div class="sd-col sd-d-flex-row sd-col-12 sd-col-xs-12 sd-col-sm-7 sd-col-md-7 sd-col-lg-7 docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-none docutils">
 <div class="sd-card-body docutils">
-<img alt="_images/ad3418a5d01e18651fec45bb5631f866c18c8066209a13a754185ca79f880621.png" src="_images/ad3418a5d01e18651fec45bb5631f866c18c8066209a13a754185ca79f880621.png" />
+<img alt="_images/f40369add4250de20e4615cc9e8206fe06dd5d318f5b1fb61d9a5622f40f7b96.png" src="_images/f40369add4250de20e4615cc9e8206fe06dd5d318f5b1fb61d9a5622f40f7b96.png" />
 </div>
 <div class="sd-card-footer docutils">
 <p class="sd-card-text">Cumulative distribution of observed, sampling history and forecasts using to different priors.</p>
@@ -2400,21 +2425,21 @@ Rivers</label><div class="sd-tab-content docutils">
 <div class="sd-card-body docutils">
 <p class="sd-card-text"><strong>Given the 99th percentile</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Average: 1.45</p></li>
-<li><p class="sd-card-text">HDI 95%: 0.1 - 5.0</p></li>
-<li><p class="sd-card-text">90% Range: 0.1 - 4.9</p></li>
+<li><p class="sd-card-text">Average: 0.99</p></li>
+<li><p class="sd-card-text">HDI 95%: 0.1 - 3.6</p></li>
+<li><p class="sd-card-text">90% Range: 0.1 - 3.6</p></li>
 </ul>
 <p class="sd-card-text"><strong>Given the weighted prior</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Average: 1.34</p></li>
-<li><p class="sd-card-text">HDI 95%: 0.1 - 4.9</p></li>
-<li><p class="sd-card-text">90% Range: 0.1 - 4.9</p></li>
+<li><p class="sd-card-text">Average: 1.45</p></li>
+<li><p class="sd-card-text">HDI 95%: 0.1 - 5.5</p></li>
+<li><p class="sd-card-text">90% Range: 0.1 - 5.5</p></li>
 </ul>
 <p class="sd-card-text"><strong>Given the observed max</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Average: 1.53</p></li>
-<li><p class="sd-card-text">HDI 95%: 0.02 - 6.3</p></li>
-<li><p class="sd-card-text">90% Range: 0.04 - 4.34</p></li>
+<li><p class="sd-card-text">Average: 0.95</p></li>
+<li><p class="sd-card-text">HDI 95%: 0.02 - 4.91</p></li>
+<li><p class="sd-card-text">90% Range: 0.06 - 4.91</p></li>
 </ul>
 </div>
 </div>
@@ -2422,7 +2447,7 @@ Rivers</label><div class="sd-tab-content docutils">
 <div class="sd-col sd-d-flex-row sd-col-12 sd-col-xs-12 sd-col-sm-7 sd-col-md-7 sd-col-lg-7 docutils">
 <div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-none docutils">
 <div class="sd-card-body docutils">
-<img alt="_images/82c24b65bec4c236c3fdb4507ba57480776cc924146b1bbc0b8709ca1f241102.png" src="_images/82c24b65bec4c236c3fdb4507ba57480776cc924146b1bbc0b8709ca1f241102.png" />
+<img alt="_images/a99d95053b369e0c8b096c66e15749b3dc28cccc1029a9592528bf9f996f0bf7.png" src="_images/a99d95053b369e0c8b096c66e15749b3dc28cccc1029a9592528bf9f996f0bf7.png" />
 </div>
 <div class="sd-card-footer docutils">
 <p class="sd-card-text">Cumulative distribution of observed, sampling history and forecasts using to different priors.</p>
@@ -2484,56 +2509,56 @@ Forecast methods<div class="sd-summary-down docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <p><strong>Lakes sampled</strong></p>
 <div class="output text_html"><style type="text/css">
-#T_b782c tr:nth-child(even) {
+#T_de0fe tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_b782c tr:nth-child(odd) {
+#T_de0fe tr:nth-child(odd) {
   background: #FFF;
 }
-#T_b782c tr {
+#T_de0fe tr {
   font-size: 10px;
 }
-#T_b782c th {
+#T_de0fe th {
   background-color: #FFF;
   font-size: 12px;
   text-align: left;
   width: auto;
   word-break: keep-all;
 }
-#T_b782c td {
+#T_de0fe td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
 }
-#T_b782c caption {
+#T_de0fe caption {
   caption-side: bottom;
   font-size: 1em;
   text-align: left;
 }
 </style>
-<table id="T_b782c">
+<table id="T_de0fe">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_b782c_level0_col0" class="col_heading level0 col0" >samples</th>
-      <th id="T_b782c_level0_col1" class="col_heading level0 col1" >pcs/m</th>
+      <th id="T_de0fe_level0_col0" class="col_heading level0 col0" >samples</th>
+      <th id="T_de0fe_level0_col1" class="col_heading level0 col1" >pcs/m</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_b782c_level0_row0" class="row_heading level0 row0" >Bielersee</th>
-      <td id="T_b782c_row0_col0" class="data row0 col0" >50</td>
-      <td id="T_b782c_row0_col1" class="data row0 col1" >4.08</td>
+      <th id="T_de0fe_level0_row0" class="row_heading level0 row0" >Bielersee</th>
+      <td id="T_de0fe_row0_col0" class="data row0 col0" >50</td>
+      <td id="T_de0fe_row0_col1" class="data row0 col1" >4.08</td>
     </tr>
     <tr>
-      <th id="T_b782c_level0_row1" class="row_heading level0 row1" >Brienzersee</th>
-      <td id="T_b782c_row1_col0" class="data row1 col0" >5</td>
-      <td id="T_b782c_row1_col1" class="data row1 col1" >3.96</td>
+      <th id="T_de0fe_level0_row1" class="row_heading level0 row1" >Brienzersee</th>
+      <td id="T_de0fe_row1_col0" class="data row1 col0" >5</td>
+      <td id="T_de0fe_row1_col1" class="data row1 col1" >3.96</td>
     </tr>
     <tr>
-      <th id="T_b782c_level0_row2" class="row_heading level0 row2" >Thunersee</th>
-      <td id="T_b782c_row2_col0" class="data row2 col0" >43</td>
-      <td id="T_b782c_row2_col1" class="data row2 col1" >1.21</td>
+      <th id="T_de0fe_level0_row2" class="row_heading level0 row2" >Thunersee</th>
+      <td id="T_de0fe_row2_col0" class="data row2 col0" >43</td>
+      <td id="T_de0fe_row2_col1" class="data row2 col1" >1.21</td>
     </tr>
   </tbody>
 </table>
@@ -2541,71 +2566,71 @@ Forecast methods<div class="sd-summary-down docutils">
 <div class="sd-col sd-d-flex-column docutils">
 <p><strong>Rivers sampled</strong></p>
 <div class="output text_html"><style type="text/css">
-#T_f5508 tr:nth-child(even) {
+#T_53e08 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_f5508 tr:nth-child(odd) {
+#T_53e08 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_f5508 tr {
+#T_53e08 tr {
   font-size: 10px;
 }
-#T_f5508 th {
+#T_53e08 th {
   background-color: #FFF;
   font-size: 12px;
   text-align: left;
   width: auto;
   word-break: keep-all;
 }
-#T_f5508 td {
+#T_53e08 td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
 }
-#T_f5508 caption {
+#T_53e08 caption {
   caption-side: bottom;
   font-size: 1em;
   text-align: left;
 }
 </style>
-<table id="T_f5508">
+<table id="T_53e08">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_f5508_level0_col0" class="col_heading level0 col0" >samples</th>
-      <th id="T_f5508_level0_col1" class="col_heading level0 col1" >pcs/m</th>
+      <th id="T_53e08_level0_col0" class="col_heading level0 col0" >samples</th>
+      <th id="T_53e08_level0_col1" class="col_heading level0 col1" >pcs/m</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_f5508_level0_row0" class="row_heading level0 row0" >Aare</th>
-      <td id="T_f5508_row0_col0" class="data row0 col0" >61</td>
-      <td id="T_f5508_row0_col1" class="data row0 col1" >1.27</td>
+      <th id="T_53e08_level0_row0" class="row_heading level0 row0" >Aare</th>
+      <td id="T_53e08_row0_col0" class="data row0 col0" >61</td>
+      <td id="T_53e08_row0_col1" class="data row0 col1" >1.27</td>
     </tr>
     <tr>
-      <th id="T_f5508_level0_row1" class="row_heading level0 row1" >Aarenidau-buren-kanal</th>
-      <td id="T_f5508_row1_col0" class="data row1 col0" >3</td>
-      <td id="T_f5508_row1_col1" class="data row1 col1" >1.26</td>
+      <th id="T_53e08_level0_row1" class="row_heading level0 row1" >Aarenidau-buren-kanal</th>
+      <td id="T_53e08_row1_col0" class="data row1 col0" >3</td>
+      <td id="T_53e08_row1_col1" class="data row1 col1" >1.26</td>
     </tr>
     <tr>
-      <th id="T_f5508_level0_row2" class="row_heading level0 row2" >Emme</th>
-      <td id="T_f5508_row2_col0" class="data row2 col0" >9</td>
-      <td id="T_f5508_row2_col1" class="data row2 col1" >0.60</td>
+      <th id="T_53e08_level0_row2" class="row_heading level0 row2" >Emme</th>
+      <td id="T_53e08_row2_col0" class="data row2 col0" >9</td>
+      <td id="T_53e08_row2_col1" class="data row2 col1" >0.60</td>
     </tr>
     <tr>
-      <th id="T_f5508_level0_row3" class="row_heading level0 row3" >Langeten</th>
-      <td id="T_f5508_row3_col0" class="data row3 col0" >11</td>
-      <td id="T_f5508_row3_col1" class="data row3 col1" >1.94</td>
+      <th id="T_53e08_level0_row3" class="row_heading level0 row3" >Langeten</th>
+      <td id="T_53e08_row3_col0" class="data row3 col0" >11</td>
+      <td id="T_53e08_row3_col1" class="data row3 col1" >1.94</td>
     </tr>
     <tr>
-      <th id="T_f5508_level0_row4" class="row_heading level0 row4" >Schuss</th>
-      <td id="T_f5508_row4_col0" class="data row4 col0" >2</td>
-      <td id="T_f5508_row4_col1" class="data row4 col1" >1.04</td>
+      <th id="T_53e08_level0_row4" class="row_heading level0 row4" >Schuss</th>
+      <td id="T_53e08_row4_col0" class="data row4 col0" >2</td>
+      <td id="T_53e08_row4_col1" class="data row4 col1" >1.04</td>
     </tr>
     <tr>
-      <th id="T_f5508_level0_row5" class="row_heading level0 row5" >Zulg</th>
-      <td id="T_f5508_row5_col0" class="data row5 col0" >11</td>
-      <td id="T_f5508_row5_col1" class="data row5 col1" >0.63</td>
+      <th id="T_53e08_level0_row5" class="row_heading level0 row5" >Zulg</th>
+      <td id="T_53e08_row5_col0" class="data row5 col0" >11</td>
+      <td id="T_53e08_row5_col1" class="data row5 col1" >0.63</td>
     </tr>
   </tbody>
 </table>
@@ -2621,50 +2646,50 @@ Forecast methods<div class="sd-summary-down docutils">
 </input><label class="sd-tab-label" for="sd-tab-item-15">
 Lakes</label><div class="sd-tab-content docutils">
 <div class="output text_html"><style type="text/css">
-#T_c13e1 tr:nth-child(even) {
+#T_cc7da tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_c13e1 tr:nth-child(odd) {
+#T_cc7da tr:nth-child(odd) {
   background: #FFF;
 }
-#T_c13e1 tr {
+#T_cc7da tr {
   font-size: 10px;
 }
-#T_c13e1 th {
+#T_cc7da th {
   background-color: #FFF;
   font-size: 12px;
   text-align: left;
   width: auto;
   word-break: keep-all;
 }
-#T_c13e1 td {
+#T_cc7da td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
 }
-#T_c13e1 caption {
+#T_cc7da caption {
   caption-side: bottom;
   font-size: 1em;
   text-align: left;
 }
-#T_c13e1_row1_col1, #T_c13e1_row2_col1, #T_c13e1_row3_col1, #T_c13e1_row6_col1, #T_c13e1_row12_col1 {
+#T_cc7da_row1_col1, #T_cc7da_row2_col1, #T_cc7da_row3_col1, #T_cc7da_row6_col1, #T_cc7da_row12_col1 {
   background-color: #FAE8E8;
 }
 </style>
-<table id="T_c13e1">
+<table id="T_cc7da">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_c13e1_level0_col0" class="col_heading level0 col0" >quantity</th>
-      <th id="T_c13e1_level0_col1" class="col_heading level0 col1" >pcs/m</th>
-      <th id="T_c13e1_level0_col2" class="col_heading level0 col2" >samples</th>
-      <th id="T_c13e1_level0_col3" class="col_heading level0 col3" >orchards</th>
-      <th id="T_c13e1_level0_col4" class="col_heading level0 col4" >vineyards</th>
-      <th id="T_c13e1_level0_col5" class="col_heading level0 col5" >buildings</th>
-      <th id="T_c13e1_level0_col6" class="col_heading level0 col6" >forest</th>
-      <th id="T_c13e1_level0_col7" class="col_heading level0 col7" >undefined</th>
-      <th id="T_c13e1_level0_col8" class="col_heading level0 col8" >public services</th>
-      <th id="T_c13e1_level0_col9" class="col_heading level0 col9" >streets</th>
+      <th id="T_cc7da_level0_col0" class="col_heading level0 col0" >quantity</th>
+      <th id="T_cc7da_level0_col1" class="col_heading level0 col1" >pcs/m</th>
+      <th id="T_cc7da_level0_col2" class="col_heading level0 col2" >samples</th>
+      <th id="T_cc7da_level0_col3" class="col_heading level0 col3" >orchards</th>
+      <th id="T_cc7da_level0_col4" class="col_heading level0 col4" >vineyards</th>
+      <th id="T_cc7da_level0_col5" class="col_heading level0 col5" >buildings</th>
+      <th id="T_cc7da_level0_col6" class="col_heading level0 col6" >forest</th>
+      <th id="T_cc7da_level0_col7" class="col_heading level0 col7" >undefined</th>
+      <th id="T_cc7da_level0_col8" class="col_heading level0 col8" >public services</th>
+      <th id="T_cc7da_level0_col9" class="col_heading level0 col9" >streets</th>
     </tr>
     <tr>
       <th class="index_name level0" >city</th>
@@ -2682,173 +2707,173 @@ Lakes</label><div class="sd-tab-content docutils">
   </thead>
   <tbody>
     <tr>
-      <th id="T_c13e1_level0_row0" class="row_heading level0 row0" >Beatenberg</th>
-      <td id="T_c13e1_row0_col0" class="data row0 col0" >104</td>
-      <td id="T_c13e1_row0_col1" class="data row0 col1" >2.43</td>
-      <td id="T_c13e1_row0_col2" class="data row0 col2" >2</td>
-      <td id="T_c13e1_row0_col3" class="data row0 col3" >1</td>
-      <td id="T_c13e1_row0_col4" class="data row0 col4" >1</td>
-      <td id="T_c13e1_row0_col5" class="data row0 col5" >1</td>
-      <td id="T_c13e1_row0_col6" class="data row0 col6" >3</td>
-      <td id="T_c13e1_row0_col7" class="data row0 col7" >2</td>
-      <td id="T_c13e1_row0_col8" class="data row0 col8" >1</td>
-      <td id="T_c13e1_row0_col9" class="data row0 col9" >1</td>
+      <th id="T_cc7da_level0_row0" class="row_heading level0 row0" >Beatenberg</th>
+      <td id="T_cc7da_row0_col0" class="data row0 col0" >104</td>
+      <td id="T_cc7da_row0_col1" class="data row0 col1" >2.43</td>
+      <td id="T_cc7da_row0_col2" class="data row0 col2" >2</td>
+      <td id="T_cc7da_row0_col3" class="data row0 col3" >1</td>
+      <td id="T_cc7da_row0_col4" class="data row0 col4" >1</td>
+      <td id="T_cc7da_row0_col5" class="data row0 col5" >1</td>
+      <td id="T_cc7da_row0_col6" class="data row0 col6" >3</td>
+      <td id="T_cc7da_row0_col7" class="data row0 col7" >2</td>
+      <td id="T_cc7da_row0_col8" class="data row0 col8" >1</td>
+      <td id="T_cc7da_row0_col9" class="data row0 col9" >1</td>
     </tr>
     <tr>
-      <th id="T_c13e1_level0_row1" class="row_heading level0 row1" >Biel/Bienne</th>
-      <td id="T_c13e1_row1_col0" class="data row1 col0" >3209</td>
-      <td id="T_c13e1_row1_col1" class="data row1 col1" >5.61</td>
-      <td id="T_c13e1_row1_col2" class="data row1 col2" >15</td>
-      <td id="T_c13e1_row1_col3" class="data row1 col3" >1</td>
-      <td id="T_c13e1_row1_col4" class="data row1 col4" >1</td>
-      <td id="T_c13e1_row1_col5" class="data row1 col5" >3</td>
-      <td id="T_c13e1_row1_col6" class="data row1 col6" >2</td>
-      <td id="T_c13e1_row1_col7" class="data row1 col7" >1</td>
-      <td id="T_c13e1_row1_col8" class="data row1 col8" >1</td>
-      <td id="T_c13e1_row1_col9" class="data row1 col9" >2</td>
+      <th id="T_cc7da_level0_row1" class="row_heading level0 row1" >Biel/Bienne</th>
+      <td id="T_cc7da_row1_col0" class="data row1 col0" >3209</td>
+      <td id="T_cc7da_row1_col1" class="data row1 col1" >5.61</td>
+      <td id="T_cc7da_row1_col2" class="data row1 col2" >15</td>
+      <td id="T_cc7da_row1_col3" class="data row1 col3" >1</td>
+      <td id="T_cc7da_row1_col4" class="data row1 col4" >1</td>
+      <td id="T_cc7da_row1_col5" class="data row1 col5" >3</td>
+      <td id="T_cc7da_row1_col6" class="data row1 col6" >2</td>
+      <td id="T_cc7da_row1_col7" class="data row1 col7" >1</td>
+      <td id="T_cc7da_row1_col8" class="data row1 col8" >1</td>
+      <td id="T_cc7da_row1_col9" class="data row1 col9" >2</td>
     </tr>
     <tr>
-      <th id="T_c13e1_level0_row2" class="row_heading level0 row2" >Brienz (BE)</th>
-      <td id="T_c13e1_row2_col0" class="data row2 col0" >696</td>
-      <td id="T_c13e1_row2_col1" class="data row2 col1" >4.49</td>
-      <td id="T_c13e1_row2_col2" class="data row2 col2" >3</td>
-      <td id="T_c13e1_row2_col3" class="data row2 col3" >1</td>
-      <td id="T_c13e1_row2_col4" class="data row2 col4" >1</td>
-      <td id="T_c13e1_row2_col5" class="data row2 col5" >2</td>
-      <td id="T_c13e1_row2_col6" class="data row2 col6" >2</td>
-      <td id="T_c13e1_row2_col7" class="data row2 col7" >3</td>
-      <td id="T_c13e1_row2_col8" class="data row2 col8" >1</td>
-      <td id="T_c13e1_row2_col9" class="data row2 col9" >2</td>
+      <th id="T_cc7da_level0_row2" class="row_heading level0 row2" >Brienz (BE)</th>
+      <td id="T_cc7da_row2_col0" class="data row2 col0" >696</td>
+      <td id="T_cc7da_row2_col1" class="data row2 col1" >4.49</td>
+      <td id="T_cc7da_row2_col2" class="data row2 col2" >3</td>
+      <td id="T_cc7da_row2_col3" class="data row2 col3" >1</td>
+      <td id="T_cc7da_row2_col4" class="data row2 col4" >1</td>
+      <td id="T_cc7da_row2_col5" class="data row2 col5" >2</td>
+      <td id="T_cc7da_row2_col6" class="data row2 col6" >2</td>
+      <td id="T_cc7da_row2_col7" class="data row2 col7" >3</td>
+      <td id="T_cc7da_row2_col8" class="data row2 col8" >1</td>
+      <td id="T_cc7da_row2_col9" class="data row2 col9" >2</td>
     </tr>
     <tr>
-      <th id="T_c13e1_level0_row3" class="row_heading level0 row3" >Bönigen</th>
-      <td id="T_c13e1_row3_col0" class="data row3 col0" >277</td>
-      <td id="T_c13e1_row3_col1" class="data row3 col1" >3.18</td>
-      <td id="T_c13e1_row3_col2" class="data row3 col2" >2</td>
-      <td id="T_c13e1_row3_col3" class="data row3 col3" >1</td>
-      <td id="T_c13e1_row3_col4" class="data row3 col4" >1</td>
-      <td id="T_c13e1_row3_col5" class="data row3 col5" >3</td>
-      <td id="T_c13e1_row3_col6" class="data row3 col6" >2</td>
-      <td id="T_c13e1_row3_col7" class="data row3 col7" >2</td>
-      <td id="T_c13e1_row3_col8" class="data row3 col8" >1</td>
-      <td id="T_c13e1_row3_col9" class="data row3 col9" >2</td>
+      <th id="T_cc7da_level0_row3" class="row_heading level0 row3" >Bönigen</th>
+      <td id="T_cc7da_row3_col0" class="data row3 col0" >277</td>
+      <td id="T_cc7da_row3_col1" class="data row3 col1" >3.18</td>
+      <td id="T_cc7da_row3_col2" class="data row3 col2" >2</td>
+      <td id="T_cc7da_row3_col3" class="data row3 col3" >1</td>
+      <td id="T_cc7da_row3_col4" class="data row3 col4" >1</td>
+      <td id="T_cc7da_row3_col5" class="data row3 col5" >3</td>
+      <td id="T_cc7da_row3_col6" class="data row3 col6" >2</td>
+      <td id="T_cc7da_row3_col7" class="data row3 col7" >2</td>
+      <td id="T_cc7da_row3_col8" class="data row3 col8" >1</td>
+      <td id="T_cc7da_row3_col9" class="data row3 col9" >2</td>
     </tr>
     <tr>
-      <th id="T_c13e1_level0_row4" class="row_heading level0 row4" >Erlach</th>
-      <td id="T_c13e1_row4_col0" class="data row4 col0" >101</td>
-      <td id="T_c13e1_row4_col1" class="data row4 col1" >1.83</td>
-      <td id="T_c13e1_row4_col2" class="data row4 col2" >1</td>
-      <td id="T_c13e1_row4_col3" class="data row4 col3" >1</td>
-      <td id="T_c13e1_row4_col4" class="data row4 col4" >1</td>
-      <td id="T_c13e1_row4_col5" class="data row4 col5" >2</td>
-      <td id="T_c13e1_row4_col6" class="data row4 col6" >1</td>
-      <td id="T_c13e1_row4_col7" class="data row4 col7" >3</td>
-      <td id="T_c13e1_row4_col8" class="data row4 col8" >1</td>
-      <td id="T_c13e1_row4_col9" class="data row4 col9" >1</td>
+      <th id="T_cc7da_level0_row4" class="row_heading level0 row4" >Erlach</th>
+      <td id="T_cc7da_row4_col0" class="data row4 col0" >101</td>
+      <td id="T_cc7da_row4_col1" class="data row4 col1" >1.83</td>
+      <td id="T_cc7da_row4_col2" class="data row4 col2" >1</td>
+      <td id="T_cc7da_row4_col3" class="data row4 col3" >1</td>
+      <td id="T_cc7da_row4_col4" class="data row4 col4" >1</td>
+      <td id="T_cc7da_row4_col5" class="data row4 col5" >2</td>
+      <td id="T_cc7da_row4_col6" class="data row4 col6" >1</td>
+      <td id="T_cc7da_row4_col7" class="data row4 col7" >3</td>
+      <td id="T_cc7da_row4_col8" class="data row4 col8" >1</td>
+      <td id="T_cc7da_row4_col9" class="data row4 col9" >1</td>
     </tr>
     <tr>
-      <th id="T_c13e1_level0_row5" class="row_heading level0 row5" >Gals</th>
-      <td id="T_c13e1_row5_col0" class="data row5 col0" >48</td>
-      <td id="T_c13e1_row5_col1" class="data row5 col1" >1.28</td>
-      <td id="T_c13e1_row5_col2" class="data row5 col2" >2</td>
-      <td id="T_c13e1_row5_col3" class="data row5 col3" >1</td>
-      <td id="T_c13e1_row5_col4" class="data row5 col4" >1</td>
-      <td id="T_c13e1_row5_col5" class="data row5 col5" >2</td>
-      <td id="T_c13e1_row5_col6" class="data row5 col6" >2</td>
-      <td id="T_c13e1_row5_col7" class="data row5 col7" >3</td>
-      <td id="T_c13e1_row5_col8" class="data row5 col8" >1</td>
-      <td id="T_c13e1_row5_col9" class="data row5 col9" >2</td>
+      <th id="T_cc7da_level0_row5" class="row_heading level0 row5" >Gals</th>
+      <td id="T_cc7da_row5_col0" class="data row5 col0" >48</td>
+      <td id="T_cc7da_row5_col1" class="data row5 col1" >1.28</td>
+      <td id="T_cc7da_row5_col2" class="data row5 col2" >2</td>
+      <td id="T_cc7da_row5_col3" class="data row5 col3" >1</td>
+      <td id="T_cc7da_row5_col4" class="data row5 col4" >1</td>
+      <td id="T_cc7da_row5_col5" class="data row5 col5" >2</td>
+      <td id="T_cc7da_row5_col6" class="data row5 col6" >2</td>
+      <td id="T_cc7da_row5_col7" class="data row5 col7" >3</td>
+      <td id="T_cc7da_row5_col8" class="data row5 col8" >1</td>
+      <td id="T_cc7da_row5_col9" class="data row5 col9" >2</td>
     </tr>
     <tr>
-      <th id="T_c13e1_level0_row6" class="row_heading level0 row6" >Ligerz</th>
-      <td id="T_c13e1_row6_col0" class="data row6 col0" >163</td>
-      <td id="T_c13e1_row6_col1" class="data row6 col1" >7.40</td>
-      <td id="T_c13e1_row6_col2" class="data row6 col2" >3</td>
-      <td id="T_c13e1_row6_col3" class="data row6 col3" >1</td>
-      <td id="T_c13e1_row6_col4" class="data row6 col4" >1</td>
-      <td id="T_c13e1_row6_col5" class="data row6 col5" >1</td>
-      <td id="T_c13e1_row6_col6" class="data row6 col6" >2</td>
-      <td id="T_c13e1_row6_col7" class="data row6 col7" >2</td>
-      <td id="T_c13e1_row6_col8" class="data row6 col8" >1</td>
-      <td id="T_c13e1_row6_col9" class="data row6 col9" >1</td>
+      <th id="T_cc7da_level0_row6" class="row_heading level0 row6" >Ligerz</th>
+      <td id="T_cc7da_row6_col0" class="data row6 col0" >163</td>
+      <td id="T_cc7da_row6_col1" class="data row6 col1" >7.40</td>
+      <td id="T_cc7da_row6_col2" class="data row6 col2" >3</td>
+      <td id="T_cc7da_row6_col3" class="data row6 col3" >1</td>
+      <td id="T_cc7da_row6_col4" class="data row6 col4" >1</td>
+      <td id="T_cc7da_row6_col5" class="data row6 col5" >1</td>
+      <td id="T_cc7da_row6_col6" class="data row6 col6" >2</td>
+      <td id="T_cc7da_row6_col7" class="data row6 col7" >2</td>
+      <td id="T_cc7da_row6_col8" class="data row6 col8" >1</td>
+      <td id="T_cc7da_row6_col9" class="data row6 col9" >1</td>
     </tr>
     <tr>
-      <th id="T_c13e1_level0_row7" class="row_heading level0 row7" >Lüscherz</th>
-      <td id="T_c13e1_row7_col0" class="data row7 col0" >202</td>
-      <td id="T_c13e1_row7_col1" class="data row7 col1" >0.75</td>
-      <td id="T_c13e1_row7_col2" class="data row7 col2" >5</td>
-      <td id="T_c13e1_row7_col3" class="data row7 col3" >1</td>
-      <td id="T_c13e1_row7_col4" class="data row7 col4" >1</td>
-      <td id="T_c13e1_row7_col5" class="data row7 col5" >1</td>
-      <td id="T_c13e1_row7_col6" class="data row7 col6" >3</td>
-      <td id="T_c13e1_row7_col7" class="data row7 col7" >1</td>
-      <td id="T_c13e1_row7_col8" class="data row7 col8" >1</td>
-      <td id="T_c13e1_row7_col9" class="data row7 col9" >1</td>
+      <th id="T_cc7da_level0_row7" class="row_heading level0 row7" >Lüscherz</th>
+      <td id="T_cc7da_row7_col0" class="data row7 col0" >202</td>
+      <td id="T_cc7da_row7_col1" class="data row7 col1" >0.75</td>
+      <td id="T_cc7da_row7_col2" class="data row7 col2" >5</td>
+      <td id="T_cc7da_row7_col3" class="data row7 col3" >1</td>
+      <td id="T_cc7da_row7_col4" class="data row7 col4" >1</td>
+      <td id="T_cc7da_row7_col5" class="data row7 col5" >1</td>
+      <td id="T_cc7da_row7_col6" class="data row7 col6" >3</td>
+      <td id="T_cc7da_row7_col7" class="data row7 col7" >1</td>
+      <td id="T_cc7da_row7_col8" class="data row7 col8" >1</td>
+      <td id="T_cc7da_row7_col9" class="data row7 col9" >1</td>
     </tr>
     <tr>
-      <th id="T_c13e1_level0_row8" class="row_heading level0 row8" >Nidau</th>
-      <td id="T_c13e1_row8_col0" class="data row8 col0" >63</td>
-      <td id="T_c13e1_row8_col1" class="data row8 col1" >2.52</td>
-      <td id="T_c13e1_row8_col2" class="data row8 col2" >1</td>
-      <td id="T_c13e1_row8_col3" class="data row8 col3" >1</td>
-      <td id="T_c13e1_row8_col4" class="data row8 col4" >1</td>
-      <td id="T_c13e1_row8_col5" class="data row8 col5" >4</td>
-      <td id="T_c13e1_row8_col6" class="data row8 col6" >1</td>
-      <td id="T_c13e1_row8_col7" class="data row8 col7" >1</td>
-      <td id="T_c13e1_row8_col8" class="data row8 col8" >1</td>
-      <td id="T_c13e1_row8_col9" class="data row8 col9" >2</td>
+      <th id="T_cc7da_level0_row8" class="row_heading level0 row8" >Nidau</th>
+      <td id="T_cc7da_row8_col0" class="data row8 col0" >63</td>
+      <td id="T_cc7da_row8_col1" class="data row8 col1" >2.52</td>
+      <td id="T_cc7da_row8_col2" class="data row8 col2" >1</td>
+      <td id="T_cc7da_row8_col3" class="data row8 col3" >1</td>
+      <td id="T_cc7da_row8_col4" class="data row8 col4" >1</td>
+      <td id="T_cc7da_row8_col5" class="data row8 col5" >4</td>
+      <td id="T_cc7da_row8_col6" class="data row8 col6" >1</td>
+      <td id="T_cc7da_row8_col7" class="data row8 col7" >1</td>
+      <td id="T_cc7da_row8_col8" class="data row8 col8" >1</td>
+      <td id="T_cc7da_row8_col9" class="data row8 col9" >2</td>
     </tr>
     <tr>
-      <th id="T_c13e1_level0_row9" class="row_heading level0 row9" >Spiez</th>
-      <td id="T_c13e1_row9_col0" class="data row9 col0" >838</td>
-      <td id="T_c13e1_row9_col1" class="data row9 col1" >0.79</td>
-      <td id="T_c13e1_row9_col2" class="data row9 col2" >26</td>
-      <td id="T_c13e1_row9_col3" class="data row9 col3" >1</td>
-      <td id="T_c13e1_row9_col4" class="data row9 col4" >1</td>
-      <td id="T_c13e1_row9_col5" class="data row9 col5" >2</td>
-      <td id="T_c13e1_row9_col6" class="data row9 col6" >2</td>
-      <td id="T_c13e1_row9_col7" class="data row9 col7" >3</td>
-      <td id="T_c13e1_row9_col8" class="data row9 col8" >1</td>
-      <td id="T_c13e1_row9_col9" class="data row9 col9" >1</td>
+      <th id="T_cc7da_level0_row9" class="row_heading level0 row9" >Spiez</th>
+      <td id="T_cc7da_row9_col0" class="data row9 col0" >838</td>
+      <td id="T_cc7da_row9_col1" class="data row9 col1" >0.79</td>
+      <td id="T_cc7da_row9_col2" class="data row9 col2" >26</td>
+      <td id="T_cc7da_row9_col3" class="data row9 col3" >1</td>
+      <td id="T_cc7da_row9_col4" class="data row9 col4" >1</td>
+      <td id="T_cc7da_row9_col5" class="data row9 col5" >2</td>
+      <td id="T_cc7da_row9_col6" class="data row9 col6" >2</td>
+      <td id="T_cc7da_row9_col7" class="data row9 col7" >3</td>
+      <td id="T_cc7da_row9_col8" class="data row9 col8" >1</td>
+      <td id="T_cc7da_row9_col9" class="data row9 col9" >1</td>
     </tr>
     <tr>
-      <th id="T_c13e1_level0_row10" class="row_heading level0 row10" >Thun</th>
-      <td id="T_c13e1_row10_col0" class="data row10 col0" >276</td>
-      <td id="T_c13e1_row10_col1" class="data row10 col1" >1.40</td>
-      <td id="T_c13e1_row10_col2" class="data row10 col2" >3</td>
-      <td id="T_c13e1_row10_col3" class="data row10 col3" >1</td>
-      <td id="T_c13e1_row10_col4" class="data row10 col4" >1</td>
-      <td id="T_c13e1_row10_col5" class="data row10 col5" >5</td>
-      <td id="T_c13e1_row10_col6" class="data row10 col6" >1</td>
-      <td id="T_c13e1_row10_col7" class="data row10 col7" >1</td>
-      <td id="T_c13e1_row10_col8" class="data row10 col8" >1</td>
-      <td id="T_c13e1_row10_col9" class="data row10 col9" >2</td>
+      <th id="T_cc7da_level0_row10" class="row_heading level0 row10" >Thun</th>
+      <td id="T_cc7da_row10_col0" class="data row10 col0" >276</td>
+      <td id="T_cc7da_row10_col1" class="data row10 col1" >1.40</td>
+      <td id="T_cc7da_row10_col2" class="data row10 col2" >3</td>
+      <td id="T_cc7da_row10_col3" class="data row10 col3" >1</td>
+      <td id="T_cc7da_row10_col4" class="data row10 col4" >1</td>
+      <td id="T_cc7da_row10_col5" class="data row10 col5" >5</td>
+      <td id="T_cc7da_row10_col6" class="data row10 col6" >1</td>
+      <td id="T_cc7da_row10_col7" class="data row10 col7" >1</td>
+      <td id="T_cc7da_row10_col8" class="data row10 col8" >1</td>
+      <td id="T_cc7da_row10_col9" class="data row10 col9" >2</td>
     </tr>
     <tr>
-      <th id="T_c13e1_level0_row11" class="row_heading level0 row11" >Unterseen</th>
-      <td id="T_c13e1_row11_col0" class="data row11 col0" >1879</td>
-      <td id="T_c13e1_row11_col1" class="data row11 col1" >1.89</td>
-      <td id="T_c13e1_row11_col2" class="data row11 col2" >12</td>
-      <td id="T_c13e1_row11_col3" class="data row11 col3" >1</td>
-      <td id="T_c13e1_row11_col4" class="data row11 col4" >1</td>
-      <td id="T_c13e1_row11_col5" class="data row11 col5" >1</td>
-      <td id="T_c13e1_row11_col6" class="data row11 col6" >2</td>
-      <td id="T_c13e1_row11_col7" class="data row11 col7" >4</td>
-      <td id="T_c13e1_row11_col8" class="data row11 col8" >1</td>
-      <td id="T_c13e1_row11_col9" class="data row11 col9" >1</td>
+      <th id="T_cc7da_level0_row11" class="row_heading level0 row11" >Unterseen</th>
+      <td id="T_cc7da_row11_col0" class="data row11 col0" >1879</td>
+      <td id="T_cc7da_row11_col1" class="data row11 col1" >1.89</td>
+      <td id="T_cc7da_row11_col2" class="data row11 col2" >12</td>
+      <td id="T_cc7da_row11_col3" class="data row11 col3" >1</td>
+      <td id="T_cc7da_row11_col4" class="data row11 col4" >1</td>
+      <td id="T_cc7da_row11_col5" class="data row11 col5" >1</td>
+      <td id="T_cc7da_row11_col6" class="data row11 col6" >2</td>
+      <td id="T_cc7da_row11_col7" class="data row11 col7" >4</td>
+      <td id="T_cc7da_row11_col8" class="data row11 col8" >1</td>
+      <td id="T_cc7da_row11_col9" class="data row11 col9" >1</td>
     </tr>
     <tr>
-      <th id="T_c13e1_level0_row12" class="row_heading level0 row12" >Vinelz</th>
-      <td id="T_c13e1_row12_col0" class="data row12 col0" >2033</td>
-      <td id="T_c13e1_row12_col1" class="data row12 col1" >3.77</td>
-      <td id="T_c13e1_row12_col2" class="data row12 col2" >23</td>
-      <td id="T_c13e1_row12_col3" class="data row12 col3" >1</td>
-      <td id="T_c13e1_row12_col4" class="data row12 col4" >1</td>
-      <td id="T_c13e1_row12_col5" class="data row12 col5" >2</td>
-      <td id="T_c13e1_row12_col6" class="data row12 col6" >1</td>
-      <td id="T_c13e1_row12_col7" class="data row12 col7" >3</td>
-      <td id="T_c13e1_row12_col8" class="data row12 col8" >1</td>
-      <td id="T_c13e1_row12_col9" class="data row12 col9" >2</td>
+      <th id="T_cc7da_level0_row12" class="row_heading level0 row12" >Vinelz</th>
+      <td id="T_cc7da_row12_col0" class="data row12 col0" >2033</td>
+      <td id="T_cc7da_row12_col1" class="data row12 col1" >3.77</td>
+      <td id="T_cc7da_row12_col2" class="data row12 col2" >23</td>
+      <td id="T_cc7da_row12_col3" class="data row12 col3" >1</td>
+      <td id="T_cc7da_row12_col4" class="data row12 col4" >1</td>
+      <td id="T_cc7da_row12_col5" class="data row12 col5" >2</td>
+      <td id="T_cc7da_row12_col6" class="data row12 col6" >1</td>
+      <td id="T_cc7da_row12_col7" class="data row12 col7" >3</td>
+      <td id="T_cc7da_row12_col8" class="data row12 col8" >1</td>
+      <td id="T_cc7da_row12_col9" class="data row12 col9" >2</td>
     </tr>
   </tbody>
 </table>
@@ -2857,50 +2882,50 @@ Lakes</label><div class="sd-tab-content docutils">
 </input><label class="sd-tab-label" for="sd-tab-item-16">
 Rivers</label><div class="sd-tab-content docutils">
 <div class="output text_html"><style type="text/css">
-#T_cc4c8 tr:nth-child(even) {
+#T_a66d3 tr:nth-child(even) {
   background-color: rgba(139, 69, 19, 0.08);
 }
-#T_cc4c8 tr:nth-child(odd) {
+#T_a66d3 tr:nth-child(odd) {
   background: #FFF;
 }
-#T_cc4c8 tr {
+#T_a66d3 tr {
   font-size: 10px;
 }
-#T_cc4c8 th {
+#T_a66d3 th {
   background-color: #FFF;
   font-size: 12px;
   text-align: left;
   width: auto;
   word-break: keep-all;
 }
-#T_cc4c8 td {
+#T_a66d3 td {
   padding: 4px;
   font-size: 12px;
   text-align: center;
 }
-#T_cc4c8 caption {
+#T_a66d3 caption {
   caption-side: bottom;
   font-size: 1em;
   text-align: left;
 }
-#T_cc4c8_row10_col1 {
+#T_a66d3_row10_col1 {
   background-color: #FAE8E8;
 }
 </style>
-<table id="T_cc4c8">
+<table id="T_a66d3">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_cc4c8_level0_col0" class="col_heading level0 col0" >quantity</th>
-      <th id="T_cc4c8_level0_col1" class="col_heading level0 col1" >pcs/m</th>
-      <th id="T_cc4c8_level0_col2" class="col_heading level0 col2" >samples</th>
-      <th id="T_cc4c8_level0_col3" class="col_heading level0 col3" >orchards</th>
-      <th id="T_cc4c8_level0_col4" class="col_heading level0 col4" >vineyards</th>
-      <th id="T_cc4c8_level0_col5" class="col_heading level0 col5" >buildings</th>
-      <th id="T_cc4c8_level0_col6" class="col_heading level0 col6" >forest</th>
-      <th id="T_cc4c8_level0_col7" class="col_heading level0 col7" >undefined</th>
-      <th id="T_cc4c8_level0_col8" class="col_heading level0 col8" >public services</th>
-      <th id="T_cc4c8_level0_col9" class="col_heading level0 col9" >streets</th>
+      <th id="T_a66d3_level0_col0" class="col_heading level0 col0" >quantity</th>
+      <th id="T_a66d3_level0_col1" class="col_heading level0 col1" >pcs/m</th>
+      <th id="T_a66d3_level0_col2" class="col_heading level0 col2" >samples</th>
+      <th id="T_a66d3_level0_col3" class="col_heading level0 col3" >orchards</th>
+      <th id="T_a66d3_level0_col4" class="col_heading level0 col4" >vineyards</th>
+      <th id="T_a66d3_level0_col5" class="col_heading level0 col5" >buildings</th>
+      <th id="T_a66d3_level0_col6" class="col_heading level0 col6" >forest</th>
+      <th id="T_a66d3_level0_col7" class="col_heading level0 col7" >undefined</th>
+      <th id="T_a66d3_level0_col8" class="col_heading level0 col8" >public services</th>
+      <th id="T_a66d3_level0_col9" class="col_heading level0 col9" >streets</th>
     </tr>
     <tr>
       <th class="index_name level0" >city</th>
@@ -2918,186 +2943,186 @@ Rivers</label><div class="sd-tab-content docutils">
   </thead>
   <tbody>
     <tr>
-      <th id="T_cc4c8_level0_row0" class="row_heading level0 row0" >Belp</th>
-      <td id="T_cc4c8_row0_col0" class="data row0 col0" >60</td>
-      <td id="T_cc4c8_row0_col1" class="data row0 col1" >0.11</td>
-      <td id="T_cc4c8_row0_col2" class="data row0 col2" >11</td>
-      <td id="T_cc4c8_row0_col3" class="data row0 col3" >1</td>
-      <td id="T_cc4c8_row0_col4" class="data row0 col4" >1</td>
-      <td id="T_cc4c8_row0_col5" class="data row0 col5" >2</td>
-      <td id="T_cc4c8_row0_col6" class="data row0 col6" >1</td>
-      <td id="T_cc4c8_row0_col7" class="data row0 col7" >3</td>
-      <td id="T_cc4c8_row0_col8" class="data row0 col8" >1</td>
-      <td id="T_cc4c8_row0_col9" class="data row0 col9" >3</td>
+      <th id="T_a66d3_level0_row0" class="row_heading level0 row0" >Belp</th>
+      <td id="T_a66d3_row0_col0" class="data row0 col0" >60</td>
+      <td id="T_a66d3_row0_col1" class="data row0 col1" >0.11</td>
+      <td id="T_a66d3_row0_col2" class="data row0 col2" >11</td>
+      <td id="T_a66d3_row0_col3" class="data row0 col3" >1</td>
+      <td id="T_a66d3_row0_col4" class="data row0 col4" >1</td>
+      <td id="T_a66d3_row0_col5" class="data row0 col5" >2</td>
+      <td id="T_a66d3_row0_col6" class="data row0 col6" >1</td>
+      <td id="T_a66d3_row0_col7" class="data row0 col7" >3</td>
+      <td id="T_a66d3_row0_col8" class="data row0 col8" >1</td>
+      <td id="T_a66d3_row0_col9" class="data row0 col9" >3</td>
     </tr>
     <tr>
-      <th id="T_cc4c8_level0_row1" class="row_heading level0 row1" >Bern</th>
-      <td id="T_cc4c8_row1_col0" class="data row1 col0" >1892</td>
-      <td id="T_cc4c8_row1_col1" class="data row1 col1" >1.02</td>
-      <td id="T_cc4c8_row1_col2" class="data row1 col2" >32</td>
-      <td id="T_cc4c8_row1_col3" class="data row1 col3" >1</td>
-      <td id="T_cc4c8_row1_col4" class="data row1 col4" >1</td>
-      <td id="T_cc4c8_row1_col5" class="data row1 col5" >3</td>
-      <td id="T_cc4c8_row1_col6" class="data row1 col6" >1</td>
-      <td id="T_cc4c8_row1_col7" class="data row1 col7" >2</td>
-      <td id="T_cc4c8_row1_col8" class="data row1 col8" >1</td>
-      <td id="T_cc4c8_row1_col9" class="data row1 col9" >3</td>
+      <th id="T_a66d3_level0_row1" class="row_heading level0 row1" >Bern</th>
+      <td id="T_a66d3_row1_col0" class="data row1 col0" >1892</td>
+      <td id="T_a66d3_row1_col1" class="data row1 col1" >1.02</td>
+      <td id="T_a66d3_row1_col2" class="data row1 col2" >32</td>
+      <td id="T_a66d3_row1_col3" class="data row1 col3" >1</td>
+      <td id="T_a66d3_row1_col4" class="data row1 col4" >1</td>
+      <td id="T_a66d3_row1_col5" class="data row1 col5" >3</td>
+      <td id="T_a66d3_row1_col6" class="data row1 col6" >1</td>
+      <td id="T_a66d3_row1_col7" class="data row1 col7" >2</td>
+      <td id="T_a66d3_row1_col8" class="data row1 col8" >1</td>
+      <td id="T_a66d3_row1_col9" class="data row1 col9" >3</td>
     </tr>
     <tr>
-      <th id="T_cc4c8_level0_row2" class="row_heading level0 row2" >Biel/Bienne</th>
-      <td id="T_cc4c8_row2_col0" class="data row2 col0" >98</td>
-      <td id="T_cc4c8_row2_col1" class="data row2 col1" >1.04</td>
-      <td id="T_cc4c8_row2_col2" class="data row2 col2" >2</td>
-      <td id="T_cc4c8_row2_col3" class="data row2 col3" >1</td>
-      <td id="T_cc4c8_row2_col4" class="data row2 col4" >1</td>
-      <td id="T_cc4c8_row2_col5" class="data row2 col5" >4</td>
-      <td id="T_cc4c8_row2_col6" class="data row2 col6" >1</td>
-      <td id="T_cc4c8_row2_col7" class="data row2 col7" >1</td>
-      <td id="T_cc4c8_row2_col8" class="data row2 col8" >1</td>
-      <td id="T_cc4c8_row2_col9" class="data row2 col9" >3</td>
+      <th id="T_a66d3_level0_row2" class="row_heading level0 row2" >Biel/Bienne</th>
+      <td id="T_a66d3_row2_col0" class="data row2 col0" >98</td>
+      <td id="T_a66d3_row2_col1" class="data row2 col1" >1.04</td>
+      <td id="T_a66d3_row2_col2" class="data row2 col2" >2</td>
+      <td id="T_a66d3_row2_col3" class="data row2 col3" >1</td>
+      <td id="T_a66d3_row2_col4" class="data row2 col4" >1</td>
+      <td id="T_a66d3_row2_col5" class="data row2 col5" >4</td>
+      <td id="T_a66d3_row2_col6" class="data row2 col6" >1</td>
+      <td id="T_a66d3_row2_col7" class="data row2 col7" >1</td>
+      <td id="T_a66d3_row2_col8" class="data row2 col8" >1</td>
+      <td id="T_a66d3_row2_col9" class="data row2 col9" >3</td>
     </tr>
     <tr>
-      <th id="T_cc4c8_level0_row3" class="row_heading level0 row3" >Brügg</th>
-      <td id="T_cc4c8_row3_col0" class="data row3 col0" >36</td>
-      <td id="T_cc4c8_row3_col1" class="data row3 col1" >1.02</td>
-      <td id="T_cc4c8_row3_col2" class="data row3 col2" >1</td>
-      <td id="T_cc4c8_row3_col3" class="data row3 col3" >1</td>
-      <td id="T_cc4c8_row3_col4" class="data row3 col4" >1</td>
-      <td id="T_cc4c8_row3_col5" class="data row3 col5" >3</td>
-      <td id="T_cc4c8_row3_col6" class="data row3 col6" >2</td>
-      <td id="T_cc4c8_row3_col7" class="data row3 col7" >2</td>
-      <td id="T_cc4c8_row3_col8" class="data row3 col8" >1</td>
-      <td id="T_cc4c8_row3_col9" class="data row3 col9" >3</td>
+      <th id="T_a66d3_level0_row3" class="row_heading level0 row3" >Brügg</th>
+      <td id="T_a66d3_row3_col0" class="data row3 col0" >36</td>
+      <td id="T_a66d3_row3_col1" class="data row3 col1" >1.02</td>
+      <td id="T_a66d3_row3_col2" class="data row3 col2" >1</td>
+      <td id="T_a66d3_row3_col3" class="data row3 col3" >1</td>
+      <td id="T_a66d3_row3_col4" class="data row3 col4" >1</td>
+      <td id="T_a66d3_row3_col5" class="data row3 col5" >3</td>
+      <td id="T_a66d3_row3_col6" class="data row3 col6" >2</td>
+      <td id="T_a66d3_row3_col7" class="data row3 col7" >2</td>
+      <td id="T_a66d3_row3_col8" class="data row3 col8" >1</td>
+      <td id="T_a66d3_row3_col9" class="data row3 col9" >3</td>
     </tr>
     <tr>
-      <th id="T_cc4c8_level0_row4" class="row_heading level0 row4" >Burgdorf</th>
-      <td id="T_cc4c8_row4_col0" class="data row4 col0" >41</td>
-      <td id="T_cc4c8_row4_col1" class="data row4 col1" >0.87</td>
-      <td id="T_cc4c8_row4_col2" class="data row4 col2" >1</td>
-      <td id="T_cc4c8_row4_col3" class="data row4 col3" >1</td>
-      <td id="T_cc4c8_row4_col4" class="data row4 col4" >1</td>
-      <td id="T_cc4c8_row4_col5" class="data row4 col5" >3</td>
-      <td id="T_cc4c8_row4_col6" class="data row4 col6" >2</td>
-      <td id="T_cc4c8_row4_col7" class="data row4 col7" >2</td>
-      <td id="T_cc4c8_row4_col8" class="data row4 col8" >1</td>
-      <td id="T_cc4c8_row4_col9" class="data row4 col9" >2</td>
+      <th id="T_a66d3_level0_row4" class="row_heading level0 row4" >Burgdorf</th>
+      <td id="T_a66d3_row4_col0" class="data row4 col0" >41</td>
+      <td id="T_a66d3_row4_col1" class="data row4 col1" >0.87</td>
+      <td id="T_a66d3_row4_col2" class="data row4 col2" >1</td>
+      <td id="T_a66d3_row4_col3" class="data row4 col3" >1</td>
+      <td id="T_a66d3_row4_col4" class="data row4 col4" >1</td>
+      <td id="T_a66d3_row4_col5" class="data row4 col5" >3</td>
+      <td id="T_a66d3_row4_col6" class="data row4 col6" >2</td>
+      <td id="T_a66d3_row4_col7" class="data row4 col7" >2</td>
+      <td id="T_a66d3_row4_col8" class="data row4 col8" >1</td>
+      <td id="T_a66d3_row4_col9" class="data row4 col9" >2</td>
     </tr>
     <tr>
-      <th id="T_cc4c8_level0_row5" class="row_heading level0 row5" >Kallnach</th>
-      <td id="T_cc4c8_row5_col0" class="data row5 col0" >82</td>
-      <td id="T_cc4c8_row5_col1" class="data row5 col1" >1.31</td>
-      <td id="T_cc4c8_row5_col2" class="data row5 col2" >2</td>
-      <td id="T_cc4c8_row5_col3" class="data row5 col3" >1</td>
-      <td id="T_cc4c8_row5_col4" class="data row5 col4" >1</td>
-      <td id="T_cc4c8_row5_col5" class="data row5 col5" >1</td>
-      <td id="T_cc4c8_row5_col6" class="data row5 col6" >3</td>
-      <td id="T_cc4c8_row5_col7" class="data row5 col7" >3</td>
-      <td id="T_cc4c8_row5_col8" class="data row5 col8" >1</td>
-      <td id="T_cc4c8_row5_col9" class="data row5 col9" >2</td>
+      <th id="T_a66d3_level0_row5" class="row_heading level0 row5" >Kallnach</th>
+      <td id="T_a66d3_row5_col0" class="data row5 col0" >82</td>
+      <td id="T_a66d3_row5_col1" class="data row5 col1" >1.31</td>
+      <td id="T_a66d3_row5_col2" class="data row5 col2" >2</td>
+      <td id="T_a66d3_row5_col3" class="data row5 col3" >1</td>
+      <td id="T_a66d3_row5_col4" class="data row5 col4" >1</td>
+      <td id="T_a66d3_row5_col5" class="data row5 col5" >1</td>
+      <td id="T_a66d3_row5_col6" class="data row5 col6" >3</td>
+      <td id="T_a66d3_row5_col7" class="data row5 col7" >3</td>
+      <td id="T_a66d3_row5_col8" class="data row5 col8" >1</td>
+      <td id="T_a66d3_row5_col9" class="data row5 col9" >2</td>
     </tr>
     <tr>
-      <th id="T_cc4c8_level0_row6" class="row_heading level0 row6" >Köniz</th>
-      <td id="T_cc4c8_row6_col0" class="data row6 col0" >757</td>
-      <td id="T_cc4c8_row6_col1" class="data row6 col1" >2.86</td>
-      <td id="T_cc4c8_row6_col2" class="data row6 col2" >12</td>
-      <td id="T_cc4c8_row6_col3" class="data row6 col3" >1</td>
-      <td id="T_cc4c8_row6_col4" class="data row6 col4" >1</td>
-      <td id="T_cc4c8_row6_col5" class="data row6 col5" >4</td>
-      <td id="T_cc4c8_row6_col6" class="data row6 col6" >1</td>
-      <td id="T_cc4c8_row6_col7" class="data row6 col7" >1</td>
-      <td id="T_cc4c8_row6_col8" class="data row6 col8" >1</td>
-      <td id="T_cc4c8_row6_col9" class="data row6 col9" >4</td>
+      <th id="T_a66d3_level0_row6" class="row_heading level0 row6" >Köniz</th>
+      <td id="T_a66d3_row6_col0" class="data row6 col0" >757</td>
+      <td id="T_a66d3_row6_col1" class="data row6 col1" >2.86</td>
+      <td id="T_a66d3_row6_col2" class="data row6 col2" >12</td>
+      <td id="T_a66d3_row6_col3" class="data row6 col3" >1</td>
+      <td id="T_a66d3_row6_col4" class="data row6 col4" >1</td>
+      <td id="T_a66d3_row6_col5" class="data row6 col5" >4</td>
+      <td id="T_a66d3_row6_col6" class="data row6 col6" >1</td>
+      <td id="T_a66d3_row6_col7" class="data row6 col7" >1</td>
+      <td id="T_a66d3_row6_col8" class="data row6 col8" >1</td>
+      <td id="T_a66d3_row6_col9" class="data row6 col9" >4</td>
     </tr>
     <tr>
-      <th id="T_cc4c8_level0_row7" class="row_heading level0 row7" >Langenthal</th>
-      <td id="T_cc4c8_row7_col0" class="data row7 col0" >301</td>
-      <td id="T_cc4c8_row7_col1" class="data row7 col1" >1.94</td>
-      <td id="T_cc4c8_row7_col2" class="data row7 col2" >11</td>
-      <td id="T_cc4c8_row7_col3" class="data row7 col3" >1</td>
-      <td id="T_cc4c8_row7_col4" class="data row7 col4" >1</td>
-      <td id="T_cc4c8_row7_col5" class="data row7 col5" >3</td>
-      <td id="T_cc4c8_row7_col6" class="data row7 col6" >1</td>
-      <td id="T_cc4c8_row7_col7" class="data row7 col7" >2</td>
-      <td id="T_cc4c8_row7_col8" class="data row7 col8" >1</td>
-      <td id="T_cc4c8_row7_col9" class="data row7 col9" >2</td>
+      <th id="T_a66d3_level0_row7" class="row_heading level0 row7" >Langenthal</th>
+      <td id="T_a66d3_row7_col0" class="data row7 col0" >301</td>
+      <td id="T_a66d3_row7_col1" class="data row7 col1" >1.94</td>
+      <td id="T_a66d3_row7_col2" class="data row7 col2" >11</td>
+      <td id="T_a66d3_row7_col3" class="data row7 col3" >1</td>
+      <td id="T_a66d3_row7_col4" class="data row7 col4" >1</td>
+      <td id="T_a66d3_row7_col5" class="data row7 col5" >3</td>
+      <td id="T_a66d3_row7_col6" class="data row7 col6" >1</td>
+      <td id="T_a66d3_row7_col7" class="data row7 col7" >2</td>
+      <td id="T_a66d3_row7_col8" class="data row7 col8" >1</td>
+      <td id="T_a66d3_row7_col9" class="data row7 col9" >2</td>
     </tr>
     <tr>
-      <th id="T_cc4c8_level0_row8" class="row_heading level0 row8" >Muri bei Bern</th>
-      <td id="T_cc4c8_row8_col0" class="data row8 col0" >90</td>
-      <td id="T_cc4c8_row8_col1" class="data row8 col1" >1.63</td>
-      <td id="T_cc4c8_row8_col2" class="data row8 col2" >2</td>
-      <td id="T_cc4c8_row8_col3" class="data row8 col3" >1</td>
-      <td id="T_cc4c8_row8_col4" class="data row8 col4" >1</td>
-      <td id="T_cc4c8_row8_col5" class="data row8 col5" >3</td>
-      <td id="T_cc4c8_row8_col6" class="data row8 col6" >1</td>
-      <td id="T_cc4c8_row8_col7" class="data row8 col7" >2</td>
-      <td id="T_cc4c8_row8_col8" class="data row8 col8" >1</td>
-      <td id="T_cc4c8_row8_col9" class="data row8 col9" >3</td>
+      <th id="T_a66d3_level0_row8" class="row_heading level0 row8" >Muri bei Bern</th>
+      <td id="T_a66d3_row8_col0" class="data row8 col0" >90</td>
+      <td id="T_a66d3_row8_col1" class="data row8 col1" >1.63</td>
+      <td id="T_a66d3_row8_col2" class="data row8 col2" >2</td>
+      <td id="T_a66d3_row8_col3" class="data row8 col3" >1</td>
+      <td id="T_a66d3_row8_col4" class="data row8 col4" >1</td>
+      <td id="T_a66d3_row8_col5" class="data row8 col5" >3</td>
+      <td id="T_a66d3_row8_col6" class="data row8 col6" >1</td>
+      <td id="T_a66d3_row8_col7" class="data row8 col7" >2</td>
+      <td id="T_a66d3_row8_col8" class="data row8 col8" >1</td>
+      <td id="T_a66d3_row8_col9" class="data row8 col9" >3</td>
     </tr>
     <tr>
-      <th id="T_cc4c8_level0_row9" class="row_heading level0 row9" >Port</th>
-      <td id="T_cc4c8_row9_col0" class="data row9 col0" >118</td>
-      <td id="T_cc4c8_row9_col1" class="data row9 col1" >1.38</td>
-      <td id="T_cc4c8_row9_col2" class="data row9 col2" >2</td>
-      <td id="T_cc4c8_row9_col3" class="data row9 col3" >1</td>
-      <td id="T_cc4c8_row9_col4" class="data row9 col4" >1</td>
-      <td id="T_cc4c8_row9_col5" class="data row9 col5" >3</td>
-      <td id="T_cc4c8_row9_col6" class="data row9 col6" >2</td>
-      <td id="T_cc4c8_row9_col7" class="data row9 col7" >2</td>
-      <td id="T_cc4c8_row9_col8" class="data row9 col8" >1</td>
-      <td id="T_cc4c8_row9_col9" class="data row9 col9" >3</td>
+      <th id="T_a66d3_level0_row9" class="row_heading level0 row9" >Port</th>
+      <td id="T_a66d3_row9_col0" class="data row9 col0" >118</td>
+      <td id="T_a66d3_row9_col1" class="data row9 col1" >1.38</td>
+      <td id="T_a66d3_row9_col2" class="data row9 col2" >2</td>
+      <td id="T_a66d3_row9_col3" class="data row9 col3" >1</td>
+      <td id="T_a66d3_row9_col4" class="data row9 col4" >1</td>
+      <td id="T_a66d3_row9_col5" class="data row9 col5" >3</td>
+      <td id="T_a66d3_row9_col6" class="data row9 col6" >2</td>
+      <td id="T_a66d3_row9_col7" class="data row9 col7" >2</td>
+      <td id="T_a66d3_row9_col8" class="data row9 col8" >1</td>
+      <td id="T_a66d3_row9_col9" class="data row9 col9" >3</td>
     </tr>
     <tr>
-      <th id="T_cc4c8_level0_row10" class="row_heading level0 row10" >Rubigen</th>
-      <td id="T_cc4c8_row10_col0" class="data row10 col0" >57</td>
-      <td id="T_cc4c8_row10_col1" class="data row10 col1" >3.20</td>
-      <td id="T_cc4c8_row10_col2" class="data row10 col2" >1</td>
-      <td id="T_cc4c8_row10_col3" class="data row10 col3" >1</td>
-      <td id="T_cc4c8_row10_col4" class="data row10 col4" >1</td>
-      <td id="T_cc4c8_row10_col5" class="data row10 col5" >1</td>
-      <td id="T_cc4c8_row10_col6" class="data row10 col6" >1</td>
-      <td id="T_cc4c8_row10_col7" class="data row10 col7" >4</td>
-      <td id="T_cc4c8_row10_col8" class="data row10 col8" >1</td>
-      <td id="T_cc4c8_row10_col9" class="data row10 col9" >2</td>
+      <th id="T_a66d3_level0_row10" class="row_heading level0 row10" >Rubigen</th>
+      <td id="T_a66d3_row10_col0" class="data row10 col0" >57</td>
+      <td id="T_a66d3_row10_col1" class="data row10 col1" >3.20</td>
+      <td id="T_a66d3_row10_col2" class="data row10 col2" >1</td>
+      <td id="T_a66d3_row10_col3" class="data row10 col3" >1</td>
+      <td id="T_a66d3_row10_col4" class="data row10 col4" >1</td>
+      <td id="T_a66d3_row10_col5" class="data row10 col5" >1</td>
+      <td id="T_a66d3_row10_col6" class="data row10 col6" >1</td>
+      <td id="T_a66d3_row10_col7" class="data row10 col7" >4</td>
+      <td id="T_a66d3_row10_col8" class="data row10 col8" >1</td>
+      <td id="T_a66d3_row10_col9" class="data row10 col9" >2</td>
     </tr>
     <tr>
-      <th id="T_cc4c8_level0_row11" class="row_heading level0 row11" >Steffisburg</th>
-      <td id="T_cc4c8_row11_col0" class="data row11 col0" >114</td>
-      <td id="T_cc4c8_row11_col1" class="data row11 col1" >0.63</td>
-      <td id="T_cc4c8_row11_col2" class="data row11 col2" >11</td>
-      <td id="T_cc4c8_row11_col3" class="data row11 col3" >1</td>
-      <td id="T_cc4c8_row11_col4" class="data row11 col4" >1</td>
-      <td id="T_cc4c8_row11_col5" class="data row11 col5" >4</td>
-      <td id="T_cc4c8_row11_col6" class="data row11 col6" >1</td>
-      <td id="T_cc4c8_row11_col7" class="data row11 col7" >1</td>
-      <td id="T_cc4c8_row11_col8" class="data row11 col8" >1</td>
-      <td id="T_cc4c8_row11_col9" class="data row11 col9" >3</td>
+      <th id="T_a66d3_level0_row11" class="row_heading level0 row11" >Steffisburg</th>
+      <td id="T_a66d3_row11_col0" class="data row11 col0" >114</td>
+      <td id="T_a66d3_row11_col1" class="data row11 col1" >0.63</td>
+      <td id="T_a66d3_row11_col2" class="data row11 col2" >11</td>
+      <td id="T_a66d3_row11_col3" class="data row11 col3" >1</td>
+      <td id="T_a66d3_row11_col4" class="data row11 col4" >1</td>
+      <td id="T_a66d3_row11_col5" class="data row11 col5" >4</td>
+      <td id="T_a66d3_row11_col6" class="data row11 col6" >1</td>
+      <td id="T_a66d3_row11_col7" class="data row11 col7" >1</td>
+      <td id="T_a66d3_row11_col8" class="data row11 col8" >1</td>
+      <td id="T_a66d3_row11_col9" class="data row11 col9" >3</td>
     </tr>
     <tr>
-      <th id="T_cc4c8_level0_row12" class="row_heading level0 row12" >Utzenstorf</th>
-      <td id="T_cc4c8_row12_col0" class="data row12 col0" >41</td>
-      <td id="T_cc4c8_row12_col1" class="data row12 col1" >0.57</td>
-      <td id="T_cc4c8_row12_col2" class="data row12 col2" >8</td>
-      <td id="T_cc4c8_row12_col3" class="data row12 col3" >1</td>
-      <td id="T_cc4c8_row12_col4" class="data row12 col4" >1</td>
-      <td id="T_cc4c8_row12_col5" class="data row12 col5" >2</td>
-      <td id="T_cc4c8_row12_col6" class="data row12 col6" >2</td>
-      <td id="T_cc4c8_row12_col7" class="data row12 col7" >3</td>
-      <td id="T_cc4c8_row12_col8" class="data row12 col8" >1</td>
-      <td id="T_cc4c8_row12_col9" class="data row12 col9" >2</td>
+      <th id="T_a66d3_level0_row12" class="row_heading level0 row12" >Utzenstorf</th>
+      <td id="T_a66d3_row12_col0" class="data row12 col0" >41</td>
+      <td id="T_a66d3_row12_col1" class="data row12 col1" >0.57</td>
+      <td id="T_a66d3_row12_col2" class="data row12 col2" >8</td>
+      <td id="T_a66d3_row12_col3" class="data row12 col3" >1</td>
+      <td id="T_a66d3_row12_col4" class="data row12 col4" >1</td>
+      <td id="T_a66d3_row12_col5" class="data row12 col5" >2</td>
+      <td id="T_a66d3_row12_col6" class="data row12 col6" >2</td>
+      <td id="T_a66d3_row12_col7" class="data row12 col7" >3</td>
+      <td id="T_a66d3_row12_col8" class="data row12 col8" >1</td>
+      <td id="T_a66d3_row12_col9" class="data row12 col9" >2</td>
     </tr>
     <tr>
-      <th id="T_cc4c8_level0_row13" class="row_heading level0 row13" >Walperswil</th>
-      <td id="T_cc4c8_row13_col0" class="data row13 col0" >14</td>
-      <td id="T_cc4c8_row13_col1" class="data row13 col1" >0.22</td>
-      <td id="T_cc4c8_row13_col2" class="data row13 col2" >1</td>
-      <td id="T_cc4c8_row13_col3" class="data row13 col3" >1</td>
-      <td id="T_cc4c8_row13_col4" class="data row13 col4" >1</td>
-      <td id="T_cc4c8_row13_col5" class="data row13 col5" >1</td>
-      <td id="T_cc4c8_row13_col6" class="data row13 col6" >2</td>
-      <td id="T_cc4c8_row13_col7" class="data row13 col7" >4</td>
-      <td id="T_cc4c8_row13_col8" class="data row13 col8" >1</td>
-      <td id="T_cc4c8_row13_col9" class="data row13 col9" >1</td>
+      <th id="T_a66d3_level0_row13" class="row_heading level0 row13" >Walperswil</th>
+      <td id="T_a66d3_row13_col0" class="data row13 col0" >14</td>
+      <td id="T_a66d3_row13_col1" class="data row13 col1" >0.22</td>
+      <td id="T_a66d3_row13_col2" class="data row13 col2" >1</td>
+      <td id="T_a66d3_row13_col3" class="data row13 col3" >1</td>
+      <td id="T_a66d3_row13_col4" class="data row13 col4" >1</td>
+      <td id="T_a66d3_row13_col5" class="data row13 col5" >1</td>
+      <td id="T_a66d3_row13_col6" class="data row13 col6" >2</td>
+      <td id="T_a66d3_row13_col7" class="data row13 col7" >4</td>
+      <td id="T_a66d3_row13_col8" class="data row13 col8" >1</td>
+      <td id="T_a66d3_row13_col9" class="data row13 col9" >1</td>
     </tr>
   </tbody>
 </table>
@@ -3147,11 +3172,11 @@ Rivers</label><div class="sd-tab-content docutils">
       </div>
     </a>
     <a class="right-next"
-       href="vaud.html"
+       href="geneve.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Canton Vaud</p>
+        <p class="prev-next-title">Canton Genève</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

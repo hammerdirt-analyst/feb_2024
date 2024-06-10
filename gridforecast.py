@@ -33,7 +33,7 @@ def forecast_weighted_prior(landuse_of_interest, feature_variables, landuse_from
     g, w = select_prior_data_by_feature_weight(landuse_from_other, weights, feature_variables)
     posterior_by_weight, c = posterior_dirichlet_counts(likelihood_data, g['pcs/m'].values)
     sample_values, adist, summary = dirichlet_posterior(posterior_by_weight)
-    return sample_values, adist, summary
+    return sample_values, adist, summary, g
 
 def make_report_objects(df):
 
@@ -298,41 +298,38 @@ def posterior_dirichlet_counts(regional_likelihood, regional_prior, max_range: f
 def reports_and_forecast(likelihood_params: dict, prior_params: dict, ldata: pd.DataFrame,
                          feature_columns: [] = None, samples_needed: int = 100, other_data: pd.DataFrame = None, logger = None):
     comments = ''
+    make_forecast = True
     ldi, l_locations, c = check_params(likelihood_params, ldata.copy(), logger)
+    comments += f' {c}'
     if c != 'ok':
-        return [], c
-    this_report, this_land_use = make_report_objects(ldi)
-    comments += c
+        make_forecast = False
+        this_report, this_land_use = 'No likelihood', 'No likelihood'
+    else:
+        this_report, this_land_use = make_report_objects(ldi)
 
     pdf, p_locations, c = check_params(prior_params, ldata.copy(), logger)
-    comments += c
-
-    if c == 'No survey results found.':
-        use_case = prior_params['feature_type']
-        odf = other_data[
-            (other_data['feature_type'] == use_case) & (~other_data.sample_id.isin(this_report.df.sample_id.unique()))].copy()
-        other_report, other_land_use = make_report_objects(odf)
-        d = other_land_use.df_cat[~other_land_use.df_cat.location.isin(l_locations)].copy()
-        weights = this_land_use.n_samples_per_feature()[feature_columns] / this_report.number_of_samples
-        if len(ldi) < 100:
-            new_data, weights = select_prior_data_by_feature_weight(d, weights, feature_columns, samples_needed=len(ldi))
-        else:
-            new_data, weights = select_prior_data_by_feature_weight(d, weights, feature_columns, samples_needed=samples_needed)
-
-        prior_report, prior_land_use = make_report_objects(new_data)
+    comments += f' {c}'
+    if c != 'ok':
+        make_forecast = False
+        prior_report, prior_land_use = 'No prior', 'No prior'
     else:
         prior_report, prior_land_use = make_report_objects(pdf)
 
-        # collect the results from the prior and the likelihood
-    prr = prior_report.sample_results.groupby('sample_id')['pcs/m'].sum()
-    lkl = this_report.sample_results.groupby('sample_id')['pcs/m'].sum()
+    if make_forecast:
 
-    # consider all values
-    i = MulitnomialDirichlet('comb', prr, lkl, logger)
+        prr = prior_report.sample_results.groupby('sample_id')['pcs/m'].sum()
+        lkl = this_report.sample_results.groupby('sample_id')['pcs/m'].sum()
 
-    # limit to the 99th percentile
-    h, c = posterior_dirichlet_counts(lkl, prr, max_range=max_range)
-    comments += c
+        # consider all values
+        i = MulitnomialDirichlet('comb', prr, lkl, logger)
+
+        # limit to the 99th percentile
+        h, c = posterior_dirichlet_counts(lkl, prr, max_range=max_range)
+        comments += c
+    else:
+        i = 'no forecast'
+        h = 'no forecast'
+        comments += 'No forecast was made.'
     results = dict(
         this_report=this_report,
         this_land_use=this_land_use,
