@@ -4,8 +4,9 @@ hammerdirt 2024
 Author: Roger Erismann
 
 NOTE: This module is a work in progress.
+
 Implementation of a grid forecast using a Dirichlet-Multinomial conjugate. The module provides functions to
-make reports and forecasts based on the likelihood and prior data. The module also provides functions to
+make reports and forecasts based on the likelihood and prior data. The module provides functions to
 compute the posterior distribution, sample from the posterior, compute percentiles, compute the highest density
 interval, compute the expected average, and compute the probability of x. The module also provides functions to
 compute the descriptive statistics of the forecasted samples.

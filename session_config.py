@@ -2,9 +2,12 @@
 session_config.py
 hammerdirt 2024
 Author: Roger Erismann
-
 NOTE: This module is a work in progress.
 
+This module is a configuration file for the litter assisstant. The configuration file is used to define the feature and
+target variables, give the location of the default data, and define the columns of interest. The configuration file also
+contains the aggregation methods and names the columns. Defines the 90% range, the bins and labels for land use, the
+radius of the land use buffer and keys for sorting the data in the userinterface.
 """
 import pandas as pd
 import numpy as np

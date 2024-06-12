@@ -8,14 +8,14 @@ NOTE: This module is a work in progress.
 The SurveyReport class is a container for the data and methods that are used to generate a report from a survey data set.
 The report is a summary of the data in the survey. The exact contents of the report should be defined by the stakeholders
 charged with the responsibility of interpreting the data. This has not happened. Therefore, this report is the byproduct
-of the calculations necessary to forecast values. The userdisplay.py module is how the report is displayed for evaluation
+of the calculations necessary to forecast values. The <userdisplay.py> module is how the report is displayed for evaluation
 by stakeholders.
 
 Combined with the LandUseReport class, it is possible to describe the sampling conditions of a survey in a quantitative
-scale. Therefore, if the data in the report is a collection of like items, the report can be used to describe the concen
-tration of the items given the environmental conditions of the survey.
+scale. Therefore, if the data in the report is a collection of like items, the report can be used to describe the
+concentration of the items per meter given the environmental conditions of the survey.
 
-The report condtains the following information:
+The report contains the following information:
 1. Administrative boundaries: the political boundaries of the data
 2. Feature inventory: the use case of the survey location
 3. Date range: the date range of the data

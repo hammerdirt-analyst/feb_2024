@@ -5,6 +5,12 @@ Author: Roger Erismann
 
 NOTE: This module is a work in progress.
 
+The userdisplay.py module is a collection of functions that are used to display the results of the survey report in a
+jupyter notebook. For tables, we rely on the pandas styling API. The charts are generated with the bokeh plotting library
+or matplotlib.
+
+The intention is to fold the userdisplay.py module into a module that takes advantage of the sphinx documentation system.
+While the user interface for the app would be handled by NEXT.js.
 """
 import folium
 from folium import Marker

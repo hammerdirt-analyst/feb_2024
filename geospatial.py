@@ -4,6 +4,27 @@ hammerdirt 2024
 Author: Roger Erismann
 
 NOTE: This module is a work in progress.
+
+The geospatial module is a collection of functions that are used to match survey data with land use data. The land use
+for each survey location is calculated by summing the area of each land use type within a buffer of the survey location.
+
+Each location has a unique land use profile. The land use profile is a summary of the land use types within the buffer.
+However, when categorized, the land use profile is used to group locations with similar land use attributes.
+
+A LandUseReport is a container for the data and methods that are used to generate a report from a survey data set. The
+report is a summary of the data in the survey with respect to the landuse features of the survey locations. The LandUseReport
+contains the following information:
+
+1. merge_land_use_to_survey_data: merges the land use data to the survey data
+2. categorize_columns: categorizes the feature columns in the DataFrame
+3. n_samples_per_feature: returns the number of samples per feature
+4. n_pieces_per_feature: returns the number of pieces per feature
+5. locations_per_feature: returns the number of locations per feature
+6. rate_per_feature: returns the rate per feature
+7. combine_features: combines the features in the DataFrame
+8. correlation_matrix: returns the correlation matrix of the features
+9. assign_combination_method: assigns the combination method to correlated pairs
+10. correlated_pairs: returns the correlated pairs
 """
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
