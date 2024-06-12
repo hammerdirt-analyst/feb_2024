@@ -1,3 +1,33 @@
+"""
+reports.py
+hammerdirt 2024
+Author: Roger Erismann
+
+NOTE: This module is a work in progress.
+
+The SurveyReport class is a container for the data and methods that are used to generate a report from a survey data set.
+The report is a summary of the data in the survey. The exact contents of the report should be defined by the stakeholders
+charged with the responsibility of interpreting the data. This has not happened. Therefore, this report is the byproduct
+of the calculations necessary to forecast values. The userdisplay.py module is how the report is displayed for evaluation
+by stakeholders.
+
+Combined with the LandUseReport class, it is possible to describe the sampling conditions of a survey in a quantitative
+scale. Therefore, if the data in the report is a collection of like items, the report can be used to describe the concen
+tration of the items given the environmental conditions of the survey.
+
+The report condtains the following information:
+1. Administrative boundaries: the political boundaries of the data
+2. Feature inventory: the use case of the survey location
+3. Date range: the date range of the data
+4. Inventory: quantity and % of total for each object code
+5. Total quantity: the total quantity of the data
+6. Number of samples: the number of unique samples in the data
+7. Material report: the % of total for each material type
+8. Fail rate: the rate of failure for each object code
+9. Sample results: the sample totals for the date range of the data
+10. Sampling results summary: the summary of the sample totals
+11. Object summary: the quantity, fail rate and % of total for each object code
+"""
 import pandas as pd
 import numpy as np
 

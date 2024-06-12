@@ -1,3 +1,10 @@
+"""
+geospatial.py
+hammerdirt 2024
+Author: Roger Erismann
+
+NOTE: This module is a work in progress.
+"""
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 

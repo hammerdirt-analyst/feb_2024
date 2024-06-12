@@ -1,7 +1,25 @@
-""" Dirichlet-Multinomial Distribution
-
 """
+gridforecast.py
+hammerdirt 2024
+Author: Roger Erismann
 
+NOTE: This module is a work in progress.
+Implementation of a grid forecast using a Dirichlet-Multinomial conjugate. The module provides functions to
+make reports and forecasts based on the likelihood and prior data. The module also provides functions to
+compute the posterior distribution, sample from the posterior, compute percentiles, compute the highest density
+interval, compute the expected average, and compute the probability of x. The module also provides functions to
+compute the descriptive statistics of the forecasted samples.
+
+A Bayesian method is used because of how the data is collected. Each sample is an observation made by an individual that
+can make mistakes, has an unknown amount of experience or physical limitations that we may not be aware of. Furthermore,
+objects are difficult to identify due to erosion and decomposition. All of these factors contribute to the uncertainty
+present in the data.
+
+The land-use is an essential factor in the forecast. The land-use is used to weight the prior data. Comparing strictly on
+a temporal scale assumes that the same types of locations was sampled from one epoch to another. This is not the case.
+We note that comparing results on land use values is more appropriate than limiting the comparison to temporal or spatial
+values. In simple terms, we are comparing apples to apples and not apples to oranges.
+"""
 import pandas as pd
 import numpy as np
 from scipy.stats import dirichlet, multinomial
@@ -12,35 +30,36 @@ from session_config import index_range, max_range
 import geospatial
 import reports
 
+# columns =  [
+#     'sample_id',
+#     'code',
+#     'quantity',
+#     'pcs/m',
+#     'feature_name',
+#     'location',
+#     'parent_boundary',
+#     'city',
+#     'canton',
+#     'feature_type',
+#     'date'
+# ]
 
-
-columns =  [
-    'sample_id',
-    'code',
-    'quantity',
-    'pcs/m',
-    'feature_name',
-    'location',
-    'parent_boundary',
-    'city',
-    'canton',
-    'feature_type',
-    'date'
-]
 
 def forecast_weighted_prior(landuse_of_interest, feature_variables, landuse_from_other, likelihood_data):
+    # make a prior that is comprised of random samples that are weighted by the
+    # land use of interest. Make the posterior and draw samples
     weights = land_use_weights(landuse_of_interest, feature_variables)
     g, w = select_prior_data_by_feature_weight(landuse_from_other, weights, feature_variables)
     posterior_by_weight, c = posterior_dirichlet_counts(likelihood_data, g['pcs/m'].values)
     sample_values, adist, summary = dirichlet_posterior(posterior_by_weight)
+
     return sample_values, adist, summary, g
 
+
 def make_report_objects(df):
-
-
-    # make a report for the likelihood data
+    # make a survey report and a landuse report
+    # from filtered data
     this_report = reports.SurveyReport(dfc=df)
-    # print('making prior')
 
     # generate the parameters for the landuse report
     target_df = this_report.sample_results
@@ -53,6 +72,7 @@ def make_report_objects(df):
 
 
 def summary_of_forecasted_samples(vals):
+    # calculate the quantiles, number of samples, average and highest density interval
     quantiles = np.quantile(vals, session_config.report_quantiles)
     nsamples = len(vals)
     average = np.mean(vals)
@@ -61,8 +81,10 @@ def summary_of_forecasted_samples(vals):
 
 
 def dirichlet_posterior(counts, nsamples: int = 100, **kwargs):
+    # make a dirichlet distribution from counts
+    # sample from the distribution, and return the samples
+    # along with a summary of the samples
     adist = dirichlet(counts)
-
     posterior_samples = multinomial.rvs(nsamples, p=adist.rvs(1)[0])
     sample_len = len(counts)
     this_grid = index_range[:sample_len]
@@ -70,74 +92,81 @@ def dirichlet_posterior(counts, nsamples: int = 100, **kwargs):
     summary = summary_of_forecasted_samples(sample_values)
     return sample_values, adist, summary
 
+
 def land_use_weights(a_land_use_report, feature_variables):
+    # the number of samples per feature and category divided by the number of unique samples
     wghts = a_land_use_report.n_samples_per_feature()[feature_variables]
     dvsr = a_land_use_report.df_cat.sample_id.nunique()
     weights = wghts/dvsr
     return  weights
-def hdi(samples, cred_mass=.95):
-    # Sort the samples
-    sorted_samples = np.sort(samples)
 
-    # Calculate the number of included samples in the interval
+
+def hdi(samples, cred_mass=.95):
+    # calculate the highest density interval
+    sorted_samples = np.sort(samples)
     n_samples = len(sorted_samples)
     n_cred_samples = int(np.floor(cred_mass * n_samples))
 
-    # Compute the width of intervals that include the desired number of samples
+    # the intervals that include the desired number of samples
     interval_widths = sorted_samples[n_cred_samples:] - sorted_samples[:n_samples - n_cred_samples]
 
-    # Find the shortest interval
+    # the shortest interval
     min_idx = np.argmin(interval_widths)
-
-    # Return the HDI
     hdi_min = sorted_samples[min_idx]
     hdi_max = sorted_samples[min_idx + n_cred_samples]
 
     return hdi_min, hdi_max
 
+
 def the_number_of_samples_required(weights, feature_columns, samples_needed=100):
+    # the number of samples required for each feature and magnitude
+    # based on the weights from the likelihood data.
+
     required = defaultdict(int)
     weights['magnitude'] = weights.index
     for feature in feature_columns:
         for i, row in weights.iterrows():
             required[(feature, row['magnitude'])] = int(row[feature] * samples_needed)
+
     return required
 
 
 def select_prior_data_by_feature_weight(odata, weights, feature_columns, samples_needed=100):
+    # select the prior data based on the weights from the likelihood
+    # from a set of data that does not include the likelihood data.
     required_samples = the_number_of_samples_required(weights, feature_columns, samples_needed=samples_needed)
     new_samples = pd.DataFrame()
     left_to_sample = odata.copy()
     selected_samples = set()
 
-    # Iterate through each feature and magnitude to collect the required samples
+    # iterate through each feature and magnitude to collect the required samples
     for feature, magnitude in required_samples.keys():
         remaining_samples = required_samples[(feature, magnitude)]
 
         if remaining_samples > 0:
-            # Filter the data for the given feature and magnitude
+            # filter the data for the given feature and magnitude
             feature_data = left_to_sample[
                 (left_to_sample[feature] == magnitude) & (~left_to_sample.index.isin(selected_samples))]
 
-            # Ensure we do not sample more than available
+            # ensure we do not sample more than available
             available_samples = len(feature_data)
             if remaining_samples > available_samples:
                 remaining_samples = available_samples
 
-            # Collect the required samples
+            # collect the required samples
             if remaining_samples > 0:
                 sampled_feature_data = feature_data.sample(n=remaining_samples, replace=False)
 
-                # Add the indices of the selected samples to the set
+                # add the indices of the selected samples to the set
                 selected_samples.update(sampled_feature_data.index)
 
-                # Append the sampled data to the new_samples dataframe
+                # append the sampled data to the new_samples dataframe
                 new_samples = pd.concat([new_samples, sampled_feature_data])
 
-                # Remove selected samples from the remaining sample data
+                # remove selected samples from the remaining sample data
                 left_to_sample = left_to_sample.drop(sampled_feature_data.index)
 
-                # Update the remaining requirements for other features in the selected samples
+                # update the remaining requirements
                 for f in feature_columns:
                     if f != feature:
                         for m in sampled_feature_data[f].unique():
@@ -145,29 +174,18 @@ def select_prior_data_by_feature_weight(odata, weights, feature_columns, samples
                             selected_samples_count = sampled_feature_data[sampled_feature_data[f] == m].shape[0]
                             required_samples[(f, m)] = max(0, remaining_samples - selected_samples_count)
 
-    # Reset the index of the sampled data
     new_samples = new_samples.reset_index(drop=True)
 
-    # Calculate the weights of the newly sampled data
+    # weights of the newly sampled data
     new_weights = new_samples[feature_columns].apply(lambda x: x.value_counts(normalize=True)).fillna(0)
     return new_samples, new_weights
 
 
 def create_mask(data, query_params):
-    """
-    Create a boolean mask for the data based on query parameters including date range.
-
-    Parameters:
-    data (pd.DataFrame): The input dataframe.
-    query_params (dict): Dictionary of query parameters where key is the column name and value is the filter value.
-
-    Returns:
-    pd.Series: A boolean mask for the dataframe.
-    """
-    # Initialize the mask to True for all rows
+    # create a boolean mask for the data based on query parameters including date range.
+    # initialize the mask to True for all rows
     mask = pd.Series([True] * len(data))
 
-    # Apply query parameters to the mask
     for key, value in query_params.items():
         if key == 'date_range':
             start_date = pd.to_datetime(value['start'])
@@ -182,32 +200,25 @@ def create_mask(data, query_params):
 
 
 def filter_data(datai, query_params):
-    """
-    Filter the data based on the query parameters including date range.
+    # filter the data based on the query parameters including date range.
 
-    Parameters:
-    data (pd.DataFrame): The input dataframe to filter.
-    query_params (dict): Dictionary of query parameters where key is the column name and value is the filter value.
-
-    Returns:
-    pd.DataFrame: The filtered dataframe.
-    """
-    # Ensure the 'date' column is of datetime type
     if 'date' in datai.columns:
         datai['date'] = pd.to_datetime(datai['date'])
     else:
         raise KeyError("The dataframe does not contain a 'date' column")
 
-    # Create the mask using the create_mask function
+    # mask using the create_mask function
     mask = create_mask(datai, query_params)
-
     # Apply the mask to the dataframe
-    filtered_data = datai[mask]
+    filtered_data = datai[mask].copy()
 
     return filtered_data, filtered_data.location.unique()
 
 
 def check_params(params, data, logger):
+    # check if the query parameters are valid and return the filtered data
+    # and unique locations if the query is valid. Otherwise, return an error message.
+    # and empty arrays.
 
     try:
         a, b = filter_data(data, query_params=params)
@@ -226,6 +237,7 @@ def check_params(params, data, logger):
 
 
 def grid_resolution_range(l, p, max_range: float = .99):
+    # returns the resolution of the grid based off the max_range
     if len(l) == 0:
         this_limit = 0
     else:
@@ -241,6 +253,9 @@ def grid_resolution_range(l, p, max_range: float = .99):
 
 def extend_the_prior_or_likelihood(higher_max, lower_max, h_limit, l_limit, comment: str = "no comment",
                                    grid_scale: int = 10):
+    # the extent of the grid is determined by the max of the two distributions
+    # the distribution with the lower max is extended to the higher max
+    # the new grid is updated with 0.01 where there were no records
     hrmn_counts = np.array(
         [np.sum((higher_max > x) & (higher_max <= x + .1)) for x in index_range[index_range <= h_limit]])
     lrmn_counts = np.array(
@@ -250,7 +265,7 @@ def extend_the_prior_or_likelihood(higher_max, lower_max, h_limit, l_limit, comm
     lzero = sum(lower_max == 0)
     zeroes = lzero + hzero
 
-    # Update prior with likelihood to get posterior counts
+    # update prior with likelihood to get posterior counts
     posterior_counts_x = hrmn_counts + lrmn_counts
     posterior_counts_i = np.array([zeroes, *posterior_counts_x])
 
@@ -297,6 +312,10 @@ def posterior_dirichlet_counts(regional_likelihood, regional_prior, max_range: f
 
 def reports_and_forecast(likelihood_params: dict, prior_params: dict, ldata: pd.DataFrame,
                          feature_columns: [] = None, samples_needed: int = 100, other_data: pd.DataFrame = None, logger = None):
+    # utility function to make reports and forecasts. The function checks the likelihood and prior parameters
+    # and returns the reports and forecasts if the parameters are valid. Otherwise, the function returns any available
+    # reports and a boolean flag indicating that a forecast was not made.
+
     comments = ''
     make_forecast = True
     ldi, l_locations, c = check_params(likelihood_params, ldata.copy(), logger)
@@ -316,8 +335,8 @@ def reports_and_forecast(likelihood_params: dict, prior_params: dict, ldata: pd.
         prior_report, prior_land_use = make_report_objects(pdf)
 
     if make_forecast:
-
         prr = prior_report.sample_results.groupby('sample_id')['pcs/m'].sum()
+
         lkl = this_report.sample_results.groupby('sample_id')['pcs/m'].sum()
 
         # consider all values
@@ -344,6 +363,13 @@ def reports_and_forecast(likelihood_params: dict, prior_params: dict, ldata: pd.
 
 
 class MulitnomialDirichlet:
+    """ A class to implement the Multinomial-Dirichlet conjugate. The class is initialized with the code, prior data,
+    and likelihood data. The class computes the grid, prior, likelihood, posterior parameters, and posterior distribution.
+    The class can sample from the posterior, compute percentiles, compute the highest density interval, compute the expected
+    average, and compute the probability of x. The class also provides descriptive statistics.
+
+    The code parameter is used to identify the group of objects included in the prior and likelihood data.
+    """
     def __init__(self, code, prior_data, likelihood_data, logger):
         if len(prior_data) == 0 or len(likelihood_data) == 0:
             logger.error("Prior data or likelihood data cannot be empty.")

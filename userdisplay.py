@@ -1,3 +1,11 @@
+"""
+userdisplay.py
+hammerdirt 2024
+Author: Roger Erismann
+
+NOTE: This module is a work in progress.
+
+"""
 import folium
 from folium import Marker
 from folium.plugins import MarkerCluster

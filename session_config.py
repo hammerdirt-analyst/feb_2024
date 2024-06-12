@@ -1,5 +1,9 @@
 """
-Parameters for the session configuration
+session_config.py
+hammerdirt 2024
+Author: Roger Erismann
+
+NOTE: This module is a work in progress.
 
 """
 import pandas as pd
