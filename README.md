@@ -1,25 +1,28 @@
-# feb_2024
+# Project 2025
 
-The release date is no longer feb 2024. We will laugh about this later...
+Project 2025 is a national inventory of plastics in the environment. An inventory is the systematic identification and 
+quantification of anthropogenic items found in a specific location. The national inventory is composed of approximately
+400 individual samples taken from select locations along rivers and lakes, call this a beach-litter-inventory.
 
-## Draft in process
+The first report proved that a relatively small team could cover a large territory with the correct technology. 
+This remains the case. That is why we see this project, in its current itteration, specifically attractive to stakeholders 
+with an internal data-science team. Stakeholders with experience in python or R will feel right at home in the development environment 
+and will be the source of many improvements. For those interested in learning the basics, we are here to 
+coach them and help them in their projects.
 
-Notes, prototype code and data checking for API that formats the data and methods of a ChatGPT research assistant.
+## Reporting
 
-The UX and final app structure can be tested here (! the llm is not yet attached): [litter assisstant](https://litterassistant.streamlit.app/)
+The challenge in front of us is to transform the observations into accurate and actionable information for two different purposes. 
+There is the administration of the territory and identification of priorities with regard to plastics in the environment. 
+Then, once the priorities have been established these new indicators must be reported on. This project concerns the 
+infrastructure and processes necessary to identify priorities and develop indicators to reduce plastics in the 
+environment from litter density counts.
 
-Interested contributors can check the repo: https://github.com/hammerdirt-analyst/litterassistant 
+## Forecasting 
 
-### The litter assistant
+The inventory data is used to forecast the density of litter based on historical results and topographic features within 
+1 500 m of each survey location.
 
-The assistants function is to assist the researcher in placing the current litter survey results within the context of their own projects. This includes conducting analysis that is not considered in the federal report. Another example is defining reports on administrative boundaries that are not considered in the federal report.
-
-The _checking the assistant_ section is where users can check the data and methods of the assistant.
-
-```{note}
-We have reproduced the figures in all the reports produced thus far. We are now training the model to defaults so 
-that clients have access to a standardised display of the results. 
-```
 ### This work is the result of the previous projects:
 
 * https://github.com/hammerdirt-analyst/IQAASL-End-0f-Sampling-2021
