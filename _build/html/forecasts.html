@@ -1,0 +1,874 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid forecast class &#8212; Project 2025</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'forecasts';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The survey data" href="the_survey_data.html" />
+    <link rel="prev" title="Land use class" href="landuse_class.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="titlepage.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Project 2025</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data and reporting</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bern.html">Canton Bern</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geneve.html">Canton Genève</a></li>
+<li class="toctree-l1"><a class="reference internal" href="valais.html">Canton Valais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vaud.html">Canton Vaud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zurich.html">Canton Zürich</a></li>
+<li class="toctree-l1"><a class="reference internal" href="combined.html">Canton - combined</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use_cases.html">Use cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">Proposal</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Methods and classes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="a_report_class.html">Survey report class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="landuse_class.html">Land use class</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Grid forecast class</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="the_survey_data.html">The survey data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extracting_topo_data.html">Extracting land use values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multinomial_conjugate.html">Empirical Bayes</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hammerdirt-analyst/feb_2024" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hammerdirt-analyst/feb_2024/issues/new?title=Issue%20on%20page%20%2Fforecasts.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Grid forecast class</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-forecaster-methods">Grid forecaster methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-grid-size">The grid size</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-counts">The counts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-posterior-parameters">The posterior parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-the-posterior-distribution">Sample the posterior distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-90-interval-of-the-predictions">The 90% interval of the predictions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-90-hdi">The 90% HDI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-expected-mean">The expected mean</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-probability-of-x">The probability of x</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-descriptive-statistices">The descriptive statistices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-prior-data-by-feature-weight">Select prior data by feature weight</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#posterior-dirichlet-counts">Posterior Dirichlet counts</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="grid-forecast-class">
+<h1>Grid forecast class<a class="headerlink" href="#grid-forecast-class" title="Permalink to this heading">#</a></h1>
+<p>The <em>grid forecaster</em> refers to the methods defined in <code class="docutils literal notranslate"><span class="pre">gridforecast.py</span></code>. The main purpose of the <em>grid forecaster</em> is to implement estimate the probability that a survey result <em>y</em> from a collection of survey results <em>Y</em> will exceed a value <em>x</em> on the grid <em>X</em> from 0 - max(<em>X</em>) for every <em>x</em> spaced 0.1, where max(<em>X</em>) is defined by <em>Y</em>. This is called a grid approximation, in this case we use a Bayesien framework and implement <em>multinomila-Dirichlet</em> conjugate to estimate the probabilities on each point of the grid. The complete method is a defined in <span class="xref myst">grid approximation</span>.</p>
+<p>The grid forecast for any two arrays can be initiated by calling <code class="docutils literal notranslate"><span class="pre">gridforecast.MulitnomialDirichlet</span></code> and providing two pd.series of float values. However, for reporting we use the grid forecast to supplement the <a class="reference internal" href="a_report_class.html#surveyreporter"><span class="std std-ref">SurveyReport</span></a> and the <a class="reference internal" href="landuse_class.html#landusereporter"><span class="std std-ref">LandUseReport</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The grid forecast allows us to estimate the probability of a set of survey results given another set of survey results. Therefore, to interpret the results of a grid forecast the relationship between the two arrays must be well understood. Our focus has been on the structural and geographic similarities of the survey locations.</p>
+</div>
+<p><strong>Example creating reports and forecasts</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># collecting the default data</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">session_config</span><span class="o">.</span><span class="n">collect_survey_data</span><span class="p">()</span>
+
+<span class="c1"># the likelihood: the dates of the most recent samples</span>
+<span class="n">recent_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;start&#39;</span><span class="p">:</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;end&#39;</span><span class="p">:</span><span class="s1">&#39;2021-12-31&#39;</span><span class="p">}</span>
+<span class="c1"># the prior: the dates prior to the most recent samples</span>
+<span class="n">prior_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;start&#39;</span><span class="p">:</span><span class="s1">&#39;2015-11-15&#39;</span><span class="p">,</span> <span class="s1">&#39;end&#39;</span><span class="p">:</span><span class="s1">&#39;2019-12-31&#39;</span><span class="p">}</span>
+<span class="c1"># the region of interest</span>
+<span class="n">canton</span> <span class="o">=</span> <span class="s1">&#39;Vaud&#39;</span>
+
+<span class="c1"># the search parameters for the prior and likelihood</span>
+<span class="n">likelihood_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;canton&#39;</span><span class="p">:</span><span class="n">canton</span><span class="p">,</span> <span class="s1">&#39;date_range&#39;</span><span class="p">:</span><span class="n">recent_dates</span><span class="p">}</span>
+<span class="n">prior_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;canton&#39;</span><span class="p">:</span><span class="n">canton</span><span class="p">,</span> <span class="s1">&#39;date_range&#39;</span><span class="p">:</span><span class="n">prior_dates</span><span class="p">}</span>
+
+<span class="c1"># verify the parameters exist in the data</span>
+<span class="c1"># checking the parameters will verify that the requested data</span>
+<span class="c1"># exists. If the query is possible it is executed and the value of</span>
+<span class="c1"># comments=&#39;ok&#39;, if not empty arrays are returned with the message</span>
+<span class="c1"># &#39;no survey results found&#39;. The method returns the query data, a list</span>
+<span class="c1"># of the sample locations and the comment.</span>
+<span class="n">likelihood_data</span><span class="p">,</span> <span class="n">likelihood_locations</span><span class="p">,</span> <span class="n">likelihood_comments</span> <span class="o">=</span> <span class="n">check_params</span><span class="p">(</span><span class="n">likelihood_params</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">logger</span><span class="p">)</span>
+<span class="n">prior_data</span><span class="p">,</span> <span class="n">prior_locations</span><span class="p">,</span> <span class="n">prior_comments</span> <span class="o">=</span> <span class="n">check_params</span><span class="p">(</span><span class="n">prior_params</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">logger</span><span class="p">)</span>
+
+<span class="c1"># if there is data for both the likelihood and the prior</span>
+<span class="c1"># make a survey report and a land use report for both sets of data</span>
+<span class="n">likelihood_report</span><span class="p">,</span> <span class="n">likelihood_land_use</span> <span class="o">=</span> <span class="n">make_report_objects</span><span class="p">(</span><span class="n">likelihood_data</span><span class="p">)</span>
+<span class="n">prior_report</span><span class="p">,</span> <span class="n">prior_land_use</span> <span class="o">=</span> <span class="n">make_report_objects</span><span class="p">(</span><span class="n">likelihood_data</span><span class="p">)</span>
+
+<span class="c1"># make forecast from all the available liklihood data</span>
+<span class="n">forecast_object</span> <span class="o">=</span> <span class="n">MulitnomialDirichlet</span><span class="p">(</span><span class="s1">&#39;comb&#39;</span><span class="p">,</span> <span class="n">prior_report</span><span class="o">.</span><span class="n">sample_results</span><span class="p">[</span><span class="s1">&#39;pcs/m&#39;</span><span class="p">],</span> <span class="n">likelihood_report</span><span class="o">.</span><span class="n">sample_results</span><span class="p">[</span><span class="s1">&#39;pcs/m&#39;</span><span class="p">],</span> <span class="n">logger</span><span class="p">)</span>
+
+<span class="c1"># make forecast limiting the likelihood to the 99the percentile</span>
+<span class="n">posterior_counts</span><span class="p">,</span> <span class="n">comments</span> <span class="o">=</span> <span class="n">posterior_dirichlet_counts</span><span class="p">(</span><span class="n">lkl</span><span class="p">,</span> <span class="n">prr</span><span class="p">,</span> <span class="n">max_range</span><span class="o">=</span><span class="mf">0.99</span><span class="p">)</span>
+
+<span class="c1"># forecasts from all the data</span>
+<span class="n">forecasted_samples</span> <span class="o">=</span> <span class="n">forecast_object</span><span class="o">.</span><span class="n">sample_posterior</span><span class="p">()</span>
+<span class="n">forecasted_summary</span> <span class="o">=</span> <span class="n">forecast_object</span><span class="o">.</span><span class="n">get_descriptive_statistics</span><span class="p">()</span>
+
+<span class="c1"># forecasts limited to the 99th percentile</span>
+<span class="n">sample_values_99</span><span class="p">,</span> <span class="n">posterior_99</span><span class="p">,</span> <span class="n">summary_99</span> <span class="o">=</span> <span class="n">gfcast</span><span class="o">.</span><span class="n">dirichlet_posterior</span><span class="p">(</span><span class="n">posterior_counts</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Using a weighted prior</strong></p>
+<p>To predict density given similar locations use the land-use report from a set survey results that does not contain any of the survey locations from the likelihood. The default method is to also only select values that have the same use case ie. parks, lakes or rivers.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># determine the proportion of each land-use feature in the likelihood</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="n">land_use_weights</span><span class="p">(</span><span class="n">likelihood_land_use</span><span class="p">,</span> <span class="n">session_config</span><span class="o">.</span><span class="n">feature_variables</span><span class="p">)</span>
+
+<span class="c1"># from the pool of available data select records that are not included in the likelihood</span>
+<span class="c1"># in this case we eliminate the canton of interest, limit the date to the end date of the prior</span>
+<span class="c1"># and create a survey report and land use report for *the other prior data*</span>
+<span class="n">other_data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="o">.</span><span class="n">canton</span> <span class="o">!=</span> <span class="n">canton</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">prior_dates</span><span class="p">[</span><span class="s1">&#39;end&#39;</span><span class="p">])]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">other_prior_report</span><span class="p">,</span> <span class="n">other_prior_land_use</span> <span class="o">=</span> <span class="n">gfcast</span><span class="o">.</span><span class="n">make_report_objects</span><span class="p">(</span><span class="n">other_prior_data</span><span class="p">)</span>
+
+<span class="c1"># using the weights from the likelihood and the other_prior_land_use</span>
+<span class="n">other_prior_data</span><span class="p">,</span> <span class="n">prior_weights</span> <span class="o">=</span> <span class="n">select_prior_data_by_feature_weight</span><span class="p">(</span><span class="n">other_prior_land_use</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">session_config</span><span class="o">.</span><span class="n">feature_variables</span><span class="p">)</span>
+<span class="n">posterior_by_weight</span><span class="p">,</span> <span class="n">weighted_comments</span> <span class="o">=</span> <span class="n">posterior_dirichlet_counts</span><span class="p">(</span><span class="n">likelihood_data</span><span class="p">,</span> <span class="n">g</span><span class="p">[</span><span class="s1">&#39;pcs/m&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="n">posterior_sample_values</span><span class="p">,</span> <span class="n">weighted_dist</span><span class="p">,</span> <span class="n">weighted_summary</span> <span class="o">=</span> <span class="n">dirichlet_posterior</span><span class="p">(</span><span class="n">posterior_by_weight</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="section" id="grid-forecaster-methods">
+<h2>Grid forecaster methods<a class="headerlink" href="#grid-forecaster-methods" title="Permalink to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">gridforecast.MulitnomialDirichlet</span></code> is a class in <code class="docutils literal notranslate"><span class="pre">gridforecast.py</span></code> the built in methods are designed to generate forecasts under a variety of scenarios and provide the basic elements to evaluate those forecasts. In the examples below consider the forecast_object created in the previous example.</p>
+<p><strong>list of methods</strong></p>
+<ol class="arabic simple">
+<li><p>MultinomialDirichlet</p>
+<ul class="simple">
+<li><p>compute_grid</p></li>
+<li><p>compute_counts</p></li>
+<li><p>compute_posterior_params</p></li>
+<li><p>sample_posterior</p></li>
+<li><p>compute_percentiles</p></li>
+<li><p>compute_hdi</p></li>
+<li><p>compute_expected_average</p></li>
+<li><p>probability_of_x</p></li>
+<li><p>get_descriptive_statistics</p></li>
+</ul>
+</li>
+<li><p>select_prior_data_by_feature_weight</p></li>
+<li><p>posterior_dirichlet_counts</p></li>
+<li><p>dirichlet_posterior</p></li>
+</ol>
+<div class="section" id="the-grid-size">
+<h3>The grid size<a class="headerlink" href="#the-grid-size" title="Permalink to this heading">#</a></h3>
+<p>The grid size for each combination is based on the maximum value of either the likelihood or the prior.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">compute_grid</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.000e+00, 1.000e-02, 2.000e-02, ..., 7.707e+01, 7.708e+01,
+       7.709e+01])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-counts">
+<h3>The counts<a class="headerlink" href="#the-counts" title="Permalink to this heading">#</a></h3>
+<p>The number of times that a survey result was either equal to zero or any other place on the grid can be accessed with <code class="docutils literal notranslate"><span class="pre">forecastobject.prior</span></code> or <code class="docutils literal notranslate"><span class="pre">forecastobject.compute_counts(forecast_object.prior_data)</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecastobject</span><span class="o">.</span><span class="n">compute_counts</span><span class="p">(</span><span class="n">forecast_object</span><span class="o">.</span><span class="n">prior_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 0, 0, ..., 0, 0, 1])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-posterior-parameters">
+<h3>The posterior parameters<a class="headerlink" href="#the-posterior-parameters" title="Permalink to this heading">#</a></h3>
+<p>The parameters for the Dirichlet posterior</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecastobject</span><span class="o">.</span><span class="n">compute_posterior_params</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.01, 0.01, 0.01, ..., 0.01, 0.01, 1.  ])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="sample-the-posterior-distribution">
+<h3>Sample the posterior distribution<a class="headerlink" href="#sample-the-posterior-distribution" title="Permalink to this heading">#</a></h3>
+<p>Sample the posterior distribution</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">sample_posterior</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.44,  0.55,  0.71,  0.81,  0.85,  1.26,  1.26,  1.41,  1.43,
+        1.5 ,  1.59,  1.59,  1.65,  1.75,  1.76,  1.76,  1.86,  1.89,
+        1.89,  2.03,  2.1 ,  2.15,  2.21,  2.4 ,  2.45,  2.56,  2.57,
+        2.57,  2.57,  2.57,  2.64,  2.69,  2.74,  3.41,  3.46,  3.73,
+        4.01,  4.76,  4.76,  5.39,  5.43,  5.59,  6.29,  6.29,  6.43,
+        6.55,  6.85,  6.94,  6.94,  6.95,  6.97,  7.26,  7.4 ,  7.68,
+        8.4 ,  8.92,  9.57,  9.69, 10.07, 10.56, 10.64, 10.67, 10.67,
+       10.67, 11.62, 12.37, 12.37, 12.61, 13.6 , 15.74, 18.36, 18.61,
+       18.9 , 19.26, 22.38, 22.38, 23.73, 27.33, 28.13, 31.53, 31.98,
+       33.55, 34.73, 35.57, 37.77, 39.36, 39.54, 40.69, 41.74, 44.1 ,
+       46.96, 47.76, 50.51, 51.84, 51.92, 53.96, 59.09, 70.24, 70.24,
+       75.28])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-90-interval-of-the-predictions">
+<h3>The 90% interval of the predictions<a class="headerlink" href="#the-90-interval-of-the-predictions" title="Permalink to this heading">#</a></h3>
+<p>The 90% interval of the predictions</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">compute_percentiles</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.74  ,  2.8   ,  7.065 , 22.18  , 58.5515])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-90-hdi">
+<h3>The 90% HDI<a class="headerlink" href="#the-90-hdi" title="Permalink to this heading">#</a></h3>
+<p>The 90% highest density interval</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">compute_hdi</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.18, 58.83)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-expected-mean">
+<h3>The expected mean<a class="headerlink" href="#the-expected-mean" title="Permalink to this heading">#</a></h3>
+<p>The 90% highest density interval</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">compute_hdi</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3.26850793e-05, 3.26850793e-05, 3.26850793e-05, ...,
+       3.26850793e-05, 3.26850793e-05, 3.26850793e-03])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-probability-of-x">
+<h3>The probability of x<a class="headerlink" href="#the-probability-of-x" title="Permalink to this heading">#</a></h3>
+<p>The chance that a result will exceed a given value</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># in this case we are asking what is the chance of finding</span>
+<span class="c1"># at least one piece per meter</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">forecast_object</span><span class="o">.</span><span class="n">probability_of_x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]:])</span>
+</pre></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9288737193351585
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-descriptive-statistices">
+<h3>The descriptive statistices<a class="headerlink" href="#the-descriptive-statistices" title="Permalink to this heading">#</a></h3>
+<p>The average, hdi and the 90% range of the expected distribution</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">get_descriptive_statistics</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;code&#39;: &#39;comb&#39;,
+ &#39;average&#39;: 17.717200000000002,
+ &#39;hdi&#39;: (0.18, 65.66),
+ &#39;range&#39;: array([ 0.64  ,  2.86  ,  6.9   , 19.17  , 59.2875]),
+ &#39;max_observed&#39;: 77.1}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="select-prior-data-by-feature-weight">
+<h3>Select prior data by feature weight<a class="headerlink" href="#select-prior-data-by-feature-weight" title="Permalink to this heading">#</a></h3>
+<p>The average, hdi and the 90% range of the expected distribution</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># get the land use weights from the observations of interest</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="n">land_use_weights</span><span class="p">(</span><span class="n">likelihood_land_use</span><span class="p">,</span> <span class="n">feature_variables</span><span class="p">)</span>
+
+<span class="c1"># prior data does not include locations in canton</span>
+<span class="c1"># the surveys are limited to the prior date as defined</span>
+<span class="n">other_data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="o">.</span><span class="n">canton</span> <span class="o">!=</span> <span class="n">canton</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">prior_dates</span><span class="p">[</span><span class="s1">&#39;end&#39;</span><span class="p">])]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">other_report</span><span class="p">,</span> <span class="n">landuse_from_other</span> <span class="o">=</span> <span class="n">gfcast</span><span class="o">.</span><span class="n">make_report_objects</span><span class="p">(</span><span class="n">other_data</span><span class="p">)</span>
+
+<span class="c1"># use the land use object from the other data</span>
+<span class="c1"># and the weights from the likelihood to draw random</span>
+<span class="c1"># samples from the other data</span>
+<span class="n">the_random_samples</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="n">select_prior_data_by_feature_weight</span><span class="p">(</span><span class="n">landuse_from_other</span><span class="p">,</span> <span class="n">weights</span><span class="p">,</span> <span class="n">feature_variables</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sample_id</th>
+      <th>location</th>
+      <th>date</th>
+      <th>quantity</th>
+      <th>pcs/m</th>
+      <th>public services</th>
+      <th>streets</th>
+      <th>orchards</th>
+      <th>vineyards</th>
+      <th>buildings</th>
+      <th>forest</th>
+      <th>undefined</th>
+      <th>buildings_public services</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>('aare_kehrsatz_stolten', '2017-07-03')</td>
+      <td>aare_kehrsatz_stolten</td>
+      <td>2017-07-03</td>
+      <td>5</td>
+      <td>0.10</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>('birs_basel_laderachs', '2018-03-24')</td>
+      <td>birs_basel_laderachs</td>
+      <td>2018-03-24</td>
+      <td>31</td>
+      <td>1.12</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>('limmat_zurich_mortensena_meiera', '2017-08-07')</td>
+      <td>limmat_zurich_mortensena_meiera</td>
+      <td>2017-08-07</td>
+      <td>39</td>
+      <td>1.32</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>('birs_reinach_dinuccin', '2017-05-29')</td>
+      <td>birs_reinach_dinuccin</td>
+      <td>2017-05-29</td>
+      <td>138</td>
+      <td>3.86</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>('vierwaldstattersee_weggis_schoberls_1', '201...</td>
+      <td>vierwaldstattersee_weggis_schoberls_1</td>
+      <td>2018-01-27</td>
+      <td>5</td>
+      <td>0.21</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
+      <td>4</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="posterior-dirichlet-counts">
+<h3>Posterior Dirichlet counts<a class="headerlink" href="#posterior-dirichlet-counts" title="Permalink to this heading">#</a></h3>
+<p>The posterior distribution from the likelihood and the weighted prior.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># get the land use weights from the observations of interest</span>
+<span class="n">likelihood</span> <span class="o">=</span> <span class="n">likelihood_report</span><span class="o">.</span><span class="n">sample_results</span><span class="p">[</span><span class="s1">&#39;pcs/m&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">prior</span> <span class="o">=</span> <span class="n">the_random_samples</span><span class="p">[</span><span class="s1">&#39;pcs/m&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">posterior_by_weight</span><span class="p">,</span> <span class="n">comments</span> <span class="o">=</span> <span class="n">posterior_dirichlet_counts</span><span class="p">(</span><span class="n">likelihood</span><span class="p">,</span> <span class="n">prior</span><span class="p">)</span>
+<span class="n">sample_values</span><span class="p">,</span> <span class="n">adist</span><span class="p">,</span> <span class="n">summary</span> <span class="o">=</span> <span class="n">dirichlet_posterior</span><span class="p">(</span><span class="n">posterior_by_weight</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;range&#39;: array([0.3  , 0.675, 2.3  , 4.7  , 9.97 ]),
+ &#39;nsamples&#39;: 100,
+ &#39;average&#39;: 3.6220000000000003,
+ &#39;hdi&#39;: (0.1, 15.100000000000001)}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="landuse_class.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Land use class</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="the_survey_data.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The survey data</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-forecaster-methods">Grid forecaster methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-grid-size">The grid size</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-counts">The counts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-posterior-parameters">The posterior parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-the-posterior-distribution">Sample the posterior distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-90-interval-of-the-predictions">The 90% interval of the predictions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-90-hdi">The 90% HDI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-expected-mean">The expected mean</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-probability-of-x">The probability of x</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-descriptive-statistices">The descriptive statistices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-prior-data-by-feature-weight">Select prior data by feature weight</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#posterior-dirichlet-counts">Posterior Dirichlet counts</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By the-team@
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+   hammerdirt 2023
+</p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

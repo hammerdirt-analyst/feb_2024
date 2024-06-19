@@ -31,20 +31,6 @@ from session_config import index_range, max_range
 import geospatial
 import reports
 
-# columns =  [
-#     'sample_id',
-#     'code',
-#     'quantity',
-#     'pcs/m',
-#     'feature_name',
-#     'location',
-#     'parent_boundary',
-#     'city',
-#     'canton',
-#     'feature_type',
-#     'date'
-# ]
-
 
 def forecast_weighted_prior(landuse_of_interest, feature_variables, landuse_from_other, likelihood_data):
     # make a prior that is comprised of random samples that are weighted by the
@@ -146,6 +132,7 @@ def select_prior_data_by_feature_weight(odata, weights, feature_columns, samples
 
         if remaining_samples > 0:
             # filter the data for the given feature and magnitude
+            print(magnitude)
             feature_data = left_to_sample[
                 (left_to_sample[feature] == magnitude) & (~left_to_sample.index.isin(selected_samples))]
 
@@ -176,8 +163,10 @@ def select_prior_data_by_feature_weight(odata, weights, feature_columns, samples
                             required_samples[(f, m)] = max(0, remaining_samples - selected_samples_count)
 
     new_samples = new_samples.reset_index(drop=True)
+    print(new_samples.columns)
 
     # weights of the newly sampled data
+    
     new_weights = new_samples[feature_columns].apply(lambda x: x.value_counts(normalize=True)).fillna(0)
     return new_samples, new_weights
 

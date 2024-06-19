@@ -27,6 +27,7 @@ contains the following information:
 10. correlated_pairs: returns the correlated pairs
 """
 import pandas as pd
+pd.set_option('future.no_silent_downcasting', True)
 from sklearn.preprocessing import MinMaxScaler
 
 import session_config
@@ -71,10 +72,13 @@ def select_x_and_y(df_target, features, x_value: str = 'scale'):
         df = df_target.merge(features[label], left_on=location_label, right_on=location_label, how='left')
     for label in ['river_intersects']:
         if len(features[label]) == 0:
-            return df.fillna(0)
+            df.fillna(0, inplace=True)
+            return df.infer_objects(copy=False)
         else:
             df_rivers = df_target.merge(features[label], left_on=location_label, right_on=location_label, how='left')
-            return df.fillna(0), df_rivers.fillna(0)
+            df_rivers.fillna(0, inplace=True)
+            df.fillna(0, inplace=True)
+            return df.infer_objects(copy=False), df_rivers.infer_objects(copy=False)
 
 def categorize_features(df, feature_columns=feature_variables):
     """Categorizes the feature columns in the DataFrame"""
