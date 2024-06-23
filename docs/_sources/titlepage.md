@@ -1,7 +1,13 @@
 # The litter assistant
 
-::::{grid}
+:::{dropdown} Recent changes
 
+__June 22:__ Added methods to calculate landuse profile using Geopandas.
+
+
+:::
+
+::::{grid}
 
 :::{grid-item}
 
@@ -33,12 +39,11 @@ The data in these reports is a combination of observations from variety of group
 :::{grid-item}
 __Associated projects__
 
-* https://github.com/hammerdirt-analyst/IQAASL-End-0f-Sampling-2021
-* https://github.com/hammerdirt-analyst/cantonal_reports
-* https://github.com/hammerdirt-analyst/solid-waste-team
-* https://github.com/hammerdirt-analyst/landuse
-* [plastock project with ASL](https://asleman.org/)
-* https://github.com/hammerdirt-analyst/finding-one-object
+* https://hammerdirt-analyst.github.io/IQAASL-End-0f-Sampling-2021/
+* https://hammerdirt-analyst.github.io/solid-waste-team/titlepage.html
+* https://hammerdirt-analyst.github.io/landuse/titlepage.html
+* https://associationsauvegardeleman.github.io/plastock/
+* https://hammerdirt-analyst.github.io/finding-one-object/titlepage.html
 
 
 :::
