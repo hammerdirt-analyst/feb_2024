@@ -1,67 +1,62 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Extracting land use values &#8212; Project 2025</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'extracting_topo_data';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -76,19 +71,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -110,12 +109,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -130,6 +137,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="titlepage.html">
@@ -138,10 +146,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">Project 2025</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data and reporting</span></p>
 <ul class="nav bd-sidenav">
@@ -180,7 +200,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -189,14 +209,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -270,26 +290,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -310,8 +332,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#land-use-land-cover-and-streets">Land-use, land-cover and streets</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extracting-land-cover-and-land-use">Extracting land-cover and land-use:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-requirements">Technical requirements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-point-and-a-buffer">A point and a buffer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieve-location-attributes-land-cover">Retrieve location attributes: land-cover</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#undefined-areas">Undefined areas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#public-services-land-use">Public services: land-use</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-map-of-land-cover">Building a map of land cover</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-qgis">Using QGIS</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extracting-street-lengths">Extracting street lengths</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#land-cover">Land-cover</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#land-use">Land-use</a></li>
@@ -334,25 +363,347 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <div class="cell tag_remove-input docutils container">
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="extracting-land-use-values">
-<h1>Extracting land use values<a class="headerlink" href="#extracting-land-use-values" title="Permalink to this heading">#</a></h1>
-<p>This is a summary of the methods to extract topographical features from vector and points layers using QGIS. Atribute names are translated to the target languages and Null values are either corrected or eliminated.</p>
-<p>QGIS is not the optimal tool for this operation if the intention is to automate the aquisition of the data. However for a limited number of users and relatively few sample locations added each year this method is adequate to the task.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="extracting-land-use-values">
+<h1>Extracting land use values<a class="headerlink" href="#extracting-land-use-values" title="Link to this heading">#</a></h1>
+<p>This is a summary of the methods used to extract topographical features from vector and points layers. The source for the vector layer is  <a class="reference external" href="https://www.swisstopo.admin.ch/de/landschaftsmodell-swisstlmregio">swissTLMRegio</a>.</p>
+<p>QGIS is not the optimal tool for this operation if the intention is to automate the aquisition of the data. However for a limited number of users and relatively few sample locations added each year QGIS is adequate to the task. A summary of the methods for using QGIS is <a class="reference internal" href="#usingqgis"><span class="std std-ref">below</span></a>.</p>
 <p><strong>Note: 1’500 meter buffer (circular)</strong></p>
-<p>The land-use chapter in the federal report generated alot of interest. It inspired an academic article and collaboration with Wagenigen Research and University. The principal was applied using an empirical Bayes method with the Solid-Waste-Team at the EPFL.</p>
-<ol class="arabic simple">
-<li><p>the area of the buffer is  <span class="math notranslate nohighlight">\(\pi * 1500²\)</span> or 7065000 m²</p></li>
-</ol>
-<div class="section" id="land-use-land-cover-and-streets">
-<h2>Land-use, land-cover and streets<a class="headerlink" href="#land-use-land-cover-and-streets" title="Permalink to this heading">#</a></h2>
+<p>The land-use chapter in the federal report generated alot of interest <a class="reference external" href="https://hammerdirt-analyst.github.io/IQAASL-End-0f-Sampling-2021/land_use_correlation.html">Land use profile - german</a>. It inspired an academic article and collaboration with Wagenigen Research and University.</p>
+<p><strong>Why don’t the percentages add up to 100 ?</strong></p>
+<p>This is because some features listed on the map are superimposed on to others. For example a wooded area may contain a public park, this would mean that the park is considered a feature and has a definite surface area but this is in addition to the surface area of the forested area where the park is located. In general we can define the difference in this way:</p>
 <p><strong>Land-cover:</strong> Are elements such as buildings, forest, orchard or undefined. There is at least one land-cover element for each survey location. If so then it takes 100% of the available dry land.</p>
 <p><strong>Land-use:</strong> Are elements that may or may not be in the buffer. These are items like schools, hospitals, water-treatment plants. Individually they are only a small portion of the available dry land.</p>
-<div class="section" id="extracting-land-cover-and-land-use">
-<h3>Extracting land-cover and land-use:<a class="headerlink" href="#extracting-land-cover-and-land-use" title="Permalink to this heading">#</a></h3>
+<section id="technical-requirements">
+<h2>Technical requirements<a class="headerlink" href="#technical-requirements" title="Link to this heading">#</a></h2>
+<p>In addition to pandas, python and numpy, the following python packages are required:</p>
+<ol class="arabic simple">
+<li><p>Geopandas</p></li>
+<li><p>Shapely</p></li>
+</ol>
+<section id="a-point-and-a-buffer">
+<h3>A point and a buffer<a class="headerlink" href="#a-point-and-a-buffer" title="Link to this heading">#</a></h3>
+<p>The first step is to create a buffer of the appropriate radius with the point (survey locatio) at the center. The point is constructed by using gps coordinates for the location as arguments to <code class="docutils literal notranslate"><span class="pre">shapely.geometry.Point</span></code>. This is then converted to Geopandas.GeodataFrame (gdf) using the coordinate reference system (crs) of the point data. From the gdf, use the buffer method and collect the bounds.</p>
+<p><strong>Making a buffer from a point</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="c1"># method to make the buffer, the point and the bufferbounds</span>
+<span class="k">def</span> <span class="nf">a_point_buffer</span><span class="p">(</span><span class="n">this_location</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">buffer_radius</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1500</span><span class="p">,</span> <span class="n">coordinate_crs</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;epsg:4326&#39;</span><span class="p">,</span> <span class="n">to_crs</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;epsg:2056&quot;</span><span class="p">):</span>
+    <span class="c1"># create a point, a buffer and buffer bounds for one location</span>
+    <span class="n">this_geometry</span> <span class="o">=</span> <span class="p">[</span><span class="n">Point</span><span class="p">(</span><span class="n">this_location</span><span class="o">.</span><span class="n">longitude</span><span class="p">,</span> <span class="n">this_location</span><span class="o">.</span><span class="n">latitude</span><span class="p">)]</span>
+    <span class="n">this_shape</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">this_location</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="n">this_geometry</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="n">coordinate_crs</span><span class="p">)</span>
+    <span class="n">this_shape</span> <span class="o">=</span> <span class="n">this_shape</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">to_crs</span><span class="p">)</span>
+
+    <span class="n">this_buffer</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">geometry</span><span class="o">=</span><span class="n">this_shape</span><span class="o">.</span><span class="n">buffer</span><span class="p">(</span><span class="n">buffer_radius</span><span class="p">),</span> <span class="n">crs</span><span class="o">=</span><span class="n">to_crs</span><span class="p">)</span>
+    <span class="n">location_buffer</span> <span class="o">=</span> <span class="n">this_buffer</span><span class="o">.</span><span class="n">dissolve</span><span class="p">()</span>
+    
+    <span class="k">return</span> <span class="n">this_shape</span><span class="p">,</span> <span class="n">location_buffer</span><span class="p">,</span> <span class="n">location_buffer</span><span class="o">.</span><span class="n">total_bounds</span>
+
+<span class="c1"># select a location</span>
+<span class="n">a_location</span> <span class="o">=</span> <span class="n">river_locations</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+<span class="c1"># retrieve the grid coordinates</span>
+<span class="n">this_location</span> <span class="o">=</span> <span class="n">locations_and_coordinates</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="n">a_location</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="c1"># make the point, the buffer and the bounds</span>
+<span class="n">this_point</span><span class="p">,</span> <span class="n">abuffer</span><span class="p">,</span> <span class="n">bufferbounds</span> <span class="o">=</span> <span class="n">a_point_buffer</span><span class="p">(</span><span class="n">this_location</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="retrieve-location-attributes-land-cover">
+<h3>Retrieve location attributes: land-cover<a class="headerlink" href="#retrieve-location-attributes-land-cover" title="Link to this heading">#</a></h3>
+<p>The bounds and the buffer from the previous operation are used to construct an overlay for the .SHP file that holds the souce data. The name of the location is used to identify the buffer.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">location_geo_attributes</span><span class="p">(</span><span class="n">bounds</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">shape_file</span><span class="p">,</span> <span class="n">objcolumn</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;OBJVAL&#39;</span><span class="p">,</span> <span class="n">objval</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span><span class="s1">&#39;land-cover&#39;</span><span class="p">,</span> <span class="n">buffer_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="n">minx</span><span class="p">,</span> <span class="n">miny</span><span class="p">,</span> <span class="n">maxx</span><span class="p">,</span> <span class="n">maxy</span> <span class="o">=</span> <span class="n">bounds</span>
+    <span class="n">landcover</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">shape_file</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="p">(</span><span class="n">minx</span><span class="p">,</span> <span class="n">miny</span><span class="p">,</span> <span class="n">maxx</span><span class="p">,</span> <span class="n">maxy</span><span class="p">))</span>
+    <span class="n">landcover</span> <span class="o">=</span> <span class="n">landcover</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+    <span class="n">landcover</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">overlay</span><span class="p">(</span><span class="n">landcover</span><span class="p">,</span> <span class="n">buffer</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;intersection&#39;</span><span class="p">,</span> <span class="n">keep_geom_type</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">landcover</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">objcolumn</span><span class="p">:</span><span class="n">objval</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">landcover</span><span class="p">[</span><span class="s1">&#39;buffer-name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">buffer_name</span>
+    
+    <span class="k">return</span> <span class="n">landcover</span><span class="p">[[</span><span class="s1">&#39;buffer-name&#39;</span><span class="p">,</span> <span class="n">objval</span><span class="p">,</span> <span class="s1">&#39;geometry&#39;</span><span class="p">]]</span>
+
+<span class="c1"># indentify the contents of the buffer    </span>
+<span class="n">buffer_content</span> <span class="o">=</span> <span class="n">location_geo_attributes</span><span class="p">(</span><span class="n">bufferbounds</span><span class="p">,</span> <span class="n">abuffer</span><span class="p">,</span> <span class="s1">&#39;data/ignorethis/shapes/landcover.shp&#39;</span><span class="p">,</span> <span class="n">buffer_name</span><span class="o">=</span><span class="n">a_location</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="undefined-areas">
+<h3>Undefined areas<a class="headerlink" href="#undefined-areas" title="Link to this heading">#</a></h3>
+<p>Not all areas of the buffer will have a defined land-cover. To identify those areas, all of the <code class="docutils literal notranslate"><span class="pre">buffer_content</span></code> is <em>joined</em>. For this we use the <code class="docutils literal notranslate"><span class="pre">shapely.unary_union</span></code> method and provide the <code class="docutils literal notranslate"><span class="pre">buffer_content</span></code> as an argument. This will produce a separate gdf that is the negative of the <code class="docutils literal notranslate"><span class="pre">buffer_content</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># identify the undefined areas</span>
+<span class="n">combined_polygon</span> <span class="o">=</span> <span class="n">unary_union</span><span class="p">(</span><span class="n">buffer_content_i</span><span class="o">.</span><span class="n">geometry</span><span class="p">)</span>
+<span class="n">combined_Pn</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">({</span><span class="s1">&#39;geometry&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">combined_polygon</span><span class="p">]},</span> <span class="n">crs</span><span class="o">=</span><span class="n">buffer_content_i</span><span class="o">.</span><span class="n">crs</span><span class="p">)</span>
+<span class="n">undefined</span> <span class="o">=</span> <span class="n">compute_undefined_sections_of_buffer</span><span class="p">(</span><span class="n">abuffer</span><span class="p">,</span><span class="n">combined_Pn</span><span class="p">,</span> <span class="n">buffer_name</span><span class="o">=</span><span class="n">a_location</span><span class="p">)</span>
+
+<span class="c1"># combine the known land cover with the undefined</span>
+<span class="n">buffer_content_i</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">buffer_content_i</span><span class="p">,</span> <span class="n">undefined</span><span class="p">])</span>
+
+<span class="c1"># assign </span>
+<span class="n">buffer_content</span> <span class="o">=</span> <span class="n">assign_colors_to_polygons</span><span class="p">(</span><span class="n">buffer_content_i</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="n">land_use_colors</span><span class="p">,</span> <span class="n">objval</span><span class="o">=</span><span class="s1">&#39;land-cover&#39;</span><span class="p">)</span>
+<span class="n">buffer_content</span> <span class="o">=</span> <span class="n">compute_landuse_percent_of_buffer</span><span class="p">(</span><span class="n">buffer_content</span><span class="p">,</span> <span class="n">abuffer</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">area</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">buffer_content</span><span class="p">[</span><span class="s1">&#39;area_m2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">buffer_content</span><span class="p">[</span><span class="s1">&#39;area_m2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To complete the process (for land-cover) the undefined areas are merged with the buffer_content and the surface area for each polygon is calculated.</p>
+</section>
+<section id="public-services-land-use">
+<h3>Public services: land-use<a class="headerlink" href="#public-services-land-use" title="Link to this heading">#</a></h3>
+<p>As noted earlier, some topographical features are overlayed on to other features. Here we are talking about two specific vector layers in the swissTLMRegio collection:</p>
+<ol class="arabic simple">
+<li><p>Nutuzungsareal : infrastructure or other usage</p></li>
+<li><p>Freizeitareal : recreation area</p></li>
+</ol>
+<p>We are interested in these layers because they give us information about the activities that may occur in proximity to the survey location. The same method is used to extract the polygons as was done with land use. However, we are using the <code class="docutils literal notranslate"><span class="pre">shapely.unary_union</span></code> method on the entire layer. Which means that we are not differentiating between the subcategories in each layer.</p>
+<p>Once the buffer overlay has been applied to both layers the contents are combined and added to the buffer_content data:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># infrastructure</span>
+<span class="n">args</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">objcolumn</span><span class="o">=</span><span class="s1">&#39;OBJEKTART&#39;</span><span class="p">,</span> <span class="n">objval</span><span class="o">=</span><span class="s1">&#39;land-use&#39;</span><span class="p">,</span> <span class="n">buffer_name</span><span class="o">=</span><span class="n">a_location</span><span class="p">)</span>
+<span class="n">nz</span> <span class="o">=</span> <span class="n">location_geo_attributes</span><span class="p">(</span><span class="n">bufferbounds</span><span class="p">,</span> <span class="n">abuffer</span><span class="p">,</span> <span class="s1">&#39;data/ignorethis/shapes/nutuzungsareal.shp&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">args</span><span class="p">)</span>
+<span class="n">nz_comb</span> <span class="o">=</span> <span class="n">unary_union</span><span class="p">(</span><span class="n">nz</span><span class="o">.</span><span class="n">geometry</span><span class="p">)</span>
+<span class="n">nz_comb</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">({</span><span class="s1">&#39;geometry&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">nz_comb</span><span class="p">]},</span> <span class="n">crs</span><span class="o">=</span><span class="n">buffer_content_i</span><span class="o">.</span><span class="n">crs</span><span class="p">)</span>
+
+<span class="c1"># recreational areas</span>
+<span class="n">args</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">objcolumn</span><span class="o">=</span><span class="s1">&#39;OBJEKTART&#39;</span><span class="p">,</span> <span class="n">objval</span><span class="o">=</span><span class="s1">&#39;land-use&#39;</span><span class="p">,</span> <span class="n">buffer_name</span><span class="o">=</span><span class="n">a_location</span><span class="p">)</span>
+<span class="n">fz</span> <span class="o">=</span> <span class="n">location_geo_attributes</span><span class="p">(</span><span class="n">bufferbounds</span><span class="p">,</span> <span class="n">abuffer</span><span class="p">,</span><span class="s1">&#39;data/ignorethis/shapes/freizeit.shp&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">args</span><span class="p">)</span>
+<span class="n">fz_comb</span> <span class="o">=</span> <span class="n">unary_union</span><span class="p">(</span><span class="n">fz</span><span class="o">.</span><span class="n">geometry</span><span class="p">)</span>
+<span class="n">fz_comb</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">({</span><span class="s1">&#39;geometry&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">fz_comb</span><span class="p">]},</span> <span class="n">crs</span><span class="o">=</span><span class="n">buffer_content_i</span><span class="o">.</span><span class="n">crs</span><span class="p">)</span>
+
+<span class="c1"># combine them all into one category called public services</span>
+<span class="n">public_service</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">nz</span><span class="p">,</span> <span class="n">fz</span><span class="p">])</span>
+<span class="n">ps_comb</span> <span class="o">=</span> <span class="n">unary_union</span><span class="p">(</span><span class="n">public_service</span><span class="o">.</span><span class="n">geometry</span><span class="p">)</span>
+
+<span class="n">args</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;geometry&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">ps_comb</span><span class="p">],</span>
+    <span class="s1">&#39;land-cover&#39;</span><span class="p">:[</span><span class="s1">&#39;public-services&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;buffer-name&#39;</span><span class="p">:[</span><span class="n">a_location</span><span class="p">],</span>
+    <span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;red&#39;</span>
+<span class="p">}</span>
+<span class="n">ps_comb</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="n">buffer_content_i</span><span class="o">.</span><span class="n">crs</span><span class="p">)</span>
+<span class="n">ps_comb</span> <span class="o">=</span> <span class="n">compute_landuse_percent_of_buffer</span><span class="p">(</span><span class="n">ps_comb</span><span class="p">,</span> <span class="n">abuffer</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">area</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="c1"># combine the public services and the land-cover</span>
+<span class="n">land_use_profile</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">buffer_content</span><span class="p">,</span> <span class="n">ps_comb</span><span class="p">])</span>
+<span class="n">land_use_profile</span><span class="p">[</span><span class="s1">&#39;area_m2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">land_use_profile</span><span class="p">[</span><span class="s1">&#39;area_m2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">land_use_profile</span><span class="p">[</span><span class="s1">&#39;rate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">land_use_profile</span><span class="p">[</span><span class="s1">&#39;rate&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">land_use_profile</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;rate&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">% o</span><span class="s1">f buffer&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Which results in the land-use profile for the location in question, (not including streets).</p>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">Land use and cover for a location.</p>
+</div>
+<div class="sd-card-body docutils">
+<div class="output text_html"><style type="text/css">
+#T_c55a8 tr:nth-child(even) {
+  background-color: rgba(139, 69, 19, 0.08);
+}
+#T_c55a8 tr:nth-child(odd) {
+  background: #FFF;
+}
+#T_c55a8 tr {
+  font-size: 10px;
+}
+#T_c55a8 th {
+  background-color: #FFF;
+  font-size: 12px;
+  text-align: left;
+  width: auto;
+  word-break: keep-all;
+}
+#T_c55a8 td {
+  padding: 4px;
+  font-size: 12px;
+  text-align: center;
+}
+#T_c55a8 caption {
+  caption-side: top;
+  font-size: 1em;
+  text-align: left;
+  margin-bottom: 10px;
+}
+</style>
+<table id="T_c55a8">
+  <thead>
+    <tr>
+      <th id="T_c55a8_level0_col0" class="col_heading level0 col0" >buffer-name</th>
+      <th id="T_c55a8_level0_col1" class="col_heading level0 col1" >land-cover</th>
+      <th id="T_c55a8_level0_col2" class="col_heading level0 col2" >area_m2</th>
+      <th id="T_c55a8_level0_col3" class="col_heading level0 col3" >% of buffer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="T_c55a8_row0_col0" class="data row0 col0" >aare_bern_scheurerk</td>
+      <td id="T_c55a8_row0_col1" class="data row0 col1" >Wald</td>
+      <td id="T_c55a8_row0_col2" class="data row0 col2" >1'387'333</td>
+      <td id="T_c55a8_row0_col3" class="data row0 col3" >0,20</td>
+    </tr>
+    <tr>
+      <td id="T_c55a8_row1_col0" class="data row1 col0" >aare_bern_scheurerk</td>
+      <td id="T_c55a8_row1_col1" class="data row1 col1" >Wald</td>
+      <td id="T_c55a8_row1_col2" class="data row1 col2" >141'644</td>
+      <td id="T_c55a8_row1_col3" class="data row1 col3" >0,02</td>
+    </tr>
+    <tr>
+      <td id="T_c55a8_row2_col0" class="data row2 col0" >aare_bern_scheurerk</td>
+      <td id="T_c55a8_row2_col1" class="data row2 col1" >Siedl</td>
+      <td id="T_c55a8_row2_col2" class="data row2 col2" >408'131</td>
+      <td id="T_c55a8_row2_col3" class="data row2 col3" >0,06</td>
+    </tr>
+    <tr>
+      <td id="T_c55a8_row3_col0" class="data row3 col0" >aare_bern_scheurerk</td>
+      <td id="T_c55a8_row3_col1" class="data row3 col1" >Siedl</td>
+      <td id="T_c55a8_row3_col2" class="data row3 col2" >10</td>
+      <td id="T_c55a8_row3_col3" class="data row3 col3" >0,00</td>
+    </tr>
+    <tr>
+      <td id="T_c55a8_row4_col0" class="data row4 col0" >aare_bern_scheurerk</td>
+      <td id="T_c55a8_row4_col1" class="data row4 col1" >Siedl</td>
+      <td id="T_c55a8_row4_col2" class="data row4 col2" >75'551</td>
+      <td id="T_c55a8_row4_col3" class="data row4 col3" >0,01</td>
+    </tr>
+    <tr>
+      <td id="T_c55a8_row5_col0" class="data row5 col0" >aare_bern_scheurerk</td>
+      <td id="T_c55a8_row5_col1" class="data row5 col1" >Siedl</td>
+      <td id="T_c55a8_row5_col2" class="data row5 col2" >671'792</td>
+      <td id="T_c55a8_row5_col3" class="data row5 col3" >0,10</td>
+    </tr>
+    <tr>
+      <td id="T_c55a8_row6_col0" class="data row6 col0" >aare_bern_scheurerk</td>
+      <td id="T_c55a8_row6_col1" class="data row6 col1" >Siedl</td>
+      <td id="T_c55a8_row6_col2" class="data row6 col2" >2'983'822</td>
+      <td id="T_c55a8_row6_col3" class="data row6 col3" >0,42</td>
+    </tr>
+    <tr>
+      <td id="T_c55a8_row7_col0" class="data row7 col0" >aare_bern_scheurerk</td>
+      <td id="T_c55a8_row7_col1" class="data row7 col1" >Siedl</td>
+      <td id="T_c55a8_row7_col2" class="data row7 col2" >6'485</td>
+      <td id="T_c55a8_row7_col3" class="data row7 col3" >0,00</td>
+    </tr>
+    <tr>
+      <td id="T_c55a8_row8_col0" class="data row8 col0" >aare_bern_scheurerk</td>
+      <td id="T_c55a8_row8_col1" class="data row8 col1" >undefined</td>
+      <td id="T_c55a8_row8_col2" class="data row8 col2" >1'382'463</td>
+      <td id="T_c55a8_row8_col3" class="data row8 col3" >0,20</td>
+    </tr>
+    <tr>
+      <td id="T_c55a8_row9_col0" class="data row9 col0" >aare_bern_scheurerk</td>
+      <td id="T_c55a8_row9_col1" class="data row9 col1" >public-services</td>
+      <td id="T_c55a8_row9_col2" class="data row9 col2" >1'484'991</td>
+      <td id="T_c55a8_row9_col3" class="data row9 col3" >0,21</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="building-a-map-of-land-cover">
+<h3>Building a map of land cover<a class="headerlink" href="#building-a-map-of-land-cover" title="Link to this heading">#</a></h3>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<img alt="_images/bbba01187714460b819dd42491a1bd8fb9a8e916220e4b9639662da6b4548205.png" src="_images/bbba01187714460b819dd42491a1bd8fb9a8e916220e4b9639662da6b4548205.png" />
+</div>
+<div class="sd-card-footer docutils">
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<img alt="_images/a64eb1697d97a2c97f55111174701188cb2264cb2b443b70b9326f404ef577c7.png" src="_images/a64eb1697d97a2c97f55111174701188cb2264cb2b443b70b9326f404ef577c7.png" />
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Surface area: 4’145’791 m², % of buffer: 59%</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<img alt="_images/d79ea3f6f56d33e354b45d14afe3966d8e79b78559816d442d8e4f042e92d6d3.png" src="_images/d79ea3f6f56d33e354b45d14afe3966d8e79b78559816d442d8e4f042e92d6d3.png" />
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Surface area: 1’528’977 m², % of buffer: 22%</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<img alt="_images/caa5de4c89c777eabed78495be6eb2c235343656f67c396dd0e0ba3234b8b69f.png" src="_images/caa5de4c89c777eabed78495be6eb2c235343656f67c396dd0e0ba3234b8b69f.png" />
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Surface area: 1’484’991 m², % of buffer: 21%</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<img alt="_images/5ec1138bd0b8452cb045bc55fe493fefcb44383ddd5134f25d35ef70d56f3e7c.png" src="_images/5ec1138bd0b8452cb045bc55fe493fefcb44383ddd5134f25d35ef70d56f3e7c.png" />
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Surface area: 1’382’463 m², % of buffer: 20%</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<img alt="_images/3ff196b4b5e9be51e3a43e0f0ba8eb3959eeca55706c76d97505c4e93f79809e.png" src="_images/3ff196b4b5e9be51e3a43e0f0ba8eb3959eeca55706c76d97505c4e93f79809e.png" />
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Total length of streets : 17km</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<img alt="_images/92a28e01dbeb54ecd0bf59c62eb0a5a3b329b6a3c4dee588ec946d95b95c71e9.png" src="_images/92a28e01dbeb54ecd0bf59c62eb0a5a3b329b6a3c4dee588ec946d95b95c71e9.png" />
+</div>
+<div class="sd-card-footer docutils">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="using-qgis">
+<span id="usingqgis"></span><h2>Using QGIS<a class="headerlink" href="#using-qgis" title="Link to this heading">#</a></h2>
 <p>For this method we are using the land-cover layer from swissTLM regio</p>
 <p>finished columns = slug, attribute , attribute_type, area, dry,	scale</p>
 <p>In QGIS:</p>
@@ -440,9 +791,8 @@ document.write(`
 </pre></div>
 </div>
 <p>Once the dry land value is calculated for each buffer of the land-cover buffer use the dry-land value to scale the components of the land-use buffer</p>
-</div>
-<div class="section" id="extracting-street-lengths">
-<h3>Extracting street lengths<a class="headerlink" href="#extracting-street-lengths" title="Permalink to this heading">#</a></h3>
+<section id="extracting-street-lengths">
+<h3>Extracting street lengths<a class="headerlink" href="#extracting-street-lengths" title="Link to this heading">#</a></h3>
 <p>The tlmREgio streets or strasse layer is applicable.</p>
 <p><strong>Note:</strong> the street lenghts are not scaled</p>
 <p>finished columns = slug, attribute, attribute_type, length</p>
@@ -465,8 +815,8 @@ document.write(`
 </ol>
 <div class="cell tag_remove-input docutils container">
 </div>
-<div class="section" id="land-cover">
-<h4>Land-cover<a class="headerlink" href="#land-cover" title="Permalink to this heading">#</a></h4>
+<section id="land-cover">
+<h4>Land-cover<a class="headerlink" href="#land-cover" title="Link to this heading">#</a></h4>
 <p>Land-cover attributes</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -556,9 +906,9 @@ document.write(`
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="land-use">
-<h4>Land-use<a class="headerlink" href="#land-use" title="Permalink to this heading">#</a></h4>
+</section>
+<section id="land-use">
+<h4>Land-use<a class="headerlink" href="#land-use" title="Link to this heading">#</a></h4>
 <p>Land-use attributes:</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -720,9 +1070,9 @@ document.write(`
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="streets">
-<h4>Streets<a class="headerlink" href="#streets" title="Permalink to this heading">#</a></h4>
+</section>
+<section id="streets">
+<h4>Streets<a class="headerlink" href="#streets" title="Link to this heading">#</a></h4>
 <p>Streets attributes:</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -847,14 +1197,14 @@ document.write(`
 </table>
 </div></div></div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="rivers-intersection-size-and-class">
-<h2>Rivers: intersection, size and class<a class="headerlink" href="#rivers-intersection-size-and-class" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+</section>
+<section id="rivers-intersection-size-and-class">
+<h2>Rivers: intersection, size and class<a class="headerlink" href="#rivers-intersection-size-and-class" title="Link to this heading">#</a></h2>
 <p>This requires the 1’500 m buffer created at the begininng and the rivers layer and the lakes layer.</p>
-<div class="section" id="intersection-size-and-class">
-<h3>intersection, size and class<a class="headerlink" href="#intersection-size-and-class" title="Permalink to this heading">#</a></h3>
+<section id="intersection-size-and-class">
+<h3>intersection, size and class<a class="headerlink" href="#intersection-size-and-class" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Create a points layer of the intersection of rivers to lakes</p>
 <ul class="simple">
@@ -875,9 +1225,9 @@ document.write(`
 </ul>
 </li>
 </ol>
-</div>
-<div class="section" id="distance-to-intersection">
-<h3>distance to intersection<a class="headerlink" href="#distance-to-intersection" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="distance-to-intersection">
+<h3>distance to intersection<a class="headerlink" href="#distance-to-intersection" title="Link to this heading">#</a></h3>
 <p><strong>Note:</strong> the intersection points layer needs to be available</p>
 <ol class="arabic simple">
 <li><p>Using the <code class="docutils literal notranslate"><span class="pre">hub</span> <span class="pre">lines</span></code> tool in QGIS draw lines from survey location to intersect location</p>
@@ -946,14 +1296,16 @@ document.write(`
 
 conda environment: cantonal_report
 
-pandas: 2.0.3
+matplotlib: 3.8.4
+pandas    : 2.2.2
+geopandas : 0.14.4
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -980,11 +1332,10 @@ pandas: 2.0.3
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="the_survey_data.html"
@@ -1004,10 +1355,7 @@ pandas: 2.0.3
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1016,14 +1364,22 @@ pandas: 2.0.3
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#land-use-land-cover-and-streets">Land-use, land-cover and streets</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extracting-land-cover-and-land-use">Extracting land-cover and land-use:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-requirements">Technical requirements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-point-and-a-buffer">A point and a buffer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieve-location-attributes-land-cover">Retrieve location attributes: land-cover</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#undefined-areas">Undefined areas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#public-services-land-use">Public services: land-use</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#building-a-map-of-land-cover">Building a map of land cover</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-qgis">Using QGIS</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extracting-street-lengths">Extracting street lengths</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#land-cover">Land-cover</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#land-use">Land-use</a></li>
@@ -1058,6 +1414,7 @@ By the-team@
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -1083,8 +1440,8 @@ By the-team@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
 
   <footer class="bd-footer">
   </footer>

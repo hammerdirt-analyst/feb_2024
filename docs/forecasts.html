@@ -1,65 +1,62 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Grid forecast class &#8212; Project 2025</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'forecasts';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -74,19 +71,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -108,12 +109,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -128,6 +137,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="titlepage.html">
@@ -136,10 +146,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">Project 2025</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data and reporting</span></p>
 <ul class="nav bd-sidenav">
@@ -178,7 +200,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -187,14 +209,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -268,26 +290,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -331,13 +355,13 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <div class="cell tag_remove-input docutils container">
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="grid-forecast-class">
-<h1>Grid forecast class<a class="headerlink" href="#grid-forecast-class" title="Permalink to this heading">#</a></h1>
-<p>The <em>grid forecaster</em> refers to the methods defined in <code class="docutils literal notranslate"><span class="pre">gridforecast.py</span></code>. The main purpose of the <em>grid forecaster</em> is to implement estimate the probability that a survey result <em>y</em> from a collection of survey results <em>Y</em> will exceed a value <em>x</em> on the grid <em>X</em> from 0 - max(<em>X</em>) for every <em>x</em> spaced 0.1, where max(<em>X</em>) is defined by <em>Y</em>. This is called a grid approximation, in this case we use a Bayesien framework and implement <em>multinomila-Dirichlet</em> conjugate to estimate the probabilities on each point of the grid. The complete method is a defined in <span class="xref myst">grid approximation</span>.</p>
+<section class="tex2jax_ignore mathjax_ignore" id="grid-forecast-class">
+<h1>Grid forecast class<a class="headerlink" href="#grid-forecast-class" title="Link to this heading">#</a></h1>
+<p>The <em>grid forecaster</em> refers to the methods defined in <code class="docutils literal notranslate"><span class="pre">gridforecast.py</span></code>. The main purpose of the <em>grid forecaster</em> is to implement estimate the probability that a survey result <em>y</em> from a collection of survey results <em>Y</em> will exceed a value <em>x</em> on the grid <em>X</em> from 0 - max(<em>X</em>) for every <em>x</em> spaced 0.1, where max(<em>X</em>) is defined by <em>Y</em>. This is called a grid approximation, in this case we use a Bayesien framework and implement <em>multinomila-Dirichlet</em> conjugate to estimate the probabilities on each point of the grid. The complete method is a defined in <a class="reference internal" href="#"><span class="xref myst">grid approximation</span></a>.</p>
 <p>The grid forecast for any two arrays can be initiated by calling <code class="docutils literal notranslate"><span class="pre">gridforecast.MulitnomialDirichlet</span></code> and providing two pd.series of float values. However, for reporting we use the grid forecast to supplement the <a class="reference internal" href="a_report_class.html#surveyreporter"><span class="std std-ref">SurveyReport</span></a> and the <a class="reference internal" href="landuse_class.html#landusereporter"><span class="std std-ref">LandUseReport</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -406,8 +430,8 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-<div class="section" id="grid-forecaster-methods">
-<h2>Grid forecaster methods<a class="headerlink" href="#grid-forecaster-methods" title="Permalink to this heading">#</a></h2>
+<section id="grid-forecaster-methods">
+<h2>Grid forecaster methods<a class="headerlink" href="#grid-forecaster-methods" title="Link to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">gridforecast.MulitnomialDirichlet</span></code> is a class in <code class="docutils literal notranslate"><span class="pre">gridforecast.py</span></code> the built in methods are designed to generate forecasts under a variety of scenarios and provide the basic elements to evaluate those forecasts. In the examples below consider the forecast_object created in the previous example.</p>
 <p><strong>list of methods</strong></p>
 <ol class="arabic simple">
@@ -428,8 +452,8 @@ document.write(`
 <li><p>posterior_dirichlet_counts</p></li>
 <li><p>dirichlet_posterior</p></li>
 </ol>
-<div class="section" id="the-grid-size">
-<h3>The grid size<a class="headerlink" href="#the-grid-size" title="Permalink to this heading">#</a></h3>
+<section id="the-grid-size">
+<h3>The grid size<a class="headerlink" href="#the-grid-size" title="Link to this heading">#</a></h3>
 <p>The grid size for each combination is based on the maximum value of either the likelihood or the prior.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">compute_grid</span><span class="p">()</span>
 </pre></div>
@@ -442,9 +466,9 @@ document.write(`
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="the-counts">
-<h3>The counts<a class="headerlink" href="#the-counts" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="the-counts">
+<h3>The counts<a class="headerlink" href="#the-counts" title="Link to this heading">#</a></h3>
 <p>The number of times that a survey result was either equal to zero or any other place on the grid can be accessed with <code class="docutils literal notranslate"><span class="pre">forecastobject.prior</span></code> or <code class="docutils literal notranslate"><span class="pre">forecastobject.compute_counts(forecast_object.prior_data)</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecastobject</span><span class="o">.</span><span class="n">compute_counts</span><span class="p">(</span><span class="n">forecast_object</span><span class="o">.</span><span class="n">prior_data</span><span class="p">)</span>
 </pre></div>
@@ -456,9 +480,9 @@ document.write(`
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="the-posterior-parameters">
-<h3>The posterior parameters<a class="headerlink" href="#the-posterior-parameters" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="the-posterior-parameters">
+<h3>The posterior parameters<a class="headerlink" href="#the-posterior-parameters" title="Link to this heading">#</a></h3>
 <p>The parameters for the Dirichlet posterior</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecastobject</span><span class="o">.</span><span class="n">compute_posterior_params</span><span class="p">()</span>
 </pre></div>
@@ -470,9 +494,9 @@ document.write(`
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="sample-the-posterior-distribution">
-<h3>Sample the posterior distribution<a class="headerlink" href="#sample-the-posterior-distribution" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="sample-the-posterior-distribution">
+<h3>Sample the posterior distribution<a class="headerlink" href="#sample-the-posterior-distribution" title="Link to this heading">#</a></h3>
 <p>Sample the posterior distribution</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">sample_posterior</span><span class="p">()</span>
 </pre></div>
@@ -495,9 +519,9 @@ document.write(`
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="the-90-interval-of-the-predictions">
-<h3>The 90% interval of the predictions<a class="headerlink" href="#the-90-interval-of-the-predictions" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="the-90-interval-of-the-predictions">
+<h3>The 90% interval of the predictions<a class="headerlink" href="#the-90-interval-of-the-predictions" title="Link to this heading">#</a></h3>
 <p>The 90% interval of the predictions</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">compute_percentiles</span><span class="p">()</span>
 </pre></div>
@@ -509,9 +533,9 @@ document.write(`
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="the-90-hdi">
-<h3>The 90% HDI<a class="headerlink" href="#the-90-hdi" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="the-90-hdi">
+<h3>The 90% HDI<a class="headerlink" href="#the-90-hdi" title="Link to this heading">#</a></h3>
 <p>The 90% highest density interval</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">compute_hdi</span><span class="p">()</span>
 </pre></div>
@@ -523,9 +547,9 @@ document.write(`
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="the-expected-mean">
-<h3>The expected mean<a class="headerlink" href="#the-expected-mean" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="the-expected-mean">
+<h3>The expected mean<a class="headerlink" href="#the-expected-mean" title="Link to this heading">#</a></h3>
 <p>The 90% highest density interval</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">compute_hdi</span><span class="p">()</span>
 </pre></div>
@@ -538,9 +562,9 @@ document.write(`
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="the-probability-of-x">
-<h3>The probability of x<a class="headerlink" href="#the-probability-of-x" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="the-probability-of-x">
+<h3>The probability of x<a class="headerlink" href="#the-probability-of-x" title="Link to this heading">#</a></h3>
 <p>The chance that a result will exceed a given value</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># in this case we are asking what is the chance of finding</span>
 <span class="c1"># at least one piece per meter</span>
@@ -555,9 +579,9 @@ document.write(`
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="the-descriptive-statistices">
-<h3>The descriptive statistices<a class="headerlink" href="#the-descriptive-statistices" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="the-descriptive-statistices">
+<h3>The descriptive statistices<a class="headerlink" href="#the-descriptive-statistices" title="Link to this heading">#</a></h3>
 <p>The average, hdi and the 90% range of the expected distribution</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">get_descriptive_statistics</span><span class="p">()</span>
 </pre></div>
@@ -573,9 +597,9 @@ document.write(`
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="select-prior-data-by-feature-weight">
-<h3>Select prior data by feature weight<a class="headerlink" href="#select-prior-data-by-feature-weight" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="select-prior-data-by-feature-weight">
+<h3>Select prior data by feature weight<a class="headerlink" href="#select-prior-data-by-feature-weight" title="Link to this heading">#</a></h3>
 <p>The average, hdi and the 90% range of the expected distribution</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># get the land use weights from the observations of interest</span>
 <span class="n">weights</span> <span class="o">=</span> <span class="n">land_use_weights</span><span class="p">(</span><span class="n">likelihood_land_use</span><span class="p">,</span> <span class="n">feature_variables</span><span class="p">)</span>
@@ -713,9 +737,9 @@ document.write(`
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="posterior-dirichlet-counts">
-<h3>Posterior Dirichlet counts<a class="headerlink" href="#posterior-dirichlet-counts" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="posterior-dirichlet-counts">
+<h3>Posterior Dirichlet counts<a class="headerlink" href="#posterior-dirichlet-counts" title="Link to this heading">#</a></h3>
 <p>The posterior distribution from the likelihood and the weighted prior.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># get the land use weights from the observations of interest</span>
 <span class="n">likelihood</span> <span class="o">=</span> <span class="n">likelihood_report</span><span class="o">.</span><span class="n">sample_results</span><span class="p">[</span><span class="s1">&#39;pcs/m&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
@@ -734,9 +758,9 @@ document.write(`
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -763,11 +787,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="landuse_class.html"
@@ -787,10 +810,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -798,6 +818,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -840,6 +861,7 @@ By the-team@
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -865,8 +887,8 @@ By the-team@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
 
   <footer class="bd-footer">
   </footer>

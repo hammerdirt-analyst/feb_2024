@@ -220,8 +220,8 @@ material_languages = {
 format_kwargs = dict(precision=2, thousands="'", decimal=",")
 
 # this defines the css rules for the table displays
-header_row = {'selector':'th', 'props': f'background-color: #FFF; font-size:12px; text-align:left; width: auto; word-break: keep-all;'}
-even_rows = {"selector": 'tr:nth-child(even)', 'props': f'background-color: rgba(139, 69, 19, 0.08);'}
+header_row = {'selector':'th', 'props': 'background-color: #FFF; font-size:12px; text-align:left; width: auto; word-break: keep-all;'}
+even_rows = {"selector": 'tr:nth-child(even)', 'props': 'background-color: rgba(139, 69, 19, 0.08);'}
 odd_rows = {'selector': 'tr:nth-child(odd)', 'props': 'background: #FFF;'}
 table_font = {'selector': 'tr', 'props': 'font-size: 10px;'}
 table_data = {'selector': 'td', 'props': 'padding:4px; font-size:12px;text-align: center;'}
@@ -229,7 +229,7 @@ table_caption = {'selector': 'caption', 'props': 'caption-side: bottom; font-siz
 table_caption_top = {'selector': 'caption', 'props': 'caption-side: top; font-size:1em; text-align: left; margin-bottom: 10px;'}
 caption_css = {'selector': 'caption', 'props': 'caption-side: top; font-size:.9em; text-align: left; font-style: italic; color: #000;'}
 table_first_column_left = {'selector': 'td:nth-child(1)', 'props': 'text-align: left;'}
-table_css_styles = [even_rows, odd_rows, table_font, header_row, table_data, table_caption]
+table_css_styles = [even_rows, odd_rows, table_font, header_row, table_data, table_caption_top]
 highlight_props = 'background-color:#FAE8E8'
 
 # a color gradient for heat maps

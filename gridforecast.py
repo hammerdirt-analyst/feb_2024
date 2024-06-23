@@ -132,7 +132,7 @@ def select_prior_data_by_feature_weight(odata, weights, feature_columns, samples
 
         if remaining_samples > 0:
             # filter the data for the given feature and magnitude
-            print(magnitude)
+            # print(magnitude)
             feature_data = left_to_sample[
                 (left_to_sample[feature] == magnitude) & (~left_to_sample.index.isin(selected_samples))]
 
@@ -163,7 +163,7 @@ def select_prior_data_by_feature_weight(odata, weights, feature_columns, samples
                             required_samples[(f, m)] = max(0, remaining_samples - selected_samples_count)
 
     new_samples = new_samples.reset_index(drop=True)
-    print(new_samples.columns)
+    # print(new_samples.columns)
 
     # weights of the newly sampled data
     

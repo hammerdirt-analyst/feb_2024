@@ -1,65 +1,62 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Land use class &#8212; Project 2025</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'landuse_class';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -74,19 +71,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -108,12 +109,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -128,6 +137,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="titlepage.html">
@@ -136,10 +146,22 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     <p class="title logo__title">Project 2025</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data and reporting</span></p>
 <ul class="nav bd-sidenav">
@@ -178,7 +200,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -187,14 +209,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -268,26 +290,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -333,7 +357,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -355,22 +379,22 @@ document.write(`
 </div>
 </details>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="land-use-class">
-<span id="landusereporter"></span><h1>Land use class<a class="headerlink" href="#land-use-class" title="Permalink to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="land-use-class">
+<span id="landusereporter"></span><h1>Land use class<a class="headerlink" href="#land-use-class" title="Link to this heading">#</a></h1>
 <p>The landuse class groups the survey results according to the rate of landuse at each survey location. Provides the correlation matrix of the feature variables and the number of samples and the average result for each landuse type and magnitude.</p>
-<div class="section" id="why-is-this-important">
-<h2>Why is this important?<a class="headerlink" href="#why-is-this-important" title="Permalink to this heading">#</a></h2>
+<section id="why-is-this-important">
+<h2>Why is this important?<a class="headerlink" href="#why-is-this-important" title="Link to this heading">#</a></h2>
 <p><strong>Because it is another way to get proxies for usage and population.</strong></p>
 <p>We assume there is a relationship between how the land is used and what it is we find on the ground. Archeaologists and Anthropologists make this basic assumption every time they undertake an excavation and interpret the results in the context of other findings. This interpretation of beach litter data does exactly the same. As discussed in <a class="reference external" href="https://www.hammerdirt.ch">Near or far</a> and the federal report <a class="reference external" href="https://www.hammerdirt.ch">IQAASL</a> at the national level there is strong evidence to support a correlation between the density of objects found and specific topographic features that can be isolated on a standard topographical map.</p>
-<div class="section" id="what-is-important">
-<h3>What is important?<a class="headerlink" href="#what-is-important" title="Permalink to this heading">#</a></h3>
+<section id="what-is-important">
+<h3>What is important?<a class="headerlink" href="#what-is-important" title="Link to this heading">#</a></h3>
 <p><strong>The relationship between the topograhpical features and the density of the objects found.</strong></p>
 <p>However, the measured features are not independent of each other. For example if their are buildings in an area we expect to also find a road that leads to those buildings. This multicolinearity can lead to unstable coefficient estimates and make it challenging to interpret the individual effects of the correlated variables on the target variable.</p>
 <p>The topographical data from the confederation provides continuity to what could be interpreted as unrelated observations. Furthermore, the labels provided for the various topographical features are indicators of use and have a real meaning to georaphers and engineers in planning and development. Local associations that are involved in preventing and reducing litter may also be interested.</p>
-</div>
-</div>
-<div class="section" id="make-a-land-use-object">
-<h2>Make a land use object<a class="headerlink" href="#make-a-land-use-object" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+<section id="make-a-land-use-object">
+<h2>Make a land use object<a class="headerlink" href="#make-a-land-use-object" title="Link to this heading">#</a></h2>
 <p>After the topographical features are extracted the results are applied to the data. The land use clas is available by calling <code class="docutils literal notranslate"><span class="pre">geospatial.LandUseReport(df_target,</span> <span class="pre">features)</span></code>. The <code class="docutils literal notranslate"><span class="pre">df_target</span></code> and <code class="docutils literal notranslate"><span class="pre">features</span></code> variables are generated in the <code class="docutils literal notranslate"><span class="pre">SurveyReport</span></code>.</p>
 <p><strong>Instantiate a <code class="docutils literal notranslate"><span class="pre">LandUseReport</span></code></strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># start a survey report</span>
@@ -394,8 +418,8 @@ document.write(`
 <span class="n">land_use_report</span> <span class="o">=</span> <span class="n">geospatial</span><span class="o">.</span><span class="n">LandUseReport</span><span class="p">(</span><span class="n">target_df</span><span class="p">,</span> <span class="n">features</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="section" id="report-contents">
-<h3>Report contents<a class="headerlink" href="#report-contents" title="Permalink to this heading">#</a></h3>
+<section id="report-contents">
+<h3>Report contents<a class="headerlink" href="#report-contents" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Number of samples per feature and magnitude</p></li>
 <li><p>The total number of objects collected per feature and magnitude</p></li>
@@ -408,9 +432,9 @@ document.write(`
 </ol>
 <div class="cell tag_remove-input docutils container">
 </div>
-</div>
-<div class="section" id="number-of-samples-per-feature">
-<h3>Number of samples per feature<a class="headerlink" href="#number-of-samples-per-feature" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="number-of-samples-per-feature">
+<h3>Number of samples per feature<a class="headerlink" href="#number-of-samples-per-feature" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">samples_per_feature</span> <span class="o">=</span> <span class="n">land_use_report</span><span class="o">.</span><span class="n">n_samples_per_feature</span><span class="p">()</span>
@@ -501,9 +525,9 @@ document.write(`
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="quantity-per-feature">
-<h3>Quantity per feature<a class="headerlink" href="#quantity-per-feature" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="quantity-per-feature">
+<h3>Quantity per feature<a class="headerlink" href="#quantity-per-feature" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q_pf</span> <span class="o">=</span> <span class="n">land_use_report</span><span class="o">.</span><span class="n">n_pieces_per_feature</span><span class="p">()</span>
@@ -594,9 +618,9 @@ document.write(`
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="locations-per-feature">
-<h3>Locations per feature<a class="headerlink" href="#locations-per-feature" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="locations-per-feature">
+<h3>Locations per feature<a class="headerlink" href="#locations-per-feature" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l_pf</span> <span class="o">=</span> <span class="n">land_use_report</span><span class="o">.</span><span class="n">locations_per_feature</span><span class="p">()</span>
@@ -687,9 +711,9 @@ document.write(`
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="density-per-feature">
-<h3>density per feature<a class="headerlink" href="#density-per-feature" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="density-per-feature">
+<h3>density per feature<a class="headerlink" href="#density-per-feature" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r_pf</span> <span class="o">=</span> <span class="n">land_use_report</span><span class="o">.</span><span class="n">rate_per_feature</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
@@ -780,9 +804,9 @@ document.write(`
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="corelation-matrix">
-<h3>Corelation matrix<a class="headerlink" href="#corelation-matrix" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="corelation-matrix">
+<h3>Corelation matrix<a class="headerlink" href="#corelation-matrix" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">land_use_report</span><span class="o">.</span><span class="n">correlation_matrix</span><span class="p">()</span>
@@ -892,9 +916,9 @@ document.write(`
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="corelated-pairs">
-<h3>Corelated pairs<a class="headerlink" href="#corelated-pairs" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="corelated-pairs">
+<h3>Corelated pairs<a class="headerlink" href="#corelated-pairs" title="Link to this heading">#</a></h3>
 <p>The correlated pairs method identifies the land-use features that are correlated with each other. The method returns a tuple with the two features that are correlated and the method that could be used to combine them.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -909,9 +933,9 @@ document.write(`
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="continuous-land-use">
-<h3>Continuous land use<a class="headerlink" href="#continuous-land-use" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="continuous-land-use">
+<h3>Continuous land use<a class="headerlink" href="#continuous-land-use" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">continuous</span> <span class="o">=</span> <span class="n">land_use_report</span><span class="o">.</span><span class="n">df_cont</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -983,9 +1007,9 @@ document.write(`
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="categorical-land-use">
-<h3>Categorical land use<a class="headerlink" href="#categorical-land-use" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="categorical-land-use">
+<h3>Categorical land use<a class="headerlink" href="#categorical-land-use" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">=</span> <span class="n">land_use_report</span><span class="o">.</span><span class="n">df_cat</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -1071,9 +1095,9 @@ matplotlib: 3.7.1
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1100,11 +1124,10 @@ matplotlib: 3.7.1
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="a_report_class.html"
@@ -1124,10 +1147,7 @@ matplotlib: 3.7.1
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1135,6 +1155,7 @@ matplotlib: 3.7.1
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1179,6 +1200,7 @@ By the-team@
   
   <div class="footer-item">
     
+
   </div>
   
   <div class="footer-item">
@@ -1204,8 +1226,8 @@ By the-team@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
 
   <footer class="bd-footer">
   </footer>
