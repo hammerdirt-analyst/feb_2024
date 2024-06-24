@@ -1,0 +1,884 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Use cases &#8212; Project 2025</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'use_cases';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Proposal" href="project.html" />
+    <link rel="prev" title="Canton - combined" href="combined.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="titlepage.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Project 2025</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data and reporting</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bern.html">Canton Bern</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geneve.html">Canton Genève</a></li>
+<li class="toctree-l1"><a class="reference internal" href="valais.html">Canton Valais</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vaud.html">Canton Vaud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zurich.html">Canton Zürich</a></li>
+<li class="toctree-l1"><a class="reference internal" href="combined.html">Canton - combined</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Use cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">Proposal</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Methods and classes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="a_report_class.html">Survey report class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="landuse_class.html">Land use class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forecasts.html">Grid forecast class</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="the_survey_data.html">The survey data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extracting_topo_data.html">Extracting land use values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multinomial_conjugate.html">Empirical Bayes</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hammerdirt-analyst/feb_2024" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hammerdirt-analyst/feb_2024/issues/new?title=Issue%20on%20page%20%2Fuse_cases.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Use cases</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#is-their-more-now-than-there-was-before">Is their more now than there was before ?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#consider-the-observed-results">Consider the observed results</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#consider-the-forecasted-values">Consider the forecasted values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-notes-and-actions">Conclusion, notes and actions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-is-the-cleanest-beach">Where is the cleanest beach ?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-the-sampling-history">Use the sampling history</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-the-land-use-profile">Use the land use profile</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Conclusion, notes and actions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-much-of-the-items-are-single-use-plastics-sup">How much of the items are single use plastics (SUP) ?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-the-object-inventory">Use the object inventory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Conclusion, notes and actions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-much-of-the-items-can-you-identify">How much of the items can you identify ?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unidentified-items-gfrags-gfoams">Unidentified items: Gfrags, Gfoams</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Conclusion, notes and actions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-objects-are-common-to-all-cantons">What objects are common to all cantons ?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-the-most-common-items">Use the most common items</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Conclusion, notes and actions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-chance-of-finding-x">What is the chance of finding X ?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-the-most-common-or-the-object-inventory">Use the most common or the object inventory</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell tag_remove-input docutils container">
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="use-cases">
+<h1>Use cases<a class="headerlink" href="#use-cases" title="Link to this heading">#</a></h1>
+<p>How each stake holder interprets the data is dependent on the use case. Here we present the answers to some of the most common questions that can be answered using the report or the methods desccribed in this document.</p>
+<p>For an example we will use the results from Bern.</p>
+<section id="is-their-more-now-than-there-was-before">
+<h2>Is their more now than there was before ?<a class="headerlink" href="#is-their-more-now-than-there-was-before" title="Link to this heading">#</a></h2>
+<p><strong>How do you know ?</strong> The best way to verify is to take more samples. However, the previous results in the canton and the results from locations outside the canton with similar land-use cahracteristics are good indicators.</p>
+<p>From the report we can identify several key pieces of information that will help us make the determination.</p>
+<section id="consider-the-observed-results">
+<span id="use-case-observed"></span><h3>Consider the observed results<a class="headerlink" href="#consider-the-observed-results" title="Link to this heading">#</a></h3>
+<p>ref: <a class="reference internal" href="bern.html#bern-vital-statistics"><span class="std std-ref">Bern vital statistics</span></a>, ref: <a class="reference internal" href="bern.html#bern-most-common"><span class="std std-ref">Bern most common</span></a></p>
+<ol class="arabic simple">
+<li><p>Vital statisitics: The average pcs/m of trash was greater in 2021 than 2017-2019</p></li>
+<li><p>The combined pcs/m of the most common objects (74% of all objects) is 2.3 pcs/m. That is .4 pcs/m greater than all the objects from 2017-2019</p></li>
+</ol>
+</section>
+<section id="consider-the-forecasted-values">
+<span id="use-case-forecast"></span><h3>Consider the forecasted values<a class="headerlink" href="#consider-the-forecasted-values" title="Link to this heading">#</a></h3>
+<p>ref: <a class="reference internal" href="bern.html#bern-forecasts"><span class="std std-ref">Bern forecasts</span></a></p>
+<ol class="arabic simple">
+<li><p>Given the 99th percenitle of 2021, we expect the values for 2025 to be approximately equal 2017-2019</p></li>
+<li><p>If we assume the maximum value of 2021 was not a mistake, on average we expect to find more in 2025</p></li>
+<li><p>Considering random samples from locations outside of the canton from locations with similar land-cover we expect to find more</p></li>
+</ol>
+</section>
+<section id="conclusion-notes-and-actions">
+<h3>Conclusion, notes and actions<a class="headerlink" href="#conclusion-notes-and-actions" title="Link to this heading">#</a></h3>
+<p><strong>Conclusion:</strong> The expected average survey result for lakes in the canton of Bern is expected to increase from 1.96 pcs/m in 2017 - 2019 to 3.06 in 2025. The campaign of 2017-2019 only had 24 samples versus 74 in 2021. Given that the sampling campaigns were managed by different organizations and were initiated for different purposes we can not be sure about the magnitude of the increase. However, the results from other lakes in Switzerland suggest that <strong>an increase is more likely than a decrease</strong>.</p>
+<p><strong>Notes:</strong> Comparing the sample totals is not the best way to make this type of analysis. We know that 74% of the total can be accounted for by 15 different objects. Comparing like items or grouping like items would provide a more accurate representation of the expected sample results for 2025.</p>
+<p><strong>Recommended actions:</strong> Set a sampling strategy for the canton. Collect at least as many samples from the same lakes as 2021 and be sure that a portion of those samples come from the same locations as 2021.</p>
+<hr class="docutils" />
+</section>
+</section>
+<section id="where-is-the-cleanest-beach">
+<span id="cleanest-beach"></span><h2>Where is the cleanest beach ?<a class="headerlink" href="#where-is-the-cleanest-beach" title="Link to this heading">#</a></h2>
+<p><strong>How do you find the cleanest locations ?</strong> We can make a determination based on the sampling history or we can use the land-use profile to define the characteristics of what the cleanest beach may look like.</p>
+<section id="use-the-sampling-history">
+<h3>Use the sampling history<a class="headerlink" href="#use-the-sampling-history" title="Link to this heading">#</a></h3>
+<p>ref: <a class="reference internal" href="bern.html#bern-municipal-results"><span class="std std-ref">Bern municipal results</span></a></p>
+<p>The municipalites with lowest average pcs/m and more than three samples is Lüscherz with 0.75 pcs/m (Bielersee) and Spiez with 0.79 pcs/m (Thunersee).</p>
+</section>
+<section id="use-the-land-use-profile">
+<h3>Use the land use profile<a class="headerlink" href="#use-the-land-use-profile" title="Link to this heading">#</a></h3>
+<p>ref: <a class="reference internal" href="bern.html#bern-rate-per-feature"><span class="std std-ref">Bern rate per feature</span></a>, ref: <a class="reference internal" href="#calculating-land-use"><span class="xref myst">land-use</span></a></p>
+<p>Survey locations with at least 40% - 60% of the land attributed to forest or undefined use have the lowest average pcs/m. Together these two land-use categories account for 50% of samples. Notice that urban locations (80% - 100% buildings) also have a very low average result. This is the inverse of what is expected in general.</p>
+</section>
+<section id="id1">
+<h3>Conclusion, notes and actions<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p><strong>Conclusion:</strong> The two locations with the lowest observed average pcs/m fit the expected land-use profile. However, the results in urban locations may be of interest given that that the average results is 50% less than we would find in other cantons under the same land-profile.</p>
+<p><strong>Notes:</strong> The sampling profile should approximate the profile of the canton. For example if the region is mainly agricultural and all the samples come from the urban centers then the sampling is not representative of the envrironment.</p>
+<p><strong>Recommended actions:</strong> Set a sampling strategy for the canton. With local and regional stakeholders identify the sampling locations that best represent the geography of the canton.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="how-much-of-the-items-are-single-use-plastics-sup">
+<h2>How much of the items are single use plastics (SUP) ?<a class="headerlink" href="#how-much-of-the-items-are-single-use-plastics-sup" title="Link to this heading">#</a></h2>
+<p><strong>How are you defining single use plastics ?</strong> The definition of SUP has not been established by federal or cantonal authorities. Here we consider the obvious choices and exclude cigarette end and other tobaco products.</p>
+<p><strong>Single use plastics:</strong></p>
+<ol class="arabic simple">
+<li><p>PET bottles</p></li>
+<li><p>Plastic bottle caps</p></li>
+<li><p>Straws, stirrers</p></li>
+<li><p>Plastic cotton swabs</p></li>
+<li><p>Fast food or to go containters</p></li>
+<li><p>Plastic bags</p></li>
+<li><p>Snack wrappers</p></li>
+<li><p>Fireworks</p></li>
+<li><p>Lollypop sticks</p></li>
+<li><p>Cups, lids, single use foamed and hard plastics</p></li>
+<li><p>Medical; containers/tubes/ packaging</p></li>
+<li><p>Diapers, wipes and sanitary pads</p></li>
+</ol>
+<section id="use-the-object-inventory">
+<h3>Use the object inventory<a class="headerlink" href="#use-the-object-inventory" title="Link to this heading">#</a></h3>
+<p>The object inventory is included with each report. It gives the summary result of all objects identified from the surveys (below). By adding up the % of total of the all the objects identified as single use plastics we find that on the shores of lakes in Bern <strong>14% (1190/8423) of the trash was single use plastics</strong>.</p>
+</section>
+<section id="id2">
+<h3>Conclusion, notes and actions<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p><strong>Conclusion:</strong> SUP are about 14% of the total found in 2021. Which means that approximately 80% of the objects found are not classified as SUP.</p>
+<p><strong>Notes:</strong> This finding is in agreement with massive amount of pressure on consumers to do the the right thing. Furthermore, municipalities invest a siginifigant portion of their budgets in maintaining the shoreline of lakes.</p>
+<p><strong>Recommended actions:</strong> Stakeholders should define a list of objects that can be standardized and takes into account observations in the field.</p>
+<p><strong>Object inventory Bern lakes, single use plastics</strong></p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>quantity</th>
+      <th>pcs/m</th>
+      <th>% of total</th>
+      <th>fail rate</th>
+    </tr>
+    <tr>
+      <th>description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Food containers single use foamed or plastic</th>
+      <td>44</td>
+      <td>0.02</td>
+      <td>0.01</td>
+      <td>0.36</td>
+    </tr>
+    <tr>
+      <th>Medical; containers/tubes/ packaging</th>
+      <td>19</td>
+      <td>0.01</td>
+      <td>0.00</td>
+      <td>0.22</td>
+    </tr>
+    <tr>
+      <th>plastic caps, lid rings: G21, G22, G23, G24</th>
+      <td>216</td>
+      <td>0.07</td>
+      <td>0.03</td>
+      <td>0.65</td>
+    </tr>
+    <tr>
+      <th>Cotton bud/swab sticks</th>
+      <td>107</td>
+      <td>0.04</td>
+      <td>0.01</td>
+      <td>0.53</td>
+    </tr>
+    <tr>
+      <th>Food wrappers; candy, snacks</th>
+      <td>565</td>
+      <td>0.22</td>
+      <td>0.07</td>
+      <td>0.82</td>
+    </tr>
+    <tr>
+      <th>Lollypop sticks</th>
+      <td>53</td>
+      <td>0.02</td>
+      <td>0.01</td>
+      <td>0.36</td>
+    </tr>
+    <tr>
+      <th>Cups, lids, single use foamed and hard plastic</th>
+      <td>40</td>
+      <td>0.02</td>
+      <td>0.00</td>
+      <td>0.30</td>
+    </tr>
+    <tr>
+      <th>Cutlery, plates and trays</th>
+      <td>14</td>
+      <td>0.01</td>
+      <td>0.00</td>
+      <td>0.16</td>
+    </tr>
+    <tr>
+      <th>Straws and stirrers</th>
+      <td>52</td>
+      <td>0.02</td>
+      <td>0.01</td>
+      <td>0.39</td>
+    </tr>
+    <tr>
+      <th>Drink bottles  &gt; 0.5L</th>
+      <td>1</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.01</td>
+    </tr>
+    <tr>
+      <th>Drink bottles &lt; = 0.5L</th>
+      <td>6</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.05</td>
+    </tr>
+    <tr>
+      <th>Bottles and containers, plastic non food/drink</th>
+      <td>3</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.01</td>
+    </tr>
+    <tr>
+      <th>Generic plastic bags</th>
+      <td>1</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.01</td>
+    </tr>
+    <tr>
+      <th>Small plastic bags; freezer, zip-lock etc.</th>
+      <td>14</td>
+      <td>0.01</td>
+      <td>0.00</td>
+      <td>0.12</td>
+    </tr>
+    <tr>
+      <th>Mesh bags</th>
+      <td>4</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.05</td>
+    </tr>
+    <tr>
+      <th>Dog feces bag</th>
+      <td>9</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.08</td>
+    </tr>
+    <tr>
+      <th>Bags</th>
+      <td>6</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.04</td>
+    </tr>
+    <tr>
+      <th>Sanitary pads /panty liners/tampons and applicators</th>
+      <td>13</td>
+      <td>0.01</td>
+      <td>0.00</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <th>Diapers - wipes</th>
+      <td>23</td>
+      <td>0.01</td>
+      <td>0.00</td>
+      <td>0.22</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></section>
+</section>
+<hr class="docutils" />
+<section id="how-much-of-the-items-can-you-identify">
+<h2>How much of the items can you identify ?<a class="headerlink" href="#how-much-of-the-items-can-you-identify" title="Link to this heading">#</a></h2>
+<p>Preventing or mittigating plastics in the environment depends on how well you can identify the objects that are present.</p>
+<section id="unidentified-items-gfrags-gfoams">
+<h3>Unidentified items: Gfrags, Gfoams<a class="headerlink" href="#unidentified-items-gfrags-gfoams" title="Link to this heading">#</a></h3>
+<p>ref: <a class="reference internal" href="bern.html#bern-most-common"><span class="std std-ref">Bern most common</span></a></p>
+<p>There are two categories that are specifically for objects that are found but can not be identified. Note that if an object is found AND it can be indentified but it does not <em>fit</em> into and existing category a new category is created.</p>
+</section>
+<section id="id3">
+<h3>Conclusion, notes and actions<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p><strong>Conclusion:</strong> <strong>About 20% of the objects found in the canton were unidentified.</strong></p>
+<p><strong>Notes:</strong> The correct idenitification of objects is a team effort. Surveyors with little experience tend to have a greater percentage of unidentified objects in their surveys.</p>
+<p><strong>Recommended actions:</strong> Stakeholders should define a list of objects that can be standardized and take into account observations in the field. Encourage joint operations with surveyors from different regions. Items that are rare in one location maybe fairly common elsewhere.</p>
+<hr class="docutils" />
+</section>
+</section>
+<section id="what-objects-are-common-to-all-cantons">
+<span id="canton-common"></span><h2>What objects are common to all cantons ?<a class="headerlink" href="#what-objects-are-common-to-all-cantons" title="Link to this heading">#</a></h2>
+<p>ref: <a class="reference internal" href="combined.html#combined-most-common"><span class="std std-ref">Combined cantons</span></a></p>
+<p>ref: <a class="reference internal" href="bern.html#bern-most-common"><span class="std std-ref">Bern most common</span></a></p>
+<section id="use-the-most-common-items">
+<h3>Use the most common items<a class="headerlink" href="#use-the-most-common-items" title="Link to this heading">#</a></h3>
+<p>For each report their is a detail of the most common items. If we use the combined results this will tell you, given the results from all the lakes and the cantons under consideration, exactly what the most common items are.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong>Common to all cantons</strong></p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Fragmented plastics</p></li>
+<li><p class="sd-card-text">Cigarette filters</p></li>
+<li><p class="sd-card-text">Expanded polystyrene</p></li>
+<li><p class="sd-card-text">Food wrappers; candy, snacks</p></li>
+<li><p class="sd-card-text">Industrial sheeting</p></li>
+<li><p class="sd-card-text">Industrial pellets (nurdles)</p></li>
+<li><p class="sd-card-text">plastic caps, lid rings: G21, G22, G23, G24</p></li>
+<li><p class="sd-card-text">Glass drink bottles, pieces</p></li>
+<li><p class="sd-card-text">Foam packaging/insulation/polyurethane</p></li>
+<li><p class="sd-card-text">Cotton bud/swab sticks</p></li>
+<li><p class="sd-card-text">Plastic construction waste</p></li>
+<li><p class="sd-card-text">Metal bottle caps, lids &amp; pull tabs from cans</p></li>
+<li><p class="sd-card-text">Tobacco; plastic packaging, containers</p></li>
+<li><p class="sd-card-text">Foil wrappers, aluminum foil</p></li>
+<li><p class="sd-card-text">Straws and stirrers</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong>Common to Bern</strong></p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Cigarette filters</p></li>
+<li><p class="sd-card-text">Fragmented plastics</p></li>
+<li><p class="sd-card-text">Industrial sheeting</p></li>
+<li><p class="sd-card-text">Food wrappers; candy, snacks</p></li>
+<li><p class="sd-card-text">Expanded polystyrene</p></li>
+<li><p class="sd-card-text">Glass drink bottles, pieces</p></li>
+<li><p class="sd-card-text">Packaging films nonfood or unknown</p></li>
+<li><p class="sd-card-text">Foam packaging/insulation/polyurethane</p></li>
+<li><p class="sd-card-text">plastic caps, lid rings: G21, G22, G23, G24</p></li>
+<li><p class="sd-card-text">Industrial pellets (nurdles)</p></li>
+<li><p class="sd-card-text">Plastic construction waste</p></li>
+<li><p class="sd-card-text">Fireworks; rocket caps, exploded parts &amp; packaging</p></li>
+<li><p class="sd-card-text">Cotton bud/swab sticks</p></li>
+<li><p class="sd-card-text">Tobacco; plastic packaging, containers</p></li>
+<li><p class="sd-card-text">Foil wrappers, aluminum foil</p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h3>Conclusion, notes and actions<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p><strong>Conclusion:</strong> <strong>14/15 of the most common items in Bern are also common to the rest of the cantons.</strong></p>
+<p><strong>Notes:</strong> This may be more pertinent for cantons that have a common river or lake.</p>
+<p><strong>Recommended actions:</strong> Neighbor cantons should consult the most common items in their respective areas to find possible points of collaboration.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="what-is-the-chance-of-finding-x">
+<h2>What is the chance of finding X ?<a class="headerlink" href="#what-is-the-chance-of-finding-x" title="Link to this heading">#</a></h2>
+<p>How often an object or category of objects is found is an excellent indeicator of the distribution of the item in the environment.</p>
+<section id="use-the-most-common-or-the-object-inventory">
+<h3>Use the most common or the object inventory<a class="headerlink" href="#use-the-most-common-or-the-object-inventory" title="Link to this heading">#</a></h3>
+<p>ref: <a class="reference internal" href="combined.html#combined-most-common"><span class="std std-ref">Combined cantons</span></a></p>
+<p><strong>How likely are you to find:</strong></p>
+<ol class="arabic simple">
+<li><p>PET bottle on the shore of a lake in Bern: about 7% of surveys will yield a plastic bottle</p></li>
+<li><p>Plastic bottle top: about 65% of surveys will yield a plastic bottle top</p></li>
+<li><p>Diaper of babywipe: 22% of surveys will yield a diaper or babywipe</p></li>
+</ol>
+<p><strong>Conclusion:</strong> The standard report will tell you how likely you are to find at least one an object.</p>
+<p><strong>Notes:</strong> This is a simple calculation using the most likely estimate of a binomial distribution.</p>
+<p><strong>Recommended actions:</strong> None</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="combined.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Canton - combined</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="project.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Proposal</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#is-their-more-now-than-there-was-before">Is their more now than there was before ?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#consider-the-observed-results">Consider the observed results</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#consider-the-forecasted-values">Consider the forecasted values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-notes-and-actions">Conclusion, notes and actions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-is-the-cleanest-beach">Where is the cleanest beach ?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-the-sampling-history">Use the sampling history</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-the-land-use-profile">Use the land use profile</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Conclusion, notes and actions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-much-of-the-items-are-single-use-plastics-sup">How much of the items are single use plastics (SUP) ?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-the-object-inventory">Use the object inventory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Conclusion, notes and actions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-much-of-the-items-can-you-identify">How much of the items can you identify ?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unidentified-items-gfrags-gfoams">Unidentified items: Gfrags, Gfoams</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Conclusion, notes and actions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-objects-are-common-to-all-cantons">What objects are common to all cantons ?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-the-most-common-items">Use the most common items</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Conclusion, notes and actions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-chance-of-finding-x">What is the chance of finding X ?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-the-most-common-or-the-object-inventory">Use the most common or the object inventory</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By the-team@
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+   hammerdirt 2023
+</p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

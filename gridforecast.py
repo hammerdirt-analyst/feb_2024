@@ -315,7 +315,6 @@ def reports_and_forecast(likelihood_params: dict, prior_params: dict, ldata: pd.
         this_report, this_land_use = 'No likelihood', 'No likelihood'
     else:
         this_report, this_land_use = make_report_objects(ldi)
-
     pdf, p_locations, c = check_params(prior_params, ldata.copy(), logger)
     comments += f' {c}'
     if c != 'ok':
@@ -373,7 +372,7 @@ class MulitnomialDirichlet:
         self.likelihood = self.compute_counts(self.likelihood_data)
         self.posterior_params = self.compute_posterior_params()
         self.posterior_dist = dirichlet(self.posterior_params)
-        logger.info(f"Initialized MultinomialDirichlet")
+        logger.info("Initialized MultinomialDirichlet")
 
     def compute_grid(self):
         max_value = round(max(self.prior_data.max(), self.likelihood_data.max()), 1)
