@@ -2,6 +2,8 @@
 
 :::{dropdown} Recent changes
 
+__June 24:__ Added responses to use cases
+
 __June 22:__ Added methods to calculate landuse profile using Geopandas.
 
 
