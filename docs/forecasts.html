@@ -455,7 +455,11 @@ document.write(`
 <section id="the-grid-size">
 <h3>The grid size<a class="headerlink" href="#the-grid-size" title="Link to this heading">#</a></h3>
 <p>The grid size for each combination is based on the maximum value of either the likelihood or the prior.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">compute_grid</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_grid</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">max_value</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">prior_data</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">likelihood_data</span><span class="o">.</span><span class="n">max</span><span class="p">()),</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_value</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+
+<span class="n">forecast_object</span><span class="o">.</span><span class="n">compute_grid</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="cell tag_remove-input docutils container">
@@ -469,8 +473,13 @@ document.write(`
 </section>
 <section id="the-counts">
 <h3>The counts<a class="headerlink" href="#the-counts" title="Link to this heading">#</a></h3>
-<p>The number of times that a survey result was either equal to zero or any other place on the grid can be accessed with <code class="docutils literal notranslate"><span class="pre">forecastobject.prior</span></code> or <code class="docutils literal notranslate"><span class="pre">forecastobject.compute_counts(forecast_object.prior_data)</span></code></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecastobject</span><span class="o">.</span><span class="n">compute_counts</span><span class="p">(</span><span class="n">forecast_object</span><span class="o">.</span><span class="n">prior_data</span><span class="p">)</span>
+<p>The number of times that a survey result was either equal to zero or any other place on the grid can be accessed with <code class="docutils literal notranslate"><span class="pre">forecastobject.prior</span></code> or <code class="docutils literal notranslate"><span class="pre">forecastobject.likelihood</span></code>. This returns the value of <code class="docutils literal notranslate"><span class="pre">np.histogram</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_counts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="n">counts</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.1</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">counts</span>
+
+
+<span class="n">forecastobject</span><span class="o">.</span><span class="n">compute_counts</span><span class="p">(</span><span class="n">forecast_object</span><span class="o">.</span><span class="n">prior_data</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="cell tag_remove-input docutils container">
@@ -483,8 +492,13 @@ document.write(`
 </section>
 <section id="the-posterior-parameters">
 <h3>The posterior parameters<a class="headerlink" href="#the-posterior-parameters" title="Link to this heading">#</a></h3>
-<p>The parameters for the Dirichlet posterior</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecastobject</span><span class="o">.</span><span class="n">compute_posterior_params</span><span class="p">()</span>
+<p>The parameters for the Dirichlet posterior. This is the sum of <code class="docutils literal notranslate"><span class="pre">forecastobject.prior</span></code> and <code class="docutils literal notranslate"><span class="pre">forecastobject.likelihood</span></code>. Zero values of the sum are replaced with 0.01.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_posterior_params</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">post_counts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">likelihood</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">prior</span>
+    <span class="n">post_counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">post_counts</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">post_counts</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">post_counts</span>
+    
+<span class="n">forecastobject</span><span class="o">.</span><span class="n">compute_posterior_params</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="cell tag_remove-input docutils container">
@@ -497,24 +511,30 @@ document.write(`
 </section>
 <section id="sample-the-posterior-distribution">
 <h3>Sample the posterior distribution<a class="headerlink" href="#sample-the-posterior-distribution" title="Link to this heading">#</a></h3>
-<p>Sample the posterior distribution</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">sample_posterior</span><span class="p">()</span>
+<p>Sample the posterior distribution. Returns a set of expected survey values given the likelihood and the prior.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sample_posterior</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+    <span class="n">adist_samples</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">posterior_dist</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">posterior_samples</span> <span class="o">=</span> <span class="n">multinomial</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">num_samples</span><span class="p">,</span> <span class="n">adist_samples</span><span class="p">)</span>
+    <span class="n">sample_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="p">,</span> <span class="n">posterior_samples</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sample_values</span>
+    
+<span class="n">forecast_object</span><span class="o">.</span><span class="n">sample_posterior</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.44,  0.55,  0.71,  0.81,  0.85,  1.26,  1.26,  1.41,  1.43,
-        1.5 ,  1.59,  1.59,  1.65,  1.75,  1.76,  1.76,  1.86,  1.89,
-        1.89,  2.03,  2.1 ,  2.15,  2.21,  2.4 ,  2.45,  2.56,  2.57,
-        2.57,  2.57,  2.57,  2.64,  2.69,  2.74,  3.41,  3.46,  3.73,
-        4.01,  4.76,  4.76,  5.39,  5.43,  5.59,  6.29,  6.29,  6.43,
-        6.55,  6.85,  6.94,  6.94,  6.95,  6.97,  7.26,  7.4 ,  7.68,
-        8.4 ,  8.92,  9.57,  9.69, 10.07, 10.56, 10.64, 10.67, 10.67,
-       10.67, 11.62, 12.37, 12.37, 12.61, 13.6 , 15.74, 18.36, 18.61,
-       18.9 , 19.26, 22.38, 22.38, 23.73, 27.33, 28.13, 31.53, 31.98,
-       33.55, 34.73, 35.57, 37.77, 39.36, 39.54, 40.69, 41.74, 44.1 ,
-       46.96, 47.76, 50.51, 51.84, 51.92, 53.96, 59.09, 70.24, 70.24,
-       75.28])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.35,  0.47,  0.47,  0.47,  0.55,  0.75,  0.92,  0.99,  1.  ,
+        1.  ,  1.06,  1.89,  1.89,  1.99,  2.21,  2.23,  2.29,  2.32,
+        2.4 ,  2.56,  2.6 ,  2.61,  2.61,  2.64,  2.64,  2.68,  2.7 ,
+        2.74,  2.86,  3.19,  3.42,  3.46,  3.46,  4.17,  4.2 ,  4.55,
+        4.67,  4.67,  4.67,  4.74,  4.74,  4.76,  4.93,  5.43,  5.75,
+        5.87,  6.04,  6.04,  6.59,  6.83,  6.83,  7.04,  7.04,  7.85,
+        7.85,  8.19,  8.55,  8.55,  8.55,  8.55,  8.92,  9.05, 10.08,
+       10.08, 11.21, 13.6 , 14.61, 15.37, 16.36, 17.05, 17.4 , 17.54,
+       21.16, 23.18, 26.11, 26.41, 26.82, 27.33, 31.6 , 33.63, 38.  ,
+       39.84, 41.37, 47.28, 47.28, 47.28, 47.28, 49.68, 50.06, 50.6 ,
+       51.46, 51.46, 55.83, 57.71, 57.71, 65.91, 67.34, 69.75, 73.5 ,
+       73.5 ])
 </pre></div>
 </div>
 </div>
@@ -522,13 +542,17 @@ document.write(`
 </section>
 <section id="the-90-interval-of-the-predictions">
 <h3>The 90% interval of the predictions<a class="headerlink" href="#the-90-interval-of-the-predictions" title="Link to this heading">#</a></h3>
-<p>The 90% interval of the predictions</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">compute_percentiles</span><span class="p">()</span>
+<p>The 90% interval of the predictions is set to the following percentiles: [5, 25, 50, 75, 95]</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_percentiles</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">percentiles</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">95</span><span class="p">]):</span>
+    <span class="n">samples</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sample_posterior</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="n">percentiles</span><span class="p">)</span>
+
+<span class="n">forecast_object</span><span class="o">.</span><span class="n">compute_percentiles</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.74  ,  2.8   ,  7.065 , 22.18  , 58.5515])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.75  ,  2.7   ,  5.36  , 13.85  , 62.3315])
 </pre></div>
 </div>
 </div>
@@ -537,12 +561,24 @@ document.write(`
 <section id="the-90-hdi">
 <h3>The 90% HDI<a class="headerlink" href="#the-90-hdi" title="Link to this heading">#</a></h3>
 <p>The 90% highest density interval</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">forecast_object</span><span class="o">.</span><span class="n">compute_hdi</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_hdi</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">credibility_mass</span><span class="o">=</span><span class="mf">0.95</span><span class="p">):</span>
+    <span class="n">samples</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sample_posterior</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+    <span class="n">sorted_samples</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span>
+    <span class="n">ci_idx_inc</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">credibility_mass</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">sorted_samples</span><span class="p">)))</span>
+    <span class="n">n_cis</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sorted_samples</span><span class="p">)</span> <span class="o">-</span> <span class="n">ci_idx_inc</span>
+    <span class="n">ci_width</span> <span class="o">=</span> <span class="n">sorted_samples</span><span class="p">[</span><span class="n">ci_idx_inc</span><span class="p">:]</span> <span class="o">-</span> <span class="n">sorted_samples</span><span class="p">[:</span><span class="n">n_cis</span><span class="p">]</span>
+    <span class="n">min_ci_width_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">ci_width</span><span class="p">)</span>
+    <span class="n">hdi_min</span> <span class="o">=</span> <span class="n">sorted_samples</span><span class="p">[</span><span class="n">min_ci_width_idx</span><span class="p">]</span>
+    <span class="n">hdi_max</span> <span class="o">=</span> <span class="n">sorted_samples</span><span class="p">[</span><span class="n">min_ci_width_idx</span> <span class="o">+</span> <span class="n">ci_idx_inc</span><span class="p">]</span>
+    
+    <span class="k">return</span> <span class="n">hdi_min</span><span class="p">,</span> <span class="n">hdi_max</span>
+    
+<span class="n">forecast_object</span><span class="o">.</span><span class="n">compute_hdi</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.18, 58.83)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(np.float64(0.1), np.float64(63.58))
 </pre></div>
 </div>
 </div>
@@ -566,7 +602,17 @@ document.write(`
 <section id="the-probability-of-x">
 <h3>The probability of x<a class="headerlink" href="#the-probability-of-x" title="Link to this heading">#</a></h3>
 <p>The chance that a result will exceed a given value</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># in this case we are asking what is the chance of finding</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">probability_of_x</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">max</span><span class="p">():</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;x must be within the range of the grid.&quot;</span><span class="p">)</span>
+
+    <span class="n">posterior_samples</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">posterior_dist</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+    <span class="n">mp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">posterior_samples</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">bin_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">digitize</span><span class="p">([</span><span class="n">x</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">mp</span><span class="p">,</span> <span class="n">bin_index</span><span class="p">,</span> <span class="n">posterior_samples</span>
+
+<span class="c1"># in this case we are asking what is the chance of finding</span>
 <span class="c1"># at least one piece per meter</span>
 <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">forecast_object</span><span class="o">.</span><span class="n">probability_of_x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]:])</span>
@@ -574,7 +620,7 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9288737193351585
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(0.9290825128991368)
 </pre></div>
 </div>
 </div>
@@ -589,10 +635,10 @@ document.write(`
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;code&#39;: &#39;comb&#39;,
- &#39;average&#39;: 17.717200000000002,
- &#39;hdi&#39;: (0.18, 65.66),
- &#39;range&#39;: array([ 0.64  ,  2.86  ,  6.9   , 19.17  , 59.2875]),
- &#39;max_observed&#39;: 77.1}
+ &#39;average&#39;: np.float64(11.853500000000002),
+ &#39;hdi&#39;: (np.float64(0.1), np.float64(58.730000000000004)),
+ &#39;range&#39;: array([ 0.9895,  2.57  ,  5.59  , 18.42  , 61.5595]),
+ &#39;max_observed&#39;: np.float64(77.1)}
 </pre></div>
 </div>
 </div>
@@ -655,82 +701,82 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>('aare_kehrsatz_stolten', '2017-07-03')</td>
-      <td>aare_kehrsatz_stolten</td>
-      <td>2017-07-03</td>
-      <td>5</td>
-      <td>0.10</td>
-      <td>1</td>
-      <td>3</td>
-      <td>1</td>
+      <td>('sihl_zuerich_eichenbergerd', '2018-03-30')</td>
+      <td>sihl_zuerich_eichenbergerd</td>
+      <td>2018-03-30</td>
+      <td>17</td>
+      <td>0.35</td>
       <td>1</td>
       <td>2</td>
       <td>1</td>
-      <td>3</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
       <td>1</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>('birs_basel_laderachs', '2018-03-24')</td>
-      <td>birs_basel_laderachs</td>
-      <td>2018-03-24</td>
-      <td>31</td>
-      <td>1.12</td>
+      <td>('emme_biberist_jennim', '2017-08-07')</td>
+      <td>emme_biberist_jennim</td>
+      <td>2017-08-07</td>
+      <td>29</td>
+      <td>1.95</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
       <td>1</td>
       <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>4</td>
-      <td>1</td>
-      <td>1</td>
+      <td>2</td>
+      <td>2</td>
       <td>1</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>('limmat_zurich_mortensena_meiera', '2017-08-07')</td>
-      <td>limmat_zurich_mortensena_meiera</td>
-      <td>2017-08-07</td>
-      <td>39</td>
-      <td>1.32</td>
+      <td>('zuerichsee_staefa_hennm', '2017-05-22')</td>
+      <td>zuerichsee_staefa_hennm</td>
+      <td>2017-05-22</td>
+      <td>65</td>
+      <td>5.90</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
       <td>1</td>
       <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>5</td>
-      <td>1</td>
-      <td>1</td>
       <td>1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>('birs_reinach_dinuccin', '2017-05-29')</td>
-      <td>birs_reinach_dinuccin</td>
-      <td>2017-05-29</td>
-      <td>138</td>
-      <td>3.86</td>
+      <td>('langete_langenthal_geiserm', '2018-03-30')</td>
+      <td>langete_langenthal_geiserm</td>
+      <td>2018-03-30</td>
+      <td>22</td>
+      <td>1.55</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
       <td>1</td>
       <td>3</td>
       <td>1</td>
-      <td>1</td>
-      <td>4</td>
       <td>2</td>
-      <td>1</td>
       <td>1</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>('vierwaldstattersee_weggis_schoberls_1', '201...</td>
-      <td>vierwaldstattersee_weggis_schoberls_1</td>
-      <td>2018-01-27</td>
-      <td>5</td>
-      <td>0.21</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
+      <td>('chriesbach_duebendorf_schneidera', '2018-02-...</td>
+      <td>chriesbach_duebendorf_schneidera</td>
+      <td>2018-02-05</td>
+      <td>99</td>
+      <td>1.94</td>
       <td>1</td>
       <td>2</td>
       <td>1</td>
+      <td>1</td>
       <td>4</td>
+      <td>1</td>
+      <td>1</td>
       <td>1</td>
     </tr>
   </tbody>
@@ -750,10 +796,10 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;range&#39;: array([0.3  , 0.675, 2.3  , 4.7  , 9.97 ]),
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;range&#39;: array([0.3 , 0.9 , 1.85, 4.7 , 9.18]),
  &#39;nsamples&#39;: 100,
- &#39;average&#39;: 3.6220000000000003,
- &#39;hdi&#39;: (0.1, 15.100000000000001)}
+ &#39;average&#39;: np.float64(3.5840000000000005),
+ &#39;hdi&#39;: (np.float64(0.1), np.float64(10.700000000000001))}
 </pre></div>
 </div>
 </div>
