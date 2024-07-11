@@ -177,41 +177,6 @@ def make_multi_index(column_labels: dict, group_label: dict, nlabels: int, sessi
     return pd.MultiIndex.from_tuples(indexes)
 
 
-class ALandUseObject:
-
-    def __init__(self, locations, df_feature):
-        self.locations = locations
-        self.feature_df = df_feature
-
-    def n_samples(self):
-        return self.df[index_label].nunique()
-
-    def n_pieces(self):
-        return self.df[Q].sum()
-
-    def locations(self):
-        return self.df[location_label].nunique()
-
-    def summary_results_by_category(self):
-        results = {}
-        for i in self.df[self.feature].unique():
-            results.update({i: category_quantiles(self.df, self.feature, i)})
-
-        return results
-
-    def results_by_category(self, category):
-        return self.df[self.df[self.feature] == category]
-
-    def summary_y(self):
-        asummary = dict(
-            n_samples=self.n_samples(),
-            n_locations=self.locations(),
-            total=self.n_pieces(),
-            quantiles=self.summary_results_by_category()
-        )
-        return asummary
-
-
 class LandUseReport:
 
     def __init__(self, df_target, features):
@@ -219,9 +184,9 @@ class LandUseReport:
         self.features = features
         self.feature_variables = list(self.features.keys())
         self.intersects = None
-        self.df_cat = None
+
         self.merge_land_use_to_survey_data()
-        self.combine_features(self.correlated_pairs())
+        self.df_cat = self.categorize_columns(self.df_cont.copy())
 
     def merge_land_use_to_survey_data(self):
         lu = select_x_and_y(self.target, self.features)
@@ -233,9 +198,16 @@ class LandUseReport:
     def categorize_columns(self, df, feature_columns=feature_variables):
         return categorize_features(df, feature_columns=feature_columns)
 
-    def n_samples_per_feature(self):
-        df_feature = {feature: self.df_cat[feature].value_counts() for feature in
-                      self.feature_variables}
+    def n_samples_per_feature(self, df: pd.DataFrame = None, features: [] = None):
+
+        if df is None:
+            df = self.df_cat.copy()
+        else:
+            df = df.copy()
+        if features is None:
+            features = feature_variables
+        df_feature = {feature: df[feature].value_counts() for feature in
+                      features}
         df_concat = pd.concat(df_feature, axis=1)
         return df_concat.fillna(0).astype('int')
 
@@ -247,38 +219,28 @@ class LandUseReport:
 
     def locations_per_feature(self):
         df_feature = {feature: self.df_cat.groupby(feature, observed=True)[location_label].nunique() for feature in
-                      self.feature_variables}
+                      feature_variables}
         df_concat = pd.concat(df_feature, axis=1)
         return df_concat.fillna(0).astype('int')
 
-    def rate_per_feature(self, afunc: str = session_config.tendencies):
+    def rate_per_feature(self, df: pd.DataFrame = None):
 
-        avg_matrix = pd.DataFrame(index=self.feature_variables, columns=session_config.bin_labels)
+        if df is None:
+            df = self.df_cat.copy()
+        else:
+            df = df.copy()
 
-        df = self.df_cat.copy()
+        avg_matrix = pd.DataFrame(index=feature_variables, columns=session_config.bin_labels)
 
         # Calculate the mean for each category in each identified column
-        for column in self.feature_variables:
+        for column in feature_variables:
             for category in session_config.bin_labels:
                 # Filter df by category and calculate mean for the target variable, only if it's relevant
                 filtered = df[df[column] == category]
                 avg_matrix.at[column, category] = filtered[Y].mean() if not filtered.empty else 0
 
-        return avg_matrix.round(2)
+        return avg_matrix.round(2).T
     
-    def combine_features(self, columns_to_combine: list = session_config.default_args):
-        
-        d = self.df_cont.copy()
-        new_names = []
-        for cols in columns_to_combine:
-            new_column_name = f'{cols[0]}_{cols[1]}'
-            new_names.append(new_column_name)
-            d = combine_landuse_features(d, columns_to_combine=[cols[0], cols[1]], new_column_name=new_column_name, method=cols[2])
-        self.df_cont = d
-        new_feature_columns = [*feature_variables, *new_names]
-        self.feature_variables = new_feature_columns
-        self.df_cat = self.categorize_columns(d.copy(), feature_columns=new_feature_columns)
-
 
     def correlation_matrix(self):
 
@@ -298,18 +260,6 @@ class LandUseReport:
                 pairs_methods.append(new_pair)
         return pairs_methods
      
-    def correlated_pairs(self, threshold: float = session_config.corr_threshold):
-        
-        d = self.correlation_matrix()
-        d = d[[x for x in d.columns if x != 'streets']].fillna(1)
-        c_p = find_correlated_values(d, threshold=threshold)
-        
-        return self.assign_combination_method(c_p)
-    
-    def report_by_feature(self, feature):
-
-        return ALandUseObject(self.df_cat, feature, object_of_interest, Y)
-
 
 
 

@@ -1,0 +1,126 @@
+Hi this the record of litter-counts on shores of lakes in the Canton of Bern in Switzerland. 
+
+Description of data:
+
+The target variable is 'pcs/m' wich stands for pieces of trash per meter. This is a subset of the data that includes the following items:  PET bottles, Plastic bottle caps,  Straws, stirrers, Plastic cotton swabs, Fast food or to go containters, Plastic bags,  Snack wrappers,  Fireworks, Lollypop sticks,  Cups, lids, single use foamed and hard plastics, Medical; containers/tubes/ packaging, Diapers, wipes and sanitary pads.
+
+The feature data is the proportion of a circle of r= 1'500 meters (buffer) occupied by a topographical feature. For example the feature variable 'buildings' with a value of .12 means that the amount of land dedicated to buildings out is = 12% of the buffer.
+
+The exception is streets. They are the total length of streets in meters of the same buffer. This number has been scaled between 0 and 1.
+
+What we want to know is how the features are associated with changes in the target variable. We would like to use kmeans clustering and regression analysis. 
+
+For kmeans use the elbow method to determine the number of clusters. If their is a choice try the biggest one. We want to know the number of clusters and the mean 'pcs/m' per cluster as well as the mean feature value. Summarize the results in a paragraph.
+
+Before doing regression analysis check for liniearity first, use an analytical method spearmans Rho or other, tell us how you are doing that and what the reult is. If linearity is probable try a variety of regression methods , if applicable use linear, lasso, random forest select the one that has the highest r². We only need to report the coeficcients fo the selected model. Please report the r² for all the models that are tried.
+
+We would also like to know the importance of each feature in this regard. Use the feature importance from whatever model you use 
+
+do this in a compact report form, provide a table for the clusters, provide a table for the regression results => p value, coeficient per variable and r² and MSE for the model.
+
+How does the cluster analysis compare to the feature importance in terms of the features variables? Which feature is likely associate with low values or high values of 'pcs/m' 
+
+
+
+Okay now we want to use all of that to make a two or three paragraphs. Introduce the topic and the data. Tell us the key results that support the summary and insights. Develop the points under summary and insights. Given the features of interest what are likely areas of investment or how can we make places with high values go lower. 
+
+
+Prompt
+
+Please analyze the provided dataset, which records litter counts ('pcs/m' - pieces of trash per meter) on the shores of lakes in the Canton of Bern, Switzerland. The dataset includes various topographical features within a 1,500-meter buffer zone around the lakes, such as the proportion of land occupied by buildings, streets, public services, orchards, vineyards, forests, and undefined areas. Follow these steps and produce a report with the specified supporting figures and tables:
+
+    Cluster Analysis:
+        Use the elbow method to determine the optimal number of clusters for KMeans clustering.
+        Perform KMeans clustering with the optimal number of clusters.
+        Summarize the clusters in a table showing the number of samples, average 'pcs/m', and average value for each feature per cluster.
+
+    Regression Analysis:
+        Check for linearity using Spearman's Rho for each feature against 'pcs/m'.
+        Apply Linear Regression, Lasso Regression, and Random Forest Regression. Select the model with the highest R² score.
+        Summarize the regression results in a table showing R², MSE, and coefficients for the selected model.
+
+    Feature Importance:
+        From the best regression model, extract and display the feature importances.
+
+    Generate Supporting Figures:
+        Histogram of the target variable ('pcs/m').
+        Bar chart of feature importance from the selected regression model.
+
+    Compile the Report:
+        Introduce the topic and describe the data.
+        Present key results from the cluster analysis and regression analysis.
+        Discuss the implications of these results for reducing litter density, focusing on significant features.
+        Include the following supporting figures and tables:
+            Histogram of survey target variable.
+            Table summarizing the clusters.
+            Table summarizing the selected regression analysis.
+            Bar chart of feature importance.
+            
+Please analyze the provided dataset, which records litter counts ('pcs/m' - pieces of trash per meter) on the shores of lakes in the Canton of Bern, Switzerland. The dataset includes various topographical features within a 1,500-meter buffer zone around the lakes, such as the proportion of land occupied by buildings, streets, public services, orchards, vineyards, forests, and undefined areas. Follow these steps and produce a report with the specified supporting figures and tables:
+
+    Cluster Analysis:
+        Use the elbow method to determine the optimal number of clusters for KMeans clustering.
+        Perform KMeans clustering with the optimal number of clusters.
+        Summarize the clusters in a table showing the number of samples, average 'pcs/m', and average value for each feature per cluster.
+
+    Regression Analysis:
+        Check for linearity using Spearman's Rho for each feature against 'pcs/m'.
+        Apply Linear Regression, Lasso Regression, and Random Forest Regression. Select the model with the highest R² score.
+        Summarize the regression results in a table showing R², MSE, and coefficients for the selected model.
+
+    Feature Importance:
+        From the best regression model, extract and display the feature importances.
+
+    
+
+    Compile the Report, three paragraphs:
+        Introduce the topic and describe the data.
+        Present key results from the cluster analysis and regression analysis.
+        Discuss how the feature importance and cluster analysis are complimentary
+        Discuss where the feature importance and cluster analyis aggree reference the magnitude of the target variable and the type of land use features.
+        Discuss the features and clusters that represent areas of higher or lower values of 'pcs/m' 
+        Discuss the implications of these results for reducing litter density, focusing on significant features.
+        Generate and Include the following supporting figures and tables:
+            Histogram of survey target variable.
+            Table summarizing the clusters.
+            Bar chart of feature values by cluster
+            Table summarizing the selected regression analysis.
+            Bar chart of feature importance.
+            
+            
+==============================>
+
+Please analyze the provided dataset, which records litter counts ('pcs/m' - pieces of trash per meter) on the shores of lakes in the Canton of Bern, Switzerland. The dataset includes various topographical features within a 1,500-meter buffer zone around the lakes, such as the proportion of land occupied by buildings, streets, public services, orchards, vineyards, forests, and undefined areas. Follow these steps and produce a report with the specified supporting figures and tables:
+
+    Cluster Analysis:
+       Use the elbow method to determine the optimal number of clusters for KMeans clustering.  
+       Perform KMeans clustering with the optimal number of clusters.
+        Summarize the clusters in a table showing the number of samples, average 'pcs/m', and average value for each feature per cluster.
+
+    Regression Analysis:
+        Check for linearity using Spearman's Rho for each feature against 'pcs/m'.
+        Apply Linear Regression, Lasso Regression, and Random Forest Regression. Select the model with the highest R² score.
+        Summarize the regression results in a table showing R², MSE, and coefficients for the selected model.
+
+    Feature Importance:
+        From the best regression model, extract and display the feature importances.
+        Use Permutation feature importance also
+        
+
+    
+
+    Compile the Report, three paragraphs:
+        Introduce the topic and describe the data.
+        Present key results from the cluster analysis and regression analysis and the feature importance
+        Discuss how the feature importance from the model differs from the results of the Permuation feature importance.
+        Discuss where the feature importance and cluster analyis aggree reference the magnitude of the target variable and the type of land use features.
+        Discuss the features and clusters that represent areas of higher or lower values of 'pcs/m' 
+        Discuss the implications of these results for reducing litter density, focusing on significant features.
+        Generate and Include the following supporting figures and tables:
+            Histogram of survey target variable.
+            Table summarizing the clusters.
+            Bar chart of feature values by cluster
+            Table summarizing the selected regression analysis.
+            Bar chart of feature importance.
+
+

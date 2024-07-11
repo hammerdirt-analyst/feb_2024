@@ -51,6 +51,7 @@ session_language = 'en'
 
 # the 90th percentile range
 report_quantiles = [.05, .25, .5, .75, .95]
+quantile_labels = ['5th', '25th', '50th', '75th', '95th']
 
 # bins and labels for land use categorization
 bins = [-1, 0.2, 0.4, 0.6, 0.8, 1]

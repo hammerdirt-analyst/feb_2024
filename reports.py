@@ -59,7 +59,11 @@ class SurveyReport:
         result = {}
         for boundary in administrative:
             names = self.df[boundary].unique()
-            result.update({boundary: {'count': len(names), 'names': names}})
+            if names.size == 0:
+                result[boundary] = {'count': 0}
+            else:
+                result[boundary] = {'count': len(names)}
+        result = pd.DataFrame(result)
         
         return result
 
@@ -69,15 +73,12 @@ class SurveyReport:
         for feature_type in feature_types:
             unique_features = self.df[self.df['feature_type'] == feature_type]['feature_name'].unique()
             if unique_features.size == 0:
-                result[feature_type] = {
-                    'count': 0,
-                    'names': None
-                }
+                result[feature_type] = {'count': 0}
             else:
-                result[feature_type] = {
-                    'count': len(unique_features),
-                    'names': unique_features.tolist()
-                }
+                result[feature_type] = {'count': len(unique_features)}
+        result = pd.DataFrame(result)
+        result.rename(columns={'l': 'lake', 'r': 'river', 'p': 'park'}, inplace=True)
+
         return result
 
     @property
@@ -113,9 +114,9 @@ class SurveyReport:
         material_report = inv.groupby(['material']).quantity.sum()
         mr = material_report / sum(material_report)
         mr = (mr * 100).astype(int)
-        mr = pd.DataFrame(mr[mr > 1])
+        mr = pd.DataFrame(mr[mr >= 1])
         mr['% of total'] = mr.quantity.apply(lambda x: f'{x}%')
-        mr = mr[['% of total']]
+        mr = mr[['% of total']].T
 
         return mr
 
@@ -143,19 +144,21 @@ class SurveyReport:
 
         data = self.sample_results[Y].values
         qtiles = np.quantile(data, report_quantiles)
+        q_labels = {session_config.quantile_labels[i]: qtiles[i] for i in range(len(qtiles))}
 
         asummary = {
             'total':self.total_quantity,
             'nsamples': self.number_of_samples,
             'average': np.mean(data),
-            'quantiles': qtiles,
+            **q_labels,
             'std': np.std(data),
             'max':self.sample_results[Y].max(),
             'start': self.date_range['start'],
             'end': self.date_range['end']
         }
+        result = pd.DataFrame([asummary])
 
-        return asummary
+        return result
 
     def object_summary(self):
         qtys = self.inventory()
