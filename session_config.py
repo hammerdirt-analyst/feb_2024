@@ -125,6 +125,9 @@ new_display_label = 'Urbanization'
 combination_method = 'sum'
 default_args = [(buildings_services, new_label, combination_method)]
 
+color_style = {'prior':'#daa520', 'likelihood':'#1e90ff'}
+palette = {'prior':'goldenrod', 'likelihood':'dodgerblue'}
+
 
 def assign_target_variable(target: str = None) -> str:
     if target is None:
@@ -182,26 +185,7 @@ def collect_survey_data(connection: str = None, afunc: callable = None, columns:
                 return datas
             else:
                 raise ValueError(f'The columns in the dataframe : {datas.columns} do not match the supplied columns {columns}')
-#
-#
-# def select_features(df, column, labels):
-#     feature_mask = df[column].isin(labels)
-#     return feature_mask
-#
-# def select_dates(df, start_end):
-#     data_mask = (df['date'] >= start_end[0]) & (df['date'] <= start_end[1])
-#     return data_mask
-# def filter_data(df: pd.DataFrame, date_mask: pd.Series = None, feature_mask: pd.Series = None) -> pd.DataFrame:
-#     if date_mask is None and feature_mask is None:
-#         return df
-#     elif date_mask is None and feature_mask is not None:
-#         mask = feature_mask
-#     elif date_mask is not None and feature_mask is None:
-#         mask = date_mask
-#     else:
-#         mask = date_mask & feature_mask
-#
-#     return df[mask]
+
 
 def unpack_with_pandas(path_variables: tuple) -> pd.DataFrame:
     """Utility function to put csv to pd.DataFrame"""

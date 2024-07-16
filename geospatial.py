@@ -27,14 +27,13 @@ contains the following information:
 10. correlated_pairs: returns the correlated pairs
 """
 import pandas as pd
-pd.set_option('future.no_silent_downcasting', True)
 from sklearn.preprocessing import MinMaxScaler
 
 import session_config
 from session_config import feature_variables
-from session_config import object_of_interest
-from session_config import index_label, location_label, Y, Q
-from session_config import agg_groups
+from session_config import location_label, Y, Q
+
+pd.set_option('future.no_silent_downcasting', True)
 
 feature_data = session_config.feature_data
 landuse = pd.read_csv(feature_data['land_use_data'])
@@ -79,7 +78,7 @@ def select_x_and_y(df_target, features, x_value: str = 'scale'):
             df_rivers.fillna(0, inplace=True)
             df.fillna(0, inplace=True)
             return df.infer_objects(copy=False), df_rivers.infer_objects(copy=False)
-
+#
 def categorize_features(df, feature_columns=feature_variables):
     """Categorizes the feature columns in the DataFrame"""
     bins = session_config.bins
@@ -87,10 +86,10 @@ def categorize_features(df, feature_columns=feature_variables):
     for column in feature_columns:
         df[column] = pd.cut(df[column], bins=bins, labels=labels)
     return df
-
-
-def category_quantiles(df, feature, category):
-    return df[df[feature] == category].groupby([feature]).agg(agg_groups)
+#
+#
+# def category_quantiles(df, feature, category):
+#     return df[df[feature] == category].groupby([feature]).agg(agg_groups)
 
 
 def scale_combined(df, column_to_scale, new_column_name):
@@ -133,48 +132,48 @@ def collect_topo_data(locations: [] = None, labels: {} = None):
     else:
         return labels
     
-def combine_landuse_features(data, columns_to_combine: list = None, new_column_name: str = None, method: str = 'sum'):
-    """Combines the columns in the DataFrame
-    
-    The columns are put back into m² before combining. Then scaled back.
-    """
-    if method == 'sum':
-        data[new_column_name] = data[columns_to_combine[0]] + data[columns_to_combine[1]]
-        return data
-    if method == 'rate':
-        not_public_services = [x for x in columns_to_combine if 'public services' not in x]
-        data[new_column_name] = (data['public services']*data[not_public_services[0]]).round(3)
-        return data
-    
-    else:
-        return "Method not recognized. Please use 'sum' or 'rate' as the method."
-    
+# def combine_landuse_features(data, columns_to_combine: list = None, new_column_name: str = None, method: str = 'sum'):
+#     """Combines the columns in the DataFrame
+#
+#     The columns are put back into m² before combining. Then scaled back.
+#     """
+#     if method == 'sum':
+#         data[new_column_name] = data[columns_to_combine[0]] + data[columns_to_combine[1]]
+#         return data
+#     if method == 'rate':
+#         not_public_services = [x for x in columns_to_combine if 'public services' not in x]
+#         data[new_column_name] = (data['public services']*data[not_public_services[0]]).round(3)
+#         return data
+#
+#     else:
+#         return "Method not recognized. Please use 'sum' or 'rate' as the method."
+#
 
-def find_correlated_values(df, threshold: float = session_config.corr_threshold):
-    """Finds the correlated values in the DataFrame"""
-    
-    labels = df.columns.to_list()
-    correlated_features = []
-    for i in range(len(labels)):
-        for j in range(i+1, len(labels)):
-            if df.at[labels[i], labels[j]] >= .99999:
-                pass
-            elif df.at[labels[i], labels[j]] <= 0:
-                pass
-            elif df.at[labels[j], labels[i]] <= 0:
-                pass
-            elif df.at[labels[i], labels[j]] >= threshold:
-                correlated_features.append((labels[i], labels[j]))
-         
-    return correlated_features
+# def find_correlated_values(df, threshold: float = session_config.corr_threshold):
+#     """Finds the correlated values in the DataFrame"""
+#
+#     labels = df.columns.to_list()
+#     correlated_features = []
+#     for i in range(len(labels)):
+#         for j in range(i+1, len(labels)):
+#             if df.at[labels[i], labels[j]] >= .99999:
+#                 pass
+#             elif df.at[labels[i], labels[j]] <= 0:
+#                 pass
+#             elif df.at[labels[j], labels[i]] <= 0:
+#                 pass
+#             elif df.at[labels[i], labels[j]] >= threshold:
+#                 correlated_features.append((labels[i], labels[j]))
+#
+#     return correlated_features
 
 
-def make_multi_index(column_labels: dict, group_label: dict, nlabels: int, session_language: str = 'en'):
-    """Creates a multi index for the DataFrame"""
-    ""
-    indexes = [(group_label[session_language], column_labels[x]) for x in range(1, nlabels+1)]
-    
-    return pd.MultiIndex.from_tuples(indexes)
+# def make_multi_index(column_labels: dict, group_label: dict, nlabels: int, session_language: str = 'en'):
+#     """Creates a multi index for the DataFrame"""
+#     ""
+#     indexes = [(group_label[session_language], column_labels[x]) for x in range(1, nlabels+1)]
+#
+#     return pd.MultiIndex.from_tuples(indexes)
 
 
 class LandUseReport:
@@ -184,7 +183,7 @@ class LandUseReport:
         self.features = features
         self.feature_variables = list(self.features.keys())
         self.intersects = None
-
+        self.df_cont = None
         self.merge_land_use_to_survey_data()
         self.df_cat = self.categorize_columns(self.df_cont.copy())
 

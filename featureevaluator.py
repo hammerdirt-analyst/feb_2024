@@ -217,7 +217,6 @@ class FeatureEvaluation:
         
         cluster_summary = d.groupby('clusters').agg({x:'mean' for x in some_features}).reset_index()
         cluster_summary = self.unscale_values(cluster_summary, columns=some_features)
-        cluster_summar = pd.DataFrame(cluster_summary, columns=some_features)
         cluster_summary['pcs/m'] = means_unscaled
         cluster_summary['samples'] = counts.values
         cluster_summary = cluster_summary[['samples', 'pcs/m', *cluster_summary.columns[:-2]]]

@@ -6,12 +6,7 @@ root: titlepage
 parts:
   - caption: Data and reporting
     chapters:
-    - file: bern
-    - file: geneve
-    - file: valais
-    - file: vaud
-    - file: zurich
-    - file: combined
+    - file: new_report
     - file: use_cases
     - file: project
     
@@ -26,9 +21,6 @@ parts:
     - file: the_survey_data
     - file: extracting_topo_data
     - file: multinomial_conjugate
-
-
-
 
 
    

@@ -40,136 +40,40 @@ def forecast_weighted_prior(land_use_profile, catalog_data, bin_labels, weighted
     return sample_values, amodel, summary, g
 
 
-def make_report_objects(df):
-    # make a survey report and a landuse report
-    # from filtered data
-    this_report = reports.SurveyReport(dfc=df)
-
-    # generate the parameters for the landuse report
-    target_df = this_report.sample_results
-    features = geospatial.collect_topo_data(locations=target_df.location.unique())
-
-    # make a landuse report
-    this_land_use = geospatial.LandUseReport(target_df, features)
-
-    return this_report, this_land_use
+# def make_report_objects(df):
+#     # make a survey report and a landuse report
+#     # from filtered data
+#     this_report = reports.SurveyReport(dfc=df)
+#
+#     # generate the parameters for the landuse report
+#     target_df = this_report.sample_results
+#     features = geospatial.collect_topo_data(locations=target_df.location.unique())
+#
+#     # make a landuse report
+#     this_land_use = geospatial.LandUseReport(target_df, features)
+#
+#     return this_report, this_land_use
 
 def weighted_prior(land_use_profile, catalog_data, bin_labels, columns, ncols=1):
     sampled_data = []
+
     for feature in columns[:ncols]:
+
         for i in bin_labels:
             v = land_use_profile.loc[i, feature]
+
             if v > 0:
                 sampler = catalog_data[catalog_data[feature] == i]
-                samples = sampler.sample(v, replace=True)
-                sampled_data.append(samples)
+                if len(sampler) > 0:
+
+                    samples = sampler.sample(v, replace=True)
+                    sampled_data.append(samples)
     sampled_data_df = pd.concat(sampled_data).drop_duplicates().reset_index(drop=True)
     return sampled_data_df
 
 
-def create_mask(data, query_params):
-    # create a boolean mask for the data based on query parameters including date range.
-    # initialize the mask to True for all rows
-    mask = pd.Series([True] * len(data))
-
-    for key, value in query_params.items():
-        if key == 'date_range':
-            start_date = pd.to_datetime(value['start'])
-            end_date = pd.to_datetime(value['end'])
-            mask &= (data['date'] >= start_date) & (data['date'] <= end_date)
-        elif key in data.columns:
-            mask &= (data[key] == value)
-        else:
-            raise KeyError(f"Key '{key}' not found in data columns")
-
-    return mask
 
 
-def filter_data(datai, query_params):
-    # filter the data based on the query parameters including date range.
-
-    if 'date' in datai.columns:
-        datai['date'] = pd.to_datetime(datai['date'])
-    else:
-        raise KeyError("The dataframe does not contain a 'date' column ")
-
-    # mask using the create_mask function
-    mask = create_mask(datai, query_params)
-    # Apply the mask to the dataframe
-    filtered_data = datai[mask].copy()
-
-    return filtered_data, filtered_data.location.unique()
-
-
-def check_params(params, data):
-    # check if the query parameters are valid and return the filtered data
-    # and unique locations if the query is valid. Otherwise, return an error message.
-    # and empty arrays.
-
-    try:
-        a, b = filter_data(data, query_params=params)
-        if len(b) == 0:
-            message = "No survey results found. "
-            return [], [], message
-        message = 'ok'
-        return a, b, message
-
-    except Exception as e:
-        message = f"An error occurred: {str(e)}. Please check your query parameters and try again. "
-        return [], [], message
-
-
-def reports_and_forecast(likelihood_params: dict, prior_params: dict, ldata: pd.DataFrame,
-                         feature_columns: [] = None, samples_needed: int = 100, other_data: pd.DataFrame = None):
-    # utility function to make reports and forecasts. The function checks the likelihood and prior parameters
-    # and returns the reports and forecasts if the parameters are valid. Otherwise, the function returns any available
-    # reports and a boolean flag indicating that a forecast was not made.
-
-    comments = ''
-    make_forecast = True
-    ldi, l_locations, c = check_params(likelihood_params, ldata.copy())
-    comments += f' {c}'
-    if c != 'ok':
-        make_forecast = False
-        this_report, this_land_use = 'No likelihood', 'No likelihood'
-    else:
-        this_report, this_land_use = make_report_objects(ldi)
-    pdf, p_locations, c = check_params(prior_params, ldata.copy())
-    comments += f' {c}'
-    if c != 'ok':
-        make_forecast = False
-        prior_report, prior_land_use = 'No prior', 'No prior'
-    else:
-        prior_report, prior_land_use = make_report_objects(pdf)
-
-    if make_forecast:
-        prr = prior_report.sample_results.groupby('sample_id')['pcs/m'].sum()
-
-        lkl = this_report.sample_results.groupby('sample_id')['pcs/m'].sum()
-        max_range = np.quantile(lkl.values, .99)
-
-        # consider all values
-        i = MulitnomialDirichlet('max value', prr, lkl)
-
-        # limit to the 99th percentile
-        limited = lkl[lkl <= max_range]
-        h  = MulitnomialDirichlet('99th percentile', limited, prr)
-        comments += c
-    else:
-        i = 'no forecast'
-        h = 'no forecast'
-        comments += 'No forecast was made.'
-    results = dict(
-        this_report=this_report,
-        this_land_use=this_land_use,
-        prior_report=prior_report,
-        prior_land_use=prior_land_use,
-        posterior_no_limit=i,
-        posterior_99=h,
-        comments=comments
-    )
-
-    return results
 
 
 class MulitnomialDirichlet:
@@ -255,13 +159,13 @@ class MulitnomialDirichlet:
         hdi_min, hdi_max = self.compute_hdi()
         percentiles = self.compute_percentiles()
         q_labels = {session_config.quantile_labels[i]: percentiles[i] for i in range(len(percentiles))}
-        max_observed = max(self.prior_data.max(), self.likelihood_data.max())
+        max_predicted = max(self.posterior_samples)
         stats_dict = {
-            "code": self.code,
             "average": average,
             **{'hdi min': hdi_min, 'hdi max': hdi_max},
             **q_labels,
-            "max_observed": max_observed
+            "max predicted": max_predicted
         }
-        results = pd.DataFrame([stats_dict])
-        return results
+        # results = pd.DataFrame([stats_dict])
+        result = pd.DataFrame(stats_dict.values(), index=list(stats_dict.keys()), columns=['expected'])
+        return result

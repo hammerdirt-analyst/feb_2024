@@ -25,3 +25,5 @@ ipython_config.py
 *.code-workspace
 .history
 .vscode
+.env
+

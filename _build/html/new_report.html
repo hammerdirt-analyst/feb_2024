@@ -1,0 +1,2313 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Forecast &#8212; Project 2025</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'new_report';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Use cases" href="use_cases.html" />
+    <link rel="prev" title="The litter assistant" href="titlepage.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="titlepage.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Project 2025</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="titlepage.html">
+                    The litter assistant
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data and reporting</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Forecast</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="use_cases.html">Use cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">Proposal</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Methods and classes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="a_report_class.html">Survey report class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="landuse_class.html">Land use class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forecasts.html">Grid forecast class</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="the_survey_data.html">The survey data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extracting_topo_data.html">Extracting land use values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multinomial_conjugate.html">Empirical Bayes</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/new_report.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Forecast</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Forecast</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#lakes-and-rivers-sampled-all-data">Lakes and rivers sampled - all data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#municipal-results-lakes-and-rivers">Municipal results lakes and rivers</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<h1 class="rubric" id="id1"><span id="canton-bern"></span>Canton Bern</h1>
+<p><strong>Density of trash along lakes and rivers</strong></p>
+<p>This is a sample cantonal report. The structure and the format are based off of the federal report, (<a class="reference external" href="https://hammerdirt-analyst.github.io/IQAASL-End-0f-Sampling-2021/">IQAASL</a>). This version is intended for use as a decsion support tool. Thus, the user is expected to be familiar with the results in the federal report and the methods described in the <em>Guide for Monitoring Marine Litter on European Seas</em>
+(<a class="reference external" href="https://mcc.jrc.ec.europa.eu/main/dev.py?N=41&amp;amp;O=439&amp;amp;titre_chap=TG%20Litter&amp;amp;titre_page=Guidance%20for%20the%20Monitoring%20of%20Marine%20Litter">The guide</a>).</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Initial assessments: stakeholder discussion and priorities.</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Stakeholders should consider the following questions while consulting the report:</p>
+<p class="sd-card-text"><strong>Sampling distribution:</strong></p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Are the major rivers and lakes included?</p></li>
+<li><p class="sd-card-text"><strong>Does the sampling distribution reflect the topography and land-use of the canton?</strong></p></li>
+<li><p class="sd-card-text"><strong>Are the municipalities of strategic importance to the canton included?</strong></p></li>
+<li><p class="sd-card-text"><strong>Are their locations in the canton that should have been surveyed, according to cantonal priorities?</strong></p></li>
+</ol>
+<p class="sd-card-text"><strong>Other sources of information:</strong></p>
+<ol class="arabic simple">
+<li><p class="sd-card-text"><strong>How do these results compare to assessments from other sources of information ?</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text">EAWAG, EMPA other university or govt institutions</p></li>
+<li><p class="sd-card-text">NGOs or volunteer assessments</p></li>
+<li><p class="sd-card-text">Municipal and cantonal audits</p></li>
+<li><p class="sd-card-text">Are these information sources comparable ?</p></li>
+<li><p class="sd-card-text">What other sources of information are available ?</p></li>
+</ul>
+</li>
+<li><p class="sd-card-text">Combined with t</p>
+<ul class="simple">
+<li><p class="sd-card-text">In your opinion how can these different sources be</p></li>
+</ul>
+</li>
+</ol>
+<p class="sd-card-text"><strong>Survey results:</strong></p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Was their more or less observed in 2021 vs the prior results?</p>
+<ul class="simple">
+<li><p class="sd-card-text">What do the forecasts indicate?</p></li>
+<li><p class="sd-card-text">Does this align with your personal experience?</p></li>
+</ul>
+</li>
+</ol>
+<p class="sd-card-text"><strong>Objects of interest:</strong></p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Are the <em>most common</em> currently the focus of reduction or prevention campaigns?</p>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>How does the canton decide priorties in this regard?</strong></p></li>
+<li><p class="sd-card-text"><strong>Did or does the object appear in any regional action plan or strategy?</strong></p></li>
+</ul>
+</li>
+<li><p class="sd-card-text"><strong>For objects that are the focus of prevention or reduction campaigns:</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text">Are they on the <em>most common objects</em> list now?</p></li>
+<li><p class="sd-card-text">Do they appear in the inventory ? What % of the total are they? How often are they found ?</p></li>
+<li><p class="sd-card-text">What excatly was the mechanism or process that was intended to reduce the presence of the object?</p></li>
+</ul>
+</li>
+<li><p class="sd-card-text">Are their products of regional interest that should be included in the cantonal report?</p></li>
+</ol>
+<p class="sd-card-text"><strong>With respect to the amount of resources attributed to prevention and mitigation:</strong></p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Are these results in line with expectations?</p></li>
+<li><p class="sd-card-text">How do you feel the current strategy will help reduce the observed quantities?</p></li>
+</ol>
+</div>
+</details><div class="cell tag_remove-input docutils container">
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Map of survey locations</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 sd-p-2 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<img alt="_images/a6ebbbcb0624c0be6e7a4f5957e7fa763651b139bf5da7efaf464eab387f89c1.png" src="_images/a6ebbbcb0624c0be6e7a4f5957e7fa763651b139bf5da7efaf464eab387f89c1.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</details><h2 class="rubric" id="vital-statistics"><span id="bern-vital-statistics"></span>Vital statistics</h2>
+<p>Use case: <a class="reference internal" href="use_cases.html#more-or-less"><span class="std std-ref">Is their more or less ?</span></a></p>
+<p>Ref : <a class="reference internal" href="a_report_class.html#surveyreporter"><span class="std std-ref">Survey report class</span></a></p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row sd-col-12 sd-col-xs-12 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">2017 - 2021</p>
+</div>
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong>Features</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p class="sd-card-text"></p></th>
+<th class="head text-right"><p class="sd-card-text">lake</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">count</p></td>
+<td class="text-right"><p class="sd-card-text">3</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="sd-card-text"><strong>Administration</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p class="sd-card-text"></p></th>
+<th class="head text-right"><p class="sd-card-text">count</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">location</p></td>
+<td class="text-right"><p class="sd-card-text">19</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">city</p></td>
+<td class="text-right"><p class="sd-card-text">13</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">canton</p></td>
+<td class="text-right"><p class="sd-card-text">1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">parent_boundary</p></td>
+<td class="text-right"><p class="sd-card-text">1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-12 sd-col-xs-12 sd-col-sm-8 sd-col-md-8 sd-col-lg-8 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-none docutils">
+<div class="sd-card-body docutils">
+<img alt="_images/eafa2b53189e8c3f752fb112996c81d2d4173727331459b6c26033a911f646b2.png" src="_images/eafa2b53189e8c3f752fb112996c81d2d4173727331459b6c26033a911f646b2.png" />
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Survey total pcs/m 2020 - 2021 versus 2015 - 2019. All locations considered.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-12 sd-col-lg-12 docutils">
+<p><strong>Material composition</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-left"><p>chemicals</p></th>
+<th class="head text-left"><p>cloth</p></th>
+<th class="head text-left"><p>glass</p></th>
+<th class="head text-left"><p>metal</p></th>
+<th class="head text-left"><p>paper</p></th>
+<th class="head text-left"><p>plastic</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>% of total</p></td>
+<td class="text-left"><p>1%</p></td>
+<td class="text-left"><p>1%</p></td>
+<td class="text-left"><p>5%</p></td>
+<td class="text-left"><p>3%</p></td>
+<td class="text-left"><p>2%</p></td>
+<td class="text-left"><p>84%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 sd-p-1 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 docutils">
+<div class="sd-col sd-d-flex-row sd-p-0 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-none docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">2017 - 2021</p>
+</div>
+<div class="sd-card-body docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p class="sd-card-text"></p></th>
+<th class="head text-right"><p class="sd-card-text">result</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">total</p></td>
+<td class="text-right"><p class="sd-card-text">9889</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">nsamples</p></td>
+<td class="text-right"><p class="sd-card-text">98</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">average</p></td>
+<td class="text-right"><p class="sd-card-text">2.81367</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">5th</p></td>
+<td class="text-right"><p class="sd-card-text">0.3685</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">25th</p></td>
+<td class="text-right"><p class="sd-card-text">0.88</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">50th</p></td>
+<td class="text-right"><p class="sd-card-text">1.835</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">75th</p></td>
+<td class="text-right"><p class="sd-card-text">3.69</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">95th</p></td>
+<td class="text-right"><p class="sd-card-text">8.0485</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">std</p></td>
+<td class="text-right"><p class="sd-card-text">2.63184</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">max</p></td>
+<td class="text-right"><p class="sd-card-text">14.8</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-0 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-none docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">2020 - 2021</p>
+</div>
+<div class="sd-card-body docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p class="sd-card-text"></p></th>
+<th class="head text-right"><p class="sd-card-text">result</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">total</p></td>
+<td class="text-right"><p class="sd-card-text">8423</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">nsamples</p></td>
+<td class="text-right"><p class="sd-card-text">74</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">average</p></td>
+<td class="text-right"><p class="sd-card-text">3.08946</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">5th</p></td>
+<td class="text-right"><p class="sd-card-text">0.3895</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">25th</p></td>
+<td class="text-right"><p class="sd-card-text">0.9525</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">50th</p></td>
+<td class="text-right"><p class="sd-card-text">2.145</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">75th</p></td>
+<td class="text-right"><p class="sd-card-text">4.7575</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">95th</p></td>
+<td class="text-right"><p class="sd-card-text">8.602</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">std</p></td>
+<td class="text-right"><p class="sd-card-text">2.85335</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">max</p></td>
+<td class="text-right"><p class="sd-card-text">14.8</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-p-0 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-none docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">2017 - 2019</p>
+</div>
+<div class="sd-card-body docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p class="sd-card-text"></p></th>
+<th class="head text-right"><p class="sd-card-text">result</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">total</p></td>
+<td class="text-right"><p class="sd-card-text">1466</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">nsamples</p></td>
+<td class="text-right"><p class="sd-card-text">24</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">average</p></td>
+<td class="text-right"><p class="sd-card-text">1.96333</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">5th</p></td>
+<td class="text-right"><p class="sd-card-text">0.3615</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">25th</p></td>
+<td class="text-right"><p class="sd-card-text">0.455</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">50th</p></td>
+<td class="text-right"><p class="sd-card-text">1.425</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">75th</p></td>
+<td class="text-right"><p class="sd-card-text">3.085</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">95th</p></td>
+<td class="text-right"><p class="sd-card-text">4.187</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">std</p></td>
+<td class="text-right"><p class="sd-card-text">1.49082</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">max</p></td>
+<td class="text-right"><p class="sd-card-text">5.48</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">How did we get this data ?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 sd-p-2 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">All samples Bern: 2015 - 2021</p>
+</div>
+<div class="sd-card-body docutils">
+<img alt="_images/39cbcbbaee12e400f903272eed7a70fdb80c2fd3c9064aad2ae3ac0511b88690.png" src="_images/39cbcbbaee12e400f903272eed7a70fdb80c2fd3c9064aad2ae3ac0511b88690.png" />
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">The data is a combination of observations from variety of groups in Switerland since 2015. The observations were recorded using an interpretation of the <em>Guide for Monitoring Marine Litter on European Seas</em> <a class="reference external" href="https://mcc.jrc.ec.europa.eu/main/dev.py?N=41&amp;amp;O=439&amp;amp;titre_chap=TG%20Litter&amp;amp;titre_page=Guidance%20for%20the%20Monitoring%20of%20Marine%20Litter">The guide</a>. The guide and the monitoring of beach litter are part of decades of research, here is the brief history <a class="reference external" href="https://link.springer.com/chapter/10.1007/978-3-319-16510-3_1">A Brief History of Marine Litter Research</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p class="sd-card-text"><strong>Common sense guidance:</strong></p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">The data should be considered as a reasonable estimate of the minimum amount of trash on the ground at the time of the survey.</p></li>
+<li><p class="sd-card-text">There are many sources of variance. We have considered the following:</p>
+<ul class="simple">
+<li><p class="sd-card-text">litter density between sampling groups.</p></li>
+<li><p class="sd-card-text">litter density with respect to topographical features.</p></li>
+</ul>
+</li>
+<li><p class="sd-card-text">There are differences in detect-ability and appearance for items of the same classification that are due to the effects of decomposition.</p></li>
+<li><p class="sd-card-text">Many surveyors are volunteers and have different levels of experience or physical constraints that limit what will actually be collected and counted.</p></li>
+</ol>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">How to make a report</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Survey and Land use</strong></p>
+<p class="sd-card-text">A report is the implementation of a <code class="docutils literal notranslate"><span class="pre">SurveyReport</span></code> and a <code class="docutils literal notranslate"><span class="pre">LandUseReport</span></code>. The <code class="docutils literal notranslate"><span class="pre">SurveyReport</span></code> is the basic
+element and does the initial aggregating and descriptive statistics for a query.</p>
+<p class="sd-card-text">The land-use-report accepts <code class="docutils literal notranslate"><span class="pre">SurveyReport.sample_results</span></code> and assigns the land-use attributes to the record. The
+land-use-report provides the baseline assessment of litter density with reference to the surrounding environment.</p>
+<p class="sd-card-text">The assessment accepts as variables the proportion of available space that a topographical feature occupies in a
+circle of <span class="math notranslate nohighlight">\(\pi r² \text{ where r = 1 500 meters}\)</span> and the center of that circle is the survey location.
+These proportions are compared to the <code class="docutils literal notranslate"><span class="pre">average</span> <span class="pre">pieces</span> <span class="pre">per</span> <span class="pre">meter</span></code> for an object or group of objects.</p>
+<p class="sd-card-text"><strong>Create a report</strong></p>
+<p class="sd-card-text">A report can be intiated by providing the name of the canton. If your canton does not appear this is because we have no data. The prior dates will be calculated automatically, by taking all data prior to the start date of the querry.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">reports</span>
+<span class="kn">import</span> <span class="nn">geospatial</span>
+<span class="kn">import</span> <span class="nn">gridforecast</span>
+
+<span class="c1"># suppose you have defined your data into df</span>
+<span class="n">observed_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;start&#39;</span><span class="p">:</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;end&#39;</span><span class="p">:</span><span class="s1">&#39;2021-12-31&#39;</span><span class="p">}</span>
+
+<span class="c1"># everything that was seen before</span>
+<span class="n">prior_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;start&#39;</span><span class="p">:</span><span class="s1">&#39;2015-11-15&#39;</span><span class="p">,</span> <span class="s1">&#39;end&#39;</span><span class="p">:</span><span class="s1">&#39;2019-12-31&#39;</span><span class="p">}</span>
+
+<span class="c1"># name the canton</span>
+<span class="n">canton</span> <span class="o">=</span> <span class="s1">&#39;Bern&#39;</span>
+
+<span class="c1"># define the data of interest</span>
+<span class="n">data_of_interest</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;canton&#39;</span><span class="p">:</span><span class="n">canton</span><span class="p">,</span> <span class="s1">&#39;date_range&#39;</span><span class="p">:</span><span class="n">observed_dates</span><span class="p">}</span>
+
+<span class="c1"># load the data</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">session_config</span><span class="o">.</span><span class="n">collect_survey_data</span><span class="p">()</span>
+
+<span class="c1"># filter the data. </span>
+<span class="n">filtered_data</span><span class="p">,</span> <span class="n">locations</span> <span class="o">=</span> <span class="n">gridforeacast</span><span class="o">.</span><span class="n">filter_data</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">data_of_interest</span><span class="p">)</span>
+
+<span class="c1"># make a survey report</span>
+<span class="n">this_report</span> <span class="o">=</span> <span class="n">reports</span><span class="o">.</span><span class="n">SurveyReport</span><span class="p">(</span><span class="n">dfc</span><span class="o">=</span><span class="n">filtered_data</span><span class="p">)</span>
+
+<span class="c1"># generate the parameters for the landuse report</span>
+<span class="n">target_df</span> <span class="o">=</span> <span class="n">this_report</span><span class="o">.</span><span class="n">sample_results</span>
+<span class="n">features</span> <span class="o">=</span> <span class="n">geospatial</span><span class="o">.</span><span class="n">collect_topo_data</span><span class="p">(</span><span class="n">locations</span><span class="o">=</span><span class="n">target_df</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+
+<span class="c1"># make a landuse report</span>
+<span class="n">this_land_use</span> <span class="o">=</span> <span class="n">geospatial</span><span class="o">.</span><span class="n">LandUseReport</span><span class="p">(</span><span class="n">target_df</span><span class="p">,</span> <span class="n">features</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sd-card-text">Each report and the inference method are documented: <a class="reference internal" href="a_report_class.html#surveyreporter"><span class="std std-ref">SurveyReport</span></a>, <a class="reference internal" href="landuse_class.html#landusereporter"><span class="std std-ref">LandUseReport</span></a>, <a class="reference internal" href="multinomial_conjugate.html#gridforecaster"><span class="std std-ref">GridForecaster</span></a></p>
+</div>
+</details><h2 class="rubric" id="bern-most-common-objects-2020-2021"><span id="bern-most-common"></span>Bern most common objects 2020 - 2021</h2>
+<p>Use case: <a class="reference internal" href="use_cases.html#use-case-observed"><span class="std std-ref">Interpret observed values</span></a>, <a class="reference internal" href="use_cases.html#more-or-less"><span class="std std-ref">Is their more or less ?</span></a>, <a class="reference internal" href="use_cases.html#indentified-items"><span class="std std-ref">What % are identified</span></a></p>
+<p>Ref : <a class="reference internal" href="a_report_class.html#surveyreporter"><span class="std std-ref">Survey report class</span></a></p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+All data</label><div class="sd-tab-content docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<p><strong>The most common objects account for 68% of all objects</strong></p>
+<p>The most common objects from the selected data. The most common objects are a combination of the top ten most abundant objects and those objects that are found in more than 50% of the samples. Some objects are found frequently but at low quantities.Other objects are found in fewer samples but at higher quantities.</p>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-8 sd-col-xs-8 sd-col-sm-8 sd-col-md-8 sd-col-lg-8 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-none docutils">
+<div class="sd-card-body docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p class="sd-card-text">code</p></th>
+<th class="head text-right"><p class="sd-card-text">quantity</p></th>
+<th class="head text-right"><p class="sd-card-text">pcs/m</p></th>
+<th class="head text-right"><p class="sd-card-text">% of total</p></th>
+<th class="head text-right"><p class="sd-card-text">rate</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">G27</p></td>
+<td class="text-right"><p class="sd-card-text">1671</p></td>
+<td class="text-right"><p class="sd-card-text">0.423708</p></td>
+<td class="text-right"><p class="sd-card-text">0.185091</p></td>
+<td class="text-right"><p class="sd-card-text">0.808989</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">Gfrags</p></td>
+<td class="text-right"><p class="sd-card-text">1323</p></td>
+<td class="text-right"><p class="sd-card-text">0.45573</p></td>
+<td class="text-right"><p class="sd-card-text">0.146544</p></td>
+<td class="text-right"><p class="sd-card-text">0.88764</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">G67</p></td>
+<td class="text-right"><p class="sd-card-text">686</p></td>
+<td class="text-right"><p class="sd-card-text">0.237753</p></td>
+<td class="text-right"><p class="sd-card-text">0.0759858</p></td>
+<td class="text-right"><p class="sd-card-text">0.775281</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">G30</p></td>
+<td class="text-right"><p class="sd-card-text">589</p></td>
+<td class="text-right"><p class="sd-card-text">0.186292</p></td>
+<td class="text-right"><p class="sd-card-text">0.0652415</p></td>
+<td class="text-right"><p class="sd-card-text">0.797753</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">Gfoams</p></td>
+<td class="text-right"><p class="sd-card-text">474</p></td>
+<td class="text-right"><p class="sd-card-text">0.12191</p></td>
+<td class="text-right"><p class="sd-card-text">0.0525033</p></td>
+<td class="text-right"><p class="sd-card-text">0.617978</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">G200</p></td>
+<td class="text-right"><p class="sd-card-text">348</p></td>
+<td class="text-right"><p class="sd-card-text">0.121685</p></td>
+<td class="text-right"><p class="sd-card-text">0.0385467</p></td>
+<td class="text-right"><p class="sd-card-text">0.651685</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">G941</p></td>
+<td class="text-right"><p class="sd-card-text">261</p></td>
+<td class="text-right"><p class="sd-card-text">0.0869663</p></td>
+<td class="text-right"><p class="sd-card-text">0.0289101</p></td>
+<td class="text-right"><p class="sd-card-text">0.494382</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">G74</p></td>
+<td class="text-right"><p class="sd-card-text">240</p></td>
+<td class="text-right"><p class="sd-card-text">0.0335714</p></td>
+<td class="text-right"><p class="sd-card-text">0.026584</p></td>
+<td class="text-right"><p class="sd-card-text">0.775281</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">Gcaps</p></td>
+<td class="text-right"><p class="sd-card-text">227</p></td>
+<td class="text-right"><p class="sd-card-text">0.0652809</p></td>
+<td class="text-right"><p class="sd-card-text">0.025144</p></td>
+<td class="text-right"><p class="sd-card-text">0.595506</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">G112</p></td>
+<td class="text-right"><p class="sd-card-text">196</p></td>
+<td class="text-right"><p class="sd-card-text">0.0538202</p></td>
+<td class="text-right"><p class="sd-card-text">0.0217102</p></td>
+<td class="text-right"><p class="sd-card-text">0.325843</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">G89</p></td>
+<td class="text-right"><p class="sd-card-text">160</p></td>
+<td class="text-right"><p class="sd-card-text">0.0566292</p></td>
+<td class="text-right"><p class="sd-card-text">0.0177226</p></td>
+<td class="text-right"><p class="sd-card-text">0.516854</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+Lakes</label><div class="sd-tab-content docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<p><strong>The most common objects account for 74% of all objects</strong></p>
+<p>The most common objects from the selected data. The most common objects are a combination of the top ten most abundant objects and those objects that are found in more than 50% of the samples. Some objects are found frequently but at low quantities.Other objects are found in fewer samples but at higher quantities.</p>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-8 sd-col-xs-8 sd-col-sm-8 sd-col-md-8 sd-col-lg-8 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-none docutils">
+<div class="sd-card-body docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p class="sd-card-text">code</p></th>
+<th class="head text-right"><p class="sd-card-text">quantity</p></th>
+<th class="head text-right"><p class="sd-card-text">pcs/m</p></th>
+<th class="head text-right"><p class="sd-card-text">% of total</p></th>
+<th class="head text-right"><p class="sd-card-text">rate</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">G27</p></td>
+<td class="text-right"><p class="sd-card-text">1563</p></td>
+<td class="text-right"><p class="sd-card-text">0.475676</p></td>
+<td class="text-right"><p class="sd-card-text">0.185563</p></td>
+<td class="text-right"><p class="sd-card-text">0.837838</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">Gfrags</p></td>
+<td class="text-right"><p class="sd-card-text">1283</p></td>
+<td class="text-right"><p class="sd-card-text">0.535676</p></td>
+<td class="text-right"><p class="sd-card-text">0.152321</p></td>
+<td class="text-right"><p class="sd-card-text">0.945946</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">G67</p></td>
+<td class="text-right"><p class="sd-card-text">661</p></td>
+<td class="text-right"><p class="sd-card-text">0.272432</p></td>
+<td class="text-right"><p class="sd-card-text">0.0784756</p></td>
+<td class="text-right"><p class="sd-card-text">0.864865</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">G30</p></td>
+<td class="text-right"><p class="sd-card-text">565</p></td>
+<td class="text-right"><p class="sd-card-text">0.21527</p></td>
+<td class="text-right"><p class="sd-card-text">0.0670782</p></td>
+<td class="text-right"><p class="sd-card-text">0.824324</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">Gfoams</p></td>
+<td class="text-right"><p class="sd-card-text">462</p></td>
+<td class="text-right"><p class="sd-card-text">0.142973</p></td>
+<td class="text-right"><p class="sd-card-text">0.0548498</p></td>
+<td class="text-right"><p class="sd-card-text">0.72973</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">G200</p></td>
+<td class="text-right"><p class="sd-card-text">319</p></td>
+<td class="text-right"><p class="sd-card-text">0.136622</p></td>
+<td class="text-right"><p class="sd-card-text">0.0378725</p></td>
+<td class="text-right"><p class="sd-card-text">0.716216</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">G941</p></td>
+<td class="text-right"><p class="sd-card-text">249</p></td>
+<td class="text-right"><p class="sd-card-text">0.101081</p></td>
+<td class="text-right"><p class="sd-card-text">0.0295619</p></td>
+<td class="text-right"><p class="sd-card-text">0.527027</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">G74</p></td>
+<td class="text-right"><p class="sd-card-text">227</p></td>
+<td class="text-right"><p class="sd-card-text">0.0363971</p></td>
+<td class="text-right"><p class="sd-card-text">0.02695</p></td>
+<td class="text-right"><p class="sd-card-text">0.891892</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">Gcaps</p></td>
+<td class="text-right"><p class="sd-card-text">216</p></td>
+<td class="text-right"><p class="sd-card-text">0.0747297</p></td>
+<td class="text-right"><p class="sd-card-text">0.0256441</p></td>
+<td class="text-right"><p class="sd-card-text">0.648649</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">G112</p></td>
+<td class="text-right"><p class="sd-card-text">186</p></td>
+<td class="text-right"><p class="sd-card-text">0.0618919</p></td>
+<td class="text-right"><p class="sd-card-text">0.0220824</p></td>
+<td class="text-right"><p class="sd-card-text">0.364865</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">G89</p></td>
+<td class="text-right"><p class="sd-card-text">159</p></td>
+<td class="text-right"><p class="sd-card-text">0.0677027</p></td>
+<td class="text-right"><p class="sd-card-text">0.0188769</p></td>
+<td class="text-right"><p class="sd-card-text">0.608108</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">G904</p></td>
+<td class="text-right"><p class="sd-card-text">113</p></td>
+<td class="text-right"><p class="sd-card-text">0.0491892</p></td>
+<td class="text-right"><p class="sd-card-text">0.0134156</p></td>
+<td class="text-right"><p class="sd-card-text">0.527027</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">G95</p></td>
+<td class="text-right"><p class="sd-card-text">107</p></td>
+<td class="text-right"><p class="sd-card-text">0.04</p></td>
+<td class="text-right"><p class="sd-card-text">0.0127033</p></td>
+<td class="text-right"><p class="sd-card-text">0.527027</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">G25</p></td>
+<td class="text-right"><p class="sd-card-text">106</p></td>
+<td class="text-right"><p class="sd-card-text">0.0516216</p></td>
+<td class="text-right"><p class="sd-card-text">0.0125846</p></td>
+<td class="text-right"><p class="sd-card-text">0.513514</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">G177</p></td>
+<td class="text-right"><p class="sd-card-text">89</p></td>
+<td class="text-right"><p class="sd-card-text">0.0331081</p></td>
+<td class="text-right"><p class="sd-card-text">0.0105663</p></td>
+<td class="text-right"><p class="sd-card-text">0.5</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Rivers</label><div class="sd-tab-content docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-column sd-col-4 sd-col-xs-4 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
+<p><strong>The most common objects account for 65% of all objects</strong></p>
+<p>The most common objects from the selected data. The most common objects are a combination of the top ten most abundant objects and those objects that are found in more than 50% of the samples. Some objects are found frequently but at low quantities.Other objects are found in fewer samples but at higher quantities.</p>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-8 sd-col-xs-8 sd-col-sm-8 sd-col-md-8 sd-col-lg-8 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-none docutils">
+<div class="sd-card-body docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p class="sd-card-text">code</p></th>
+<th class="head text-right"><p class="sd-card-text">quantity</p></th>
+<th class="head text-right"><p class="sd-card-text">pcs/m</p></th>
+<th class="head text-right"><p class="sd-card-text">% of total</p></th>
+<th class="head text-right"><p class="sd-card-text">rate</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">G98</p></td>
+<td class="text-right"><p class="sd-card-text">117</p></td>
+<td class="text-right"><p class="sd-card-text">0.292</p></td>
+<td class="text-right"><p class="sd-card-text">0.193388</p></td>
+<td class="text-right"><p class="sd-card-text">0.333333</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">G27</p></td>
+<td class="text-right"><p class="sd-card-text">108</p></td>
+<td class="text-right"><p class="sd-card-text">0.167333</p></td>
+<td class="text-right"><p class="sd-card-text">0.178512</p></td>
+<td class="text-right"><p class="sd-card-text">0.666667</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">Gfrags</p></td>
+<td class="text-right"><p class="sd-card-text">40</p></td>
+<td class="text-right"><p class="sd-card-text">0.0613333</p></td>
+<td class="text-right"><p class="sd-card-text">0.0661157</p></td>
+<td class="text-right"><p class="sd-card-text">0.6</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">G200</p></td>
+<td class="text-right"><p class="sd-card-text">29</p></td>
+<td class="text-right"><p class="sd-card-text">0.048</p></td>
+<td class="text-right"><p class="sd-card-text">0.0479339</p></td>
+<td class="text-right"><p class="sd-card-text">0.333333</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">G67</p></td>
+<td class="text-right"><p class="sd-card-text">25</p></td>
+<td class="text-right"><p class="sd-card-text">0.0666667</p></td>
+<td class="text-right"><p class="sd-card-text">0.0413223</p></td>
+<td class="text-right"><p class="sd-card-text">0.333333</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">G30</p></td>
+<td class="text-right"><p class="sd-card-text">24</p></td>
+<td class="text-right"><p class="sd-card-text">0.0433333</p></td>
+<td class="text-right"><p class="sd-card-text">0.0396694</p></td>
+<td class="text-right"><p class="sd-card-text">0.666667</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">G144</p></td>
+<td class="text-right"><p class="sd-card-text">17</p></td>
+<td class="text-right"><p class="sd-card-text">0.0306667</p></td>
+<td class="text-right"><p class="sd-card-text">0.0280992</p></td>
+<td class="text-right"><p class="sd-card-text">0.0666667</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">G74</p></td>
+<td class="text-right"><p class="sd-card-text">13</p></td>
+<td class="text-right"><p class="sd-card-text">0.0122222</p></td>
+<td class="text-right"><p class="sd-card-text">0.0214876</p></td>
+<td class="text-right"><p class="sd-card-text">0.2</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p class="sd-card-text">G941</p></td>
+<td class="text-right"><p class="sd-card-text">12</p></td>
+<td class="text-right"><p class="sd-card-text">0.0173333</p></td>
+<td class="text-right"><p class="sd-card-text">0.0198347</p></td>
+<td class="text-right"><p class="sd-card-text">0.333333</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p class="sd-card-text">Gfoams</p></td>
+<td class="text-right"><p class="sd-card-text">12</p></td>
+<td class="text-right"><p class="sd-card-text">0.018</p></td>
+<td class="text-right"><p class="sd-card-text">0.0198347</p></td>
+<td class="text-right"><p class="sd-card-text">0.0666667</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h2 class="rubric" id="bern-land-cover-and-land-use-2020-2021"><span id="bern-landuse"></span>Bern land cover and land use 2020 - 2021</h2>
+<p>Use case: <a class="reference internal" href="use_cases.html#cleanest-beach"><span class="std std-ref">Find the cleanest locations</span></a></p>
+<p>ref: <a class="reference internal" href="landuse_class.html#landusereporter"><span class="std std-ref">Land use report</span></a>, <a class="reference internal" href="extracting_topo_data.html#calculating-land-use"><span class="std std-ref">Calculating land use</span></a></p>
+<p>Land use refers to the measurable topographic features within a cirlce of r = 1 500 m and area = <span class="math notranslate nohighlight">\(\pi r²\)</span> with the survey location in the middle (the buffer). The features, measured in meters squared, are given as a ratio <span class="math notranslate nohighlight">\(\frac{\text{area of feature}}{\text{area of circle}}\)</span>. Thus a location with high percentage of buildings will have a rating or value between 60% and 100%. The pcs/m rating is the average of all locations with a land-use profile of the same rating.</p>
+<p>The land use is further divided in to two groups: cover and use. Cover refers to those topographical features that do not overlap. That is cover features are mutually exclusive, a given area of the buffer is either one or the other of the cover features. The cover features are:</p>
+<ul class="simple">
+<li><p>Buildings, orchards, forest, undefined, vineyards</p></li>
+</ul>
+<p>Use refers to the activities or features that are present in one of the cover features. For example public services can be located within buildings (hospitals, schools) or in a forest (parks, nature areas). The use features are:</p>
+<ul class="simple">
+<li><p>Pubilc services, streets</p></li>
+</ul>
+<p><strong>Streets</strong></p>
+<p>The streets are measured as the length of the road network in the cirlce with r= 1 500 m and area <span class="math notranslate nohighlight">\(\pi r²\)</span> and the survey location in the middle. The lengths for each location are normalized from 0 - 1. Thus in the table below, the locations that have the shortest road net work will be in category 1, the those with a more dense network will be higher.
+<br></br></p>
+<p><strong>Land use/cover:</strong> distribution of samples and pcs/m by % of buffer attributed to the cover or use</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+All lakes and rivers</label><div class="sd-tab-content docutils">
+<p><strong>% of buffer attributed to land use or cover</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p>orchards</p></th>
+<th class="head text-right"><p>vineyards</p></th>
+<th class="head text-right"><p>buildings</p></th>
+<th class="head text-right"><p>forest</p></th>
+<th class="head text-right"><p>undefined</p></th>
+<th class="head text-right"><p>public services</p></th>
+<th class="head text-right"><p>streets</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p>1</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0.303371</p></td>
+<td class="text-right"><p>0.269663</p></td>
+<td class="text-right"><p>0.348315</p></td>
+<td class="text-right"><p>0.977528</p></td>
+<td class="text-right"><p>0.41573</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>2</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0.314607</p></td>
+<td class="text-right"><p>0.640449</p></td>
+<td class="text-right"><p>0.123596</p></td>
+<td class="text-right"><p>0.0224719</p></td>
+<td class="text-right"><p>0.494382</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>3</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0.258427</p></td>
+<td class="text-right"><p>0.0898876</p></td>
+<td class="text-right"><p>0.359551</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0.0674157</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>4</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0.101124</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0.168539</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0.0224719</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>5</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0.0224719</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<br />
+<p><strong>Pieces per meter by % of buffer attributed to land use or cover</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p>orchards</p></th>
+<th class="head text-right"><p>vineyards</p></th>
+<th class="head text-right"><p>buildings</p></th>
+<th class="head text-right"><p>forest</p></th>
+<th class="head text-right"><p>undefined</p></th>
+<th class="head text-right"><p>public services</p></th>
+<th class="head text-right"><p>streets</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p>1</p></td>
+<td class="text-right"><p>2.75809</p></td>
+<td class="text-right"><p>2.75809</p></td>
+<td class="text-right"><p>2.36778</p></td>
+<td class="text-right"><p>3.02</p></td>
+<td class="text-right"><p>3.22355</p></td>
+<td class="text-right"><p>2.81989</p></td>
+<td class="text-right"><p>1.65757</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>2</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>2.525</p></td>
+<td class="text-right"><p>2.85702</p></td>
+<td class="text-right"><p>3.09636</p></td>
+<td class="text-right"><p>0.07</p></td>
+<td class="text-right"><p>4.04227</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>3</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>4.08913</p></td>
+<td class="text-right"><p>1.2675</p></td>
+<td class="text-right"><p>2.63531</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0.993333</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>4</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1.59</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1.81</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0.16</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>5</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1.24</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+Lakes</label><div class="sd-tab-content docutils">
+<p><strong>% of buffer attributed to land use or cover</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p>orchards</p></th>
+<th class="head text-right"><p>vineyards</p></th>
+<th class="head text-right"><p>buildings</p></th>
+<th class="head text-right"><p>forest</p></th>
+<th class="head text-right"><p>undefined</p></th>
+<th class="head text-right"><p>public services</p></th>
+<th class="head text-right"><p>streets</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p>1</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0.310811</p></td>
+<td class="text-right"><p>0.243243</p></td>
+<td class="text-right"><p>0.351351</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0.486486</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>2</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0.378378</p></td>
+<td class="text-right"><p>0.662162</p></td>
+<td class="text-right"><p>0.0810811</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0.513514</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>3</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0.216216</p></td>
+<td class="text-right"><p>0.0945946</p></td>
+<td class="text-right"><p>0.405405</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>4</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0.0675676</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0.162162</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>5</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0.027027</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<br />
+<p><strong>Pieces per meter by % of buffer attributed to land use or cover</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p>orchards</p></th>
+<th class="head text-right"><p>vineyards</p></th>
+<th class="head text-right"><p>buildings</p></th>
+<th class="head text-right"><p>forest</p></th>
+<th class="head text-right"><p>undefined</p></th>
+<th class="head text-right"><p>public services</p></th>
+<th class="head text-right"><p>streets</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p>1</p></td>
+<td class="text-right"><p>3.08946</p></td>
+<td class="text-right"><p>3.08946</p></td>
+<td class="text-right"><p>2.51652</p></td>
+<td class="text-right"><p>3.51444</p></td>
+<td class="text-right"><p>3.74692</p></td>
+<td class="text-right"><p>3.08946</p></td>
+<td class="text-right"><p>1.6975</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>2</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>2.525</p></td>
+<td class="text-right"><p>3.19959</p></td>
+<td class="text-right"><p>4.9</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>4.40816</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>3</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>5.3525</p></td>
+<td class="text-right"><p>1.22571</p></td>
+<td class="text-right"><p>2.638</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>4</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>2.384</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1.88833</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>5</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1.24</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-5">
+Rivers</label><div class="sd-tab-content docutils">
+<p><strong>% of buffer attributed to land use or cover</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p>orchards</p></th>
+<th class="head text-right"><p>vineyards</p></th>
+<th class="head text-right"><p>buildings</p></th>
+<th class="head text-right"><p>forest</p></th>
+<th class="head text-right"><p>undefined</p></th>
+<th class="head text-right"><p>public services</p></th>
+<th class="head text-right"><p>streets</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p>1</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0.266667</p></td>
+<td class="text-right"><p>0.4</p></td>
+<td class="text-right"><p>0.333333</p></td>
+<td class="text-right"><p>0.866667</p></td>
+<td class="text-right"><p>0.0666667</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>2</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0.533333</p></td>
+<td class="text-right"><p>0.333333</p></td>
+<td class="text-right"><p>0.133333</p></td>
+<td class="text-right"><p>0.4</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>3</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0.466667</p></td>
+<td class="text-right"><p>0.0666667</p></td>
+<td class="text-right"><p>0.133333</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0.4</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>4</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0.266667</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0.2</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0.133333</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>5</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<br />
+<p><strong>Pieces per meter by % of buffer attributed to land use or cover</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p>orchards</p></th>
+<th class="head text-right"><p>vineyards</p></th>
+<th class="head text-right"><p>buildings</p></th>
+<th class="head text-right"><p>forest</p></th>
+<th class="head text-right"><p>undefined</p></th>
+<th class="head text-right"><p>public services</p></th>
+<th class="head text-right"><p>streets</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p>1</p></td>
+<td class="text-right"><p>3.08946</p></td>
+<td class="text-right"><p>3.08946</p></td>
+<td class="text-right"><p>2.51652</p></td>
+<td class="text-right"><p>3.51444</p></td>
+<td class="text-right"><p>3.74692</p></td>
+<td class="text-right"><p>3.08946</p></td>
+<td class="text-right"><p>1.6975</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>2</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>2.525</p></td>
+<td class="text-right"><p>3.19959</p></td>
+<td class="text-right"><p>4.9</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>4.40816</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>3</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>5.3525</p></td>
+<td class="text-right"><p>1.22571</p></td>
+<td class="text-right"><p>2.638</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p>4</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>2.384</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1.88833</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p>5</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>1.24</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+<td class="text-right"><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<section id="forecast">
+<span id="bern-forecasts"></span><h1>Forecast<a class="headerlink" href="#forecast" title="Link to this heading">#</a></h1>
+<p>Use case: <a class="reference internal" href="use_cases.html#use-case-forecast"><span class="std std-ref">Interpret forecasted values</span></a></p>
+<p>ref: <a class="reference internal" href="forecasts.html#forecast-class"><span class="std std-ref">Grid forecasts</span></a>, <a class="reference internal" href="multinomial_conjugate.html#gridforecaster"><span class="std std-ref">Empirical Bayes</span></a></p>
+<p>The applied method would best be classified as Empirical Bayes, in the sense that the prior is derived from the data (<a class="reference external" href="https://users.aalto.fi/~ssarkka/pub/cup_book_online_20131111.pdf">Bayesian Filtering and Smoothing</a> or <a class="reference external" href="https://hannig.cloudapps.unc.edu/STOR757Bayes/handouts/PetroneEtAl2014.pdf">Empirical Bayes methods in classical and Bayesian inference</a>).</p>
+<p><strong>Model assumptions</strong></p>
+<ol class="arabic simple">
+<li><p>Locations with similar land use attributes will have similar litter density rates</p></li>
+<li><p>The data is a best estimate of what was present on the day of the survey</p></li>
+<li><p>There are regional differences with respect to the density of specific objects</p></li>
+<li><p>The locations surveyed are maintained by a public administration</p></li>
+</ol>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-6">
+All data</label><div class="sd-tab-content docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-row sd-col-12 sd-col-xs-12 sd-col-sm-5 sd-col-md-5 sd-col-lg-5 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong>Weighted prior:</strong> The weighted prior is a random sample of survey results from locations outside the report area of interest with similar land use configurations. This can be interpreted as the forecast based on the assumption that the current area of interest is similar to anyother area of country.  They are</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-12 sd-col-xs-12 sd-col-sm-7 sd-col-md-7 sd-col-lg-7 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-none docutils">
+<div class="sd-card-body docutils">
+<img alt="_images/965a3160314b030ff35ecaf94a8e2d8b8835e29da0ea8f06655f5607b5947c82.png" src="_images/965a3160314b030ff35ecaf94a8e2d8b8835e29da0ea8f06655f5607b5947c82.png" />
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Cumulative distribution of observed, sampling history and forecasts using to different priors.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p><strong>Given the 99% interval of the likelihood</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-right"><p>expected</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>average</p></td>
+<td class="text-right"><p>2.3653</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>hdi min</p></td>
+<td class="text-right"><p>0.1</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>hdi max</p></td>
+<td class="text-right"><p>8.21</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>5th</p></td>
+<td class="text-right"><p>0.16</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>25th</p></td>
+<td class="text-right"><p>0.53</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>50th</p></td>
+<td class="text-right"><p>1.72</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>75th</p></td>
+<td class="text-right"><p>3.32</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>95th</p></td>
+<td class="text-right"><p>7.9345</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>max predicted</p></td>
+<td class="text-right"><p>9.68</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><strong>Given the entire interval of the likelihood</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-right"><p>expected</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>average</p></td>
+<td class="text-right"><p>2.3975</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>hdi min</p></td>
+<td class="text-right"><p>0.06</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>hdi max</p></td>
+<td class="text-right"><p>10.47</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>5th</p></td>
+<td class="text-right"><p>0.1</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>25th</p></td>
+<td class="text-right"><p>0.3525</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>50th</p></td>
+<td class="text-right"><p>1.16</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>75th</p></td>
+<td class="text-right"><p>3.16</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>95th</p></td>
+<td class="text-right"><p>9.7195</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>max predicted</p></td>
+<td class="text-right"><p>13.45</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><strong>Given the results from similar locations (weighted prior)</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-right"><p>expected</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>average</p></td>
+<td class="text-right"><p>17.1657</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>hdi min</p></td>
+<td class="text-right"><p>0.04</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>hdi max</p></td>
+<td class="text-right"><p>67.98</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>5th</p></td>
+<td class="text-right"><p>0.156</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>25th</p></td>
+<td class="text-right"><p>1.435</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>50th</p></td>
+<td class="text-right"><p>4.49</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>75th</p></td>
+<td class="text-right"><p>33.6225</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>95th</p></td>
+<td class="text-right"><p>67.9515</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>max predicted</p></td>
+<td class="text-right"><p>76.86</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-7">
+Lakes</label><div class="sd-tab-content docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-row sd-col-12 sd-col-xs-12 sd-col-sm-5 sd-col-md-5 sd-col-lg-5 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong>Weighted prior:</strong> The weighted prior is a random sample of survey results from locations outside the report area of interest with similar land use configurations. This can be interpreted as the forecast based on the assumption that the current area of interest is similar to anyother area of country.  They are</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-12 sd-col-xs-12 sd-col-sm-7 sd-col-md-7 sd-col-lg-7 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-none docutils">
+<div class="sd-card-body docutils">
+<img alt="_images/da0dc45076e5e951ac2d0cf70a5cd0483d50d291e6a8d32e82ac0f3c79a0c099.png" src="_images/da0dc45076e5e951ac2d0cf70a5cd0483d50d291e6a8d32e82ac0f3c79a0c099.png" />
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Cumulative distribution of observed, sampling history and forecasts using to different priors.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p><strong>Given the 99% interval of the likelihood</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-right"><p>expected</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>average</p></td>
+<td class="text-right"><p>3.2337</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>hdi min</p></td>
+<td class="text-right"><p>0.29</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>hdi max</p></td>
+<td class="text-right"><p>7.5</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>5th</p></td>
+<td class="text-right"><p>0.4</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>25th</p></td>
+<td class="text-right"><p>0.93</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>50th</p></td>
+<td class="text-right"><p>2.97</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>75th</p></td>
+<td class="text-right"><p>5.0275</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>95th</p></td>
+<td class="text-right"><p>7.5</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>max predicted</p></td>
+<td class="text-right"><p>9.31</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><strong>Given the entire interval of the likelihood</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-right"><p>expected</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>average</p></td>
+<td class="text-right"><p>2.6057</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>hdi min</p></td>
+<td class="text-right"><p>0.36</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>hdi max</p></td>
+<td class="text-right"><p>9.68</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>5th</p></td>
+<td class="text-right"><p>0.38</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>25th</p></td>
+<td class="text-right"><p>0.86</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>50th</p></td>
+<td class="text-right"><p>1.43</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>75th</p></td>
+<td class="text-right"><p>3.47</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>95th</p></td>
+<td class="text-right"><p>6.8585</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>max predicted</p></td>
+<td class="text-right"><p>11.95</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><strong>Given the results from similar locations (weighted prior)</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-right"><p>expected</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>average</p></td>
+<td class="text-right"><p>17.0263</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>hdi min</p></td>
+<td class="text-right"><p>0.4</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>hdi max</p></td>
+<td class="text-right"><p>70.31</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>5th</p></td>
+<td class="text-right"><p>0.63</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>25th</p></td>
+<td class="text-right"><p>1.855</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>50th</p></td>
+<td class="text-right"><p>5.64</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>75th</p></td>
+<td class="text-right"><p>24.17</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>95th</p></td>
+<td class="text-right"><p>64.952</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>max predicted</p></td>
+<td class="text-right"><p>74.11</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<input id="sd-tab-item-8" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-8">
+rivers</label><div class="sd-tab-content docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-row sd-col-12 sd-col-xs-12 sd-col-sm-5 sd-col-md-5 sd-col-lg-5 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<p class="sd-card-text"><strong>Weighted prior:</strong> The weighted prior is a random sample of survey results from locations outside the report area with similar land use configurations. This can be interpreted as the forecast based on the assumption that the current area of interest is similar to any other area of country.</p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-12 sd-col-xs-12 sd-col-sm-7 sd-col-md-7 sd-col-lg-7 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-none docutils">
+<div class="sd-card-body docutils">
+<img alt="_images/6d2daf9fc195c4cbc739c916a67a905c0d710062c3941ba8eb8c94de0e8510f0.png" src="_images/6d2daf9fc195c4cbc739c916a67a905c0d710062c3941ba8eb8c94de0e8510f0.png" />
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text">Cumulative distribution of observed, sampling history and forecasts using to different priors.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p><strong>Given the 99% interval of the likelihood</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-right"><p>expected</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>average</p></td>
+<td class="text-right"><p>1.59</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>hdi min</p></td>
+<td class="text-right"><p>0.02</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>hdi max</p></td>
+<td class="text-right"><p>7.06</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>5th</p></td>
+<td class="text-right"><p>0.1</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>25th</p></td>
+<td class="text-right"><p>0.16</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>50th</p></td>
+<td class="text-right"><p>0.71</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>75th</p></td>
+<td class="text-right"><p>1.9975</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>95th</p></td>
+<td class="text-right"><p>6.129</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>max predicted</p></td>
+<td class="text-right"><p>7.89</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><strong>Given the entire interval of the likelihood</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-right"><p>expected</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>average</p></td>
+<td class="text-right"><p>1.2705</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>hdi min</p></td>
+<td class="text-right"><p>0.02</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>hdi max</p></td>
+<td class="text-right"><p>5.42</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>5th</p></td>
+<td class="text-right"><p>0.058</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>25th</p></td>
+<td class="text-right"><p>0.2575</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>50th</p></td>
+<td class="text-right"><p>0.86</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>75th</p></td>
+<td class="text-right"><p>1.56</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>95th</p></td>
+<td class="text-right"><p>4.641</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>max predicted</p></td>
+<td class="text-right"><p>6.08</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><strong>Given the results from similar locations (weighted prior)</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-right"><p>expected</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>average</p></td>
+<td class="text-right"><p>1.3278</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>hdi min</p></td>
+<td class="text-right"><p>0.12</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>hdi max</p></td>
+<td class="text-right"><p>3.69</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>5th</p></td>
+<td class="text-right"><p>0.16</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>25th</p></td>
+<td class="text-right"><p>0.4825</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>50th</p></td>
+<td class="text-right"><p>1.02</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>75th</p></td>
+<td class="text-right"><p>1.6</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>95th</p></td>
+<td class="text-right"><p>3.633</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>max predicted</p></td>
+<td class="text-right"><p>4.55</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="lakes-and-rivers-sampled-all-data">
+<h1>Lakes and rivers sampled - all data<a class="headerlink" href="#lakes-and-rivers-sampled-all-data" title="Link to this heading">#</a></h1>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p><strong>Lakes sampled</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>feature_name</p></th>
+<th class="head text-right"><p>sample_id</p></th>
+<th class="head text-right"><p>pcs/m</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>bielersee</p></td>
+<td class="text-right"><p>50</p></td>
+<td class="text-right"><p>4.0752</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>brienzersee</p></td>
+<td class="text-right"><p>5</p></td>
+<td class="text-right"><p>3.962</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>thunersee</p></td>
+<td class="text-right"><p>43</p></td>
+<td class="text-right"><p>1.21326</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><strong>Rivers sampled</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>feature_name</p></th>
+<th class="head text-right"><p>sample_id</p></th>
+<th class="head text-right"><p>pcs/m</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>aare</p></td>
+<td class="text-right"><p>61</p></td>
+<td class="text-right"><p>1.2723</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>aarenidau-buren-kanal</p></td>
+<td class="text-right"><p>3</p></td>
+<td class="text-right"><p>1.25667</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>emme</p></td>
+<td class="text-right"><p>9</p></td>
+<td class="text-right"><p>0.598889</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>langeten</p></td>
+<td class="text-right"><p>11</p></td>
+<td class="text-right"><p>1.93909</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>schuss</p></td>
+<td class="text-right"><p>2</p></td>
+<td class="text-right"><p>1.035</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>zulg</p></td>
+<td class="text-right"><p>11</p></td>
+<td class="text-right"><p>0.634545</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="municipal-results-lakes-and-rivers">
+<h1>Municipal results lakes and rivers<a class="headerlink" href="#municipal-results-lakes-and-rivers" title="Link to this heading">#</a></h1>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p><strong>Lakes sampled</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>city</p></th>
+<th class="head text-right"><p>sample_id</p></th>
+<th class="head text-right"><p>quantity</p></th>
+<th class="head text-right"><p>pcs/m</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Beatenberg</p></td>
+<td class="text-right"><p>2</p></td>
+<td class="text-right"><p>104</p></td>
+<td class="text-right"><p>2.425</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Biel/Bienne</p></td>
+<td class="text-right"><p>15</p></td>
+<td class="text-right"><p>3209</p></td>
+<td class="text-right"><p>5.61333</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Brienz (BE)</p></td>
+<td class="text-right"><p>3</p></td>
+<td class="text-right"><p>696</p></td>
+<td class="text-right"><p>4.48667</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Bönigen</p></td>
+<td class="text-right"><p>2</p></td>
+<td class="text-right"><p>277</p></td>
+<td class="text-right"><p>3.175</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Erlach</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>101</p></td>
+<td class="text-right"><p>1.83</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Gals</p></td>
+<td class="text-right"><p>2</p></td>
+<td class="text-right"><p>48</p></td>
+<td class="text-right"><p>1.28</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Ligerz</p></td>
+<td class="text-right"><p>3</p></td>
+<td class="text-right"><p>163</p></td>
+<td class="text-right"><p>7.4</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Lüscherz</p></td>
+<td class="text-right"><p>5</p></td>
+<td class="text-right"><p>202</p></td>
+<td class="text-right"><p>0.746</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Nidau</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>63</p></td>
+<td class="text-right"><p>2.52</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Spiez</p></td>
+<td class="text-right"><p>26</p></td>
+<td class="text-right"><p>838</p></td>
+<td class="text-right"><p>0.786923</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Thun</p></td>
+<td class="text-right"><p>3</p></td>
+<td class="text-right"><p>276</p></td>
+<td class="text-right"><p>1.4</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Unterseen</p></td>
+<td class="text-right"><p>12</p></td>
+<td class="text-right"><p>1879</p></td>
+<td class="text-right"><p>1.88833</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Vinelz</p></td>
+<td class="text-right"><p>23</p></td>
+<td class="text-right"><p>2033</p></td>
+<td class="text-right"><p>3.77043</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><strong>Rivers sampled</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>city</p></th>
+<th class="head text-right"><p>sample_id</p></th>
+<th class="head text-right"><p>quantity</p></th>
+<th class="head text-right"><p>pcs/m</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Belp</p></td>
+<td class="text-right"><p>11</p></td>
+<td class="text-right"><p>60</p></td>
+<td class="text-right"><p>0.111818</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Bern</p></td>
+<td class="text-right"><p>32</p></td>
+<td class="text-right"><p>1892</p></td>
+<td class="text-right"><p>1.02219</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Biel/Bienne</p></td>
+<td class="text-right"><p>2</p></td>
+<td class="text-right"><p>98</p></td>
+<td class="text-right"><p>1.035</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Brügg</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>36</p></td>
+<td class="text-right"><p>1.02</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Burgdorf</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>41</p></td>
+<td class="text-right"><p>0.87</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Kallnach</p></td>
+<td class="text-right"><p>2</p></td>
+<td class="text-right"><p>82</p></td>
+<td class="text-right"><p>1.315</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Köniz</p></td>
+<td class="text-right"><p>12</p></td>
+<td class="text-right"><p>757</p></td>
+<td class="text-right"><p>2.86333</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Langenthal</p></td>
+<td class="text-right"><p>11</p></td>
+<td class="text-right"><p>301</p></td>
+<td class="text-right"><p>1.93909</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Muri bei Bern</p></td>
+<td class="text-right"><p>2</p></td>
+<td class="text-right"><p>90</p></td>
+<td class="text-right"><p>1.63</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Port</p></td>
+<td class="text-right"><p>2</p></td>
+<td class="text-right"><p>118</p></td>
+<td class="text-right"><p>1.375</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Rubigen</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>57</p></td>
+<td class="text-right"><p>3.2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Steffisburg</p></td>
+<td class="text-right"><p>11</p></td>
+<td class="text-right"><p>114</p></td>
+<td class="text-right"><p>0.634545</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Utzenstorf</p></td>
+<td class="text-right"><p>8</p></td>
+<td class="text-right"><p>41</p></td>
+<td class="text-right"><p>0.565</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Walperswil</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>14</p></td>
+<td class="text-right"><p>0.22</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="titlepage.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">The litter assistant</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="use_cases.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Use cases</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Forecast</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#lakes-and-rivers-sampled-all-data">Lakes and rivers sampled - all data</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#municipal-results-lakes-and-rivers">Municipal results lakes and rivers</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By the-team@
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

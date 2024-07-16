@@ -22,7 +22,9 @@ latex:
 #   branch: main  # Which branch of the repository should be used when creating links (optional)
 
 sphinx:
-  config:
+    extra_extensions:
+        - myst_nb
+    config:
     html_show_copyright: false
     language: en
     html_theme_options:
