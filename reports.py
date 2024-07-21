@@ -54,6 +54,7 @@ def collect_sample_totals(df, sample_id: str = 'sample_id', labels: str = locati
                           info_columns: list = None, afunc: {} = unit_agg):
     # a sample total is the sum of all the codes with the same sample Id. The code column is identified
     # with the object_of_interest variable
+
     if not info_columns:
         return df.groupby([sample_id, labels, 'date'], as_index=False).agg(afunc)
     else:
@@ -71,13 +72,13 @@ def collect_the_most_common(df, a_fail_rate: float = 0.5, n_greatest: int = 10):
 
     return data, mc_codes, pct_total
 
-def make_report_objects(df):
+def make_report_objects(df, info_columns: list = None):
     # make a survey report and a landuse report
     # from filtered data
     this_report = SurveyReport(dfc=df)
 
     # generate the parameters for the landuse report
-    target_df = this_report.sample_results
+    target_df = this_report.sample_results(info_columns=info_columns)
     features = geospatial.collect_topo_data(locations=target_df.location.unique())
 
     # make a landuse report
@@ -381,27 +382,31 @@ class SurveyReport:
     def administrative_boundaries(self):
         """Returns the name and number of unique Cantons and Cities in a report"""
         result = {}
+        boundary_names = {}
         for boundary in administrative:
             names = self.df[boundary].unique()
+            boundary_names[boundary] = names
             if names.size == 0:
                 result[boundary] = {'count': 0}
             else:
                 result[boundary] = {'count': len(names)}
         result = pd.DataFrame(result).T
         
-        return result
+        return result, boundary_names
 
     def feature_inventory(self):
         """Returns the name and number of geographic boundaries in a report. River bassin, lake park etc"""
         result = {}
+        feature_names = {}
         for feature_type in feature_types:
             unique_features = self.df[self.df['feature_type'] == feature_type]['feature_name'].unique()
+            feature_names[feature_type] = unique_features
             if unique_features.size > 0:
                 result[feature_type] = {'count': len(unique_features)}
         result = pd.DataFrame(result)
         result.rename(columns={'l': 'lake', 'r': 'river', 'p': 'park'}, inplace=True)
 
-        return result
+        return result, feature_names
 
     @property
     def date_range(self):
@@ -451,7 +456,6 @@ class SurveyReport:
 
         return rates.set_index('code', drop=True)
 
-    @property
     def sample_results(self, df: pd.DataFrame = None, **kwargs):
         """The sample totals for the date range of the selected results"""
 

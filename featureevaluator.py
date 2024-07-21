@@ -42,15 +42,16 @@ def negative_binomial_regression(y_train_corr, y_test_corr, X_test_corr, X_train
     return mse_nb, r2_nb, nb_results
 
 def filter_features(data, threshold: float = 0.4, interaction_terms: [] = None ):
+
     filtered_columns = [col for col in features_to_scale if (data[col] > 0).mean() >= threshold or col == 'streets']
     if interaction_terms is None:
-        return data[['pcs/m', 'streets', *filtered_columns]]
+        return data[['pcs/m',  *filtered_columns]], filtered_columns
     else:
-        return data[['pcs/m',*interaction_terms, *filtered_columns]]
+        return data[['pcs/m',*interaction_terms, *filtered_columns]], filtered_columns
  
 def create_interaction_terms(data, interaction_terms=None, target='pcs/m'):
     if interaction_terms is None:
-        interaction_terms = ['streets']
+        interaction_terms = ['streets', 'public services']
     
     
     interaction_columns = [x for x in data.columns if x != target]
@@ -65,7 +66,7 @@ def create_interaction_terms(data, interaction_terms=None, target='pcs/m'):
             interaction_data[interaction_name] = feature_value
     
     interaction_data = pd.DataFrame(interaction_data)
-    interaction_data[target] = data[target]  # Add the target variable to the interaction data
+    interaction_data[target] = data[target]
     return interaction_data
 
 class FeatureEvaluation:
@@ -82,7 +83,7 @@ class FeatureEvaluation:
         }
         self.interactions = self.preprocess_data()
 
-    def unscale_values(self, scaled_values, columns=None):
+    def unscale_values(self, scaled_values, columns=None, w_interactions: bool = False):
         """
         Unscale the given values.
         
@@ -107,8 +108,10 @@ class FeatureEvaluation:
         # Reshape to 2D if necessary
         if scaled_array.ndim == 1:
             scaled_array = scaled_array.reshape(1, -1)
-
-        unscaled_array = self.feature_scaler.inverse_transform(scaled_array)
+        if w_interactions is True:
+            unscaled_array = self.feature_int_scaler.inverse_transform(scaled_array)
+        else:
+            unscaled_array = self.feature_scaler.inverse_transform(scaled_array)
 
         # Reshape back to original shape if it was 1D
         if len(original_shape) == 1:
@@ -140,20 +143,20 @@ class FeatureEvaluation:
             dfi.reset_index(drop=True, inplace=True)
             df = dfi.copy()
             Y = df[['pcs/m']].copy()
-            these_features = [x for x in df.columns if x not in ['streets', 'pcs/m']]
-            self.feature_vars = these_features
+            these_features = [x for x in df.columns if x not in ['pcs/m', 'streets']]
+            self.feature_vars = [*these_features, 'streets']
             df[these_features] = self.feature_scaler.fit_transform(df[these_features])
             df['pcs/m'] = self.target_scaler.fit_transform(Y)
             df['streets'] = dfi.streets
                         
-            self.data = df # a_df.merge(Y, left_index=True, right_index=True)
+            self.data = df
             
             new_df = create_interaction_terms(dfi)
-            these_features = [x for x in new_df.columns if x not in ['streets', 'pcs/m']]
+            these_features = [x for x in new_df.columns if x not in ['streets', 'pcs/m', 'public services']]
             
 
             new_df[these_features] = self.feature_int_scaler.fit_transform(new_df[these_features])
-            new_df['pcs/m'] = self.target_scaler.fit_transform(Y)
+            new_df['pcs/m'] = self.target_scaler.fit_transform(new_df['pcs/m'].values.reshape(-1, 1))
             new_df['streets'] = dfi.streets
             self.interactions = new_df
             self.interaction_terms = these_features
@@ -216,7 +219,7 @@ class FeatureEvaluation:
         counts = d.groupby(['clusters'])['pcs/m'].count()
         
         cluster_summary = d.groupby('clusters').agg({x:'mean' for x in some_features}).reset_index()
-        cluster_summary = self.unscale_values(cluster_summary, columns=some_features)
+        cluster_summary = self.unscale_values(cluster_summary, columns=some_features, w_interactions=w_interactions)
         cluster_summary['pcs/m'] = means_unscaled
         cluster_summary['samples'] = counts.values
         cluster_summary = cluster_summary[['samples', 'pcs/m', *cluster_summary.columns[:-2]]]
@@ -279,11 +282,7 @@ class FeatureEvaluation:
                     best_model = model
                     the_name = model_name
         
-        # mse_nb, r2_nb, nb_results = negative_binomial_regression(y_train, y_test, X_test, X_train)
-        # regression_results.append({'Model': 'Negative Binomial' , 'R²': r2_nb, 'MSE': mse_nb})
-        # if r2_nb > best_r2:
-        #             best_r2 = r2_nb
-        #             best_model = nb_results
+
         return regression_results, best_model, the_name, X_test, y_test, X_train, y_train
 
     

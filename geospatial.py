@@ -245,20 +245,6 @@ class LandUseReport:
 
         return self.df_cont[feature_variables].corr()
     
-    def assign_combination_method(self, pairs):
-        
-        if len(pairs) == 0:
-            return []
-        pairs_methods = []
-        for pair in pairs:
-            if 'public services' in pair:
-                new_pair = (*pair, 'rate')
-                pairs_methods.append(new_pair)
-            else:
-                new_pair = (*pair, 'sum')
-                pairs_methods.append(new_pair)
-        return pairs_methods
-     
 
 
 
