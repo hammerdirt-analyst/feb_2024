@@ -1,0 +1,22 @@
+# Finding objects on the beach
+
+
+
+## Description
+
+the dataset records the counts of cigartette ends, snack wrappers and drink straws and coffee stirers ('pcs/m' - pieces of trash per meter) on the shores of lakes in the Canton of Bern, Switzerland.  The dataset includes various topographical features within a 1,500-meter buffer zone around the lakes, such as the proportion of land occupied by buildings, streets, public services, orchards, vineyards, forests, and undefined areas.
+
+
+
+
+## Features
+
+the feature variables have a definite relationship for example forest, undefined, vineyards, orchards and buildings do not overlap. that is if you sum them up you get close to 1. however public services and streets are in addition to the other feature variables. i mean that you can have streets and public services in forest, buildings, orhards, vineyards and undefined areas but not the other way around.
+
+
+
+## Objectives
+
+What we must do is identify areas for investment. We have a list of projects that would like to be financed to reduce plastics and trash in the environment. Therefore we want to identify areas that would most benefit or at least have the greatest need. The greatest need is defined by the greatest value of the target variable. We have done several type of analysis and scaled the data using the standard scaler.
+
+

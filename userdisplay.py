@@ -399,8 +399,9 @@ def style_negative(v, props=''):
 
 
 def highlight_max(s, props: str = highlight_props):
-    return np.where((s == np.max(s.values)) & (s != 0), props, '')
-
+    return np.where((s == np.max(s.values)) & (s != 1), props, '')
+def style_negative(v, props=''):
+    return props if v < 0 else None
 
 
 def map_markers(df, lat_lon: pd.DataFrame = lat_lon):

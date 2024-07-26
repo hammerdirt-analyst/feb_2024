@@ -64,20 +64,24 @@ column_labels_land_use = {
 def select_x_and_y(df_target, features, x_value: str = 'scale'):
     """Selects the feature columns and the target column from the DataFrame"""
 
-    for label in ['public services', 'streets']:
-        df_target[label] = df_target.location.apply(lambda x: features[label].loc[x, x_value])
+    df = df_target.merge(features, left_on=location_label, right_on=location_label, how='left')
+    return df
+    
 
-    for label in ['landcover']:
-        df = df_target.merge(features[label], left_on=location_label, right_on=location_label, how='left')
-    for label in ['river_intersects']:
-        if len(features[label]) == 0:
-            df.fillna(0, inplace=True)
-            return df.infer_objects(copy=False)
-        else:
-            df_rivers = df_target.merge(features[label], left_on=location_label, right_on=location_label, how='left')
-            df_rivers.fillna(0, inplace=True)
-            df.fillna(0, inplace=True)
-            return df.infer_objects(copy=False), df_rivers.infer_objects(copy=False)
+    # for label in ['public services', 'streets']:
+    #     df_target[label] = df_target.location.apply(lambda x: features[label].loc[x, x_value])
+
+    # for label in ['landcover']:
+    #     df = df_target.merge(features[label], left_on=location_label, right_on=location_label, how='left')
+    # for label in ['river_intersects']:
+    #     if len(features[label]) == 0:
+    #         df.fillna(0, inplace=True)
+    #         return df.infer_objects(copy=False)
+    #     else:
+    #         df_rivers = df_target.merge(features[label], left_on=location_label, right_on=location_label, how='left')
+    #         df_rivers.fillna(0, inplace=True)
+    #         df.fillna(0, inplace=True)
+    #         return df.infer_objects(copy=False), df_rivers.infer_objects(copy=False)
 #
 def categorize_features(df, feature_columns=feature_variables):
     """Categorizes the feature columns in the DataFrame"""
@@ -102,31 +106,28 @@ def scale_combined(df, column_to_scale, new_column_name):
 def collect_topo_data(locations: [] = None, labels: {} = None):
     """Collects the topographical data"""
 
-    d_t_c = {
-        'public services': landuse.rename(columns={'slug': location_label}),
-        'landcover': landcover.rename(columns={'slug': location_label}),
-        'streets': streets.rename(columns={'slug': location_label}),
-        'river_intersects': river_intersects.rename(columns={'slug': location_label})
-    }
+    d_t_c = pd.read_csv('data/in_process/new_lu.csv')
 
     if labels is None:
         if locations is None:
             return d_t_c
         else:
-            strts = d_t_c['streets'].copy()
-            strts = strts.groupby(location_label)[['length']].sum().reset_index()
-            strts = scale_combined(strts, 'length', 'scale')
-            strts.set_index(location_label, inplace=True, drop=True)
+            d_t_c = d_t_c[d_t_c.location.isin(locations)].copy()
+            
+            # strts = d_t_c['streets'].copy()
+            # strts = strts.groupby(location_label)[['length']].sum().reset_index()
+            # strts = scale_combined(strts, 'length', 'scale')
+            # strts.set_index(location_label, inplace=True, drop=True)
 
-            ps = d_t_c['public services'].copy()
-            ps = ps.groupby(location_label).agg({'scale': 'sum', 'area': 'sum'})
+            # ps = d_t_c['public services'].copy()
+            # ps = ps.groupby(location_label).agg({'scale': 'sum', 'area': 'sum'})
 
-            lc = d_t_c['landcover'].copy()
-            lc = lc.pivot(index=location_label, columns='attribute', values='scale').reset_index()
-            new_columns = {'Siedl': 'buildings', 'Wald': 'forest', 'Reben': 'vineyards', 'Obstanlage': 'orchards'}
-            lc.rename(columns=new_columns, inplace=True)
+            # lc = d_t_c['landcover'].copy()
+            # lc = lc.pivot(index=location_label, columns='attribute', values='scale').reset_index()
+            # new_columns = {'Siedl': 'buildings', 'Wald': 'forest', 'Reben': 'vineyards', 'Obstanlage': 'orchards'}
+            # lc.rename(columns=new_columns, inplace=True)
 
-            d_t_c.update({'streets': strts, 'public services': ps, 'landcover': lc})
+            # d_t_c.update({'streets': strts, 'public services': ps, 'landcover': lc})
 
             return d_t_c
     else:

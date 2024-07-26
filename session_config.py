@@ -17,7 +17,7 @@ from pathlib import Path
 administrative = ['location', 'city', 'canton', 'parent_boundary']
 geographic = ['feature_name',  'feature_type']
 feature_types = ['r', 'l', 'p']
-feature_variables = ['orchards', 'vineyards', 'buildings', 'forest', 'undefined', 'public services', 'streets']
+feature_variables = ['buildings', 'wetlands', 'forest', 'public-services', 'recreation', 'undefined', 'streets', 'vineyards', 'orchards']
 the_report_themes = ['Canton', 'Municipality', 'River basin', 'River', 'Lake', 'Park']
 
 # the consolidated codes

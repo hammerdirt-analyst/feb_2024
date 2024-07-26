@@ -174,7 +174,15 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data and reporting</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="new_report.html">Forecast</a></li>
+
+
 <li class="toctree-l1"><a class="reference internal" href="use_cases.html">Use cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning.html">Context</a></li>
+
+
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="project.html">Proposal</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Methods and classes</span></p>
@@ -429,25 +437,59 @@ document.write(`
 <p>The administrative boundaries can be displayed using <code class="docutils literal notranslate"><span class="pre">SurveyReport.administrative_boundaries()</span></code>. The resulting dictionary contains the number and names of each type of boundary:</p>
 <p><strong>What cities are considered in this report ?</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># collect the boundaries report</span>
-<span class="n">admin_boundaries</span> <span class="o">=</span> <span class="n">vaud_report</span><span class="o">.</span><span class="n">administrative_boundaries</span><span class="p">()</span>
-<span class="n">admin_boundaries</span><span class="p">[</span><span class="s1">&#39;city&#39;</span><span class="p">]</span>
+<span class="n">admin_boundaries</span><span class="p">,</span> <span class="n">boundaries</span> <span class="o">=</span> <span class="n">vaud_report</span><span class="o">.</span><span class="n">administrative_boundaries</span><span class="p">()</span>
+<span class="n">admin_boundaries</span>
 </pre></div>
-</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;La Tour-de-Peilz&#39; &#39;Vevey&#39; &#39;Montreux&#39; &#39;Tolochenaz&#39; &#39;Morges&#39; &#39;Gland&#39;
- &#39;Lausanne&#39; &#39;Cudrefin&#39; &#39;Saint-Sulpice (VD)&#39; &#39;Préverenges&#39; &#39;Rolle&#39;
- &#39;Bourg-en-Lavaux&#39; &#39;Allaman&#39; &#39;Yverdon-les-Bains&#39; &#39;Lavey-Morcles&#39;
- &#39;Grandson&#39;]
-</pre></div>
-</div>
-</div>
 </div>
 <br />
 <p><strong>What river basins are considered in this report ?</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># collect the boundaries report</span>
-<span class="n">admin_boundaries</span><span class="p">[</span><span class="s1">&#39;parent_boundary&#39;</span><span class="p">]</span>
+<span class="n">boundary_names</span><span class="p">[</span><span class="s1">&#39;parent_boundary&#39;</span><span class="p">]</span>
 </pre></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>location</th>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>city</th>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>canton</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>parent_boundary</th>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>There are two river basins:</p>
 <div class="cell tag_remove-input docutils container">
@@ -461,16 +503,60 @@ document.write(`
 <section id="feature-inventory">
 <h3>Feature inventory<a class="headerlink" href="#feature-inventory" title="Link to this heading">#</a></h3>
 <p>The number and name of lakes, rivers or parks in the data can be accessed usin <code class="docutils literal notranslate"><span class="pre">SurveyReport.feature_inventory()</span></code>.</p>
-<p><strong>Which lakes are included in this report ?</strong></p>
+<p><strong>Which features are inlucded in this report ?</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># call the feature inventory</span>
-<span class="n">vaud_features</span> <span class="o">=</span> <span class="n">vaud_report</span><span class="o">.</span><span class="n">feature_inventory</span><span class="p">()</span>
-<span class="n">vaud_features</span><span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">]</span>
+<span class="n">vaud_features</span><span class="p">,</span> <span class="n">feature_names</span> <span class="o">=</span> <span class="n">vaud_report</span><span class="o">.</span><span class="n">feature_inventory</span><span class="p">()</span>
+<span class="n">vaud_features</span>
 </pre></div>
 </div>
-<p>There are two lakes in this report</p>
+<p><strong>Which lakes are included in this report ?</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># collect the boundaries report</span>
+<span class="n">feature_names</span><span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;lac-leman&#39;, &#39;neuenburgersee&#39;]
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>river</th>
+      <th>lake</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>There are two lakes in this report</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">feature_names</span><span class="p">[</span><span class="s1">&#39;l&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;lac-leman&#39; &#39;neuenburgersee&#39;]
 </pre></div>
 </div>
 </div>
@@ -523,7 +609,7 @@ Name: G30, dtype: float64
 <p>The sample results are best viewed in a scatterplot</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/47cff1f0be31a15d4e3d6707eb4025fba1312bc051e3d3b81d0988a84dccea75.png" src="_images/47cff1f0be31a15d4e3d6707eb4025fba1312bc051e3d3b81d0988a84dccea75.png" />
+<img alt="_images/8ff62bf33f859a4c8edb0f564dd7f9abaf65f4fe41a65ccfb921df5afa32935b.png" src="_images/8ff62bf33f859a4c8edb0f564dd7f9abaf65f4fe41a65ccfb921df5afa32935b.png" />
 </div>
 </div>
 </section>
@@ -536,17 +622,79 @@ Name: G30, dtype: float64
 <p>The average in the Canton of Vaud was 7.69 pcs/m.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;total&#39;: 64052,
- &#39;nsamples&#39;: 233,
- &#39;average&#39;: 7.687682403433477,
- &#39;quantiles&#39;: array([ 0.728,  2.4  ,  4.6  ,  8.92 , 25.494]),
- &#39;std&#39;: 9.99752169901663,
- &#39;max&#39;: 77.1,
- &#39;start&#39;: &#39;2015-11-23&#39;,
- &#39;end&#39;: &#39;2022-10-06&#39;}
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>total</th>
+      <td>64052</td>
+    </tr>
+    <tr>
+      <th>nsamples</th>
+      <td>233</td>
+    </tr>
+    <tr>
+      <th>average</th>
+      <td>7.687682</td>
+    </tr>
+    <tr>
+      <th>5th</th>
+      <td>0.728</td>
+    </tr>
+    <tr>
+      <th>25th</th>
+      <td>2.4</td>
+    </tr>
+    <tr>
+      <th>50th</th>
+      <td>4.6</td>
+    </tr>
+    <tr>
+      <th>75th</th>
+      <td>8.92</td>
+    </tr>
+    <tr>
+      <th>95th</th>
+      <td>25.494</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>9.997522</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>77.1</td>
+    </tr>
+    <tr>
+      <th>start</th>
+      <td>2015-11-23</td>
+    </tr>
+    <tr>
+      <th>end</th>
+      <td>2022-10-06</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="object-summary">
@@ -704,10 +852,10 @@ Name: G30, dtype: float64
 
 conda environment: cantonal_report
 
-seaborn   : 0.12.2
-numpy     : 1.25.2
-pandas    : 2.0.3
-matplotlib: 3.7.1
+seaborn   : 0.13.2
+pandas    : 2.2.2
+numpy     : 1.26.4
+matplotlib: 3.8.4
 </pre></div>
 </div>
 </div>

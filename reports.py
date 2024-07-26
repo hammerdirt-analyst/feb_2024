@@ -79,7 +79,7 @@ def make_report_objects(df, info_columns: list = None):
 
     # generate the parameters for the landuse report
     target_df = this_report.sample_results(info_columns=info_columns)
-    features = geospatial.collect_topo_data(locations=target_df.location.unique())
+    features = pd.read_csv('data/in_process/new_lu.csv')
 
     # make a landuse report
     this_land_use = geospatial.LandUseReport(target_df, features)
@@ -161,9 +161,9 @@ def reports_and_forecast(likelihood_params: dict, prior_params: dict, ldata: pd.
         prior_report, prior_land_use = make_report_objects(pdf)
 
     if make_forecast:
-        prr = prior_report.sample_results.groupby('sample_id')['pcs/m'].sum()
+        prr = prior_report.sample_results().groupby('sample_id')['pcs/m'].sum()
 
-        lkl = this_report.sample_results.groupby('sample_id')['pcs/m'].sum()
+        lkl = this_report.sample_results().groupby('sample_id')['pcs/m'].sum()
         max_range = np.quantile(lkl.values, .99)
 
         # consider all values
@@ -306,19 +306,19 @@ def make_standard_report(results, args):
     # most_common_objects = most_common_objects.set_caption("")
     ratio_most_common = Markdown(f'__The most common objects account for {int(proportions * 100)}% of all objects__')
 
-    observedvals.append((results['this_report'].sample_results[['pcs/m']], likelihood_labels, palette['likelihood']))
+    observedvals.append((results['this_report'].sample_results()[['pcs/m']], likelihood_labels, palette['likelihood']))
     weighted_args = [
         results['this_land_use'].n_samples_per_feature(),
         args['land-use-inventory'],
         bin_labels,
         feature_variables,
-        results['this_report'].sample_results['pcs/m']
+        results['this_report'].sample_results()['pcs/m']
     ]
     weighted_forecast, weighted_posterior, weighted_summary, selectedr = forecast_weighted_prior(*weighted_args,
                                                                                                  ncols=1)
 
     forecasts.append((weighted_forecast, 'weighted prior', '-.', 'black'))
-    forecasts.append((results['this_report'].sample_results[['pcs/m']], likelihood_labels, '-', palette['likelihood']))
+    forecasts.append((results['this_report'].sample_results()[['pcs/m']], likelihood_labels, '-', palette['likelihood']))
 
     display_r.update({
         'proportion-most-common': ratio_most_common,
@@ -352,8 +352,8 @@ def make_standard_report(results, args):
 
         p_summary = results['prior_report'].sampling_results_summary
 
-        observedvals.append((results['prior_report'].sample_results[['pcs/m']], prior_labels, palette['prior']))
-        forecasts.append((results['prior_report'].sample_results[['pcs/m']], prior_labels, ':', palette['prior']))
+        observedvals.append((results['prior_report'].sample_results()[['pcs/m']], prior_labels, palette['prior']))
+        forecasts.append((results['prior_report'].sample_results()[['pcs/m']], prior_labels, ':', palette['prior']))
 
         forecast_maxval = results['posterior_no_limit'].get_descriptive_statistics()
         forecast_99 = results['posterior_99'].get_descriptive_statistics()
@@ -468,7 +468,7 @@ class SurveyReport:
     def sampling_results_summary(self):
         """The summary of the sample totals"""
 
-        data = self.sample_results[Y].values
+        data = self.sample_results()[Y].values
         qtiles = np.quantile(data, report_quantiles)
         q_labels = {session_config.quantile_labels[i]: qtiles[i] for i in range(len(qtiles))}
 
@@ -478,7 +478,7 @@ class SurveyReport:
             'average': np.mean(data),
             **q_labels,
             'std': np.std(data),
-            'max':self.sample_results[Y].max(),
+            'max':self.sample_results()[Y].max(),
             'start': self.date_range['start'],
             'end': self.date_range['end']
         }
