@@ -9,6 +9,8 @@ parts:
     - file: new_report
     - file: use_cases
     - file: machine_learning
+    - file: final_report
+    - file: report_results
     - file: project
     
   - caption: Methods and classes

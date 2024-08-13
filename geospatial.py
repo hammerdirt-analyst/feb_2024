@@ -87,8 +87,15 @@ def categorize_features(df, feature_columns=feature_variables):
     """Categorizes the feature columns in the DataFrame"""
     bins = session_config.bins
     labels = session_config.bin_labels
-    for column in feature_columns:
+    # print("\n\n!! categorizing !!\n\n")
+    # print(feature_columns)
+    # print(bins)
+    scaler = MinMaxScaler()
+    df['streets'] = scaler.fit_transform(df[['streets']])
+
+    for column in session_config.feature_variables:
         df[column] = pd.cut(df[column], bins=bins, labels=labels)
+    # print(df.streets.head())
     return df
 #
 #
@@ -196,6 +203,7 @@ class LandUseReport:
             self.df_cont = lu
         
     def categorize_columns(self, df, feature_columns=feature_variables):
+        # print(feature_columns)
         return categorize_features(df, feature_columns=feature_columns)
 
     def n_samples_per_feature(self, df: pd.DataFrame = None, features: [] = None):
@@ -204,11 +212,15 @@ class LandUseReport:
             df = self.df_cat.copy()
         else:
             df = df.copy()
+        # print("\n\n!! Before !!\n\n")
+        # print(df.head())
         if features is None:
-            features = feature_variables
-        df_feature = {feature: df[feature].value_counts() for feature in
-                      features}
+            features = session_config.feature_variables
+
+        df_feature = {feature: df[feature].value_counts() for feature in features}
+
         df_concat = pd.concat(df_feature, axis=1)
+
         return df_concat.fillna(0).astype('int')
 
     def n_pieces_per_feature(self):
