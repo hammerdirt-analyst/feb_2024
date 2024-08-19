@@ -6,24 +6,27 @@ root: titlepage
 parts:
   - caption: Data and reporting
     chapters:
-    - file: new_report
-    - file: use_cases
-    - file: machine_learning
     - file: final_report
-    - file: report_results
+    - file: use_cases
+    - file: report_results-rough-draft
+    - file: new_report
     - file: project
     
   - caption: Methods and classes
     chapters:    
     - file: a_report_class
-    - file: landuse_class
+    - file: landuse_class    
     - file: forecasts
+    - file: machine_learning
+    - file: haystackagents
+    - file: langchainagents
   
   - caption: Annex
     chapters:    
     - file: the_survey_data
     - file: extracting_topo_data
     - file: multinomial_conjugate
+    - file: agent_prompts_relations
 
 
    
