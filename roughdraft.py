@@ -509,7 +509,10 @@ land_use_litter_density = [
 ldud = "".join(land_use_litter_density)
 
 cluster_analysis_description = [
-    "The survey locations were grouped using K-Means clustering, the optimal amoount of clusters was determined using the the elbow method. ",
+    "The survey locations were labeled according to the type and magnitude of land use in a 1 500 m buffer zone around"
+    "around each survey location. A cluster analysis was performed using K-Means clustering, the optimal amoount of "
+    "clusters was determined using the the elbow method. Each cluster represents a group of locations that have similar "
+    "land use profiles, that is the locations are surrounded by similar quantities of buildings or forest or wetlands."
     "We consider the cluster composition and the proportion of each cluster dedicated to a particular land use. ",
     "For example if the value for forest, cluster 1 = .45 then that means that in cluster 1, the average sample was taken ",
     "from a location whose buffer zone was 45% dedicated to forest. "
@@ -642,7 +645,7 @@ class ReportTexts:
             return d, completed_chat, section_label
         else:
             user_prompt = material_results_prompt(d.to_markdown())
-            return f'{report_label}\n\n{user_prompt}'
+            return f'{section_label}\n\n{user_prompt}'
 
     def inventory(self, system_prompt: str = None, user_prompt: str = None):
         d = self.report.object_summary()
@@ -658,7 +661,7 @@ class ReportTexts:
             return d, completed_chat, section_label
         else:
             user_prompt = inventory_prompt(d.to_markdown())
-            return f'{report_label}\n\n{user_prompt}'
+            return f'{section_label}\n\n{user_prompt}'
 
     def landuse_profile(self, system_prompt: str = None, user_prompt: str = None):
         # print("!! Methoding !!")
@@ -686,9 +689,11 @@ class ReportTexts:
             user_prompt = sampling_stratification_prompt(d.to_markdown())
             return f'{section_label}\n\n{user_prompt}'
 
-    def landuse_rates(self, system_prompt: str = None, user_prompt: str = None):
+    def landuse_rates(self, system_prompt: str = None):
         d = self.landuse_report.rate_per_feature()
-        report_label = f"\n## Topography and trash density {self.name} {self.start} {self.end}: The changes in the observed litter density and the changes in land use\n\n"
+        d['proportion of buffer'] = ['0-20%', '20-40%', '40-60%', '60-80%', '80-100%']
+        d.set_index('proportion of buffer', inplace=True, drop=True)
+        report_label = f"\n## Sampling stratification and trash density {self.name} {self.start} {self.end}: The changes in the observed litter density and the changes in land use\n\n"
         section_description = ldud + "\n\n"
         section_label = report_label + section_description
 
@@ -699,7 +704,7 @@ class ReportTexts:
             return d, completed_chat, section_label
         else:
             user_prompt = landuse_rates_prompt(d.to_markdown())
-            return f'{report_label}\n\n{user_prompt}'
+            return f'{section_label}\n\n{user_prompt}'
 
     def cluster_analysis(self, scaled_cols: [] = None, system_prompt: str = None, user_prompt: str = None):
 
@@ -777,7 +782,7 @@ class ReportTexts:
             return d, completed_chat, section_label
         else:
             user_prompt = regression_results_prompt(d.to_markdown())
-            return f'{report_label}\n\n{user_prompt}'
+            return f'{section_label}\n\n{user_prompt}'
 
     def feature_importance(self, system_prompt: str = None, user_prompt: str = None):
 
@@ -837,13 +842,16 @@ class ReportTexts:
             return dt, completed_chat, section_label
         else:
             user_prompt = municipal_results_prompt(dt.to_markdown())
-            return f'{report_label}\n\n{user_prompt}'
+            return f'{section_label}\n\n{user_prompt}'
 
     def chat_rep(self, scaled_cols, file_name, system_prompt: str = None, user_prompt: str = None):
 
         report_label = f'{self.region} {self.name} {self.start} {self.end}'
         title = f"\n# Survey report {report_label}\n\n"
-        objects = f"\n__Objects in data__\n\n{', '.join([x for x in self.groups.values()])}\n\n"
+        d = self.report.object_summary()
+        d['object'] = d.index.map(lambda x: codes.loc[x, 'en'])
+
+        objects = f"\n__Objects in data__\n\n{', '.join([x for x in d['object'].values])}\n\n"
         with open(file_name, 'w') as file:
             file.write(title)
 

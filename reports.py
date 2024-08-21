@@ -236,7 +236,7 @@ def ecdf_plots_standard(data):
             an_x_limit = this_max
         sns.ecdfplot(some_data[0], label=some_data[1], ls=some_data[2], ax=ax, c=some_data[3], zorder=1)
 
-    ax.set_xlim(-.1, an_x_limit)
+    ax.set_xlim(-.001, an_x_limit)
     ax.legend()
     plt.tight_layout()
     plt.close()
