@@ -121,68 +121,10 @@ def collect_topo_data(locations: [] = None, labels: {} = None):
         else:
             d_t_c = d_t_c[d_t_c.location.isin(locations)].copy()
             
-            # strts = d_t_c['streets'].copy()
-            # strts = strts.groupby(location_label)[['length']].sum().reset_index()
-            # strts = scale_combined(strts, 'length', 'scale')
-            # strts.set_index(location_label, inplace=True, drop=True)
-
-            # ps = d_t_c['public services'].copy()
-            # ps = ps.groupby(location_label).agg({'scale': 'sum', 'area': 'sum'})
-
-            # lc = d_t_c['landcover'].copy()
-            # lc = lc.pivot(index=location_label, columns='attribute', values='scale').reset_index()
-            # new_columns = {'Siedl': 'buildings', 'Wald': 'forest', 'Reben': 'vineyards', 'Obstanlage': 'orchards'}
-            # lc.rename(columns=new_columns, inplace=True)
-
-            # d_t_c.update({'streets': strts, 'public services': ps, 'landcover': lc})
-
             return d_t_c
     else:
         return labels
     
-# def combine_landuse_features(data, columns_to_combine: list = None, new_column_name: str = None, method: str = 'sum'):
-#     """Combines the columns in the DataFrame
-#
-#     The columns are put back into m² before combining. Then scaled back.
-#     """
-#     if method == 'sum':
-#         data[new_column_name] = data[columns_to_combine[0]] + data[columns_to_combine[1]]
-#         return data
-#     if method == 'rate':
-#         not_public_services = [x for x in columns_to_combine if 'public services' not in x]
-#         data[new_column_name] = (data['public services']*data[not_public_services[0]]).round(3)
-#         return data
-#
-#     else:
-#         return "Method not recognized. Please use 'sum' or 'rate' as the method."
-#
-
-# def find_correlated_values(df, threshold: float = session_config.corr_threshold):
-#     """Finds the correlated values in the DataFrame"""
-#
-#     labels = df.columns.to_list()
-#     correlated_features = []
-#     for i in range(len(labels)):
-#         for j in range(i+1, len(labels)):
-#             if df.at[labels[i], labels[j]] >= .99999:
-#                 pass
-#             elif df.at[labels[i], labels[j]] <= 0:
-#                 pass
-#             elif df.at[labels[j], labels[i]] <= 0:
-#                 pass
-#             elif df.at[labels[i], labels[j]] >= threshold:
-#                 correlated_features.append((labels[i], labels[j]))
-#
-#     return correlated_features
-
-
-# def make_multi_index(column_labels: dict, group_label: dict, nlabels: int, session_language: str = 'en'):
-#     """Creates a multi index for the DataFrame"""
-#     ""
-#     indexes = [(group_label[session_language], column_labels[x]) for x in range(1, nlabels+1)]
-#
-#     return pd.MultiIndex.from_tuples(indexes)
-
 
 class LandUseReport:
 

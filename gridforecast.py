@@ -23,149 +23,320 @@ values. In simple terms, we are comparing apples to apples and not apples to ora
 """
 import pandas as pd
 import numpy as np
-from scipy.stats import dirichlet, multinomial
 import session_config
-import geospatial
-import reports
+from reports import construct_report_label, make_report_objects
+
+def append_to_markdown(filename, content):
+    with open(filename, 'a') as f:
+        f.write(content)
+
+def calculate_proportions(data, columns):
+    return data.groupby(columns, observed=True).size().reset_index(name='count')
+
+def manhattan_distance(row, target):
+    return sum(abs(row[col] - target[col]) for col in ['buildings', 'forest', 'undefined'])
+
+def calculate_similarity(row, proportions_A):
+    # Calculate similarity of a row to all combinations in proportions_A
+    similarities = []
+    for _, target in proportions_A.iterrows():
+        distance = manhattan_distance(row, target)
+        # Invert distance to get similarity; avoid division by zero
+        similarity = 1 / (1 + distance)
+        weighted_similarity = similarity * target['proportion']
+        similarities.append(weighted_similarity)
+    return sum(similarities)
 
 
-def forecast_weighted_prior(land_use_profile, catalog_data, bin_labels, weighted_columns, likelihood_data, **kwargs):
-    # make a prior that is comprised of random samples that are weighted by the
-    # land use of interest. Make the posterior and draw samples
-    g = weighted_prior(land_use_profile, catalog_data, bin_labels, weighted_columns, **kwargs)
-    amodel = MulitnomialDirichlet('weighted prior', likelihood_data, g['pcs/m'])
-    sample_values = amodel.sample_posterior()
-    summary = amodel.get_descriptive_statistics()
+in_boundary_description = (
+    "This prior distribution is selected from random samples from within the requested administrative boundary (if a boundary was selected) "
+    "not including samples from the likelihood and limited to the end date. "
+    "The samples are selected based on the similarity of the land use features: buildings, forest and undefined. "
+    "At least two of these variables are present at all sample locations. The similarity is calculated using the Manhatten distance between the "
+    "likelihood and the proposed prior samples. In summary this prior assumes that litter density in the selected region is more a question of "
+    "geographic location than land-use and that the best predictor of future results is the previous results within the same area."
 
-    return sample_values, amodel, summary, g
+)
 
-
-# def make_report_objects(df):
-#     # make a survey report and a landuse report
-#     # from filtered data
-#     this_report = reports.SurveyReport(dfc=df)
-#
-#     # generate the parameters for the landuse report
-#     target_df = this_report.sample_results
-#     features = geospatial.collect_topo_data(locations=target_df.location.unique())
-#
-#     # make a landuse report
-#     this_land_use = geospatial.LandUseReport(target_df, features)
-#
-#     return this_report, this_land_use
-
-def weighted_prior(land_use_profile, catalog_data, bin_labels, columns, ncols=1):
-    sampled_data = []
-
-    for feature in columns[:ncols]:
-
-        for i in bin_labels:
-            v = land_use_profile.loc[i, feature]
-
-            if v > 0:
-                sampler = catalog_data[catalog_data[feature] == i]
-                if len(sampler) > 0:
-
-                    samples = sampler.sample(v, replace=True)
-                    sampled_data.append(samples)
-    sampled_data_df = pd.concat(sampled_data).drop_duplicates().reset_index(drop=True)
-    return sampled_data_df
+out_boundary_description = (
+    "This prior distribution is selected from random samples from outside the requested administrative boundary (if a boundary was selected) "
+    "not including samples from the likelihood and limited to the end date. "
+    "The samples are selected based on the similarity of the land use features: buildings, forest and undefined. "
+    "At least two of these variables are present at all sample locations. The similarity is calculated using the Manhattan distance between the "
+    "likelihood samples and the proposed prior samples. In summary this prior assumes that litter density in the selected region is comparable to locations "
+    "outside of the boundary and that trends or correlations of litter density are mostly a matter of land-use and less a question of geographic location."
+)
 
 
+prior_description = (
+    "These are random samples from all of the data, not including the likelihood and limited to the requested end date. "
+    "The samples are selected based on the similarity of the land use features: buildings, forest and undefined. "
+    "At least two of these variables are present at all sample locations. The similarity is calculated using the Manhattan distance between the "
+    "likelihood samples and the proposed prior samples. In summary this prior assumes that land-use is the best predictor indifferent of "
+    "the geographic location (in or out of the boundary). "
+)
+
+
+def sample_like_subset_general(data, subset_A, label, similarity_columns: [] = ['buildings', 'forest', 'undefined']):
+    # Step 1: Calculate proportions in A
+    proportions_A = calculate_proportions(subset_A, similarity_columns)
+    proportions_A['proportion'] = proportions_A['count'] / proportions_A['count'].sum()
+
+    # Step 2: Calculate similarity of each row in data to combinations in A
+    data['similarity'] = data.apply(lambda row: calculate_similarity(row, proportions_A), axis=1)
+
+    n_samples = len(subset_A)  # Number of samples can be adjusted
+
+    prompt_description = {
+        'in_boundary': in_boundary_description,
+        'out_boundary': out_boundary_description,
+        'prior': prior_description}
+
+    similarity_prompt = "They have been selected based on the similarity of the buildings, forest and undefined feature variables."
+
+    # check the number of available samples
+    # based on the similarity score
+    # work backward from a similarity of .99 to
+    for i in np.arange(.3, 1, .01)[::-1]:
+        if len(data[data.similarity >= i]) > n_samples:
+            data = data[data.similarity >= i]
+            sampled_data = data.sample(n=n_samples, weights=data['similarity'], replace=False)
+            sampled_data.reset_index(inplace=True, drop=True)
+            prompt = f"{prompt_description[label]}\n{similarity_prompt} The similarity threshold is {i}"
+            return {'dataframe': sampled_data, 'prompt': prompt}
+
+    if len(data) >= n_samples:
+        prompt = f"{prompt_description[label]} The similarity scores were less than .3,. The selection was random similarity was not considered."
+        sampled_data = data.sample(n=n_samples, weights=data['similarity'], replace=False)
+        return {'dataframe': sampled_data, 'prompt': prompt}
+
+    if len(data) < n_samples:
+        prompt = f"{prompt_description[label]} There are fewer samples in the prior than the likelihood. All prior samples were used"
+        return {'dataframe': data, 'prompt': prompt}
+
+def collect_prior_data(data, meta_data, likelihood_locations):
+    prior_filters = list(meta_data.keys())
+
+    if 'feature_type' in prior_filters:
+        feature_type_mask = data.feature_type == meta_data['feature_type']
+        data = data[feature_type_mask]
+
+    if 'codes' in prior_filters:
+        code_mask = data.code.isin(meta_data['codes'])
+        data = data[code_mask]
+
+    return data[~data.location.isin(likelihood_locations)]
 
 
 
+grid_approximation_def = (
+    "### Grid Approximation method:\n\n"
+    "1. **Parameter Space Discretization**: Divide the continuous parameter space into a discrete grid of points. We use the 0 as the start of the grid and the 99th percentile of the observed values as the grid limit and we evaluate the function every 0.01.\n\n"
+    "2. **Evaluation of Function**: Evaluate the statistical function of interest (e.g., likelihood, posterior) at each grid point. This step gives a set of unnormalized values across the grid.\n\n"
+    "3. **Normalization**:\n"
+    "   - **Sum the Values**: Compute the sum of the evaluated function values over all grid points. This sum is used as the normalizing constant.\n"
+    "   - **Normalize**: Divide each evaluated function value by the normalizing constant to ensure that the sum (or integral, in the continuous case) over the grid points is 1. This is crucial when dealing with probability distributions, as it ensures the result is a valid probability distribution.\n\n"
+    "4. **Summation or Integration**: Use the normalized values to compute estimates, such as expectations, by summing over the grid points, potentially weighted by the grid interval size.\n\n"
+    "#### Why normalize::\n\n"
+    "- **Probability Distributions**: In Bayesian inference, the posterior distribution needs to be properly normalized so that it integrates (or sums) to 1 over the parameter space.\n"
+    "- **Accuracy of Estimates**: Normalization ensures that derived quantities, like expectations or credible intervals, are accurate representations of the true statistical measures.\n\n"
+    "The normalization step is particularly crucial in Bayesian grid approximations because it transforms the unnormalized posterior into a proper probability distribution, enabling meaningful statistical inference.\n"
+)
 
-class MulitnomialDirichlet:
-    """ A class to implement the Multinomial-Dirichlet conjugate. The class is initialized with the code, prior data,
-    and likelihood data. The class computes the grid, prior, likelihood, posterior parameters, and posterior distribution.
-    The class can sample from the posterior, compute percentiles, compute the highest density interval, compute the expected
-    average, and compute the probability of x. The class also provides descriptive statistics.
 
-    The code parameter is used to identify the group of objects included in the prior and likelihood data.
-    """
 
-    def __init__(self, code, prior_data, likelihood_data, nsamples=100):
-        if len(prior_data) == 0 or len(likelihood_data) == 0:
-            raise ValueError("Prior data or likelihood data cannot be empty.")
+class GridForecast:
 
-        self.code = code
-        self.prior_data = prior_data
-        self.likelihood_data = likelihood_data
-        self.grid = self.compute_grid()
-        self.prior = self.compute_counts(self.prior_data)
-        self.likelihood = self.compute_counts(self.likelihood_data)
-        self.posterior_params = self.compute_posterior_params()
-        self.posterior_dist = dirichlet(self.posterior_params)
-        self.posterior_samples = self.sample_posterior(nsamples)
+    def __init__(self, likelihood, report_meta, data):
+        self.likelihood = likelihood
+        self.likelihood_locations = likelihood.location.unique()
+        self.report_meta = report_meta
+        self.info_columns = ['canton', 'city', 'feature_name']
+        self.priors = self.evaluate_prior_data(data)
+        self.features = ['buildings', 'forest', 'undefined']
+        self.valid_priors = []
 
-    def compute_grid(self):
-        max_value = round(max(self.prior_data.max(), self.likelihood_data.max()), 1)
-        return np.arange(0, max_value, 0.01)
+    def collect_prior_data(self, data):
+        prior_filters = list(self.report_meta.keys())
 
-    def compute_counts(self, data):
-        counts, _ = np.histogram(data,
-                                 bins=np.append(self.grid, self.grid[-1] + 0.1))
-        return counts
+        if 'feature_type' in prior_filters:
+            feature_type_mask = data.feature_type == self.report_meta['feature_type']
+            data = data[feature_type_mask]
 
-    def compute_posterior_params(self):
-        post_counts = self.likelihood + self.prior
-        post_counts = np.where(post_counts > 0, post_counts, 0.01)
-        return post_counts
+        if 'codes' in prior_filters:
+            code_mask = data.code.isin(self.report_meta['codes'])
+            data = data[code_mask]
 
-    def sample_posterior(self, num_samples=100):
-        adist_samples = self.posterior_dist.rvs(1)[0]
-        # print(adist_samples[:2])
-        # print(sum(adist_samples))
-        posterior_samples = multinomial.rvs(num_samples, adist_samples)
-        sample_values = np.repeat(self.grid, posterior_samples)
-        return sample_values
+        return data[~data.location.isin(self.likelihood_locations)]
 
-    def compute_percentiles(self, percentiles=[5, 25, 50, 75, 95]):
-        samples = self.posterior_samples
-        return np.percentile(samples, percentiles)
 
-    def compute_hdi(self, credibility_mass=0.95):
-        samples = self.posterior_samples
-        sorted_samples = np.sort(samples)
-        ci_idx_inc = int(np.floor(credibility_mass * len(sorted_samples)))
-        n_cis = len(sorted_samples) - ci_idx_inc
-        ci_width = sorted_samples[ci_idx_inc:] - sorted_samples[:n_cis]
-        min_ci_width_idx = np.argmin(ci_width)
-        hdi_min = sorted_samples[min_ci_width_idx]
-        hdi_max = sorted_samples[min_ci_width_idx + ci_idx_inc]
-        return hdi_min, hdi_max
+    def evaluate_prior_data(self,data):
+        # eliminate the likelihood samples
+        prior_data = self.collect_prior_data(data)
 
-    def compute_expected_average(self):
-        return self.posterior_dist.mean()
+        # if there is no data left return empty dataframes
+        if len(prior_data) == 0:
+            print('prior is len o')
+            return {'prior': pd.DataFrame(), 'in_boundary': pd.DataFrame(), 'out_boundary': pd.DataFrame()}
+        try:
+            # make report objects from the prior data
+            _, prior_landuse = make_report_objects(prior_data, info_columns=self.info_columns)
+            prior_landuse = prior_landuse.df_cont.reset_index(drop=True)
+        except Exception as e:
+            # if there is an error return empty dataframes
+            print('prior caused exception')
+            return {'prior': pd.DataFrame(), 'in_boundary': pd.DataFrame(), 'out_boundary': pd.DataFrame()}
 
-    def probability_of_x(self, x):
-        if x < 0 or x > self.grid.max():
-            raise ValueError("x must be within the range of the grid.")
+        # check the boundaries and make a set of prior data from within the boundaries
+        # if possible and create a prior from data outside the boundaries
+        if 'boundary' in self.report_meta.keys():
+            if self.report_meta['boundary'] is not None:
+                in_boundary_mask = (prior_landuse[self.report_meta['boundary']] == self.report_meta['boundary_name'])
+                in_boundary = prior_landuse[in_boundary_mask].copy()
+                out_boundary_mask = (prior_landuse[self.report_meta['boundary']] != self.report_meta['boundary_name'])
+                out_boundary = prior_landuse[out_boundary_mask].copy()
 
-        posterior_samples = self.posterior_dist.rvs(1000)
-        mp = np.mean(posterior_samples, axis=0)
-        bin_index = np.digitize([x], self.grid)
-        equal_to_greater_than_x = np.sum(mp[bin_index[0]:])
-        less_than_x = np.sum(mp[:bin_index[0]])
-        results = {
-            "less_than_x": less_than_x,
-            "equal_to_greater_than_x": equal_to_greater_than_x
-        }
-        return pd.DataFrame([results])
+                if 'feature_name' in self.report_meta.keys():
+                    if self.report_meta['feature_name'] is not None:
+                        name_mask = (in_boundary['feature_name'] == self.report_meta['feature_name'])
+                        feature_in_bounds = in_boundary[name_mask].copy()
 
-    def get_descriptive_statistics(self):
-        average = np.mean(self.posterior_samples)
-        hdi_min, hdi_max = self.compute_hdi()
-        percentiles = self.compute_percentiles()
-        q_labels = {session_config.quantile_labels[i]: percentiles[i] for i in range(len(percentiles))}
-        max_predicted = max(self.posterior_samples)
-        stats_dict = {
-            "average": average,
-            **{'hdi min': hdi_min, 'hdi max': hdi_max},
-            **q_labels,
-            "max predicted": max_predicted
-        }
-        # results = pd.DataFrame([stats_dict])
-        result = pd.DataFrame(stats_dict.values(), index=list(stats_dict.keys()), columns=['expected'])
-        return result
+                        return {'prior': prior_landuse, 'in_boundary': feature_in_bounds, 'out_boundary': out_boundary}
+
+                    else:
+                        return {'prior': prior_landuse, 'in_boundary': in_boundary, 'out_boundary': out_boundary}
+                else:
+                    return {'prior': prior_landuse, 'in_boundary': in_boundary, 'out_boundary': out_boundary}
+            else:
+                pass
+
+        if 'feature_name' in self.report_meta.keys():
+
+            if self.report_meta['feature_name'] is not None:
+                in_boundary_mask = (prior_landuse['feature_name'] == self.report_meta['feature_name'])
+                in_boundary = prior_landuse[in_boundary_mask].copy()
+                out_boundary_mask = (prior_landuse['feature_name'] != self.report_meta['feature_name'])
+                out_boundary = prior_landuse[out_boundary_mask].copy()
+                return {'prior': prior_landuse, 'in_boundary': in_boundary, 'out_boundary': out_boundary}
+            else:
+                pass
+
+        return {'prior': prior_landuse, 'in_boundary': pd.DataFrame(), 'out_boundary': pd.DataFrame()}
+
+    def inference_tables(self, data):
+        valid_priors = {}
+        nvalid_priors = 0
+        nsamples = len(self.likelihood)
+        self.priors = self.evaluate_prior_data(data)
+
+
+        for label in self.priors.keys():
+
+            if len(self.priors[label]) > 0:
+
+                nvalid_priors += 1
+                self.valid_priors.append(label)
+                setattr(self, label, self.priors[label])
+                valid_priors.update({label: self.priors[label]})
+
+        if nvalid_priors == 0:
+            section_head = f"### Prior grid approximation"
+            poster_limits = f"{section_head}\nNo valid priors were found."
+
+            return {'prior': {'dataframe': pd.DataFrame(), 'prompt': poster_limits}}
+
+        predictions = {}
+
+        for label, aprior in valid_priors.items():
+            a_prior = sample_like_subset_general(aprior, self.likelihood, label)
+
+            grid_max = max(np.percentile(self.likelihood['pcs/m'].values, 99, axis=0),
+                           np.percentile(a_prior['dataframe']['pcs/m'].values, 99, axis=0))
+            grid_limit = round(grid_max, 2) + .03
+
+            grid = np.arange(0, grid_limit, 0.01)
+            lh_rates = np.array([(self.likelihood['pcs/m'] > x).sum() for x in grid])
+            lh_rates = lh_rates / nsamples
+
+            pr_rates = np.array([(a_prior['dataframe']['pcs/m'] > x).sum() for x in grid])
+            pr_rates = pr_rates / len(a_prior)
+
+            posterior = lh_rates * pr_rates
+            normalized = posterior / sum(posterior)
+
+            rng = np.random.default_rng()
+            posterior_multinomial = rng.multinomial(100, normalized, size=1)
+            posterior_samples = np.repeat(grid, posterior_multinomial[0])
+            posterior_samples = pd.DataFrame(posterior_samples, columns=['pcs/m'])
+            section_head = f"### {' '.join(label.split('_')).capitalize()} grid approximation\n{a_prior['prompt']}"
+            poster_limits = f"{section_head}\nThe expected posterior distribution is a grid approximation from 0 to {grid_limit} every 0.01."
+            prompt = f"{poster_limits}\n\n{posterior_samples[['pcs/m']].describe().to_markdown()}"
+
+            predictions.update({label: {'dataframe': posterior_samples, 'prompt': prompt}})
+
+        return predictions
+
+    def sampling_stratiifcation(self, label):
+        if hasattr(self, label):
+            df = getattr(self, label).copy()  # Dynamically access the attribute using the label string
+
+            df_feature = {feature: df[feature].value_counts() for feature in self.features}
+
+            df = pd.concat(df_feature, axis=1)
+
+            df = df.fillna(0).astype('int')
+            df = df/len(df)
+            return df
+        else:
+            return pd.DataFrame()
+
+
+
+    def rate_per_feature(self, label):
+        if hasattr(self, label):
+            df = getattr(self, label).copy()  # Dynamically access the attribute using the label string
+            avg_matrix = pd.DataFrame(index=self.features, columns=session_config.bin_labels)
+
+            # Calculate the mean for each category in each identified column
+            for column in self.features:
+                for category in session_config.bin_labels:
+                    # Filter df by category and calculate mean for the target variable, only if it's relevant
+                    filtered = df[df[column] == category]
+                    avg_matrix.at[column, category] = filtered['pcs/m'].mean() if not filtered.empty else 0
+
+            return avg_matrix.round(2).T
+        else:
+            return pd.DataFrame()
+
+    def report_draft(self, data, file_name: str = None):
+        report_label = construct_report_label(self.report_meta)
+        current_forecast = self.inference_tables(data)
+
+        if file_name is not None:
+            # here we want to append to a specific document or create a new one
+            try:
+                with open(file_name, 'a') as file:
+                    title = f"\n## Grid forecast {report_label}\n\n"
+                    title_and_def = f"{title}{grid_approximation_def}\n\n"
+                    append_to_markdown(file_name, title_and_def)
+                    for forecast_type, forecast in current_forecast.items():
+                        append_to_markdown(file_name, forecast['prompt'])
+            except FileNotFoundError:
+                title = f"\n# Grid forecast {report_label}\n\n"
+                title_and_def = f"{title}{grid_approximation_def}\n\n"
+                with open(file_name, 'w') as file:
+                    file.write(file_name, title_and_def)
+
+                for forecast_type, forecast in current_forecast.items():
+                    append_to_markdown(file_name, forecast['prompt'])
+
+        else:
+            # this method is called from another report class and
+            # it appends the block of text to the report
+            report_string = f"\n## Grid forecast {report_label}\n\n{grid_approximation_def}\n\n"
+            for forecast_type, forecast in current_forecast.items():
+                report_string += forecast['prompt'] + "\n\n"
+            return report_string
+
+
+

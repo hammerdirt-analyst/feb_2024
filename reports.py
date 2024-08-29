@@ -33,7 +33,7 @@ import numpy as np
 
 import session_config
 from session_config import administrative, feature_types
-from session_config import object_of_interest, palette, bin_labels, feature_variables
+from session_config import object_of_interest, feature_type_labels, bin_labels, feature_variables
 from session_config import index_label, location_label, Y, Q
 from session_config import unit_agg, agg_groups
 from session_config import report_quantiles
@@ -46,8 +46,76 @@ import seaborn as sns
 
 
 import geospatial
-from gridforecast import MulitnomialDirichlet, forecast_weighted_prior
-from IPython.display import Markdown
+
+def construct_report_label(report_meta):
+    report_label = report_meta.get('name', '')
+    if 'boundary' in report_meta:
+        report_label += f" {report_meta['boundary']}"
+
+    if 'feature_type' in report_meta:
+        report_label += f" {feature_type_labels[report_meta['feature_type']]}"
+
+    report_label += f" {report_meta.get('start', '')} {report_meta.get('end', '')}"
+
+    return report_label
+
+
+def report_meta_data(data, start: str = None, end: str = None, name: str = None,
+                     feature_name: str = None, feature_type: str = None,
+                     boundary: str = None, boundary_name: str = None, codes: [] = None):
+    date_mask = (data['date'] >= start) & (data['date'] <= end)
+    code_mask = (data['code'].isin(codes))
+    report_meta = {}
+    report_meta.update({'start': start, 'end': end, 'name': name, 'codes': codes})
+    if feature_type in ['l', 'p', 'r']:
+        feature_mask = (data['feature_type'] == feature_type)
+        report_meta.update({'feature_type': feature_type})
+        if feature_name is not None:
+            report_meta.update({'feature_name': feature_name})
+            name_mask = (data['feature_name'] == feature_name)
+            if boundary in ['canton', 'city', 'parent_boundary']:
+                boundary_mask = (data[boundary] == boundary_name)
+                report_meta.update({'boundary': boundary})
+                report_meta.update({'boundary_name': boundary_name})
+                d = data[date_mask & code_mask & feature_mask & boundary_mask & name_mask].copy()
+                return {'dataframe': d, 'meta': report_meta}
+            else:
+                d = data[date_mask & code_mask & feature_mask & name_mask].copy()
+                return {'dataframe': d, 'meta': report_meta}
+
+        else:
+            if boundary in ['canton', 'city', 'parent_boundary']:
+                boundary_mask = (data[boundary] == boundary_name)
+                report_meta.update({'boundary': boundary})
+                report_meta.update({'boundary_name': boundary_name})
+                d = data[date_mask & code_mask & feature_mask & boundary_mask].copy()
+                return {'dataframe': d, 'meta': report_meta}
+            else:
+                d = data[date_mask & code_mask & feature_mask].copy()
+                return {'dataframe': d, 'meta': report_meta}
+
+    if boundary in ['canton', 'city', 'parent_boundary']:
+        boundary_mask = (data[boundary] == boundary_name)
+        report_meta.update({'boundary': boundary})
+        report_meta.update({'boundary_name': boundary_name})
+        if feature_type in ['l', 'p', 'r']:
+            feature_mask = (data['feature_name'] == feature_name)
+            report_meta.update({'feature_type': feature_type})
+            if feature_name is not None:
+                report_meta.update({'feature_name': feature_name})
+                name_mask = (data['feature_name'] == feature_name)
+                d = data[date_mask & code_mask & feature_mask & boundary_mask & name_mask].copy()
+                return {'dataframe': d, 'meta': report_meta}
+            else:
+
+                d = data[date_mask & code_mask & boundary_mask & feature_mask].copy()
+                return {'dataframe': d, 'meta': report_meta}
+        else:
+            d = data[date_mask & code_mask & boundary_mask].copy()
+            return {'dataframe': d, 'meta': report_meta}
+
+    else:
+        return {'dataframe': data, 'meta': report_meta}
 
 
 def collect_sample_totals(df, sample_id: str = 'sample_id', labels: str = location_label,
@@ -60,21 +128,12 @@ def collect_sample_totals(df, sample_id: str = 'sample_id', labels: str = locati
     else:
         return df.groupby([sample_id, labels, 'date', *info_columns], as_index=False).agg(afunc)
 
-def collect_the_most_common(df, a_fail_rate: float = 0.5, n_greatest: int = 10):
-    a = df.sort_values('quantity', ascending=False).head(n_greatest).code.unique()
 
-    b = df[df['rate'] >= a_fail_rate].code.unique()
-    mc_codes = list({*a, *b})
-    data = df[df.code.isin(mc_codes)]
-    data = data.sort_values('quantity', ascending=False)
-    mc_q = data.quantity.sum()
-    pct_total = mc_q / df.quantity.sum()
-
-    return data, mc_codes, pct_total
 
 def make_report_objects(df, info_columns: list = None):
     # make a survey report and a landuse report
-    # from filtered data
+    if len(df) == 0:
+        raise ValueError("No data in the dataframe. Please check the query parameters and try again.")
     this_report = SurveyReport(dfc=df)
 
     # generate the parameters for the landuse report
@@ -137,82 +196,6 @@ def check_params(params, data):
         message = f"An error occurred: {str(e)}. Please check your query parameters and try again. "
         return [], [], message
 
-
-def reports_and_forecast(likelihood_params: dict, prior_params: dict, ldata: pd.DataFrame):
-    # utility function to make reports and forecasts. The function checks the likelihood and prior parameters
-    # and returns the reports and forecasts if the parameters are valid. Otherwise, the function returns any available
-    # reports and a boolean flag indicating that a forecast was not made.
-
-    comments = ''
-    make_forecast = True
-    ldi, l_locations, c = check_params(likelihood_params, ldata.copy())
-    comments += f' {c}'
-    if c != 'ok':
-        make_forecast = False
-        this_report, this_land_use = 'No likelihood', 'No likelihood'
-    else:
-        this_report, this_land_use = make_report_objects(ldi)
-    pdf, p_locations, c = check_params(prior_params, ldata.copy())
-    comments += f' {c}'
-    if c != 'ok':
-        make_forecast = False
-        prior_report, prior_land_use = 'No prior', 'No prior'
-    else:
-        prior_report, prior_land_use = make_report_objects(pdf)
-
-    if make_forecast:
-        prr = prior_report.sample_results().groupby('sample_id')['pcs/m'].sum()
-
-        lkl = this_report.sample_results().groupby('sample_id')['pcs/m'].sum()
-        max_range = np.quantile(lkl.values, .99)
-
-        # consider all values
-        i = MulitnomialDirichlet('max value', prr, lkl)
-
-        # limit to the 99th percentile
-        limited = lkl[lkl <= max_range]
-        h  = MulitnomialDirichlet('99th percentile', limited, prr)
-        comments += c
-    else:
-        i = 'no forecast'
-        h = 'no forecast'
-        comments += 'No forecast was made.'
-    results = dict(
-        this_report=this_report,
-        this_land_use=this_land_use,
-        prior_report=prior_report,
-        prior_land_use=prior_land_use,
-        posterior_no_limit=i,
-        posterior_99=h,
-        comments=comments
-    )
-
-    return results
-
-
-def admin_report(data, admin_boundary):
-    d = data.groupby(admin_boundary).agg({'pcs/m': 'mean', 'quantity': 'sum', 'sample_id': 'nunique'})
-    return d
-
-
-def features_present(data, a_feature_inventory):
-    ftypes = a_feature_inventory.gt(0).apply(lambda x: x.index[x].tolist(), axis=1)
-
-    ftypes = [x[0] for x in ftypes]
-
-    summardata = data.groupby(['sample_id', 'feature_type', 'feature_name'], as_index=False).agg(
-        {'pcs/m': 'sum', 'quantity': 'sum'})
-
-    feature_individual_summary = summardata.groupby(['feature_type', 'feature_name'], as_index=False).agg(
-        {'sample_id': 'nunique', 'pcs/m': 'mean', 'quantity': 'sum'})
-    results = {}
-    for features in ftypes:
-        d = feature_individual_summary[feature_individual_summary.feature_type == features[0]].copy()
-        results[features] = d[['feature_name', 'sample_id', 'pcs/m', 'quantity']]
-
-    return results
-
-
 def histograms_standard(data):
     fig, ax = plt.subplots()
 
@@ -271,108 +254,6 @@ def labels_for_display(args):
     end = args['date_range']['end'][:4]
     labels = f"{start} - {end}"
     return labels
-
-
-def make_standard_report(results, args):
-    # data for plots
-    observedvals = []
-    forecasts = []
-
-    display_results = [
-        'weighted-forecast',
-        'observed-max-forecast',
-        'observed-99-forecast',
-        'proportion-most-common',
-        'most-common-objects',
-        'sampling-summary',
-        'prior-sampling-summary',
-        'observed-values',
-        'forecasted-values',
-        'likelihood-labels',
-        'prior-labels']
-
-    display_r = {x: 'No data' for x in display_results}
-
-    # make the labels for display
-    likelihood_labels = labels_for_display(args['likelihood'])
-    prior_labels = labels_for_display(args['prior'])
-
-    l_summary = results['this_report'].sampling_results_summary.copy()
-
-    # most common objects the likelihood data
-    object_inventory = results['this_report'].object_summary()
-    object_inventory.reset_index(drop=False, inplace=True)
-    most_common_objects, mc_codes, proportions = collect_the_most_common(object_inventory)
-    # most_common_objects = most_common_objects.set_caption("")
-    ratio_most_common = Markdown(f'__The most common objects account for {int(proportions * 100)}% of all objects__')
-
-    observedvals.append((results['this_report'].sample_results()[['pcs/m']], likelihood_labels, palette['likelihood']))
-    weighted_args = [
-        results['this_land_use'].n_samples_per_feature(),
-        args['land-use-inventory'],
-        bin_labels,
-        feature_variables,
-        results['this_report'].sample_results()['pcs/m']
-    ]
-    weighted_forecast, weighted_posterior, weighted_summary, selectedr = forecast_weighted_prior(*weighted_args,
-                                                                                                 ncols=1)
-
-    forecasts.append((weighted_forecast, 'weighted prior', '-.', 'black'))
-    forecasts.append((results['this_report'].sample_results()[['pcs/m']], likelihood_labels, '-', palette['likelihood']))
-
-    display_r.update({
-        'proportion-most-common': ratio_most_common,
-        'most-common-objects': most_common_objects,
-        'sampling-summary': l_summary,
-        'likelihood-labels': likelihood_labels,
-        'weighted-forecast': weighted_summary,
-        'observed-values': observedvals
-    })
-    if results['prior_report'] == 'No prior':
-        # print('no prior')
-        # print(observedvals)
-
-        # make the display text
-        header = f"<font color=#daa520>{prior_labels}</font>"
-        info = '* No data for the period requested\n'
-        sampling_summary = Markdown(f'{header}\n{info}')
-        forecast_maxval = Markdown('__Given the observed max__\n* No prior data to consider see weighted prior\n')
-        forecast_99 = Markdown('__Given the observed 99__\n* No prior data to consider see weighted prior\n')
-
-        # update display object
-        display_r.update({
-            'prior-sampling-summary': sampling_summary,
-            'prior-labels': prior_labels,
-            'observed-max-forecast': forecast_maxval,
-            'observed-99-forecast': forecast_99,
-            'forecasted-values': forecasts
-        })
-
-    else:
-
-        p_summary = results['prior_report'].sampling_results_summary
-
-        observedvals.append((results['prior_report'].sample_results()[['pcs/m']], prior_labels, palette['prior']))
-        forecasts.append((results['prior_report'].sample_results()[['pcs/m']], prior_labels, ':', palette['prior']))
-
-        forecast_maxval = results['posterior_no_limit'].get_descriptive_statistics()
-        forecast_99 = results['posterior_99'].get_descriptive_statistics()
-
-        forecasts.append((results['posterior_99'].posterior_samples, 'expected 99th', '-', 'blue'))
-        forecasts.append((results['posterior_no_limit'].posterior_samples, 'observed max', ':', 'red'))
-
-        display_r.update({
-            'prior-sampling-summary': p_summary,
-            'prior-labels': prior_labels,
-            'observed-max-forecast': forecast_maxval,
-            'observed-99-forecast': forecast_99,
-            'observed-values': observedvals,
-            'forecasted-values': forecasts
-
-        })
-
-    return display_r
-
 
 class SurveyReport:
     
@@ -435,6 +316,11 @@ class SurveyReport:
         return self.df.sample_id.nunique()
 
     @property
+    def number_of_locations(self):
+        """Returns the number of unique locations in the report"""
+        return self.df.location.nunique()
+
+    @property
     def material_report(self):
         inv = self.inventory()
         inv['material'] = inv.merge(session_config.code_material, right_index=True, left_index=True)['material']
@@ -488,6 +374,10 @@ class SurveyReport:
 
     def object_summary(self):
         qtys = self.inventory()
+        qtys = qtys[qtys['quantity'] > 0]
+        qtys = qtys.sort_values('quantity', ascending=False)
+        qtys.rename(columns={'sample_id': 'nsamples'}, inplace=True)
+
         return qtys.merge(self.fail_rate(), right_on=object_of_interest, left_on=object_of_interest)
     
 

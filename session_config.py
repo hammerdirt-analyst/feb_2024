@@ -17,6 +17,8 @@ from pathlib import Path
 administrative = ['location', 'city', 'canton', 'parent_boundary']
 geographic = ['feature_name',  'feature_type']
 feature_types = ['r', 'l', 'p']
+feature_labels = ['river', 'lake', 'park']
+feature_type_labels = {x: feature_labels[i] for i, x in enumerate(feature_types)}
 feature_variables = ['buildings', 'wetlands', 'forest', 'public-services', 'recreation', 'undefined', 'streets', 'vineyards', 'orchards']
 the_report_themes = ['Canton', 'Municipality', 'River basin', 'River', 'Lake', 'Park']
 
