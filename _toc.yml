@@ -1,5 +1,4 @@
 # Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
 root: titlepage
@@ -17,32 +16,6 @@ parts:
     - file: bielersee_example
     - file: bern_city_example
     - file: biel_city_example
-    
-
-
-  #   - file: use_cases
-  #   - file: report_results-rough-draft
-  #   - file: new_report
-  #   - file: project
-    
-  # - caption: Methods and classes
-  #   chapters:    
-  #   - file: a_report_class
-  #   - file: landuse_class    
-  #   - file: forecasts
-  #   - file: saint_sulpice
-  #   - file: haystackagents
-  #   - file: langchainagents
-  
-  # - caption: Annex
-  #   chapters:    
-  #   - file: the_survey_data
-  #   - file: extracting_topo_data
-  #   - file: multinomial_conjugate
-  #   - file: agent_prompts_relations
-
-
-   
-    
+     
    
  

@@ -44,19 +44,19 @@ import geopandas as gpd
 import folium
 from shapely.geometry import Point
 
-
 import session_config
-from session_config import feature_variables, lat_lon, dbckey, canton_layer, agg_groups, rgba_to_css
+from session_config import feature_variables, lat_lon, dbckey, canton_layer, rgba_to_css
 from session_config import location_label, Y, Q, municipal_layer, rivers_layer, lakes_layer
-
 
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import seaborn as sns
 from matplotlib import colormaps as mpl_color_maps
 from matplotlib.lines import Line2D
+
 gpd.options.io_engine = "pyogrio"
 pd.set_option('future.no_silent_downcasting', True)
+
 def make_folium_map(markers, bounds):
     m = folium.Map(
         max_bounds=True,
@@ -86,7 +86,6 @@ def make_map_caption(report_meta):
     end = report_meta['end'][:4]
     return f'{prefix} {report_meta["name"]} {start} {end}'
 
-
 def get_color_from_value(value, vmin, vmax, cmap_name='YlOrBr'):
     """
     Returns a color from a specified colormap based on a float value.
@@ -108,7 +107,6 @@ def get_color_from_value(value, vmin, vmax, cmap_name='YlOrBr'):
 
     return color
 
-
 def get_cluster_color(cluster_number, cmap_name='tab20'):
     """
     Assigns a color to a cluster number using the specified colormap and returns it in RGBA format.
@@ -127,7 +125,6 @@ def get_cluster_color(cluster_number, cmap_name='tab20'):
     rgba_color = mcolors.to_rgba(color)
 
     return rgba_color
-
 
 def situation_map_plot(map_legend_markers, report_meta, file_name='situation_map.jpg', location_markers: str = 'o', show: bool = True):
 

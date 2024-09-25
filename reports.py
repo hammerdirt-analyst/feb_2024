@@ -131,7 +131,7 @@ def make_report_objects(df: pd.DataFrame, info_columns: list[str] = None) -> tup
 
     # Generate the parameters for the LandUseReport
     target_df = this_report.sample_results(info_columns=info_columns)
-    features = pd.read_csv('data/in_process/new_lu.csv')
+    features = pd.read_csv('data/end_process/new_lu.csv')
 
     # Create a LandUseReport
     this_land_use = geospatial.LandUseReport(target_df, features)

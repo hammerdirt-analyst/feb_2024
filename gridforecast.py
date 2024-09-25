@@ -46,9 +46,7 @@ Classes
 """
 import pandas as pd
 import numpy as np
-import session_config
-from reports import make_report_objects
-from session_config import grid_approximation_def, in_boundary_description, out_boundary_description, prior_description, construct_report_label
+from session_config import grid_approximation_def, construct_report_label
 import matplotlib.pyplot as plt
 import reports
 import seaborn as sns
@@ -56,7 +54,6 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics.pairwise import cosine_similarity
 from scipy.spatial.distance import euclidean, cityblock
 from math import ceil
-
 import scipy.stats as stats
 from typing import Optional, Dict
 
@@ -74,7 +71,6 @@ def normalize_streets(pool_of_locations, a_single_location):
 
     return pool_of_locations, a_single_location
 
-
 def calculate_cosine_similarity(pool_of_locations, a_single_location, feature_variables):
     """
     Calculate cosine similarity between the rows of a_single_location and each row in
@@ -85,7 +81,6 @@ def calculate_cosine_similarity(pool_of_locations, a_single_location, feature_va
 
     similarities = cosine_similarity([sample_vector], feature_matrix)
     return similarities[0]
-
 
 def calculate_euclidean_distance(pool_of_locations, a_single_location, feature_variables):
     """
@@ -98,7 +93,6 @@ def calculate_euclidean_distance(pool_of_locations, a_single_location, feature_v
 
     return distances
 
-
 def calculate_manhattan_distance(pool_of_locations, a_single_location, feature_variables):
     """
     Calculate Manhattan distance between a_single_location and each row in
@@ -109,7 +103,6 @@ def calculate_manhattan_distance(pool_of_locations, a_single_location, feature_v
     distances = [cityblock(sample_vector, row) for row in feature_matrix]
 
     return distances
-
 
 def find_similar_locations(pool_of_locations, a_single_location, feature_variables, metric='cosine',
                            similarity_threshold=0.7):
@@ -159,7 +152,6 @@ def find_similar_locations(pool_of_locations, a_single_location, feature_variabl
 
     return selected_locations
 
-
 def calculate_optimal_weights(similar_locations, survey_data, n, used_sample_ids, max_samples_per_location=None):
     location_weights = {}
     total_available = 0
@@ -188,7 +180,6 @@ def calculate_optimal_weights(similar_locations, survey_data, n, used_sample_ids
             # print(f"Location: {location}, Calculated samples: {location_weights[location]}")
 
     return location_weights
-
 
 def select_samples(survey_data, location_weights, used_sample_ids, n):
     samples = []
@@ -232,7 +223,6 @@ def select_samples(survey_data, location_weights, used_sample_ids, n):
         sampled_data = pd.DataFrame(columns=survey_data.columns)
 
     return sampled_data
-
 
 class SampleSelector:
     def __init__(self, feature_data, prior_data, feature_variables, a_single_location, metric: str = 'cosine',
@@ -279,7 +269,6 @@ class SampleSelector:
         weights_df = pd.DataFrame(weights_info)
 
         return sampled_data, weights_df
-
 
 class ProportionalSampleSelector:
 
@@ -384,7 +373,6 @@ class ProportionalSampleSelector:
 
         weights_df = pd.DataFrame(weights_info)
         return weights_df
-
 
 class BetaBinomialModel:
     def __init__(self, prior: np.ndarray, likelihood: np.ndarray, report_meta: Dict,
@@ -492,10 +480,6 @@ class BetaBinomialModel:
                 f"likelihood_samples={len(self.likelihood)}, "
                 f"grid_interval={self.grid_interval}, "
                 f"percentile_grid_max={self.percentile_grid_max})")
-
-
-from session_config import grid_approximation_def
-
 
 class GridForecast:
     """
@@ -809,341 +793,4 @@ class GridForecast:
             for forecast_type, forecast in current_forecast.items():
                 report_string += forecast['prompt'] + "\n\n"
             return {'dataframe': current_forecast, 'prompt': report_string}
-
-
-# class GridForecast:
-#     """
-#     A class to perform grid forecasting using Bayesian inference.
-#
-#     This class implements a grid forecast using inference tables and priors based on sampling stratification and geographic proximity.
-#     It provides methods to generate reports and forecasts based on the likelihood and prior data, compute the posterior distribution,
-#     sample from the posterior, compute percentiles, compute the highest density interval, compute the expected average, and compute
-#     the probability of x. It also provides methods to compute the descriptive statistics of the forecasted samples.
-#
-#     Attributes
-#     ----------
-#     likelihood : pd.DataFrame
-#         The DataFrame containing the likelihood data.
-#     report_meta : dict
-#         Metadata for the report, including filters and boundaries.
-#     data : pd.DataFrame
-#         The input data used for generating priors.
-#     likelihood_locations : np.ndarray
-#         Unique locations from the likelihood data.
-#     info_columns : list[str]
-#         List of columns containing information about the data.
-#     priors : dict
-#         Dictionary containing the prior data, in-boundary data, and out-boundary data.
-#     features : list[str]
-#         List of features used for stratification and similarity calculations.
-#     valid_priors : list[str]
-#         List of valid priors identified during the inference process.
-#
-#     Methods
-#     -------
-#     collect_prior_data(data: pd.DataFrame) -> pd.DataFrame
-#         Collect prior data based on the report metadata.
-#     evaluate_prior_data(data: pd.DataFrame) -> dict
-#         Evaluate prior data based on the report metadata.
-#     inference_tables() -> dict
-#         Generate inference tables based on the likelihood and prior data.
-#     sampling_stratification(label: str) -> pd.DataFrame
-#         Calculate the stratification of samples based on specified features.
-#     rate_per_feature(label: str) -> pd.DataFrame
-#         Calculate the average rate per feature for the specified label.
-#     report_draft(file_name: str = None) -> str
-#         Generate a draft report of the grid forecast.
-#     """
-#
-#     def __init__(self, likelihood, report_meta, data):
-#         self.likelihood = likelihood
-#         self.likelihood_locations = likelihood.location.unique()
-#         self.report_meta = report_meta
-#         self.info_columns = ['canton', 'city', 'feature_name']
-#         self.priors = self.evaluate_prior_data(data)
-#         self.features = ['buildings', 'forest', 'undefined']
-#         self.valid_priors = []
-#
-#     def collect_prior_data(self, data: pd.DataFrame) -> pd.DataFrame:
-#         """
-#         Collect prior data based on the report metadata.
-#
-#         This function filters the input data based on the report metadata, excluding the likelihood samples.
-#
-#         Parameters
-#         ----------
-#         data : pd.DataFrame
-#             The input DataFrame containing the data to be filtered.
-#
-#         Returns
-#         -------
-#         pd.DataFrame
-#             The filtered DataFrame containing the prior data.
-#
-#         Raises
-#         ------
-#         ValueError
-#             If the input data is not a DataFrame or if required columns are missing.
-#         """
-#         if not isinstance(data, pd.DataFrame):
-#             raise ValueError("Input data must be a pandas DataFrame.")
-#
-#         #prior_filters = list(self.report_meta.keys())
-#
-#         if self.report_meta['feature_type'] is not None:
-#             feature_type_mask = data['feature_type'] == self.report_meta['feature_type']
-#             data = data[feature_type_mask]
-#
-#         if self.report_meta['report_codes'] is not None:
-#             code_mask = data['code'].isin(self.report_meta['report_codes'])
-#             data = data[code_mask]
-#
-#         return data[~data['location'].isin(self.likelihood_locations)]
-#
-#     def evaluate_prior_data(self, data: pd.DataFrame) -> dict:
-#         """
-#         Evaluate prior data based on the report metadata.
-#
-#         This function filters the input data based on the report metadata, excluding the likelihood samples.
-#         It then creates report objects from the prior data and checks the boundaries to create a set of prior data
-#         from within and outside the boundaries.
-#
-#         Parameters
-#         ----------
-#         data : pd.DataFrame
-#             The input DataFrame containing the data to be evaluated.
-#
-#         Returns
-#         -------
-#         dict
-#             A dictionary containing the prior data, in-boundary data, and out-boundary data.
-#
-#         Raises
-#         ------
-#         ValueError
-#             If the input data is not a DataFrame or if required columns are missing.
-#         """
-#         # Eliminate the likelihood samples
-#         prior_data = self.collect_prior_data(data)
-#
-#         # If there is no data left, return empty dataframes
-#         if len(prior_data) == 0:
-#             return {'combined_prior': pd.DataFrame(), 'in_boundary': pd.DataFrame(), 'out_boundary': pd.DataFrame()}
-#
-#         try:
-#             # Make report objects from the prior data
-#             _, prior_landuse = make_report_objects(prior_data, info_columns=self.info_columns)
-#             prior_landuse = prior_landuse.df_cont.reset_index(drop=True)
-#         except Exception:
-#             # If there is an error, return empty dataframes
-#             return {'combined_prior': pd.DataFrame(), 'in_boundary': pd.DataFrame(), 'out_boundary': pd.DataFrame()}
-#
-#         # Check the boundaries and make a set of prior data from within the boundaries if possible
-#         # and create a prior from data outside the boundaries
-#         if self.report_meta['boundary'] is not None:
-#             in_boundary_mask = (prior_landuse[self.report_meta['boundary']] == self.report_meta['boundary_name'])
-#             in_boundary = prior_landuse[in_boundary_mask].copy()
-#             out_boundary_mask = (prior_landuse[self.report_meta['boundary']] != self.report_meta['boundary_name'])
-#             out_boundary = prior_landuse[out_boundary_mask].copy()
-#
-#             if self.report_meta['feature_name'] is not None:
-#                 name_mask = (in_boundary['feature_name'] == self.report_meta['feature_name'])
-#                 feature_in_bounds = in_boundary[name_mask].copy()
-#                 return {'combined_prior': prior_landuse, 'in_boundary': feature_in_bounds, 'out_boundary': out_boundary}
-#             else:
-#                 return {'combined_prior': prior_landuse, 'in_boundary': in_boundary, 'out_boundary': out_boundary}
-#
-#         if self.report_meta['feature_name'] is not None:
-#             in_boundary_mask = (prior_landuse['feature_name'] == self.report_meta['feature_name'])
-#             in_boundary = prior_landuse[in_boundary_mask].copy()
-#             out_boundary_mask = (prior_landuse['feature_name'] != self.report_meta['feature_name'])
-#             out_boundary = prior_landuse[out_boundary_mask].copy()
-#             return {'combined_prior': prior_landuse, 'in_boundary': in_boundary, 'out_boundary': out_boundary}
-#
-#         return {'combined_prior': prior_landuse, 'in_boundary': pd.DataFrame(), 'out_boundary': pd.DataFrame()}
-#
-#     def inference_tables(self) -> dict:
-#         """
-#         Generate inference tables based on the likelihood and prior data.
-#
-#         This function evaluates the valid priors, samples from the posterior distribution, and normalizes the posterior.
-#         It then generates predictions and returns them along with the corresponding prompts.
-#
-#         Returns
-#         -------
-#         dict
-#             A dictionary containing the predictions and prompts for each valid prior.
-#
-#         Raises
-#         ------
-#         ValueError
-#             If no valid priors are found.
-#         """
-#         valid_priors = {}
-#         nvalid_priors = 0
-#         nsamples = len(self.likelihood)
-#
-#         for label in self.priors.keys():
-#             if len(self.priors[label]) > 0:
-#                 nvalid_priors += 1
-#                 self.valid_priors.append(label)
-#                 setattr(self, label, self.priors[label])
-#                 valid_priors.update({label: self.priors[label]})
-#
-#         if nvalid_priors == 0:
-#             section_head = f"### Prior grid approximation"
-#             poster_limits = f"{section_head}\nNo valid priors were found."
-#             return {'prior': {'dataframe': pd.DataFrame(), 'prompt': poster_limits}}
-#
-#         predictions = {}
-#
-#         for prior_type, aprior in valid_priors.items():
-#             print(f"Processing {prior_type}...")
-#             a_prior = sample_like_subset_general(aprior, self.likelihood, prior_type)
-#
-#             grid_max = max(np.percentile(self.likelihood['pcs/m'].values, 99, axis=0),
-#                            np.percentile(a_prior['dataframe']['pcs/m'].values, 99, axis=0))
-#             grid_limit = round(grid_max, 2) + .03
-#
-#             grid = np.arange(0, grid_limit, 0.01)
-#             lh_rates = np.array([(self.likelihood['pcs/m'] > x).sum() for x in grid])
-#             lh_rates = lh_rates / nsamples
-#
-#             pr_rates = np.array([(a_prior['dataframe']['pcs/m'] > x).sum() for x in grid])
-#             pr_rates = pr_rates / len(a_prior)
-#
-#             posterior = lh_rates * pr_rates
-#             normalized = posterior / sum(posterior)
-#
-#             rng = np.random.default_rng()
-#             posterior_multinomial = rng.multinomial(100, normalized, size=1)
-#             posterior_samples = np.repeat(grid, posterior_multinomial[0])
-#             posterior_samples = pd.DataFrame(posterior_samples, columns=['pcs/m'])
-#             section_head = f"### {' '.join(prior_type.split('_')).capitalize()} grid approximation\n{a_prior['prompt']}"
-#             poster_limits = f"{section_head}\nThe expected posterior distribution is a grid approximation from 0 to {grid_limit} every 0.01."
-#             prompt = f"{poster_limits}\n\n{posterior_samples[['pcs/m']].describe().to_markdown()}"
-#
-#             predictions.update({prior_type: {'dataframe': (posterior_samples, a_prior['dataframe']), 'prompt': prompt}})
-#
-#         return predictions
-#
-#     def sampling_stratification(self, label: str) -> pd.DataFrame:
-#         """
-#         Calculate the stratification of samples based on specified features.
-#
-#         This function calculates the proportion of each feature in the specified label's DataFrame.
-#
-#         Parameters
-#         ----------
-#         label : str
-#             The label used to access the corresponding DataFrame.
-#
-#         Returns
-#         -------
-#         pd.DataFrame
-#             A DataFrame containing the stratification proportions of each feature.
-#
-#         Raises
-#         ------
-#         ValueError
-#             If the label does not correspond to an attribute of the class.
-#         """
-#         if hasattr(self, label):
-#             df = getattr(self, label).copy()
-#
-#             df_feature = {feature: df[feature].value_counts() for feature in self.features}
-#
-#             df = pd.concat(df_feature, axis=1)
-#
-#             df = df.fillna(0).astype('int')
-#             df = df / len(df)
-#             return df
-#         else:
-#             raise ValueError(f"Label '{label}' does not correspond to any attribute of the class.")
-#
-#     def rate_per_feature(self, label: str) -> pd.DataFrame:
-#         """
-#         Calculate the average rate per feature for the specified label.
-#
-#         This function calculates the mean rate of the target variable ('pcs/m') for each category in the specified features.
-#
-#         Parameters
-#         ----------
-#         label : str
-#             The label used to access the corresponding DataFrame.
-#
-#         Returns
-#         -------
-#         pd.DataFrame
-#             A DataFrame containing the average rates per feature category.
-#
-#         Raises
-#         ------
-#         ValueError
-#             If the label does not correspond to an attribute of the class.
-#         """
-#         if hasattr(self, label):
-#             df = getattr(self, label).copy()  # Dynamically access the attribute using the label string
-#             avg_matrix = pd.DataFrame(index=self.features, columns=session_config.bin_labels)
-#
-#             # Calculate the mean for each category in each identified column
-#             for column in self.features:
-#                 for category in session_config.bin_labels:
-#                     # Filter df by category and calculate mean for the target variable, only if it's relevant
-#                     filtered = df[df[column] == category]
-#                     avg_matrix.at[column, category] = filtered['pcs/m'].mean() if not filtered.empty else 0
-#
-#             return avg_matrix.round(2).T
-#         else:
-#             raise ValueError(f"Label '{label}' does not correspond to any attribute of the class.")
-#
-#     def report_draft(self, file_name: str = None) -> dict:
-#         """
-#         Generate a draft report of the grid forecast.
-#
-#         This function generates a draft report of the grid forecast based on the current forecast and appends it to a specified file.
-#         If no file is specified, it returns the report as a string.
-#
-#         Parameters
-#         ----------
-#         file_name : str, optional
-#             The name of the file to which the report will be appended. If not provided, the report is returned as a string.
-#
-#         Returns
-#         -------
-#         str
-#             The generated report as a string if no file name is provided.
-#
-#         Raises
-#         ------
-#         ValueError
-#             If the file name is invalid or if there is an error writing to the file.
-#         """
-#         report_label = construct_report_label(self.report_meta)
-#         current_forecast = self.inference_tables()
-#
-#         if file_name is not None:
-#             # here we want to append to a specific document or create a new one
-#             title = f"\n## Grid forecast {report_label}\n\n"
-#             title_and_def = f"{title}{grid_approximation_def}\n\n"
-#             try:
-#                 with open(file_name, 'a') as file:
-#                     file.write(title_and_def)
-#                     for forecast_type, forecast in current_forecast.items():
-#                         file.write(forecast['prompt'])
-#             except FileNotFoundError:
-#                 with open(file_name, 'w') as file:
-#                     file.write(title_and_def)
-#                     for forecast_type, forecast in current_forecast.items():
-#                         file.write(forecast['prompt'])
-#         else:
-#             # this method is called from another report class and
-#             # it appends the block of text to the report
-#             report_string = f"\n## Grid forecast {report_label}\n\n{grid_approximation_def}\n\n"
-#             for forecast_type, forecast in current_forecast.items():
-#                 report_string += forecast['prompt'] + "\n\n"
-#             return {'dataframe': current_forecast, 'prompt': report_string}
-
-
-
 
