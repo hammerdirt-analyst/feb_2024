@@ -65,6 +65,6 @@ __Associated projects__
 
 __THE TEAM__
 
-Shannon Erismann, Montserrat Filella, Téo Gursoy, Christian Ludwig, Roger Erismann, Bettina Siegenthaler
+Shannon Erismann, Roger Erismann
 :::
 ::::

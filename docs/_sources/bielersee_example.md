@@ -3,11 +3,7 @@
 
 **Summary and analysis of observations of trash density**: objects related to tobacco and food and drink found in lakes. <i>Report number: Bielersee - example lake 2020-01-01 2021-05-31</i>
 
-
-
-
  <i>Proof of concept: llm assissted reporting grid forecasting example</i>
-
 
 ## Executive Summary
 
@@ -17,14 +13,14 @@ Sampling stratification is a method used to ensure that survey samples are repre
 
 The regression analysis conducted indicated that the Bagging: Gradient Boosting Regression model had the highest R² of 0.30 and a mean squared error (MSE) of 0.72. Feature importance analysis revealed that 'streets' (0.274337) and 'buildings' (0.218129) were the most significant predictors. Permutation feature importance showed that 'buildings' (0.137264) and 'streets' (0.0350437) were crucial. Despite these findings, the relatively low R² values suggest that the models only capture a small portion of the variance in the data, indicating limited predictive reliability.
 
-Grid approximation, a Bayesian inference technique, was employed to estimate the conditional probabilities of survey outcomes. The in-boundary and out-boundary priors yielded average pcs/m values of 0.97 and 1.04, respectively, compared to the observed average of 0.92 pcs/m. Both priors suggest an expected increase in trash density, with the out-boundary posterior indicating a higher increase. This method provides a nuanced understanding of the data, highlighting expected trends and aiding in better-informed decision-making.
+Grid approximation, a Bayesian inference technique, was employed to estimate the conditional probabilities of survey outcomes. The in-boundary and out-boundary priors yielded average pcs/m values of 0.97 and 1.04, respectively, compared to the observed average of 0.92 pcs/m. Both priors suggest an expected increase in trash density, with the out-boundary posterior indicating a higher increase.
 ## Sample results
 
 The report details administrative boundaries including a total of eight cities: Biel/Bienne, Vinelz, Lüscherz, Nidau, Gals, Erlach, Le Landeron, and Ligerz. The survey area identified is Aare. There is one lake included in the report, which is Bielersee, and no parks are mentioned.
 
 The sampling period spans from January 26, 2020, to March 31, 2021. A total of 39 samples were collected, yielding an average of 0.92 pcs/m, a median of 0.41 pcs/m, and a maximum of 3.88 pcs/m. The standard deviation of the sample data is 1.10, and the total number of objects identified during the survey is 1,166.
 
-The five most common objects identified with the greatest quantity were:
+The most common objects identified with the greatest quantity were:
 1. Cigarette filters: Fail rate of 79.49%, 70.24% of total, 0.60 pcs/m, total quantity of 819.
 2. Food wrappers (candy, snacks): Fail rate of 87.18%, 29.76% of total, 0.32 pcs/m, total quantity of 347.
 

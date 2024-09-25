@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Bern lakes - example canton &#8212; Project 2025</title>
+    <title>Bern lakes - example canton &#8212; A Reporter</title>
   
   
   
@@ -147,7 +147,7 @@
   
   
   
-    <p class="title logo__title">Project 2025</p>
+    <p class="title logo__title">A Reporter</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -229,6 +229,53 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hammerdirt-analyst/feb_2024" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hammerdirt-analyst/feb_2024/issues/new?title=Issue%20on%20page%20%2Fbern_lakes_example.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -363,13 +410,13 @@ document.write(`
 <p>The report on the Bern lakes example canton presents findings from 13 cities, including Biel/Bienne, Vinelz, and Thun, alongside three lakes: Bielersee, Brienzersee, and Thunersee. The sampling took place between January 26, 2020, and April 8, 2021, in the Aare survey area, resulting in 74 samples collected. The analysis yielded an average density of 0.69 pcs/m, with a maximum density of 3.88 pcs/m and a standard deviation of 0.89. A total of 2,128 objects were identified, predominantly consisting of plastic materials. The most frequently found items were cigarette filters and food wrappers, with fail rates indicating that they were present in the majority of samples.</p>
 <p>Sampling stratification is defined as the process of dividing the survey area into segments based on specific characteristics. In this study, land-use features such as buildings, wetlands, and forests were considered, revealing that trash density varies significantly according to these characteristics. The analysis indicated a correlation between higher trash densities and areas with more buildings, as well as mixed land-use environments. Specifically, locations with buildings occupying 0-20% of the buffer exhibited an average trash density of 0.59 pcs/m, while those with forests at 20-40% showed 0.88 pcs/m, highlighting the influence of land-use distribution on litter accumulation.</p>
 <p>The report employed linear and ensemble regression methods to analyze the data. The Gradient Boosting Regression model demonstrated the highest R² of 0.43 and a mean squared error (MSE) of 0.36, suggesting a moderate level of reliability in its predictions. The feature importance analysis indicated that buildings and streets were significant in predicting trash density, with the highest permutation importance assigned to buildings at 0.137. These results suggest that while the model explains a portion of variance in trash density, there are likely other factors that could further influence predictions.</p>
-<p>Grid approximation was utilized as a statistical modeling technique to estimate the likelihood of trash density observations exceeding specified thresholds. In this case, the prior data was analyzed in terms of in-boundary and out-boundary conditions, revealing that the in-boundary average was lower (0.82 pcs/m) than the observed average (0.69 pcs/m), while the out-boundary average (1.09 pcs/m) was higher. This indicates an anticipated increase in trash density in out-boundary areas, contrasting with a potentially lower density in in-boundary regions. The findings underscore the importance of sampling design and data analysis methods in understanding environmental litter patterns and informing waste management strategies.</p>
+<p>Grid approximation was utilized as a statistical modeling technique to estimate the likelihood of trash density observations exceeding specified thresholds. In this case, the prior data was analyzed in terms of in-boundary and out-boundary conditions, revealing that the in-boundary average was lower (0.82 pcs/m) than the observed average (0.69 pcs/m), while the out-boundary average (1.09 pcs/m) was higher. This indicates an anticipated increase in trash density in out-boundary areas, contrasting with a potentially lower density in in-boundary regions.</p>
 </section>
 <section id="sample-results">
 <h2>Sample results<a class="headerlink" href="#sample-results" title="Link to this heading">#</a></h2>
 <p>The report on the Bern lakes example canton includes observations from 13 cities: Biel/Bienne, Vinelz, Brienz (BE), Spiez, Lüscherz, Nidau, Gals, Unterseen, Erlach, Thun, Beatenberg, Ligerz, and Bönigen. There are three lakes included in the analysis: Bielersee, Brienzersee, and Thunersee.</p>
 <p>The sampling took place from January 26, 2020, to April 8, 2021, in the survey area named Aare. A total of 74 samples were collected, yielding an average density of 0.69 pcs/m (objects per meter), a median of 0.35 pcs/m, a maximum of 3.88 pcs/m, and a standard deviation of 0.89. The total number of objects identified across all locations was 2128.</p>
-<p>The five most common objects found by greatest quantity were:</p>
+<p>The most common objects found by greatest quantity were:</p>
 <ol class="arabic simple">
 <li><p><strong>Cigarette filters</strong> - Fail rate: 83.78%, Percent of total: 73.45%, pcs/m: 0.48, Total quantity: 1563.</p></li>
 <li><p><strong>Food wrappers; candy, snacks</strong> - Fail rate: 82.43%, Percent of total: 26.55%, pcs/m: 0.22, Total quantity: 565.</p></li>
@@ -1266,7 +1313,7 @@ The expected results from the in-boundary posterior (average pcs/m = 0.82) and o
   <div class="footer-item">
     
 <p class="component-author">
-By the-team@
+By Roger Erismann
 </p>
 
   </div>
@@ -1276,7 +1323,7 @@ By the-team@
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2024.
       <br/>
     
   </p>

@@ -18,8 +18,8 @@ the information needed to make informed decisions.
 
 The European Environment Agency (EEA) has been working with volunteers to collect data on marine litter. The volunteers 
 have been collecting data on the amount and type of litter found on beaches in Europe. The collection method is defined
-in the _Guide to monitoring marine litter in European seas_. Based on the analysis of the collected data a suggested 
-threshold value, and a method to compute it was introduced in 2020. The threshold value is based on the principal of 
+in the _Guide to monitoring marine litter in European seas_. In 2020 a beach litter density threshold and method of calculation
+was introduced by the EEA using the data collected by volunteers. The threshold value is based on the principal of 
 precaution regarding exposure to plastics. In switzerland monitoring of shoreline litter along lakes and rivers
 has followed the same protocol with minor modifications due to topography since 2015. 
 
@@ -27,22 +27,21 @@ has followed the same protocol with minor modifications due to topography since 
 
 The availability of the data is largely dependent on local NGOs and volunteers. There is no legal requirement to report litter data.
 The federal report, modeled after the EEA report, provides a format and a method for aggregating and reporting but no 
-infrastructure to collect and report the data. This infrastructure is non-existent at the cantonal level. In the Léman region
-data collection and reporting has standardized because of the work of local NGOs. The most recent report was published in 2024. 
-This report was not aggregated at the cantonal or municipal level either.
+infrastructure to collect and report the data. In the Léman region data collection and reporting has standardized because 
+of the work of local NGOs, the most recent report was published in 2024. 
+
 
 ## Environmental monitoring and protection
 
 Environmental monitoring and protection are the responsibility of the cantons in Switzerland. The cantons can and do delegate
 certain responsibilities to the municipalities. Thus, a report at the national level provides an overview of the situation 
-but provides very little value in the way enabling action at the cantonal or municipal level. Even though the data is collected at the
-municipal level it is not aggregated and reported at the cantonal level.
+but provides very little value in the way enabling action at the cantonal or municipal level. 
 
 ## Cantonal and municipal resources
 
 Each canton and municipality has a section or department responsible for environmental pollution. These departments, for the most part,
 are already working with limited resources. Managers of these departments may be more than competent in interpreting a report but lack the
-additional human resources necessary to collect and prepare reports for their own canton or municipality. The cause of this is two fold: 1. 
+additional human resources necessary to collect data and prepare reports for their own canton or municipality. The cause of this is two fold: 1. 
 The lack of common infrastructure for data collection and reporting and 2. Inexperience in domain specific data handling and analysis
 
 ## The solution

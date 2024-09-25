@@ -16,14 +16,14 @@ Sampling stratification is defined as the process of dividing the survey area in
 
 The report employed linear and ensemble regression methods to analyze the data. The Gradient Boosting Regression model demonstrated the highest R² of 0.43 and a mean squared error (MSE) of 0.36, suggesting a moderate level of reliability in its predictions. The feature importance analysis indicated that buildings and streets were significant in predicting trash density, with the highest permutation importance assigned to buildings at 0.137. These results suggest that while the model explains a portion of variance in trash density, there are likely other factors that could further influence predictions.
 
-Grid approximation was utilized as a statistical modeling technique to estimate the likelihood of trash density observations exceeding specified thresholds. In this case, the prior data was analyzed in terms of in-boundary and out-boundary conditions, revealing that the in-boundary average was lower (0.82 pcs/m) than the observed average (0.69 pcs/m), while the out-boundary average (1.09 pcs/m) was higher. This indicates an anticipated increase in trash density in out-boundary areas, contrasting with a potentially lower density in in-boundary regions. The findings underscore the importance of sampling design and data analysis methods in understanding environmental litter patterns and informing waste management strategies.
+Grid approximation was utilized as a statistical modeling technique to estimate the likelihood of trash density observations exceeding specified thresholds. In this case, the prior data was analyzed in terms of in-boundary and out-boundary conditions, revealing that the in-boundary average was lower (0.82 pcs/m) than the observed average (0.69 pcs/m), while the out-boundary average (1.09 pcs/m) was higher. This indicates an anticipated increase in trash density in out-boundary areas, contrasting with a potentially lower density in in-boundary regions.
 ## Sample results
 
 The report on the Bern lakes example canton includes observations from 13 cities: Biel/Bienne, Vinelz, Brienz (BE), Spiez, Lüscherz, Nidau, Gals, Unterseen, Erlach, Thun, Beatenberg, Ligerz, and Bönigen. There are three lakes included in the analysis: Bielersee, Brienzersee, and Thunersee. 
 
 The sampling took place from January 26, 2020, to April 8, 2021, in the survey area named Aare. A total of 74 samples were collected, yielding an average density of 0.69 pcs/m (objects per meter), a median of 0.35 pcs/m, a maximum of 3.88 pcs/m, and a standard deviation of 0.89. The total number of objects identified across all locations was 2128.
 
-The five most common objects found by greatest quantity were:
+The most common objects found by greatest quantity were:
 1. **Cigarette filters** - Fail rate: 83.78%, Percent of total: 73.45%, pcs/m: 0.48, Total quantity: 1563.
 2. **Food wrappers; candy, snacks** - Fail rate: 82.43%, Percent of total: 26.55%, pcs/m: 0.22, Total quantity: 565.
 

@@ -21,7 +21,7 @@ Grid approximation was used to estimate the probability distributions of survey 
 
 The report includes data from one city, which is Bern, located in the canton of Bern. There is a single survey area, named Aare. The sampling period spans from May 13, 2020, to November 5, 2020. During this period, a total of four samples were collected, yielding an average of 0.07 pcs/m (objects per meter), a median of 0.04 pcs/m, a maximum of 0.19 pcs/m, and a standard deviation of 0.07. The total number of objects identified in the report is 10.
 
-In terms of the most common objects found, the following are the five notable items based on quantity: 
+In terms of the most common objects found, the following are the notable items based on quantity: 
 1. Cigarette filters - Fail Rate: 50%, Percent of Total: 80%, pcs/m: 0.05, Quantity: 8
 2. Food wrappers; candy, snacks - Fail Rate: 50%, Percent of Total: 20%, pcs/m: 0.01, Quantity: 2
 

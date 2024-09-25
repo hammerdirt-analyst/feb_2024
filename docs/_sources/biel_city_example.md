@@ -21,7 +21,7 @@ Grid approximation was employed to estimate the conditional probability of surve
 
 The report covers the city of Biel/Bienne, which is the only city included in this analysis. The survey identifies one river, the Schüss, and one lake, the Bielersee; thus, there is a total of two water bodies documented. The sampling period spans from January 1, 2020, to March 31, 2021, within the survey area known as Aare. A total of 17 samples were collected, yielding an average of 1.62 pcs/m, a median of 1.71 pcs/m, a maximum of 3.88 pcs/m, and a standard deviation of 1.26. The total number of objects identified across these surveys is 1,034.
 
-The five most common objects found include: 
+The most common objects found include: 
 1. Cigarette filters, with a fail rate of 100% (indicating they were found in all samples), comprising 75.53% of the total, with a density of 1.23 pcs/m and a total quantity of 781.
 2. Food wrappers (candy, snacks) with a fail rate of 94.12%, making up 24.47% of the total, with a density of 0.39 pcs/m and a total quantity of 253.
 

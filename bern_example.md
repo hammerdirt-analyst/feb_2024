@@ -23,7 +23,7 @@ The report encompasses a total of 21 cities located within the canton of Bern. A
 
 The data collection took place from January 26, 2020, to April 23, 2021, with the survey area designated as Aare. A total of 89 samples were analyzed, revealing an average of 0.61 pcs/m (objects per meter), a median of 0.27 pcs/m, a maximum of 3.88 pcs/m, and a standard deviation of 0.84. The total number of identified objects amounted to 2,260.
 
-The five most common objects found in the survey, characterized by their greatest quantity, include:
+The most common objects found in the survey, characterized by their greatest quantity, include:
 1. Cigarette filters: Fail rate of 81%, representing 73.94% of the total (1,671 pcs).
 2. Food wrappers; candy, snacks: Fail rate of 80%, comprising 26.06% of the total (589 pcs).
 

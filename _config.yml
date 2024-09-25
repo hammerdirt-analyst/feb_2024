@@ -1,41 +1,35 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Project 2025
-author: the-team@
+title: A Reporter
+author: Roger Erismann
+copyright: "2024"
 
 # Force re-execution of notebooks on each build.
-# See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: 'off'
 only_build_toc_files: true
 
 # Define the name of the latex output file for PDF builds
 latex:
-  latex_documents:
-    targetname: book.tex
+  latex_engine              : pdflatex  
+  use_jupyterbook_latex     : true 
 
-# Information about where the book exists on the web
-# repository:
-#   url: https://github.com/hammerdirt-analyst/cantonal_reports # Online location of your book
-#   path_to_book: docs  # Optional path to your book, relative to the repository root
-#   branch: main  # Which branch of the repository should be used when creating links (optional)
+html:
+  html_show_copyright: false
+  language: en
+  use_download_button: false
+  use_repository_button: true
+  use_issues_button: true
 
+repository:
+  url: https://github.com/hammerdirt-analyst/feb_2024  # The URL to your book's repository
+  branch: main
+  
 sphinx:
-    extra_extensions:
-        - myst_nb
-    config:
-    html_show_copyright: false
-    language: en
-    html_theme_options:
-      use_download_button: false
-      repository_url: https://github.com/hammerdirt-analyst/feb_2024
-      use_issues_button: true
-      use_repository_button: true
-      extra_footer: |
-        <p>
-           hammerdirt 2023
-        </p>
+  extra_extensions: 
+    - myst_nb
+    
 
 
 
