@@ -376,4 +376,47 @@ def markdown_to_flowables(markdown_text):
     
     return flowables
 
-
+#
+# header_text = "Proof of concept: llm assissted reporting"
+# footer_text = "Draft survey: llm assissted reporting"
+#
+# bottom_legend_caption = "Cluster analysis results: average pcs/m and proportion of buffer for feature variables"
+#
+# scatter_pdf = pdfmethods.create_image_paragraph_table('bernlakes/scatter_plot_likelihood.jpg')
+# city_results_table = pdfmethods.create_colored_table(map_legend_markers['city_results'].data)
+# # cluster_results_table = pdfmethods.create_colored_table(map_legend_markers['cluster_results'].data)
+# situation_map = pdfmethods.create_image_paragraph_table('bernlakes/situation_map.jpg')
+# map_bottom_legend = Table([[Paragraph(bottom_legend_caption,custom_italic_style)] ,  [city_results_table]]) # [cluster_results_table],
+#
+# pdfs = []
+#
+# pdfs.extend(markdown_to_flowables('\n' + title))
+# pdfs.extend(markdown_to_flowables(executive_summary))
+# pdfs.extend(markdown_to_flowables('\n' + finished_summary))
+# pdfs.extend([scatter_pdf, KeepTogether([situation_map, map_bottom_legend])])
+# pdfs.extend(markdown_to_flowables(finished_faq_summary))
+# pdfs.extend(markdown_to_flowables('\n' + finished_summary_strat))
+#
+# pdftable = data['landuse_profile'].copy()
+# pdftable = adjust_multiindex_columns(pdftable, rate='')
+# pdftable = pdftable[[' buildings', ' forest', ' undefined', ' streets', ' public-services', ' recreation']]
+# pdfs.extend(markdown_to_flowables('\n' + pdftable.to_markdown()))
+#
+# pdftable = data['landuse_rates'].copy()
+# pdftable = pdftable.round(2)
+# pdftable = adjust_multiindex_columns(pdftable, rate='')
+# pdftable = pdftable[[' buildings', ' forest', ' undefined', ' streets', ' public-services', ' recreation']].round(2)
+# pdfs.extend(markdown_to_flowables('\n' + pdftable.to_markdown()))
+#
+# pdfs.extend(markdown_to_flowables('\n' + finished_faq_summary_strat))
+#
+#
+#
+# pdfs.extend(markdown_to_flowables('\n' + finished_summary_linear))
+# pdfs.extend(markdown_to_flowables('\n' + finished_faq_summary_linear))
+# pdfs.extend(markdown_to_flowables('\n' + finished_summary_grid))
+# boxplots_forecasts =  pdfmethods.create_image_paragraph_table('bernlakes/boxplots_observed_expected.jpeg')
+# pdfs.extend([boxplots_forecasts])
+# pdfs.extend(markdown_to_flowables('\n' + finished_faq_summary_grid))
+# file_path = 'test_pdf.pdf'
+# pdfmethods.generate_pdf_with_header_footer(pdfs, file_path, header_text, footer_text)

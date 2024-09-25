@@ -9,13 +9,18 @@ parts:
     - file: project
     - file: references
     
-  - caption: Example
+  - caption: Example reports
     chapters:
     - file: bern_example
     - file: bern_lakes_example
     - file: bielersee_example
     - file: bern_city_example
     - file: biel_city_example
+
+  - caption: Annex
+    chapters:
+    - file: extracting_topo_data
+  
      
    
  
