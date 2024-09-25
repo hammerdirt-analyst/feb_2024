@@ -4,29 +4,42 @@
 format: jb-book
 root: titlepage
 parts:
-  - caption: Data and reporting
+  - caption: Problem and objectives
     chapters:
-    - file: final_report
-    - file: use_cases
-    - file: report_results-rough-draft
-    - file: new_report
+    - file: the_llm_assistant
     - file: project
+    - file: references
     
-  - caption: Methods and classes
-    chapters:    
-    - file: a_report_class
-    - file: landuse_class    
-    - file: forecasts
-    - file: machine_learning
-    - file: haystackagents
-    - file: langchainagents
+  - caption: Example
+    chapters:
+    - file: bern_example
+    - file: bern_lakes_example
+    - file: bielersee_example
+    - file: bern_city_example
+    - file: biel_city_example
+    
+
+
+  #   - file: use_cases
+  #   - file: report_results-rough-draft
+  #   - file: new_report
+  #   - file: project
+    
+  # - caption: Methods and classes
+  #   chapters:    
+  #   - file: a_report_class
+  #   - file: landuse_class    
+  #   - file: forecasts
+  #   - file: saint_sulpice
+  #   - file: haystackagents
+  #   - file: langchainagents
   
-  - caption: Annex
-    chapters:    
-    - file: the_survey_data
-    - file: extracting_topo_data
-    - file: multinomial_conjugate
-    - file: agent_prompts_relations
+  # - caption: Annex
+  #   chapters:    
+  #   - file: the_survey_data
+  #   - file: extracting_topo_data
+  #   - file: multinomial_conjugate
+  #   - file: agent_prompts_relations
 
 
    

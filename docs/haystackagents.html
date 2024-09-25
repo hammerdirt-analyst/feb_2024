@@ -1,0 +1,1385 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Haystack agents &#8212; Project 2025</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'haystackagents';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Langchain agents" href="langchainagents.html" />
+    <link rel="prev" title="machine learning" href="machine_learning.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="titlepage.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Project 2025</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="titlepage.html">
+                    The litter assistant
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data and reporting</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="final_report.html">Canton Bern Lakes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use_cases.html">Use cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="report_results-rough-draft.html">Rough draft Survey report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="new_report.html">Forecast</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="project.html">Proposal</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Methods and classes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="a_report_class.html">Survey report class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="landuse_class.html">Land use class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forecasts.html">Grid forecast class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machine_learning.html">machine learning</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Haystack agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="langchainagents.html">Langchain agents</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="the_survey_data.html">The survey data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extracting_topo_data.html">Extracting land use values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multinomial_conjugate.html">Empirical Bayes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="agent_prompts_relations.html">Prompts and agent tools</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/haystackagents.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Haystack agents</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-memory-vector-store-report-results">In memory vector store : Report results</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-documents">Markdown documents</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chroma-vector-store">Chroma vector store</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="haystack-agents">
+<h1>Haystack agents<a class="headerlink" href="#haystack-agents" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+           
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">haystack</span> <span class="kn">import</span> <span class="n">Pipeline</span><span class="p">,</span> <span class="n">Document</span>
+<span class="kn">from</span> <span class="nn">haystack.utils</span> <span class="kn">import</span> <span class="n">Secret</span>
+<span class="kn">from</span> <span class="nn">haystack.document_stores.in_memory</span> <span class="kn">import</span> <span class="n">InMemoryDocumentStore</span>
+<span class="kn">from</span> <span class="nn">haystack.components.retrievers.in_memory</span> <span class="kn">import</span> <span class="n">InMemoryBM25Retriever</span>
+<span class="kn">from</span> <span class="nn">haystack.components.generators</span> <span class="kn">import</span> <span class="n">OpenAIGenerator</span>
+<span class="kn">from</span> <span class="nn">haystack.components.builders.answer_builder</span> <span class="kn">import</span> <span class="n">AnswerBuilder</span>
+<span class="kn">from</span> <span class="nn">haystack.components.builders.prompt_builder</span> <span class="kn">import</span> <span class="n">PromptBuilder</span>
+
+<span class="kn">from</span> <span class="nn">haystack.components.converters</span> <span class="kn">import</span> <span class="n">MarkdownToDocument</span>
+<span class="kn">from</span> <span class="nn">haystack.components.preprocessors</span> <span class="kn">import</span> <span class="n">DocumentCleaner</span>
+<span class="kn">from</span> <span class="nn">haystack.components.preprocessors</span> <span class="kn">import</span> <span class="n">DocumentSplitter</span>
+<span class="kn">from</span> <span class="nn">haystack.components.writers</span> <span class="kn">import</span> <span class="n">DocumentWriter</span>
+<span class="kn">from</span> <span class="nn">haystack.components.retrievers.filter_retriever</span> <span class="kn">import</span> <span class="n">FilterRetriever</span>
+
+<span class="kn">from</span> <span class="nn">haystack.components.converters.pypdf</span> <span class="kn">import</span> <span class="n">PyPDFToDocument</span>
+<span class="kn">from</span> <span class="nn">haystack_integrations.document_stores.chroma</span> <span class="kn">import</span> <span class="n">ChromaDocumentStore</span>
+<span class="kn">from</span> <span class="nn">haystack_integrations.components.retrievers.chroma</span> <span class="kn">import</span> <span class="n">ChromaQueryTextRetriever</span>
+<span class="kn">from</span> <span class="nn">haystack</span> <span class="kn">import</span> <span class="n">component</span>
+
+<span class="n">load_dotenv</span><span class="p">()</span>
+<span class="n">api_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;OPENAI_API_KEY&#39;</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="s1">&#39;gpt-4o-mini&#39;</span>
+
+<span class="k">def</span> <span class="nf">print_results</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">reply_object</span><span class="o">=</span><span class="s1">&#39;llm&#39;</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">Markdown</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="n">reply_object</span><span class="p">][</span><span class="s1">&#39;replies&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>   
+
+<span class="n">document_store</span> <span class="o">=</span> <span class="n">InMemoryDocumentStore</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/roger/anaconda3/envs/haystack2/lib/python3.12/site-packages/tqdm/auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
+</pre></div>
+</div>
+</div>
+</div>
+<section id="in-memory-vector-store-report-results">
+<h2>In memory vector store : Report results<a class="headerlink" href="#in-memory-vector-store-report-results" title="Link to this heading">#</a></h2>
+<p>Retrieving report results from an in memory vector store, using the FilterRetriever on the metadata</p>
+<section id="markdown-documents">
+<h3>Markdown documents<a class="headerlink" href="#markdown-documents" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">InMemoryDocumentStore</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on class InMemoryDocumentStore in module haystack.document_stores.in_memory.document_store:
+
+class InMemoryDocumentStore(builtins.object)
+ |  InMemoryDocumentStore(bm25_tokenization_regex: str = &#39;(?u)\\b\\w\\w+\\b&#39;, bm25_algorithm: Literal[&#39;BM25Okapi&#39;, &#39;BM25L&#39;, &#39;BM25Plus&#39;] = &#39;BM25L&#39;, bm25_parameters: Optional[Dict] = None, embedding_similarity_function: Literal[&#39;dot_product&#39;, &#39;cosine&#39;] = &#39;dot_product&#39;, index: Optional[str] = None)
+ |
+ |  Stores data in-memory. It&#39;s ephemeral and cannot be saved to disk.
+ |
+ |  Methods defined here:
+ |
+ |  __init__(self, bm25_tokenization_regex: str = &#39;(?u)\\b\\w\\w+\\b&#39;, bm25_algorithm: Literal[&#39;BM25Okapi&#39;, &#39;BM25L&#39;, &#39;BM25Plus&#39;] = &#39;BM25L&#39;, bm25_parameters: Optional[Dict] = None, embedding_similarity_function: Literal[&#39;dot_product&#39;, &#39;cosine&#39;] = &#39;dot_product&#39;, index: Optional[str] = None)
+ |      Initializes the DocumentStore.
+ |
+ |      :param bm25_tokenization_regex: The regular expression used to tokenize the text for BM25 retrieval.
+ |      :param bm25_algorithm: The BM25 algorithm to use. One of &quot;BM25Okapi&quot;, &quot;BM25L&quot;, or &quot;BM25Plus&quot;.
+ |      :param bm25_parameters: Parameters for BM25 implementation in a dictionary format.
+ |          For example: {&#39;k1&#39;:1.5, &#39;b&#39;:0.75, &#39;epsilon&#39;:0.25}
+ |          You can learn more about these parameters by visiting https://github.com/dorianbrown/rank_bm25.
+ |      :param embedding_similarity_function: The similarity function used to compare Documents embeddings.
+ |          One of &quot;dot_product&quot; (default) or &quot;cosine&quot;. To choose the most appropriate function, look for information
+ |          about your embedding model.
+ |      :param index: A specific index to store the documents. If not specified, a random UUID is used.
+ |          Using the same index allows you to store documents across multiple InMemoryDocumentStore instances.
+ |
+ |  bm25_retrieval(self, query: str, filters: Optional[Dict[str, Any]] = None, top_k: int = 10, scale_score: bool = False) -&gt; List[haystack.dataclasses.document.Document]
+ |      Retrieves documents that are most relevant to the query using BM25 algorithm.
+ |
+ |      :param query: The query string.
+ |      :param filters: A dictionary with filters to narrow down the search space.
+ |      :param top_k: The number of top documents to retrieve. Default is 10.
+ |      :param scale_score: Whether to scale the scores of the retrieved documents. Default is False.
+ |      :returns: A list of the top_k documents most relevant to the query.
+ |
+ |  count_documents(self) -&gt; int
+ |      Returns the number of how many documents are present in the DocumentStore.
+ |
+ |  delete_documents(self, document_ids: List[str]) -&gt; None
+ |      Deletes all documents with matching document_ids from the DocumentStore.
+ |
+ |      :param document_ids: The object_ids to delete.
+ |
+ |  embedding_retrieval(self, query_embedding: List[float], filters: Optional[Dict[str, Any]] = None, top_k: int = 10, scale_score: bool = False, return_embedding: bool = False) -&gt; List[haystack.dataclasses.document.Document]
+ |      Retrieves documents that are most similar to the query embedding using a vector similarity metric.
+ |
+ |      :param query_embedding: Embedding of the query.
+ |      :param filters: A dictionary with filters to narrow down the search space.
+ |      :param top_k: The number of top documents to retrieve. Default is 10.
+ |      :param scale_score: Whether to scale the scores of the retrieved Documents. Default is False.
+ |      :param return_embedding: Whether to return the embedding of the retrieved Documents. Default is False.
+ |      :returns: A list of the top_k documents most relevant to the query.
+ |
+ |  filter_documents(self, filters: Optional[Dict[str, Any]] = None) -&gt; List[haystack.dataclasses.document.Document]
+ |      Returns the documents that match the filters provided.
+ |
+ |      For a detailed specification of the filters, refer to the DocumentStore.filter_documents() protocol
+ |      documentation.
+ |
+ |      :param filters: The filters to apply to the document list.
+ |      :returns: A list of Documents that match the given filters.
+ |
+ |  save_to_disk(self, path: str) -&gt; None
+ |      Write the database and its&#39; data to disk as a JSON file.
+ |
+ |      :param path: The path to the JSON file.
+ |
+ |  to_dict(self) -&gt; Dict[str, Any]
+ |      Serializes the component to a dictionary.
+ |
+ |      :returns:
+ |          Dictionary with serialized data.
+ |
+ |  write_documents(self, documents: List[haystack.dataclasses.document.Document], policy: haystack.document_stores.types.policy.DuplicatePolicy = &lt;DuplicatePolicy.NONE: &#39;none&#39;&gt;) -&gt; int
+ |      Refer to the DocumentStore.write_documents() protocol documentation.
+ |
+ |      If `policy` is set to `DuplicatePolicy.NONE` defaults to `DuplicatePolicy.FAIL`.
+ |
+ |  ----------------------------------------------------------------------
+ |  Class methods defined here:
+ |
+ |  from_dict(data: Dict[str, Any]) -&gt; &#39;InMemoryDocumentStore&#39;
+ |      Deserializes the component from a dictionary.
+ |
+ |      :param data:
+ |          The dictionary to deserialize from.
+ |      :returns:
+ |          The deserialized component.
+ |
+ |  load_from_disk(path: str) -&gt; &#39;InMemoryDocumentStore&#39;
+ |      Load the database and its&#39; data from disk as a JSON file.
+ |
+ |      :param path: The path to the JSON file.
+ |      :returns: The loaded InMemoryDocumentStore.
+ |
+ |  ----------------------------------------------------------------------
+ |  Readonly properties defined here:
+ |
+ |  storage
+ |      Utility property that returns the storage used by this instance of InMemoryDocumentStore.
+ |
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |
+ |  __dict__
+ |      dictionary for instance variables
+ |
+ |  __weakref__
+ |      list of weak references to the object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from haystack import Pipeline</span>
+<span class="c1"># from haystack.document_stores.in_memory import InMemoryDocumentStore</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="s1">&#39;gpt-4o-mini&#39;</span>
+<span class="n">report_document_store</span> <span class="o">=</span> <span class="n">InMemoryDocumentStore</span><span class="p">()</span>
+
+<span class="n">document_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">()</span>
+<span class="n">document_pipeline</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="s2">&quot;converter&quot;</span><span class="p">,</span> <span class="n">MarkdownToDocument</span><span class="p">())</span>
+<span class="n">document_pipeline</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="s2">&quot;cleaner&quot;</span><span class="p">,</span> <span class="n">DocumentCleaner</span><span class="p">())</span>
+<span class="n">document_pipeline</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="s2">&quot;splitter&quot;</span><span class="p">,</span> <span class="n">DocumentSplitter</span><span class="p">(</span><span class="n">split_by</span><span class="o">=</span><span class="s2">&quot;sentence&quot;</span><span class="p">,</span> <span class="n">split_length</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">document_pipeline</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="s2">&quot;writer&quot;</span><span class="p">,</span> <span class="n">DocumentWriter</span><span class="p">(</span><span class="n">document_store</span><span class="o">=</span><span class="n">report_document_store</span><span class="p">))</span>
+<span class="n">document_pipeline</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;converter&quot;</span><span class="p">,</span> <span class="s2">&quot;cleaner&quot;</span><span class="p">)</span>
+<span class="n">document_pipeline</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;cleaner&quot;</span><span class="p">,</span> <span class="s2">&quot;splitter&quot;</span><span class="p">)</span>
+<span class="n">document_pipeline</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;splitter&quot;</span><span class="p">,</span> <span class="s2">&quot;writer&quot;</span><span class="p">)</span>
+
+<span class="n">document_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">({</span><span class="s2">&quot;converter&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sources&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;vaud_report_results.md&quot;</span><span class="p">,</span> <span class="s2">&quot;report_results.md&quot;</span><span class="p">],</span> <span class="s1">&#39;meta&#39;</span><span class="p">:[{</span><span class="s1">&#39;doc-id&#39;</span><span class="p">:</span> <span class="s1">&#39;Vaud 2015-11-15 2021-12-31&#39;</span><span class="p">,</span> <span class="s1">&#39;topic&#39;</span><span class="p">:</span><span class="s1">&#39;reports&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;doc-id&#39;</span><span class="p">:</span> <span class="s1">&#39;Bern 2015-11-15 2021-12-31&#39;</span><span class="p">,</span> <span class="s1">&#39;topic&#39;</span><span class="p">:</span><span class="s1">&#39;reports&#39;</span><span class="p">}]}})</span>
+
+<span class="n">prompt_template</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    Given these documents, answer the question. Please provide the name of the reference(s) where the information came from</span><span class="se">\n</span><span class="s2">Documents:</span>
+<span class="s2">    {</span><span class="si">% f</span><span class="s2">or doc in documents %}</span>
+<span class="s2">        {{ doc.content }}</span>
+<span class="s2">    {</span><span class="si">% e</span><span class="s2">ndfor %}</span>
+
+<span class="s2">    </span><span class="se">\n</span><span class="s2">Question: {{question}}</span>
+<span class="s2">    </span><span class="se">\n</span><span class="s2">Answer:</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+
+<span class="n">report_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">()</span>
+<span class="n">report_pipeline</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;retriever&quot;</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span><span class="n">FilterRetriever</span><span class="p">(</span><span class="n">document_store</span><span class="o">=</span><span class="n">report_document_store</span><span class="p">))</span>
+<span class="n">report_pipeline</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">instance</span><span class="o">=</span><span class="n">PromptBuilder</span><span class="p">(</span><span class="n">template</span><span class="o">=</span><span class="n">prompt_template</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;prompt_builder&quot;</span><span class="p">)</span>
+<span class="n">report_pipeline</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">instance</span><span class="o">=</span><span class="n">OpenAIGenerator</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;llm&quot;</span><span class="p">)</span>
+<span class="n">report_pipeline</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;retriever&quot;</span><span class="p">,</span> <span class="s2">&quot;prompt_builder.documents&quot;</span><span class="p">)</span>
+<span class="n">report_pipeline</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;prompt_builder&quot;</span><span class="p">,</span> <span class="s2">&quot;llm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Converting markdown files to Documents: 100%|█████| 2/2 [00:00&lt;00:00, 22.29it/s]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;haystack.core.pipeline.pipeline.Pipeline object at 0x7fedfe0d6c00&gt;
+🚅 Components
+  - retriever: FilterRetriever
+  - prompt_builder: PromptBuilder
+  - llm: OpenAIGenerator
+🛤️ Connections
+  - retriever.documents -&gt; prompt_builder.documents (List[Document])
+  - prompt_builder.prompt -&gt; llm.prompt (str)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># some_pdfs = [</span>
+    
+<span class="c1">#     {&#39;topic&#39;: &#39;history of research, methods of research&#39;, &#39;source&#39;: &#39;resources/brief_history_marine_litter.pdf&#39;},</span>
+<span class="c1">#     {&#39;topic&#39;: &#39;threshold values, methods of calculation&#39;, &#39;source&#39;: &#39;resources/coastline_litter_threshold_value_report_14_9_2020_final.pdf&#39;},</span>
+<span class="c1">#     {&#39;topic&#39;: &#39;geospatial analysis, land use, feature evaluation&#39;, &#39;source&#39;: &#39;resources/revealing_the_role_of_landuse.pdf&#39;}</span>
+<span class="c1"># ]</span>
+
+<span class="c1"># converter = PyPDFToDocument()</span>
+
+<span class="c1"># dox = []</span>
+<span class="c1"># for element in some_pdfs:</span>
+<span class="c1">#     results = converter.run(sources=[element[&#39;source&#39;]], meta={&quot;topic&quot;:element[&#39;topic&#39;]})</span>
+<span class="c1">#     dox.append(results)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">ChromaDocumentStore</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on class ChromaDocumentStore in module haystack_integrations.document_stores.chroma.document_store:
+
+class ChromaDocumentStore(builtins.object)
+ |  ChromaDocumentStore(collection_name: str = &#39;documents&#39;, embedding_function: str = &#39;default&#39;, persist_path: Optional[str] = None, distance_function: Literal[&#39;l2&#39;, &#39;cosine&#39;, &#39;ip&#39;] = &#39;l2&#39;, metadata: Optional[dict] = None, **embedding_function_params)
+ |
+ |  A document store using [Chroma](https://docs.trychroma.com/) as the backend.
+ |
+ |  We use the `collection.get` API to implement the document store protocol,
+ |  the `collection.search` API will be used in the retriever instead.
+ |
+ |  Methods defined here:
+ |
+ |  __init__(self, collection_name: str = &#39;documents&#39;, embedding_function: str = &#39;default&#39;, persist_path: Optional[str] = None, distance_function: Literal[&#39;l2&#39;, &#39;cosine&#39;, &#39;ip&#39;] = &#39;l2&#39;, metadata: Optional[dict] = None, **embedding_function_params)
+ |      Initializes the store. The __init__ constructor is not part of the Store Protocol
+ |      and the signature can be customized to your needs. For example, parameters needed
+ |      to set up a database client would be passed to this method.
+ |
+ |      Note: for the component to be part of a serializable pipeline, the __init__
+ |      parameters must be serializable, reason why we use a registry to configure the
+ |      embedding function passing a string.
+ |
+ |      :param collection_name: the name of the collection to use in the database.
+ |      :param embedding_function: the name of the embedding function to use to embed the query
+ |      :param persist_path: where to store the database. If None, the database will be `in-memory`.
+ |      :param distance_function: The distance metric for the embedding space.
+ |          - `&quot;l2&quot;` computes the Euclidean (straight-line) distance between vectors,
+ |          where smaller scores indicate more similarity.
+ |          - `&quot;cosine&quot;` computes the cosine similarity between vectors,
+ |          with higher scores indicating greater similarity.
+ |          - `&quot;ip&quot;` stands for inner product, where higher scores indicate greater similarity between vectors.
+ |          **Note**: `distance_function` can only be set during the creation of a collection.
+ |          To change the distance metric of an existing collection, consider cloning the collection.
+ |      :param metadata: a dictionary of chromadb collection parameters passed directly to chromadb&#39;s client
+ |          method `create_collection`. If it contains the key `&quot;hnsw:space&quot;`, the value will take precedence over the
+ |          `distance_function` parameter above.
+ |
+ |      :param embedding_function_params: additional parameters to pass to the embedding function.
+ |
+ |  count_documents(self) -&gt; int
+ |      Returns how many documents are present in the document store.
+ |
+ |      :returns: how many documents are present in the document store.
+ |
+ |  delete_documents(self, document_ids: List[str]) -&gt; None
+ |      Deletes all documents with a matching document_ids from the document store.
+ |
+ |      :param document_ids: the object_ids to delete
+ |
+ |  filter_documents(self, filters: Optional[Dict[str, Any]] = None) -&gt; List[haystack.dataclasses.document.Document]
+ |      Returns the documents that match the filters provided.
+ |
+ |      Filters are defined as nested dictionaries. The keys of the dictionaries can be a logical operator (`&quot;$and&quot;`,
+ |      `&quot;$or&quot;`, `&quot;$not&quot;`), a comparison operator (`&quot;$eq&quot;`, `$ne`, `&quot;$in&quot;`, `$nin`, `&quot;$gt&quot;`, `&quot;$gte&quot;`, `&quot;$lt&quot;`,
+ |      `&quot;$lte&quot;`) or a metadata field name.
+ |
+ |      Logical operator keys take a dictionary of metadata field names and/or logical operators as value. Metadata
+ |      field names take a dictionary of comparison operators as value. Comparison operator keys take a single value or
+ |      (in case of `&quot;$in&quot;`) a list of values as value. If no logical operator is provided, `&quot;$and&quot;` is used as default
+ |      operation. If no comparison operator is provided, `&quot;$eq&quot;` (or `&quot;$in&quot;` if the comparison value is a list) is used
+ |      as default operation.
+ |
+ |      Example:
+ |
+ |      ```python
+ |      filters = {
+ |          &quot;$and&quot;: {
+ |              &quot;type&quot;: {&quot;$eq&quot;: &quot;article&quot;},
+ |              &quot;date&quot;: {&quot;$gte&quot;: &quot;2015-01-01&quot;, &quot;$lt&quot;: &quot;2021-01-01&quot;},
+ |              &quot;rating&quot;: {&quot;$gte&quot;: 3},
+ |              &quot;$or&quot;: {
+ |                  &quot;genre&quot;: {&quot;$in&quot;: [&quot;economy&quot;, &quot;politics&quot;]},
+ |                  &quot;publisher&quot;: {&quot;$eq&quot;: &quot;nytimes&quot;}
+ |              }
+ |          }
+ |      }
+ |      # or simpler using default operators
+ |      filters = {
+ |          &quot;type&quot;: &quot;article&quot;,
+ |          &quot;date&quot;: {&quot;$gte&quot;: &quot;2015-01-01&quot;, &quot;$lt&quot;: &quot;2021-01-01&quot;},
+ |          &quot;rating&quot;: {&quot;$gte&quot;: 3},
+ |          &quot;$or&quot;: {
+ |              &quot;genre&quot;: [&quot;economy&quot;, &quot;politics&quot;],
+ |              &quot;publisher&quot;: &quot;nytimes&quot;
+ |          }
+ |      }
+ |      ```
+ |
+ |      To use the same logical operator multiple times on the same level, logical operators can take a list of
+ |      dictionaries as value.
+ |
+ |      Example:
+ |
+ |      ```python
+ |      filters = {
+ |          &quot;$or&quot;: [
+ |              {
+ |                  &quot;$and&quot;: {
+ |                      &quot;Type&quot;: &quot;News Paper&quot;,
+ |                      &quot;Date&quot;: {
+ |                          &quot;$lt&quot;: &quot;2019-01-01&quot;
+ |                      }
+ |                  }
+ |              },
+ |              {
+ |                  &quot;$and&quot;: {
+ |                      &quot;Type&quot;: &quot;Blog Post&quot;,
+ |                      &quot;Date&quot;: {
+ |                          &quot;$gte&quot;: &quot;2019-01-01&quot;
+ |                      }
+ |                  }
+ |              }
+ |          ]
+ |      }
+ |      ```
+ |
+ |      :param filters: the filters to apply to the document list.
+ |      :returns: a list of Documents that match the given filters.
+ |
+ |  search(self, queries: List[str], top_k: int, filters: Optional[Dict[str, Any]] = None) -&gt; List[List[haystack.dataclasses.document.Document]]
+ |      Search the documents in the store using the provided text queries.
+ |
+ |      :param queries: the list of queries to search for.
+ |      :param top_k: top_k documents to return for each query.
+ |      :param filters: a dictionary of filters to apply to the search. Accepts filters in haystack format.
+ |      :returns: matching documents for each query.
+ |
+ |  search_embeddings(self, query_embeddings: List[List[float]], top_k: int, filters: Optional[Dict[str, Any]] = None) -&gt; List[List[haystack.dataclasses.document.Document]]
+ |      Perform vector search on the stored document, pass the embeddings of the queries instead of their text.
+ |
+ |      :param query_embeddings: a list of embeddings to use as queries.
+ |      :param top_k: the maximum number of documents to retrieve.
+ |      :param filters: a dictionary of filters to apply to the search. Accepts filters in haystack format.
+ |
+ |      :returns: a list of lists of documents that match the given filters.
+ |
+ |  to_dict(self) -&gt; Dict[str, Any]
+ |      Serializes the component to a dictionary.
+ |
+ |      :returns:
+ |          Dictionary with serialized data.
+ |
+ |  write_documents(self, documents: List[haystack.dataclasses.document.Document], policy: haystack.document_stores.types.policy.DuplicatePolicy = &lt;DuplicatePolicy.FAIL: &#39;fail&#39;&gt;) -&gt; int
+ |      Writes (or overwrites) documents into the store.
+ |
+ |      :param documents:
+ |          A list of documents to write into the document store.
+ |      :param policy:
+ |          Not supported at the moment.
+ |
+ |      :raises ValueError:
+ |          When input is not valid.
+ |
+ |      :returns:
+ |          The number of documents written
+ |
+ |  ----------------------------------------------------------------------
+ |  Class methods defined here:
+ |
+ |  from_dict(data: Dict[str, Any]) -&gt; &#39;ChromaDocumentStore&#39;
+ |      Deserializes the component from a dictionary.
+ |
+ |      :param data:
+ |          Dictionary to deserialize from.
+ |      :returns:
+ |          Deserialized component.
+ |
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |
+ |  __dict__
+ |      dictionary for instance variables
+ |
+ |  __weakref__
+ |      list of weak references to the object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;resources/brief_history_marine_litter.pdf&#39;</span><span class="p">,</span> <span class="s1">&#39;resources/coastline_litter_threshold_value_report_14_9_2020_final.pdf&#39;</span><span class="p">,</span> <span class="s1">&#39;resources/revealing_the_role_of_landuse.pdf&#39;</span><span class="p">]</span>
+<span class="n">metas</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;topic&#39;</span><span class="p">:</span> <span class="s1">&#39;history of research, methods of research&#39;</span><span class="p">},</span>  <span class="p">{</span><span class="s1">&#39;topic&#39;</span><span class="p">:</span> <span class="s1">&#39;threshold values, methods of calculation&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;topic&#39;</span><span class="p">:</span> <span class="s1">&#39;geospatial analysis, land use, feature evaluation&#39;</span><span class="p">}]</span>
+
+
+<span class="n">context_document_store</span> <span class="o">=</span> <span class="n">ChromaDocumentStore</span><span class="p">(</span><span class="n">collection_name</span><span class="o">=</span><span class="s1">&#39;context_docs&#39;</span><span class="p">)</span>
+
+<span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">()</span>
+<span class="n">pipeline</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="s2">&quot;converter&quot;</span><span class="p">,</span> <span class="n">PyPDFToDocument</span><span class="p">())</span>
+<span class="n">pipeline</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="s2">&quot;cleaner&quot;</span><span class="p">,</span> <span class="n">DocumentCleaner</span><span class="p">())</span>
+<span class="n">pipeline</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="s2">&quot;splitter&quot;</span><span class="p">,</span> <span class="n">DocumentSplitter</span><span class="p">(</span><span class="n">split_by</span><span class="o">=</span><span class="s2">&quot;page&quot;</span><span class="p">,</span> <span class="n">split_length</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">pipeline</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="s2">&quot;writer&quot;</span><span class="p">,</span> <span class="n">DocumentWriter</span><span class="p">(</span><span class="n">document_store</span><span class="o">=</span><span class="n">context_document_store</span><span class="p">))</span>
+<span class="n">pipeline</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;converter&quot;</span><span class="p">,</span> <span class="s2">&quot;cleaner&quot;</span><span class="p">)</span>
+<span class="n">pipeline</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;cleaner&quot;</span><span class="p">,</span> <span class="s2">&quot;splitter&quot;</span><span class="p">)</span>
+<span class="n">pipeline</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;splitter&quot;</span><span class="p">,</span> <span class="s2">&quot;writer&quot;</span><span class="p">)</span>
+
+<span class="n">pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">({</span><span class="s2">&quot;converter&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sources&quot;</span><span class="p">:</span> <span class="n">file_names</span><span class="p">,</span> <span class="s2">&quot;meta&quot;</span><span class="p">:</span> <span class="n">metas</span><span class="p">}})</span>
+<span class="c1"># retriever = ChromaQueryTextRetriever(document_store=context_document_store)</span>
+<span class="c1"># retriever2 = FilterRetriever(document_store)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;writer&#39;: {&#39;documents_written&#39;: 347}}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span>  <span class="o">=</span> <span class="n">context_document_store</span><span class="o">.</span><span class="n">search</span><span class="p">([</span><span class="s1">&#39;land use and buffer zones&#39;</span><span class="p">],</span> <span class="n">top_k</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">g</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">g</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">meta</span><span class="p">[</span><span class="s1">&#39;topic&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;geospatial analysis, land use, feature evaluation&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from haystack.components.readers import ExtractiveReader</span>
+
+<span class="c1"># reader = ExtractiveReader()</span>
+<span class="c1"># reader.warm_up()</span>
+
+
+<span class="c1"># extractive_qa_pipeline = Pipeline()</span>
+
+<span class="c1"># context_pipeline = Pipeline()</span>
+<span class="c1"># context_pipeline.add_component(name=&quot;context_retriever&quot;, instance=FilterRetriever(document_store=context_document_store))</span>
+<span class="c1"># extractive_qa_pipeline.add_component(instance=reader, name=&quot;reader&quot;)</span>
+
+<span class="c1"># extractive_qa_pipeline.connect(&quot;embedder.embedding&quot;, &quot;context_retriever.query_embedding&quot;)</span>
+<span class="c1"># extractive_qa_pipeline.connect(&quot;retriever.documents&quot;, &quot;reader.documents&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prompt_template</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    Given these documents, answer the question. Please provide the name of the reference(s) in your response</span><span class="se">\n</span><span class="s2">Documents:</span>
+<span class="s2">    {</span><span class="si">% f</span><span class="s2">or doc in documents %}</span>
+<span class="s2">        {{ doc.content }}</span>
+<span class="s2">    {</span><span class="si">% e</span><span class="s2">ndfor %}</span>
+
+<span class="s2">    </span><span class="se">\n</span><span class="s2">Question: {{question}}</span>
+<span class="s2">    </span><span class="se">\n</span><span class="s2">Answer:</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+
+<span class="n">context_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">()</span>
+<span class="n">context_pipeline</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;context_retriever&quot;</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span><span class="n">FilterRetriever</span><span class="p">(</span><span class="n">document_store</span><span class="o">=</span><span class="n">context_document_store</span><span class="p">))</span>
+<span class="n">context_pipeline</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">instance</span><span class="o">=</span><span class="n">PromptBuilder</span><span class="p">(</span><span class="n">template</span><span class="o">=</span><span class="n">prompt_template</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;prompt_builder_context&quot;</span><span class="p">)</span>
+<span class="n">context_pipeline</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">instance</span><span class="o">=</span><span class="n">OpenAIGenerator</span><span class="p">(</span> <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;llm&quot;</span><span class="p">)</span>
+<span class="n">context_pipeline</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;context_retriever&quot;</span><span class="p">,</span> <span class="s2">&quot;prompt_builder_context.documents&quot;</span><span class="p">)</span>
+<span class="n">context_pipeline</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;prompt_builder_context&quot;</span><span class="p">,</span> <span class="s2">&quot;llm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;haystack.core.pipeline.pipeline.Pipeline object at 0x7fed9bf69010&gt;
+🚅 Components
+  - context_retriever: FilterRetriever
+  - prompt_builder_context: PromptBuilder
+  - llm: OpenAIGenerator
+🛤️ Connections
+  - context_retriever.documents -&gt; prompt_builder_context.documents (List[Document])
+  - prompt_builder_context.prompt -&gt; llm.prompt (str)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">context_pipeline_func</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;context called&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;context_filter&#39;</span> <span class="ow">in</span> <span class="n">query</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">context_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">({</span><span class="s2">&quot;retriever&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;filters&quot;</span><span class="p">:</span> <span class="n">context_filters</span><span class="p">},</span> <span class="s2">&quot;prompt_builder&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;question&quot;</span><span class="p">:</span> <span class="n">query</span><span class="p">}})</span>
+
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;reply&quot;</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;llm&quot;</span><span class="p">][</span><span class="s2">&quot;replies&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">content</span><span class="p">}</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;There is no relevant background in my library&quot;</span>
+
+<span class="k">def</span> <span class="nf">report_pipeline_func</span><span class="p">(</span><span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">filters</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;report called&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;report_filters&#39;</span> <span class="ow">in</span> <span class="n">query</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">context_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">({</span><span class="s2">&quot;retriever&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;filters&quot;</span><span class="p">:</span> <span class="n">filters</span><span class="p">},</span> <span class="s2">&quot;prompt_builder&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;question&quot;</span><span class="p">:</span> <span class="n">query</span><span class="p">}})</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;reply&quot;</span><span class="p">:</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;llm&quot;</span><span class="p">][</span><span class="s2">&quot;replies&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">content</span><span class="p">}</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;There is no survey data for that date range and location, would you like a list of available cantons?&quot;</span>
+
+<span class="k">def</span> <span class="nf">call_tools</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">a_report_filter</span><span class="p">,</span> <span class="n">a_context_filter</span><span class="p">):</span>
+
+    <span class="n">report</span> <span class="o">=</span> <span class="n">report_pipeline_func</span><span class="p">(</span><span class="n">qeury</span><span class="p">,</span> <span class="n">a_report_filter</span><span class="p">)</span>
+    <span class="n">context</span> <span class="o">=</span> <span class="n">context_pipeline_func</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">a_context_filter</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39;the requested survey results:</span><span class="se">\n\n</span><span class="s1"> </span><span class="si">{</span><span class="n">report</span><span class="si">}</span><span class="se">\n\n</span><span class="s1">Some relevant background info </span><span class="si">{</span><span class="n">context</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># result[reply_object][&#39;replies&#39;][0]</span>
+
+<span class="nd">@component</span>
+<span class="k">class</span> <span class="nc">AssembleResources</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">report_filters</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">context_filters</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">context_pipeline</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">,</span> <span class="n">report_pipeline</span><span class="p">:</span> <span class="n">Pipeline</span><span class="p">,</span> <span class="n">reply_object</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;llm&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">report_filter</span> <span class="o">=</span> <span class="n">report_filters</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context_filter</span> <span class="o">=</span> <span class="n">context_filters</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">query</span> <span class="o">=</span> <span class="n">query</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cont_pipeline</span> <span class="o">=</span> <span class="n">context_pipeline</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rep_pipeline</span> <span class="o">=</span> <span class="n">report_pipeline</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reply_object</span> <span class="o">=</span> <span class="n">reply_object</span>
+        
+
+    <span class="nd">@component</span><span class="o">.</span><span class="n">output_types</span><span class="p">(</span><span class="n">report_results</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">context_results</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rep_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">({</span><span class="s1">&#39;retriever&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;filters&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">report_filter</span><span class="p">},</span> <span class="s2">&quot;prompt_builder&quot;</span><span class="p">:{</span><span class="s2">&quot;question&quot;</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">}})</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cont_pipeline</span><span class="o">.</span><span class="n">run</span><span class="p">({</span><span class="s1">&#39;context_retriever&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;filters&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">context_filter</span><span class="p">},</span> <span class="s2">&quot;prompt_builder_context&quot;</span><span class="p">:{</span><span class="s2">&quot;question&quot;</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">query</span><span class="p">}})</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;report_results&#39;</span><span class="p">:</span> <span class="n">r</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">reply_object</span><span class="p">][</span><span class="s1">&#39;replies&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;context_results&#39;</span><span class="p">:</span><span class="n">c</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">reply_object</span><span class="p">][</span><span class="s1">&#39;replies&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">context_filters</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;topic&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;$in&quot;</span><span class="p">:[</span><span class="s1">&#39;threshold values, methods of calculation&#39;</span><span class="p">]},</span>
+<span class="p">}</span>
+
+<span class="n">v</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Vaud 2015-11-15 2021-12-31&#39;</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Bern 2015-11-15 2021-12-31&#39;</span><span class="p">]</span>
+<span class="n">combined</span> <span class="o">=</span> <span class="p">[</span><span class="o">*</span><span class="n">v</span><span class="p">,</span><span class="o">*</span><span class="n">b</span><span class="p">]</span>
+
+
+
+<span class="n">report_filters</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;doc-id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;$in&quot;</span><span class="p">:</span><span class="n">combined</span><span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">AssembleResources</span><span class="p">(</span><span class="s1">&#39;What was the average pcs/m in Bern? How is beach litter measured or calculated? What other metrics are used?&#39;</span><span class="p">,</span> <span class="n">report_filters</span><span class="p">,</span> <span class="n">context_filters</span><span class="p">,</span> <span class="n">context_pipeline</span><span class="p">,</span> <span class="n">report_pipeline</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">Markdown</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="s1">&#39;report_results&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>The average pcs/m (objects per meter) in Bern is approximately 0.71, as stated in the summary statistics of the survey results.</p>
+<p>Beach litter is measured or calculated by collecting samples from designated survey locations. The specific metrics used in the analysis typically include the average number of litter objects identified per meter, the standard deviation of litter density, the number of samples collected, and the percentile distribution (5th, 25th, 50th, 75th, 95th percentiles), as well as maximum observed litter density.</p>
+<p>Other metrics utilized in the analysis might include:</p>
+<ul class="simple">
+<li><p>Material composition of the litter identified (e.g., percentage of plastic).</p></li>
+<li><p>Inventory items that categorize the type of litter.</p></li>
+<li><p>Stratification based on land-use profiles around the surveyed locations, examining how litter density may vary in relation to different environmental features (e.g., buildings, wetlands, forests, public services).</p></li>
+<li><p>Results from cluster analysis to identify similarities in land use among sampled locations.</p></li>
+<li><p>Regression analysis outcomes that assess the relationship between land use features and litter density.</p></li>
+</ul>
+<p>This information was derived from the “Survey report Canton Bern 2015-11-15 2021-12-31” document.</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># f = AssembleResources(&#39;Which had the highest average pieces per meter Vaud or Bern?&#39;, report_filters, context_filters, context_pipeline, report_pipeline).run()</span>
+<span class="n">Markdown</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="s1">&#39;context_results&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>The documents provided do not specifically mention the average number of litter pieces per meter (pcs/m) in Bern. They present information regarding a European threshold value for macro litter on coastlines but do not provide city-specific data.</p>
+<p>Beach litter is typically measured or calculated using the following methodologies:</p>
+<ol class="arabic simple">
+<li><p><strong>Survey Length</strong>: Litter is surveyed along a set length of beach, commonly 100 meters. This standardization helps in achieving comparability across different monitoring sites.</p></li>
+<li><p><strong>Data Collection</strong>: Surveys are conducted multiple times a year, ideally in each season, to account for seasonal variations in litter accumulation.</p></li>
+<li><p><strong>Data Clean-Up</strong>: The collected data undergo cleaning to exclude fragments of litter that are not comparable (like smaller pieces) and to focus on macro-sized materials typically larger than 2.5 cm.</p></li>
+<li><p><strong>Abundance Calculation</strong>: The total abundance of litter per survey is calculated by summing up the remaining litter types and normalizing to 100 m of beach.</p></li>
+<li><p><strong>Statistical Methods</strong>: Various statistical methods are employed to calculate threshold values based on percentiles (e.g., the 10th percentile, 15th percentile), which allows for robust assessment values while accounting for uncertainties.</p></li>
+</ol>
+<p>Other metrics that are commonly used in beach litter assessments include:</p>
+<ul class="simple">
+<li><p><strong>Median Values</strong>: The median number of litter pieces is considered a robust indicator to assess beach litter levels as it is less influenced by extreme values compared to mean values.</p></li>
+<li><p><strong>Mean Values</strong>: While mean values can provide an overview, they are more susceptible to distortion from outliers.</p></li>
+<li><p><strong>Confidence Intervals</strong>: Calculated to assess the uncertainty around the median assessment values, ensuring statistical reliability.</p></li>
+</ul>
+<p>In summary, beach litter assessments utilize a combination of systematic survey methodologies, statistical calculations for threshold values, and the use of metrics like mean and median to evaluate the litter’s impact on coastal environments.</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">haystack</span> <span class="kn">import</span> <span class="n">component</span>
+
+<span class="nd">@component</span>
+<span class="k">class</span> <span class="nc">CombinedAnswer</span><span class="p">:</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  A component generating personal welcome message and making it upper case</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="nd">@component</span><span class="o">.</span><span class="n">output_types</span><span class="p">(</span><span class="n">welcome_text</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">note</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span><span class="nb">str</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;welcome_text&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;Hello </span><span class="si">{name}</span><span class="s1">, welcome to Haystack!&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">))</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="s2">&quot;note&quot;</span><span class="p">:</span> <span class="s2">&quot;welcome message is ready&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prompt_template</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    Given the results from the report and the results of the litterature review  documents, answer the question. Please provide the name of the reference(s) in your response</span><span class="se">\n</span><span class="s2">Documents:</span>
+<span class="s2">    </span><span class="se">\n</span><span class="s2">Report results: {{report_results}}</span>
+<span class="s2">    </span><span class="se">\n</span>
+<span class="s2">    </span><span class="se">\n</span><span class="s2">Litterature review: {{context_results}}</span>
+<span class="s2">    {</span><span class="si">% e</span><span class="s2">ndfor %}</span>
+
+<span class="s2">    </span><span class="se">\n</span><span class="s2">Question: {{question}}</span>
+<span class="s2">    </span><span class="se">\n</span><span class="s2">Answer:</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+
+<span class="n">context_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">()</span>
+<span class="c1"># context_pipeline.add_component(name=&quot;context_retriever&quot;, instance=FilterRetriever(document_store=context_document_store))</span>
+<span class="c1"># context_pipeline.add_component(instance=PromptBuilder(template=prompt_template), name=&quot;prompt_builder_context&quot;)</span>
+<span class="c1"># context_pipeline.add_component(instance=OpenAIGenerator( model=model), name=&quot;llm&quot;)</span>
+<span class="c1"># context_pipeline.connect(&quot;context_retriever&quot;, &quot;prompt_builder_context.documents&quot;)</span>
+<span class="c1"># context_pipeline.connect(&quot;prompt_builder_context&quot;, &quot;llm&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">break</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+    <span class="k">break</span>
+    <span class="o">^</span>
+<span class="ne">SyntaxError</span>: &#39;break&#39; outside loop
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="chroma-vector-store">
+<h2>Chroma vector store<a class="headerlink" href="#chroma-vector-store" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">break</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tools = [</span>
+<span class="c1">#     {</span>
+<span class="c1">#         &quot;type&quot;: &quot;function&quot;,</span>
+<span class="c1">#         &quot;function&quot;: {</span>
+<span class="c1">#             &quot;name&quot;: &quot;context_pipeline_func&quot;,</span>
+<span class="c1">#             &quot;description&quot;: &quot;Retrieves background information about the query from matching meta-data&quot;,</span>
+<span class="c1">#             &quot;parameters&quot;: {</span>
+<span class="c1">#                 &quot;type&quot;: &quot;object&quot;,</span>
+<span class="c1">#                 &quot;properties&quot;: {</span>
+<span class="c1">#                     &quot;query&quot;: {</span>
+<span class="c1">#                         &quot;type&quot;: &quot;string&quot;,</span>
+<span class="c1">#                         &quot;description&quot;: &quot;The query to use in the search. Infer this from the user&#39;s message. It should be a question or a statement&quot;,</span>
+<span class="c1">#                     },</span>
+<span class="c1">#                 },</span>
+<span class="c1">#                 &quot;required&quot;: [&quot;query&quot;],</span>
+<span class="c1">#             },</span>
+<span class="c1">#         },</span>
+<span class="c1">#     },</span>
+<span class="c1">#     {</span>
+<span class="c1">#         &quot;type&quot;: &quot;function&quot;,</span>
+<span class="c1">#         &quot;function&quot;: {</span>
+<span class="c1">#             &quot;name&quot;: &quot;report_pipeline_func&quot;,</span>
+<span class="c1">#             &quot;description&quot;: &quot;Retrieves the results from survey report documents based on the matching meta-data&quot;,</span>
+<span class="c1">#             &quot;parameters&quot;: {</span>
+<span class="c1">#                 &quot;type&quot;: &quot;object&quot;,</span>
+<span class="c1">#                 &quot;properties&quot;: {</span>
+<span class="c1">#                     &quot;query&quot;: {</span>
+<span class="c1">#                         &quot;type&quot;: &quot;string&quot;,</span>
+<span class="c1">#                         &quot;description&quot;: &quot;The query to use in the search. Infer this from the user&#39;s message. It should be a question or a statement&quot;,</span>
+<span class="c1">#                     },</span>
+<span class="c1">#                 },</span>
+<span class="c1">#                 &quot;required&quot;: [&quot;query&quot;],</span>
+<span class="c1">#             },</span>
+<span class="c1">#         },</span>
+<span class="c1">#     },</span>
+<span class="c1"># ]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">haystack.components.retrievers.in_memory</span> <span class="kn">import</span> <span class="n">InMemoryEmbeddingRetriever</span>
+<span class="kn">from</span> <span class="nn">haystack.components.readers</span> <span class="kn">import</span> <span class="n">ExtractiveReader</span>
+<span class="kn">from</span> <span class="nn">haystack.components.embedders</span> <span class="kn">import</span> <span class="n">SentenceTransformersTextEmbedder</span>
+
+
+<span class="n">retriever</span> <span class="o">=</span> <span class="n">InMemoryEmbeddingRetriever</span><span class="p">(</span><span class="n">document_store</span><span class="o">=</span><span class="n">document_store</span><span class="p">)</span>
+<span class="n">reader</span> <span class="o">=</span> <span class="n">ExtractiveReader</span><span class="p">()</span>
+<span class="n">reader</span><span class="o">.</span><span class="n">warm_up</span><span class="p">()</span>
+
+<span class="n">extractive_qa_pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">()</span>
+
+<span class="n">extractive_qa_pipeline</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">instance</span><span class="o">=</span><span class="n">SentenceTransformersTextEmbedder</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;embedder&quot;</span><span class="p">)</span>
+<span class="n">extractive_qa_pipeline</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">instance</span><span class="o">=</span><span class="n">retriever</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;retriever&quot;</span><span class="p">)</span>
+<span class="n">extractive_qa_pipeline</span><span class="o">.</span><span class="n">add_component</span><span class="p">(</span><span class="n">instance</span><span class="o">=</span><span class="n">reader</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;reader&quot;</span><span class="p">)</span>
+
+<span class="n">extractive_qa_pipeline</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;embedder.embedding&quot;</span><span class="p">,</span> <span class="s2">&quot;retriever.query_embedding&quot;</span><span class="p">)</span>
+<span class="n">extractive_qa_pipeline</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;retriever.documents&quot;</span><span class="p">,</span> <span class="s2">&quot;reader.documents&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Markdown</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="s1">&#39;context_results&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">haystack.dataclasses</span> <span class="kn">import</span> <span class="n">ChatMessage</span>
+<span class="kn">from</span> <span class="nn">haystack.components.generators.chat</span> <span class="kn">import</span> <span class="n">OpenAIChatGenerator</span>
+<span class="kn">from</span> <span class="nn">haystack.components.generators.utils</span> <span class="kn">import</span> <span class="n">print_streaming_chunk</span>
+<span class="kn">import</span> <span class="nn">gradio</span> <span class="k">as</span> <span class="nn">gr</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="n">messages</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">ChatMessage</span><span class="o">.</span><span class="n">from_system</span><span class="p">(</span>
+        <span class="s2">&quot;reply with at least a helpfull message&quot;</span>
+    <span class="p">),</span>
+    <span class="n">ChatMessage</span><span class="o">.</span><span class="n">from_user</span><span class="p">(</span><span class="s2">&quot;What were the regression results for Vaud ? What were the regression results for Bern ? Whats the difference?.? context_filter, report_filters&quot;</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="n">chat_generator</span> <span class="o">=</span> <span class="n">OpenAIChatGenerator</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span> <span class="n">streaming_callback</span><span class="o">=</span><span class="n">print_streaming_chunk</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">chat_generator</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">messages</span><span class="o">=</span><span class="n">messages</span> <span class="n">generation_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;tools&quot;</span><span class="p">:</span> <span class="n">tools</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">haystack.dataclasses</span> <span class="kn">import</span> <span class="n">ChatMessage</span>
+<span class="kn">from</span> <span class="nn">haystack.components.generators.chat</span> <span class="kn">import</span> <span class="n">OpenAIChatGenerator</span>
+<span class="kn">from</span> <span class="nn">haystack.components.generators.utils</span> <span class="kn">import</span> <span class="n">print_streaming_chunk</span>
+
+<span class="n">chat_generator</span> <span class="o">=</span> <span class="n">OpenAIChatGenerator</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-3.5-turbo&quot;</span><span class="p">,</span> <span class="n">streaming_callback</span><span class="o">=</span><span class="n">print_streaming_chunk</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">chat_generator</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">messages</span><span class="o">=</span><span class="n">messages</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">response</span><span class="p">[</span><span class="s2">&quot;replies&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">meta</span><span class="p">[</span><span class="s2">&quot;finish_reason&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;tool_calls&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">response</span><span class="p">[</span><span class="s2">&quot;replies&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">haystack.dataclasses</span> <span class="kn">import</span> <span class="n">ChatMessage</span>
+<span class="kn">from</span> <span class="nn">haystack.components.generators.chat</span> <span class="kn">import</span> <span class="n">OpenAIChatGenerator</span>
+
+<span class="n">chat_generator</span> <span class="o">=</span> <span class="n">OpenAIChatGenerator</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-3.5-turbo&quot;</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">messages</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">ChatMessage</span><span class="o">.</span><span class="n">from_system</span><span class="p">(</span>
+        <span class="s2">&quot;Don&#39;t make assumptions about what values to plug into functions. Ask for clarification if a user request is ambiguous.&quot;</span>
+    <span class="p">)</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">response</span><span class="p">[</span><span class="s2">&quot;replies&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">content</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1">## Parse function calling information</span>
+<span class="n">function_call</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s2">&quot;replies&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">content</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">function_name</span> <span class="o">=</span> <span class="n">function_call</span><span class="p">[</span><span class="s2">&quot;function&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+<span class="n">function_args</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">function_call</span><span class="p">[</span><span class="s2">&quot;function&quot;</span><span class="p">][</span><span class="s2">&quot;arguments&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Function Name:&quot;</span><span class="p">,</span> <span class="n">function_name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Function Arguments:&quot;</span><span class="p">,</span> <span class="n">function_args</span><span class="p">)</span>
+
+<span class="c1">## Find the correspoding function and call it with the given arguments</span>
+<span class="n">available_functions</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;rag_pipeline_func&quot;</span><span class="p">:</span> <span class="n">rag_pipeline_func</span><span class="p">,</span> <span class="s2">&quot;get_current_weather&quot;</span><span class="p">:</span> <span class="n">get_current_weather</span><span class="p">}</span>
+<span class="n">function_to_call</span> <span class="o">=</span> <span class="n">available_functions</span><span class="p">[</span><span class="n">function_name</span><span class="p">]</span>
+<span class="n">function_response</span> <span class="o">=</span> <span class="n">function_to_call</span><span class="p">(</span><span class="o">**</span><span class="n">function_args</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Function Response:&quot;</span><span class="p">,</span> <span class="n">function_response</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">response</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">report_filters</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="machine_learning.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">machine learning</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="langchainagents.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Langchain agents</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-memory-vector-store-report-results">In memory vector store : Report results</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#markdown-documents">Markdown documents</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chroma-vector-store">Chroma vector store</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By the-team@
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

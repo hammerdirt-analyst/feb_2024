@@ -1,0 +1,2063 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>machine learning &#8212; Project 2025</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'machine_learning';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Haystack agents" href="haystackagents.html" />
+    <link rel="prev" title="Grid forecast class" href="forecasts.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="titlepage.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Project 2025</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="titlepage.html">
+                    The litter assistant
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data and reporting</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="final_report.html">Canton Bern Lakes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use_cases.html">Use cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="report_results-rough-draft.html">Rough draft Survey report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="new_report.html">Forecast</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="project.html">Proposal</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Methods and classes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="a_report_class.html">Survey report class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="landuse_class.html">Land use class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forecasts.html">Grid forecast class</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">machine learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="haystackagents.html">Haystack agents</a></li>
+<li class="toctree-l1"><a class="reference internal" href="langchainagents.html">Langchain agents</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annex</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="the_survey_data.html">The survey data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extracting_topo_data.html">Extracting land use values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multinomial_conjugate.html">Empirical Bayes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="agent_prompts_relations.html">Prompts and agent tools</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/machine_learning.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>machine learning</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.lines</span> <span class="kn">import</span> <span class="n">Line2D</span>
+<span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="kn">import</span> <span class="n">Point</span>
+<span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="kn">import</span> <span class="n">box</span>
+
+<span class="c1"># import matplotlib.patches as mpatches</span>
+<span class="kn">import</span> <span class="nn">session_config</span>
+<span class="kn">from</span> <span class="nn">session_config</span> <span class="kn">import</span>  <span class="n">collect_survey_data</span><span class="p">,</span> <span class="n">feature_variables</span><span class="p">,</span> <span class="n">agg_groups</span><span class="p">,</span> <span class="n">feature_variables</span>
+<span class="kn">from</span> <span class="nn">session_config</span> <span class="kn">import</span> <span class="n">lat_lon</span><span class="p">,</span> <span class="n">beaches</span><span class="p">,</span> <span class="n">model_rough_draft</span><span class="p">,</span> <span class="n">model_corrections</span>
+<span class="kn">from</span> <span class="nn">session_config</span> <span class="kn">import</span> <span class="n">tobo_snacks</span><span class="p">,</span> <span class="n">report_meta_data</span><span class="p">,</span> <span class="n">report_args</span>
+<span class="kn">from</span> <span class="nn">reports</span> <span class="kn">import</span> <span class="n">make_report_objects</span>
+<span class="kn">from</span> <span class="nn">reports</span> <span class="kn">import</span> <span class="n">histograms_standard</span>
+<span class="kn">from</span> <span class="nn">reports</span> <span class="kn">import</span> <span class="n">ecdf_plots_standard</span><span class="p">,</span> <span class="n">scatter_plot_standard</span>
+<span class="kn">import</span> <span class="nn">gridforecast</span> <span class="k">as</span> <span class="nn">gfcast</span>
+<span class="kn">from</span> <span class="nn">linearmethods</span> <span class="kn">import</span> <span class="n">LinearMethods</span>
+<span class="kn">from</span> <span class="nn">roughdraft</span> <span class="kn">import</span> <span class="n">ReportTexts</span><span class="p">,</span> <span class="n">messages_for_chat_completion</span><span class="p">,</span> <span class="n">use_chat_completion</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span>
+<span class="kn">from</span> <span class="nn">geospatial</span> <span class="kn">import</span> <span class="n">layer_selection_criteria</span><span class="p">,</span> <span class="n">map_markers</span>
+
+<span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">myst_nb</span> <span class="kn">import</span> <span class="n">glue</span>
+
+<span class="kn">from</span> <span class="nn">langchain_openai</span> <span class="kn">import</span> <span class="n">ChatOpenAI</span>
+<span class="kn">import</span> <span class="nn">openai</span>
+
+<span class="c1"># beaches = pd.read_csv(&#39;data/end_process/beaches.csv&#39;)</span>
+<span class="c1"># lat_lon = beaches[[&#39;slug&#39;, &#39;latitude&#39;, &#39;longitude&#39;]].set_index(&#39;slug&#39;)</span>
+
+<span class="n">load_dotenv</span><span class="p">()</span>
+<span class="n">api_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;OPENAI_API_KEY&#39;</span><span class="p">)</span>
+
+<span class="n">datax</span> <span class="o">=</span> <span class="n">collect_survey_data</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">canton_layer</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;data/ignorethis/shapes/kantons.shp&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">epsg</span><span class="o">=</span><span class="mi">4326</span><span class="p">)</span>
+<span class="n">dbckey</span> <span class="o">=</span> <span class="n">canton_layer</span><span class="p">[[</span><span class="s1">&#39;NAME&#39;</span><span class="p">,</span> <span class="s1">&#39;KANTONSNUM&#39;</span><span class="p">]]</span>
+<span class="n">dbckey</span> <span class="o">=</span> <span class="n">dbckey</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+<span class="n">dbckey</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;data/end_process/kantonsnum.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">this_report</span> <span class="o">=</span> <span class="n">report_args</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="n">datax</span><span class="p">,</span> <span class="s1">&#39;start&#39;</span><span class="p">:</span> <span class="s1">&#39;2020-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;end&#39;</span><span class="p">:</span><span class="s1">&#39;2021-12-01&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Bern&#39;</span><span class="p">,</span> <span class="s1">&#39;boundary&#39;</span><span class="p">:</span><span class="s1">&#39;canton&#39;</span><span class="p">,</span> <span class="s1">&#39;boundary_name&#39;</span><span class="p">:</span><span class="s1">&#39;Bern&#39;</span><span class="p">,</span> <span class="s1">&#39;feature_type&#39;</span><span class="p">:</span><span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="s1">&#39;codes&#39;</span><span class="p">:</span> <span class="n">tobo_snacks</span><span class="p">,</span> <span class="s1">&#39;columns_of_interest&#39;</span><span class="p">:</span> <span class="n">feature_variables</span><span class="p">})</span>
+<span class="n">report_data</span><span class="p">,</span> <span class="n">report_meta</span> <span class="o">=</span> <span class="n">report_meta_data</span><span class="p">(</span><span class="o">**</span><span class="n">this_report</span><span class="p">)</span>
+<span class="n">all_report</span><span class="p">,</span> <span class="n">all_land_use</span> <span class="o">=</span> <span class="n">make_report_objects</span><span class="p">(</span><span class="n">report_data</span><span class="p">,</span> <span class="n">info_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;canton&#39;</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">,</span> <span class="s1">&#39;feature_name&#39;</span><span class="p">])</span>
+
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">ChatOpenAI</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">model_rough_draft</span><span class="p">)</span>
+<span class="n">args</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;report_meta&#39;</span><span class="p">:</span> <span class="n">report_meta</span><span class="p">,</span>
+   
+    <span class="s1">&#39;survey_report&#39;</span><span class="p">:</span> <span class="n">all_report</span><span class="p">,</span>
+    <span class="s1">&#39;landuse_report&#39;</span><span class="p">:</span> <span class="n">all_land_use</span><span class="p">,</span>
+    
+    
+   
+<span class="p">}</span>
+
+<span class="n">firstdraft</span> <span class="o">=</span> <span class="n">ReportTexts</span><span class="p">(</span><span class="o">**</span><span class="n">args</span><span class="p">)</span>
+<span class="n">asum</span><span class="p">,</span> <span class="n">sampstrat</span><span class="p">,</span> <span class="n">grid_f</span><span class="p">,</span> <span class="n">lin_f</span><span class="p">,</span> <span class="n">inv_f</span>  <span class="o">=</span> <span class="n">firstdraft</span><span class="o">.</span><span class="n">string_rep</span><span class="p">(</span><span class="s1">&#39;rough_draft.md&#39;</span><span class="p">,</span> <span class="n">datax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="machine-learning">
+<h1>machine learning<a class="headerlink" href="#machine-learning" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># likelihood scatter</span>
+<span class="n">s_like</span> <span class="o">=</span> <span class="n">firstdraft</span><span class="o">.</span><span class="n">survey_report</span><span class="o">.</span><span class="n">sample_results</span><span class="p">(</span><span class="n">info_columns</span><span class="o">=</span><span class="n">firstdraft</span><span class="o">.</span><span class="n">info_cols</span><span class="p">)</span>
+
+<span class="c1"># grid predictions and priors</span>
+<span class="n">grid_forecast</span> <span class="o">=</span> <span class="n">firstdraft</span><span class="o">.</span><span class="n">grid_approximation</span><span class="p">(</span><span class="n">datax</span><span class="p">)</span>
+
+<span class="c1"># regression predictions</span>
+<span class="n">regress_pred</span> <span class="o">=</span> <span class="n">firstdraft</span><span class="o">.</span><span class="n">linear_methods</span><span class="p">()</span>
+
+<span class="c1"># sampling stratification</span>
+<span class="n">sampstrat</span> <span class="o">=</span> <span class="n">firstdraft</span><span class="o">.</span><span class="n">landuse_profile</span><span class="p">()</span>
+
+<span class="c1"># pcs/m stratified</span>
+<span class="n">ratestrat</span> <span class="o">=</span> <span class="n">firstdraft</span><span class="o">.</span><span class="n">landuse_rates</span><span class="p">()</span>
+
+<span class="c1"># inventory</span>
+<span class="n">inventory</span> <span class="o">=</span> <span class="n">firstdraft</span><span class="o">.</span><span class="n">inventory</span>
+
+<span class="c1"># markers layers</span>
+<span class="n">markers</span><span class="p">,</span> <span class="n">bounds</span> <span class="o">=</span> <span class="n">map_markers</span><span class="p">(</span><span class="n">firstdraft</span><span class="o">.</span><span class="n">survey_report</span><span class="o">.</span><span class="n">sample_results</span><span class="p">(</span><span class="n">info_columns</span><span class="o">=</span><span class="n">firstdraft</span><span class="o">.</span><span class="n">info_cols</span><span class="p">),</span> <span class="n">lat_lon</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">layer_selection_criteria</span><span class="p">(</span><span class="n">report_meta</span><span class="p">,</span> <span class="n">bounds</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">situation_map_one</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">legenditems</span><span class="p">,</span> <span class="n">bounds</span><span class="p">):</span>
+
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+    
+    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">element</span> <span class="o">==</span> <span class="s1">&#39;canton&#39;</span><span class="p">:</span>
+            <span class="n">layers</span><span class="p">[</span><span class="n">element</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span><span class="p">,</span>  <span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">.1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">element</span> <span class="o">==</span> <span class="s1">&#39;city&#39;</span><span class="p">:</span>
+            <span class="n">layers</span><span class="p">[</span><span class="n">element</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">.2</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">element</span> <span class="o">==</span> <span class="s1">&#39;river&#39;</span><span class="p">:</span>
+            <span class="n">layers</span><span class="p">[</span><span class="n">element</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span><span class="p">,</span>  <span class="n">alpha</span><span class="o">=</span><span class="mf">.4</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">element</span> <span class="o">==</span> <span class="s1">&#39;lake&#39;</span><span class="p">:</span> 
+            <span class="n">layers</span><span class="p">[</span><span class="n">element</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.8</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">.1</span><span class="p">)</span>
+        
+
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">points</span><span class="p">:</span>
+        <span class="n">c</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span> <span class="n">session_config</span><span class="o">.</span><span class="n">palette</span><span class="p">[</span><span class="s1">&#39;prior&#39;</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">])</span>
+    
+    
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">bounds</span><span class="p">[</span><span class="s1">&#39;min_lon&#39;</span><span class="p">]</span><span class="o">-</span><span class="mf">.1</span><span class="p">,</span> <span class="n">bounds</span><span class="p">[</span><span class="s1">&#39;max_lon&#39;</span><span class="p">]</span><span class="o">+</span><span class="mf">.1</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">bounds</span><span class="p">[</span><span class="s1">&#39;min_lat&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="mf">.1</span><span class="p">,</span> <span class="n">bounds</span><span class="p">[</span><span class="s1">&#39;max_lat&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mf">.1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">fig</span>
+<span class="n">title</span><span class="o">=</span><span class="s1">&#39;title&#39;</span>
+<span class="n">legenditems</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hello&#39;</span><span class="p">]</span>
+<span class="n">points</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;points&#39;</span><span class="p">:</span> <span class="n">markers</span><span class="p">,</span> <span class="s1">&#39;label&#39;</span><span class="p">:</span><span class="s1">&#39;label&#39;</span><span class="p">}]</span>
+<span class="n">situation_map_one</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">title</span><span class="p">,</span> <span class="n">legenditems</span><span class="p">,</span> <span class="n">bounds</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/85099e44487668046b7bdbca0f73ffcaf91c4d0b81ff2a5b0648cd1dba5207b7.png" src="_images/85099e44487668046b7bdbca0f73ffcaf91c4d0b81ff2a5b0648cd1dba5207b7.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">map_markers</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">lat_lon</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="n">lat_lon</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Map the markers&quot;&quot;&quot;</span>
+
+    <span class="c1"># collect information for popup display at each location</span>
+    <span class="n">nsamples</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="n">observed</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="s1">&#39;sample_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+    <span class="n">qty_location</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="n">observed</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="s1">&#39;quantity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">rate_location</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="n">observed</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="s1">&#39;pcs/m&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">last_sample</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="n">observed</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+    <span class="c1"># merge the pop-up information with the gps coordinates</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">nsamples</span><span class="p">,</span> <span class="n">qty_location</span><span class="p">,</span> <span class="n">rate_location</span><span class="p">,</span> <span class="n">last_sample</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">lat_lon</span><span class="p">,</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span>
+
+    <span class="c1"># get the bounds of these points in a dict</span>
+    <span class="n">max_lat</span><span class="p">,</span> <span class="n">min_lat</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+    <span class="n">max_lon</span><span class="p">,</span> <span class="n">min_lon</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+    <span class="n">td</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s1">&#39;records&#39;</span><span class="p">)</span>
+
+    <span class="c1"># make the points and geo dataframe</span>
+    <span class="n">geometry</span> <span class="o">=</span> <span class="p">[</span><span class="n">Point</span><span class="p">(</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">],</span> <span class="n">loc</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">loc</span> <span class="ow">in</span> <span class="n">td</span><span class="p">]</span>
+    <span class="n">geo_frame</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">td</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="n">geometry</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="s2">&quot;EPSG:4326&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">geo_frame</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;max_lat&#39;</span><span class="p">:</span> <span class="n">max_lat</span><span class="p">,</span> <span class="s1">&#39;min_lat&#39;</span><span class="p">:</span> <span class="n">min_lat</span><span class="p">,</span> <span class="s1">&#39;max_lon&#39;</span><span class="p">:</span> <span class="n">max_lon</span><span class="p">,</span> <span class="s1">&#39;min_lon&#39;</span><span class="p">:</span> <span class="n">min_lon</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">markers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sample_id</th>
+      <th>quantity</th>
+      <th>pcs/m</th>
+      <th>date</th>
+      <th>latitude</th>
+      <th>longitude</th>
+      <th>location</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>2</td>
+      <td>0.22</td>
+      <td>2020-10-09</td>
+      <td>46.686640</td>
+      <td>7.689760</td>
+      <td>augustmutzenbergstrandweg</td>
+      <td>POINT (7.68976 46.68664)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>12</td>
+      <td>59</td>
+      <td>0.33</td>
+      <td>2021-03-25</td>
+      <td>47.038398</td>
+      <td>7.108311</td>
+      <td>bielersee_vinelz_fankhausers</td>
+      <td>POINT (7.10831 47.03840)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>8</td>
+      <td>0.32</td>
+      <td>2020-11-06</td>
+      <td>46.727140</td>
+      <td>7.629620</td>
+      <td>camping-gwatt-strand</td>
+      <td>POINT (7.62962 46.72714)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>6</td>
+      <td>0.18</td>
+      <td>2020-11-19</td>
+      <td>46.720078</td>
+      <td>7.635304</td>
+      <td>delta-park</td>
+      <td>POINT (7.63530 46.72008)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>28</td>
+      <td>0.49</td>
+      <td>2021-03-25</td>
+      <td>47.047159</td>
+      <td>7.097854</td>
+      <td>erlach-camping-strand</td>
+      <td>POINT (7.09785 47.04716)</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2</td>
+      <td>8</td>
+      <td>0.21</td>
+      <td>2020-08-28</td>
+      <td>47.046272</td>
+      <td>7.085007</td>
+      <td>gals-reserve</td>
+      <td>POINT (7.08501 47.04627)</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2</td>
+      <td>106</td>
+      <td>1.25</td>
+      <td>2020-09-07</td>
+      <td>46.690283</td>
+      <td>7.898592</td>
+      <td>hafeli</td>
+      <td>POINT (7.89859 46.69028)</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2</td>
+      <td>24</td>
+      <td>1.54</td>
+      <td>2020-09-09</td>
+      <td>47.083979</td>
+      <td>7.135894</td>
+      <td>ligerz-strand</td>
+      <td>POINT (7.13589 47.08398)</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>4</td>
+      <td>17</td>
+      <td>0.08</td>
+      <td>2020-12-26</td>
+      <td>47.047955</td>
+      <td>7.151242</td>
+      <td>luscherz-plage</td>
+      <td>POINT (7.15124 47.04796)</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>2020-06-10</td>
+      <td>47.047519</td>
+      <td>7.152829</td>
+      <td>luscherz-two</td>
+      <td>POINT (7.15283 47.04752)</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>13</td>
+      <td>967</td>
+      <td>2.00</td>
+      <td>2021-03-31</td>
+      <td>47.133339</td>
+      <td>7.227907</td>
+      <td>mullermatte</td>
+      <td>POINT (7.22791 47.13334)</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>1</td>
+      <td>15</td>
+      <td>0.60</td>
+      <td>2020-11-30</td>
+      <td>47.127196</td>
+      <td>7.232613</td>
+      <td>nidau-strand</td>
+      <td>POINT (7.23261 47.12720)</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>1</td>
+      <td>43</td>
+      <td>0.67</td>
+      <td>2021-02-05</td>
+      <td>46.744451</td>
+      <td>8.049921</td>
+      <td>oben-am-see</td>
+      <td>POINT (8.04992 46.74445)</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>2</td>
+      <td>34</td>
+      <td>0.42</td>
+      <td>2020-12-25</td>
+      <td>47.132510</td>
+      <td>7.233142</td>
+      <td>strandboden-biel</td>
+      <td>POINT (7.23314 47.13251)</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>2</td>
+      <td>29</td>
+      <td>0.66</td>
+      <td>2020-11-07</td>
+      <td>46.684386</td>
+      <td>7.794768</td>
+      <td>sundbach-strand</td>
+      <td>POINT (7.79477 46.68439)</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>2</td>
+      <td>57</td>
+      <td>0.31</td>
+      <td>2021-02-14</td>
+      <td>46.739939</td>
+      <td>7.633520</td>
+      <td>thun-strandbad</td>
+      <td>POINT (7.63352 46.73994)</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>12</td>
+      <td>42</td>
+      <td>0.06</td>
+      <td>2021-02-05</td>
+      <td>46.704437</td>
+      <td>7.657882</td>
+      <td>thunersee_spiez_meierd_1</td>
+      <td>POINT (7.65788 46.70444)</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>12</td>
+      <td>658</td>
+      <td>0.68</td>
+      <td>2021-04-08</td>
+      <td>46.676583</td>
+      <td>7.817528</td>
+      <td>weissenau-neuhaus</td>
+      <td>POINT (7.81753 46.67658)</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>2</td>
+      <td>25</td>
+      <td>0.36</td>
+      <td>2020-11-07</td>
+      <td>46.740370</td>
+      <td>8.048640</td>
+      <td>wycheley</td>
+      <td>POINT (8.04864 46.74037)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ipyleaflet</span> <span class="kn">import</span> <span class="n">Map</span><span class="p">,</span> <span class="n">GeoJSON</span><span class="p">,</span> <span class="n">GeoData</span>
+<span class="kn">import</span> <span class="nn">geopandas</span><span class="o">,</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span><span class="o">,</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mf">46.91</span><span class="p">,</span> <span class="mf">7.43</span><span class="p">),</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="n">numpoints</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">center</span> <span class="o">=</span> <span class="p">(</span><span class="mf">7.43</span><span class="p">,</span> <span class="mf">46.91</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s1">&#39;Conc&#39;</span><span class="p">:</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">numpoints</span><span class="p">)</span> <span class="o">+</span> <span class="mi">17</span><span class="p">,</span>
+     <span class="s1">&#39;Longitude&#39;</span><span class="p">:</span> <span class="mf">0.0004</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">numpoints</span><span class="p">)</span> <span class="o">+</span> <span class="n">center</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+     <span class="s1">&#39;Latitude&#39;</span><span class="p">:</span> <span class="mf">0.0004</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">numpoints</span><span class="p">)</span> <span class="o">+</span> <span class="n">center</span><span class="p">[</span><span class="mi">1</span><span class="p">]})</span>
+
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">geopandas</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span>
+    <span class="n">df</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="n">geopandas</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Longitude</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">Latitude</span><span class="p">))</span>
+
+<span class="n">geo_data</span> <span class="o">=</span> <span class="n">GeoData</span><span class="p">(</span><span class="n">geo_dataframe</span> <span class="o">=</span> <span class="n">gdf</span><span class="p">,</span>
+    <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;radius&#39;</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;fillColor&#39;</span><span class="p">:</span> <span class="s1">&#39;#3366cc&#39;</span><span class="p">,</span> <span class="s1">&#39;opacity&#39;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">:</span><span class="mf">1.9</span><span class="p">,</span> <span class="s1">&#39;dashArray&#39;</span><span class="p">:</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span><span class="mf">0.6</span><span class="p">},</span>
+    <span class="n">hover_style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;fillColor&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span> <span class="p">,</span> <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">},</span>
+    <span class="n">point_style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;radius&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;fillColor&#39;</span><span class="p">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Release&#39;</span><span class="p">)</span>
+
+<span class="n">m</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">geo_data</span><span class="p">)</span>
+<span class="n">m</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "a602371edd9a49f3995e2aacdf6b79f1", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bounds</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;max_lat&#39;: 47.133339,
+ &#39;min_lat&#39;: 46.676583,
+ &#39;max_lon&#39;: 8.0499211,
+ &#39;min_lon&#39;: 7.0850075}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">folium</span>
+
+<span class="c1"># m = folium.Map(</span>
+<span class="c1">#     [46.923579, 7.473319], zoom_start=3,tiles=&#39;https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.swissimage/default/current/3857/{z}/{x}/{y}.jpeg&#39;, attr=&#39;My Data Attribution&#39;)</span>
+
+
+
+<span class="n">min_lon</span><span class="p">,</span> <span class="n">max_lon</span> <span class="o">=</span> <span class="mf">6.9</span><span class="p">,</span> <span class="mf">8.14</span>
+<span class="n">min_lat</span><span class="p">,</span> <span class="n">max_lat</span> <span class="o">=</span> <span class="mf">46.57</span><span class="p">,</span> <span class="mf">47.24</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span>
+    <span class="n">max_bounds</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">zoom_start</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span>
+    <span class="n">min_lat</span><span class="o">=</span><span class="n">min_lat</span><span class="p">,</span>
+    <span class="n">max_lat</span><span class="o">=</span><span class="n">max_lat</span><span class="p">,</span>
+    <span class="n">min_lon</span><span class="o">=</span><span class="n">min_lon</span><span class="p">,</span>
+    <span class="n">max_lon</span><span class="o">=</span><span class="n">max_lon</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>  <span class="c1"># Set the width in pixels</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
+    <span class="n">tiles</span><span class="o">=</span><span class="s1">&#39;https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.pixelkarte-farbe/default/current/3857/</span><span class="si">{z}</span><span class="s1">/</span><span class="si">{x}</span><span class="s1">/</span><span class="si">{y}</span><span class="s1">.jpeg&#39;</span><span class="p">,</span>
+    <span class="n">attr</span><span class="o">=</span><span class="s1">&#39;My Data Attribution&#39;</span>
+<span class="p">)</span>
+
+<span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">markers</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">folium</span><span class="o">.</span><span class="n">Marker</span><span class="p">(</span>
+        <span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]],</span>
+        <span class="n">popup</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">],</span>  <span class="c1"># Set the location as the popup text</span>
+        <span class="n">icon</span><span class="o">=</span><span class="n">folium</span><span class="o">.</span><span class="n">Icon</span><span class="p">(</span><span class="n">icon</span><span class="o">=</span><span class="s1">&#39;info-sign&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>  <span class="c1"># You can customize the icon as needed</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">fit_bounds</span><span class="p">([(</span><span class="mf">7.0</span><span class="p">,</span><span class="mf">46.67</span><span class="p">),</span> <span class="p">(</span><span class="mf">8.04</span><span class="p">,</span> <span class="mf">47.14</span><span class="p">)])</span>
+<span class="n">glue</span><span class="p">(</span><span class="s1">&#39;map&#39;</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">display</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>hello</p>
+<div class="output text_html"><div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    
+        &lt;script&gt;
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        &lt;/script&gt;
+    
+    &lt;style&gt;html, body {width: 100%;height: 100%;margin: 0;padding: 0;}&lt;/style&gt;
+    &lt;style&gt;#map {position:absolute;top:0;bottom:0;right:0;left:0;}&lt;/style&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+    
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_47524a026111a0a971538932d384a514 {
+                    position: relative;
+                    width: 600.0px;
+                    height: 400.0px;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+        
+&lt;/head&gt;
+&lt;body&gt;
+    
+    
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_47524a026111a0a971538932d384a514&quot; &gt;&lt;/div&gt;
+        
+&lt;/body&gt;
+&lt;script&gt;
+    
+    
+            var map_47524a026111a0a971538932d384a514 = L.map(
+                &quot;map_47524a026111a0a971538932d384a514&quot;,
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    maxBounds: [[46.57, 6.9], [47.24, 8.14]],
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1bcf4975c2002112f18dc541b0ae3d6f = L.tileLayer(
+                &quot;https://wmts.geo.admin.ch/1.0.0/ch.swisstopo.pixelkarte-farbe/default/current/3857/{z}/{x}/{y}.jpeg&quot;,
+                {&quot;attribution&quot;: &quot;My Data Attribution&quot;, &quot;detectRetina&quot;: false, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
+            );
+        
+    
+            tile_layer_1bcf4975c2002112f18dc541b0ae3d6f.addTo(map_47524a026111a0a971538932d384a514);
+        
+    
+            var marker_d6470d1fec59d727e657a8d66a637f1e = L.marker(
+                [46.68664, 7.68976],
+                {}
+            ).addTo(map_47524a026111a0a971538932d384a514);
+        
+    
+            var icon_f0b195ea95abf7c6ce6dd084b71b17d3 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_d6470d1fec59d727e657a8d66a637f1e.setIcon(icon_f0b195ea95abf7c6ce6dd084b71b17d3);
+        
+    
+        var popup_8ed7aa1cb4fc09ceec8ec7c3a5547123 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_de03743ffc8ca5d272d3ecc9b15bd73c = $(`&lt;div id=&quot;html_de03743ffc8ca5d272d3ecc9b15bd73c&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;augustmutzenbergstrandweg&lt;/div&gt;`)[0];
+                popup_8ed7aa1cb4fc09ceec8ec7c3a5547123.setContent(html_de03743ffc8ca5d272d3ecc9b15bd73c);
+            
+        
+
+        marker_d6470d1fec59d727e657a8d66a637f1e.bindPopup(popup_8ed7aa1cb4fc09ceec8ec7c3a5547123)
+        ;
+
+        
+    
+    
+            var marker_fd807209b8f49e344ba8a0c0c534bcf0 = L.marker(
+                [47.0383984, 7.1083114],
+                {}
+            ).addTo(map_47524a026111a0a971538932d384a514);
+        
+    
+            var icon_02ac48cfc00a2feb11ddfa1ee8b3d567 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_fd807209b8f49e344ba8a0c0c534bcf0.setIcon(icon_02ac48cfc00a2feb11ddfa1ee8b3d567);
+        
+    
+        var popup_51a990ca78e810a8361a102a74bc6e8c = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_eaadec50adcefac2aa9f5d0c2c76136f = $(`&lt;div id=&quot;html_eaadec50adcefac2aa9f5d0c2c76136f&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;bielersee_vinelz_fankhausers&lt;/div&gt;`)[0];
+                popup_51a990ca78e810a8361a102a74bc6e8c.setContent(html_eaadec50adcefac2aa9f5d0c2c76136f);
+            
+        
+
+        marker_fd807209b8f49e344ba8a0c0c534bcf0.bindPopup(popup_51a990ca78e810a8361a102a74bc6e8c)
+        ;
+
+        
+    
+    
+            var marker_925f874aa464fca5d7beb27147f29fed = L.marker(
+                [46.72714, 7.62962],
+                {}
+            ).addTo(map_47524a026111a0a971538932d384a514);
+        
+    
+            var icon_8acd8ee3f48b85f9175ef014e6fbe617 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_925f874aa464fca5d7beb27147f29fed.setIcon(icon_8acd8ee3f48b85f9175ef014e6fbe617);
+        
+    
+        var popup_ba6dc3b5bac82534f153eb8877eb6171 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_71d24586e561fa84d8afe183bd6e8532 = $(`&lt;div id=&quot;html_71d24586e561fa84d8afe183bd6e8532&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;camping-gwatt-strand&lt;/div&gt;`)[0];
+                popup_ba6dc3b5bac82534f153eb8877eb6171.setContent(html_71d24586e561fa84d8afe183bd6e8532);
+            
+        
+
+        marker_925f874aa464fca5d7beb27147f29fed.bindPopup(popup_ba6dc3b5bac82534f153eb8877eb6171)
+        ;
+
+        
+    
+    
+            var marker_c8d5758e7b63031105779d609e4eec6d = L.marker(
+                [46.720078, 7.635304],
+                {}
+            ).addTo(map_47524a026111a0a971538932d384a514);
+        
+    
+            var icon_2095f79f40060f2e7fbb67b18f1e4a1c = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_c8d5758e7b63031105779d609e4eec6d.setIcon(icon_2095f79f40060f2e7fbb67b18f1e4a1c);
+        
+    
+        var popup_032c5b1f6e3d72dc54a6c32f4c79a62e = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_ed95b4b605b002975a69fc2e1665817c = $(`&lt;div id=&quot;html_ed95b4b605b002975a69fc2e1665817c&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;delta-park&lt;/div&gt;`)[0];
+                popup_032c5b1f6e3d72dc54a6c32f4c79a62e.setContent(html_ed95b4b605b002975a69fc2e1665817c);
+            
+        
+
+        marker_c8d5758e7b63031105779d609e4eec6d.bindPopup(popup_032c5b1f6e3d72dc54a6c32f4c79a62e)
+        ;
+
+        
+    
+    
+            var marker_0efbf8b26c9978087756b0eaceffd18f = L.marker(
+                [47.047159, 7.097854],
+                {}
+            ).addTo(map_47524a026111a0a971538932d384a514);
+        
+    
+            var icon_10a6cb2a3ea98c38f5b209ffcf2e992c = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_0efbf8b26c9978087756b0eaceffd18f.setIcon(icon_10a6cb2a3ea98c38f5b209ffcf2e992c);
+        
+    
+        var popup_73521bcc7b435c9952d712816f15212f = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_c6339c6dc1c1e32dc66e7664bd875ef2 = $(`&lt;div id=&quot;html_c6339c6dc1c1e32dc66e7664bd875ef2&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;erlach-camping-strand&lt;/div&gt;`)[0];
+                popup_73521bcc7b435c9952d712816f15212f.setContent(html_c6339c6dc1c1e32dc66e7664bd875ef2);
+            
+        
+
+        marker_0efbf8b26c9978087756b0eaceffd18f.bindPopup(popup_73521bcc7b435c9952d712816f15212f)
+        ;
+
+        
+    
+    
+            var marker_a4eb514623bd0fb2c850bf74a08efe15 = L.marker(
+                [47.0462719, 7.0850075],
+                {}
+            ).addTo(map_47524a026111a0a971538932d384a514);
+        
+    
+            var icon_3f1737f5147c1141dc1ec0c78f3e8158 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_a4eb514623bd0fb2c850bf74a08efe15.setIcon(icon_3f1737f5147c1141dc1ec0c78f3e8158);
+        
+    
+        var popup_9a057d93d3685948f66fa21f7b1b7305 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_c213457c538125d3cb597990f99846f5 = $(`&lt;div id=&quot;html_c213457c538125d3cb597990f99846f5&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;gals-reserve&lt;/div&gt;`)[0];
+                popup_9a057d93d3685948f66fa21f7b1b7305.setContent(html_c213457c538125d3cb597990f99846f5);
+            
+        
+
+        marker_a4eb514623bd0fb2c850bf74a08efe15.bindPopup(popup_9a057d93d3685948f66fa21f7b1b7305)
+        ;
+
+        
+    
+    
+            var marker_ba6c366db52d5f387ebc07090ebebcac = L.marker(
+                [46.6902834, 7.8985922],
+                {}
+            ).addTo(map_47524a026111a0a971538932d384a514);
+        
+    
+            var icon_a7051fea8ec3520b948bc93fd7c282dc = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_ba6c366db52d5f387ebc07090ebebcac.setIcon(icon_a7051fea8ec3520b948bc93fd7c282dc);
+        
+    
+        var popup_2ef12a47182d1c47a63aa9423216a64d = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_b7c3c20dd4a758fb046654d82731feb7 = $(`&lt;div id=&quot;html_b7c3c20dd4a758fb046654d82731feb7&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;hafeli&lt;/div&gt;`)[0];
+                popup_2ef12a47182d1c47a63aa9423216a64d.setContent(html_b7c3c20dd4a758fb046654d82731feb7);
+            
+        
+
+        marker_ba6c366db52d5f387ebc07090ebebcac.bindPopup(popup_2ef12a47182d1c47a63aa9423216a64d)
+        ;
+
+        
+    
+    
+            var marker_0be2224b5b58679b5effd2402044075d = L.marker(
+                [47.083979, 7.135894],
+                {}
+            ).addTo(map_47524a026111a0a971538932d384a514);
+        
+    
+            var icon_52c5d3cdebf0a6107436c7b31a1ed007 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_0be2224b5b58679b5effd2402044075d.setIcon(icon_52c5d3cdebf0a6107436c7b31a1ed007);
+        
+    
+        var popup_34dd05fd0b357b84567292778ff6e472 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_744358ddf8bf3e54fd42847804d38c37 = $(`&lt;div id=&quot;html_744358ddf8bf3e54fd42847804d38c37&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;ligerz-strand&lt;/div&gt;`)[0];
+                popup_34dd05fd0b357b84567292778ff6e472.setContent(html_744358ddf8bf3e54fd42847804d38c37);
+            
+        
+
+        marker_0be2224b5b58679b5effd2402044075d.bindPopup(popup_34dd05fd0b357b84567292778ff6e472)
+        ;
+
+        
+    
+    
+            var marker_0d15c4572226a3154ee622057ef42e85 = L.marker(
+                [47.0479551, 7.151242],
+                {}
+            ).addTo(map_47524a026111a0a971538932d384a514);
+        
+    
+            var icon_34d222fe3dc6b9950997c8f0d058d70a = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_0d15c4572226a3154ee622057ef42e85.setIcon(icon_34d222fe3dc6b9950997c8f0d058d70a);
+        
+    
+        var popup_b119b14178c8808e5d88af4829cf0669 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_109174e1a0b712ab85648441daa0093c = $(`&lt;div id=&quot;html_109174e1a0b712ab85648441daa0093c&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;luscherz-plage&lt;/div&gt;`)[0];
+                popup_b119b14178c8808e5d88af4829cf0669.setContent(html_109174e1a0b712ab85648441daa0093c);
+            
+        
+
+        marker_0d15c4572226a3154ee622057ef42e85.bindPopup(popup_b119b14178c8808e5d88af4829cf0669)
+        ;
+
+        
+    
+    
+            var marker_d274fe4f0d25229524f8490453f34ca1 = L.marker(
+                [47.047519, 7.1528292],
+                {}
+            ).addTo(map_47524a026111a0a971538932d384a514);
+        
+    
+            var icon_bf971e07fc4e8b49233b008d4f1ce781 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_d274fe4f0d25229524f8490453f34ca1.setIcon(icon_bf971e07fc4e8b49233b008d4f1ce781);
+        
+    
+        var popup_9ea4d119fab11f9a6bfb08c5855775c5 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_1d772b9e58633862dbc10cedc3ece150 = $(`&lt;div id=&quot;html_1d772b9e58633862dbc10cedc3ece150&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;luscherz-two&lt;/div&gt;`)[0];
+                popup_9ea4d119fab11f9a6bfb08c5855775c5.setContent(html_1d772b9e58633862dbc10cedc3ece150);
+            
+        
+
+        marker_d274fe4f0d25229524f8490453f34ca1.bindPopup(popup_9ea4d119fab11f9a6bfb08c5855775c5)
+        ;
+
+        
+    
+    
+            var marker_a611d6cd774103d9aff740bc9871d126 = L.marker(
+                [47.133339, 7.227907],
+                {}
+            ).addTo(map_47524a026111a0a971538932d384a514);
+        
+    
+            var icon_15bac57984e1676457d974f81e4e6273 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_a611d6cd774103d9aff740bc9871d126.setIcon(icon_15bac57984e1676457d974f81e4e6273);
+        
+    
+        var popup_8cc928960809cf8586aebd8151704ec7 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_c73ab1de6692c386661f86ddd5f512ff = $(`&lt;div id=&quot;html_c73ab1de6692c386661f86ddd5f512ff&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;mullermatte&lt;/div&gt;`)[0];
+                popup_8cc928960809cf8586aebd8151704ec7.setContent(html_c73ab1de6692c386661f86ddd5f512ff);
+            
+        
+
+        marker_a611d6cd774103d9aff740bc9871d126.bindPopup(popup_8cc928960809cf8586aebd8151704ec7)
+        ;
+
+        
+    
+    
+            var marker_06539d825af733edd7b7ab8905a9df47 = L.marker(
+                [47.127196, 7.232613],
+                {}
+            ).addTo(map_47524a026111a0a971538932d384a514);
+        
+    
+            var icon_4fe5d2fdcce9d7ae6fbe4b919460d0d6 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_06539d825af733edd7b7ab8905a9df47.setIcon(icon_4fe5d2fdcce9d7ae6fbe4b919460d0d6);
+        
+    
+        var popup_760bc4b29743c5da12dd0a5c0c0eedf3 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_ff5aabc397d4797a49411755d9ee25c1 = $(`&lt;div id=&quot;html_ff5aabc397d4797a49411755d9ee25c1&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;nidau-strand&lt;/div&gt;`)[0];
+                popup_760bc4b29743c5da12dd0a5c0c0eedf3.setContent(html_ff5aabc397d4797a49411755d9ee25c1);
+            
+        
+
+        marker_06539d825af733edd7b7ab8905a9df47.bindPopup(popup_760bc4b29743c5da12dd0a5c0c0eedf3)
+        ;
+
+        
+    
+    
+            var marker_38d7dc0ad65ccaf83a50f3c9e666fe51 = L.marker(
+                [46.74445107, 8.0499211],
+                {}
+            ).addTo(map_47524a026111a0a971538932d384a514);
+        
+    
+            var icon_c78e7ba256571b973b7eac835689eb32 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_38d7dc0ad65ccaf83a50f3c9e666fe51.setIcon(icon_c78e7ba256571b973b7eac835689eb32);
+        
+    
+        var popup_1769bd124fa3a5a280d4f16969dfca8c = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_c2de7fd3cb17370327f598e2a87d639a = $(`&lt;div id=&quot;html_c2de7fd3cb17370327f598e2a87d639a&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;oben-am-see&lt;/div&gt;`)[0];
+                popup_1769bd124fa3a5a280d4f16969dfca8c.setContent(html_c2de7fd3cb17370327f598e2a87d639a);
+            
+        
+
+        marker_38d7dc0ad65ccaf83a50f3c9e666fe51.bindPopup(popup_1769bd124fa3a5a280d4f16969dfca8c)
+        ;
+
+        
+    
+    
+            var marker_b7cb1c3228d9b8d0f9828965174ff298 = L.marker(
+                [47.13251, 7.233142],
+                {}
+            ).addTo(map_47524a026111a0a971538932d384a514);
+        
+    
+            var icon_120f824c6c3208a121b5de33118133bc = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_b7cb1c3228d9b8d0f9828965174ff298.setIcon(icon_120f824c6c3208a121b5de33118133bc);
+        
+    
+        var popup_44c453d908bb3e0e0e2236799c293e42 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_05b6565422c6da0bb128919419caa8d3 = $(`&lt;div id=&quot;html_05b6565422c6da0bb128919419caa8d3&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;strandboden-biel&lt;/div&gt;`)[0];
+                popup_44c453d908bb3e0e0e2236799c293e42.setContent(html_05b6565422c6da0bb128919419caa8d3);
+            
+        
+
+        marker_b7cb1c3228d9b8d0f9828965174ff298.bindPopup(popup_44c453d908bb3e0e0e2236799c293e42)
+        ;
+
+        
+    
+    
+            var marker_5c5143a7476608ed774e0f9f8a767175 = L.marker(
+                [46.684386, 7.794768],
+                {}
+            ).addTo(map_47524a026111a0a971538932d384a514);
+        
+    
+            var icon_2b0351914dc5d91c58df734ec9029195 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_5c5143a7476608ed774e0f9f8a767175.setIcon(icon_2b0351914dc5d91c58df734ec9029195);
+        
+    
+        var popup_f7a81440888095e87e5cf6e203c007ed = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_78e0dfd756f80b63c1496e6726b45aa0 = $(`&lt;div id=&quot;html_78e0dfd756f80b63c1496e6726b45aa0&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;sundbach-strand&lt;/div&gt;`)[0];
+                popup_f7a81440888095e87e5cf6e203c007ed.setContent(html_78e0dfd756f80b63c1496e6726b45aa0);
+            
+        
+
+        marker_5c5143a7476608ed774e0f9f8a767175.bindPopup(popup_f7a81440888095e87e5cf6e203c007ed)
+        ;
+
+        
+    
+    
+            var marker_2ec9bc208f875b1cd5a970e030d2a6dd = L.marker(
+                [46.739939, 7.63352],
+                {}
+            ).addTo(map_47524a026111a0a971538932d384a514);
+        
+    
+            var icon_4d96ed7ec389791eb42da33a463cabf4 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_2ec9bc208f875b1cd5a970e030d2a6dd.setIcon(icon_4d96ed7ec389791eb42da33a463cabf4);
+        
+    
+        var popup_56ce5c57157f0eb3951d166f3a8d0392 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_f1d4fb9a903900e6a11d0768f7737c37 = $(`&lt;div id=&quot;html_f1d4fb9a903900e6a11d0768f7737c37&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;thun-strandbad&lt;/div&gt;`)[0];
+                popup_56ce5c57157f0eb3951d166f3a8d0392.setContent(html_f1d4fb9a903900e6a11d0768f7737c37);
+            
+        
+
+        marker_2ec9bc208f875b1cd5a970e030d2a6dd.bindPopup(popup_56ce5c57157f0eb3951d166f3a8d0392)
+        ;
+
+        
+    
+    
+            var marker_7fcbbc9e2b09212ea31d6a02e73225bb = L.marker(
+                [46.7044368, 7.6578824],
+                {}
+            ).addTo(map_47524a026111a0a971538932d384a514);
+        
+    
+            var icon_ca7e8c12cf3815fcc404a1a1e6b3d054 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_7fcbbc9e2b09212ea31d6a02e73225bb.setIcon(icon_ca7e8c12cf3815fcc404a1a1e6b3d054);
+        
+    
+        var popup_e23eb8092a619cf5885c0dc350cbef4d = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_74f43c4ed14e5cb64b07de4027e9f117 = $(`&lt;div id=&quot;html_74f43c4ed14e5cb64b07de4027e9f117&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;thunersee_spiez_meierd_1&lt;/div&gt;`)[0];
+                popup_e23eb8092a619cf5885c0dc350cbef4d.setContent(html_74f43c4ed14e5cb64b07de4027e9f117);
+            
+        
+
+        marker_7fcbbc9e2b09212ea31d6a02e73225bb.bindPopup(popup_e23eb8092a619cf5885c0dc350cbef4d)
+        ;
+
+        
+    
+    
+            var marker_7015b075e64d82ad6736bdcda7d9559f = L.marker(
+                [46.676583, 7.817528],
+                {}
+            ).addTo(map_47524a026111a0a971538932d384a514);
+        
+    
+            var icon_b9e4a7a29154e4eaafd65736296e4812 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_7015b075e64d82ad6736bdcda7d9559f.setIcon(icon_b9e4a7a29154e4eaafd65736296e4812);
+        
+    
+        var popup_cf8182eb9d7539de037a8a02e95341f9 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_241dd01bf5950fd09448564b1f17304e = $(`&lt;div id=&quot;html_241dd01bf5950fd09448564b1f17304e&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;weissenau-neuhaus&lt;/div&gt;`)[0];
+                popup_cf8182eb9d7539de037a8a02e95341f9.setContent(html_241dd01bf5950fd09448564b1f17304e);
+            
+        
+
+        marker_7015b075e64d82ad6736bdcda7d9559f.bindPopup(popup_cf8182eb9d7539de037a8a02e95341f9)
+        ;
+
+        
+    
+    
+            var marker_2bab5a019efcad7ef1032349096af1bd = L.marker(
+                [46.74037, 8.04864],
+                {}
+            ).addTo(map_47524a026111a0a971538932d384a514);
+        
+    
+            var icon_05172bd71a803dfafd333dad780766ba = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_2bab5a019efcad7ef1032349096af1bd.setIcon(icon_05172bd71a803dfafd333dad780766ba);
+        
+    
+        var popup_40f45dc6aa3dd603c7845f23eff6f1e1 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_f61feeded1f52a6ddf4e9e679e55304d = $(`&lt;div id=&quot;html_f61feeded1f52a6ddf4e9e679e55304d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;wycheley&lt;/div&gt;`)[0];
+                popup_40f45dc6aa3dd603c7845f23eff6f1e1.setContent(html_f61feeded1f52a6ddf4e9e679e55304d);
+            
+        
+
+        marker_2bab5a019efcad7ef1032349096af1bd.bindPopup(popup_40f45dc6aa3dd603c7845f23eff6f1e1)
+        ;
+
+        
+    
+    
+            map_47524a026111a0a971538932d384a514.fitBounds(
+                [[7.0, 46.67], [8.04, 47.14]],
+                {}
+            );
+        
+&lt;/script&gt;
+&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ipyleaflet</span> <span class="kn">import</span> <span class="n">Map</span><span class="p">,</span> <span class="n">basemaps</span>
+
+<span class="n">center</span> <span class="o">=</span> <span class="p">[</span><span class="mf">38.128</span><span class="p">,</span> <span class="mf">2.588</span><span class="p">]</span>
+<span class="n">zoom</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="n">Map</span><span class="p">(</span><span class="n">basemap</span><span class="o">=</span><span class="n">basemaps</span><span class="o">.</span><span class="n">OpenStreetMap</span><span class="o">.</span><span class="n">Mapnik</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="n">center</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="n">zoom</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "2adb63c7da3d43289382bdf8f0b12fe6", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">Button</span>
+
+<span class="n">button</span> <span class="o">=</span> <span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Test Button&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">button</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "96cf8bd09aa840caaf831bc5d8caaf8c", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">make_system_prompt</span><span class="p">(</span><span class="n">roughdraft</span><span class="p">):</span>
+    <span class="n">system_prompt</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;You are a researcher assigned the task of preparing the rough draft of a manuscript. &quot;</span>   
+    <span class="s2">&quot;You are tasked to produce a summary, and answer specific questions &quot;</span>
+    <span class="s2">&quot;Do not give your opinion. Do not use phrases like &#39;this report provides&#39; or &#39;this study correlates&#39; or &#39;according to the text&#39; or &#39;this document&#39; or anything like that. &quot;</span>
+    <span class="s2">&quot;State what the subject is, Answer the question completely and check your answers, use an authoritive voice. &quot;</span>
+    <span class="s2">&quot;You must give numerical examples from the report when you answer a question about the survey results. &quot;</span>
+    <span class="s2">&quot;Do not answer the questions twice. If the question is answered in the summary state this. If there are no questions pass, do not make any up. &quot;</span>
+    <span class="s2">&quot;there are instructions between the labels &#39;&lt;!--- INSTRUCTION_START INSTRUCTIONS_END --&gt;&#39; follow them always&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;All answers should be in paragraph form. Here is the document:</span><span class="se">\n\n</span><span class="s2">&quot;</span> 
+    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">roughdraft</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">system_prompt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">request</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;Define sampling stratification and how it applies to the survey results, define land-use and how it applies to the survey report.&quot;</span>
+<span class="p">)</span>
+
+<span class="n">req_inf</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;&lt;!-- INSTRUCTION_START Define sampling stratification in the general sense and explain how it is used in this survey. Define what land use is. The land use categories for this report are listed in the column names&quot;</span>
+    <span class="s2">&quot;of the sampling stratification table. These are the land use categories that are used to stratify the results. Do not make up results, follow the defnitions and instructions explicitly.&quot;</span>
+    <span class="s2">&quot; INSTRUCTION_END --&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+    
+<span class="p">)</span>
+<span class="n">insone</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;&lt;!-- INSTRUCTION_START In the &#39;sampling stratification&#39; section there are instructions and an example on how to interpret the results from the table. Make sure to reference these instructions&quot;</span>
+    <span class="s2">&quot; and interpret the current results accordingly&quot;</span>
+    <span class="s2">&quot; INSTRUCTION_END --&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+
+<span class="n">instwo</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;&lt;!-- INSTRUCTION_START In the &#39;sampling stratifocation and trash density section there are instructions and an example on how to interpret the results. Make sure to reference these instructions&quot;</span>
+    <span class="s2">&quot; and interpret the current results accordingly&quot;</span>
+    <span class="s2">&quot; INSTRUCTION_END --&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+
+<span class="n">insthree</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;&lt;!-- INSTRUCTION_START Provide examples from the &#39;sampling stratification and trash density&#39; consider the results from the buidlings, forest, streets, and undefined columns. &quot;</span>
+    <span class="s2">&quot;Find the two highest values and report the proportion of buffer they occupy. Report the values in your answer.&quot;</span>
+    <span class="s2">&quot; INSTRUCTION_END --&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+
+<span class="n">insfour</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;&lt;!-- INSTRUCTION_START Recall the definition for urban and rural is provided in the document instructions. If the sampling stratification does not meet either criteria, say so and reply with &quot;</span>
+    <span class="s2">&quot;prportion of the buffer that contains the greates proportion of samples for buildings, forest and undefined &quot;</span>
+    <span class="s2">&quot; INSTRUCTION_END --&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+
+<span class="n">questions</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;1. How do I interpret the results in the sampling stratification table ?&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;2. How do I interpret the results in the sampling stratification and trash density table ?</span><span class="si">{</span><span class="n">instwo</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;3. Under what landuse conditions would a surveyor expect to find the most trash ?</span><span class="si">{</span><span class="n">insthree</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;4. Given the results in the sampling stratification table, were these surveys collected in mostly urban environment or forested?</span><span class="si">{</span><span class="n">insfour</span><span class="si">}</span><span class="s2">&quot;</span>
+     
+    
+<span class="p">)</span>
+
+<span class="n">formatting_instructions</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&lt;!-- INSTRUCTION_START</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="s2">&quot;1. Label the summary &#39;Sampling stratification&#39; (##)</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="s2">&quot;2. The label for the questions section is &#39;Frequently asked questions&#39; (###) </span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="s2">&quot;3. Repeat the question (in bold) DO NOT REPEAT the instructions. and then answer</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="s2">&quot; INSTRUCTION_END --&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">make_stratification_prompt</span><span class="p">():</span>
+        
+    <span class="n">user_prompt</span> <span class="o">=</span> <span class="p">(</span>        
+        <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">request</span><span class="si">}{</span><span class="n">req_inf</span><span class="si">}</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+        <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">questions</span><span class="si">}</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+        <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">formatting_instructions</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="p">)</span>
+
+
+
+    <span class="k">return</span> <span class="n">user_prompt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">messagesxxx</span> <span class="o">=</span> <span class="n">messages_for_chat_completion</span><span class="p">(</span><span class="n">system_prompt</span><span class="o">=</span><span class="n">make_system_prompt</span><span class="p">(</span><span class="n">sampstrat</span><span class="p">),</span> <span class="n">user_prompt</span><span class="o">=</span><span class="n">make_stratification_prompt</span><span class="p">())</span>
+<span class="n">completed_chatxxx</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">messagesxxx</span><span class="p">)</span>
+<span class="n">sampling_stratification</span> <span class="o">=</span> <span class="n">completed_chatxxx</span><span class="o">.</span><span class="n">content</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">make_summary_prompt</span><span class="p">():</span>
+        
+    <span class="n">user_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\n</span>
+<span class="s2">        </span>
+<span class="s2">    Provide a summary of the following sections: Administrative boundaries, Named features, Summary statistics, Municipal results, Material composition.</span>
+<span class="s2">    </span>
+<span class="s2">    The following must be included in the summary:</span>
+
+<span class="s2">    * The Name and number of the cities, lakes, rivers or parks in the report : &lt;!--- INSTRUCTION_START The names of the lakes, rivers and parks are in the named features section, the municipal results are in the city total section INSTRUCTIONS_END --&gt;</span>
+<span class="s2">    * The start and end date of the sampling and the name of the survey area(s)</span>
+<span class="s2">    * The numbar of samples, the average pcs/m, the maximum pcs/m and the total number of objects identified</span>
+<span class="s2">    * The material composition</span>
+<span class="s2">   </span>
+
+<span class="s2">    Frequently asked questions:</span>
+
+<span class="s2">    1. What were the five most common items found ? &lt;!--- INSTRUCTION_START Provide the name of the object, the fail rate and the percent of total. Convert the fail rate to percent. define the fail rate. INSTRUCTIONS_END --&gt;</span>
+<span class="s2">    2. Are these objects found on european beaches ? If so is their any data on how many per 100 m of beach ? &lt;!--- INSTRUCTION_START you may use your base knowledge to answer this question, consider OSPAR results INSTRUCTIONS_END --&gt;</span>
+<span class="s2">    3. What are possible sources of these specific objects objects ? &lt;!--- INSTRUCTION_START you may use your base knowledge to answer this question INSTRUCTIONS_END --&gt;</span>
+<span class="s2">    3. Which three cities had the highest average pcs/m ? Which three had the lowest ?</span>
+<span class="s2">    3. Can you please provide a table with the municipal results? </span>
+<span class="s2">      </span>
+<span class="s2">    &lt;!--- INSTRUCTION_START</span><span class="se">\n</span>
+
+<span class="s2">    formatting instructions:</span>
+
+<span class="s2">    1. Label the summary &#39;Sample results&#39; (##)</span><span class="se">\n</span>
+<span class="s2">    2. The label for the questions section is &#39;Frequently asked questions&#39; use markdown formatting for the label (###)</span><span class="se">\n</span>
+<span class="s2">    3. Repeat the question (in bold) DO NOT REPEAT the instructions. and then answer</span><span class="se">\n</span>
+
+<span class="s2">    INSTRUCTIONS_END --&gt;</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">user_prompt</span>    
+
+<span class="n">messages</span> <span class="o">=</span> <span class="n">messages_for_chat_completion</span><span class="p">(</span><span class="n">system_prompt</span><span class="o">=</span><span class="n">make_system_prompt</span><span class="p">(</span><span class="n">asum</span><span class="p">),</span> <span class="n">user_prompt</span><span class="o">=</span><span class="n">make_summary_prompt</span><span class="p">())</span>
+<span class="n">completed_chat</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span>
+<span class="n">summary</span> <span class="o">=</span> <span class="n">completed_chat</span><span class="o">.</span><span class="n">content</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># grid forecast analysis</span>
+<span class="n">request</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;Summarize the grid forecast section. Include an explanation of what a grid forecast or gird approxmiation is and the &quot;</span>
+    <span class="s2">&quot;method used in this report. Define what a prior is in Bayesian statistics and the how this is relevant for field observations&quot;</span>
+    <span class="s2">&quot;Explain the different assumptions of the prior&quot;</span>
+<span class="p">)</span>
+
+
+<span class="n">insone</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;&lt;!-- INSTRUCTION_START Consider whether the observed data is likely to be normally distributed (use the difference between the median &quot;</span>
+    <span class="s2">&quot;and mean in summary statistics section) you can use the coeficient of variation also. &quot;</span>
+    <span class="s2">&quot; INSTRUCTION_END --&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+
+<span class="n">insthree</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s2">&quot;&lt;!-- INSTRUCTION_START Cite the name of the prior and the expected average and median pcs/m. INSTRUCTION_END --&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+    
+<span class="p">)</span>
+
+<span class="n">insfour</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;&lt;!-- INSTRUCTION_START Consider that the prior is comprised only of locations that are in the same geographic boundary. &quot;</span>
+    <span class="s2">&quot;Recall that the posterior is a weighted average of the prior and likelihood, so if the in-boundary prior predicts an increase &quot;</span>
+    <span class="s2">&quot;it is likely that elevated values were observed in other locations within the boundary compared to the likelihood &quot;</span>
+    <span class="s2">&quot; INSTRUCTION_END --&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+
+<span class="n">insfive</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;&lt;!-- INSTRUCTION_START Consider that the prior is comprised only of locations that are outside the geographic boundary. &quot;</span>
+    <span class="s2">&quot;Recall that the posterior is a weighted average of the prior and likelihood, so if the out-boundary prior predicts an increase &quot;</span>
+    <span class="s2">&quot;it is likely that locations outside of the region had elevated values compared to the likelihood &quot;</span>
+    <span class="s2">&quot; INSTRUCTION_END --&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+
+<span class="n">inssix</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;&lt;!-- INSTRUCTION_START You will find the observed pcs/m in the Summary statistics section. Consider the average pcs/m result of each prior in relation to the observed average &quot;</span>
+    <span class="s2">&quot;Cite the numerical differences, given the standard deviation how likely is a person to notice the increase or decrease f they take one sample ? &quot;</span> 
+    <span class="s2">&quot; INSTRUCTION_END --&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+<span class="n">questions</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;1. Why is grid approximation a reasonable modeling technique given the data ?</span><span class="si">{</span><span class="n">insone</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="s2">&quot;1a. Do you have an example of other fields or domains that use a gird approximation or bayesien methods ?&quot;</span>
+    <span class="s2">&quot;2. What is the difference between grid approximation and linear or enemble regression ?&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;3. Under what prior do we expect to find the most ? The least ?</span><span class="si">{</span><span class="n">insthree</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;4. If the in-boundary grid approxmation predicts an increase or decrease, what does that say about the other samples from within the boundary ?</span><span class="si">{</span><span class="n">insfour</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;5. If the out-boundary grid approxmation predicts an increase or decrease, what does that say about the other samples from outside of the boundary ?</span><span class="si">{</span><span class="n">insfive</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;6. How different are the expected results from the observed results ? Should an increase or decrease be expected ? </span><span class="si">{</span><span class="n">inssix</span><span class="si">}</span><span class="s2">&quot;</span>
+    
+    
+<span class="p">)</span>
+
+<span class="n">formatting_instructions</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&lt;!-- INSTRUCTION_START </span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="s2">&quot;1. Label the summary &#39;Forecasts and methods&#39; (##)</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="s2">&quot;2. The label for the questions section is &#39;Frequently asked questions&#39; (###) </span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="s2">&quot;3. Repeat the question (in bold) DO NOT REPEAT the instructions. and then answer</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="s2">&quot; INSTRUCTION_END --&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">make_grid_approximation_prompt</span><span class="p">():</span>
+        
+    <span class="n">user_prompt</span> <span class="o">=</span> <span class="p">(</span>
+        
+        <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">request</span><span class="si">}</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+        <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">questions</span><span class="si">}</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+        <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">formatting_instructions</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">user_prompt</span>    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">messagesx</span> <span class="o">=</span> <span class="n">messages_for_chat_completion</span><span class="p">(</span><span class="n">system_prompt</span><span class="o">=</span><span class="n">make_system_prompt</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">grid_f</span><span class="si">}</span><span class="se">\n\n</span><span class="si">{</span><span class="n">asum</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">),</span> <span class="n">user_prompt</span><span class="o">=</span><span class="n">make_grid_approximation_prompt</span><span class="p">())</span>
+<span class="n">completed_chatx</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">messagesx</span><span class="p">)</span>
+<span class="n">grid_forecast</span> <span class="o">=</span> <span class="n">completed_chatx</span><span class="o">.</span><span class="n">content</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">request</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;Define cluster analysis (kmeans), linear regression and ensemble methods, explain the basic assumptions of each method&quot;</span>
+<span class="p">)</span>
+
+<span class="n">req_inst</span> <span class="o">=</span> <span class="p">(</span>
+     <span class="s2">&quot;&lt;!-- INSTRUCTION_START do not quote the regression results here. Expalin the methods compeletely, explain what role the decision tree plays in ensemble methods INSTRUCTION_END --&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+    
+<span class="p">)</span>
+
+<span class="n">insone</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;&lt;!-- INSTRUCTION_START The document provides a table of results. Provide that table to user and write a narrative paragraph of all the results&quot;</span>
+    <span class="s2">&quot; INSTRUCTION_END --&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+
+
+<span class="n">insfour</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;&lt;!-- INSTRUCTION_START The average pcs/m is given as a table in the cluster analysis subsection and given as objects per meter. &quot;</span>
+    <span class="s2">&quot;The distribution of land use values is given in the cluster analysis subsection and given as a float value that represents &quot;</span>
+    <span class="s2">&quot;the average proportion of the buffer zone occupied by the land use category. The paragraph above the table explains how to interpret the table&quot;</span>
+    <span class="s2">&quot; when you provide the results for the cluster lable the results as </span><span class="si">% o</span><span class="s2">f buffer occupied by land use feature INSTRUCTION_END --&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+
+<span class="n">questions</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;1. What were the r² and MSE of each test ? </span><span class="si">{</span><span class="n">insone</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;2. Given the r² and MSE of the different methods employed, how reliable do you think predictions would be based on these models ?</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;3. Can any conlusions be drawn from these results ?</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot;4. Accroding to the cluster analysis what is the cluster that has the greatest average pcs/m ? What is the distribution of land use values within the cluster ? </span><span class="si">{</span><span class="n">insfour</span><span class="si">}</span><span class="s2">&quot;</span>   
+<span class="p">)</span>
+
+<span class="n">formatting_instructions</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&lt;!-- INSTRUCTION_START </span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="s2">&quot;1. Label the summary &#39;Linear and ensemble methods&#39; (##)</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="s2">&quot;2. The label for the questions section is &#39;Frequently asked questions&#39; (###) </span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="s2">&quot;3. Repeat the question (in bold) DO NOT REPEAT the instructions. and then answer</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="s2">&quot; INSTRUCTION_END --&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">make_regression_prompt</span><span class="p">():</span>
+        
+    <span class="n">user_prompt</span> <span class="o">=</span> <span class="p">(</span>
+        
+        <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">request</span><span class="si">}{</span><span class="n">req_inst</span><span class="si">}</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+        <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">questions</span><span class="si">}</span><span class="se">\n\n</span><span class="s1">&#39;</span>
+        <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">formatting_instructions</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">user_prompt</span>    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">messagesxx</span> <span class="o">=</span> <span class="n">messages_for_chat_completion</span><span class="p">(</span><span class="n">system_prompt</span><span class="o">=</span><span class="n">make_system_prompt</span><span class="p">(</span><span class="n">lin_f</span><span class="p">),</span> <span class="n">user_prompt</span><span class="o">=</span><span class="n">make_regression_prompt</span><span class="p">())</span>
+<span class="n">completed_chatxx</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">messagesxx</span><span class="p">)</span>
+<span class="n">linear_methods</span> <span class="o">=</span> <span class="n">completed_chatxx</span><span class="o">.</span><span class="n">content</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">client</span> <span class="o">=</span> <span class="n">ChatOpenAI</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s1">&#39;gpt-4&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">make_system_prompt</span><span class="p">(</span><span class="n">roughdraft</span><span class="p">):</span>
+    <span class="n">system_prompt</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;You are a researcher assigned the task of preparing a manuscript from a rough draft. &quot;</span>   
+    <span class="s2">&quot;You are tasked to correct the first draft of report. You are to ensure that the draft given to you &quot;</span>
+    <span class="s2">&quot;by the user is correct. Ensure that answers are correct by comparing the users document to the rough draft. &quot;</span>
+    <span class="s2">&quot;Ensure that any conclusions are correct by reviewing the instructions in the original document and responses in the users document.&quot;</span>
+    <span class="s2">&quot;Do not change the formatting of the users document. You must return all tables that are given by the user in your response especially if they reply to a particular question.&quot;</span>
+    <span class="s2">&quot;Do not use phrases like &#39;this report provides&#39; or &#39;this study correlates&#39; or &#39;according to the text&#39; or &#39;this document&#39; or anything like that. &quot;</span>
+    <span class="s2">&quot;There are instructions in the document for analysis the instructions are labeled &lt;!--- INSTRUCTION_START  INSTRUCTION_END --&gt;&quot;</span>    
+    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">roughdraft</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">system_prompt</span>
+
+<span class="c1"># grid forecast analysis</span>
+<span class="n">request</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;Please check the answers provided in this document to the rough draft document that you have. Any numerical float values should be rounded to two places. &quot;</span>
+    <span class="s2">&quot;Return the document with the corrections please. Do not add any comments about the corrections, just do them and return the corrected document.&quot;</span>
+    
+<span class="p">)</span>
+
+
+<span class="n">req_inf</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;&lt;!-- INSTRUCTION_START We are concerned with numrical results and conclusions. Ensure that values that are used as answers to questions are correct according to the rough draft. &quot;</span>
+    <span class="s2">&quot;Ensure that any conclusions are correct according to standard practice and the methods explained in the instructions. Do not change the markdown formatting of the document.&quot;</span>
+    <span class="s2">&quot; INSTRUCTION_END --&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">make_corections_prompt</span><span class="p">(</span><span class="n">document</span><span class="p">):</span>
+        
+    <span class="n">user_prompt</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">request</span><span class="si">}{</span><span class="n">req_inf</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="s1">&#39;The document to be corrected: </span><span class="se">\n\n</span><span class="s1">&#39;</span>
+        <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">document</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">user_prompt</span>    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">make_call_to_llm</span><span class="p">(</span><span class="n">system_prompt</span><span class="p">,</span> <span class="n">user_prompt</span><span class="p">,</span> <span class="n">user_args</span><span class="p">,</span> <span class="n">sys_args</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+    <span class="n">messages</span> <span class="o">=</span> <span class="n">messages_for_chat_completion</span><span class="p">(</span><span class="n">system_prompt</span><span class="o">=</span><span class="n">system_prompt</span><span class="p">(</span><span class="n">sys_args</span><span class="p">),</span> <span class="n">user_prompt</span><span class="o">=</span><span class="n">user_prompt</span><span class="p">(</span><span class="n">user_args</span><span class="p">))</span>
+    <span class="n">completed_chat</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">completed_chat</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="c1"># messages_for_chat_completion(system_prompt=make_system_prompt(sampstrat), user_prompt=make_stratification_prompt(&#39;English&#39;))</span>
+<span class="n">corrected_summary</span> <span class="o">=</span> <span class="n">make_call_to_llm</span><span class="p">(</span><span class="n">make_system_prompt</span><span class="p">,</span> <span class="n">make_corections_prompt</span><span class="p">,</span><span class="n">summary</span><span class="p">,</span> <span class="n">asum</span><span class="p">,</span> <span class="n">client</span><span class="p">)</span>
+<span class="n">corrected_sampling_strat</span> <span class="o">=</span> <span class="n">make_call_to_llm</span><span class="p">(</span><span class="n">make_system_prompt</span><span class="p">,</span> <span class="n">make_corections_prompt</span><span class="p">,</span> <span class="n">sampling_stratification</span><span class="p">,</span> <span class="n">sampstrat</span><span class="p">,</span> <span class="n">client</span><span class="p">)</span>
+<span class="n">corrected_linear</span> <span class="o">=</span> <span class="n">make_call_to_llm</span><span class="p">(</span><span class="n">make_system_prompt</span><span class="p">,</span> <span class="n">make_corections_prompt</span><span class="p">,</span> <span class="n">linear_methods</span><span class="p">,</span> <span class="n">lin_f</span><span class="p">,</span> <span class="n">client</span><span class="p">)</span>
+<span class="n">corrected_grid</span> <span class="o">=</span> <span class="n">make_call_to_llm</span><span class="p">(</span><span class="n">make_system_prompt</span><span class="p">,</span> <span class="n">make_corections_prompt</span><span class="p">,</span> <span class="n">grid_forecast</span><span class="p">,</span> <span class="n">grid_f</span><span class="p">,</span> <span class="n">client</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">break</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Markdown</span><span class="p">(</span><span class="n">corrected_summary</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<h2 class="rubric" id="sample-results">Sample results</h2>
+<p>The survey report covers the administrative boundaries of Bern canton lake from January 1, 2020, to April 8, 2021. It includes 13 cities: Biel/Bienne, Vinelz, Brienz (BE), Spiez, Lüscherz, Nidau, Gals, Unterseen, Erlach, Thun, Beatenberg, Ligerz, and Bönigen. There are three lakes identified: Bielersee, Brienzersee, and Thunersee. The survey area is identified as Aare.</p>
+<p>During the sampling period, a total of 74 samples were collected, yielding a total of 2,128 objects identified. The average density of objects found was approximately 0.69 pcs/m, with the maximum density reaching 3.88 pcs/m. The material composition of the identified objects was solely plastic, representing 100% of the total.</p>
+<h3 class="rubric" id="frequently-asked-questions">Frequently asked questions</h3>
+<p><strong>1. What were the most common items found?</strong><br />
+The most common items identified in the survey were:</p>
+<ul class="simple">
+<li><p>Cigarette filters: Fail rate of 83.78% (or 83.78% of the items were identified as failures in the survey), representing 73.45% of the total objects.</p></li>
+<li><p>Food wrappers; candy, snacks: Fail rate of 82.43% (or 82.43% of the items were identified as failures), representing 26.55% of the total objects.</p></li>
+</ul>
+<p><strong>2. Are these objects found on European beaches? If so, is there any data on how many per 100 m of beach?</strong><br />
+Yes, these types of plastic objects, particularly cigarette filters and food wrappers, are commonly found on European beaches. Data from OSPAR indicates that the average density of litter on European beaches can range from 100 to 200 items per 100 meters of beach.</p>
+<p><strong>3. What are possible sources of these specific objects?</strong><br />
+Possible sources of the identified objects include recreational activities, littering by beachgoers, and improper disposal of waste. Cigarette filters are often discarded by smokers, while food wrappers are commonly left behind from picnics and snacks enjoyed at the beach.</p>
+<p><strong>4. Which three cities had the highest average pcs/m? Which three had the lowest?</strong><br />
+The three cities with the highest average pcs/m were:</p>
+<ol class="arabic simple">
+<li><p>Biel/Bienne: 1.79 pcs/m</p></li>
+<li><p>Bönigen: 1.25 pcs/m</p></li>
+<li><p>Ligerz: 1.55 pcs/m</p></li>
+</ol>
+<p>The three cities with the lowest average pcs/m were:</p>
+<ol class="arabic simple">
+<li><p>Lüscherz: 0.06 pcs/m</p></li>
+<li><p>Gals: 0.21 pcs/m</p></li>
+<li><p>Spiez: 0.08 pcs/m</p></li>
+</ol>
+<p><strong>5. Can you please provide a table with the municipal results?</strong></p>
+<p>| City          | Quantity | pcs/m     |
+|—————|———-|———–|
+| Beatenberg    | 29       | 0.67     |
+| Biel/Bienne   | 1001     | 1.79   |
+| Brienz (BE)   | 68       | 0.46  |
+| Bönigen       | 106      | 1.25     |
+| Erlach        | 28       | 0.49      |
+| Gals          | 8        | 0.21      |
+| Ligerz        | 24       | 1.55     |
+| Lüscherz      | 17       | 0.06      |
+| Nidau         | 15       | 0.6       |
+| Spiez         | 50       | 0.08      |
+| Thun          | 65       | 0.31  |
+| Unterseen     | 658      | 0.69     |
+| Vinelz        | 59       | 0.33  |</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Markdown</span><span class="p">(</span><span class="n">corrected_sampling_strat</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<h2 class="rubric" id="sampling-stratification">Sampling stratification</h2>
+<p>Sampling stratification refers to the process of dividing a population into distinct subgroups, or strata, that share similar characteristics. In the context of this survey, stratification is used to analyze how different land-use features within the buffer zones surrounding survey locations influence the survey results. Each survey location includes a buffer zone of 1,500 meters, which is characterized by various land-use features, such as buildings, wetlands, forest, public services, recreation areas, streets, vineyards, and orchards. The proportion of each land-use feature within the buffer zone helps determine the sampling stratification, allowing for a more targeted analysis of how litter density and other factors vary with different land uses.</p>
+<p>Land use refers to the management and modification of natural environments into built environments such as fields, pastures, and settlements. In this report, land use categories are defined through the column names in the sampling stratification table. These categories include buildings, wetlands, forest, public services, recreation, undefined areas, streets, vineyards, and orchards, and they serve as the basis for analyzing the survey results related to litter density and environmental characteristics.</p>
+<h3 class="rubric" id="id1">Frequently asked questions</h3>
+<p><strong>1. How do I interpret the results in the sampling stratification table?</strong><br />
+To interpret the results in the sampling stratification table, one should look at the proportion of samples collected for each land use feature across different buffer zone proportions. For example, for buildings, 31.08% of the samples were taken at locations where 0-20% of the buffer was dedicated to buildings, while 37.84% were taken where 20-40% of the buffer was dedicated to buildings. This allows for understanding how the distribution of land use within the buffer influences the survey results.</p>
+<p><strong>2. How do I interpret the results in the sampling stratification and trash density table?</strong><br />
+The results in the sampling stratification and trash density table can be interpreted by examining the average objects per meter based on the proportion of buffer zones occupied by different land use features. For instance, where buildings occupy 0-20% of the buffer, the average objects per meter is 0.59, while at locations where buildings occupy 20-40% of the buffer, the average objects per meter is 0.22. This analysis reveals the relationship between land use and litter density.</p>
+<p><strong>3. Under what land use conditions would a surveyor expect to find the most trash?</strong><br />
+A surveyor would expect to find the most trash in areas where buildings occupy 40-60% of the buffer, with an average of 1.79 objects per meter, and where streets occupy 60-80% of the buffer, with an average of 1.90 objects per meter. These locations indicate higher litter density associated with urban features compared to other land use categories.</p>
+<p><strong>4. Given the results in the sampling stratification table, were these surveys collected in mostly urban environments or forested?</strong><br />
+The surveys were not collected in environments that strictly meet the definitions of urban or rural. The highest proportion of samples for buildings is 37.84% in the 20-40% buffer category, while for forest, it is 66.22% in the same category. Undefined areas account for 56.76% in the 40-60% buffer zone category, indicating a mixed environment rather than predominantly urban or forested.</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Markdown</span><span class="p">(</span><span class="n">corrected_grid</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<h2 class="rubric" id="forecasts-and-methods">Forecasts and methods</h2>
+<p>Grid forecasting, or grid approximation, is a statistical method used to evaluate a function over a discretized parameter space, transforming unnormalized posterior distributions into valid probability distributions. The method employed in this report involves several steps: discretizing the continuous parameter space into a grid of points, evaluating the desired statistical function at each point, normalizing the values to ensure they sum to one, and finally calculating estimates by summing over the grid points. In this context, a prior in Bayesian statistics represents the information or beliefs about a parameter before observing the data. It’s relevant for field observations as it provides a foundation that can be updated with actual data to refine predictions. The prior assumptions in this report include the notion that land use is the best predictor of litter density, regardless of geographic location, and the similarity of land use features such as buildings and forests is crucial, with a defined similarity threshold of 0.69.</p>
+<ol class="arabic simple">
+<li><p><strong>Why is grid approximation a reasonable modeling technique given the data?</strong> Grid approximation is reasonable because the observed data exhibits a significant difference between the mean (0.44) and the median (0.22), suggesting a skewed distribution rather than a normal one. The coefficient of variation of approximately 1.19 (calculated as standard deviation divided by mean) indicates considerable variability in the data, making grid approximation suitable for capturing this complexity.</p></li>
+</ol>
+<p>1a. <strong>Do you have an example of other fields or domains that use a grid approximation or Bayesian methods?</strong> Grid approximation and Bayesian methods are commonly utilized in fields such as environmental science for modeling pollutant dispersion, finance for risk assessment, and machine learning for probabilistic inference.</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>What is the difference between grid approximation and linear or ensemble regression?</strong> The primary difference is that grid approximation evaluates a range of possible values over a parameter space, whereas linear regression finds a linear relationship between variables, and ensemble regression combines multiple models to improve predictive performance. Grid approximation does not assume a specific functional form for the relationship between variables, which allows for greater flexibility.</p></li>
+<li><p><strong>Under what prior do we expect to find the most? The least?</strong> The in-boundary prior is expected to yield the highest average litter density, with a mean of 0.44 pcs/m and a median of 0.22 pcs/m. Conversely, the out-boundary prior is expected to yield lower values, with a mean of 0.40 pcs/m and a median of 0.27 pcs/m.</p></li>
+<li><p><strong>If the in-boundary grid approximation predicts an increase or decrease, what does that say about the other samples from within the boundary?</strong> If the in-boundary prior predicts an increase, it suggests that elevated litter density values were observed in other locations within the geographic boundary, indicating a consistent trend across samples.</p></li>
+<li><p><strong>If the out-boundary grid approximation predicts an increase or decrease, what does that say about the other samples from outside of the boundary?</strong> If the out-boundary prior predicts an increase, it implies that locations outside the region had elevated litter density values compared to the likelihood, indicating that trends in litter density may be influenced by land use rather than just geographic location.</p></li>
+<li><p><strong>How different are the expected results from the observed results? Should an increase or decrease be expected?</strong> The observed average pcs/m is 0.44, while the in-boundary prior average is 0.44, indicating a difference of approximately 0.00. Given the standard deviation of 0.52 for the in-boundary prior, it is likely that a single sample may not statistically capture this increase, as observed values could fall within a range influenced by variability.</p></li>
+</ol>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Markdown</span><span class="p">(</span><span class="n">corrected_linear</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<h2 class="rubric" id="linear-and-ensemble-methods">Linear and ensemble methods</h2>
+<p>Cluster analysis, specifically K-means clustering, is a method used to partition a dataset into distinct groups, or clusters, based on feature similarities. The K-means algorithm operates through an iterative process where it assigns data points to the nearest cluster centroid and then recalculates the centroids based on the assigned points. The key assumptions of K-means include that the clusters are spherical in shape, equally sized, and that the number of clusters (K) is predetermined.</p>
+<p>Linear regression is a statistical approach for modeling the relationship between a dependent variable and one or more independent variables. It assumes a linear relationship between variables, meaning that changes in the independent variable(s) will lead to proportional changes in the dependent variable. Basic assumptions include linearity, independence of errors, homoscedasticity (constant variance of errors), and normality of error terms.</p>
+<p>Ensemble methods combine multiple predictive models to improve performance. They often use decision trees as the base learners due to their ability to model complex relationships. The ensemble approach assumes that combining the predictions of multiple models can lead to better accuracy than any single model. Common ensemble methods include Bagging, which reduces variance by averaging predictions, and Boosting, which focuses on correcting errors made by previous models.</p>
+<h3 class="rubric" id="id2">Frequently asked questions</h3>
+<p><strong>What were the r² and MSE of each test?</strong><br />
+The results for the different regression models are as follows:</p>
+<ul class="simple">
+<li><p>Linear Regression: R² = 0.27, MSE = 0.46</p></li>
+<li><p>Random Forest Regression: R² = 0.25, MSE = 0.47</p></li>
+<li><p>Gradient Boosting Regression: R² = 0.43, MSE = 0.36</p></li>
+<li><p>Theil-Sen Regressor: R² = 0.36, MSE = 0.41</p></li>
+<li><p>Bagging: Gradient Boosting Regression: R² = 0.42, MSE = 0.37</p></li>
+<li><p>Voting: R² = 0.37, MSE = 0.40</p></li>
+</ul>
+<p>These results indicate the performance of each regression model, with R² values showing the proportion of variance explained and MSE indicating the average squared error of predictions.</p>
+<p><strong>Given the R² and MSE of the different methods employed, how reliable do you think predictions would be based on these models?</strong><br />
+The R² values range from approximately 0.25 to 0.43, indicating that none of the models fit the data particularly well. The MSE values suggest moderate error levels, with the Gradient Boosting Regression showing the best performance in terms of both R² and MSE. Overall, predictions from these models may be considered somewhat reliable, but further tuning and validation would be necessary to enhance accuracy.</p>
+<p><strong>Can any conclusions be drawn from these results?</strong><br />
+The results suggest that while some regression models perform better than others, there is room for improvement in both the R² and MSE metrics across the board. The Gradient Boosting Regression model demonstrates the highest R² value, indicating it captures more variability in the data compared to the other models. This suggests that ensemble methods can potentially enhance predictive performance, but the overall reliability of predictions remains limited.</p>
+<p><strong>According to the cluster analysis, what is the cluster that has the greatest average pcs/m? What is the distribution of land use values within the cluster?</strong><br />
+Cluster 0 has the greatest average of 1.55 pcs/m. The distribution of land use values within this cluster is as follows: buildings occupy 14% of the buffer zone, wetlands occupy 0%, forest occupies 31%, public services occupy 19%, recreation occupies 1.4%, undefined land use occupies 30%, streets occupy 27%, vineyards occupy 19%, and orchards occupy 0%.</p>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="forecasts.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Grid forecast class</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="haystackagents.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Haystack agents</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By the-team@
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
