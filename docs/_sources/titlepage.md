@@ -1,6 +1,10 @@
-# The litter assistant
+# Reporting volunteer observations
+
+This is the proof of concept for a distributed reporting system of marine litter density using data from volunteers.
 
 :::{dropdown} Recent changes
+
+__September 25:__ Added llm assisted reporting
 
 __June 24:__ Added responses to use cases
 
@@ -13,11 +17,12 @@ __June 22:__ Added methods to calculate landuse profile using Geopandas.
 
 :::{grid-item}
 
-This is the proposed format and layout for an up-dated survey of the trash along swiss rivers, lakes and hiking trails. We have created reports for five cantons and one that provides a _federal perspective_. 
+This is an application of large language models (llms) and machine learning to provide summary reports of volunteer observations
+of marine litter using the OSPAR, JRC or NOAA methods for counting beach litter. 
 
-There have been developments in the domain of beach litter reporting since the first federal project. The Guide for Monitoring Litter on European seas was updated in 2023, the code system has changed for classifying objects and in May 2024 a guide for monitoring and removing plastics from inland waters was released.
-
-Developments in the fields of machine learning (ML) and artificial intelligence (AI) give us new ways to assess the results of surveys and synthesise the current research. Topics of interest for those charged with reducing or preventing plastics in the environment.
+The application provides summary reports of exising data and provides forecasts for a region, city or body of water. The  llm 
+acts first as a transcriber of test results and then as an assistant to provide a written report and resource package that can
+be either used directly or integrated into other documents. 
 
 :::
 
@@ -34,6 +39,11 @@ Developments in the fields of machine learning (ML) and artificial intelligence 
 ::::{grid}
 
 :::{grid-item}
+
+
+This application minimizes the cost of reporting and evaluating beach litter density and uses geospatial analysis to leverage
+the use of data from other disparate locations. Most importantly, decision makers and stakeholders have access to reliable, 
+readable reports that allow them to communicate effectively and make informed decisions. 
 
 The data in these reports is a combination of observations from variety of groups in Switerland since 2015. The observations were recorded using an interpretation of the _Guide for Monitoring Marine Litter on European Seas_ [The guide](https://mcc.jrc.ec.europa.eu/main/dev.py?N=41&O=439&titre_chap=TG%20Litter&titre_page=Guidance%20for%20the%20Monitoring%20of%20Marine%20Litter). The guide and the monitoring of beach litter are part of decades of research, here is the brief history [A Brief History of Marine Litter Research](https://link.springer.com/chapter/10.1007/978-3-319-16510-3_1).
 
