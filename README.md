@@ -23,14 +23,16 @@ environment from litter density counts.
 The inventory data is used to forecast the density of litter based on historical results and topographic features within 
 1 500 m of each survey location.
 
-### This work is the result of the previous projects:
+## This work is the result of the previous projects:
 
-* https://github.com/hammerdirt-analyst/IQAASL-End-0f-Sampling-2021
-* https://github.com/hammerdirt-analyst/cantonal_reports
-* https://github.com/hammerdirt-analyst/solid-waste-team
-* https://github.com/hammerdirt-analyst/landuse
-* plastock project with [ASL](https://asleman.org/)
-* https://github.com/hammerdirt-analyst/finding-one-object
+__National and regional assessemtns__
+* national shoreline litter survey : https://github.com/hammerdirt-analyst/IQAASL-End-0f-Sampling-2021
+* Lake Geneva survey : https://associationsauvegardeleman.github.io/plastock/index.html
+
+__Education and research__
+* EPFL solid waste engineering (annual field excercise with post grad students) : https://hammerdirt-analyst.github.io/solid-waste-team/titlepage.html#
+* published article : https://github.com/hammerdirt-analyst/landuse
+* implimenting bayes theorem (initial version) : https://hammerdirt-analyst.github.io/finding-one-object/titlepage.html
 
 ## Questions
 
